@@ -1,7 +1,7 @@
 ---
 path: "/post-1/"
-category: "test"
-tags: ["tag", "tag-2"]
+category: "알고리즘"
+tags: ["알고리즘", "다익스트라"]
 title: "다익스트라"
 date: "2018-01-01T00:00:00.000Z"
 summary: "다익스트라 알고리즘을 공부해 봅시다..."
