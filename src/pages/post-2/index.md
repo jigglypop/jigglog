@@ -1,10 +1,10 @@
 ---
 path: "/post-2/"
-category: "test-2"
-tags: ["tag"]
-title: "Lorem Ipsum"
-date: "2018-01-02T00:00:00.000Z"
-summary: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+category: "django"
+tags: ["django"]
+title: "django로 게시판 만들기"
+date: "2020-05-20T00:00:00.000Z"
+summary: "django로 게시판 만들기"
 images: ["images/1.jpg"]
 ---
 
