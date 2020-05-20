@@ -131,7 +131,7 @@ const Gnb = ({
             </ListMenu>
             <ListMenu>
               <StyledLink to="/pages/1" className={isPost ? 'active' : ''} onClick={toggleMenu}>
-                Posts
+                포스트
               </StyledLink>
               {categories.length > 0
                 ? (
@@ -169,13 +169,13 @@ const Gnb = ({
             {hasPortfolio ? (
               <ListMenu>
                 <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''} onClick={toggleMenu}>
-                  Portfolio
+                  포트폴리오
                 </StyledLink>
               </ListMenu>
             ) : null}
             <ListMenu>
               <StyledLink to="/resume" className={isResume ? 'active' : ''} onClick={toggleMenu}>
-                Resume
+                이력서
               </StyledLink>
             </ListMenu>
             <SearchBarWrapper>
@@ -214,7 +214,7 @@ const Gnb = ({
           </ul>
         </MobileMenus>
       </MobileMenu>
-      <ToggleWrapper>
+      {/* <ToggleWrapper>
         <Toggle
           defaultChecked={isDracula}
           icons={{
@@ -223,7 +223,7 @@ const Gnb = ({
           }}
           onChange={toggleTheme}
         />
-      </ToggleWrapper>
+      </ToggleWrapper> */}
       <Hamburger
         className={`hamburger hamburger--spin js-hamburger ${isMenuOpened ? 'is-active' : ''}`}
         onClick={toggleMenu}
@@ -240,7 +240,7 @@ const Gnb = ({
         </ListMenu>
         <ListMenu>
           <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
-            Posts
+            포스트
             &nbsp;
             {categories.length > 0 ? <FaCaretDown /> : null}
           </StyledLink>
@@ -269,13 +269,13 @@ const Gnb = ({
         {hasPortfolio ? (
           <ListMenu>
             <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>
-              Portfolio
+              포트폴리오
             </StyledLink>
           </ListMenu>
         ) : null}
         <ListMenu>
           <StyledLink to="/resume" className={isResume ? 'active' : ''}>
-            Resume
+            이력서
           </StyledLink>
         </ListMenu>
       </List>
