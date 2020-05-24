@@ -43,15 +43,16 @@ const Resume = ({
           </title>
           <meta name="og:title" content={`${PREFIX}RESUME`} />
         </Helmet>
-        <mesh style={{position:'relative'}}>
-          <BaseComponent/>
-        </mesh>
+
         <Clearfix>
           <Button type="button" onClick={printPage}>
             <FaPrint />
             Print
           </Button>
         </Clearfix>
+        <div style={{position:'fixed',opacity:0.5}}>
+          <BaseComponent />
+          </div>
         <BasicInformation>
           <img
             src={profileUrl.default}
@@ -110,7 +111,9 @@ const Resume = ({
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </MDInformation>
+
       </Clearfix>
+
     </Wrapper>
   );
 };

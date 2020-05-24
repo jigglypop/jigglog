@@ -16,7 +16,7 @@ const Bio = () => (
         alt=""
       />
       <span>
-        {AUTHOR}
+        <h4 style={{color:'white'}}>{AUTHOR}</h4>
         <br />
         <small>
           {DESCRIPTION}

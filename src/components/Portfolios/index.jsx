@@ -6,17 +6,20 @@ import PortfolioCard from '~/components/Common/PortfolioCard';
 import { PREFIX } from '~/constants';
 import { Wrapper } from './styled';
 
+
+
 const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
   <Wrapper>
+    {console.log(portfolios.length)}
     <Helmet>
       <title>
         {`${PREFIX}PORTFOLIOS`}
       </title>
       <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
     </Helmet>
+
     {portfolios.map(({ node: { frontmatter: { path, title, images = [] } } }) => {
       const [image = null] = images;
-
       if (image !== null) {
         return (
           <PortfolioCard key={path}>
@@ -44,6 +47,7 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
         </PortfolioCard>
       );
     })}
+
   </Wrapper>
 );
 
