@@ -60,7 +60,7 @@ class ParallaxComponent extends React.Component {
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
           
           <img
-            src={One}
+            src={url(One)}
             style={{ display: "block", width: "30%", zIndex: "10" }}
             alt="cloud"
           />
