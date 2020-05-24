@@ -4,8 +4,7 @@ import Moon from "./common/Moon";
 import Earth from "./common/Earth";
 import Yello from "./common/Yello";
 import TextSpringMany from '../Common/TextSpringMany/TextSpringMany'
-
-import One from './01.png'
+import Nine from './09.png'
 // Little helpers ...
 const url = (name, wrap = false) =>
   `${
@@ -60,7 +59,7 @@ class ParallaxComponent extends React.Component {
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
           
           <img
-            src={"09.png"}
+            src={Nine}
             style={{ display: "block", width: "30%", zIndex: "10" }}
             alt="cloud"
           />
