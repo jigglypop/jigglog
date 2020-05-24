@@ -4,7 +4,7 @@ export const FooterWrapper = styled.section`
   // padding: 10px 0;
   color: #000;
   background-color: #eee;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
 

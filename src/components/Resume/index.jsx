@@ -6,6 +6,7 @@ import Clearfix from '~/components/Common/Clearfix';
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
 import * as profileUrl from '~/resources/me.png';
 import { Wrapper, BasicInformation, SocialInformation, MDInformation, Button } from './styled';
+import BaseComponent from '../base/base'
 
 const Resume = ({
   data: {
@@ -42,6 +43,9 @@ const Resume = ({
           </title>
           <meta name="og:title" content={`${PREFIX}RESUME`} />
         </Helmet>
+        <mesh style={{position:'relative'}}>
+          <BaseComponent/>
+        </mesh>
         <Clearfix>
           <Button type="button" onClick={printPage}>
             <FaPrint />

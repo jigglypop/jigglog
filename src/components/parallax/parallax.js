@@ -4,6 +4,7 @@ import Moon from "./common/Moon";
 import Earth from "./common/Earth";
 import Yello from "./common/Yello";
 import TextSpringMany from '../Common/TextSpringMany/TextSpringMany'
+import { Link } from 'gatsby';
 
 
 import Six from './06.png'
@@ -22,7 +23,7 @@ const url = (name, wrap = false) =>
 class ParallaxComponent extends React.Component {
   render() {
     return (
-      <Parallax ref={(ref) => (this.parallax = ref)} pages={3}>
+      <Parallax ref={(ref) => (this.parallax = ref)} pages={3} >
         <ParallaxLayer
           offset={1}
           speed={1}
@@ -64,12 +65,12 @@ class ParallaxComponent extends React.Component {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
-          <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'10%',zIndex: "6" }}>
-            <TextSpringMany items={['RESUME']} fontSize={'100px'} color={'white'}/>
-          </mesh>
-          <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'20%',zIndex: "6" }}>
-            <TextSpringMany items={['MOVE','TO','JIGGLYPOP', 'RESUME','PAGE']} fontSize={'60px'} color={'white'}/>
-          </mesh>
+            <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'10%',zIndex: "6" }}>
+              <TextSpringMany items={['RESUME']} fontSize={'100px'} color={'white'}/>
+            </mesh>
+            <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'20%',zIndex: "6" }}>
+              <TextSpringMany items={['MOVE','TO','JIGGLYPOP', 'RESUME','PAGE']} fontSize={'60px'} color={'white'}/>
+            </mesh>
           <img
             src={Seven}
             style={{ display: "block", width: "40%", marginLeft: "10%" }}
@@ -114,7 +115,7 @@ class ParallaxComponent extends React.Component {
           }}
         >
 
-          <mesh style={{ marginLeft: "40%" }}>
+          <mesh style={{ marginLeft: "40%",marginBottom:'20%' }}>
             <Earth />
           </mesh>
         </ParallaxLayer>

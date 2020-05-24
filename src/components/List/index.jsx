@@ -8,7 +8,6 @@ import getPosts from '~/utils/getPosts';
 import getPage from '~/utils/getPage';
 import { PREFIX, CONTENT_PER_PAGE } from '~/constants';
 import BaseComponent from '../base/base'
-import TextSpring from '../Common/TextSpring'
 
 const List = ({ data, location }) => {
   const page = getPage(location);
