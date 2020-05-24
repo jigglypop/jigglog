@@ -4,11 +4,17 @@
 
 
 
-## Recap of the first half of the tutorial
+## 자습서 전반부 재점검
 
 So far, you’ve been learning how to use React.js—how powerful it is to be able to create your *own* components to act as custom building blocks for websites.
 
 You’ve also explored styling components using CSS Modules.
+
+
+
+웹 사이트의 사용자 지정 구성 요소 역할을 하기 위해 커스텀 컴포넌트를 만들 수 있는 것이 얼마나 강력한지 지금까지 React.js를 사용하는 방법을 배우셨습니다. 
+
+CSS 모듈을 사용한 스타일링 구성 요소도 살펴보셨습니다.
 
 ## What’s in this tutorial?
 
@@ -32,7 +38,25 @@ If you’re building a site with WordPress (so other contributors have a nice in
 
 Data can also live in file types like Markdown, CSV, etc. as well as databases and APIs of all sorts.
 
-**Gatsby’s data layer lets you pull data from these (and any other source) directly into your components** — in the shape and form you want.
+
+
+웹사이트는 HTML, CSS, JS, 그리고 데이터의 네 부분으로 구성되어 있습니다. 튜토리얼의 전반부는 첫 번째 세 가지에 초점을 맞췄다. 이제 개츠비 사이트에서 데이터를 사용하는 방법에 대해 배워봅시다.
+
+**데이터란?**
+
+아주 컴퓨터 과학적인 대답은 데이터가 string, integer, object 등과 같은 것이라는 것이다.
+
+그러나 개츠비에서 일할 목적으로, 더 유용한 대답은 "반응 요소 밖에 사는 모든 것"이다.
+
+지금까지 텍스트를 작성하고 구성 요소에 *직접* 이미지를 추가하셨습니다. 그것은 많은 웹사이트를 만드는 *우수한*의 방법이다. 그러나 데이터 *outside* 구성요소를 저장한 후 필요에 따라 *internal* 구성요소에 데이터를 가져오려는 경우가 많다.
+
+WordPress(다른 기고자들이 콘텐츠를 추가 및 유지 관리하기 위한 훌륭한 인터페이스를 가지고 있음) 및 Gatsby와 함께 사이트를 구축하고 있다면, 해당 사이트(페이지 및 게시물)에 대한 *데이터*가 WordPress에 있고, 필요에 따라 해당 데이터를 구성 요소에 끌어다 놓으십시오.
+
+데이터는 마크다운, CSV 등과 같은 파일 형식뿐만 아니라 모든 종류의 데이터베이스와 API에서도 사용할 수 있다.
+
+**Gatsby의 데이터 계층을 사용하면 이러한 데이터(및 다른 소스)에서 원하는 모양과 형태로 직접 구성 요소로 데이터를 가져올 수 있음**—
+
+
 
 ## Using Unstructured Data vs GraphQL
 
