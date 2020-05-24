@@ -4,6 +4,11 @@ import Moon from "./common/Moon";
 import Earth from "./common/Earth";
 import Yello from "./common/Yello";
 import TextSpringMany from '../Common/TextSpringMany/TextSpringMany'
+
+
+import Six from './06.png'
+import Seven from './07.png'
+import Eight from './08.png'
 import Nine from './09.png'
 // Little helpers ...
 const url = (name, wrap = false) =>
@@ -12,24 +17,7 @@ const url = (name, wrap = false) =>
   }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
     wrap ? ")" : ""
   }`;
-const Pink = ({ children }) => (
-  <span style={{ color: "#FF6AC1" }}>{children}</span>
-);
-const Yellow = ({ children }) => (
-  <span style={{ color: "#EFF59B" }}>{children}</span>
-);
-const Lightblue = ({ children }) => (
-  <span style={{ color: "#9AEDFE" }}>{children}</span>
-);
-const Green = ({ children }) => (
-  <span style={{ color: "#57EE89" }}>{children}</span>
-);
-const Blue = ({ children }) => (
-  <span style={{ color: "#57C7FF" }}>{children}</span>
-);
-const Gray = ({ children }) => (
-  <span style={{ color: "#909090" }}>{children}</span>
-);
+
 
 class ParallaxComponent extends React.Component {
   render() {
@@ -69,7 +57,7 @@ class ParallaxComponent extends React.Component {
         <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.7 }}>
 
           <img
-            src={"./09.png"}
+            src={Eight}
             style={{ display: "block", width: "20%", marginLeft: "70%" }}
             alt="cloud"
           />
@@ -83,7 +71,7 @@ class ParallaxComponent extends React.Component {
           <TextSpringMany items={['MOVE','TO','JIGGLYPOP', 'RESUME','PAGE']} fontSize={'60px'} color={'white'}/>
           </mesh>
           <img
-            src={"./07.png"}
+            src={Seven}
             style={{ display: "block", width: "40%", marginLeft: "10%" }}
             alt="cloud"
           />
@@ -95,12 +83,12 @@ class ParallaxComponent extends React.Component {
             <Yello />
           </mesh>
           <img
-            src={"./07.png"}
+            src={Seven}
             style={{ display: "block", width: "50%", marginLeft: "50%" }}
             alt="cloud"
           />
           <img
-            src={"./06.png"}
+            src={Six}
             style={{ display: "block", width: "60%", marginLeft: "70%" }}
             alt="cloud"
           />
@@ -109,7 +97,7 @@ class ParallaxComponent extends React.Component {
         <ParallaxLayer offset={2.6} speed={0.4}>
 
           <img
-            src={"./07.png"}
+            src={Seven}
             style={{ position: "absolute", width: "30%", zIndex: "10" }}
             alt="cloud"
           />
@@ -157,7 +145,7 @@ class ParallaxComponent extends React.Component {
             <Moon />
           </mesh>
           <img
-            src={"./06.png"}
+            src={Six}
             style={{ position: "absolute", width: "80%", zIndex: "10" }}
             alt="cloud"
           />
