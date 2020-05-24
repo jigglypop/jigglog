@@ -3,7 +3,14 @@ import { FooterWrapper } from './styled';
 
 const Footer = () => (
   <FooterWrapper>
-    <h1>YDH</h1>
+    made by@
+    <a
+      href="https://github.com/jigglypop"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+     jigglypop
+    </a>
   </FooterWrapper>
 );
 

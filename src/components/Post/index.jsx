@@ -33,7 +33,6 @@ const PostTemplate = ({
 
     if (!d.getElementById('disqus-sdk')) {
       const s = d.createElement('script');
-
       s.src = `https://${DISQUS_ID}.disqus.com/embed.js`;
       s.setAttribute('data-timestamp', Date.now());
       d.body.appendChild(s);

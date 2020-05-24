@@ -2,10 +2,13 @@ import React, { useReducer, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, navigate } from 'gatsby';
 import Toggle from 'react-toggle';
+import TextSpring from '../Common/TextSpring'
 import { FaCaretDown, FaSearch, FaTags } from 'react-icons/fa';
 import {
   Hamburger,
   MovableFaCaretDown,
+  MovableFaCaretUp,
+
   GnbWrapper,
   List,
   SubMenu,
@@ -131,7 +134,7 @@ const Gnb = ({
             </ListMenu>
             <ListMenu>
               <StyledLink to="/pages/1" className={isPost ? 'active' : ''} onClick={toggleMenu}>
-                포스트
+              <TextSpring text={'POSTS'} fontSize={'2em'} color={'white'}/>
               </StyledLink>
               {categories.length > 0
                 ? (
@@ -169,14 +172,17 @@ const Gnb = ({
             {hasPortfolio ? (
               <ListMenu>
                 <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''} onClick={toggleMenu}>
-                  포트폴리오
+                <TextSpring text={'PORTFOLIOS'} fontSize={'2em'} color={'white'}/>
                 </StyledLink>
+                <MovableFaCaretDown/>
               </ListMenu>
             ) : null}
             <ListMenu>
               <StyledLink to="/resume" className={isResume ? 'active' : ''} onClick={toggleMenu}>
-                이력서
+              <TextSpring text={'RESUME'} color={'white'}/>
               </StyledLink>
+              <MovableFaCaretDown/>
+
             </ListMenu>
             <SearchBarWrapper>
               <label htmlFor="search">
@@ -214,16 +220,7 @@ const Gnb = ({
           </ul>
         </MobileMenus>
       </MobileMenu>
-      {/* <ToggleWrapper>
-        <Toggle
-          defaultChecked={isDracula}
-          icons={{
-            checked: <span role="img" aria-label="change-theme">🌙</span>,
-            unchecked: <span role="img" aria-label="change-theme">☀️</span>,
-          }}
-          onChange={toggleTheme}
-        />
-      </ToggleWrapper> */}
+
       <Hamburger
         className={`hamburger hamburger--spin js-hamburger ${isMenuOpened ? 'is-active' : ''}`}
         onClick={toggleMenu}
@@ -240,7 +237,7 @@ const Gnb = ({
         </ListMenu>
         <ListMenu>
           <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
-            포스트
+          <TextSpring text={'POSTS'} fontSize={'2em'} color={'white'}/>
             &nbsp;
             {categories.length > 0 ? <FaCaretDown /> : null}
           </StyledLink>
@@ -269,14 +266,21 @@ const Gnb = ({
         {hasPortfolio ? (
           <ListMenu>
             <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>
-              포트폴리오
+            <TextSpring text={'PORTFOLIOS'} fontSize={'2em'} color={'white'}/>
+
             </StyledLink>
+            <MovableFaCaretDown/>
+
           </ListMenu>
         ) : null}
         <ListMenu>
           <StyledLink to="/resume" className={isResume ? 'active' : ''}>
-            이력서
+            <TextSpring text={'RESUME'} fontSize={'2em'} color={'white'}/>
           </StyledLink>
+
+
+          <MovableFaCaretDown/>
+
         </ListMenu>
       </List>
       <SearchBarWrapper>

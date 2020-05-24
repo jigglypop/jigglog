@@ -24,7 +24,7 @@ export default class App extends Component {
 
     if (isDracula) {
       if (global.localStorage) {
-        global.localStorage.setItem('theme', 'normal');
+        global.localStorage.setItem('theme', 'dracula');
       }
     } else {
       if (global.localStorage) {
@@ -46,13 +46,10 @@ export default class App extends Component {
       children,
     } = this.props;
     const { isDracula } = this.state;
-    const theme = isDracula ? {
+    const theme = {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
-    } : {
-      color: BLACK_COLOR,
-      backgroundColor: WHITE_COLOR,
-    };
+    } 
 
     return (
       <ThemeProvider theme={theme}>

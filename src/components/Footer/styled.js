@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.section`
-  padding: 10px 0;
+  // padding: 10px 0;
   color: #000;
   background-color: #eee;
   font-size: 11px;
