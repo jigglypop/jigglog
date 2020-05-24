@@ -64,11 +64,11 @@ class ParallaxComponent extends React.Component {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
-        <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'10%',zIndex: "6" }}>
-          <TextSpringMany items={['RESUME']} fontSize={'100px'} color={'white'}/>
+          <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'10%',zIndex: "6" }}>
+            <TextSpringMany items={['RESUME']} fontSize={'100px'} color={'white'}/>
           </mesh>
           <mesh style={{ position: "absolute", marginLeft:'50%',marginTop:'20%',zIndex: "6" }}>
-          <TextSpringMany items={['MOVE','TO','JIGGLYPOP', 'RESUME','PAGE']} fontSize={'60px'} color={'white'}/>
+            <TextSpringMany items={['MOVE','TO','JIGGLYPOP', 'RESUME','PAGE']} fontSize={'60px'} color={'white'}/>
           </mesh>
           <img
             src={Seven}
@@ -139,7 +139,7 @@ class ParallaxComponent extends React.Component {
           }}
         >
           <mesh style={{ position: "absolute", marginLeft:'-10%',zIndex: "6" }}>
-          <TextSpringMany items={['JIGGLYPOPS','BLOG']} fontSize={'100px'} color={'white'}/>
+            <TextSpringMany items={['JIGGLYPOPS','BLOG']} fontSize={'100px'} color={'white'}/>
           </mesh>
           <mesh style={{ marginLeft: "40%" }}>
             <Moon />
@@ -162,7 +162,7 @@ class ParallaxComponent extends React.Component {
           }}
         >
           
-          <img src={"./08.png"} style={{ width: "10%" }} alt="cloud" />
+          <img src={Eight} style={{ width: "10%" }} alt="cloud" />
         </ParallaxLayer>
 
         <ParallaxLayer
