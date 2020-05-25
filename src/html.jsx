@@ -18,6 +18,7 @@ export default class HTML extends Component {
       <html {...htmlAttributes} lang="ko">
         <head>
           {headComponents}
+          <meta name="google-site-verification" content="NTj68jTRw50DTm4oJDLc_VKe1p9ItHiQdJuDBRsikaE" />
           <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
           <meta httpEquiv="Access-Control-Allow-Origin" content="*" />
           <meta httpEquiv="Access-Control-Allow-Headers" content="*" />
