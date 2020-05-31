@@ -50,9 +50,8 @@ const Resume = ({
             Print
           </Button>
         </Clearfix>
-        <div style={{position:'fixed',opacity:0.5}}>
-          <BaseComponent />
-          </div>
+
+
         <BasicInformation>
           <img
             src={profileUrl.default}
@@ -105,6 +104,9 @@ const Resume = ({
             </a>
           ) : null}
         </SocialInformation>
+        <div style={{position:'fixed',marginLeft:'-20%',opacity:0.8}}>
+          <BaseComponent />
+          </div>
         <MDInformation>
           <div
             ref={$mdWrapper}

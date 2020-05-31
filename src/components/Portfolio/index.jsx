@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { PREFIX } from '~/constants';
 import { Wrapper, PortfolioDescription, PortfolioImages } from './styled';
+import './styled.css'
 
 const Portfolio = ({ data: { portfolio: { frontmatter: { title, images }, html } } }) => (
   <Wrapper>

@@ -1,23 +1,24 @@
 ---
 type: "portfolio"
-title: "Gatsby Advanced Blog"
+title: "MOVIE STAR"
 date: "2018-01-01T00:00:00.000Z"
 path: "/portfolios/portfolio-1/"
 images: [
-  "test-1/1.png",
-  "test-1/2.png",
+  "test-1/moviestar_02.jpg",
+  "test-1/moviestar_01.jpg",
 ]
 ---
 
-# Gatsby Advanced Blog
+# MOVIE STAR
 
 ## What I did
-- Develop Gatsby Advanced Blog
+- MOVIE STAR
+- SSAFY 관통 프로젝트
+- 영화 API 추천 사이트 만들기 프로젝트
 
 ## Libraries / Tools
-- ReactJS
-- Redux
-- Redux saga
+- DJANGO
+- JQUERY
 - ...
 
-[Go to Web Site →](https://github.com/wonism/gatsby-advanced-blog)
+[Go to Web Site →](https://moviestarreboot.herokuapp.com/)

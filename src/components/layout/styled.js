@@ -19,4 +19,8 @@ export const Background = styled.div`
       display: none;
     }
   }
+  a, a:focus, a:hover, a:visited {
+    color: white;
+    text-decoration: blink;
+  }
 `;

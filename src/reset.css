@@ -217,7 +217,7 @@ a,
 a:focus,
 a:hover,
 a:visited {
-  color: #3b9cff;
+  color: white;
   text-decoration: blink;
 }
 img {

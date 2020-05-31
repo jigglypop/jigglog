@@ -4,8 +4,9 @@ category: "Engineer Information Processing"
 tags: ["Engineer Information Processing"]
 title: "소프트웨어 개발"
 date: "2018-01-10T00:00:00.000Z"
-summary: "정보처리기사/소프트웨어 개발"
+summary: "정보처리기사"
 images: ["images/1.jpg"]
+
 ---
 
 ### 정보처리기사 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 책을 참고해서 공부하세요
