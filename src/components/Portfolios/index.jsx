@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import PortfolioCard from '~/components/Common/PortfolioCard';
 import { PREFIX } from '~/constants';
 import { Wrapper } from './styled';
-
+import TextSpringMany from '../Common/TextSpringMany/TextSpringMany'
 
 
 const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
@@ -29,9 +29,7 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
               ) : (
                 <img src={require(`~/resources/${image}`)} alt="portfolio" />
               )}
-              <h6>
-                {title}
-              </h6>
+              <TextSpringMany items={[title]} fontSize={'30px'} color={'white'}/>
             </Link>
           </PortfolioCard>
         );

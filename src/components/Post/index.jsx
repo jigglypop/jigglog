@@ -11,6 +11,7 @@ import PostWrapper from '~/components/Common/PostWrapper';
 import { PREFIX, SITE_URL, DISQUS_ID } from '~/constants';
 import formattedDate from '~/utils/formattedDate';
 import { Tags, PostContent, ImageWrapper, ComponentInPost } from './styled';
+import './styled.css'
 
 const PostTemplate = ({
   data: {

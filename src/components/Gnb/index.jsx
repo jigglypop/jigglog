@@ -237,7 +237,7 @@ const Gnb = ({
         </ListMenu>
         <ListMenu>
           <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
-          <TextSpring text={'POSTS'} fontSize={'2em'} color={'white'}/>
+          <TextSpring text={'POSTS'} fontSize={'1.3em'} color={'white'}/>
             &nbsp;
             {categories.length > 0 ? <FaCaretDown /> : null}
           </StyledLink>
@@ -266,7 +266,7 @@ const Gnb = ({
         {hasPortfolio ? (
           <ListMenu>
             <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>
-            <TextSpring text={'PORTFOLIOS'} fontSize={'2em'} color={'white'}/>
+            <TextSpring text={'PORTFOLIOS'} fontSize={'1.3em'} color={'white'}/>
 
             </StyledLink>
             <MovableFaCaretDown/>
@@ -275,7 +275,7 @@ const Gnb = ({
         ) : null}
         <ListMenu>
           <StyledLink to="/resume" className={isResume ? 'active' : ''}>
-            <TextSpring text={'RESUME'} fontSize={'2em'} color={'white'}/>
+            <TextSpring text={'RESUME'} fontSize={'1.3em'} color={'white'}/>
           </StyledLink>
 
 
