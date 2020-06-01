@@ -1,5 +1,5 @@
 ---
-path: "/post-14/"
+path: "/post-5/"
 category: "Engineer Information Processing"
 tags: ["Engineer Information Processing"]
 title: "정보시스템 구축 관리"

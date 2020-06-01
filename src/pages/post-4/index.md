@@ -1,5 +1,5 @@
 ---
-path: "/post-13/"
+path: "/post-4/"
 category: "Engineer Information Processing"
 tags: ["Engineer Information Processing"]
 title: "프로그래밍 언어 활용"
@@ -264,7 +264,7 @@ images: ["images/1.jpg"]
 - 개발 조직을 갖추어야 할 필요성이 없어 비용을 절감할 수 있음
 - 이미 개발된 S/W를 사용하기 때문에 프로젝트 기간 단축
 
-​
+
 
 # 3. 응용 SW 기초 기술 활용
 

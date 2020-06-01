@@ -1,5 +1,5 @@
 ---
-path: "/post-10/"
+path: "/post-1/"
 category: "Engineer Information Processing"
 tags: ["Engineer Information Processing"]
 title: "소프트웨어 설계"
