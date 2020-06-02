@@ -1,14 +1,9 @@
 import React, { useReducer, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, navigate } from 'gatsby';
-import Toggle from 'react-toggle';
 import TextSpring from '../Common/TextSpring'
-import { FaCaretDown, FaSearch, FaTags } from 'react-icons/fa';
+import { FaSearch, FaTags } from 'react-icons/fa';
 import {
-  Hamburger,
-  MovableFaCaretDown,
-  MovableFaCaretUp,
-
   GnbWrapper,
   List,
   SubMenu,
@@ -25,8 +20,8 @@ import {
   Background,
   MobileMenus,
   MobileMenu,
-  ToggleWrapper,
 } from './styled';
+import './style.css'
 
 const TOGGLE_MENU = 'TOGGLE_MENU';
 const TOGGLE_SUB_MENU = 'TOGGLE_SUB_MENU';
@@ -136,26 +131,16 @@ const Gnb = ({
               <StyledLink to="/pages/1" className={isPost ? 'active' : ''} onClick={toggleMenu}>
               <TextSpring text={'POSTS'} fontSize={'2em'} color={'white'}/>
               </StyledLink>
-              {categories.length > 0
-                ? (
-                  <>
-                    &nbsp;
-                    <MovableFaCaretDown
-                      className={isSubMenuClosed ? 'is-active' : ''}
-                      onClick={toggleSubMenu}
-                    />
-                  </>
-                )
-                : null}
-              <SubMenu>
-                <div>
+
+              <SubMenu >
+                <div >
                   {categories.map(({ key, length }) => {
                     if (key === '__ALL__') {
                       return null;
                     }
 
                     return (
-                      <li key={key}>
+                      <li key={key} >
                         <Link to={`/categories/${key}/1`} onClick={toggleMenu}>
                           {key}
                           &nbsp;
@@ -174,15 +159,12 @@ const Gnb = ({
                 <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''} onClick={toggleMenu}>
                 <TextSpring text={'PORTFOLIOS'} fontSize={'2em'} color={'white'}/>
                 </StyledLink>
-                <MovableFaCaretDown/>
               </ListMenu>
             ) : null}
             <ListMenu>
               <StyledLink to="/resume" className={isResume ? 'active' : ''} onClick={toggleMenu}>
               <TextSpring text={'RESUME'} color={'white'}/>
               </StyledLink>
-              <MovableFaCaretDown/>
-
             </ListMenu>
             <SearchBarWrapper>
               <label htmlFor="search">
@@ -221,14 +203,6 @@ const Gnb = ({
         </MobileMenus>
       </MobileMenu>
 
-      <Hamburger
-        className={`hamburger hamburger--spin js-hamburger ${isMenuOpened ? 'is-active' : ''}`}
-        onClick={toggleMenu}
-      >
-        <div className="hamburger-box">
-          <div className="hamburger-inner" />
-        </div>
-      </Hamburger>
       <List>
         <ListMenu>
           <StyledLink to="/">
@@ -238,8 +212,7 @@ const Gnb = ({
         <ListMenu>
           <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
           <TextSpring text={'POSTS'} fontSize={'1.3em'} color={'white'}/>
-            &nbsp;
-            {categories.length > 0 ? <FaCaretDown /> : null}
+
           </StyledLink>
           <SubMenu>
             <div>
@@ -266,21 +239,14 @@ const Gnb = ({
         {hasPortfolio ? (
           <ListMenu>
             <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>
-            <TextSpring text={'PORTFOLIOS'} fontSize={'1.3em'} color={'white'}/>
-
+              <TextSpring text={'PORTFOLIOS'} fontSize={'1.3em'} color={'white'}/>
             </StyledLink>
-            <MovableFaCaretDown/>
-
           </ListMenu>
         ) : null}
         <ListMenu>
           <StyledLink to="/resume" className={isResume ? 'active' : ''}>
             <TextSpring text={'RESUME'} fontSize={'1.3em'} color={'white'}/>
           </StyledLink>
-
-
-          <MovableFaCaretDown/>
-
         </ListMenu>
       </List>
       <SearchBarWrapper>

@@ -65,6 +65,7 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   height: 80px;
+  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
   @media (max-width: 414px) {
     display: none;
@@ -75,19 +76,17 @@ export const SubMenu = styled.ul`
   position: absolute;
   top: 40px;
   line-height: 1.8em;
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
   font-size: 12px;
   font-weight: 500;
   overflow: hidden;
   transition: max-height .4s ease-out .1s;
+  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
   li {
     padding: 6px 12px;
   }
 
   a:hover {
-    color: ${PRIMARY_COLOR};
-    text-decoration: underline;
   }
 `;
 
@@ -96,6 +95,7 @@ export const ListMenu = styled.li`
   position: relative;
   padding: 0 0 0 2em;
   font-weight: 500;
+  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
   @media (max-width: 414px) {
     display: none;
@@ -135,13 +135,9 @@ export const StyledLink = styled(Link)`
   }
 
   &.active {
-    color: ${PRIMARY_COLOR};
-    text-decoration: underline;
   }
 
   &:hover {
-    color: ${PRIMARY_COLOR};
-    text-decoration: underline;
   }
 `;
 
@@ -232,7 +228,7 @@ export const Title = styled.h4`
   width: 100%;
   height: 2.4em;
   line-height: 2.4em;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
 
@@ -256,7 +252,7 @@ export const Summary = styled.p`
 export const Tag = styled.span`
   padding: 0 0 0 .4em;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 20px;
 
   &:hover {
     text-decoration: underline;

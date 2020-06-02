@@ -1,7 +1,7 @@
 ---
 path: "/post-1/"
-category: "Engineer Information Processing"
-tags: ["Engineer Information Processing"]
+category: "Certificate"
+tags: ["Certificate"]
 title: "소프트웨어 설계"
 date: "2018-01-10T00:00:00.000Z"
 summary: "정보처리기사"
