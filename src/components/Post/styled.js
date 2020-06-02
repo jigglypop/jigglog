@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Tags = styled.div`
   margin: 1em 0;
@@ -44,7 +44,7 @@ export const PostContent = styled.section`
     line-height: 1.2em;
     color: #aaa;
     font-style: italic;
-    font-family: 'Kaushan Script';
+    font-family: "Kaushan Script";
     font-size: 24px;
   }
 
@@ -56,10 +56,11 @@ export const PostContent = styled.section`
 export const ImageWrapper = styled.figure`
   position: relative;
   margin: 0 0 48px;
-  padding: 56.25% 0 0;
-  width: 100%;
+  // padding: 56.25% 0 0;
+  // width: 100%;
   overflow: hidden;
-
+  width: 200px;
+  height: 200px;
   img {
     position: absolute;
     top: 0;
@@ -67,8 +68,8 @@ export const ImageWrapper = styled.figure`
     right: 0;
     left: 0;
     margin: auto;
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
   }
 `;
 
@@ -94,7 +95,7 @@ export const ComponentInPost = styled.div`
     color: #fff;
     background-color: #263238;
     font-weight: 100;
-    content: 'Application for example';
+    content: "Application for example";
   }
 
   &:after {
@@ -106,7 +107,7 @@ export const ComponentInPost = styled.div`
     height: 10px;
     background-color: #ff5f56;
     border-radius: 50%;
-    content: '';
+    content: "";
   }
 
   & > *:first-child {
@@ -119,7 +120,7 @@ export const ComponentInPost = styled.div`
       height: 10px;
       background-color: #ffbd2e;
       border-radius: 50%;
-      content: '';
+      content: "";
     }
 
     &:after {
@@ -131,7 +132,7 @@ export const ComponentInPost = styled.div`
       height: 10px;
       background-color: #27c93f;
       border-radius: 50%;
-      content: '';
+      content: "";
     }
   }
 `;

@@ -7,3 +7,7 @@
   color: black; */
   padding: 20px !important;
 }
+ol,
+ul {
+  list-style: unset;
+}
