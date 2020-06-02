@@ -88,6 +88,7 @@ module.exports = {
         logo: "./moon.png",
       },
     },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

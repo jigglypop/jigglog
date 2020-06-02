@@ -1,5 +1,5 @@
 ---
-path: "/post-2/"
+path: "/소프트웨어개발/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "소프트웨어 개발"

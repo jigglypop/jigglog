@@ -1,5 +1,5 @@
 ---
-path: "/post-1/"
+path: "/소프트웨어설계/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "소프트웨어 설계"

@@ -1,5 +1,5 @@
 ---
-path: "/post-4/"
+path: "/프로그래밍언어활용/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "프로그래밍 언어 활용"

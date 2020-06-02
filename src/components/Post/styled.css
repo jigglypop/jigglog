@@ -7,7 +7,21 @@
   color: black; */
   padding: 20px !important;
 }
+
 ol,
 ul {
   list-style: unset;
+}
+.hljs-text {
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  background-color: #808588;
+}
+@font-face {
+  font-family: "BMHANNAPro";
+  src: url("../../fonts/BMHANNAPro.ttf");
+}
+body {
+  font-family: "BMHANNAPro";
 }

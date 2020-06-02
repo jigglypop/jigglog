@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const Tags = styled.div`
   margin: 1em 0;
-
   a {
     margin: 0 0 0 4px;
     color: #000;
     text-decoration: blink;
-
     &:hover {
       text-decoration: underline;
     }
@@ -17,27 +15,22 @@ export const Tags = styled.div`
 export const PostContent = styled.section`
   padding: 1em 0 4em;
   line-height: 1.6em;
-
   h2 {
     margin: 24px 0 10px;
     font-size: 28px;
   }
-
   h3 {
     margin: 24px 0 10px;
     font-size: 24px;
   }
-
   h4 {
     margin: 24px 0 10px;
     font-size: 21px;
   }
-
   p {
     margin: 16px 0 0;
     font-size: 16px;
   }
-
   blockquote {
     margin: 40px 0 0;
     padding: 0 0 0 2em;
@@ -47,7 +40,6 @@ export const PostContent = styled.section`
     font-family: "Kaushan Script";
     font-size: 24px;
   }
-
   pre {
     margin: 20px 0 0;
   }
@@ -56,11 +48,9 @@ export const PostContent = styled.section`
 export const ImageWrapper = styled.figure`
   position: relative;
   margin: 0 0 48px;
-  // padding: 56.25% 0 0;
-  // width: 100%;
+  padding: 56.25% 0 0;
+  width: 100%;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
   img {
     position: absolute;
     top: 0;
@@ -68,8 +58,8 @@ export const ImageWrapper = styled.figure`
     right: 0;
     left: 0;
     margin: auto;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -82,7 +72,6 @@ export const ComponentInPost = styled.div`
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
-
   &:before {
     position: absolute;
     top: 0;
@@ -97,7 +86,6 @@ export const ComponentInPost = styled.div`
     font-weight: 100;
     content: "Application for example";
   }
-
   &:after {
     display: inline-block;
     position: absolute;
@@ -109,7 +97,6 @@ export const ComponentInPost = styled.div`
     border-radius: 50%;
     content: "";
   }
-
   & > *:first-child {
     &:before {
       display: inline-block;
@@ -122,7 +109,6 @@ export const ComponentInPost = styled.div`
       border-radius: 50%;
       content: "";
     }
-
     &:after {
       display: inline-block;
       position: absolute;
