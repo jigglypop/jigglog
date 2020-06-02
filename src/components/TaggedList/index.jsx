@@ -11,9 +11,9 @@ import { PREFIX, CONTENT_PER_PAGE } from '~/constants';
 const TaggedList = ({ data, location }) => {
   const page = getPage(location);
   const [, , tag] = location.pathname.split('/');
-  const allPosts = data
-    |> getPosts
-    |> (posts => posts.filter(({ node: { frontmatter: { tags } } }) => tags.includes(tag)));
+  // const allPosts = data
+  //   |> getPosts
+  //   |> (posts => posts.filter(({ node: { frontmatter: { tags } } }) => tags.includes(tag)));
   const postCount = allPosts.length;
   const posts = allPosts.slice((page - 1) * CONTENT_PER_PAGE, page * CONTENT_PER_PAGE);
 

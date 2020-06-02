@@ -6,10 +6,10 @@ exports.PORTFOLIO = 'portfolio';
 exports.RESUME = 'resume';
 
 // Site Information
-exports.NAME = '지글로그';
-exports.TITLE = '지글로그';
-exports.PREFIX = '지글로그 | ';
-exports.DESCRIPTION = '유니크한 기술을 좋아하는 개발자';
+exports.NAME = 'jigglog';
+exports.TITLE = 'jigglog';
+exports.PREFIX = 'jigglog | ';
+exports.DESCRIPTION = 'jigglypop\'s blog';
 exports.AUTHOR = 'jigglypop';
 exports.EMAIL = 'ydh2244@gmail.com';
 exports.KEYWORDS = [
