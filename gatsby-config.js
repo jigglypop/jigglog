@@ -71,15 +71,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#3B9CFF',
         display: 'minimal-ui',
-        // icons: [{
-        //   // Everything in /static will be copied to an equivalent
-        //   // directory in /public during development and build, so
-        //   // assuming your favicons are in /static/favicons,
-        //   // you can reference them here
-        //   src: `${__dirname}/src/resources/images/moon.png`,
-        //   sizes: `192x192`,
-        //   type: `image/png`,
-        // }],
+
       },
     },
     'gatsby-plugin-sitemap',
