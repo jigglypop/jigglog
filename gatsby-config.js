@@ -52,12 +52,12 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "<<YOUR_OWN_KEY>>",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "<<YOUR_OWN_KEY>>",
+    //   },
+    // },
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
