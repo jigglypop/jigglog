@@ -17,10 +17,15 @@ ul {
   padding: 5px;
   color: black;
   background-color: #808588;
+  font-family: "NotoSans-Medium";
 }
 @font-face {
   font-family: "BMHANNAPro";
   src: url("../../fonts/BMHANNAPro.ttf");
+}
+@font-face {
+  font-family: "NotoSans-Medium";
+  src: url("../../fonts/NotoSans-Medium.ttf");
 }
 body {
   font-family: "BMHANNAPro";
