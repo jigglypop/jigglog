@@ -10,7 +10,7 @@
 
 ol,
 ul {
-  list-style: unset;
+  list-style: unset !important;
 }
 .hljs-text {
   border-radius: 5px;
