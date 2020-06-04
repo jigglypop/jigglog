@@ -12,13 +12,7 @@ ol,
 ul {
   list-style: unset !important;
 }
-.hljs-text {
-  border-radius: 5px;
-  padding: 5px;
-  color: black;
-  background-color: #808588;
-  font-family: "NotoSans-Medium";
-}
+
 @font-face {
   font-family: "BMHANNAPro";
   src: url("../../fonts/BMHANNAPro.ttf");
@@ -29,4 +23,21 @@ ul {
 }
 body {
   font-family: "BMHANNAPro";
+}
+
+.gatsby-highlight {
+  background-color: #fdf6e3;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
 }
