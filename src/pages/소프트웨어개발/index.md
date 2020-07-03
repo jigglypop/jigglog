@@ -2,9 +2,9 @@
 path: "/소프트웨어개발/"
 category: "Certificate"
 tags: ["Certificate"]
-title: "소프트웨어 개발"
+title: "2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발"
 date: "2018-01-10T00:00:00.000Z"
-summary: "정보처리기사"
+summary: "2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발"
 images: ["images/1.jpg"]
 ---
 

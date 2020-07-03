@@ -2,9 +2,9 @@
 path: "/데이터베이스구축/"
 category: "Certificate"
 tags: ["Certificate"]
-title: "데이터베이스 구축"
+title: "2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축"
 date: "2018-01-10T00:00:00.000Z"
-summary: "정보처리기사"
+summary: "2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축"
 images: ["images/1.jpg"]
 ---
 

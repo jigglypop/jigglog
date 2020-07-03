@@ -2,9 +2,9 @@
 path: "/정보시스템구축관리/"
 category: "Certificate"
 tags: ["Certificate"]
-title: "정보시스템 구축 관리"
+title: "2020 정보처리기사 필기 요점 정리(4) - 정보시스템 구축 관리"
 date: "2018-01-10T00:00:00.000Z"
-summary: "정보처리기사"
+summary: "2020 정보처리기사 필기 요점 정리(4) - 정보시스템 구축 관리"
 images: ["images/1.jpg"]
 ---
 
