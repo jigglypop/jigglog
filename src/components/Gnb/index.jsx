@@ -224,9 +224,7 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
       <List>
         <ListMenu>
           <StyledLink to="/">
-            <MoonImage>
-              <img src={moon} />
-            </MoonImage>
+            <img src={moon} style={{ width: "50px", height: "50px" }} />
           </StyledLink>
         </ListMenu>
         <ListMenu>
