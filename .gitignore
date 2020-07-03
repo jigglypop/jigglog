@@ -40,3 +40,4 @@ ENV/
 
 # generated files
 public/
+node_modules
