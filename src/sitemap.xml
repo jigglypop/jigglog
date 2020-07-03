@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://jigglypopownprivateblog.netlify.app/소프트웨어개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/정보시스템구축관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/정보처리기사실기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/소프트웨어개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/소프트웨어설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/정보시스템구축관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/프로그래밍언어활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/데이터베이스구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/portfolio-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/resume/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/Certificate/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
