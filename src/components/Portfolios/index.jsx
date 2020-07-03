@@ -13,7 +13,6 @@ const Portfolios = ({
   },
 }) => (
   <Wrapper>
-    {console.log(portfolios.length)}
     <Helmet>
       <title>{`${PREFIX}PORTFOLIOS`}</title>
       <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />

@@ -24,7 +24,6 @@ export default class App extends Component {
       hasPortfolio,
       children,
     } = this.props;
-    const { isDracula } = "dracula";
     const theme = {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
@@ -39,8 +38,6 @@ export default class App extends Component {
               categories={categories}
               postInformations={postInformations}
               hasPortfolio={hasPortfolio}
-              toggleTheme={this.toggleTheme}
-              isDracula={isDracula}
             />
           </nav>
           <main>{children}</main>

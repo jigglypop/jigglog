@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import Wrapper from "~/components/Common/Wrapper";
 import { TITLE } from "~/constants";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import Moon from "../parallax/common/Moon";
@@ -11,14 +10,25 @@ import { Link } from "gatsby";
 
 import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
-import Eight from "../parallax/08.png";
 import "./styled.css";
 import styled from "styled-components";
 
-export const Title = styled.div`
-  font-family: "NanumBarunGothic" !important;
+const BlinkImage = styled.img`
+  animation: blink 0.5s ease-in-out infinite alternate;
 
-  animation: blink 1.5s ease-in-out infinite alternate;
+  @keyframes blink {
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+const Title = styled.div`
+  font-family: "NanumBarunGothic" !important;
+  animation: blink 1.2s ease-in-out infinite alternate;
 
   @keyframes blink {
     50% {
@@ -34,7 +44,7 @@ export const Title = styled.div`
   text-shadow: 4px 4px 40px white;
 `;
 
-export const TitleRed = styled.div`
+const TitleRed = styled.div`
   font-family: "NanumBarunGothic" !important;
 
   color: #e94057;
@@ -43,7 +53,7 @@ export const TitleRed = styled.div`
   text-shadow: 4px 4px 40px white;
 `;
 
-export const Content = styled.div`
+const Content = styled.div`
   font-family: "NanumBarunGothic" !important;
 
   font-size: 20px;
@@ -56,10 +66,6 @@ const url = (name, wrap = false) =>
   }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
     wrap ? ")" : ""
   }`;
-
-const random = (max) => {
-  return Math.floor(Math.random() * max);
-};
 
 class ParallaxComponent extends React.Component {
   render() {
@@ -87,24 +93,22 @@ class ParallaxComponent extends React.Component {
         />
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
-          <img
+          <BlinkImage
             src={Seven}
             style={{
               display: "block",
-              width: "15%",
+              width: "10%",
               zIndex: "10",
             }}
             alt="cloud"
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.7 }}>
-          <img
-            src={Eight}
-            style={{ display: "block", width: "10%", marginLeft: "80%" }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1.75}
+          speed={0.5}
+          style={{ opacity: 0.7 }}
+        ></ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
           <mesh
@@ -129,9 +133,9 @@ class ParallaxComponent extends React.Component {
             <Content>JIGGLYPOP'S RESUME PAGE</Content>
           </mesh>
 
-          <img
+          <BlinkImage
             src={Seven}
-            style={{ display: "block", width: "20%", marginLeft: "30%" }}
+            style={{ display: "block", width: "10%", marginLeft: "30%" }}
             alt="cloud"
           />
         </ParallaxLayer>
@@ -140,20 +144,15 @@ class ParallaxComponent extends React.Component {
           <mesh style={{ marginLeft: "40%" }}>
             <Yello />
           </mesh>
-          <img
+          <BlinkImage
             src={Seven}
             style={{ display: "block", width: "10%", marginLeft: "60%" }}
-            alt="cloud"
-          />
-          <img
-            src={Seven}
-            style={{ display: "block", width: "20%", marginLeft: "10%" }}
             alt="cloud"
           />
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.6} speed={0.4}>
-          <img
+          <BlinkImage
             src={Seven}
             style={{
               position: "absolute",
@@ -237,9 +236,9 @@ class ParallaxComponent extends React.Component {
             <Moon />
           </mesh>
 
-          <img
+          <BlinkImage
             src={Six}
-            style={{ position: "absolute", width: "80%", zIndex: "10" }}
+            style={{ position: "absolute", width: "60%", zIndex: "10" }}
             alt="cloud"
           />
         </ParallaxLayer>
@@ -253,9 +252,7 @@ class ParallaxComponent extends React.Component {
             alignItems: "center",
             justifyContent: "center",
           }}
-        >
-          <img src={Eight} style={{ width: "10%" }} alt="cloud" />
-        </ParallaxLayer>
+        ></ParallaxLayer>
 
         <ParallaxLayer
           offset={2}
@@ -303,11 +300,13 @@ class ParallaxComponent extends React.Component {
 class Home extends React.Component {
   constructor({ portfolios }) {
     super({ portfolios });
+    console.log(portfolios);
   }
   render() {
     return (
       <>
         <ParallaxComponent />
+
         <Helmet>
           <title>{TITLE}</title>
           <meta name="og:title" content={TITLE} />

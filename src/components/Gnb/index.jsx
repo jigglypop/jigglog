@@ -9,7 +9,6 @@ import {
   List,
   SubMenu,
   ListMenu,
-  Home,
   StyledLink,
   SearchBarWrapper,
   SearchBar,
@@ -321,8 +320,6 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
 Gnb.propTypes = {
   location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
     .isRequired,
-  toggleTheme: PropTypes.func.isRequired,
-  isDracula: PropTypes.bool.isRequired,
   categories: PropTypes.arrayOf(PropTypes.shape({})),
   postInformations: PropTypes.arrayOf(PropTypes.shape({})),
   hasPortfolio: PropTypes.bool.isRequired,
