@@ -1,5 +1,5 @@
 ---
-path: "/데이터베이스구축/"
+path: "/2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축"

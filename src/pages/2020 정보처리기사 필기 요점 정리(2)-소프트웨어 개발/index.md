@@ -1,5 +1,5 @@
 ---
-path: "/소프트웨어개발/"
+path: "/2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발"

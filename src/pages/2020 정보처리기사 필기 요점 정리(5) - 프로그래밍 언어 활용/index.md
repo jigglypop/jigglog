@@ -1,5 +1,5 @@
 ---
-path: "/프로그래밍언어활용/"
+path: "/2020 정보처리기사 필기 요점 정리(5) - 프로그래밍 언어 활용/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "2020 정보처리기사 필기 요점 정리(5) - 프로그래밍 언어 활용"

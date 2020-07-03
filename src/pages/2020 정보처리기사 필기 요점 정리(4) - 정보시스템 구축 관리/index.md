@@ -1,5 +1,5 @@
 ---
-path: "/정보시스템구축관리/"
+path: "/2020 정보처리기사 필기 요점 정리(4) - 정보시스템 구축 관리/"
 category: "Certificate"
 tags: ["Certificate"]
 title: "2020 정보처리기사 필기 요점 정리(4) - 정보시스템 구축 관리"
