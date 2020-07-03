@@ -34,7 +34,7 @@ const List = ({ data, location }) => {
         <ImageWrapper>
           <div class="jb-wrap">
             <MoonBackgroundAnimation>
-              <img src={"/moon.png"} />
+              <img src={"./moon.png"} />
             </MoonBackgroundAnimation>
             <div class="jb-text">BLOG LIST</div>
           </div>
