@@ -10,6 +10,7 @@ import { PREFIX, CONTENT_PER_PAGE } from "~/constants";
 import BaseComponent from "../base/base";
 import { ImageWrapper } from "./styled";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
+import moon from "./moon.png";
 
 const List = ({ data, location }) => {
   const page = getPage(location);
@@ -34,7 +35,7 @@ const List = ({ data, location }) => {
         <ImageWrapper>
           <div class="jb-wrap">
             <MoonBackgroundAnimation>
-              <img src={"./moon.png"} />
+              <img src={moon} />
             </MoonBackgroundAnimation>
             <div class="jb-text">BLOG LIST</div>
           </div>

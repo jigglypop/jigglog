@@ -14,7 +14,7 @@ export const ImageWrapper = styled.div`
     color: white;
     font-weight: 800;
     text-shadow: 2px 2px 2px gray;
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
     position: absolute;
     top: 50%;
