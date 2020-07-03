@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.nav`
   margin: 1em 0;
@@ -13,6 +13,6 @@ export const Wrapper = styled.nav`
 
   li {
     display: flex;
-    padding: 0 .4em;
+    padding: 0 0.4em;
   }
 `;

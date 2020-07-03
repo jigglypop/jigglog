@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const PortfolioCard = styled.section`
   display: inline-block;
@@ -48,7 +48,7 @@ const PortfolioCard = styled.section`
     margin: auto;
     width: 100%;
     height: auto;
-    transition: all .4s ease 0s;
+    transition: all 0.4s ease 0s;
   }
 
   h6 {
@@ -71,7 +71,7 @@ const PortfolioCard = styled.section`
     line-height: 2em;
     font-size: 2vw;
     text-align: center;
-    transition: all .4s ease 0s;
+    transition: all 0.4s ease 0s;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

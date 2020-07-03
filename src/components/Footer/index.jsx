@@ -1,5 +1,5 @@
-import React from 'react';
-import { FooterWrapper } from './styled';
+import React from "react";
+import { FooterWrapper } from "./styled";
 
 const Footer = () => (
   <FooterWrapper>
@@ -9,7 +9,7 @@ const Footer = () => (
       target="_blank"
       rel="noreferrer noopener"
     >
-     jigglypop
+      jigglypop
     </a>
   </FooterWrapper>
 );

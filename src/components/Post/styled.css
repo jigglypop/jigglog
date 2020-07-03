@@ -3,8 +3,6 @@
 }
 .styled__PostContent-jKyqRA,
 .jmqWFv {
-  /* background-color: rgba(255, 255, 255, 0.2) !important;
-  color: black; */
   padding: 20px !important;
 }
 
@@ -14,15 +12,12 @@ ul {
 }
 
 @font-face {
-  font-family: "BMHANNAPro";
-  src: url("../../fonts/BMHANNAPro.ttf");
+  font-family: "NanumBarunGothic";
+  src: url("../../fonts/NanumBarunGothic.ttf");
 }
-@font-face {
-  font-family: "NotoSans-Medium";
-  src: url("../../fonts/NotoSans-Medium.ttf");
-}
+
 body {
-  font-family: "BMHANNAPro";
+  font-family: "NanumBarunGothic";
 }
 
 .gatsby-highlight {
@@ -31,15 +26,13 @@ body {
   margin: 0.5em 0;
   padding: 1em;
   overflow: auto;
-  font-family: "BMHANNAPro";
+  font-family: "NanumBarunGothic";
 }
 
 .gatsby-highlight pre[class*="language-"] {
   background-color: transparent;
-  margin: 0;
-  padding: 0;
   overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
-  font-family: "BMHANNAPro";
+  float: left;
+  min-width: 100%;
+  font-family: "NanumBarunGothic";
 }

@@ -15,7 +15,7 @@ exports.EMAIL = "ydh2244@gmail.com";
 exports.KEYWORDS = ["Gatsby", "ReactJS"].join(", ");
 exports.SITE_URL = "https://jigglypopownprivateblog.netlify.app/";
 exports.PROFILE =
-  "https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/80752915_590524238390867_3447356711315177472_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=NF9jd1Uy0CwAX8Vj4wW&oh=070f05f919f6051897af2b9ce60957a4&oe=5EF58127";
+  "https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/80752915_590524238390867_3447356711315177472_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=IAEopQQIQgYAX9XDXo5&oh=b307f3d0b39284a50d09dc9e50e18ec3&oe=5F28EBA7";
 
 // Social
 exports.GITHUB_ID = "jigglypop";

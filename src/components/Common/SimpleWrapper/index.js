@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SimpleWrapper = styled.div`
   position: relative;
@@ -6,7 +6,7 @@ const SimpleWrapper = styled.div`
   &:before,
   &:after {
     display: block;
-    content: '';
+    content: "";
     clear: both;
   }
 `;
