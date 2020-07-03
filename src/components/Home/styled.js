@@ -1,20 +1,31 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 80%;
-  height: 1.5em;
-  line-height: 1.5em;
-  font-size: 48px;
-  font-size: 10vw;
-  text-align: center;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+export const Title = styled.div`
+  animation: blink 1.5s ease-in-out infinite alternate;
+
+  @keyframes blink {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  font-size: 40px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
+`;
+
+export const TitleRed = styled.div`
+  color: #e94057;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
+`;
+
+export const Content = styled.div`
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
 `;

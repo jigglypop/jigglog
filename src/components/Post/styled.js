@@ -6,10 +6,12 @@ export const PostContent = styled.section`
   line-height: 2em;
 
   h1 {
+    margin-top: 40px;
     font-size: 50px;
     text-shadow: 3px 3px 3px gray;
   }
   h2 {
+    margin-top: 40px;
     font-size: 28px;
     text-shadow: 3px 3px 3px gray;
   }
@@ -42,7 +44,7 @@ export const PostContent = styled.section`
 
 export const ImageWrapper = styled.div`
   .jb-wrap {
-    width: 60%;
+    width: 40%;
     margin: 10px auto;
     position: relative;
   }
@@ -54,7 +56,7 @@ export const ImageWrapper = styled.div`
     color: white;
     font-weight: 800;
     text-shadow: 2px 2px 2px gray;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     position: absolute;
     top: 50%;

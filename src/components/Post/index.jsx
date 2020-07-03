@@ -9,26 +9,14 @@ import Bio from "~/components/Bio";
 import PostWrapper from "~/components/Common/PostWrapper";
 import { PREFIX, SITE_URL, DISQUS_ID } from "~/constants";
 import formattedDate from "~/utils/formattedDate";
-import {
-  PostContent,
-  ImageWrapper,
-  ComponentInPost,
-  TitleContent,
-} from "./styled";
+import { PostContent, ImageWrapper, ComponentInPost } from "./styled";
 import "./styled.css";
 
 const PostTemplate = ({
   data: {
     post: {
       html,
-      frontmatter: {
-        title,
-        date,
-        tags = [],
-        images = [],
-        tweets = [],
-        components = [],
-      },
+      frontmatter: { title, date, images = [], components = [] },
     },
   },
   location,
@@ -97,25 +85,6 @@ const PostTemplate = ({
     }
   }, []);
 
-  const renderTweets = useCallback((tweets) => {
-    if (Array.isArray(tweets)) {
-      try {
-        tweets.forEach(({ rootId: tweetRootId, tweetId, userId: username }) => {
-          const $tweetContainer = global.document.getElementById(tweetRootId);
-
-          render(
-            <div>
-              <Tweet tweetId={tweetId} options={{ username }} />
-            </div>,
-            $tweetContainer
-          );
-        });
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-  }, []);
-
   useEffect(() => {
     const { pathname: identifier } = location;
     const url = `${SITE_URL}${identifier}`;
@@ -129,7 +98,6 @@ const PostTemplate = ({
 
   useEffect(() => {
     createCopyButton();
-    renderTweets(tweets);
     renderComponents(components);
   }, []);
 
@@ -141,22 +109,6 @@ const PostTemplate = ({
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
 
-      {/* <div>
-        {image === null ? (
-          <ImageWrapper>
-            <img src={"moon.png"} alt={title} />
-          </ImageWrapper>
-        ) : (
-          <ImageWrapper>
-            <img
-              src={
-                image.includes("//") ? image : require(`~/resources/${image}`)
-              }
-              alt={title}
-            />
-          </ImageWrapper>
-        )}
-      </div> */}
       <ImageWrapper>
         <div class="jb-wrap">
           <div class="jb-image">
