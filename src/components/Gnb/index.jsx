@@ -21,6 +21,7 @@ import {
   MobileMenus,
   MobileMenu,
   MoonImage,
+  MenuTitle,
 } from "./styled";
 import "./style.css";
 import moon from "./moon.png";
@@ -66,14 +67,7 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-const Gnb = ({
-  location,
-  toggleTheme,
-  isDracula,
-  categories,
-  postInformations,
-  hasPortfolio,
-}) => {
+const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
   const [
     { isMenuOpened, isSubMenuClosed, searchKeyword },
     dispatch,
@@ -138,7 +132,7 @@ const Gnb = ({
                 className={isPost ? "active" : ""}
                 onClick={toggleMenu}
               >
-                <TextSpring text={"POSTS"} fontSize={"2em"} color={"white"} />
+                <MenuTitle>POSTS</MenuTitle>
               </StyledLink>
 
               <SubMenu>
@@ -168,11 +162,7 @@ const Gnb = ({
                   className={isPortfolio ? "active" : ""}
                   onClick={toggleMenu}
                 >
-                  <TextSpring
-                    text={"PORTFOLIOS"}
-                    fontSize={"2em"}
-                    color={"white"}
-                  />
+                  <MenuTitle>PORTPOLIO</MenuTitle>
                 </StyledLink>
               </ListMenu>
             ) : null}
@@ -182,7 +172,7 @@ const Gnb = ({
                 className={isResume ? "active" : ""}
                 onClick={toggleMenu}
               >
-                <TextSpring text={"RESUME"} color={"white"} />
+                <MenuTitle>RESUME</MenuTitle>
               </StyledLink>
             </ListMenu>
             <SearchBarWrapper>
@@ -241,7 +231,7 @@ const Gnb = ({
         </ListMenu>
         <ListMenu>
           <StyledLink to="/pages/1" className={isPost ? "active" : ""}>
-            <TextSpring text={"POSTS"} fontSize={"1.3em"} color={"white"} />
+            <MenuTitle>POSTS</MenuTitle>
           </StyledLink>
           <SubMenu>
             <div>
@@ -269,17 +259,13 @@ const Gnb = ({
               to="/portfolios"
               className={isPortfolio ? "active" : ""}
             >
-              <TextSpring
-                text={"PORTFOLIOS"}
-                fontSize={"1.3em"}
-                color={"white"}
-              />
+              <MenuTitle>PORTFOLIOS</MenuTitle>
             </StyledLink>
           </ListMenu>
         ) : null}
         <ListMenu>
           <StyledLink to="/resume" className={isResume ? "active" : ""}>
-            <TextSpring text={"RESUME"} fontSize={"1.3em"} color={"white"} />
+            <MenuTitle>RESUME</MenuTitle>
           </StyledLink>
         </ListMenu>
       </List>

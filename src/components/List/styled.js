@@ -13,7 +13,7 @@ export const ImageWrapper = styled.div`
   .jb-text {
     color: white;
     font-weight: 800;
-    text-shadow: 2px 2px 2px gray;
+    text-shadow: 2px 2px 20px gray;
     font-size: 40px;
     text-align: center;
     position: absolute;

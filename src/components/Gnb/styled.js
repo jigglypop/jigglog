@@ -12,6 +12,12 @@ export const MoonImage = styled.div`
   }
 `;
 
+export const MenuTitle = styled.div`
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 2px 2px 20px white;
+`;
+
 export const Hamburger = styled.div`
   position: fixed;
   display: none;

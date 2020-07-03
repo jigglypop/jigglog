@@ -1,11 +1,10 @@
-import styled from 'styled-components';
-
-
+import styled from "styled-components";
 
 export const TagWrapper = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 2px 2px 20px white;
 `;
 
 export const StyledArticle = styled.article`

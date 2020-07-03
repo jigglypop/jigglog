@@ -12,7 +12,6 @@ import { Link } from "gatsby";
 import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
 import Eight from "../parallax/08.png";
-import Nine from "../parallax/09.png";
 import "./styled.css";
 import { Title, Content, TitleRed } from "./styled";
 // Little helpers ...
