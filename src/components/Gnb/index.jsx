@@ -1,7 +1,8 @@
 import React, { useReducer, useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, navigate } from "gatsby";
-import TextSpring from "../Common/TextSpring";
+import styled, { css } from "styled-components";
+
 import { FaSearch, FaTags } from "react-icons/fa";
 import {
   GnbWrapper,
@@ -20,11 +21,15 @@ import {
   Background,
   MobileMenus,
   MobileMenu,
-  MoonImage,
-  MenuTitle,
 } from "./styled";
 import "./style.css";
 import moon from "./moon.png";
+
+export const MenuTitle = styled.div`
+  font-size: 18px;
+  font-weight: 800;
+  text-shadow: 2px 2px 20px white;
+`;
 
 const TOGGLE_MENU = "TOGGLE_MENU";
 const TOGGLE_SUB_MENU = "TOGGLE_SUB_MENU";
@@ -123,7 +128,7 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
           <ul>
             <ListMenu>
               <StyledLink to="/" onClick={toggleMenu}>
-                <Home />
+                <img src={moon} style={{ width: "45px", height: "45px" }} />
               </StyledLink>
             </ListMenu>
             <ListMenu>
@@ -224,7 +229,7 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
       <List>
         <ListMenu>
           <StyledLink to="/">
-            <img src={moon} style={{ width: "50px", height: "50px" }} />
+            <img src={moon} style={{ width: "45px", height: "45px" }} />
           </StyledLink>
         </ListMenu>
         <ListMenu>

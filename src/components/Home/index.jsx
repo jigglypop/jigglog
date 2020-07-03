@@ -13,14 +13,53 @@ import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
 import Eight from "../parallax/08.png";
 import "./styled.css";
-import { Title, Content, TitleRed } from "./styled";
-// Little helpers ...
+import styled from "styled-components";
+
+export const Title = styled.div`
+  font-family: "NanumBarunGothic" !important;
+
+  animation: blink 1.5s ease-in-out infinite alternate;
+
+  @keyframes blink {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  font-size: 40px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
+`;
+
+export const TitleRed = styled.div`
+  font-family: "NanumBarunGothic" !important;
+
+  color: #e94057;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
+`;
+
+export const Content = styled.div`
+  font-family: "NanumBarunGothic" !important;
+
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 4px 4px 40px white;
+`;
 const url = (name, wrap = false) =>
   `${
     wrap ? "url(" : ""
   }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
     wrap ? ")" : ""
   }`;
+
+const random = (max) => {
+  return Math.floor(Math.random() * max);
+};
 
 class ParallaxComponent extends React.Component {
   render() {

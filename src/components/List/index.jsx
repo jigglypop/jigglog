@@ -8,9 +8,32 @@ import getPosts from "~/utils/getPosts";
 import getPage from "~/utils/getPage";
 import { PREFIX, CONTENT_PER_PAGE } from "~/constants";
 import BaseComponent from "../base/base";
-import { ImageWrapper } from "./styled";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "./moon.png";
+import styled from "styled-components";
+
+export const ImageWrapper = styled.div`
+  .jb-wrap {
+    width: 60%;
+    margin: 10px auto;
+    position: relative;
+  }
+  .jb-wrap img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .jb-text {
+    color: white;
+    font-weight: 800;
+    text-shadow: 2px 2px 20px gray;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
 
 const List = ({ data, location }) => {
   const page = getPage(location);
