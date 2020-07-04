@@ -20,6 +20,7 @@ exports.PROFILE =
 // Social
 exports.GITHUB_ID = "jigglypop";
 exports.FACEBOOK_ID = "donghwan.yeom.3";
+exports.INSTARGRAM_ID = "yeom_donghwan";
 
 // Disqus (Recommend you to use this)
 exports.DISQUS_ID = "django-english-mentormentee";

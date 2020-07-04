@@ -2,10 +2,10 @@
 type: "portfolio"
 title: "MOVIE STAR"
 date: "2018-01-01T00:00:00.000Z"
-path: "/portfolios/portfolio-1/"
+path: "/portfolios/MOVIE STAR/"
 images: [
-  "test-1/moviestar_02.jpg",
-  "test-1/moviestar_01.jpg",
+  "moviestar/moviestar_02.jpg",
+  "moviestar/moviestar_01.jpg",
 ]
 ---
 

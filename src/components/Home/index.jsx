@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, useRef } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { TITLE } from "~/constants";
@@ -48,6 +48,7 @@ const TitleRed = styled.div`
   font-family: "NanumBarunGothic" !important;
 
   color: #e94057;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
@@ -67,254 +68,259 @@ const url = (name, wrap = false) =>
     wrap ? ")" : ""
   }`;
 
-class ParallaxComponent extends React.Component {
-  render() {
-    return (
-      <Parallax ref={(ref) => (this.parallax = ref)} pages={3}>
-        <ParallaxLayer
-          offset={1}
-          speed={1}
-          style={{ backgroundColor: "#8B00FF", opacity: 0.3 }}
-        />
-        <ParallaxLayer
-          offset={2}
-          speed={1}
-          style={{ backgroundColor: "#805E73", opacity: 0.3 }}
-        />
+const ParallaxComponent = ({ portfolios }) => {
+  let parallax;
 
-        <ParallaxLayer
-          offset={0}
-          speed={0}
-          factor={3}
+  const ref = useRef();
+  return (
+    <Parallax ref={(ref) => (parallax = ref)} pages={3}>
+      <ParallaxLayer
+        offset={1}
+        speed={1}
+        style={{ backgroundColor: "#8B00FF", opacity: 0.3 }}
+      />
+      <ParallaxLayer
+        offset={2}
+        speed={1}
+        style={{ backgroundColor: "#805E73", opacity: 0.3 }}
+      />
+
+      <ParallaxLayer
+        offset={0}
+        speed={0}
+        factor={3}
+        style={{
+          backgroundImage: url("stars", true),
+          backgroundSize: "cover",
+        }}
+      />
+
+      <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
+        <BlinkImage
+          src={Seven}
           style={{
-            backgroundImage: url("stars", true),
-            backgroundSize: "cover",
+            display: "block",
+            width: "10%",
+            zIndex: "10",
           }}
+          alt="cloud"
         />
+      </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
-          <BlinkImage
-            src={Seven}
-            style={{
-              display: "block",
-              width: "10%",
-              zIndex: "10",
-            }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
+      <ParallaxLayer
+        offset={1.75}
+        speed={0.5}
+        style={{ opacity: 0.7 }}
+      ></ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1.75}
-          speed={0.5}
-          style={{ opacity: 0.7 }}
-        ></ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "50%",
-              marginTop: "10%",
-              zIndex: "6",
-            }}
-          >
-            <Title>RESUME</Title>
-          </mesh>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "50%",
-              marginTop: "20%",
-              zIndex: "6",
-            }}
-          >
-            <Content>MOVE TO </Content>
-            <Content>JIGGLYPOP'S RESUME PAGE</Content>
-          </mesh>
-
-          <BlinkImage
-            src={Seven}
-            style={{ display: "block", width: "10%", marginLeft: "30%" }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.8 }}>
-          <mesh style={{ marginLeft: "40%" }}>
-            <Yello />
-          </mesh>
-          <BlinkImage
-            src={Seven}
-            style={{ display: "block", width: "10%", marginLeft: "60%" }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2.6} speed={0.4}>
-          <BlinkImage
-            src={Seven}
-            style={{
-              position: "absolute",
-              width: "10%",
-              zIndex: "10",
-            }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
+      <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
+        <mesh
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            pointerEvents: "none",
+            position: "absolute",
+            marginLeft: "50%",
+            marginTop: "10%",
+            zIndex: "6",
           }}
         >
-          <mesh
-            style={{
-              marginLeft: "40%",
-              marginBottom: "20%",
-            }}
-          >
-            <Earth />
-          </mesh>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
+          <Title>RESUME</Title>
+        </mesh>
+        <mesh
           style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
+            position: "absolute",
+            marginLeft: "50%",
+            marginTop: "20%",
+            zIndex: "6",
           }}
+        >
+          <Content>MOVE TO </Content>
+          <Content>JIGGLYPOP'S RESUME PAGE</Content>
+        </mesh>
+
+        <BlinkImage
+          src={Seven}
+          style={{ display: "block", width: "10%", marginLeft: "30%" }}
+          alt="cloud"
         />
+      </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(1)}
+      <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.8 }}>
+        <mesh style={{ marginLeft: "40%" }}>
+          <Yello />
+        </mesh>
+        <BlinkImage
+          src={Seven}
+          style={{ display: "block", width: "10%", marginLeft: "60%" }}
+          alt="cloud"
+        />
+      </ParallaxLayer>
+
+      <ParallaxLayer offset={2.6} speed={0.4}>
+        <BlinkImage
+          src={Seven}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            position: "absolute",
+            width: "10%",
+            zIndex: "10",
+          }}
+          alt="cloud"
+        />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={2.5}
+        speed={-0.4}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          pointerEvents: "none",
+        }}
+      >
+        <mesh
+          style={{
+            marginLeft: "40%",
+            marginBottom: "20%",
           }}
         >
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "-10%",
-              zIndex: "6",
-              marginTop: "-6vh",
-            }}
-          >
-            <Title>JIGGLYPOP'S BLOG</Title>
-          </mesh>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "-10%",
-              zIndex: "6",
-              marginTop: "8vh",
-            }}
-          >
-            <TitleRed>WELCOME TO JIGGLYPOP'S BLOG</TitleRed>
-          </mesh>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "-10%",
-              zIndex: "6",
-              marginTop: "13vh",
-            }}
-          >
-            <Content>CLICK AND MOVE NEXT PAGE</Content>
-          </mesh>
-          <mesh style={{ marginLeft: "40%" }}>
-            <Moon />
-          </mesh>
+          <Earth />
+        </mesh>
+      </ParallaxLayer>
 
-          <BlinkImage
-            src={Six}
-            style={{ position: "absolute", width: "60%", zIndex: "10" }}
-            alt="cloud"
-          />
-        </ParallaxLayer>
+      <ParallaxLayer
+        offset={2}
+        speed={-0.3}
+        style={{
+          backgroundSize: "80%",
+          backgroundPosition: "center",
+        }}
+      />
 
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(2)}
+      <ParallaxLayer
+        offset={0}
+        speed={0.1}
+        onClick={() => parallax.scrollTo(1)}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <mesh
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            position: "absolute",
+            marginLeft: "-10%",
+            zIndex: "6",
+            marginTop: "-6vh",
           }}
-        ></ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          onClick={() => this.parallax.scrollTo(0)}
         >
-          <mesh
-            style={{ position: "absolute", marginLeft: "10%", zIndex: "6" }}
-          >
-            <Link to={"portfolios/portfolio-1/"}>
-              <TitleRed>GO TO MOVIESTAR PROJECT</TitleRed>
+          <Title>JIGGLYPOP'S BLOG</Title>
+        </mesh>
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "-10%",
+            zIndex: "6",
+            marginTop: "8vh",
+          }}
+        >
+          <TitleRed>WELCOME TO JIGGLYPOP'S BLOG</TitleRed>
+        </mesh>
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "-10%",
+            zIndex: "6",
+            marginTop: "13vh",
+          }}
+        >
+          <Content>CLICK AND MOVE NEXT PAGE</Content>
+        </mesh>
+        <mesh style={{ marginLeft: "40%" }}>
+          <Moon />
+        </mesh>
+
+        <BlinkImage
+          src={Six}
+          style={{ position: "absolute", width: "60%", zIndex: "10" }}
+          alt="cloud"
+        />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={1}
+        speed={0.1}
+        onClick={() => parallax.scrollTo(2)}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      ></ParallaxLayer>
+
+      <ParallaxLayer
+        offset={2}
+        speed={-0}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        onClick={() => parallax.scrollTo(0)}
+      >
+        <mesh style={{ position: "absolute", marginLeft: "10%", zIndex: "6" }}>
+          <TitleRed>GO TO MOVIESTAR PROJECT</TitleRed>
+        </mesh>
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "-10%",
+            marginTop: "2vw",
+            zIndex: "6",
+          }}
+        >
+          {portfolios.map((items) => (
+            <Link to={items.node.frontmatter.path}>
+              <TitleRed>{items.node.frontmatter.title}</TitleRed>
             </Link>
-          </mesh>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "10%",
-              marginTop: "2vw",
-              zIndex: "6",
-            }}
-          >
-            <Content>MOVE TO PORTFOLIO PAGE</Content>
-          </mesh>
-          <mesh
-            style={{
-              position: "absolute",
-              marginLeft: "10%",
-              marginTop: "14vw",
-              zIndex: "6",
-            }}
-          >
-            <Title>PORTFOLIO</Title>
-          </mesh>
-        </ParallaxLayer>
-      </Parallax>
-    );
-  }
-}
+          ))}
+        </mesh>
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "10%",
+            marginTop: "2vw",
+            zIndex: "6",
+          }}
+        >
+          <Content>MOVE TO PORTFOLIO PAGE</Content>
+        </mesh>
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "10%",
+            marginTop: "14vw",
+            zIndex: "6",
+          }}
+        >
+          <Title>PORTFOLIO</Title>
+        </mesh>
+      </ParallaxLayer>
+    </Parallax>
+  );
+};
 
-class Home extends React.Component {
-  constructor({ portfolios }) {
-    super({ portfolios });
-    console.log(portfolios);
-  }
-  render() {
-    return (
-      <>
-        <ParallaxComponent />
+const Home = ({ portfolios }) => {
+  return (
+    <>
+      <ParallaxComponent portfolios={portfolios} />
 
-        <Helmet>
-          <title>{TITLE}</title>
-          <meta name="og:title" content={TITLE} />
-        </Helmet>
-      </>
-    );
-  }
-}
+      <Helmet>
+        <title>{TITLE}</title>
+        <meta name="og:title" content={TITLE} />
+      </Helmet>
+    </>
+  );
+};
 
 Home.propTypes = {
   portfolios: PropTypes.arrayOf(PropTypes.shape({})),
