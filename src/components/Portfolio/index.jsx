@@ -7,7 +7,6 @@ import SimpleWrapper from "~/components/Common/SimpleWrapper";
 import { PRIMARY_COLOR } from "~/components/Common/constants";
 
 export const Wrapper = styled(SimpleWrapper)`
-  /* padding: 100px 0 0; */
   @media (max-width: 414px) {
     padding: 70px 16px 0;
   }
@@ -22,8 +21,10 @@ export const Wrapper = styled(SimpleWrapper)`
 
 const Title = styled.div`
   font-family: "NanumBarunGothic" !important;
+  color: white;
   animation: blink 1.2s ease-in-out infinite alternate;
   text-align: center;
+  margin-bottom: 40px;
   font-size: 60px;
   font-weight: 800;
   text-shadow: 2px 2px 20px white;
@@ -37,17 +38,6 @@ const Title = styled.div`
   }
 `;
 
-const GoSite = styled.div`
-  font-family: "NanumBarunGothic" !important;
-  text-align: center;
-  color: #ed213a;
-  margin-top: 10px;
-
-  margin-bottom: 40px;
-  font-size: 30px;
-  font-weight: 800;
-  text-shadow: 2px 2px 20px #ed213a;
-`;
 export const PortfolioDescription = styled.section`
   float: left;
   padding: 0 0 0 36px;
@@ -165,12 +155,14 @@ const Portfolio = ({
       <title>{`${PREFIX}${title.toUpperCase()}`}</title>
       <meta name="og:title" content={`${PREFIX}${title.toUpperCase()}`} />
     </Helmet>
-    <Title>{title}</Title>
-    <GoSite>
-      <a href={site} style={{ color: "#ed213a" }}>
-        사이트 바로가기
+    <Title>
+      <a href={site} style={{ color: "white" }}>
+        {title}
       </a>
-    </GoSite>
+    </Title>
+    <PortfolioDescription>
+      <section dangerouslySetInnerHTML={{ __html: html }} />
+    </PortfolioDescription>
     <PortfolioImages>
       {images.map((image) => {
         if (image.includes("//")) {
@@ -182,9 +174,6 @@ const Portfolio = ({
         return <img key={image} src={url} alt={title} />;
       })}
     </PortfolioImages>
-    <PortfolioDescription>
-      <section dangerouslySetInnerHTML={{ __html: html }} />
-    </PortfolioDescription>
   </Wrapper>
 );
 

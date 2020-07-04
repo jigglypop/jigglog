@@ -20,19 +20,19 @@ export const PostContent = styled.section`
     margin-top: 40px;
     font-size: 50px;
     font-weight: 800;
-    text-shadow: 2px 2px 10px white;
+    /* text-shadow: 2px 2px 10px white; */
   }
   h2 {
     margin-top: 40px;
     font-size: 28px;
     font-weight: 800;
-    text-shadow: 2px 2px 5px white;
+    /* text-shadow: 2px 2px 5px white; */
   }
   h3 {
     margin-top: 40px;
     font-size: 24px;
     font-weight: 800;
-    text-shadow: 2px 2px 5px white;
+    /* text-shadow: 2px 2px 5px white; */
   }
   h4 {
     margin-top: 40px;
@@ -43,7 +43,7 @@ export const PostContent = styled.section`
     margin-top: 40px;
     font-size: 18px;
     font-weight: 800;
-    text-shadow: 2px 2px 10px white;
+    /* text-shadow: 2px 2px 10px white; */
   }
 
   p {
