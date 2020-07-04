@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import { render } from "react-dom";
 import PropTypes from "prop-types";
-import { Tweet } from "react-twitter-widgets";
-import { Link } from "gatsby";
+
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
 import Bio from "~/components/Bio";
@@ -20,28 +19,39 @@ export const PostContent = styled.section`
   h1 {
     margin-top: 40px;
     font-size: 50px;
-    text-shadow: 3px 3px 3px gray;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px white;
   }
   h2 {
     margin-top: 40px;
     font-size: 28px;
-    text-shadow: 3px 3px 3px gray;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px white;
   }
   h3 {
     margin-top: 40px;
     font-size: 24px;
-    text-shadow: 2px 2px 2px gray;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px white;
   }
   h4 {
     margin-top: 40px;
+    font-weight: 800;
     font-size: 21px;
   }
   h5 {
     margin-top: 40px;
     font-size: 18px;
-    text-shadow: 2px 2px 2px gray;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px white;
   }
+
   p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  li {
+    margin-top: 10px;
     font-size: 16px;
   }
   blockquote {

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://jigglypopownprivateblog.netlify.app/정보처리기사실기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(3)-소프트웨어 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(3) - 소프트웨어 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(4) - 정보시스템 구축 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(5) - 프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(4)-정보시스템 구축 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(5)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/정보처리기사실기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/정보처리기사실기2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/portfolio-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/resume/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/MOVIE STAR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/LANGUAGE TOGETHER/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

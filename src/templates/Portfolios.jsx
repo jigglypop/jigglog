@@ -1,9 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '~/components/layout';
-import Portfolios from '~/components/Portfolios';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "~/components/layout";
+import Portfolios from "~/components/Portfolios";
 
-const PortfoliosTemplate = props => (
+const PortfoliosTemplate = (props) => (
   <Layout {...props}>
     <Portfolios {...props} />
   </Layout>
@@ -20,13 +20,8 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    portfolios: allMarkdownRemark (
-      filter: {
-        frontmatter: {
-          type: { eq: "portfolio" }
-          hide: { ne: true }
-        }
-      }
+    portfolios: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "portfolio" }, hide: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -37,6 +32,7 @@ export const pageQuery = graphql`
             path
             images
             date
+            description
           }
         }
       }

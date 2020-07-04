@@ -1,9 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '~/components/layout';
-import Portfolio from '~/components/Portfolio';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "~/components/layout";
+import Portfolio from "~/components/Portfolio";
 
-const PortfolioTemplate = props => (
+const PortfolioTemplate = (props) => (
   <Layout {...props}>
     <Portfolio {...props} />
   </Layout>
@@ -12,7 +12,7 @@ const PortfolioTemplate = props => (
 export default PortfolioTemplate;
 
 export const pageQuery = graphql`
-  query PortfolioQuery ($path: String!) {
+  query PortfolioQuery($path: String!) {
     site {
       siteMetadata {
         title
@@ -20,13 +20,14 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    portfolio: markdownRemark (frontmatter: { path: { eq: $path } }) {
+    portfolio: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {
         title
         images
         date
+        site
       }
     }
   }
