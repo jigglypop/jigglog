@@ -27,7 +27,7 @@ const Title = styled.div`
   text-align: center;
   align-items: center;
   margin-bottom: 40px;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 800;
   text-shadow: 2px 2px 20px white;
   @keyframes blink {

@@ -46,9 +46,9 @@ const List = ({ data, location }) => {
 
   return (
     <>
-      <mesh>
+      <div>
         <BaseComponent />
-      </mesh>
+      </div>
 
       <PostsWrapper>
         <Helmet>
@@ -56,11 +56,11 @@ const List = ({ data, location }) => {
           <meta name="og:title" content={`${PREFIX}POST`} />
         </Helmet>
         <ImageWrapper>
-          <div class="jb-wrap">
+          <div className="jb-wrap">
             <MoonBackgroundAnimation>
               <img src={moon} />
             </MoonBackgroundAnimation>
-            <div class="jb-text">BLOG LIST</div>
+            <div className="jb-text">BLOG LIST</div>
           </div>
         </ImageWrapper>
         {posts.map(

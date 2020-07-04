@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { Component, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { TITLE } from "~/constants";
@@ -95,6 +95,7 @@ const ParallaxComponent = ({ portfolios }) => {
   let parallax;
 
   const ref = useRef();
+
   return (
     <Parallax ref={(ref) => (parallax = ref)} pages={3}>
       <ParallaxLayer
@@ -119,34 +120,36 @@ const ParallaxComponent = ({ portfolios }) => {
       />
 
       <ParallaxLayer
-        offset={1.75}
-        speed={0.5}
-        style={{ opacity: 0.7 }}
-      ></ParallaxLayer>
-
-      <ParallaxLayer offset={1} speed={0.4} style={{ opacity: 0.8 }}>
-        <mesh
+        offset={1}
+        speed={0.4}
+        onClick={() => parallax.scrollTo(2)}
+        style={{ opacity: 0.8 }}
+      >
+        <div
           style={{
             position: "absolute",
             marginLeft: "50%",
             marginTop: "20%",
-            zIndex: "6",
+            zIndex: "8",
           }}
         >
           <Title>RESUME</Title>
-        </mesh>
-        <mesh
-          style={{
-            position: "absolute",
-            marginLeft: "50%",
-            marginTop: "25%",
-            zIndex: "6",
-          }}
-        >
-          <Content>MOVE TO </Content>
-          <Content>JIGGLYPOP'S RESUME PAGE</Content>
-        </mesh>
-        <mesh
+        </div>
+        <Link to={"/resume"}>
+          <div
+            style={{
+              position: "absolute",
+              marginLeft: "50%",
+              marginTop: "25%",
+              zIndex: "20",
+            }}
+          >
+            <Content>MOVE TO </Content>
+            <Content>JIGGLYPOP'S RESUME PAGE</Content>
+          </div>
+        </Link>
+
+        <div
           style={{
             position: "absolute",
             marginLeft: "-20%",
@@ -156,7 +159,7 @@ const ParallaxComponent = ({ portfolios }) => {
           }}
         >
           <IconSetHome IconObject={IconObject} />
-        </mesh>
+        </div>
         <BlinkImage
           src={Seven}
           style={{ display: "block", width: "10%", marginLeft: "30%" }}
@@ -165,9 +168,9 @@ const ParallaxComponent = ({ portfolios }) => {
       </ParallaxLayer>
 
       <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.8 }}>
-        <mesh style={{ marginLeft: "40%" }}>
+        <div>
           <Yello />
-        </mesh>
+        </div>
         <BlinkImage
           src={Seven}
           style={{ display: "block", width: "10%", marginLeft: "60%" }}
@@ -185,14 +188,14 @@ const ParallaxComponent = ({ portfolios }) => {
           pointerEvents: "none",
         }}
       >
-        <mesh
+        <div
           style={{
             marginLeft: "40%",
             marginBottom: "20%",
           }}
         >
           <Earth />
-        </mesh>
+        </div>
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -214,7 +217,7 @@ const ParallaxComponent = ({ portfolios }) => {
           justifyContent: "center",
         }}
       >
-        <mesh
+        <div
           style={{
             position: "absolute",
             marginLeft: "-10%",
@@ -223,8 +226,9 @@ const ParallaxComponent = ({ portfolios }) => {
           }}
         >
           <Title>JIGGLYPOP'S BLOG</Title>
-        </mesh>
-        <mesh
+        </div>
+
+        <div
           style={{
             position: "absolute",
             marginLeft: "-10%",
@@ -233,8 +237,8 @@ const ParallaxComponent = ({ portfolios }) => {
           }}
         >
           <TitleRed>WELCOME TO JIGGLYPOP'S BLOG</TitleRed>
-        </mesh>
-        <mesh
+        </div>
+        <div
           style={{
             position: "absolute",
             marginLeft: "-10%",
@@ -243,10 +247,10 @@ const ParallaxComponent = ({ portfolios }) => {
           }}
         >
           <Content>CLICK AND MOVE NEXT PAGE</Content>
-        </mesh>
-        <mesh style={{ marginLeft: "40%" }}>
+        </div>
+        <div style={{ marginLeft: "40%" }}>
           <Moon />
-        </mesh>
+        </div>
 
         <BlinkImage
           src={Six}
@@ -254,18 +258,6 @@ const ParallaxComponent = ({ portfolios }) => {
           alt="cloud"
         />
       </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={1}
-        speed={0.1}
-        onClick={() => parallax.scrollTo(2)}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      ></ParallaxLayer>
-
       <ParallaxLayer
         offset={2}
         speed={-0}
@@ -276,10 +268,7 @@ const ParallaxComponent = ({ portfolios }) => {
         }}
         onClick={() => parallax.scrollTo(0)}
       >
-        <mesh style={{ position: "absolute", marginLeft: "10%", zIndex: "6" }}>
-          <TitleRed>GO TO MOVIESTAR PROJECT</TitleRed>
-        </mesh>
-        <mesh
+        <div
           style={{
             position: "absolute",
             marginLeft: "-10%",
@@ -287,13 +276,13 @@ const ParallaxComponent = ({ portfolios }) => {
             zIndex: "6",
           }}
         >
-          {portfolios.map((items) => (
-            <Link to={items.node.frontmatter.path}>
+          {portfolios.map((items, index) => (
+            <Link to={items.node.frontmatter.path} key={index}>
               <TitleRed>{items.node.frontmatter.title}</TitleRed>
             </Link>
           ))}
-        </mesh>
-        <mesh
+        </div>
+        <div
           style={{
             position: "absolute",
             marginLeft: "10%",
@@ -301,18 +290,19 @@ const ParallaxComponent = ({ portfolios }) => {
             zIndex: "6",
           }}
         >
-          <Content>MOVE TO PORTFOLIO PAGE</Content>
-        </mesh>
-        <mesh
+          <Link to={"/portfolios"}>
+            <Content>MOVE TO PORTFOLIO PAGE</Content>
+          </Link>
+        </div>
+        <div
           style={{
             position: "absolute",
-            marginLeft: "10%",
-            marginTop: "14vw",
+            marginTop: "-5vw",
             zIndex: "6",
           }}
         >
           <Title>PORTFOLIO</Title>
-        </mesh>
+        </div>
       </ParallaxLayer>
     </Parallax>
   );

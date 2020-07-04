@@ -41,7 +41,7 @@ const IconSetUnder = ({ IconObject }) => {
         style={{
           display: "flex",
           justifyContent: "center",
-          width: "30%",
+          width: "400px",
         }}
       >
         {IconObject.indexOf("htmllogo") !== -1 && (

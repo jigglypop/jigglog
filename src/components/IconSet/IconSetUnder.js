@@ -29,118 +29,124 @@ const LogoImage = styled.img`
   -webkit-filter: grayscale(100%);
   filter: gray;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 `;
 
 const IconSetUnder = ({ IconObject }) => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: "80px",
+      }}
+    >
       <Grid
         container
         style={{
           display: "flex",
           justifyContent: "center",
-          width: "17%",
+          width: "400px",
         }}
       >
         {IconObject.indexOf("htmllogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={htmllogo} />
           </Grid>
         )}
         {IconObject.indexOf("csslogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={csslogo} />
           </Grid>
         )}
         {IconObject.indexOf("javascriptlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={javascriptlogo} />
           </Grid>
         )}
         {IconObject.indexOf("awslogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={awslogo} />
           </Grid>
         )}
         {IconObject.indexOf("cpluslogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={cpluslogo} />
           </Grid>
         )}
         {IconObject.indexOf("clogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={clogo} />
           </Grid>
         )}
         {IconObject.indexOf("pythonlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={pythonlogo} />
           </Grid>
         )}
         {IconObject.indexOf("javalogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={javalogo} />
           </Grid>
         )}
         {IconObject.indexOf("dartlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={dartlogo} />
           </Grid>
         )}
         {IconObject.indexOf("mysqllogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={mysqllogo} />
           </Grid>
         )}
         {IconObject.indexOf("djangologo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={djangologo} />
           </Grid>
         )}
         {IconObject.indexOf("nodejslogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={nodejslogo} />
           </Grid>
         )}
         {IconObject.indexOf("flasklogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={flasklogo} />
           </Grid>
         )}
         {IconObject.indexOf("springlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={springlogo} />
           </Grid>
         )}
         {IconObject.indexOf("vuelogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={vuelogo} />
           </Grid>
         )}
         {IconObject.indexOf("reactlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={reactlogo} />
           </Grid>
         )}
         {IconObject.indexOf("reduxlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={reduxlogo} />
           </Grid>
         )}
         {IconObject.indexOf("gatsbylogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={gatsbylogo} />
           </Grid>
         )}
         {IconObject.indexOf("tensorflowlogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={tensorflowlogo} />
           </Grid>
         )}
         {IconObject.indexOf("jquerylogo") !== -1 && (
-          <Grid item xs={2}>
+          <Grid item xs={1}>
             <LogoImage src={jquerylogo} />
           </Grid>
         )}

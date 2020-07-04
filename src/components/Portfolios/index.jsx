@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { Component, useRef } from "react";
+import React, { useRef } from "react";
 import Helmet from "react-helmet";
 import { Link } from "gatsby";
 import { PREFIX } from "~/constants";
@@ -100,12 +100,13 @@ const Portfolios = ({
             },
             index
           ) => (
-            <>
+            <div key={index}>
               <ParallaxLayer offset={index} speed={1}>
                 <img
                   src={require(`~/resources/${images[0]}`)}
                   alt="portfolio"
                   style={{ opacity: 0.3 }}
+                  onClick={() => onClick(index)}
                 />
               </ParallaxLayer>
               <ParallaxLayer
@@ -115,13 +116,14 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  zIndex: "6",
                 }}
-                onClick={() => onClick(index)}
               >
                 <Link to={path}>
                   <TitleBig>{title}</TitleBig>
                 </Link>
               </ParallaxLayer>
+
               <ParallaxLayer
                 offset={index}
                 speed={-0}
@@ -133,10 +135,9 @@ const Portfolios = ({
                 }}
                 onClick={() => onClick(index)}
               >
-                <Link to={path}>
-                  <Content>{description}</Content>
-                </Link>
+                <Content>{description}</Content>
               </ParallaxLayer>
+
               <ParallaxLayer
                 offset={index}
                 speed={-0}
@@ -147,7 +148,7 @@ const Portfolios = ({
                 }}
                 onClick={() => onClick(index)}
               >
-                <mesh
+                <div
                   style={{
                     position: "absolute",
                     marginTop: "10%",
@@ -156,9 +157,9 @@ const Portfolios = ({
                   }}
                 >
                   <IconSetBig IconObject={iconset} />
-                </mesh>
+                </div>
               </ParallaxLayer>
-            </>
+            </div>
           )
         )}
       </Parallax>
