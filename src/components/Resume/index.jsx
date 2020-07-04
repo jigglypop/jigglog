@@ -13,55 +13,12 @@ import {
 } from "~/constants";
 import * as profileUrl from "~/resources/me.png";
 import styled from "styled-components";
-// import facebook from "./icons/facebook.png";
-// import instargram from "./icons/instargram.png";
-// import github from "./icons/github.png";
-// import Grid from "@material-ui/core/Grid";
 
-// import cpluslogo from "./icons/cplus.png";
-// import awslogo from "./icons/aws.png";
-// import htmlcssjs from "./icons/htmlcssjs.png";
-// import jquerylogo from "./icons/jquery.png";
-// import mysqllogo from "./icons/mysql.png";
-// import pythonlogo from "./icons/python.png";
-// import reactlogo from "./icons/react.png";
-// import springlogo from "./icons/spring.png";
-// import tensorflowlogo from "./icons/tensorflow.png";
-// import djangologo from "./icons/django.png";
-// import flasklogo from "./icons/flask.png";
-// import dartlogo from "./icons/dart.png";
-// import clogo from "./icons/c.png";
-// import nodejslogo from "./icons/nodejs.png";
-// import vuelogo from "./icons/vue.png";
-// import javalogo from "./icons/java.png";
 import facebook from "./facebook.png";
 import instargram from "./instargram.png";
 import github from "./github.png";
-import Grid from "@material-ui/core/Grid";
 
-import cpluslogo from "./cplus.png";
-import awslogo from "./aws.png";
-import jquerylogo from "./jquery.png";
-import mysqllogo from "./mysql.png";
-import pythonlogo from "./python.png";
-import reactlogo from "./react.png";
-import springlogo from "./spring.png";
-import tensorflowlogo from "./tensorflow.png";
-import djangologo from "./django.png";
-import flasklogo from "./flask.png";
-import dartlogo from "./dart.png";
-import clogo from "./c.png";
-import nodejslogo from "./nodejs.png";
-import vuelogo from "./vue.png";
-import javalogo from "./java.png";
-import javascriptlogo from "./javascripts.png";
-import reduxlogo from "./redux.png";
-import gatsbylogo from "./gatsby.png";
-
-import htmllogo from "./html.png";
-import csslogo from "./css.png";
-
-import Icons from "../Icons";
+import IconSet from "../IconSet/IconSet";
 
 const Wrapper = styled.section`
   padding: 100px 0 0;
@@ -276,7 +233,7 @@ const Resume = ({
           <div ref={$mdWrapper} dangerouslySetInnerHTML={{ __html: html }} />
         </PostContent>
 
-        <Icons />
+        <IconSet />
       </Clearfix>
     </Wrapper>
   );
