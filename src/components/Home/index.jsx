@@ -12,6 +12,7 @@ import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
 import "./styled.css";
 import styled from "styled-components";
+import IconSetHome from "../IconSet/IconSetHome";
 
 const BlinkImage = styled.img`
   animation: blink 0.5s ease-in-out infinite alternate;
@@ -69,6 +70,28 @@ const url = (name, wrap = false) =>
   }`;
 
 const ParallaxComponent = ({ portfolios }) => {
+  const IconObject = [
+    "htmllogo",
+    "cpluslogo",
+    "awslogo",
+    "jquerylogo",
+    "mysqllogo",
+    "pythonlogo",
+    "reactlogo",
+    "springlogo",
+    "tensorflowlogo",
+    "djangologo",
+    "flasklogo",
+    "dartlogo",
+    "clogo",
+    "nodejslogo",
+    "vuelogo",
+    "javalogo",
+    "javascriptlogo",
+    "reduxlogo",
+    "gatsbylogo",
+    "csslogo",
+  ];
   let parallax;
 
   const ref = useRef();
@@ -95,30 +118,18 @@ const ParallaxComponent = ({ portfolios }) => {
         }}
       />
 
-      <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.8 }}>
-        <BlinkImage
-          src={Seven}
-          style={{
-            display: "block",
-            width: "10%",
-            zIndex: "10",
-          }}
-          alt="cloud"
-        />
-      </ParallaxLayer>
-
       <ParallaxLayer
         offset={1.75}
         speed={0.5}
         style={{ opacity: 0.7 }}
       ></ParallaxLayer>
 
-      <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.8 }}>
+      <ParallaxLayer offset={1} speed={0.4} style={{ opacity: 0.8 }}>
         <mesh
           style={{
             position: "absolute",
             marginLeft: "50%",
-            marginTop: "10%",
+            marginTop: "20%",
             zIndex: "6",
           }}
         >
@@ -128,14 +139,24 @@ const ParallaxComponent = ({ portfolios }) => {
           style={{
             position: "absolute",
             marginLeft: "50%",
-            marginTop: "20%",
+            marginTop: "25%",
             zIndex: "6",
           }}
         >
           <Content>MOVE TO </Content>
           <Content>JIGGLYPOP'S RESUME PAGE</Content>
         </mesh>
-
+        <mesh
+          style={{
+            position: "absolute",
+            marginLeft: "-20%",
+            marginTop: "20%",
+            width: "100%",
+            zIndex: "6",
+          }}
+        >
+          <IconSetHome IconObject={IconObject} />
+        </mesh>
         <BlinkImage
           src={Seven}
           style={{ display: "block", width: "10%", marginLeft: "30%" }}
@@ -150,18 +171,6 @@ const ParallaxComponent = ({ portfolios }) => {
         <BlinkImage
           src={Seven}
           style={{ display: "block", width: "10%", marginLeft: "60%" }}
-          alt="cloud"
-        />
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={2.6} speed={0.4}>
-        <BlinkImage
-          src={Seven}
-          style={{
-            position: "absolute",
-            width: "10%",
-            zIndex: "10",
-          }}
           alt="cloud"
         />
       </ParallaxLayer>

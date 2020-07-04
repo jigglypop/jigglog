@@ -28,7 +28,7 @@ const Wrapper = styled.section`
 
   & > ${Clearfix} {
     margin: auto;
-    max-width: 640px;
+    max-width: 1000px;
   }
 
   button {
@@ -63,20 +63,6 @@ const SocialInformation = styled.section`
   }
 `;
 
-const LogoImage = styled.img`
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-  width: 50px;
-  height: 50px;
-`;
-
-const HtmlCssJsImage = styled.img`
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-  width: 150px;
-  height: 50px;
-`;
-
 const Button = styled.button`
   display: flex;
   align-items: center;
@@ -93,8 +79,7 @@ const NameTitle = styled.div`
 `;
 const NameSmallTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
-  margin-top: 10px;
-
+  margin-top: 20px;
   font-size: 30px;
   text-shadow: 3px 3px 30px white;
 `;
@@ -176,7 +161,28 @@ const Resume = ({
   const printPage = useCallback(() => {
     global.print();
   }, []);
-
+  const IconObject = [
+    "htmllogo",
+    "cpluslogo",
+    "awslogo",
+    "jquerylogo",
+    "mysqllogo",
+    "pythonlogo",
+    "reactlogo",
+    "springlogo",
+    "tensorflowlogo",
+    "djangologo",
+    "flasklogo",
+    "dartlogo",
+    "clogo",
+    "nodejslogo",
+    "vuelogo",
+    "javalogo",
+    "javascriptlogo",
+    "reduxlogo",
+    "gatsbylogo",
+    "csslogo",
+  ];
   return (
     <Wrapper>
       <Clearfix>
@@ -196,9 +202,9 @@ const Resume = ({
           <img src={profileUrl.default} alt="" width="120" height="120" />
           <NameTitle>{AUTHOR}</NameTitle>
           <NameSmallTitle>염동환</NameSmallTitle>
-
           <p>{EMAIL}</p>
         </BasicInformation>
+
         <SocialInformation>
           {GITHUB_ID ? (
             <a
@@ -228,12 +234,20 @@ const Resume = ({
             </a>
           ) : null}
         </SocialInformation>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "5%",
+          }}
+        >
+          <IconSet IconObject={IconObject} />
+        </div>
 
         <PostContent>
           <div ref={$mdWrapper} dangerouslySetInnerHTML={{ __html: html }} />
         </PostContent>
-
-        <IconSet />
       </Clearfix>
     </Wrapper>
   );

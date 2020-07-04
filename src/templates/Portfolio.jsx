@@ -28,6 +28,7 @@ export const pageQuery = graphql`
         images
         date
         site
+        iconset
       }
     }
   }

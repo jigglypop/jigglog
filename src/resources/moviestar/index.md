@@ -11,6 +11,15 @@ images: [
 ]
 description: "MOVIE STAR 영화 API 추천 사이트 만들기 프로젝트"
 site: "https://moviestarreboot.herokuapp.com/"
+iconset: [
+  "htmllogo",
+  "jquerylogo",
+  "pythonlogo",
+  "djangologo",
+  "javascriptlogo",
+  "csslogo",
+]
+
 ---
 
 

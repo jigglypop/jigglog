@@ -16,6 +16,18 @@ images: [
 ]
 description: "languageTogether 개인프로젝트"
 site: "http://languagetogether.s3-website.ap-northeast-2.amazonaws.com/"
+iconset: [
+  "htmllogo",
+  "awslogo",
+  "mysqllogo",
+  "pythonlogo",
+  "reactlogo",
+  "djangologo",
+  "nodejslogo",
+  "javascriptlogo",
+  "reduxlogo",
+  "csslogo",
+]
 
 ---
 

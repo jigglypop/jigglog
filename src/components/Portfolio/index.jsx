@@ -5,6 +5,7 @@ import { PREFIX } from "~/constants";
 import styled from "styled-components";
 import SimpleWrapper from "~/components/Common/SimpleWrapper";
 import { PRIMARY_COLOR } from "~/components/Common/constants";
+import IconSetUnder from "../IconSet/IconSetUnder";
 
 export const Wrapper = styled(SimpleWrapper)`
   @media (max-width: 414px) {
@@ -24,6 +25,7 @@ const Title = styled.div`
   color: white;
   animation: blink 1.2s ease-in-out infinite alternate;
   text-align: center;
+  align-items: center;
   margin-bottom: 40px;
   font-size: 60px;
   font-weight: 800;
@@ -145,7 +147,7 @@ export const PortfolioImages = styled.section`
 const Portfolio = ({
   data: {
     portfolio: {
-      frontmatter: { title, images, site },
+      frontmatter: { title, images, site, iconset },
       html,
     },
   },
@@ -160,6 +162,8 @@ const Portfolio = ({
         {title}
       </a>
     </Title>
+    <IconSetUnder IconObject={iconset} />
+
     <PortfolioDescription>
       <section dangerouslySetInnerHTML={{ __html: html }} />
     </PortfolioDescription>

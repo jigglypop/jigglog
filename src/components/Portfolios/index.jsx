@@ -6,6 +6,7 @@ import { PREFIX } from "~/constants";
 import styled from "styled-components";
 import SimpleWrapper from "~/components/Common/SimpleWrapper";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
+import IconSetBig from "../IconSet/IconSetBig";
 
 export const Wrapper = styled(SimpleWrapper)`
   padding: 100px 0 0;
@@ -39,7 +40,7 @@ const TitleBig = styled.div`
       opacity: 1;
     }
   }
-  font-size: 100px;
+  font-size: 50px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
 `;
@@ -94,7 +95,7 @@ const Portfolios = ({
           (
             {
               node: {
-                frontmatter: { path, title, description, images = [] },
+                frontmatter: { path, title, description, images = [], iconset },
               },
             },
             index
@@ -118,30 +119,43 @@ const Portfolios = ({
                 onClick={() => onClick(index)}
               >
                 <Link to={path}>
-                  <mesh
-                    style={{
-                      position: "absolute",
-                      marginLeft: "-30%",
-                      zIndex: "6",
-                    }}
-                  >
-                    <TitleBig>{title}</TitleBig>
-                    <Content>{description}</Content>
-                  </mesh>
+                  <TitleBig>{title}</TitleBig>
                 </Link>
-
+              </ParallaxLayer>
+              <ParallaxLayer
+                offset={index}
+                speed={-0}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: "5%",
+                }}
+                onClick={() => onClick(index)}
+              >
+                <Link to={path}>
+                  <Content>{description}</Content>
+                </Link>
+              </ParallaxLayer>
+              <ParallaxLayer
+                offset={index}
+                speed={-0}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                onClick={() => onClick(index)}
+              >
                 <mesh
                   style={{
                     position: "absolute",
-                    marginTop: "-20vh",
+                    marginTop: "10%",
+                    width: "80%",
                     zIndex: "6",
                   }}
                 >
-                  {portfolios.map((items) => (
-                    <Link to={items.node.frontmatter.path}>
-                      <Content>{items.node.frontmatter.title}</Content>
-                    </Link>
-                  ))}
+                  <IconSetBig IconObject={iconset} />
                 </mesh>
               </ParallaxLayer>
             </>
