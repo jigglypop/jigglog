@@ -41,7 +41,6 @@ import Grid from "@material-ui/core/Grid";
 
 import cpluslogo from "./cplus.png";
 import awslogo from "./aws.png";
-import htmlcssjs from "./htmlcssjs.png";
 import jquerylogo from "./jquery.png";
 import mysqllogo from "./mysql.png";
 import pythonlogo from "./python.png";
@@ -55,6 +54,14 @@ import clogo from "./c.png";
 import nodejslogo from "./nodejs.png";
 import vuelogo from "./vue.png";
 import javalogo from "./java.png";
+import javascriptlogo from "./javascripts.png";
+import reduxlogo from "./redux.png";
+import gatsbylogo from "./gatsby.png";
+
+import htmllogo from "./html.png";
+import csslogo from "./css.png";
+
+import Icons from "../Icons";
 
 const Wrapper = styled.section`
   padding: 100px 0 0;
@@ -125,6 +132,13 @@ const Button = styled.button`
 const NameTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
   font-size: 50px;
+  text-shadow: 3px 3px 30px white;
+`;
+const NameSmallTitle = styled.div`
+  font-family: "NanumBarunGothic" !important;
+  margin-top: 10px;
+
+  font-size: 30px;
   text-shadow: 3px 3px 30px white;
 `;
 const PrintTitle = styled.div`
@@ -224,6 +238,8 @@ const Resume = ({
         <BasicInformation>
           <img src={profileUrl.default} alt="" width="120" height="120" />
           <NameTitle>{AUTHOR}</NameTitle>
+          <NameSmallTitle>염동환</NameSmallTitle>
+
           <p>{EMAIL}</p>
         </BasicInformation>
         <SocialInformation>
@@ -260,54 +276,7 @@ const Resume = ({
           <div ref={$mdWrapper} dangerouslySetInnerHTML={{ __html: html }} />
         </PostContent>
 
-        <Grid container>
-          <Grid item xs={3}>
-            <HtmlCssJsImage src={htmlcssjs} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={awslogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={cpluslogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={clogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={pythonlogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={javalogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={dartlogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={mysqllogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={djangologo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={nodejslogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={flasklogo} />
-          </Grid>
-
-          <Grid item xs={1}>
-            <LogoImage src={springlogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={vuelogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={reactlogo} />
-          </Grid>
-          <Grid item xs={1}>
-            <LogoImage src={tensorflowlogo} />
-          </Grid>
-        </Grid>
+        <Icons />
       </Clearfix>
     </Wrapper>
   );

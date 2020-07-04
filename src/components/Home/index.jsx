@@ -51,7 +51,7 @@ const TitleRed = styled.div`
   margin-top: 10px;
   font-size: 20px;
   font-weight: 800;
-  text-shadow: 4px 4px 40px white;
+  text-shadow: 4px 4px 40px #e94057;
 `;
 
 const Content = styled.div`

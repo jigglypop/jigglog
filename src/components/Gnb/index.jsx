@@ -24,10 +24,17 @@ import {
 import "./style.css";
 import moon from "./moon.png";
 
-export const MenuTitle = styled.div`
+const MenuTitle = styled.div`
   font-size: 18px;
   font-weight: 800;
   text-shadow: 2px 2px 20px white;
+`;
+
+const SmallItem = styled.div`
+  margin: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  text-shadow: 1px 1px 10px white;
 `;
 
 const TOGGLE_MENU = "TOGGLE_MENU";
@@ -147,12 +154,17 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
                     }
 
                     return (
-                      <li key={key}>
-                        <Link to={`/categories/${key}/1`} onClick={toggleMenu}>
-                          {key}
-                          &nbsp;
-                          <small>{`(${length})`}</small>
-                        </Link>
+                      <li key={key} style={{ background: "black" }}>
+                        <SmallItem>
+                          <Link
+                            to={`/categories/${key}/1`}
+                            onClick={toggleMenu}
+                          >
+                            {key}
+                            &nbsp;
+                            <small>{`(${length})`}</small>
+                          </Link>
+                        </SmallItem>
                       </li>
                     );
                   })}
@@ -243,12 +255,14 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
                 }
 
                 return (
-                  <li key={key}>
-                    <Link to={`/categories/${key}/1`}>
-                      {key}
-                      &nbsp;
-                      <small>{`(${length})`}</small>
-                    </Link>
+                  <li key={key} style={{ background: "black" }}>
+                    <SmallItem>
+                      <Link to={`/categories/${key}/1`} onClick={toggleMenu}>
+                        {key}
+                        &nbsp;
+                        <small>{`(${length})`}</small>
+                      </Link>
+                    </SmallItem>
                   </li>
                 );
               })}
