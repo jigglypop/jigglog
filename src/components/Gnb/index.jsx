@@ -21,7 +21,6 @@ import {
   MobileMenus,
   MobileMenu,
 } from "./styled";
-import "./style.css";
 import moon from "./moon.png";
 
 const MenuTitle = styled.div`
@@ -78,7 +77,13 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
+const Gnb = ({
+  location,
+  categories,
+  postInformations,
+  hasPortfolio,
+  categorySet,
+}) => {
   const [
     { isMenuOpened, isSubMenuClosed, searchKeyword },
     dispatch,
@@ -125,7 +130,6 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
   const isHome = pathname.replace(/\/$/, "") === "";
   const isResume = pathname.replace(/\/$/, "") === "/resume";
   const isPost = !(isPortfolio || isHome || isResume);
-
   return (
     <GnbWrapper>
       <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
@@ -147,28 +151,11 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
               </StyledLink>
 
               <SubMenu>
-                <div>
-                  {categories.map(({ key, length }) => {
-                    if (key === "__ALL__") {
-                      return null;
-                    }
-
-                    return (
-                      <li key={key} style={{ background: "black" }}>
-                        <SmallItem>
-                          <Link
-                            to={`/categories/${key}/1`}
-                            onClick={toggleMenu}
-                          >
-                            {key}
-                            &nbsp;
-                            <small>{`(${length})`}</small>
-                          </Link>
-                        </SmallItem>
-                      </li>
-                    );
-                  })}
-                </div>
+                <CategoryMenu
+                  categories={categories}
+                  toggleMenu={toggleMenu}
+                  categorySet={categorySet}
+                />
               </SubMenu>
             </ListMenu>
             {hasPortfolio ? (
@@ -248,25 +235,11 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
             <MenuTitle>POSTS</MenuTitle>
           </StyledLink>
           <SubMenu>
-            <div>
-              {categories.map(({ key, length }) => {
-                if (key === "__ALL__") {
-                  return null;
-                }
-
-                return (
-                  <li key={key} style={{ background: "black" }}>
-                    <SmallItem>
-                      <Link to={`/categories/${key}/1`} onClick={toggleMenu}>
-                        {key}
-                        &nbsp;
-                        <small>{`(${length})`}</small>
-                      </Link>
-                    </SmallItem>
-                  </li>
-                );
-              })}
-            </div>
+            <CategoryMenu
+              categories={categories}
+              toggleMenu={toggleMenu}
+              categorySet={categorySet}
+            />
           </SubMenu>
         </ListMenu>
         {hasPortfolio ? (
@@ -328,6 +301,30 @@ const Gnb = ({ location, categories, postInformations, hasPortfolio }) => {
         ))}
       </SearchedPosts>
     </GnbWrapper>
+  );
+};
+
+const CategoryMenu = ({ categories, categorySet, toggleMenu }) => {
+  return (
+    <div>
+      {categorySet.map(({ key, length }) => {
+        if (key === "__ALL__") {
+          return null;
+        }
+
+        return (
+          <li key={key} style={{ background: "black" }}>
+            <SmallItem>
+              <Link to={`/categories/${key}/1`} onClick={toggleMenu}>
+                {key}
+                &nbsp;
+                <small>{`(${length})`}</small>
+              </Link>
+            </SmallItem>
+          </li>
+        );
+      })}
+    </div>
   );
 };
 

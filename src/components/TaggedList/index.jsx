@@ -11,14 +11,15 @@ import { PREFIX, CONTENT_PER_PAGE } from "~/constants";
 const TaggedList = ({ data, location }) => {
   const page = getPage(location);
   const [, , tag] = location.pathname.split("/");
-  const newLocal =
-    data
-    |> getPosts
-    |> ((posts) =>
-      posts.filter(({ node: { frontmatter: { tags } } }) =>
-        tags.includes(tag)
-      ));
-  const allPosts = newLocal;
+  const edgeSet = getPosts(data).filter(
+    ({
+      node: {
+        frontmatter: { tags },
+      },
+    }) => tags.indexOf(decodeURI(tag)) !== -1
+  );
+
+  const allPosts = edgeSet;
   const postCount = allPosts.length;
   const posts = allPosts.slice(
     (page - 1) * CONTENT_PER_PAGE,
@@ -29,8 +30,8 @@ const TaggedList = ({ data, location }) => {
     <>
       <PostsWrapper>
         <Helmet>
-          <title>{`${PREFIX}${tag.toUpperCase()}`}</title>
-          <meta name="og:title" content={`${PREFIX}${tag.toUpperCase()}`} />
+          <title>{decodeURI(tag)}</title>
+          <meta name="og:title" content={decodeURI(tag)} />
         </Helmet>
         {posts.length === 0 ? <div>No posts.</div> : null}
         {posts.map(

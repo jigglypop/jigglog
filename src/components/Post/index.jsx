@@ -49,10 +49,12 @@ export const PostContent = styled.section`
   p {
     margin-top: 10px;
     font-size: 16px;
+    margin-left: 10px;
   }
   li {
     margin-top: 10px;
     font-size: 16px;
+    margin-left: 30px;
   }
   blockquote {
     line-height: 1.2em;
@@ -245,8 +247,8 @@ const PostTemplate = ({
       </Helmet>
 
       <ImageWrapper>
-        <div class="jb-wrap">
-          <div class="jb-image">
+        <div className="jb-wrap">
+          <div className="jb-image">
             {image && (
               <img
                 src={
@@ -256,7 +258,7 @@ const PostTemplate = ({
               />
             )}
           </div>
-          <div class="jb-text">
+          <div className="jb-text">
             <p>{title}</p>
           </div>
         </div>

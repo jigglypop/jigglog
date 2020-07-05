@@ -7,7 +7,7 @@ import SimpleWrapper from "~/components/Common/SimpleWrapper";
 import { PRIMARY_COLOR } from "~/components/Common/constants";
 import IconSetUnder from "../IconSet/IconSetUnder";
 
-export const Wrapper = styled(SimpleWrapper)`
+const Wrapper = styled(SimpleWrapper)`
   @media (max-width: 414px) {
     padding: 70px 16px 0;
   }
@@ -40,7 +40,7 @@ const Title = styled.div`
   }
 `;
 
-export const PortfolioDescription = styled.section`
+const PortfolioDescription = styled.section`
   float: left;
   padding: 0 0 0 36px;
   width: 50%;
@@ -103,7 +103,7 @@ export const PortfolioDescription = styled.section`
   }
 `;
 
-export const PortfolioImages = styled.section`
+const PortfolioImages = styled.section`
   float: left;
   padding: 0 36px 0 0;
   width: 50%;

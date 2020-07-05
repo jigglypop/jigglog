@@ -12,10 +12,11 @@ export default class App extends Component {
     location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
       .isRequired,
     categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    categorySet: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+
     postInformations: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     hasPortfolio: PropTypes.bool.isRequired,
   };
-
   render() {
     const {
       location,
@@ -23,12 +24,12 @@ export default class App extends Component {
       postInformations,
       hasPortfolio,
       children,
+      categorySet,
     } = this.props;
     const theme = {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
     };
-
     return (
       <ThemeProvider theme={theme}>
         <Wrapper>
@@ -38,6 +39,7 @@ export default class App extends Component {
               categories={categories}
               postInformations={postInformations}
               hasPortfolio={hasPortfolio}
+              categorySet={categorySet}
             />
           </nav>
           <main>{children}</main>

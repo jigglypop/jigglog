@@ -36,10 +36,10 @@ const Layout = ({ children, location }) => (
           },
         }) => type === PORTFOLIO
       );
+
       const categories = edges.reduce(
         (categories, { node }) => {
           const { category } = node.frontmatter;
-
           if (category === null) {
             return categories;
           }
@@ -66,6 +66,24 @@ const Layout = ({ children, location }) => (
         },
         [{ key: "__ALL__", length: 0 }]
       );
+      // 카테고리셋
+      const categorySet = [];
+      edges.filter(({ node: { frontmatter: { type, category } } }) =>
+        type === null ? categorySet.push(category) : ""
+      );
+      const result = categorySet.reduce((object, currentValue) => {
+        if (!object[currentValue]) {
+          object[currentValue] = { key: currentValue, length: 0 };
+        }
+        object[currentValue]["length"]++;
+        return object;
+      }, {});
+
+      const results = [];
+      for (var i in result) {
+        results.push(result[i]);
+      }
+
       const postInformations = edges.reduce(
         (postInformations, { node: { frontmatter } }) => {
           const {
@@ -107,6 +125,7 @@ const Layout = ({ children, location }) => (
           categories={categories}
           postInformations={postInformations}
           hasPortfolio={hasPortfolio}
+          categorySet={results}
         >
           {childrenWithProps}
         </App>

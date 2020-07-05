@@ -1,11 +1,3 @@
-.iGYoye a {
-  color: #d9534f !important;
-}
-.styled__PostContent-jKyqRA,
-.jmqWFv {
-  padding: 20px !important;
-}
-
 ol,
 ul {
   list-style: unset !important;
@@ -20,19 +12,20 @@ body {
   font-family: "NanumBarunGothic";
 }
 
-.gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-  font-family: "NanumBarunGothic";
-}
-
 .gatsby-highlight pre[class*="language-"] {
-  background-color: transparent;
+  background-color: #373b44;
   overflow: initial;
-  float: left;
   min-width: 100%;
-  font-family: "NanumBarunGothic";
+  font-family: "NanumBarunGothic" !important;
+  padding: 30px;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "NanumBarunGothic" !important;
+  color: white;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #373b44;
+  padding: 7px;
 }
