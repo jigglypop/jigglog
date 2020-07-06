@@ -11,6 +11,13 @@ import {
 import { CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
 import getPage from "~/utils/getPage";
 import { Wrapper } from "./styled";
+import styled from "styled-components";
+
+const TextDiv = styled.div`
+  font-size: 20px;
+  text-shadow: 2px 2px 20px white;
+  font-weight: 800;
+`;
 
 const Pagination = ({ postCount, location, prefix }) => {
   const pageCount = postCount ? Math.ceil(postCount / CONTENT_PER_PAGE) : 0;
@@ -28,62 +35,72 @@ const Pagination = ({ postCount, location, prefix }) => {
   }
 
   return (
-    <Wrapper>
-      <ul>
-        {hasManyPages && !isNearStart ? (
-          <>
+    <Wrapper
+      style={{
+        display: "flex",
+        position: "absolute",
+        zIndex: 10,
+        marginLeft: "50%",
+        marginBottom: "5%",
+      }}
+    >
+      <TextDiv>
+        <ul>
+          {hasManyPages && !isNearStart ? (
+            <>
+              <li>
+                <Link to={`${prefix}1`}>
+                  <FaAngleDoubleLeft />
+                </Link>
+              </li>
+              <li>
+                <FaEllipsisH />
+              </li>
+            </>
+          ) : null}
+          {page !== 1 ? (
             <li>
-              <Link to={`${prefix}1`}>
-                <FaAngleDoubleLeft />
+              <Link to={`${prefix}${page - 1}`}>
+                <FaAngleLeft />
               </Link>
             </li>
-            <li>
-              <FaEllipsisH />
-            </li>
-          </>
-        ) : null}
-        {page !== 1 ? (
-          <li>
-            <Link to={`${prefix}${page - 1}`}>
-              <FaAngleLeft />
-            </Link>
-          </li>
-        ) : null}
-        {filteredPages.map((i) => {
-          if (page === i) {
+          ) : null}
+          {filteredPages.map((i) => {
+            if (page === i) {
+              return (
+                <li key={i} className={page === i ? "active" : ""}>
+                  {i}
+                </li>
+              );
+            }
+
             return (
               <li key={i} className={page === i ? "active" : ""}>
-                {i}
+                <Link to={`${prefix}${i}`}>{i}</Link>
               </li>
             );
-          }
-
-          return (
-            <li key={i} className={page === i ? "active" : ""}>
-              <Link to={`${prefix}${i}`}>{i}</Link>
-            </li>
-          );
-        })}
-        {pageCount !== page ? (
-          <li>
-            <Link to={`${prefix}${page + 1}`}>
-              <FaAngleRight />
-            </Link>
-          </li>
-        ) : null}
-        {hasManyPages && !isNearEnd ? (
-          <>
+          })}
+          {pageCount !== page ? (
             <li>
-              <FaEllipsisH />
-            </li>
-            <li>
-              <Link to={`${prefix}${pageCount}`}>
-                <FaAngleDoubleRight />
+              <Link to={`${prefix}${page + 1}`}>
+                <FaAngleRight />
               </Link>
             </li>
-          </>
-        ) : null}
-      </ul>
+          ) : null}
+          {hasManyPages && !isNearEnd ? (
+            <>
+              <li>
+                <FaEllipsisH />
+              </li>
+              <li>
+                <Link to={`${prefix}${pageCount}`}>
+                  <FaAngleDoubleRight />
+                </Link>
+              </li>
+            </>
+          ) : null}
+        </ul>
+      </TextDiv>
     </Wrapper>
   );
 };

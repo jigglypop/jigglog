@@ -20,19 +20,16 @@ export const PostContent = styled.section`
     margin-top: 40px;
     font-size: 50px;
     font-weight: 800;
-    /* text-shadow: 2px 2px 10px white; */
   }
   h2 {
     margin-top: 40px;
     font-size: 28px;
     font-weight: 800;
-    /* text-shadow: 2px 2px 5px white; */
   }
   h3 {
     margin-top: 40px;
     font-size: 24px;
     font-weight: 800;
-    /* text-shadow: 2px 2px 5px white; */
   }
   h4 {
     margin-top: 40px;
@@ -43,7 +40,6 @@ export const PostContent = styled.section`
     margin-top: 40px;
     font-size: 18px;
     font-weight: 800;
-    /* text-shadow: 2px 2px 10px white; */
   }
 
   p {
@@ -179,7 +175,6 @@ const PostTemplate = ({
     const codes = global.document.querySelectorAll(
       "#post-contents .gatsby-highlight"
     );
-
     codes.forEach((code) => {
       const button = document.createElement("button");
       button.setAttribute("class", "copy-button");
@@ -237,7 +232,6 @@ const PostTemplate = ({
     createCopyButton();
     renderComponents(components);
   }, []);
-
   const [image = null] = images;
   return (
     <PostWrapper>

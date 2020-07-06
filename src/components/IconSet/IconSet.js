@@ -28,8 +28,8 @@ import csslogo from "./css.png";
 const LogoImage = styled.img`
   -webkit-filter: grayscale(100%);
   filter: gray;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 `;
 
 const IconSet = ({ IconObject }) => {

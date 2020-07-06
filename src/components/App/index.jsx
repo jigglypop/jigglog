@@ -13,7 +13,7 @@ export default class App extends Component {
       .isRequired,
     categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     categorySet: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-
+    tagSet: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     postInformations: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     hasPortfolio: PropTypes.bool.isRequired,
   };
@@ -25,6 +25,7 @@ export default class App extends Component {
       hasPortfolio,
       children,
       categorySet,
+      tagSet,
     } = this.props;
     const theme = {
       color: WHITE_COLOR,
@@ -40,6 +41,7 @@ export default class App extends Component {
               postInformations={postInformations}
               hasPortfolio={hasPortfolio}
               categorySet={categorySet}
+              tagSet={tagSet}
             />
           </nav>
           <main>{children}</main>

@@ -36,7 +36,6 @@ const Layout = ({ children, location }) => (
           },
         }) => type === PORTFOLIO
       );
-
       const categories = edges.reduce(
         (categories, { node }) => {
           const { category } = node.frontmatter;
@@ -83,7 +82,25 @@ const Layout = ({ children, location }) => (
       for (var i in result) {
         results.push(result[i]);
       }
+      // 태그셋
+      const tagSet = [];
+      edges.filter(({ node: { frontmatter: { type, tags } } }) =>
+        type === null
+          ? Object.entries(tags).map((item) => tagSet.push(item[1]))
+          : ""
+      );
 
+      const tagResult = tagSet.reduce((object, currentValue) => {
+        if (!object[currentValue]) {
+          object[currentValue] = { key: currentValue, length: 0 };
+        }
+        object[currentValue]["length"]++;
+        return object;
+      }, {});
+      const tagResults = [];
+      for (var i in tagResult) {
+        tagResults.push(tagResult[i]);
+      }
       const postInformations = edges.reduce(
         (postInformations, { node: { frontmatter } }) => {
           const {
@@ -126,6 +143,7 @@ const Layout = ({ children, location }) => (
           postInformations={postInformations}
           hasPortfolio={hasPortfolio}
           categorySet={results}
+          tagSet={tagResults}
         >
           {childrenWithProps}
         </App>

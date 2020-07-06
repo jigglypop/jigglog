@@ -29,8 +29,8 @@ const LogoImage = styled.img`
   -webkit-filter: grayscale(100%);
   filter: gray;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 `;
 
 const IconSetUnder = ({ IconObject }) => {
