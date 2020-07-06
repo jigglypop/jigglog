@@ -43,7 +43,6 @@ const List = ({ data, location }) => {
     (page - 1) * CONTENT_PER_PAGE,
     page * CONTENT_PER_PAGE
   );
-
   return (
     <>
       <div>

@@ -1,9 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '~/components/layout';
-import Post from '~/components/Post';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "~/components/layout";
+import Post from "~/components/Post";
 
-const PostTemplate = props => (
+const PostTemplate = (props) => (
   <Layout {...props}>
     <Post {...props} />
   </Layout>
@@ -20,9 +20,7 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    post: markdownRemark (
-      frontmatter: { path: { eq: $path } }
-    ) {
+    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {
@@ -40,7 +38,26 @@ export const pageQuery = graphql`
           rootId
           userId
           tweetId
-        } summary
+        }
+        summary
+      }
+    }
+    posts: allMarkdownRemark(
+      filter: { frontmatter: { hide: { ne: true } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            type
+            title
+            images
+            path
+            tags
+            date
+            summary
+          }
+        }
       }
     }
   }

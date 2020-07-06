@@ -36,7 +36,6 @@ const Wrapper = styled.div`
 
 const Bio = ({ color }) => (
   <Wrapper>
-    {/* <a href={SITE_URL} > */}
     <Grid container>
       <Grid>
         <Link to={"/resume"}>
@@ -48,6 +47,7 @@ const Bio = ({ color }) => (
           color: color,
           fontSize: "16px",
           marginTop: "-3px",
+          marginLeft: "10px",
           fontWeight: 800,
         }}
       >
@@ -86,6 +86,7 @@ const Bio = ({ color }) => (
             color: color,
             fontSize: "13px",
             marginTop: "-3px",
+            marginLeft: "-2px",
             fontWeight: 800,
           }}
         >
@@ -93,7 +94,6 @@ const Bio = ({ color }) => (
         </p>
       </Grid>
     </Grid>
-    {/* </a> */}
   </Wrapper>
 );
 

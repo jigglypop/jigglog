@@ -1,5 +1,7 @@
 exports.CONTENT_PER_PAGE = 8;
 exports.PAGE_PER_SCREEN = 4;
+exports.CONTENT_PER_SMALL_PAGE = 5;
+exports.PAGE_PER_SMALL_SCREEN = 3;
 
 exports.POST = "post";
 exports.PORTFOLIO = "portfolio";

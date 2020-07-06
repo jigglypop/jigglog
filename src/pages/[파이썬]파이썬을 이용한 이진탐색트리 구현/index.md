@@ -26,7 +26,7 @@ images: ["images/1.jpg"]
 
 ```python
 class Node(object):
-	def **init**(self, data):
+	def __init__(self, data):
 		self.data = data
 		self.left = self.right = None
 ```
@@ -35,7 +35,7 @@ class Node(object):
 
 ```python
 class BinarySearchTree(object):
-	def **init**(self):
+	def __init__(self):
 		self.root = None
 ```
 
@@ -134,11 +134,10 @@ class BinarySearchTree(object):
 
 ---
 
-예제를 통해 구현 결과를 확인할 수 있습니다.
-
-array = [40, 4, 34, 45, 14, 55, 48, 13, 15, 49, 47]
+예제를 통해 구현 결과를 `확인`할 수 있습니다.
 
 ```python
+# array = [40, 4, 34, 45, 14, 55, 48, 13, 15, 49, 47]
 bst = BinarySearchTree()
 for x in array:
 bst.insert(x)

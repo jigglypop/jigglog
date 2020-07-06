@@ -1,16 +1,24 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { render } from "react-dom";
 import PropTypes from "prop-types";
 
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
 import Bio from "~/components/Bio";
-// import PostWrapper from "~/components/Common/PostWrapper";
-import { PREFIX, SITE_URL, DISQUS_ID } from "~/constants";
+import {
+  PREFIX,
+  SITE_URL,
+  DISQUS_ID,
+  CONTENT_PER_SMALL_PAGE,
+  PAGE_PER_SMALL_SCREEN,
+} from "~/constants";
 import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
 import styled from "styled-components";
-import MoonBackgroundAnimation from "../base/common/LargeMoon";
+import SmallPagination from "~/components/Common/SmallPagination";
+import getPage from "~/utils/getPage";
+import SmallCard from "~/components/Common/SmallCard";
+import Pagination from "@material-ui/lab/Pagination";
 
 const PostWrapper = styled.section`
   margin: auto;
@@ -48,7 +56,7 @@ const PostContent = styled.section`
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
   font-family: "NanumBarunGothic" !important;
-  padding: 100px;
+  padding: 0 100px 100px 100px;
   line-height: 2em;
   color: black;
   h1 {
@@ -207,6 +215,7 @@ const PostTemplate = ({
       html,
       frontmatter: { title, date, images = [], components = [] },
     },
+    posts,
   },
   location,
 }) => {
@@ -289,6 +298,24 @@ const PostTemplate = ({
     renderComponents(components);
   }, []);
   const [image = null] = images;
+  // 윗포스트
+  const [page, setPage] = useState(1);
+
+  const allPosts = posts.edges.filter(
+    ({
+      node: {
+        frontmatter: { type },
+      },
+    }) => type === null
+  );
+  const postCount = allPosts.length;
+  const postlist = allPosts.slice(
+    (page - 1) * CONTENT_PER_SMALL_PAGE,
+    page * CONTENT_PER_SMALL_PAGE
+  );
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
   return (
     <PostWrapper>
       <Helmet>
@@ -316,6 +343,7 @@ const PostTemplate = ({
       <PostContent>
         <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
         <hr />
+
         <Bio style={{ marginBottom: "10vh" }} color={"black"} />
         <hr style={{ marginBottom: "100px" }} />
         <div id="post-contents" dangerouslySetInnerHTML={{ __html: html }} />
@@ -326,6 +354,30 @@ const PostTemplate = ({
             comments powered by Disqus.
           </a>
         </noscript>
+        <Pagination
+          count={PAGE_PER_SMALL_SCREEN}
+          page={page}
+          size="small"
+          onChange={handleChange}
+          style={{ listStyle: "none" }}
+        />
+        <hr />
+
+        {postlist.map(
+          ({
+            node: {
+              frontmatter: { images, tags, path, ...otherProps },
+            },
+          }) => (
+            <SmallCard
+              key={path}
+              path={path}
+              images={images}
+              tags={tags}
+              {...otherProps}
+            />
+          )
+        )}
       </PostContent>
     </PostWrapper>
   );
