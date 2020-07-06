@@ -5,7 +5,8 @@ const PostWrapper = styled.section`
   padding: 120px 0 0;
   max-width: 1000px;
   font-size: 16px;
-  background-image: white;
+  background-color: white;
+  padding: 50px;
   @media (max-width: 414px) {
     padding: 70px 16px 0;
   }

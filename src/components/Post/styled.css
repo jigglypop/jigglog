@@ -21,7 +21,7 @@ body {
 }
 code[class*="language-"],
 pre[class*="language-"] {
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   color: white;
 }
 :not(pre) > code[class*="language-"],

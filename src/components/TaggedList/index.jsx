@@ -33,9 +33,11 @@ const TagWrapper = styled.div`
     align-items: center;
     text-align: center;
     justify-content: center;
-    position: relative;
-    z-index: 10;
 
+    position: absolute;
+    width: 400px;
+    z-index: 10;
+    margin-top: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -48,7 +50,7 @@ const TagWrapper = styled.div`
   .Wrapper-title {
     color: white;
     font-weight: 800;
-    margin-top: -70vh;
+    margin-top: -80vh;
 
     text-shadow: 4px 4px 40px white;
     font-size: 40px;
@@ -68,7 +70,7 @@ const TagWrapper = styled.div`
   .Wrapper-titles {
     color: white;
     font-weight: 800;
-    margin-bottom: 20vh;
+    margin-bottom: 50vh;
 
     text-shadow: 4px 4px 40px white;
     font-size: 20px;

@@ -62,7 +62,6 @@ const SocialInformation = styled.section`
     padding: 0 6px;
   }
 `;
-
 const Button = styled.button`
   display: flex;
   align-items: center;

@@ -128,7 +128,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "50%",
+            marginLeft: "40%",
             marginTop: "20%",
             zIndex: "8",
           }}
@@ -139,7 +139,7 @@ const ParallaxComponent = ({ portfolios }) => {
           <div
             style={{
               position: "absolute",
-              marginLeft: "50%",
+              marginLeft: "40%",
               marginTop: "25%",
               zIndex: "20",
             }}
@@ -152,7 +152,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "-20%",
+            marginLeft: "20%",
             marginTop: "20%",
             width: "100%",
             zIndex: "6",

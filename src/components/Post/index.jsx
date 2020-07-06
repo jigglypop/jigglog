@@ -5,21 +5,52 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
 import Bio from "~/components/Bio";
-import PostWrapper from "~/components/Common/PostWrapper";
+// import PostWrapper from "~/components/Common/PostWrapper";
 import { PREFIX, SITE_URL, DISQUS_ID } from "~/constants";
 import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
 import styled from "styled-components";
+import MoonBackgroundAnimation from "../base/common/LargeMoon";
 
-export const PostContent = styled.section`
+const PostWrapper = styled.section`
+  margin: auto;
+  padding: 10px 0 0;
+  max-width: 1200px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 10px;
+  /* padding: 50px; */
+  @media (max-width: 414px) {
+    padding: 70px 16px 0;
+  }
+
+  &:before,
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  h1 {
+    margin: 0.67em 0;
+    font-size: 36px;
+  }
+
+  time {
+    margin: 1em 0;
+    font-size: 14px;
+  }
+`;
+
+const PostContent = styled.section`
   @font-face {
     font-family: "NanumBarunGothic";
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
   font-family: "NanumBarunGothic" !important;
-  padding: 1em 1em 4em;
+  padding: 100px;
   line-height: 2em;
-
+  color: black;
   h1 {
     margin-top: 40px;
     font-size: 50px;
@@ -64,7 +95,8 @@ export const PostContent = styled.section`
     font-size: 24px;
   }
   pre {
-    margin: 20px 0 0;
+    /* margin: 20px 0 0; */
+    font-size: 17px;
   }
 `;
 
@@ -74,29 +106,42 @@ export const ImageWrapper = styled.div`
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
   font-family: "NanumBarunGothic" !important;
+
   .jb-wrap {
-    width: 40%;
+    max-height: 500px;
+    width: 100%;
     margin: 10px auto;
     position: relative;
+    overflow: hidden;
   }
   .jb-wrap img {
+    max-height: initial;
     width: 100%;
     vertical-align: middle;
   }
   .jb-text {
     color: white;
     font-weight: 800;
-    text-shadow: 2px 2px 2px gray;
-    font-size: 20px;
+    text-shadow: 2px 2px 20px white;
+    font-size: 50px;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: blink 1.2s ease-in-out infinite alternate;
+
+    @keyframes blink {
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 `;
-
-export const ComponentInPost = styled.div`
+const ComponentInPost = styled.div`
   position: relative;
   margin: 1em 0 1em;
   padding: 55px 16px 16px;
@@ -250,7 +295,6 @@ const PostTemplate = ({
         <title>{`${PREFIX}${title}`}</title>
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
-
       <ImageWrapper>
         <div className="jb-wrap">
           <div className="jb-image">
@@ -263,25 +307,26 @@ const PostTemplate = ({
               />
             )}
           </div>
-          <div className="jb-text">
-            <p>{title}</p>
-          </div>
+        </div>
+        <div className="jb-text">
+          <p>{title}</p>
         </div>
       </ImageWrapper>
 
-      <time>{formattedDate(date)}</time>
-
-      <Bio />
       <PostContent>
+        <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
+        <hr />
+        <Bio style={{ marginBottom: "10vh" }} color={"black"} />
+        <hr style={{ marginBottom: "100px" }} />
         <div id="post-contents" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id="disqus_thread" />
+        <noscript>
+          Please enable JavaScript to view the &nbsp;
+          <a href="https://disqus.com/?ref_noscript">
+            comments powered by Disqus.
+          </a>
+        </noscript>
       </PostContent>
-      <div id="disqus_thread" />
-      <noscript>
-        Please enable JavaScript to view the &nbsp;
-        <a href="https://disqus.com/?ref_noscript">
-          comments powered by Disqus.
-        </a>
-      </noscript>
     </PostWrapper>
   );
 };

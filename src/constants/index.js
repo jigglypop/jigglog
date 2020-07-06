@@ -9,13 +9,12 @@ exports.RESUME = "resume";
 exports.NAME = "jigglog";
 exports.TITLE = "jigglog";
 exports.PREFIX = "jigglog | ";
-exports.DESCRIPTION = "jigglypop's blog";
+exports.DESCRIPTION = "새로운 개발을 좋아하는 방구석 백수 개발자입니다";
 exports.AUTHOR = "jigglypop";
 exports.EMAIL = "ydh2244@gmail.com";
 exports.KEYWORDS = ["Gatsby", "ReactJS"].join(", ");
 exports.SITE_URL = "https://jigglypopownprivateblog.netlify.app/";
-exports.PROFILE =
-  "https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/80752915_590524238390867_3447356711315177472_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=IAEopQQIQgYAX9XDXo5&oh=b307f3d0b39284a50d09dc9e50e18ec3&oe=5F28EBA7";
+exports.PROFILE = "https://pbs.twimg.com/media/CsEjsJTVMAAtl0V.jpg:large";
 
 // Social
 exports.GITHUB_ID = "jigglypop";
