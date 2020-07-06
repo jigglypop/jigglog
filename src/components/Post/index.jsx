@@ -63,6 +63,7 @@ export const PostContent = styled.section`
 `;
 
 export const ImageWrapper = styled.div`
+  font-family: "NanumBarunGothic" !important;
   .jb-wrap {
     width: 40%;
     margin: 10px auto;
