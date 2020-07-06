@@ -12,6 +12,10 @@ import "./styled.css";
 import styled from "styled-components";
 
 export const PostContent = styled.section`
+  @font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../../fonts/NanumBarunGothic.ttf");
+  }
   font-family: "NanumBarunGothic" !important;
   padding: 1em 1em 4em;
   line-height: 2em;
@@ -44,13 +48,15 @@ export const PostContent = styled.section`
 
   p {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 17px;
     margin-left: 10px;
+    font-weight: 100;
   }
   li {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 17px;
     margin-left: 30px;
+    font-weight: 100;
   }
   blockquote {
     line-height: 1.2em;
@@ -63,6 +69,10 @@ export const PostContent = styled.section`
 `;
 
 export const ImageWrapper = styled.div`
+  @font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../../fonts/NanumBarunGothic.ttf");
+  }
   font-family: "NanumBarunGothic" !important;
   .jb-wrap {
     width: 40%;
