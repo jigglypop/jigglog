@@ -174,7 +174,7 @@ const ParallaxComponent = ({ portfolios }) => {
               position: "absolute",
               marginLeft: "35%",
               marginTop: "37%",
-              zIndex: "20",
+              zIndex: "18",
             }}
           >
             <IconSet IconObject={IconObject} />

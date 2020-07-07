@@ -51,7 +51,7 @@ const PortfolioDescription = styled.section`
   width: 50%;
   font-family: "NanumBarunGothic" !important;
   margin-bottom: 200px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   @media (max-width: 600px) {
     margin-left: 20px;
 
