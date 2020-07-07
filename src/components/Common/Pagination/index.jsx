@@ -40,7 +40,7 @@ const Pagination = ({ postCount, location, prefix }) => {
         display: "flex",
         position: "absolute",
         zIndex: 10,
-        marginLeft: "50%",
+        marginLeft: "30vw",
         marginBottom: "5%",
       }}
     >

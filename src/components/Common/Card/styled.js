@@ -13,12 +13,6 @@ export const StyledArticle = styled.div`
   font-weight: 800;
 
   vertical-align: top;
-  @media (max-width: 414px) {
-    margin: 0 0 16px;
-    padding: 0 0 16px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
 
   a {
     color: ${({ theme: { color } }) => color};
@@ -40,6 +34,31 @@ export const StyledArticle = styled.div`
     small {
       margin: 0 0 0 4px;
       font-size: 14px;
+    }
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    a {
+      color: ${({ theme: { color } }) => color};
+
+      h3 {
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      p {
+        padding: 24px 0 16px;
+        font-size: 10px;
+
+        span {
+          white-space: nowrap;
+        }
+      }
+
+      small {
+        margin: 0 0 0 4px;
+        font-size: 10px;
+      }
     }
   }
 `;

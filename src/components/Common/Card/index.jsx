@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Truncate from "react-truncate";
 import { FaTags } from "react-icons/fa";
 import formattedDate from "~/utils/formattedDate";
-import { ImageWrapper, TagWrapper, StyledArticle } from "./styled";
+import { TagWrapper, StyledArticle } from "./styled";
 import { animated, useSpring } from "react-spring";
 
 const Card = ({ tags, path, images, title, date, summary }) => {

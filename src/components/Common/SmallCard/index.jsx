@@ -8,12 +8,7 @@ import styled from "styled-components";
 
 const Article = styled.div`
   vertical-align: top;
-  @media (max-width: 414px) {
-    margin: 0 0 16px;
-    padding: 0 0 16px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
+
   h6 {
     font-size: 10px;
     font-weight: 800;

@@ -27,6 +27,9 @@ const MenuTitle = styled.div`
   font-size: 18px;
   font-weight: 800;
   text-shadow: 2px 2px 20px white;
+  @media (max-width: 600px) {
+    font-size: 13px;
+  }
 `;
 
 const SmallItem = styled.div`
@@ -34,6 +37,9 @@ const SmallItem = styled.div`
   font-size: 15px;
   font-weight: 800;
   text-shadow: 1px 1px 10px white;
+  @media (max-width: 600px) {
+    font-size: 13px;
+  }
 `;
 
 const TOGGLE_MENU = "TOGGLE_MENU";

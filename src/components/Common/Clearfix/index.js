@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Clearfix = styled.div`
   &:before,
   &:after {
     display: block;
     clear: both;
-    content: '';
+    content: "";
   }
 `;
 

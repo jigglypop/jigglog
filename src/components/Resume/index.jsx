@@ -54,6 +54,12 @@ const BasicInformation = styled.section`
   }
 `;
 
+const ClearMobile = styled.div`
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+
 const SocialInformation = styled.section`
   font-size: 20px;
   text-align: center;
@@ -75,12 +81,18 @@ const NameTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
   font-size: 50px;
   text-shadow: 3px 3px 30px white;
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 `;
 const NameSmallTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
   margin-top: 20px;
   font-size: 30px;
   text-shadow: 3px 3px 30px white;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 const PrintTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
@@ -264,14 +276,14 @@ const Resume = ({
           <title>{`${PREFIX}RESUME`}</title>
           <meta name="og:title" content={`${PREFIX}RESUME`} />
         </Helmet>
-
-        <Clearfix>
-          <Button type="button" onClick={printPage}>
-            <FaPrint />
-            <PrintTitle>PRINT</PrintTitle>
-          </Button>
-        </Clearfix>
-
+        <ClearMobile>
+          <Clearfix>
+            <Button type="button" onClick={printPage}>
+              <FaPrint />
+              <PrintTitle>PRINT</PrintTitle>
+            </Button>
+          </Clearfix>
+        </ClearMobile>
         <BasicInformation>
           <img src={profileUrl.default} alt="" width="120" height="120" />
           <NameTitle>{AUTHOR}</NameTitle>
