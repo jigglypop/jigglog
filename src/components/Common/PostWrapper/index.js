@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PostWrapper = styled.section`
+const PostWrapper = styled.div`
   margin: auto;
   padding: 120px 0 0;
   max-width: 1000px;

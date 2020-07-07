@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Background = styled.div`
   background-color: #fff;
@@ -19,7 +19,10 @@ export const Background = styled.div`
       display: none;
     }
   }
-  a, a:focus, a:hover, a:visited {
+  a,
+  a:focus,
+  a:hover,
+  a:visited {
     color: white;
     text-decoration: blink;
   }

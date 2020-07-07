@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import PostsWrapper from "~/components/Common/PostsWrapper";
 import Card from "~/components/Common/Card";
-import Pagination from "~/components/Common/Pagination";
+// import Pagination from "~/components/Common/Pagination";
 import getPosts from "~/utils/getPosts";
 import getPage from "~/utils/getPage";
 import { CONTENT_PER_PAGE } from "~/constants";
@@ -12,6 +12,7 @@ import moon from "./moon.png";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Pagination from "@material-ui/lab/Pagination";
 
 const TagWrapper = styled.div`
   .Wrapper {
@@ -170,7 +171,7 @@ const TagWrapper = styled.div`
   }
 `;
 const CategorizedList = ({ data, location }) => {
-  const page = getPage(location);
+  const [page, setPage] = useState(1);
   const [, , category] = location.pathname.split("/");
   const edgeSet = getPosts(data).filter(
     ({
@@ -185,6 +186,9 @@ const CategorizedList = ({ data, location }) => {
     (page - 1) * CONTENT_PER_PAGE,
     page * CONTENT_PER_PAGE
   );
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
   // 카테고리셋
   const categorySet = [];
   getPosts(data).filter(({ node: { frontmatter: { type, category } } }) =>
@@ -223,7 +227,13 @@ const CategorizedList = ({ data, location }) => {
           <h1 className="Wrapper-title">{decodeURI(category)}</h1>
           <h1 className="Wrapper-titles">카테고리</h1>
         </TagWrapper>
-
+        <Pagination
+          count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+          page={page}
+          size="large"
+          onChange={handleChange}
+          style={{ listStyle: "none", color: "primary", marginBottom: "100px" }}
+        />
         {posts.length === 0 ? <div>No posts.</div> : null}
         {posts.map(
           ({
@@ -241,11 +251,6 @@ const CategorizedList = ({ data, location }) => {
           )
         )}
       </PostsWrapper>
-      <Pagination
-        prefix={`/categories/${category}/`}
-        postCount={postCount}
-        location={location}
-      />
     </>
   );
 };

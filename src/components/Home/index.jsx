@@ -12,6 +12,7 @@ import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
 import "./styled.css";
 import styled from "styled-components";
+import IconSet from "../IconSet/IconSet";
 
 const BlinkImage = styled.img`
   animation: blink 0.5s ease-in-out infinite alternate;
@@ -108,6 +109,11 @@ const ParallaxComponent = ({ portfolios }) => {
   ];
   let parallax;
 
+  const MoonA = styled.div`
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+  `;
+
   const ref = useRef();
 
   return (
@@ -115,12 +121,12 @@ const ParallaxComponent = ({ portfolios }) => {
       <ParallaxLayer
         offset={1}
         speed={1}
-        style={{ backgroundColor: "#8B00FF", opacity: 0.3 }}
+        style={{ backgroundColor: "#000428", opacity: 0.8 }}
       />
       <ParallaxLayer
         offset={2}
         speed={1}
-        style={{ backgroundColor: "#805E73", opacity: 0.3 }}
+        style={{ backgroundColor: "#302b63", opacity: 0.6 }}
       />
 
       <ParallaxLayer
@@ -162,21 +168,33 @@ const ParallaxComponent = ({ portfolios }) => {
             <Content>JIGGLYPOP'S RESUME PAGE</Content>
           </div>
         </Link>
-
+        <Link to={"/resume"}>
+          <div
+            style={{
+              position: "absolute",
+              marginLeft: "35%",
+              marginTop: "37%",
+              zIndex: "20",
+            }}
+          >
+            <IconSet IconObject={IconObject} />
+          </div>
+        </Link>
         <BlinkImage
-          src={Seven}
-          style={{ display: "block", width: "10%", marginLeft: "30%" }}
+          src={Six}
+          style={{ display: "block", width: "900px", marginLeft: "30%" }}
           alt="cloud"
         />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.8 }}>
+      <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.7 }}>
         <div>
           <Yello />
         </div>
+
         <BlinkImage
           src={Seven}
-          style={{ display: "block", width: "10%", marginLeft: "60%" }}
+          style={{ display: "block", width: "300px", marginLeft: "60%" }}
           alt="cloud"
         />
       </ParallaxLayer>
@@ -257,7 +275,7 @@ const ParallaxComponent = ({ portfolios }) => {
 
         <BlinkImage
           src={Six}
-          style={{ position: "absolute", width: "60%", zIndex: "10" }}
+          style={{ position: "absolute", width: "700px", zIndex: "10" }}
           alt="cloud"
         />
       </ParallaxLayer>
@@ -274,7 +292,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "-10%",
+            marginLeft: "-25%",
             marginTop: "2vw",
             zIndex: "6",
           }}
@@ -288,7 +306,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "10%",
+            marginLeft: "15%",
             marginTop: "2vw",
             zIndex: "6",
           }}
@@ -300,7 +318,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginTop: "-5vw",
+            marginTop: "-3vw",
             zIndex: "6",
           }}
         >

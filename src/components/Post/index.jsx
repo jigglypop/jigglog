@@ -229,7 +229,7 @@ export const ImageWrapper = styled.div`
     color: white;
     font-weight: 800;
     text-shadow: 2px 2px 20px white;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -460,7 +460,7 @@ const PostTemplate = ({
           </a>
         </noscript>
         <Pagination
-          count={PAGE_PER_SMALL_SCREEN}
+          count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
           page={page}
           size="small"
           onChange={handleChange}

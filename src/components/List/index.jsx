@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import PostsWrapper from "~/components/Common/PostsWrapper";
 import Card from "~/components/Common/Card";
-import Pagination from "~/components/Common/Pagination";
+// import Pagination from "~/components/Common/Pagination";
 import getPosts from "~/utils/getPosts";
 import getPage from "~/utils/getPage";
-import { PREFIX, CONTENT_PER_PAGE } from "~/constants";
+import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
 import BaseComponent from "../base/base";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "./moon.png";
 import styled from "styled-components";
+import Pagination from "@material-ui/lab/Pagination";
+import "./styled.css";
 
-export const ImageWrapper = styled.div`
+const ImageWrapper = styled.div`
   .jb-wrap {
     width: 60%;
     margin: 10px auto;
@@ -58,13 +60,18 @@ export const ImageWrapper = styled.div`
 `;
 
 const List = ({ data, location }) => {
-  const page = getPage(location);
+  const [page, setPage] = useState(1);
+
+  // const page = getPage(location);
   const allPosts = getPosts(data);
   const postCount = allPosts.length;
   const posts = allPosts.slice(
     (page - 1) * CONTENT_PER_PAGE,
     page * CONTENT_PER_PAGE
   );
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
   return (
     <>
       <div>
@@ -84,6 +91,13 @@ const List = ({ data, location }) => {
             <div className="jb-text">BLOG LIST</div>
           </div>
         </ImageWrapper>
+        <Pagination
+          count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+          page={page}
+          size="large"
+          onChange={handleChange}
+          style={{ listStyle: "none", color: "primary", marginBottom: "100px" }}
+        />
         {posts.map(
           ({
             node: {
@@ -100,7 +114,6 @@ const List = ({ data, location }) => {
           )
         )}
       </PostsWrapper>
-      <Pagination postCount={postCount} location={location} />
     </>
   );
 };

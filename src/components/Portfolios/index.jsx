@@ -7,6 +7,7 @@ import styled from "styled-components";
 import SimpleWrapper from "~/components/Common/SimpleWrapper";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import IconSetBig from "../IconSet/IconSetBig";
+import "./styled.css";
 
 export const Wrapper = styled(SimpleWrapper)`
   padding: 100px 0 0;
@@ -81,12 +82,6 @@ const Portfolios = ({
   };
   return (
     <>
-      <Wrapper>
-        <Helmet>
-          <title>{`${PREFIX}PORTFOLIOS`}</title>
-          <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
-        </Helmet>
-      </Wrapper>
       <Parallax ref={(ref) => (parallax = ref)} pages={portfolios.length}>
         <ParallaxLayer
           offset={0}
@@ -151,24 +146,20 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  marginTop: "150px",
                 }}
                 onClick={() => onClick(index)}
               >
-                <div
-                  style={{
-                    position: "absolute",
-                    marginTop: "10%",
-                    width: "80%",
-                    zIndex: "6",
-                  }}
-                >
-                  <IconSetBig IconObject={iconset} />
-                </div>
+                <IconSetBig IconObject={iconset} />
               </ParallaxLayer>
             </div>
           )
         )}
       </Parallax>
+      <Helmet>
+        <title>{`${PREFIX}PORTFOLIOS`}</title>
+        <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
+      </Helmet>
     </>
   );
 };
