@@ -17,13 +17,12 @@ import {
   Summary,
   Tag,
   SearchedPost,
-  Background,
-  MobileMenus,
-  MobileMenu,
 } from "./styled";
 import moon from "./moon.png";
 
 const MenuTitle = styled.div`
+  font-family: "NanumBarunGothic" !important;
+
   font-size: 18px;
   font-weight: 800;
   text-shadow: 2px 2px 20px white;
@@ -33,6 +32,8 @@ const MenuTitle = styled.div`
 `;
 
 const SmallItem = styled.div`
+  font-family: "NanumBarunGothic" !important;
+
   margin: 10px;
   font-size: 15px;
   font-weight: 800;
@@ -90,31 +91,20 @@ const Gnb = ({
   hasPortfolio,
   categorySet,
 }) => {
-  const [
-    { isMenuOpened, isSubMenuClosed, searchKeyword },
-    dispatch,
-  ] = useReducer(reducer, initialState);
+  const [{ searchKeyword }, dispatch] = useReducer(reducer, initialState);
   const toggleMenu = useCallback(() => {
     dispatch({ type: TOGGLE_MENU });
   }, []);
-  const toggleSubMenu = useCallback(() => {
-    dispatch({ type: TOGGLE_SUB_MENU });
-  }, []);
+  // const toggleSubMenu = useCallback(() => {
+  //   dispatch({ type: TOGGLE_SUB_MENU });
+  // }, []);
   const navigateToPath = useCallback((path) => {
     navigate(path);
   }, []);
   const inputKeyword = useCallback((e) => {
     const searchKeyword = e.target.value;
-
     dispatch({ type: INPUT_KEYWORD, searchKeyword });
   });
-  // useEffect(() => {
-  //   if (isMenuOpened) {
-  //     global.document.body.style.overflow = "hidden";
-  //   } else {
-  //     global.document.body.style.overflow = "visible";
-  //   }
-  // }, [isMenuOpened]);
 
   const filteredPosts =
     searchKeyword.length > 0
@@ -138,98 +128,6 @@ const Gnb = ({
   const isPost = !(isPortfolio || isHome || isResume);
   return (
     <GnbWrapper>
-      {/* <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
-        <Background onClick={toggleMenu} isActive={isMenuOpened} />
-        <MobileMenus>
-          <ul>
-            <ListMenu>
-              <StyledLink to="/" onClick={toggleMenu}>
-                <img src={moon} style={{ width: "45px", height: "45px" }} />
-              </StyledLink>
-            </ListMenu>
-            <ListMenu>
-              <StyledLink
-                to="/pages/1"
-                className={isPost ? "active" : ""}
-                onClick={toggleMenu}
-              >
-                <MenuTitle>POSTS</MenuTitle>
-              </StyledLink>
-
-              <SubMenu>
-                <CategoryMenu
-                  categories={categories}
-                  toggleMenu={toggleMenu}
-                  categorySet={categorySet}
-                />
-              </SubMenu>
-            </ListMenu>
-            {hasPortfolio ? (
-              <ListMenu>
-                <StyledLink
-                  to="/portfolios"
-                  className={isPortfolio ? "active" : ""}
-                  onClick={toggleMenu}
-                >
-                  <MenuTitle>PORTPOLIO</MenuTitle>
-                </StyledLink>
-              </ListMenu>
-            ) : null}
-            <ListMenu>
-              <StyledLink
-                to="/resume"
-                className={isResume ? "active" : ""}
-                onClick={toggleMenu}
-              >
-                <MenuTitle>RESUME</MenuTitle>
-              </StyledLink>
-            </ListMenu>
-            <SearchBarWrapper>
-              <label htmlFor="search">
-                <FaSearch />
-              </label>
-              <SearchBar
-                id="search"
-                type="text"
-                value={searchKeyword}
-                onChange={inputKeyword}
-              />
-            </SearchBarWrapper>
-            <SearchedPosts isEmpty={filteredPosts.length === 0}>
-              {filteredPosts.map(({ path, title, summary, tags }) => (
-                <SearchedPost key={path}>
-                  <Title
-                    onClick={() => {
-                      navigateToPath(path);
-                    }}
-                  >
-                    {title}
-                  </Title>
-                  <Summary
-                    onClick={() => {
-                      navigateToPath(path);
-                    }}
-                  >
-                    {summary}
-                  </Summary>
-                  {tags.length > 0 ? <FaTags /> : null}
-                  {[...new Set(tags)].map((tag) => (
-                    <Tag
-                      key={tag}
-                      onClick={() => {
-                        navigateToPath(`/tags/${tag}/1`);
-                      }}
-                    >
-                      <small>{tag}</small>
-                    </Tag>
-                  ))}
-                </SearchedPost>
-              ))}
-            </SearchedPosts>
-          </ul>
-        </MobileMenus>
-      </MobileMenu> */}
-
       <List>
         <ListMenu>
           <StyledLink to="/">

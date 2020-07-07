@@ -92,6 +92,82 @@ const TagWrapper = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    .Wrapper {
+      width: 40%;
+      margin: 10px auto;
+      position: relative;
+    }
+
+    img {
+      width: 40%;
+      opacity: 0.4;
+      vertical-align: middle;
+      position: relative;
+      left: 50%;
+      margin-top: 10vh;
+      margin-bottom: -100px;
+      transform: translate(-50%, -50%);
+    }
+    .Wrapper-Grid {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 400px;
+      z-index: 10;
+      margin-top: 100px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .Wrapper-text {
+      color: white;
+      font-weight: 800;
+
+      text-shadow: 2px 2px 20px gray;
+      font-size: 10px;
+    }
+    .Wrapper-title {
+      margin-top: -25vh;
+
+      color: white;
+      font-weight: 800;
+      text-shadow: 4px 4px 40px white;
+      font-size: 30px;
+      position: relative;
+      text-align: center;
+      animation: blink 1.2s ease-in-out infinite alternate;
+
+      @keyframes blink {
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .Wrapper-titles {
+      color: white;
+      font-weight: 800;
+      text-shadow: 4px 4px 40px white;
+      font-size: 20px;
+      position: relative;
+      text-align: center;
+      animation: blink 1.2s ease-in-out infinite alternate;
+
+      @keyframes blink {
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
 `;
 const CategorizedList = ({ data, location }) => {
   const page = getPage(location);
