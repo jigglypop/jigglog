@@ -27,6 +27,7 @@ const TagWrapper = styled.div`
     position: relative;
     left: 50%;
     margin-top: 40vh;
+    margin-bottom: -100px;
     transform: translate(-50%, -50%);
   }
   .Wrapper-Grid {
@@ -38,20 +39,22 @@ const TagWrapper = styled.div`
     position: absolute;
     width: 400px;
     z-index: 10;
-    margin-top: 400px;
+    margin-top: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .Wrapper-text {
     color: white;
     font-weight: 800;
+
     text-shadow: 2px 2px 20px gray;
     font-size: 12px;
   }
   .Wrapper-title {
     color: white;
     font-weight: 800;
-    margin-top: -80vh;
+    margin-top: -60vh;
+    margin-bottom: -10vh;
 
     text-shadow: 4px 4px 40px white;
     font-size: 40px;
@@ -71,7 +74,8 @@ const TagWrapper = styled.div`
   .Wrapper-titles {
     color: white;
     font-weight: 800;
-    margin-bottom: 50vh;
+    margin-top: 12vh;
+    margin-bottom: 30vh;
 
     text-shadow: 4px 4px 40px white;
     font-size: 20px;

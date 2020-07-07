@@ -15,8 +15,6 @@ import {
 import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
 import styled from "styled-components";
-import SmallPagination from "~/components/Common/SmallPagination";
-import getPage from "~/utils/getPage";
 import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -103,8 +101,23 @@ const PostContent = styled.section`
     font-size: 24px;
   }
   pre {
-    /* margin: 20px 0 0; */
     font-size: 17px;
+  }
+  th {
+    border: 2px solid black;
+    background: #cfdef3;
+    padding: 10px;
+    font-size: 15px;
+  }
+  tr {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 15px;
+  }
+  td {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 15px;
   }
 `;
 
@@ -346,7 +359,11 @@ const PostTemplate = ({
 
         <Bio style={{ marginBottom: "10vh" }} color={"black"} />
         <hr style={{ marginBottom: "100px" }} />
-        <div id="post-contents" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          id="post-contents"
+          dangerouslySetInnerHTML={{ __html: html }}
+          style={{ marginBottom: "100px" }}
+        />
         <div id="disqus_thread" />
         <noscript>
           Please enable JavaScript to view the &nbsp;

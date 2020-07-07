@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(1)-요구사항 확인/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(5)-인터페이스 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(6)-화면설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(4)-서버 프로그램 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(3)-소프트웨어 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(5)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(4)-정보시스템 구축 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(5)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/백준 알고리즘/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/[파이썬]파이썬을 이용한 이진탐색트리 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/MOVIE STAR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/resume/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/MOVIE STAR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios/LANGUAGE TOGETHER/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(2)-데이터 입출력 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(1)-요구사항 확인/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(3)-통합 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(4)-서버 프로그램 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(9)-소프트웨어 개발 보안 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(11)-응용 SW 기초 기술 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(12)-제품 소프트웨어 패키징/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(8)-SQL 응용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(7)-애플리케이션 테스트 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(5)-인터페이스 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(6)-화면설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/2020 정보처리기사 실기 요점 정리(10)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/portfolios</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/pages/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/pages/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/tags/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/파이썬/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/파이썬/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/이진탐색트리/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/이진탐색트리/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/tags/정보처리기사 실기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/categories/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/categories/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jigglypopownprivateblog.netlify.app/categories/정보처리기사 실기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jigglypopownprivateblog.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
