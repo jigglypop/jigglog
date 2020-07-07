@@ -31,6 +31,10 @@ const LogoImage = styled.img`
   align-items: center;
   width: 30px;
   height: 30px;
+  @media (max-width: 600px) {
+    width: 13px;
+    height: 13px;
+  }
 `;
 
 const IconSetUnder = ({ IconObject }) => {

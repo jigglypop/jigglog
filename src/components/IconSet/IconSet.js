@@ -30,6 +30,10 @@ const LogoImage = styled.img`
   filter: gray;
   width: 30px;
   height: 30px;
+  @media (max-width: 600px) {
+    width: 13px;
+    height: 13px;
+  }
 `;
 
 const IconSet = ({ IconObject }) => {

@@ -1,4 +1,4 @@
-import React, { Component, useRef, useState } from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { TITLE } from "~/constants";
@@ -12,7 +12,6 @@ import Six from "../parallax/06.png";
 import Seven from "../parallax/07.png";
 import "./styled.css";
 import styled from "styled-components";
-import IconSetHome from "../IconSet/IconSetHome";
 
 const BlinkImage = styled.img`
   animation: blink 0.5s ease-in-out infinite alternate;
@@ -43,6 +42,11 @@ const Title = styled.div`
   font-size: 40px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
+  @media (max-width: 600px) {
+    font-size: 20px;
+    font-weight: 800;
+    text-shadow: 4px 4px 40px white;
+  }
 `;
 
 const TitleRed = styled.div`
@@ -53,6 +57,11 @@ const TitleRed = styled.div`
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px #e94057;
+  @media (max-width: 600px) {
+    font-size: 13px;
+    font-weight: 800;
+    text-shadow: 4px 4px 40px white;
+  }
 `;
 
 const Content = styled.div`
@@ -61,6 +70,11 @@ const Content = styled.div`
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
+  @media (max-width: 600px) {
+    font-size: 13px;
+    font-weight: 800;
+    text-shadow: 4px 4px 40px white;
+  }
 `;
 const url = (name, wrap = false) =>
   `${
@@ -140,7 +154,7 @@ const ParallaxComponent = ({ portfolios }) => {
             style={{
               position: "absolute",
               marginLeft: "40%",
-              marginTop: "25%",
+              marginTop: "30%",
               zIndex: "20",
             }}
           >
@@ -149,17 +163,6 @@ const ParallaxComponent = ({ portfolios }) => {
           </div>
         </Link>
 
-        <div
-          style={{
-            position: "absolute",
-            marginLeft: "20%",
-            marginTop: "20%",
-            width: "100%",
-            zIndex: "6",
-          }}
-        >
-          <IconSetHome IconObject={IconObject} />
-        </div>
         <BlinkImage
           src={Seven}
           style={{ display: "block", width: "10%", marginLeft: "30%" }}

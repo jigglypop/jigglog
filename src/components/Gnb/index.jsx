@@ -102,13 +102,13 @@ const Gnb = ({
 
     dispatch({ type: INPUT_KEYWORD, searchKeyword });
   });
-  useEffect(() => {
-    if (isMenuOpened) {
-      global.document.body.style.overflow = "hidden";
-    } else {
-      global.document.body.style.overflow = "visible";
-    }
-  }, [isMenuOpened]);
+  // useEffect(() => {
+  //   if (isMenuOpened) {
+  //     global.document.body.style.overflow = "hidden";
+  //   } else {
+  //     global.document.body.style.overflow = "visible";
+  //   }
+  // }, [isMenuOpened]);
 
   const filteredPosts =
     searchKeyword.length > 0
@@ -132,7 +132,7 @@ const Gnb = ({
   const isPost = !(isPortfolio || isHome || isResume);
   return (
     <GnbWrapper>
-      <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
+      {/* <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
         <Background onClick={toggleMenu} isActive={isMenuOpened} />
         <MobileMenus>
           <ul>
@@ -222,7 +222,7 @@ const Gnb = ({
             </SearchedPosts>
           </ul>
         </MobileMenus>
-      </MobileMenu>
+      </MobileMenu> */}
 
       <List>
         <ListMenu>

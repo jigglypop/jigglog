@@ -21,9 +21,7 @@ import { Link } from "gatsby";
 
 const SocialInformation = styled.div`
   color: "black";
-  position: absolute;
-  margin-top: -1.5%;
-  margin-left: 5%;
+  position: relative;
   -webkit-filter: grayscale(100%);
   filter: gray;
 `;

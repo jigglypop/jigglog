@@ -58,8 +58,10 @@ const PostContent = styled.section`
   line-height: 2em;
   color: black;
   h1 {
-    margin-top: 40px;
-    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    font-size: 40px;
     font-weight: 800;
   }
   h2 {
@@ -103,21 +105,104 @@ const PostContent = styled.section`
   pre {
     font-size: 17px;
   }
+  table {
+    /* background: linear-gradient(45deg, #232526, #414345); */
+    margin: 20px;
+    background: #434343;
+  }
   th {
-    border: 2px solid black;
-    background: #cfdef3;
-    padding: 10px;
-    font-size: 15px;
+    border: 2px solid white;
+    color: white;
+    padding: 20px;
+    font-size: 17px;
   }
   tr {
-    border: 2px solid black;
-    padding: 10px;
-    font-size: 15px;
+    border: 2px solid white;
+    color: white;
+
+    padding: 20px;
+    font-size: 17px;
   }
   td {
-    border: 2px solid black;
-    padding: 10px;
-    font-size: 15px;
+    border: 2px solid white;
+    color: white;
+
+    padding: 20px;
+    font-size: 17px;
+  }
+  @media (max-width: 600px) {
+    padding: 0 10px 10px 10px;
+    line-height: 2em;
+    color: black;
+    h1 {
+      margin-top: 2px;
+      margin-bottom: 2px;
+
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h2 {
+      margin-top: 2px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    h3 {
+      margin-top: 2px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    h4 {
+      margin-top: 2px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    h5 {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    p {
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 100;
+    }
+    li {
+      margin-top: 2px;
+      font-size: 10px;
+      margin-left: 30px;
+      font-weight: 100;
+    }
+    blockquote {
+      line-height: 1.2em;
+      color: #aaa;
+      font-size: 10px;
+    }
+    pre {
+      font-size: 10px;
+    }
+    table {
+      margin: 2px;
+      background: #434343;
+    }
+    th {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
+    tr {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
+    td {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
   }
 `;
 
@@ -151,6 +236,10 @@ export const ImageWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     animation: blink 1.2s ease-in-out infinite alternate;
+    @media (max-width: 600px) {
+      margin-top: -100px;
+      font-size: 20px;
+    }
 
     @keyframes blink {
       50% {
@@ -335,6 +424,7 @@ const PostTemplate = ({
         <title>{`${PREFIX}${title}`}</title>
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
+
       <ImageWrapper>
         <div className="jb-wrap">
           <div className="jb-image">
@@ -352,11 +442,9 @@ const PostTemplate = ({
           <p>{title}</p>
         </div>
       </ImageWrapper>
-
       <PostContent>
         <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
         <hr />
-
         <Bio style={{ marginBottom: "10vh" }} color={"black"} />
         <hr style={{ marginBottom: "100px" }} />
         <div

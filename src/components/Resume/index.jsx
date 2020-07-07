@@ -135,6 +135,81 @@ const PostContent = styled.section`
     font-size: 16px;
     font-weight: 800;
   }
+
+  @media (max-width: 600px) {
+    padding: 0 10px 10px 10px;
+    line-height: 2em;
+    color: white;
+    h1 {
+      margin-top: 4px;
+      margin-bottom: 2px;
+
+      font-size: 22px;
+      font-weight: 800;
+    }
+    h2 {
+      margin-top: 2px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h3 {
+      margin-top: 4px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    h4 {
+      margin-top: 4px;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    h5 {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    p {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 100;
+    }
+    li {
+      margin-top: 2px;
+      font-size: 12px;
+      margin-left: 30px;
+      font-weight: 100;
+    }
+    blockquote {
+      line-height: 1.2em;
+      color: #aaa;
+      font-size: 12px;
+    }
+    pre {
+      font-size: 12px;
+    }
+    table {
+      margin: 2px;
+      background: #434343;
+    }
+    th {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
+    tr {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
+    td {
+      border: 2px solid white;
+      color: white;
+      padding: 2px;
+      font-size: 10px;
+    }
+  }
 `;
 
 const Resume = ({

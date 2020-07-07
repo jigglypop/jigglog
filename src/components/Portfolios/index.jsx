@@ -43,6 +43,9 @@ const TitleBig = styled.div`
   font-size: 50px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 `;
 
 const Content = styled.div`
@@ -50,6 +53,9 @@ const Content = styled.div`
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 const url = (name, wrap = false) =>
   `${

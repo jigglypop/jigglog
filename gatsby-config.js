@@ -41,14 +41,20 @@ module.exports = {
               wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
-          {
-            resolve: "gatsby-remark-prismjs",
-            options: {
-              classPrefix: "hljs-",
-            },
-          },
+          // {
+          //   resolve: "gatsby-remark-prismjs",
+          //   options: {
+          //     classPrefix: "hljs-",
+          //   },
+          // },
+          // "gatsby-remark-copy-linked-files",
+          // "gatsby-remark-smartypants",
+
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
+          "gatsby-remark-external-links",
         ],
       },
     },
@@ -82,25 +88,21 @@ module.exports = {
         logo: "./moon.png",
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: { plugins: [`gatsby-remark-prismjs`] },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-168239169-1",
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-168239169-1",
+    //     head: false,
+    //     anonymize: true,
+    //     respectDNT: true,
+    //     exclude: ["/preview/**", "/do-not-track/me/too/"],
+    //     optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+    //     experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+    //     variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+    //     sampleRate: 5,
+    //     siteSpeedSampleRate: 10,
+    //     cookieDomain: "example.com",
+    //   },
+    // },
   ],
 };

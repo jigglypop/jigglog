@@ -164,12 +164,6 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 - Swap in : 프로세스가 주기억장치에 적재 되는 상태
 - Swap out : 프로세스가 주기억장치에서 해제 되는 상태
 
-
-
-
-
-
-
 # 2. 데이터베이스 기초 활용하기
 
 ---
@@ -185,43 +179,39 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 - 운영 데이터 : 조직의 고유한 업무를 수행하는 데 존재 가치가 확실하고 없어선 안될 반드시 필요한 데이터
 - 공용 데이터 : 여러 응용 시스템들이 공동으로 소유하고 유지하는 데이터
 
- 
-
 #### 2) 데이터베이스 종류
 
-* 파일 시스템:
-  * ISAM
-  * VSAM
+- 파일 시스템:
+  - ISAM
+  - VSAM
 
-- 계층형 데이터베이스 관리시스템(HDBMS)
+* 계층형 데이터베이스 관리시스템(HDBMS)
 
   - tree 구조
   - Owner/Member (상/하위) 구조
   - 1:N만 존재
   - IMS, System2000 등
 
-- 망형 데이터베이스 관리 시스템(NDBMS)
+* 망형 데이터베이스 관리 시스템(NDBMS)
 
   - 그래프 이용
   - Owner/Member 구조
   - 1:1 , 1:N N:M 모두 가능
   - IDS, TOTAL, IDMS 등
 
-- 관계형 데이터베이스(RDBMS)
+* 관계형 데이터베이스(RDBMS)
 
   - 위의 두 형태를 단순화 시킨것
   - 테이블 사용
   - Oracle, SQL Server, MySQL, Maria DB 등
 
-- 비관계형(NoSQL)
+* 비관계형(NoSQL)
 
   - 데이터간 관계를 정의하지 않고 비구조적인 데이터 저장용
   - 수평적 확장 및 분산 저장이 가능
   - Key-Value, MongoDB 등
 
-  
-
- ### (2) DBMS(DataBase Management System)
+### (2) DBMS(DataBase Management System)
 
 #### 1) DBMS개념
 
@@ -237,37 +227,31 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 
 #### 2) DBMS 유형
 
-* 키-값 DBMS
-  * 키 기반 GET/PUT/DELETE 제공. 메모리 기반에서 성능 우선 시스템 및 빅데이터 처리 가능
-  * Unique한 키에 하나의 값을 가지고 있는 형태
-  * Redis, DynamoDB
-* 칼럼 기반 데이터 저장
-  * Key안에 (Column, value) 조합으로 된 여러개의 필드를 갖는 DBMS
-  * 테이블 기반, 조인 미지원, 컬럼 기반으로 구글의 bigtable기반으로 구현
-  * HBase,Cassandra
-* 문서 저장 DBMS 
-  * 값의 데이터 타입이 문서라는 타입을 사용하는 DBMS
-  * 문서 타입은 XML, JSON과 같이 구조화된 데이터 타입으로, 복잡한 계층 구조 표현 가능
-  * MongoDB, Couchbase
-* 그래프 DBMS
-  * 시멘틱 웹과 온톨로지 분야에서 활용되는 그래프로 데이터를 표현하는 DBMS
-  * 노드와 엣지로 특징되는 요소 특화
-  * 노드 간 관계를 구조화하여 저장
-  *  Neo4j, AllegroGraph
+- 키-값 DBMS
+  - 키 기반 GET/PUT/DELETE 제공. 메모리 기반에서 성능 우선 시스템 및 빅데이터 처리 가능
+  - Unique한 키에 하나의 값을 가지고 있는 형태
+  - Redis, DynamoDB
+- 칼럼 기반 데이터 저장
+  - Key안에 (Column, value) 조합으로 된 여러개의 필드를 갖는 DBMS
+  - 테이블 기반, 조인 미지원, 컬럼 기반으로 구글의 bigtable기반으로 구현
+  - HBase,Cassandra
+- 문서 저장 DBMS
+  - 값의 데이터 타입이 문서라는 타입을 사용하는 DBMS
+  - 문서 타입은 XML, JSON과 같이 구조화된 데이터 타입으로, 복잡한 계층 구조 표현 가능
+  - MongoDB, Couchbase
+- 그래프 DBMS
+  - 시멘틱 웹과 온톨로지 분야에서 활용되는 그래프로 데이터를 표현하는 DBMS
+  - 노드와 엣지로 특징되는 요소 특화
+  - 노드 간 관계를 구조화하여 저장
+  - Neo4j, AllegroGraph
 
 #### 3) DBMS 특징
 
-* 데이터 무결성
-* 데이터 일관성
-* 데이터 회복성
-* 데이터 보안성
-* 데이터 효율성
-
-
-
-
-
- 
+- 데이터 무결성
+- 데이터 일관성
+- 데이터 회복성
+- 데이터 보안성
+- 데이터 효율성
 
 ## ER(Entity Relationship) 모델
 
@@ -275,17 +259,9 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 
 개념적 데이터 모델의 가장 대표로 76년 피터 첸에 의해 개발
 
- 
-
 #### ER-Diagram
 
-
-
-<img src="https://k.kakaocdn.net/dn/bcBdzi/btqDVWfIUfK/rOnlWqZV2OxYbnCa53NQIK/img.png" alt="img" style="zoom:33%;" />*
-
-
-
-
+<img src="https://k.kakaocdn.net/dn/bcBdzi/btqDVWfIUfK/rOnlWqZV2OxYbnCa53NQIK/img.png" alt="img" style="zoom:33%;" />\*
 
 #### 개체 및 개체 타입
 
@@ -309,8 +285,6 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 - A,B 개체가 1:N 이면 A의 기본키를 B의 외래키로
 - A,B 개체가 N:M 이면 A,B 모두의 기본키를 포함한 별도의 릴레이션(교차 릴레이션, 교차 엔티티)을 표현한다
 
- 
-
 #### 키의 유일성과 최소성
 
 - 유일성 : 하나의 키값으로 하나의 튜플만을 유일하게 실별
@@ -320,9 +294,6 @@ Windows라는 프로그램을 설치해서 GUI 방식으로 운영가능
 
 - 슈퍼키 : 속성들의 집합으로 구성된 키, 최소성은 만족하지 못하지만 유일성은 만족
 - 후보키 : 유일성, 최소성 모두 만족
-- 기본키 : 특별히 선정된 키 
+- 기본키 : 특별히 선정된 키
 - 대체키 : 후보키 중에서 선정된 기본키를 제외한 나머지 후보키
 - 외래키 : 다른 릴레이션의 기본키를 참조하는 속성/속성 집합
-
-
-
