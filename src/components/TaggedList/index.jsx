@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import PostsWrapper from "~/components/Common/PostsWrapper";
 import Card from "~/components/Common/Card";
-// import Pagination from "~/components/Common/Pagination";
 import getPosts from "~/utils/getPosts";
 import getPage from "~/utils/getPage";
 import { CONTENT_PER_PAGE } from "~/constants";

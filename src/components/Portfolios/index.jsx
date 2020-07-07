@@ -132,7 +132,7 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "5%",
+                  marginTop: "13%",
                 }}
                 onClick={() => onClick(index)}
               >

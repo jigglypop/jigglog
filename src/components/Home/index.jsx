@@ -306,7 +306,7 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "15%",
+            marginLeft: "20%",
             marginTop: "2vw",
             zIndex: "6",
           }}
