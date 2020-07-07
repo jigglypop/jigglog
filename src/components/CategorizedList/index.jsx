@@ -125,17 +125,15 @@ const TagWrapper = styled.div`
     .Wrapper-text {
       color: white;
       font-weight: 800;
-
       text-shadow: 2px 2px 20px gray;
-      font-size: 10px;
+      font-size: 8px;
     }
     .Wrapper-title {
-      margin-top: -25vh;
-
+      margin-top: -12vh;
       color: white;
       font-weight: 800;
       text-shadow: 4px 4px 40px white;
-      font-size: 30px;
+      font-size: 20px;
       position: relative;
       text-align: center;
       animation: blink 1.2s ease-in-out infinite alternate;
@@ -153,7 +151,9 @@ const TagWrapper = styled.div`
       color: white;
       font-weight: 800;
       text-shadow: 4px 4px 40px white;
-      font-size: 20px;
+      font-size: 15px;
+      margin-bottom: 20vh;
+
       position: relative;
       text-align: center;
       animation: blink 1.2s ease-in-out infinite alternate;
