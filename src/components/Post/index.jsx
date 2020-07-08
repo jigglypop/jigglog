@@ -65,7 +65,7 @@ const PostContent = styled.section`
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
   font-family: "NanumBarunGothic" !important; */
-  /* padding: 0 100px 100px 100px; */
+  padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
   h1 {
@@ -275,6 +275,9 @@ const Visible = styled.div`
   display: block;
   align-items: center;
   text-align: center;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const VisibleTable = styled.div`
@@ -283,6 +286,9 @@ const VisibleTable = styled.div`
   top: 20vh;
   align-items: center;
   text-align: center;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const ComponentInPost = styled.div`
@@ -513,7 +519,14 @@ const PostTemplate = ({
               </div>
             </ImageWrapper>
           </Grid>
-          <Grid item lg={2} md={2} sm={false} xs={false}>
+          <Grid
+            item
+            lg={2}
+            md={2}
+            sm={false}
+            xs={false}
+            style={{ borderRight: "2px solid gray" }}
+          >
             <Visible>
               <Bio color={"black"} />
             </Visible>

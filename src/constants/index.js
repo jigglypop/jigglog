@@ -11,6 +11,7 @@ exports.RESUME = "resume";
 exports.NAME = "jigglog";
 exports.TITLE = "jigglog";
 exports.PREFIX = "jigglog | ";
+exports.MYNAME = "염동환";
 exports.DESCRIPTION = "새로운 개발을 좋아하는 개발자";
 exports.AUTHOR = "JIGGLYPOP";
 exports.EMAIL = "ydh2244@gmail.com";

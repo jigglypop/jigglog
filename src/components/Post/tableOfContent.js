@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "rebass/styled-components";
+import "./styled.css";
 
 export default function TableOfContents({ items, currentHeaderUrl }) {
   if (!currentHeaderUrl) {
@@ -22,6 +23,7 @@ export default function TableOfContents({ items, currentHeaderUrl }) {
         display: "block",
         marginRight: "20px",
         fontSize: "10px",
+        borderLeft: "7px solid gray",
       }}
     >
       <Box
@@ -29,10 +31,14 @@ export default function TableOfContents({ items, currentHeaderUrl }) {
         sx={{
           "& ul": {
             listStyle: "none",
+            color: "gray",
+
             marginBottom: "0px",
           },
           "& ul > li": {
             lineHeight: "1.5rem",
+            color: "gray",
+
             overflow: "hidden",
           },
           [`& ul > li a[href="${tempHeader.join("-")}"]`]: {
