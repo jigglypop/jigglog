@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import { render } from "react-dom";
 import PropTypes from "prop-types";
 
@@ -17,15 +17,21 @@ import "./styled.css";
 import styled from "styled-components";
 import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
+import TableOfContents from "./tableOfContent";
+import Grid from "@material-ui/core/Grid";
 
-const PostWrapper = styled.section`
+const PostWrapper = styled.div`
+  /* @font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../../fonts/NanumBarunGothic.ttf");
+  }
+  font-family: "NanumBarunGothic" !important; */
   margin: auto;
   padding: 10px 0 0;
-  max-width: 1200px;
+  margin: 0 20px 20px 20px;
   font-size: 16px;
   background-color: white;
   border-radius: 10px;
-  /* padding: 50px; */
   @media (max-width: 414px) {
     padding: 70px 16px 0;
   }
@@ -46,15 +52,20 @@ const PostWrapper = styled.section`
     margin: 1em 0;
     font-size: 14px;
   }
+  a {
+    font-size: 12px;
+    font-weight: 800;
+    color: gray;
+  }
 `;
 
 const PostContent = styled.section`
-  @font-face {
+  /* @font-face {
     font-family: "NanumBarunGothic";
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
-  font-family: "NanumBarunGothic" !important;
-  padding: 0 100px 100px 100px;
+  font-family: "NanumBarunGothic" !important; */
+  /* padding: 0 100px 100px 100px; */
   line-height: 2em;
   color: black;
   h1 {
@@ -87,26 +98,25 @@ const PostContent = styled.section`
 
   p {
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 14px;
     margin-left: 10px;
     font-weight: 100;
   }
   li {
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 14px;
     margin-left: 30px;
     font-weight: 100;
   }
   blockquote {
     line-height: 1.2em;
     color: #aaa;
-    font-size: 24px;
+    font-size: 14px;
   }
   pre {
-    font-size: 17px;
+    font-size: 14px;
   }
   table {
-    /* background: linear-gradient(45deg, #232526, #414345); */
     margin: 20px;
     background: #434343;
   }
@@ -114,23 +124,26 @@ const PostContent = styled.section`
     border: 2px solid white;
     color: white;
     padding: 20px;
-    font-size: 17px;
+    font-size: 14px;
   }
   tr {
     border: 2px solid white;
     color: white;
 
     padding: 20px;
-    font-size: 17px;
+    font-size: 14px;
   }
   td {
     border: 2px solid white;
     color: white;
 
     padding: 20px;
-    font-size: 17px;
+    font-size: 14px;
   }
-  @media (max-width: 600px) {
+  span {
+    font-size: 14px;
+  }
+  @media (max-width: 1000px) {
     padding: 0 10px 10px 10px;
     line-height: 2em;
     color: black;
@@ -203,18 +216,21 @@ const PostContent = styled.section`
       padding: 2px;
       font-size: 10px;
     }
+    span {
+      font-size: 10px;
+    }
   }
 `;
 
 export const ImageWrapper = styled.div`
-  @font-face {
+  /* @font-face {
     font-family: "NanumBarunGothic";
-    src: url("../../fonts/NanumBarunGothic.ttf");
+    src: url("../fonts/NanumBarunGothic.ttf");
   }
-  font-family: "NanumBarunGothic" !important;
+  font-family: "NanumBarunGothic" !important; */
 
   .jb-wrap {
-    max-height: 500px;
+    max-height: 400px;
     width: 100%;
     margin: 10px auto;
     position: relative;
@@ -235,9 +251,10 @@ export const ImageWrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: -100px;
+
     animation: blink 1.2s ease-in-out infinite alternate;
     @media (max-width: 600px) {
-      margin-top: -100px;
       font-size: 20px;
     }
 
@@ -251,6 +268,23 @@ export const ImageWrapper = styled.div`
     }
   }
 `;
+
+const Visible = styled.div`
+  position: sticky;
+  top: 70px;
+  display: block;
+  align-items: center;
+  text-align: center;
+`;
+
+const VisibleTable = styled.div`
+  position: sticky;
+  display: block;
+  top: 20vh;
+  align-items: center;
+  text-align: center;
+`;
+
 const ComponentInPost = styled.div`
   position: relative;
   margin: 1em 0 1em;
@@ -315,6 +349,7 @@ const PostTemplate = ({
   data: {
     post: {
       html,
+      tableOfContents,
       frontmatter: { title, date, images = [], components = [] },
     },
     posts,
@@ -418,73 +453,127 @@ const PostTemplate = ({
   const handleChange = (event, value) => {
     setPage(value);
   };
+
+  // 여기
+  const [currentHeaderUrl, setCurrentHeaderUrl] = useState(null);
+  const tocItems = tableOfContents;
+
+  const handleScroll = () => {
+    let aboveHeaderUrl;
+    const currentOffsetY = window.pageYOffset;
+    const headerElements = document.querySelectorAll(".anchor-header");
+    for (const elem of headerElements) {
+      const { top } = elem.getBoundingClientRect();
+      const elemTop = top + currentOffsetY;
+      const isLast = elem === headerElements[headerElements.length - 1];
+      if (currentOffsetY < elemTop - 300) {
+        aboveHeaderUrl &&
+          setCurrentHeaderUrl(aboveHeaderUrl.split(location.origin)[1]);
+        !aboveHeaderUrl && setCurrentHeaderUrl(null);
+      } else {
+        isLast && setCurrentHeaderUrl(elem.href.split(location.origin)[1]);
+        !isLast && (aboveHeaderUrl = elem.href);
+      }
+    }
+  };
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
-    <PostWrapper>
+    <>
       <Helmet>
         <title>{`${PREFIX}${title}`}</title>
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
+      <PostWrapper>
+        <Grid container>
+          <Grid item xs={12}>
+            <ImageWrapper>
+              <div className="jb-wrap">
+                <div className="jb-image">
+                  {image && (
+                    <img
+                      src={
+                        image.includes("//")
+                          ? image
+                          : require(`~/resources/${image}`)
+                      }
+                      alt=""
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="jb-text">
+                <p>{title}</p>
+              </div>
+            </ImageWrapper>
+          </Grid>
+          <Grid item lg={2} md={2} sm={false} xs={false}>
+            <Visible>
+              <Bio color={"black"} />
+            </Visible>
+          </Grid>
 
-      <ImageWrapper>
-        <div className="jb-wrap">
-          <div className="jb-image">
-            {image && (
-              <img
-                src={
-                  image.includes("//") ? image : require(`~/resources/${image}`)
-                }
-                alt=""
+          <Grid item lg={8} md={8} sm={12} xs={12}>
+            <PostContent>
+              <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
+              <hr style={{ marginBottom: "100px" }} />
+
+              <div
+                id="post-contents"
+                dangerouslySetInnerHTML={{ __html: html }}
+                style={{ marginBottom: "100px" }}
               />
-            )}
-          </div>
-        </div>
-        <div className="jb-text">
-          <p>{title}</p>
-        </div>
-      </ImageWrapper>
-      <PostContent>
-        <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
-        <hr />
-        <Bio style={{ marginBottom: "10vh" }} color={"black"} />
-        <hr style={{ marginBottom: "100px" }} />
-        <div
-          id="post-contents"
-          dangerouslySetInnerHTML={{ __html: html }}
-          style={{ marginBottom: "100px" }}
-        />
-        <div id="disqus_thread" />
-        <noscript>
-          Please enable JavaScript to view the &nbsp;
-          <a href="https://disqus.com/?ref_noscript">
-            comments powered by Disqus.
-          </a>
-        </noscript>
-        <Pagination
-          count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
-          page={page}
-          size="small"
-          onChange={handleChange}
-          style={{ listStyle: "none" }}
-        />
-        <hr />
+              <div id="disqus_thread" />
+              <noscript>
+                Please enable JavaScript to view the &nbsp;
+                <a href="https://disqus.com/?ref_noscript">
+                  comments powered by Disqus.
+                </a>
+              </noscript>
+              <Pagination
+                count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
+                page={page}
+                size="small"
+                onChange={handleChange}
+                style={{ listStyle: "none" }}
+              />
+              <hr />
 
-        {postlist.map(
-          ({
-            node: {
-              frontmatter: { images, tags, path, ...otherProps },
-            },
-          }) => (
-            <SmallCard
-              key={path}
-              path={path}
-              images={images}
-              tags={tags}
-              {...otherProps}
-            />
-          )
-        )}
-      </PostContent>
-    </PostWrapper>
+              {postlist.map(
+                ({
+                  node: {
+                    frontmatter: { images, tags, path, ...otherProps },
+                  },
+                }) => (
+                  <SmallCard
+                    key={path}
+                    path={path}
+                    images={images}
+                    tags={tags}
+                    {...otherProps}
+                  />
+                )
+              )}
+            </PostContent>
+          </Grid>
+
+          <Grid item lg={2} md={2} sm={false} xs={false}>
+            <VisibleTable>
+              <TableOfContents
+                items={tocItems}
+                currentHeaderUrl={currentHeaderUrl}
+              />
+            </VisibleTable>
+          </Grid>
+        </Grid>
+      </PostWrapper>
+    </>
   );
 };
 

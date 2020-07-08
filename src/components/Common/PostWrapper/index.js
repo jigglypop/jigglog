@@ -3,7 +3,6 @@ import styled from "styled-components";
 const PostWrapper = styled.div`
   margin: auto;
   padding: 120px 0 0;
-  max-width: 1000px;
   font-size: 16px;
   background-color: white;
   padding: 50px;

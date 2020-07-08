@@ -48,6 +48,7 @@
     "react-toggle": "^4.0.2",
     "react-truncate": "^2.4.0",
     "react-twitter-widgets": "^1.7.1",
+    "rebass": "4.0.7",
     "styled-components": "5.1.0"
   },
   "devDependencies": {

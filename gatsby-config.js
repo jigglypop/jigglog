@@ -41,16 +41,15 @@ module.exports = {
               wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
-          // {
-          //   resolve: "gatsby-remark-prismjs",
-          //   options: {
-          //     classPrefix: "hljs-",
-          //   },
-          // },
-          // "gatsby-remark-copy-linked-files",
-          // "gatsby-remark-smartypants",
-
-          "gatsby-remark-autolink-headers",
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `anchor-header`,
+              maintainCase: false,
+              removeAccents: true,
+              elements: ["h1", "h2"],
+            },
+          },
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",

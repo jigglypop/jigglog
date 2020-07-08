@@ -23,6 +23,7 @@ export const pageQuery = graphql`
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
+      tableOfContents
       frontmatter {
         title
         path

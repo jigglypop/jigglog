@@ -30,26 +30,53 @@ const Wrapper = styled.div`
   button {
     float: right;
   }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Bio = ({ color }) => (
   <Wrapper>
     <Grid container>
-      <Grid>
+      <Grid item xs={12}>
         <Link to={"/resume"}>
-          <Avatar src={PROFILE} style={{ width: "60px", height: "60px" }} />
+          <img
+            src={github}
+            style={{
+              marginTop: "100px",
+              width: "120px",
+              height: "120px",
+            }}
+          />
         </Link>
       </Grid>
-      <Grid
-        style={{
-          color: color,
-          fontSize: "16px",
-          marginTop: "-3px",
-          marginLeft: "10px",
-          fontWeight: 800,
-        }}
-      >
-        {AUTHOR}
+      <Grid item xs={12}>
+        <p
+          style={{
+            color: color,
+            margin: "10px",
+            fontSize: "20px",
+            textShadow: "2px 2px 20px white",
+            fontWeight: 800,
+          }}
+        >
+          {AUTHOR}
+        </p>
+      </Grid>
+      <Grid item xs={12}>
+        <p
+          style={{
+            color: color,
+            fontSize: "10px",
+            margin: "10px",
+            fontWeight: 800,
+          }}
+        >
+          {DESCRIPTION}
+        </p>
+      </Grid>
+
+      <Grid item xs={12}>
         <SocialInformation>
           {GITHUB_ID ? (
             <a
@@ -57,7 +84,7 @@ const Bio = ({ color }) => (
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={github} style={{ width: "20px", height: "20px" }} />
+              <img src={github} style={{ width: "30px", height: "30px" }} />
             </a>
           ) : null}
           {FACEBOOK_ID ? (
@@ -66,7 +93,7 @@ const Bio = ({ color }) => (
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={facebook} style={{ width: "20px", height: "20px" }} />
+              <img src={facebook} style={{ width: "30px", height: "30px" }} />
             </a>
           ) : null}
           {INSTARGRAM_ID ? (
@@ -75,21 +102,10 @@ const Bio = ({ color }) => (
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={instargram} style={{ width: "20px", height: "20px" }} />
+              <img src={instargram} style={{ width: "30px", height: "30px" }} />
             </a>
           ) : null}
         </SocialInformation>
-        <p
-          style={{
-            color: color,
-            fontSize: "13px",
-            marginTop: "-3px",
-            marginLeft: "-2px",
-            fontWeight: 800,
-          }}
-        >
-          {DESCRIPTION}
-        </p>
       </Grid>
     </Grid>
   </Wrapper>
