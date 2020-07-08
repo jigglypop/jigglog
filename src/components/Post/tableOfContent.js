@@ -23,7 +23,7 @@ export default function TableOfContents({ items, currentHeaderUrl }) {
         display: "block",
         marginRight: "20px",
         fontSize: "10px",
-        borderLeft: "7px solid gray",
+        borderLeft: "7px solid black",
       }}
     >
       <Box
@@ -31,20 +31,23 @@ export default function TableOfContents({ items, currentHeaderUrl }) {
         sx={{
           "& ul": {
             listStyle: "none",
-            color: "gray",
+            color: "gray !important",
 
             marginBottom: "0px",
           },
           "& ul > li": {
             lineHeight: "1.5rem",
-            color: "gray",
+            color: "gray !important",
 
             overflow: "hidden",
           },
           [`& ul > li a[href="${tempHeader.join("-")}"]`]: {
             fontSize: "14px",
-            color: "black",
+            color: "black !important",
             fontWeight: "800",
+          },
+          "& a": {
+            color: "gray !important",
           },
         }}
       />
