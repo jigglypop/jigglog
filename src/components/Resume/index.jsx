@@ -78,7 +78,7 @@ const Button = styled.button`
   outline: 0;
 `;
 const NameTitle = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   font-size: 50px;
   text-shadow: 3px 3px 30px white;
   @media (max-width: 600px) {
@@ -86,7 +86,7 @@ const NameTitle = styled.div`
   }
 `;
 const NameSmallTitle = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   margin-top: 20px;
   font-size: 30px;
   text-shadow: 3px 3px 30px white;
@@ -95,7 +95,7 @@ const NameSmallTitle = styled.div`
   }
 `;
 const PrintTitle = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   font-size: 15px;
   font-weight: 800;
 
@@ -103,7 +103,7 @@ const PrintTitle = styled.div`
   text-shadow: 3px 3px 30px white;
 `;
 const PostContent = styled.section`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   padding: 1em 1em 4em;
   line-height: 2em;
   font-weight: 800;

@@ -21,7 +21,7 @@ const Wrapper = styled(SimpleWrapper)`
 `;
 
 const Title = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   color: white;
   animation: blink 1.2s ease-in-out infinite alternate;
   text-align: center;
@@ -46,10 +46,11 @@ const Title = styled.div`
 `;
 
 const PortfolioDescription = styled.section`
+  /* font-family: "NanumBarunGothic" !important; */
+
   float: left;
   padding: 0 0 0 36px;
   width: 50%;
-  font-family: "NanumBarunGothic" !important;
   margin-bottom: 200px;
   /* margin-left: 20px; */
   @media (max-width: 600px) {

@@ -30,7 +30,7 @@ const BlinkImage = styled.img`
 `;
 
 const Title = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
   animation: blink 1.2s ease-in-out infinite alternate;
 
   @keyframes blink {
@@ -53,7 +53,7 @@ const Title = styled.div`
 `;
 
 const TitleRed = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
 
   color: #e94057;
   margin-top: 10px;
@@ -68,7 +68,7 @@ const TitleRed = styled.div`
 `;
 
 const Content = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
 
   font-size: 20px;
   font-weight: 800;
