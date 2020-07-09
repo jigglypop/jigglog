@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
-import { FaCaretDown, FaHome } from "react-icons/fa";
 import { PRIMARY_COLOR } from "~/components/Common/constants";
 
 export const GnbWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Lato");
+  font-family: "NanumBarunGothicSubset" !important;
 
   position: fixed;
   width: 100%;
@@ -64,10 +64,6 @@ export const ListMenu = styled.li`
   small {
     font-size: 10px;
   }
-`;
-
-export const Home = styled(FaHome)`
-  font-size: 36px;
 `;
 
 export const StyledLink = styled(Link)`

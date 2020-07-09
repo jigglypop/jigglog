@@ -22,7 +22,7 @@ import {
 import moon from "./moon.webp";
 
 const MenuTitle = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
 
   font-size: 18px;
   font-weight: 800;
@@ -33,7 +33,7 @@ const MenuTitle = styled.div`
 `;
 
 const SmallItem = styled.div`
-  font-family: "NanumBarunGothic" !important;
+  /* font-family: "NanumBarunGothic" !important; */
 
   margin: 10px;
   font-size: 15px;

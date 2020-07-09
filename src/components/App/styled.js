@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     src: url("../../fonts/NanumBarunGothic.ttf");
   }
   font-family: "NanumBarunGothic" !important; */
+
   color: ${({ theme: { color } }) => color};
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
