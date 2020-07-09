@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import Circle from "./Circle";
-import Yello from "./yello.jpg";
+import Yello from "./yello.webp";
 
 const MoonBackgroundAnimation = keyframes`
   from {transform: rotate(0deg);}
