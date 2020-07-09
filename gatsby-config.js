@@ -47,7 +47,7 @@ module.exports = {
               className: `anchor-header`,
               maintainCase: false,
               removeAccents: true,
-              elements: ["h1", "h2"],
+              elements: ["h1", "h2", "h3"],
             },
           },
           "gatsby-remark-prismjs",

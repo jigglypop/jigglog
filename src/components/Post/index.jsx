@@ -21,11 +21,6 @@ import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
 
 const PostWrapper = styled.div`
-  /* @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../../fonts/NanumBarunGothic.ttf");
-  }
-  font-family: "NanumBarunGothic" !important; */
   margin: auto;
   padding: 10px 0 0;
   margin: 0 20px 20px 20px;
@@ -60,18 +55,12 @@ const PostWrapper = styled.div`
 `;
 
 const PostContent = styled.section`
-  /* @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../../fonts/NanumBarunGothic.ttf");
-  }
-  font-family: "NanumBarunGothic" !important; */
   padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
   h1 {
     margin-top: 50px;
     margin-bottom: 50px;
-
     font-size: 40px;
     font-weight: 800;
   }
@@ -85,33 +74,27 @@ const PostContent = styled.section`
     font-size: 24px;
     font-weight: 800;
   }
-  h4 {
+  h4,
+  h5 {
     margin-top: 40px;
     font-weight: 800;
     font-size: 21px;
   }
-  h5 {
-    margin-top: 40px;
-    font-size: 18px;
-    font-weight: 800;
-  }
-
   p {
     margin-top: 10px;
     font-size: 18px;
-    margin-left: 10px;
-    font-weight: 100;
-  }
-  li {
-    margin-top: 10px;
-    font-size: 18px;
-    margin-left: 30px;
     font-weight: 100;
   }
   strong {
-    margin-top: 10px;
+    margin-top: 100px;
     font-size: 18px;
     font-weight: 800;
+  }
+  li {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 100;
   }
   blockquote {
     line-height: 1.2em;
@@ -119,40 +102,23 @@ const PostContent = styled.section`
     margin-top: 18px;
     font-size: 18px;
   }
-  pre {
+  pre,
+  span {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 14px;
   }
   table {
     margin: 20px;
-    background: #434343;
+    background: #f9f9f9;
   }
-  th {
-    border: 2px solid white;
-    color: white;
-    padding: 20px;
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  tr {
-    border: 2px solid white;
-    color: white;
-
-    padding: 20px;
-    margin-top: 10px;
-    font-size: 18px;
-  }
+  th,
+  tr,
   td {
-    border: 2px solid white;
-    color: white;
-
-    padding: 20px;
+    border: 2px solid gray;
+    color: black;
+    padding: 10px;
     margin-top: 10px;
-    font-size: 18px;
-  }
-  span {
-    margin-top: 10px;
-    font-size: 18px;
+    font-size: 14px;
   }
   @media (max-width: 1000px) {
     padding: 0 10px 10px 10px;
@@ -161,91 +127,42 @@ const PostContent = styled.section`
     h1 {
       margin-top: 2px;
       margin-bottom: 2px;
-
       font-size: 20px;
-      font-weight: 800;
     }
     h2 {
       margin-top: 2px;
       font-size: 18px;
-      font-weight: 800;
     }
     h3 {
       margin-top: 2px;
       font-size: 16px;
-      font-weight: 800;
     }
-    h4 {
-      font-weight: 800;
+    h4,
+    h5,
+    p,
+    blockquote,
+    pre {
       margin-top: 5px;
       font-size: 14px;
-    }
-    h5 {
-      margin-top: 5px;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    p {
-      margin-top: 5px;
-      font-size: 14px;
-      font-weight: 100;
     }
     li {
       margin-top: 5px;
       font-size: 14px;
       margin-left: 30px;
-      font-weight: 100;
-    }
-    blockquote {
-      line-height: 1.2em;
-      color: #aaa;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-    pre {
-      margin-top: 5px;
-      font-size: 14px;
     }
     table {
-      margin: 2px;
-      background: #434343;
+      margin: 20px;
     }
-    th {
-      border: 2px solid white;
-      color: white;
-      padding: 2px;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-    tr {
-      border: 2px solid white;
-      color: white;
-      padding: 2px;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-    td {
-      border: 2px solid white;
-      color: white;
-      padding: 2px;
-      margin-top: 5px;
-      font-size: 14px;
-    }
+    th,
+    tr,
+    td,
     span {
-      margin-top: 5px;
       font-size: 14px;
     }
   }
 `;
 
-export const ImageWrapper = styled.div`
-  /* @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../fonts/NanumBarunGothic.ttf");
-  }
-  font-family: "NanumBarunGothic" !important; */
-
+const ImageWrapper = styled.div`
   .jb-wrap {
     max-height: 400px;
     width: 100%;

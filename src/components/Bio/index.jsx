@@ -40,12 +40,15 @@ const CircleWrapper = styled.div`
 const Bio = ({ color }) => (
   <div>
     <Grid container>
+      <Grid item xs={12}>
+        <hr />
+      </Grid>
       <Grid item xs={6}>
         <Link to={"/resume"}>
           <img
             src={github}
             style={{
-              marginTop: "100px",
+              // marginTop: "100px",
               width: "50px",
               height: "50px",
             }}
@@ -56,7 +59,7 @@ const Bio = ({ color }) => (
         item
         xs={6}
         style={{
-          marginTop: "100px",
+          // marginTop: "100px",
           marginLeft: "-3vw",
         }}
       >
@@ -83,24 +86,27 @@ const Bio = ({ color }) => (
           {MYNAME}
         </p>
       </Grid>
+
       <Grid
         item
         xs={12}
         style={{
           marginTop: "10px",
-          marginLeft: "-10px",
         }}
       >
         <p
           style={{
             color: color,
-            fontSize: "10px",
+            fontSize: "13px",
             fontWeight: 800,
           }}
         >
+          <hr />
+
           {DESCRIPTION}
         </p>
       </Grid>
+
       <Grid item xs={4}>
         {GITHUB_ID ? (
           <a
