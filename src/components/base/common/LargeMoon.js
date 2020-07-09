@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import Circle from "./Circle";
-import moon from "./moon.jpg";
+import moon from "./moon.webp";
 // import moon from "./moon.png";
 
 const MoonBackgroundAnimation = keyframes`

@@ -2,6 +2,7 @@ import React, { useReducer, useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, navigate } from "gatsby";
 import styled, { css } from "styled-components";
+import { RiMoonClearLine } from "react-icons/ri";
 
 import { FaSearch, FaTags } from "react-icons/fa";
 import {
@@ -132,7 +133,13 @@ const Gnb = ({
       <List>
         <ListMenu>
           <StyledLink to="/">
-            <img src={moon} style={{ width: "45px", height: "45px" }} />
+            {/* <img src={moon} style={{ width: "45px", height: "45px" }} /> */}
+            <RiMoonClearLine
+              style={{
+                width: "25px",
+                height: "25px",
+              }}
+            />
           </StyledLink>
         </ListMenu>
         <ListMenu>

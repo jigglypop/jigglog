@@ -1,22 +1,47 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import PostsWrapper from "~/components/Common/PostsWrapper";
 import Card from "~/components/Common/Card";
-// import Pagination from "~/components/Common/Pagination";
 import getPosts from "~/utils/getPosts";
-import getPage from "~/utils/getPage";
 import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
 import BaseComponent from "../base/base";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
-import moon from "./moon.png";
+import moon from "../../components/parallax/common/moon.webp";
 import styled from "styled-components";
 import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 
+const PostsWrapper = styled.div`
+  background: linear-gradient(45deg, #c31432, #240b36) !important;
+  margin: auto;
+  padding: 120px 0 0;
+  max-width: 100%;
+  font-size: 0;
+  @media (max-width: 1000px) {
+    padding: 70px 16px 0;
+  }
+
+  &:before,
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  h1 {
+    margin: 0.67em 0;
+    font-size: 32px;
+  }
+
+  time {
+    margin: 1em 0;
+    font-size: 14px;
+  }
+`;
+
 const ImageWrapper = styled.div`
   .jb-wrap {
-    width: 60%;
+    width: 25%;
     margin: 10px auto;
     position: relative;
   }
@@ -28,7 +53,7 @@ const ImageWrapper = styled.div`
     color: white;
     font-weight: 800;
     text-shadow: 2px 2px 20px gray;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -37,7 +62,7 @@ const ImageWrapper = styled.div`
   }
   @media (max-width: 600px) {
     .jb-wrap {
-      width: 60%;
+      width: 25%;
       margin: 10px auto;
       position: relative;
     }
@@ -49,7 +74,7 @@ const ImageWrapper = styled.div`
       color: white;
       font-weight: 800;
       text-shadow: 2px 2px 20px gray;
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
       position: absolute;
       top: 50%;
@@ -61,8 +86,6 @@ const ImageWrapper = styled.div`
 
 const List = ({ data, location }) => {
   const [page, setPage] = useState(1);
-
-  // const page = getPage(location);
   const allPosts = getPosts(data);
   const postCount = allPosts.length;
   const posts = allPosts.slice(
@@ -74,9 +97,9 @@ const List = ({ data, location }) => {
   };
   return (
     <>
-      <div>
+      {/* <div>
         <BaseComponent />
-      </div>
+      </div> */}
 
       <PostsWrapper>
         <Helmet>
@@ -91,28 +114,34 @@ const List = ({ data, location }) => {
             <div className="jb-text">BLOG LIST</div>
           </div>
         </ImageWrapper>
-        <Pagination
-          count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-          page={page}
-          size="large"
-          onChange={handleChange}
-          style={{ listStyle: "none", color: "primary", marginBottom: "100px" }}
-        />
-        {posts.map(
-          ({
-            node: {
-              frontmatter: { images, tags, path, ...otherProps },
-            },
-          }) => (
-            <Card
-              key={path}
-              path={path}
-              images={images}
-              tags={tags}
-              {...otherProps}
-            />
-          )
-        )}
+        <div style={{ padding: "100px" }}>
+          <Pagination
+            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+            page={page}
+            size="large"
+            onChange={handleChange}
+            style={{
+              listStyle: "none",
+              color: "primary",
+              marginBottom: "100px",
+            }}
+          />
+          {posts.map(
+            ({
+              node: {
+                frontmatter: { images, tags, path, ...otherProps },
+              },
+            }) => (
+              <Card
+                key={path}
+                path={path}
+                images={images}
+                tags={tags}
+                {...otherProps}
+              />
+            )
+          )}
+        </div>
       </PostsWrapper>
     </>
   );

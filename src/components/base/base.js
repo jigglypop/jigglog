@@ -1,8 +1,8 @@
 import React from "react";
 // import Six from "./06.png";
 // import Nine from "./09.png";
-import Six from "./06.jpg";
-import Nine from "./09.jpg";
+import Six from "../../components/parallax/06.webp";
+import Nine from "../../components/parallax/07.webp";
 class BaseComponent extends React.Component {
   render() {
     return (
@@ -15,7 +15,7 @@ class BaseComponent extends React.Component {
             zIndex: "9",
           }}
         >
-          <img src={Nine} style={{ width: "100px" }} />
+          <img src={Nine} style={{ width: "300px" }} />
         </div>
         <div
           style={{
@@ -25,7 +25,7 @@ class BaseComponent extends React.Component {
             zIndex: "8",
           }}
         >
-          <img src={Six} style={{ width: "800px" }} />
+          <img src={Six} style={{ width: "600px" }} />
         </div>
       </div>
     );
