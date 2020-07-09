@@ -19,7 +19,7 @@ import {
   SearchedPost,
 } from "./styled";
 // import moon from "./moon.png";
-import moon from "./moon.jpg";
+import moon from "./moon.webp";
 
 const MenuTitle = styled.div`
   font-family: "NanumBarunGothic" !important;
