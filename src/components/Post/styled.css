@@ -5,15 +5,6 @@ ul {
   padding: 0;
 }
 
-@font-face {
-  font-family: "NanumBarunGothic";
-  src: url("../../fonts/NanumBarunGothic.ttf");
-}
-
-body {
-  font-family: "NanumBarunGothic";
-}
-
 .gatsby-highlight pre[class*="language-"] {
   overflow: initial;
   min-width: 100%;

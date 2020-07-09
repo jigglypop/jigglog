@@ -5,6 +5,7 @@ import { PRIMARY_COLOR } from "~/components/Common/constants";
 
 export const GnbWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Lato");
+
   position: fixed;
   width: 100%;
   font-size: 14px;
