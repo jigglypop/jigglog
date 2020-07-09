@@ -9,8 +9,8 @@ const MoonBackgroundAnimation = keyframes`
 `;
 
 export default styled(Circle)`
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-image: url(${moon});
   background-size: cover;
 
