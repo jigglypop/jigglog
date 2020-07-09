@@ -184,7 +184,7 @@ const ParallaxComponent = ({ portfolios }) => {
         </Link>
         <BlinkImage
           src={Six}
-          style={{ display: "block", width: "900px", marginLeft: "30%" }}
+          style={{ display: "block", width: "400px", marginLeft: "30%" }}
           alt="cloud"
         />
       </ParallaxLayer>
@@ -196,7 +196,12 @@ const ParallaxComponent = ({ portfolios }) => {
 
         <BlinkImage
           src={Seven}
-          style={{ display: "block", width: "300px", marginLeft: "60%" }}
+          style={{
+            display: "block",
+            width: "200px",
+            marginLeft: "60%",
+            marginTop: "20%",
+          }}
           alt="cloud"
         />
       </ParallaxLayer>
@@ -277,7 +282,7 @@ const ParallaxComponent = ({ portfolios }) => {
 
         <BlinkImage
           src={Six}
-          style={{ position: "absolute", width: "700px", zIndex: "10" }}
+          style={{ position: "absolute", width: "400px", zIndex: "10" }}
           alt="cloud"
         />
       </ParallaxLayer>
