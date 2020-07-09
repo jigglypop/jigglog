@@ -98,23 +98,30 @@ const PostContent = styled.section`
 
   p {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     margin-left: 10px;
     font-weight: 100;
   }
   li {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     margin-left: 30px;
     font-weight: 100;
+  }
+  strong {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 800;
   }
   blockquote {
     line-height: 1.2em;
     color: #aaa;
-    font-size: 14px;
+    margin-top: 18px;
+    font-size: 18px;
   }
   pre {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   table {
     margin: 20px;
@@ -124,24 +131,28 @@ const PostContent = styled.section`
     border: 2px solid white;
     color: white;
     padding: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   tr {
     border: 2px solid white;
     color: white;
 
     padding: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   td {
     border: 2px solid white;
     color: white;
 
     padding: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   span {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   @media (max-width: 1000px) {
     padding: 0 10px 10px 10px;
@@ -165,34 +176,36 @@ const PostContent = styled.section`
       font-weight: 800;
     }
     h4 {
-      margin-top: 2px;
       font-weight: 800;
+      margin-top: 5px;
       font-size: 14px;
     }
     h5 {
-      margin-top: 2px;
-      font-size: 12px;
+      margin-top: 5px;
+      font-size: 14px;
       font-weight: 800;
     }
 
     p {
-      margin-top: 2px;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
       font-weight: 100;
     }
     li {
-      margin-top: 2px;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
       margin-left: 30px;
       font-weight: 100;
     }
     blockquote {
       line-height: 1.2em;
       color: #aaa;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
     pre {
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
     table {
       margin: 2px;
@@ -202,22 +215,26 @@ const PostContent = styled.section`
       border: 2px solid white;
       color: white;
       padding: 2px;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
     tr {
       border: 2px solid white;
       color: white;
       padding: 2px;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
     td {
       border: 2px solid white;
       color: white;
       padding: 2px;
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
     span {
-      font-size: 10px;
+      margin-top: 5px;
+      font-size: 14px;
     }
   }
 `;
