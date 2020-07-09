@@ -16,18 +16,6 @@ export const Wrapper = styled(SimpleWrapper)`
     padding: 70px 0 0;
   }
 `;
-const BlinkImage = styled.img`
-  animation: blink 0.5s ease-in-out infinite alternate;
-
-  @keyframes blink {
-    50% {
-      opacity: 0.1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
 
 const TitleBig = styled.div`
   font-family: "NanumBarunGothic" !important;
