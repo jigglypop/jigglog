@@ -1,7 +1,8 @@
 import React from "react";
-import Six from "./06.png";
-import Nine from "./09.png";
-
+// import Six from "./06.png";
+// import Nine from "./09.png";
+import Six from "./06.jpg";
+import Nine from "./09.jpg";
 class BaseComponent extends React.Component {
   render() {
     return (

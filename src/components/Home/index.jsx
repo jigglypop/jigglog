@@ -8,8 +8,10 @@ import Earth from "../parallax/common/Earth";
 import Yello from "../parallax/common/Yello";
 import { Link } from "gatsby";
 
-import Six from "../parallax/06.png";
-import Seven from "../parallax/07.png";
+// import Six from "../parallax/06.png";
+// import Seven from "../parallax/07.png";
+import Six from "../parallax/06.jpg";
+import Seven from "../parallax/07.jpg";
 import "./styled.css";
 import styled from "styled-components";
 import IconSet from "../IconSet/IconSet";

@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import Circle from "./Circle";
-import Yello from "./yello.png";
+import Yello from "./yello.jpg";
 
 const MoonBackgroundAnimation = keyframes`
   from {transform: rotate(0deg);}
@@ -9,8 +9,8 @@ const MoonBackgroundAnimation = keyframes`
 `;
 
 export default styled(Circle)`
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-image: url(${Yello});
   background-size: cover;
 

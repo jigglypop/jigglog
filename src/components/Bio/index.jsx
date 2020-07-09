@@ -10,15 +10,11 @@ import {
   INSTARGRAM_ID,
   FACEBOOK_ID,
 } from "~/constants";
-import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
-
 import styled from "styled-components";
-
-import facebook from "./facebook.png";
-import instargram from "./instargram.png";
 import github from "./github.png";
 import { Link } from "gatsby";
+import Divider from "@material-ui/core/Divider";
 
 const CircleWrapper = styled.div`
   margin: 10px;
@@ -41,28 +37,29 @@ const Bio = ({ color }) => (
   <div>
     <Grid container>
       <Grid item xs={12}>
-        <hr />
+        <Divider
+          style={{
+            marginTop: "50px",
+            marginBottom: "20px",
+            marginLeft: "10px",
+            marginRight: "10px",
+            height: "3px",
+            // color: "black",
+          }}
+        />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Link to={"/resume"}>
           <img
             src={github}
             style={{
-              // marginTop: "100px",
               width: "50px",
               height: "50px",
             }}
           />
         </Link>
       </Grid>
-      <Grid
-        item
-        xs={6}
-        style={{
-          // marginTop: "100px",
-          marginLeft: "-3vw",
-        }}
-      >
+      <Grid item xs={12}>
         <p
           style={{
             color: color,
@@ -74,6 +71,8 @@ const Bio = ({ color }) => (
         >
           {AUTHOR}
         </p>
+      </Grid>
+      <Grid item xs={12}>
         <p
           style={{
             color: color,
@@ -86,7 +85,6 @@ const Bio = ({ color }) => (
           {MYNAME}
         </p>
       </Grid>
-
       <Grid
         item
         xs={12}
@@ -101,8 +99,15 @@ const Bio = ({ color }) => (
             fontWeight: 800,
           }}
         >
-          <hr />
-
+          <Divider
+            style={{
+              marginBottom: "20px",
+              marginLeft: "10px",
+              marginRight: "10px",
+              height: "3px",
+              color: "gray",
+            }}
+          />
           {DESCRIPTION}
         </p>
       </Grid>

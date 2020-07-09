@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import Circle from "./Circle";
-import moon from "./moon.png";
+import moon from "./moon.jpg";
 
 const MoonBackgroundAnimation = keyframes`
   from {transform: rotate(0deg);}

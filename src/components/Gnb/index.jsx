@@ -18,7 +18,8 @@ import {
   Tag,
   SearchedPost,
 } from "./styled";
-import moon from "./moon.png";
+// import moon from "./moon.png";
+import moon from "./moon.jpg";
 
 const MenuTitle = styled.div`
   font-family: "NanumBarunGothic" !important;

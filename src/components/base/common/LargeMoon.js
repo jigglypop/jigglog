@@ -1,7 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
 import Circle from "./Circle";
-import moon from "./moon.png";
+import moon from "./moon.jpg";
+// import moon from "./moon.png";
 
 const MoonBackgroundAnimation = keyframes`
   from {transform: rotate(0deg);}
@@ -13,6 +14,5 @@ export default styled(Circle)`
   height: 100%;
   background-image: url(${moon});
   background-size: cover;
-
   animation: ${MoonBackgroundAnimation} 120s linear infinite;
 `;
