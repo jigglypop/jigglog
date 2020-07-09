@@ -63,14 +63,14 @@ module.exports = {
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Gatsby Advanced Blog",
-        short_name: "Gatsby Blog",
-        start_url: "/",
-        background_color: "#fff",
-        theme_color: "#3B9CFF",
-        display: "minimal-ui",
-      },
+      // options: {
+      //   name: "Gatsby Advanced Blog",
+      //   short_name: "Gatsby Blog",
+      //   start_url: "/",
+      //   background_color: "#fff",
+      //   theme_color: "#3B9CFF",
+      //   display: "minimal-ui",
+      // },
     },
     "gatsby-plugin-sitemap",
     {

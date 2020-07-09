@@ -132,7 +132,7 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "13%",
+                  marginTop: "10vw",
                 }}
                 onClick={() => onClick(index)}
               >
@@ -146,7 +146,7 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "150px",
+                  marginTop: "20vw",
                 }}
                 onClick={() => onClick(index)}
               >
