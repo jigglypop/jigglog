@@ -6,11 +6,15 @@
   font-family: "NanumBarunGothicSubset";
   src: url("../../fonts/NanumBarunGothicSubset.woff2");
 }
-
+.Gnb__MenuTitle-bWvCCC.TRpMf,
+.Gnb__SmallItem-bqYkgD.iOCFMg,
 .hjYBZW,
 body {
   font-family: "NanumBarunGothicSubset" !important;
+}
 
+.hjYBZW,
+body {
   /* font-family: "NanumBarunGothic"  */
   color: #fefefe;
   /* background-color: #1f1f24; */
