@@ -9,6 +9,7 @@ import {
   PREFIX,
   SITE_URL,
   DISQUS_ID,
+  FACEBOOK_APP_ID,
   CONTENT_PER_SMALL_PAGE,
   PAGE_PER_SMALL_SCREEN,
 } from "~/constants";
@@ -19,6 +20,7 @@ import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
+import { FacebookProvider, Comments, ShareButton } from "react-facebook";
 
 const PostWrapper = styled.div`
   margin: auto;
@@ -296,22 +298,22 @@ const PostTemplate = ({
   },
   location,
 }) => {
-  const loadDisqus = useCallback(({ url, identifier, title }) => {
-    const d = global.document;
+  // const loadDisqus = useCallback(({ url, identifier, title }) => {
+  //   const d = global.document;
 
-    if (!d.getElementById("disqus-sdk")) {
-      const s = d.createElement("script");
-      s.src = `https://${DISQUS_ID}.disqus.com/embed.js`;
-      s.setAttribute("data-timestamp", Date.now());
-      d.body.appendChild(s);
-    }
+  //   if (!d.getElementById("disqus-sdk")) {
+  //     const s = d.createElement("script");
+  //     s.src = `https://${DISQUS_ID}.disqus.com/embed.js`;
+  //     s.setAttribute("data-timestamp", Date.now());
+  //     d.body.appendChild(s);
+  //   }
 
-    global.disqus_config = function disqusCallback() {
-      this.page.url = url;
-      this.page.identifier = identifier;
-      this.page.title = title;
-    };
-  }, []);
+  //   global.disqus_config = function disqusCallback() {
+  //     this.page.url = url;
+  //     this.page.identifier = identifier;
+  //     this.page.title = title;
+  //   };
+  // }, []);
 
   const createCopyButton = useCallback(() => {
     const codes = global.document.querySelectorAll(
@@ -360,14 +362,13 @@ const PostTemplate = ({
   }, []);
 
   useEffect(() => {
-    const { pathname: identifier } = location;
-    const url = `${SITE_URL}${identifier}`;
-
-    loadDisqus({
-      url,
-      identifier,
-      title,
-    });
+    // const { pathname: identifier } = location;
+    // const url = `${SITE_URL}${identifier}`;
+    // loadDisqus({
+    //   url,
+    //   identifier,
+    //   title,
+    // });
   }, []);
 
   useEffect(() => {
@@ -476,13 +477,20 @@ const PostTemplate = ({
                 dangerouslySetInnerHTML={{ __html: html }}
                 style={{ marginBottom: "100px" }}
               />
-              <div id="disqus_thread" />
+              {/* <div id="disqus_thread" />
               <noscript>
                 Please enable JavaScript to view the &nbsp;
                 <a href="https://disqus.com/?ref_noscript">
                   comments powered by Disqus.
                 </a>
-              </noscript>
+              </noscript> */}
+
+              <FacebookProvider appId={FACEBOOK_APP_ID}>
+                <Comments
+                  href="https://jigglypopownprivateblog.netlify.app/"
+                  width="100%"
+                />
+              </FacebookProvider>
               <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
                 page={page}

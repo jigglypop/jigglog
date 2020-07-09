@@ -22,6 +22,7 @@ exports.PROFILE = "https://pbs.twimg.com/media/CsEjsJTVMAAtl0V.jpg:large";
 // Social
 exports.GITHUB_ID = "jigglypop";
 exports.FACEBOOK_ID = "donghwan.yeom.3";
+exports.FACEBOOK_APP_ID = "349781909341456";
 exports.INSTARGRAM_ID = "yeom_donghwan";
 
 // Disqus (Recommend you to use this)

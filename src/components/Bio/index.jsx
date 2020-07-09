@@ -9,12 +9,14 @@ import {
   GITHUB_ID,
   INSTARGRAM_ID,
   FACEBOOK_ID,
+  FACEBOOK_APP_ID,
 } from "~/constants";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import github from "./github.png";
 import { Link } from "gatsby";
 import Divider from "@material-ui/core/Divider";
+import { FacebookProvider, ShareButton } from "react-facebook";
 
 const CircleWrapper = styled.div`
   margin: 10px;
@@ -164,6 +166,13 @@ const Bio = ({ color }) => (
           </a>
         ) : null}
       </Grid>
+      {/* <Grid item xs={12}>
+        <FacebookProvider appId={FACEBOOK_APP_ID}>
+          <ShareButton href="https://jigglypopownprivateblog.netlify.app/">
+            Share
+          </ShareButton>
+        </FacebookProvider>
+      </Grid> */}
     </Grid>
   </div>
 );
