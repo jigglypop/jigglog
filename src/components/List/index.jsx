@@ -17,6 +17,9 @@ const PostsWrapper = styled.div`
   padding: 120px 0 0;
   max-width: 100%;
   font-size: 0;
+  .cardpage {
+    padding: 100px;
+  }
   @media (max-width: 1000px) {
     padding: 70px 16px 0;
   }
@@ -37,11 +40,14 @@ const PostsWrapper = styled.div`
     margin: 1em 0;
     font-size: 14px;
   }
+  .cardpage {
+    padding: 0;
+  }
 `;
 
 const ImageWrapper = styled.div`
   .jb-wrap {
-    width: 25%;
+    width: 30%;
     margin: 10px auto;
     position: relative;
   }
@@ -62,7 +68,7 @@ const ImageWrapper = styled.div`
   }
   @media (max-width: 600px) {
     .jb-wrap {
-      width: 25%;
+      width: 30%;
       margin: 10px auto;
       position: relative;
     }
@@ -74,7 +80,7 @@ const ImageWrapper = styled.div`
       color: white;
       font-weight: 800;
       text-shadow: 2px 2px 20px gray;
-      font-size: 18px;
+      font-size: 14px;
       text-align: center;
       position: absolute;
       top: 50%;
@@ -114,7 +120,7 @@ const List = ({ data, location }) => {
             <div className="jb-text">BLOG LIST</div>
           </div>
         </ImageWrapper>
-        <div style={{ padding: "100px" }}>
+        <div className="cadepage">
           <Pagination
             count={Math.ceil(postCount / CONTENT_PER_PAGE)}
             page={page}

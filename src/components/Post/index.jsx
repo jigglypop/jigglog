@@ -128,15 +128,15 @@ const PostContent = styled.section`
     h1 {
       margin-top: 2px;
       margin-bottom: 2px;
-      font-size: 20px;
+      font-size: 18px;
     }
     h2 {
       margin-top: 2px;
-      font-size: 18px;
+      font-size: 14px;
     }
     h3 {
       margin-top: 2px;
-      font-size: 16px;
+      font-size: 10px;
     }
     h4,
     h5,
@@ -144,11 +144,11 @@ const PostContent = styled.section`
     blockquote,
     pre {
       margin-top: 5px;
-      font-size: 14px;
+      font-size: 10px;
     }
     li {
       margin-top: 5px;
-      font-size: 14px;
+      font-size: 10px;
       margin-left: 30px;
     }
     table {
@@ -157,8 +157,9 @@ const PostContent = styled.section`
     th,
     tr,
     td,
-    span {
-      font-size: 14px;
+    span,
+    strong {
+      font-size: 10px;
     }
   }
 `;

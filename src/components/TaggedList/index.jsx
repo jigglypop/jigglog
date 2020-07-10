@@ -42,7 +42,7 @@ const PostsWrapper = styled.div`
     font-size: 14px;
   }
   .cardpage {
-    padding: 30px;
+    padding: 0;
   }
 `;
 
