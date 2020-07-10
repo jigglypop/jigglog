@@ -27,7 +27,6 @@ pre[class*="language-"] {
 .language-text {
   background: linear-gradient(45deg, #8e2de2, #4a00e0) !important;
   margin: 5px;
-  font-family: "NanumBarunGothic" !important;
   color: white;
   @media (max-width: 600px) {
     margin-top: -100px;

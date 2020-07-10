@@ -20,7 +20,6 @@ import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
-import { FacebookProvider, Comments, ShareButton } from "react-facebook";
 
 const PostWrapper = styled.div`
   margin: auto;
@@ -485,12 +484,6 @@ const PostTemplate = ({
                 </a>
               </noscript>
 
-              {/* <FacebookProvider appId={FACEBOOK_APP_ID}>
-                <Comments
-                  href="https://jigglypopownprivateblog.netlify.app/"
-                  width="100%"
-                />
-              </FacebookProvider> */}
               <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
                 page={page}

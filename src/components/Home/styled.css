@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "NanumBarunGothicSubset";
-  src: local(※), url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
+  src: local("NanumBarunGothicSubset"),
+    url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
 }
 
 .hjYBZW,
