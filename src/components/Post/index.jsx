@@ -55,7 +55,116 @@ const PostWrapper = styled.div`
   }
 `;
 
-const PostContent = styled.section`
+const CommentContent = styled.div`
+  padding: 50px;
+  line-height: 2em;
+  color: black;
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 800;
+  }
+  h3 {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  h4,
+  h5 {
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 21px;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  strong {
+    margin-top: 100px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  li {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  blockquote {
+    line-height: 1.2em;
+    color: #aaa;
+    margin-top: 18px;
+    font-size: 18px;
+  }
+  pre,
+  span {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  table {
+    margin: 20px;
+    background: #f9f9f9;
+  }
+  th,
+  tr,
+  td {
+    border: 2px solid gray;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 10px;
+    line-height: 2em;
+    color: black;
+    h1 {
+      margin-top: 2px;
+      margin-bottom: 2px;
+      font-size: 18px;
+    }
+    h2 {
+      margin-top: 2px;
+      font-size: 14px;
+    }
+    h3 {
+      margin-top: 2px;
+      font-size: 10px;
+    }
+    h4,
+    h5,
+    p,
+    blockquote,
+    pre {
+      margin-top: 5px;
+      font-size: 10px;
+    }
+    li {
+      margin-top: 5px;
+      font-size: 10px;
+      margin-left: 30px;
+    }
+    table {
+      margin: 20px;
+    }
+    th,
+    tr,
+    td,
+    span,
+    strong {
+      font-size: 10px;
+    }
+  }
+`;
+const PostContent = styled.div`
   padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
@@ -477,38 +586,6 @@ const PostTemplate = ({
                 dangerouslySetInnerHTML={{ __html: html }}
                 style={{ marginBottom: "100px" }}
               />
-              <div id="disqus_thread" />
-              <noscript>
-                Please enable JavaScript to view the &nbsp;
-                <a href="https://disqus.com/?ref_noscript">
-                  comments powered by Disqus.
-                </a>
-              </noscript>
-
-              <Pagination
-                count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
-                page={page}
-                size="small"
-                onChange={handleChange}
-                style={{ listStyle: "none" }}
-              />
-              <hr />
-
-              {postlist.map(
-                ({
-                  node: {
-                    frontmatter: { images, tags, path, ...otherProps },
-                  },
-                }) => (
-                  <SmallCard
-                    key={path}
-                    path={path}
-                    images={images}
-                    tags={tags}
-                    {...otherProps}
-                  />
-                )
-              )}
             </PostContent>
           </Grid>
 
@@ -520,6 +597,42 @@ const PostTemplate = ({
               />
             </VisibleTable>
           </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <CommentContent>
+            <div id="disqus_thread" />
+            <noscript>
+              Please enable JavaScript to view the &nbsp;
+              <a href="https://disqus.com/?ref_noscript">
+                comments powered by Disqus.
+              </a>
+            </noscript>
+
+            <Pagination
+              count={Math.ceil(postCount / CONTENT_PER_SMALL_PAGE)}
+              page={page}
+              size="small"
+              onChange={handleChange}
+              style={{ listStyle: "none" }}
+            />
+            <hr />
+
+            {postlist.map(
+              ({
+                node: {
+                  frontmatter: { images, tags, path, ...otherProps },
+                },
+              }) => (
+                <SmallCard
+                  key={path}
+                  path={path}
+                  images={images}
+                  tags={tags}
+                  {...otherProps}
+                />
+              )
+            )}
+          </CommentContent>
         </Grid>
       </PostWrapper>
     </>

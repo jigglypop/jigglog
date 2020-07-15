@@ -8,8 +8,6 @@ import Earth from "../parallax/common/Earth";
 import Yello from "../parallax/common/Yello";
 import { Link } from "gatsby";
 
-// import Six from "../parallax/06.png";
-// import Seven from "../parallax/07.png";
 import Six from "../parallax/06.webp";
 import Seven from "../parallax/07.webp";
 import "./styled.css";
@@ -30,7 +28,6 @@ const BlinkImage = styled.img`
 `;
 
 const Title = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
   animation: blink 1.2s ease-in-out infinite alternate;
 
   @keyframes blink {
@@ -53,8 +50,6 @@ const Title = styled.div`
 `;
 
 const TitleRed = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
-
   color: #e94057;
   margin-top: 10px;
   font-size: 20px;
@@ -68,8 +63,6 @@ const TitleRed = styled.div`
 `;
 
 const Content = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
-
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
@@ -145,7 +138,7 @@ const ParallaxComponent = ({ portfolios }) => {
         offset={1}
         speed={0.4}
         onClick={() => parallax.scrollTo(2)}
-        style={{ opacity: 0.8 }}
+        style={{ opacity: 0.8, zIndex: "20" }}
       >
         <div
           style={{
@@ -157,41 +150,50 @@ const ParallaxComponent = ({ portfolios }) => {
         >
           <Title>RESUME</Title>
         </div>
-        <Link to={"/resume"}>
-          <div
-            style={{
-              position: "absolute",
-              marginLeft: "40%",
-              marginTop: "30%",
-              zIndex: "20",
-            }}
-          >
+        <div
+          style={{
+            position: "absolute",
+            marginLeft: "40%",
+            marginTop: "25%",
+            zIndex: "20",
+          }}
+        >
+          <Link to={"/resume"}>
             <Content>MOVE TO </Content>
             <Content>JIGGLYPOP'S RESUME PAGE</Content>
-          </div>
-        </Link>
+          </Link>
+        </div>
+
+        <BlinkImage
+          src={Six}
+          style={{ position: "absolute", width: "600px", marginRight: "50vw" }}
+          alt="cloud"
+        />
         <Link to={"/resume"}>
           <div
             style={{
               position: "absolute",
-              marginLeft: "35%",
-              marginTop: "37%",
+              marginLeft: "60%",
+              marginTop: "20%",
               zIndex: "18",
             }}
           >
             <IconSet IconObject={IconObject} />
           </div>
         </Link>
-        <BlinkImage
-          src={Six}
-          style={{ display: "block", width: "400px", marginLeft: "30%" }}
-          alt="cloud"
-        />
       </ParallaxLayer>
 
       <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.7 }}>
         <div>
-          <Yello />
+          <Yello
+            style={{
+              display: "absolute",
+              width: "200px",
+              marginLeft: "20%",
+              marginTop: "-10%",
+              zIndex: -10,
+            }}
+          />
         </div>
 
         <BlinkImage
@@ -218,8 +220,8 @@ const ParallaxComponent = ({ portfolios }) => {
       >
         <div
           style={{
-            marginLeft: "40%",
-            marginBottom: "20%",
+            marginLeft: "30%",
+            marginBottom: "50%",
           }}
         >
           <Earth />
@@ -234,7 +236,20 @@ const ParallaxComponent = ({ portfolios }) => {
           backgroundPosition: "center",
         }}
       />
-
+      <ParallaxLayer
+        offset={0}
+        speed={0.4}
+        onClick={() => parallax.scrollTo(1)}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div style={{ marginLeft: "30%" }}>
+          <Moon />
+        </div>
+      </ParallaxLayer>
       <ParallaxLayer
         offset={0}
         speed={0.1}
@@ -261,28 +276,16 @@ const ParallaxComponent = ({ portfolios }) => {
             position: "absolute",
             marginLeft: "-10%",
             zIndex: "6",
-            marginTop: "8vh",
+            marginTop: "2vh",
           }}
         >
           <TitleRed>WELCOME TO JIGGLYPOP'S BLOG</TitleRed>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            marginLeft: "-10%",
-            zIndex: "6",
-            marginTop: "13vh",
-          }}
-        >
           <Content>CLICK AND MOVE NEXT PAGE</Content>
-        </div>
-        <div style={{ marginLeft: "40%" }}>
-          <Moon />
         </div>
 
         <BlinkImage
           src={Six}
-          style={{ position: "absolute", width: "400px", zIndex: "10" }}
+          style={{ position: "absolute", width: "700px", zIndex: "10" }}
           alt="cloud"
         />
       </ParallaxLayer>
@@ -299,37 +302,20 @@ const ParallaxComponent = ({ portfolios }) => {
         <div
           style={{
             position: "absolute",
-            marginLeft: "-25%",
-            marginTop: "2vw",
+            marginTop: "-3vw",
+            marginLeft: "-10vw",
             zIndex: "6",
           }}
         >
+          <Title style={{ marginBottom: "10px" }}>PORTFOLIO</Title>
+          <Link to={"/portfolios"}>
+            <Content>MOVE TO PORTFOLIO PAGE</Content>
+          </Link>
           {portfolios.map((items, index) => (
             <Link to={items.node.frontmatter.path} key={index}>
               <TitleRed>{items.node.frontmatter.title}</TitleRed>
             </Link>
           ))}
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            marginLeft: "20%",
-            marginTop: "2vw",
-            zIndex: "6",
-          }}
-        >
-          <Link to={"/portfolios"}>
-            <Content>MOVE TO PORTFOLIO PAGE</Content>
-          </Link>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            marginTop: "-3vw",
-            zIndex: "6",
-          }}
-        >
-          <Title>PORTFOLIO</Title>
         </div>
       </ParallaxLayer>
     </Parallax>

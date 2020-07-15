@@ -1,6 +1,4 @@
 import React from "react";
-// import Six from "./06.png";
-// import Nine from "./09.png";
 import Six from "../../components/parallax/06.webp";
 import Nine from "../../components/parallax/07.webp";
 class BaseComponent extends React.Component {

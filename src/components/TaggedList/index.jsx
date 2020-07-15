@@ -222,17 +222,6 @@ const TaggedList = ({ data, location }) => {
         </ImageWrapper>
 
         <div className="cardpage">
-          <Pagination
-            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-            page={page}
-            size="large"
-            onChange={handleChange}
-            style={{
-              listStyle: "none",
-              color: "primary",
-              marginBottom: "100px",
-            }}
-          />
           {posts.length === 0 ? <div>No posts.</div> : null}
           {posts.map(
             ({
@@ -249,6 +238,17 @@ const TaggedList = ({ data, location }) => {
               />
             )
           )}
+          <Pagination
+            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+            page={page}
+            size="large"
+            onChange={handleChange}
+            style={{
+              listStyle: "none",
+              color: "primary",
+              marginBottom: "100px",
+            }}
+          />
         </div>
       </PostsWrapper>
     </>

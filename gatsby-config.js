@@ -63,14 +63,6 @@ module.exports = {
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
-      // options: {
-      //   name: "Gatsby Advanced Blog",
-      //   short_name: "Gatsby Blog",
-      //   start_url: "/",
-      //   background_color: "#fff",
-      //   theme_color: "#3B9CFF",
-      //   display: "minimal-ui",
-      // },
     },
     "gatsby-plugin-sitemap",
     {
@@ -87,21 +79,5 @@ module.exports = {
         logo: "./moon.png",
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "UA-168239169-1",
-    //     head: false,
-    //     anonymize: true,
-    //     respectDNT: true,
-    //     exclude: ["/preview/**", "/do-not-track/me/too/"],
-    //     optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-    //     experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-    //     variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
-    //     sampleRate: 5,
-    //     siteSpeedSampleRate: 10,
-    //     cookieDomain: "example.com",
-    //   },
-    // },
   ],
 };

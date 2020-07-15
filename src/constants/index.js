@@ -8,15 +8,15 @@ exports.PORTFOLIO = "portfolio";
 exports.RESUME = "resume";
 
 // Site Information
-exports.NAME = "jigglog";
-exports.TITLE = "jigglog";
-exports.PREFIX = "jigglog | ";
+exports.NAME = "jigglog_post";
+exports.TITLE = "jigglog_post";
+exports.PREFIX = "jigglog_post | ";
 exports.MYNAME = "염동환";
 exports.DESCRIPTION = "새로운 개발을 좋아하는 개발자";
 exports.AUTHOR = "JIGGLYPOP";
-exports.EMAIL = "ydh2244@gmail.com";
+exports.EMAIL = "donghwanyeom@gmail.com";
 exports.KEYWORDS = ["Gatsby", "ReactJS"].join(", ");
-exports.SITE_URL = "https://jigglypopownprivateblog.netlify.app/";
+exports.SITE_URL = "https://d2a3hognnsk0cd.cloudfront.net/";
 exports.PROFILE = "https://pbs.twimg.com/media/CsEjsJTVMAAtl0V.jpg:large";
 
 // Social

@@ -16,12 +16,10 @@ import { Link } from "gatsby";
 const PostsWrapper = styled.div`
   background: linear-gradient(45deg, #c31432, #240b36) !important;
   margin: auto;
-  padding: 120px 0 0;
+  padding: 120px 100px 0;
   max-width: 100%;
   font-size: 0;
-  .cardpage {
-    padding: 100px;
-  }
+
   @media (max-width: 1000px) {
     padding: 70px 16px 0;
   }
@@ -200,20 +198,6 @@ const CategorizedList = ({ data, location }) => {
           <title>{decodeURI(category)}</title>
           <meta name="og:title" content={decodeURI(category)} />
         </Helmet>
-        {/* <TagWrapper>
-          <Grid container className="Wrapper-Grid">
-            {results.map(({ key, length }) => (
-              <Grid item xs={3} key={key}>
-                <h1 className="Wrapper-text">
-                  <Link to={`/categories/${key}/1`}>{key}</Link>
-                </h1>
-              </Grid>
-            ))}
-          </Grid>
-          <img src={moon} />
-          <h1 className="Wrapper-title">{decodeURI(category)}</h1>
-          <h1 className="Wrapper-titles">카테고리</h1>
-        </TagWrapper> */}
 
         <ImageWrapper>
           <div className="jb-wrap">
@@ -234,17 +218,6 @@ const CategorizedList = ({ data, location }) => {
           </div>
         </ImageWrapper>
         <div className="cardpage">
-          <Pagination
-            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-            page={page}
-            size="large"
-            onChange={handleChange}
-            style={{
-              listStyle: "none",
-              color: "primary",
-              marginBottom: "100px",
-            }}
-          />
           {posts.length === 0 ? <div>No posts.</div> : null}
           {posts.map(
             ({
@@ -261,6 +234,17 @@ const CategorizedList = ({ data, location }) => {
               />
             )
           )}
+          <Pagination
+            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+            page={page}
+            size="large"
+            onChange={handleChange}
+            style={{
+              listStyle: "none",
+              color: "primary",
+              marginBottom: "100px",
+            }}
+          />
         </div>
       </PostsWrapper>
     </>

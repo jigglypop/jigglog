@@ -14,7 +14,7 @@ import "./styled.css";
 const PostsWrapper = styled.div`
   background: linear-gradient(45deg, #c31432, #240b36) !important;
   margin: auto;
-  padding: 120px 0 0;
+  padding: 120px 100px 100px;
   max-width: 100%;
   font-size: 0;
   .cardpage {
@@ -103,10 +103,6 @@ const List = ({ data, location }) => {
   };
   return (
     <>
-      {/* <div>
-        <BaseComponent />
-      </div> */}
-
       <PostsWrapper>
         <Helmet>
           <title>{`${PREFIX}POST`}</title>
@@ -121,17 +117,6 @@ const List = ({ data, location }) => {
           </div>
         </ImageWrapper>
         <div className="cadepage">
-          <Pagination
-            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-            page={page}
-            size="large"
-            onChange={handleChange}
-            style={{
-              listStyle: "none",
-              color: "primary",
-              marginBottom: "100px",
-            }}
-          />
           {posts.map(
             ({
               node: {
@@ -147,6 +132,17 @@ const List = ({ data, location }) => {
               />
             )
           )}
+          <Pagination
+            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+            page={page}
+            size="large"
+            onChange={handleChange}
+            style={{
+              listStyle: "none",
+              color: "primary",
+              marginBottom: "100px",
+            }}
+          />
         </div>
       </PostsWrapper>
     </>

@@ -33,3 +33,10 @@ pre[class*="language-"] {
     font-size: 10px;
   }
 }
+
+code.language-text {
+  font-family: "NanumBarunGothic" !important;
+}
+hr {
+  margin-bottom: 30px;
+}
