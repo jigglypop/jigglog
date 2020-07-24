@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { FaPrint } from "react-icons/fa";
 import Clearfix from "~/components/Common/Clearfix";
+
 import {
   PREFIX,
   AUTHOR,
@@ -95,13 +96,13 @@ const NameSmallTitle = styled.div`
   }
 `;
 const PrintTitle = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
   font-size: 15px;
   font-weight: 800;
 
   margin: 5px;
   text-shadow: 3px 3px 30px white;
 `;
+
 const PostContent = styled.section`
   /* font-family: "NanumBarunGothic" !important; */
   padding: 1em 1em 4em;

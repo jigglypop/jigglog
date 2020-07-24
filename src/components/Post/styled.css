@@ -14,6 +14,7 @@ ul {
 code[class*="language-"],
 pre[class*="language-"] {
   color: white;
+  /* font-weight: 800; */
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
@@ -25,9 +26,7 @@ pre[class*="language-"] {
   }
 }
 .language-text {
-  background: linear-gradient(45deg, #8e2de2, #4a00e0) !important;
   margin: 5px;
-  color: white;
   @media (max-width: 600px) {
     margin-top: -100px;
     font-size: 10px;
@@ -35,7 +34,11 @@ pre[class*="language-"] {
 }
 
 code.language-text {
+  background: linear-gradient(45deg, #00c9ff, #92fe9d) !important;
+
   font-family: "NanumBarunGothic" !important;
+  color: #292929;
+  font-weight: 400;
 }
 hr {
   margin-bottom: 30px;

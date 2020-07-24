@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://https://d2a3hognnsk0cd.cloudfront.net/sitemap.xml
-Host: https://d2a3hognnsk0cd.cloudfront.net
-
+Sitemap: https://jigglypopownprivateblog.netlify.app/sitemap.xml
+Host: https://jigglypopownprivateblog.netlify.app

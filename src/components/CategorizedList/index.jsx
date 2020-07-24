@@ -14,7 +14,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import { Link } from "gatsby";
 
 const PostsWrapper = styled.div`
-  background: linear-gradient(45deg, #c31432, #240b36) !important;
+  background: linear-gradient(90deg, #5c258d, #4389a2) !important;
   margin: auto;
   padding: 120px 100px 0;
   max-width: 100%;

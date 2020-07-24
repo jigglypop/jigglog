@@ -9,9 +9,7 @@ import {
   PREFIX,
   SITE_URL,
   DISQUS_ID,
-  FACEBOOK_APP_ID,
   CONTENT_PER_SMALL_PAGE,
-  PAGE_PER_SMALL_SCREEN,
 } from "~/constants";
 import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
@@ -20,14 +18,37 @@ import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
+import { FaPrint } from "react-icons/fa";
+import Clearfix from "~/components/Common/Clearfix";
+const PrintTitle = styled.div`
+  font-size: 15px;
+  font-weight: 800;
 
+  margin: 5px;
+  text-shadow: 3px 3px 30px white;
+`;
+const ClearMobile = styled.div`
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  color: ${({ theme: { color } }) => color};
+  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
+  border: 1px solid ${({ theme: { color } }) => color};
+  border-radius: 4px;
+  outline: 0;
+`;
 const PostWrapper = styled.div`
   margin: auto;
   padding: 10px 0 0;
-  margin: 0 20px 20px 20px;
+  margin: 0 40px 40px 40px;
   font-size: 16px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
   @media (max-width: 414px) {
     padding: 70px 16px 0;
   }
@@ -171,7 +192,7 @@ const PostContent = styled.div`
   h1 {
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
   }
   h2 {
@@ -211,6 +232,13 @@ const PostContent = styled.div`
     color: #aaa;
     margin-top: 18px;
     font-size: 18px;
+  }
+  em {
+    line-height: 1.2em;
+    font-weight: 1000;
+    margin-top: 18px;
+    font-size: 18px;
+    text-decoration: underline;
   }
   pre,
   span {
@@ -267,7 +295,8 @@ const PostContent = styled.div`
     tr,
     td,
     span,
-    strong {
+    strong,
+    em {
       font-size: 10px;
     }
   }
@@ -533,7 +562,9 @@ const PostTemplate = ({
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
-
+  const printPage = useCallback(() => {
+    global.print();
+  }, []);
   return (
     <>
       <Helmet>
@@ -563,24 +594,24 @@ const PostTemplate = ({
               </div>
             </ImageWrapper>
           </Grid>
-          <Grid
-            item
-            lg={2}
-            md={2}
-            sm={false}
-            xs={false}
-            style={{ borderRight: "2px solid gray" }}
-          >
+          <Grid item lg={2} md={2} sm={false} xs={false}>
             <Visible>
               <Bio color={"black"} />
             </Visible>
           </Grid>
 
           <Grid item lg={8} md={8} sm={12} xs={12}>
+            <ClearMobile>
+              <Clearfix>
+                <Button type="button" onClick={printPage}>
+                  <FaPrint />
+                  <PrintTitle>PRINT</PrintTitle>
+                </Button>
+              </Clearfix>
+            </ClearMobile>
             <PostContent>
               <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
-              <hr style={{ marginBottom: "100px" }} />
-
+              <hr style={{ marginBottom: "50px" }} />
               <div
                 id="post-contents"
                 dangerouslySetInnerHTML={{ __html: html }}
@@ -600,6 +631,8 @@ const PostTemplate = ({
         </Grid>
         <Grid item xs={12}>
           <CommentContent>
+            <p>댓글은 작성자에게 큰 힘이 됩니다</p>
+            <hr />
             <div id="disqus_thread" />
             <noscript>
               Please enable JavaScript to view the &nbsp;

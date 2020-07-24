@@ -4,7 +4,6 @@ import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
 import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
-import BaseComponent from "../base/base";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "../../components/parallax/common/moon.webp";
 import styled from "styled-components";
@@ -12,7 +11,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 
 const PostsWrapper = styled.div`
-  background: linear-gradient(45deg, #c31432, #240b36) !important;
+  background: linear-gradient(90deg, #5c258d, #4389a2) !important;
   margin: auto;
   padding: 120px 100px 100px;
   max-width: 100%;

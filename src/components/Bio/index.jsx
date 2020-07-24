@@ -43,7 +43,6 @@ const Bio = ({ color }) => (
             marginLeft: "10px",
             marginRight: "10px",
             height: "3px",
-            // color: "black",
           }}
         />
       </Grid>

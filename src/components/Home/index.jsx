@@ -104,11 +104,6 @@ const ParallaxComponent = ({ portfolios }) => {
   ];
   let parallax;
 
-  const MoonA = styled.div`
-    -webkit-filter: grayscale(100%);
-    filter: gray;
-  `;
-
   const ref = useRef();
 
   return (
@@ -135,8 +130,8 @@ const ParallaxComponent = ({ portfolios }) => {
       />
 
       <ParallaxLayer
-        offset={1}
-        speed={0.4}
+        offset={1.2}
+        speed={1.4}
         onClick={() => parallax.scrollTo(2)}
         style={{ opacity: 0.8, zIndex: "20" }}
       >
@@ -144,20 +139,11 @@ const ParallaxComponent = ({ portfolios }) => {
           style={{
             position: "absolute",
             marginLeft: "40%",
-            marginTop: "20%",
+            marginTop: "10%",
             zIndex: "8",
           }}
         >
           <Title>RESUME</Title>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            marginLeft: "40%",
-            marginTop: "25%",
-            zIndex: "20",
-          }}
-        >
           <Link to={"/resume"}>
             <Content>MOVE TO </Content>
             <Content>JIGGLYPOP'S RESUME PAGE</Content>
@@ -174,7 +160,7 @@ const ParallaxComponent = ({ portfolios }) => {
             style={{
               position: "absolute",
               marginLeft: "60%",
-              marginTop: "20%",
+              marginTop: "10%",
               zIndex: "18",
             }}
           >
@@ -276,7 +262,7 @@ const ParallaxComponent = ({ portfolios }) => {
             position: "absolute",
             marginLeft: "-10%",
             zIndex: "6",
-            marginTop: "2vh",
+            marginTop: "5vh",
           }}
         >
           <TitleRed>WELCOME TO JIGGLYPOP'S BLOG</TitleRed>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: linear-gradient(45deg, #c31432, #240b36) !important;
+  background: linear-gradient(90deg, #5c258d, #4389a2) !important;
 
   /* @font-face {
     font-family: "NanumBarunGothic";
