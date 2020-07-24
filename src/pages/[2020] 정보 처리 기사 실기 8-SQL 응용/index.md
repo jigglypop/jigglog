@@ -71,7 +71,7 @@ ASSELECT 문
 ```sql
 ALTER TABLE 테이블명 ADD 속성명데이터_타입[DEFAULT‘기본값’];
 ALTER TABLE 테이블명 ALTER| MODIFY 속성명[SETDEFAULT ‘기본값’];
-ALTER sTABLE 테이블명 DROP COLUMN 속성명[CASCADE];
+ALTER TABLE 테이블명 DROP COLUMN 속성명[CASCADE];
 ```
 
 - `ADD` : 새로운 속성(열)을 추가
@@ -101,12 +101,10 @@ DROP TABLE 테이블명 [CASCADE | RESTRICTED];
   - DCL은 데이터베이스 관리자(DBA)가 데이터 관리를 목적으로 사용
   - GRANT, REVOKE, COMMIT, ROLLBACK, SAVEPOINT
 
-- GRANT / REVOKE
-
+- `GRANT / REVOKE`
   - 데이터베이스 관리자가 데이터베이스 사용자에게 권한을 부여하거나 취소
   - GRANT : 권한 부여
   - REVOKE : 권한 취소
-
 - 사용자등급 지정 및 해제
 
 ```sql
@@ -140,7 +138,7 @@ FROM 사용자 [CASCADE];
 ---
 
 - `DML(데이터 조작어)`
-  - 데이터베이스 사용자가 응용 프로그램이나 질의어를 통해 저장된 데이터를 실질적으로 관리하는데 사용되 는 언어
+  - 데이터베이스 사용자가 응용 프로그램이나 질의어를 통해 저장된 데이터를 실질적으로 관리하는데 사용되는 언어
   - SELECT, INSERT, DELETE, UPDATE
 
 * `삽입문(INSERT INTO)` : 기본 테이블에 새로운 튜플을 삽입
@@ -176,9 +174,9 @@ FROM 테이블명[, 테이블명, …] [WHERE 조건]
 ```
 
 - `PREDICATE` : 불러올 튜플 수를 제한할 명령어를 기술
-  - `ALL` : 모든 튜플
-  - `DISTINCT` : 중복된 튜플이 있으면 그 중 첫 번째 한 개만
-  - `DISTINCTROW` : 중복된 튜플을 검색하지만 선택된 속성의 값이 아닌, 튜플 전체를 대상
+  - _ALL_ : 모든 튜플
+  - _DISTINCT_ : 중복된 튜플이 있으면 그 중 첫 번째 한 개만
+  - _DISTINCTROW_ : 중복된 튜플을 검색하지만 선택된 속성의 값이 아닌, 튜플 전체를 대상
 - 속성명 : 검색하여 불러올 속성(열) 및 수식들을 지정
   - 기본 테이블을 구성하는 모든 속성을 지정할 때 는 '\*' 를 기술
   - 두 개 이상의 테이블을 대상으로 검색할 때는 (테이블명.속성명)으로 표현함
@@ -198,8 +196,8 @@ FROM 테이블명[, 테이블명, …] [WHERE 조건]
 - `HAVING절` : GROUP BY와 함께 사용, 그룹에 대한 조건 지정
 - `ORDER BY절` : 특정 속성을 기준으로 정렬하여 검색할 때 사용
   - 속성명 : 정렬의 기준이 되는 속성명을 기술
-  - `ASC` : 오름차순. 생략하면 오름차순으로 지정
-  - `DESC` : 내림차순
+  - _ASC_ : 오름차순. 생략하면 오름차순으로 지정
+  - _DESC_ : 내림차순
 
 # 9. DML - JOIN
 

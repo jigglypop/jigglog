@@ -43,7 +43,7 @@ images: ["images/1.jpg"]
 ---
 
 - _모듈화를 통해 분리된 시스템의 각 기능들_(= 서브루틴, 서브시스템, 소프트웨어 내의 프로그램, 작업 단위 등과 같은 의미)
-- `모듈화(결합도의 최소화, 응집도의 최대화 추구)`(결소응대) : 소프트웨어의 성능을 향상시키거나 시스템의 수정 및 재사용 유지 관리 등이 용이하도록 시스템의 기능들을 모듈 단위로 분해하는 것
+- `모듈화(결합도의 최소화, 응집도의 최대화 추구)` : 소프트웨어의 성능을 향상시키거나 시스템의 수정 및 재사용 유지 관리 등이 용이하도록 시스템의 기능들을 모듈 단위로 분해하는 것
 
 - `모듈의 기능적 독립성` : 소프트웨어를 구성하는 각 모듈의 기능이 서로 독립됨을 의미하는 것, 모듈이 하나의 기능만을 수행하고 다른 모듈과의 과도한 상호작용을 배제함으로써 이루어짐
 
@@ -86,7 +86,7 @@ images: ["images/1.jpg"]
 - `팬아웃` : 어떤 모듈에 의해 제어(호출)되는 모듈의 수
 - 팬인이 높다는 것은 재사용 측면에서 설계가 잘 되어있다고 볼 수 있으나, 단일 장애점이 발생할 수 있으므로 중점적인 관리 및 테스트가 필요
 
-![mishana.jpg](https://lh3.googleusercontent.com/proxy/OtRxfo7IxWL-jyjf1ZBe0lXCb30B1fhv8vmDoXhBzaD7T94nmJG6v6RabDbcb6BdsrzpaS78voVZr2mf9Q7cARm1FUIWVdyKjxX12LvCQg2EieSoEjJGQtuxMWW1OdvPD9YKusMJdhHH1ItyES9XlDlMbyCiEQIadLzmRGnyqq0TFkPfXYrdbqXp8M3fSNE)
+<img src="https://lh3.googleusercontent.com/proxy/7ebwC3GN3yhLeOMrzXVZmVJN_J7qQlRhapzbwR0dI_w53KspApKV0uAVnGv_UAeOjz_10DglsrTHF4l0aZEyJrAJ3yCgV5hxhOB_q38IP5SJ1tYWMsbA-Up0riqvn4Xt0c4dKHlwEdShi2WGbQnwX8x9zF_aEJSvUmkOnLxdUTwU9wBDiF131EKYWud_viM" alt="img" style="zoom: 80%;" />
 
 # 7. 공통 모듈
 
