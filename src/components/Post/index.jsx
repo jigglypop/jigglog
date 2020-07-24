@@ -49,8 +49,9 @@ const PostWrapper = styled.div`
   background-color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 10px black;
-  @media (max-width: 414px) {
+  @media (max-width: 600px) {
     padding: 70px 16px 0;
+    margin: 0 10px 10px 10px;
   }
 
   &:before,
@@ -258,10 +259,17 @@ const PostContent = styled.div`
     margin-top: 10px;
     font-size: 14px;
   }
+  hr {
+    margin-bottom: 30px;
+  }
+
   @media (max-width: 1000px) {
     padding: 0 10px 10px 10px;
     line-height: 2em;
     color: black;
+    hr {
+      margin-bottom: 10px;
+    }
     h1 {
       margin-top: 2px;
       margin-bottom: 2px;
@@ -286,7 +294,7 @@ const PostContent = styled.div`
     li {
       margin-top: 5px;
       font-size: 10px;
-      margin-left: 30px;
+      margin-left: 10px;
     }
     table {
       margin: 20px;
@@ -329,7 +337,7 @@ const ImageWrapper = styled.div`
 
     animation: blink 1.2s ease-in-out infinite alternate;
     @media (max-width: 600px) {
-      font-size: 20px;
+      font-size: 15px;
     }
 
     @keyframes blink {
