@@ -8,7 +8,7 @@ summary: "파이썬으로 순열, 조합을 빠르게 구해주는 라이브러�
 images: ["images/4.jpg"]
 ---
 
-<!-- # itertools에 대해서 알아보자
+# itertools에 대해서 알아보자
 
 ## itertools란?
 
@@ -304,4 +304,4 @@ print counts
 # defaultdict(<type 'list'>, {'dan': [87, 100], 'jason': [79], 'erik': [95, 97]})
 ```
 
-defaultdict 사용합니다. 널값에 대한 체크를 생략할 수 있는 편의 제공. -->
+defaultdict 사용합니다. 널값에 대한 체크를 생략할 수 있는 편의 제공. 

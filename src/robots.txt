@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://jigglypopownprivateblog.netlify.app/sitemap.xml
-Host: https://jigglypopownprivateblog.netlify.app
+Sitemap: https://jigglog.netlify.app/sitemap.xml
+Host: https://jigglog.netlify.app

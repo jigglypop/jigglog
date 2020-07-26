@@ -20,7 +20,7 @@ export default class HTML extends Component {
           {headComponents}
           <meta
             name="google-site-verification"
-            content="zaOldSWebTfa4WLB9Z4icGl9cMyKpKPf38uTTEv2whg"
+            content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"
           />
 
           <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
