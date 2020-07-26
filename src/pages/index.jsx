@@ -8,7 +8,7 @@ const HomeLayout = (props) => (
     <Helmet>
       <meta
         name="google-site-verification"
-        content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"
+        content="NTj68jTRw50DTm4oJDLc_VKe1p9ItHiQdJuDBRsikaE"
       />
     </Helmet>
     <Home />
