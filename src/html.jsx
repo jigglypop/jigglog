@@ -47,6 +47,7 @@ export default class HTML extends Component {
             dangerouslySetInnerHTML={{ __html: stylesStr }}
           />
         </head>
+
         <body {...bodyAttributes}>
           {preBodyComponents}
           <div

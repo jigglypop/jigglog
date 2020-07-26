@@ -79,5 +79,13 @@ module.exports = {
         logo: "./moon.png",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-173606059-1",
+        head: true,
+        anonymize: true,
+      },
+    },
   ],
 };
