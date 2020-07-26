@@ -5,7 +5,7 @@ tags: ["파이썬", "itertools", "알고리즘"]
 title: "[파이썬] itertools 에 대해서 알아보자"
 date: "2020-07-15T17:00:00.000Z"
 summary: "파이썬으로 순열, 조합을 빠르게 구해주는 라이브러리"
-images: ["images/1.jpg"]
+images: ["images/4.jpg"]
 ---
 
 <!-- # itertools에 대해서 알아보자

@@ -11,7 +11,7 @@ const LogoItem = styled.div`
   font-size: 15px;
   margin: 5px;
   animation: blink ${(props) => props.second}s ease-in-out infinite alternate;
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
     font-size: 10px;
   }
 
@@ -32,7 +32,7 @@ const IconSet = ({ IconObject }) => {
       style={{
         display: "flex",
         justifyContent: "center",
-        width: "40%",
+        width: "65%",
       }}
     >
       {IconObject.map((item, index) => (

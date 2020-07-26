@@ -26,6 +26,16 @@ const BlinkImage = styled.img`
     }
   }
 `;
+const IconWrapper = styled.div`
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 10%;
+  z-index: 18;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    margin-top: 30%;
+  }
+`;
 
 const Title = styled.div`
   animation: blink 1.2s ease-in-out infinite alternate;
@@ -156,16 +166,9 @@ const ParallaxComponent = ({ portfolios }) => {
           alt="cloud"
         />
         <Link to={"/resume"}>
-          <div
-            style={{
-              position: "absolute",
-              marginLeft: "60%",
-              marginTop: "10%",
-              zIndex: "18",
-            }}
-          >
+          <IconWrapper>
             <IconSet IconObject={IconObject} />
-          </div>
+          </IconWrapper>
         </Link>
       </ParallaxLayer>
 

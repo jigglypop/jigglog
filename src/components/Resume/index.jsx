@@ -13,15 +13,32 @@ import {
   FACEBOOK_ID,
 } from "~/constants";
 import * as profileUrl from "~/resources/me.png";
+
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+import IconSet from "../IconSet/IconSet";
 import styled from "styled-components";
 
-import facebook from "./facebook.png";
-import instargram from "./instargram.png";
-import github from "./github.png";
-
-import IconSet from "../IconSet/IconSet";
-
-const Wrapper = styled.section`
+export const ItemWrapper = styled.div`
+  display: inline-block;
+`;
+export const CircleWrapper = styled.div`
+  margin: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1.5px solid #ebebeb;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+`;
+export const Wrapper = styled.section`
   padding: 100px 0 0;
   @media (max-width: 414px) {
     padding: 70px 16px 0;
@@ -29,7 +46,7 @@ const Wrapper = styled.section`
 
   & > ${Clearfix} {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1100px;
   }
 
   button {
@@ -37,7 +54,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const BasicInformation = styled.section`
+export const BasicInformation = styled.section`
   text-align: center;
   font-size: 16px;
 
@@ -55,13 +72,13 @@ const BasicInformation = styled.section`
   }
 `;
 
-const ClearMobile = styled.div`
+export const ClearMobile = styled.div`
   @media (max-width: 600px) {
     display: none;
   }
 `;
 
-const SocialInformation = styled.section`
+export const SocialInformation = styled.section`
   font-size: 20px;
   text-align: center;
 
@@ -69,7 +86,7 @@ const SocialInformation = styled.section`
     padding: 0 6px;
   }
 `;
-const Button = styled.button`
+export const Button = styled.button`
   display: flex;
   align-items: center;
   color: ${({ theme: { color } }) => color};
@@ -78,16 +95,14 @@ const Button = styled.button`
   border-radius: 4px;
   outline: 0;
 `;
-const NameTitle = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
-  font-size: 50px;
+export const NameTitle = styled.div`
+  font-size: 30px;
   text-shadow: 3px 3px 30px white;
   @media (max-width: 600px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `;
-const NameSmallTitle = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
+export const NameSmallTitle = styled.div`
   margin-top: 20px;
   font-size: 30px;
   text-shadow: 3px 3px 30px white;
@@ -95,7 +110,7 @@ const NameSmallTitle = styled.div`
     font-size: 20px;
   }
 `;
-const PrintTitle = styled.div`
+export const PrintTitle = styled.div`
   font-size: 15px;
   font-weight: 800;
 
@@ -103,15 +118,14 @@ const PrintTitle = styled.div`
   text-shadow: 3px 3px 30px white;
 `;
 
-const PostContent = styled.section`
-  /* font-family: "NanumBarunGothic" !important; */
+export const PostContent = styled.section`
   padding: 1em 1em 4em;
   line-height: 2em;
   font-weight: 800;
 
   h1 {
     margin-top: 40px;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 800;
     text-shadow: 3px 3px 30px white;
   }
@@ -149,8 +163,8 @@ const PostContent = styled.section`
     font-weight: 800;
   }
 
-  @media (max-width: 600px) {
-    padding: 0 10px 10px 10px;
+  @media (max-width: 1000px) {
+    padding: 0 20px 20px 20px;
     line-height: 2em;
     color: white;
     h1 {
@@ -189,7 +203,7 @@ const PostContent = styled.section`
     li {
       margin-top: 2px;
       font-size: 12px;
-      margin-left: 30px;
+      margin-left: 10px;
       font-weight: 100;
     }
     blockquote {
@@ -222,6 +236,15 @@ const PostContent = styled.section`
       padding: 2px;
       font-size: 10px;
     }
+  }
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  .innerIcon {
   }
 `;
 
@@ -299,7 +322,11 @@ const Resume = ({
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={github} style={{ width: "30px", height: "30px" }} />
+              <ItemWrapper>
+                <CircleWrapper>
+                  <FiGithub />
+                </CircleWrapper>
+              </ItemWrapper>
             </a>
           ) : null}
           {FACEBOOK_ID ? (
@@ -308,7 +335,11 @@ const Resume = ({
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={facebook} style={{ width: "30px", height: "30px" }} />
+              <ItemWrapper>
+                <CircleWrapper>
+                  <FaFacebookF />
+                </CircleWrapper>
+              </ItemWrapper>
             </a>
           ) : null}
           {INSTARGRAM_ID ? (
@@ -317,20 +348,17 @@ const Resume = ({
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={instargram} style={{ width: "30px", height: "30px" }} />
+              <ItemWrapper>
+                <CircleWrapper>
+                  <FaInstagram />
+                </CircleWrapper>
+              </ItemWrapper>
             </a>
           ) : null}
         </SocialInformation>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "5%",
-          }}
-        >
+        <IconWrapper>
           <IconSet IconObject={IconObject} />
-        </div>
+        </IconWrapper>
 
         <PostContent>
           <div ref={$mdWrapper} dangerouslySetInnerHTML={{ __html: html }} />

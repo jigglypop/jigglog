@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 const PostsWrapper = styled.div`
-  background: linear-gradient(45deg, #c31432, #240b36) !important;
+  background: linear-gradient(90deg, #5c258d, #4389a2) !important;
   margin: auto;
-  padding: 120px 0 0;
-  max-width: 1176px;
+  padding: 10vw;
+  max-width: 100%;
   font-size: 0;
-  @media (max-width: 414px) {
-    padding: 70px 16px 0;
+  /* .cardpage {
+
+    padding: 100px;
+  } */
+  @media (max-width: 1000px) {
+    padding: 10%;
   }
 
   &:before,
@@ -26,6 +30,9 @@ const PostsWrapper = styled.div`
     margin: 1em 0;
     font-size: 14px;
   }
+  /* .cardpage {
+    padding: 0;
+  } */
 `;
 
 export default PostsWrapper;
