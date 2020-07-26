@@ -21,8 +21,8 @@ export const DivWrapper = styled.div`
 `;
 
 export const Picture = styled.img`
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  /* height: 80%; */
   object-fit: cover;
   margin: 5%;
   @media (max-width: 1000px) {

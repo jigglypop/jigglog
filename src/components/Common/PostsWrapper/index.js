@@ -3,7 +3,12 @@ import styled from "styled-components";
 const PostsWrapper = styled.div`
   background: linear-gradient(90deg, #5c258d, #4389a2) !important;
   margin: auto;
-  padding: 10vw;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
   max-width: 100%;
   font-size: 0;
   /* .cardpage {
