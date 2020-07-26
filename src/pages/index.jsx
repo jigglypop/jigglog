@@ -10,6 +10,11 @@ const HomeLayout = (props) => (
         name="google-site-verification"
         content="NTj68jTRw50DTm4oJDLc_VKe1p9ItHiQdJuDBRsikaE"
       />
+      <script
+        data-ad-client="ca-pub-4040588049793807"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
     </Helmet>
     <Home />
   </Layout>
