@@ -11,51 +11,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 import PostsWrapper from "../Common/PostsWrapper";
 import ImageWrapper from "../Common/ImageWrapper";
-
-// const ImageWrapper = styled.div`
-//   .jb-wrap {
-//     width: 30%;
-//     margin: 10px auto;
-//     position: relative;
-//   }
-//   .jb-wrap img {
-//     width: 100%;
-//     vertical-align: middle;
-//   }
-//   .jb-text {
-//     color: white;
-//     font-weight: 800;
-//     text-shadow: 2px 2px 20px gray;
-//     font-size: 30px;
-//     text-align: center;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-//   @media (max-width: 600px) {
-//     .jb-wrap {
-//       width: 30%;
-//       margin: 10px auto;
-//       position: relative;
-//     }
-//     .jb-wrap img {
-//       width: 100%;
-//       vertical-align: middle;
-//     }
-//     .jb-text {
-//       color: white;
-//       font-weight: 800;
-//       text-shadow: 2px 2px 20px gray;
-//       font-size: 14px;
-//       text-align: center;
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//     }
-//   }
-// `;
+import LargeWrapper from "../Common/LargeWrapper";
 
 const List = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -75,15 +31,17 @@ const List = ({ data, location }) => {
           <title>{`${PREFIX}POST`}</title>
           <meta name="og:title" content={`${PREFIX}POST`} />
         </Helmet>
-        <ImageWrapper>
-          <div className="jb-wrap">
-            <MoonBackgroundAnimation>
-              <img src={moon} />
-            </MoonBackgroundAnimation>
-            <div className="jb-text">BLOG LIST</div>
-            <div className="jb-under">블로그 모든 글 목록</div>
-          </div>
-        </ImageWrapper>
+        <LargeWrapper>
+          <ImageWrapper>
+            <div className="jb-wrap">
+              <MoonBackgroundAnimation>
+                <img src={moon} />
+              </MoonBackgroundAnimation>
+              <div className="jb-text">BLOG LIST</div>
+              <div className="jb-under">블로그 모든 글 목록</div>
+            </div>
+          </ImageWrapper>
+        </LargeWrapper>
         {posts.map(
           ({
             node: {
@@ -110,7 +68,6 @@ const List = ({ data, location }) => {
             marginBottom: "100px",
           }}
         />
-        {/* </div> */}
       </PostsWrapper>
     </>
   );

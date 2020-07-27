@@ -15,166 +15,8 @@ import { Link } from "gatsby";
 import PostsWrapper from "../Common/PostsWrapper";
 import ImageWrapper from "../Common/ImageWrapper";
 import CategoryItem from "../Common/CategoryItem";
-// const PostsWrapper = styled.div`
-//   background: linear-gradient(90deg, #5c258d, #4389a2) !important;
-//   margin: auto;
-//   padding: 120px 100px 0;
-//   max-width: 100%;
-//   font-size: 0;
+import LargeWrapper from "../Common/LargeWrapper";
 
-//   @media (max-width: 1000px) {
-//     padding: 70px 16px 0;
-//   }
-
-//   &:before,
-//   &:after {
-//     display: block;
-//     content: "";
-//     clear: both;
-//   }
-
-//   h1 {
-//     margin: 0.67em 0;
-//     font-size: 32px;
-//   }
-
-//   time {
-//     margin: 1em 0;
-//     font-size: 14px;
-//   }
-//   .cardpage {
-//     padding: 0;
-//   }
-// `;
-
-// const ImageWrapper = styled.div`
-//   .jb-wrap {
-//     width: 400px;
-//     margin: 10px auto;
-//     position: relative;
-//   }
-//   .jb-wrap img {
-//     width: 100%;
-//     vertical-align: middle;
-//   }
-//   .jb-text {
-//     color: white;
-//     font-weight: 800;
-//     text-shadow: 2px 2px 20px gray;
-//     font-size: 35px;
-//     margin-top: -50px;
-//     text-align: center;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     animation: blink 1.2s ease-in-out infinite alternate;
-
-//     @keyframes blink {
-//       50% {
-//         opacity: 0.5;
-//       }
-//       100% {
-//         opacity: 1;
-//       }
-//     }
-//   }
-//   .jb-under {
-//     color: white;
-//     font-weight: 800;
-//     text-shadow: 2px 2px 20px gray;
-//     font-size: 25px;
-//     text-align: center;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-//   .jb-tag {
-//     margin-top: 50px;
-//     color: white;
-//     z-index: 20;
-//     font-weight: 800;
-//     text-shadow: 2px 2px 20px gray;
-//     font-size: 12px;
-//   }
-//   h2 {
-//     margin: 2px;
-//   }
-//   @media (max-width: 1000px) {
-//     .jb-wrap {
-//       width: 300px;
-//       margin: 10px auto;
-//       position: relative;
-//     }
-//     .jb-wrap img {
-//       width: 100%;
-//       vertical-align: middle;
-//     }
-//     .jb-text {
-//       color: white;
-//       font-weight: 800;
-//       text-shadow: 2px 2px 20px gray;
-//       font-size: 20px;
-//       margin-top: -50px;
-//       text-align: center;
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//       animation: blink 1.2s ease-in-out infinite alternate;
-
-//       @keyframes blink {
-//         50% {
-//           opacity: 0.5;
-//         }
-//         100% {
-//           opacity: 1;
-//         }
-//       }
-//     }
-//     .jb-under {
-//       color: white;
-//       font-weight: 800;
-//       text-shadow: 2px 2px 20px gray;
-//       font-size: 15px;
-//       text-align: center;
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//     }
-//     .jb-tag {
-//       margin-top: 50px;
-//       color: white;
-//       z-index: 20;
-//       font-weight: 800;
-//       text-shadow: 2px 2px 20px gray;
-//       font-size: 10px;
-//     }
-//     h2 {
-//       margin: 2px;
-//     }
-//   }
-// `;
-// const TagItem = styled.div`
-//   background: linear-gradient(45deg, #4776e6, #8e54e9);
-//   margin: 5px;
-//   padding: 10px;
-//   border-radius: 5px;
-//   h1 {
-//     font-size: 15px;
-//     font-weight: 800;
-//   }
-//   @media (max-width: 1000px) {
-//     margin: 3px;
-//     padding: 3px;
-//     h1 {
-//       font-size: 8px;
-//       font-weight: 800;
-//     }
-//   }
-// `;
 const CategorizedList = ({ data, location }) => {
   const [page, setPage] = useState(1);
   const [, , category] = location.pathname.split("/");
@@ -218,28 +60,31 @@ const CategorizedList = ({ data, location }) => {
           <title>{decodeURI(category)}</title>
           <meta name="og:title" content={decodeURI(category)} />
         </Helmet>
-
-        <ImageWrapper>
-          <div className="jb-wrap">
-            <MoonBackgroundAnimation>
-              <img src={moon} />
-            </MoonBackgroundAnimation>
-            <h1 className="jb-text">{decodeURI(category)}</h1>
-            <h1 className="jb-under">카테고리</h1>
-          </div>
-        </ImageWrapper>
-        <Grid container style={{ justifyContent: "center" }}>
-          {results.map(({ key, length }) => (
-            <Grid item key={key}>
-              <Link to={`/categories/${key}/1`}>
-                <CategoryItem>
-                  <h1>{key}</h1>
-                </CategoryItem>
-              </Link>
-            </Grid>
-          ))}
-        </Grid>
-
+        <LargeWrapper>
+          <ImageWrapper>
+            <div className="jb-wrap">
+              <MoonBackgroundAnimation>
+                <img src={moon} />
+              </MoonBackgroundAnimation>
+              <h1 className="jb-text">{decodeURI(category)}</h1>
+              <h1 className="jb-under">카테고리</h1>
+            </div>
+          </ImageWrapper>
+          <Grid
+            container
+            style={{ justifyContent: "center", paddingBottom: "10px" }}
+          >
+            {results.map(({ key, length }) => (
+              <Grid item key={key}>
+                <Link to={`/categories/${key}/1`}>
+                  <CategoryItem>
+                    <h1>{key}</h1>
+                  </CategoryItem>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+        </LargeWrapper>
         <div className="cardpage">
           {posts.length === 0 ? <div>No posts.</div> : null}
           {posts.map(

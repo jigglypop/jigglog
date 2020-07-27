@@ -11,12 +11,9 @@ const PostsWrapper = styled.div`
 
   max-width: 100%;
   font-size: 0;
-  /* .cardpage {
 
-    padding: 100px;
-  } */
   @media (max-width: 1000px) {
-    padding: 10%;
+    padding: 3%;
   }
 
   &:before,
@@ -35,9 +32,6 @@ const PostsWrapper = styled.div`
     margin: 1em 0;
     font-size: 14px;
   }
-  /* .cardpage {
-    padding: 0;
-  } */
 `;
 
 export default PostsWrapper;

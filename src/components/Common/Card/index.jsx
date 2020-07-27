@@ -13,6 +13,14 @@ export const TagWrapper = styled.div`
 export const StyledCard = styled.div`
   background: rgb(31, 31, 36);
   box-shadow: 6px 6px 8px black;
+  .grid {
+    margin-left: -5%;
+  }
+  @media (max-width: 1000px) {
+    .grid {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const DivWrapper = styled.div`
@@ -22,9 +30,11 @@ export const DivWrapper = styled.div`
 
 export const Picture = styled.img`
   width: 70%;
-  /* height: 80%; */
   object-fit: cover;
-  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+
   @media (max-width: 1000px) {
     display: none;
   }
@@ -45,7 +55,6 @@ export const Content = styled.div`
   }
   h1.summary {
     margin-bottom: 20px;
-
     line-height: 1.5em;
     font-size: 13px;
     font-weight: 800;
@@ -79,8 +88,11 @@ export const Content = styled.div`
 export const TagItem = styled.div`
   background: linear-gradient(45deg, #8a2387, #e94057, #f64f59) !important;
   margin: 2px;
-  padding: 5px;
-  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-radius: 10px;
   margin-top: 30px;
 
   h1.tagitem {
@@ -123,7 +135,7 @@ const Card = ({ tags, path, images, title, date, summary }) => {
                     }
                   />
                 </Grid>
-                <Grid item xs={9}>
+                <Grid item xs={12} class="grid">
                   <h1 className="title">{title}</h1>
                   <h1 className="summary">{summary}</h1>
                   <TagWrapper>
