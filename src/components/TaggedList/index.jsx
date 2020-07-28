@@ -77,7 +77,7 @@ const TaggedList = ({ data, location }) => {
           >
             {tagResults.map(({ key, length }) => (
               <Grid item key={key}>
-                <Link to={`/categories/${key}/1`}>
+                <Link to={`/tags/${key}/1`}>
                   <TagItem>
                     <h1>#{key}</h1>
                   </TagItem>
