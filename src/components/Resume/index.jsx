@@ -292,6 +292,14 @@ const Resume = ({
     "reduxlogo",
     "gatsbylogo",
     "csslogo",
+    "mongodblogo",
+    "herokulogo",
+    "graphqllogo",
+    "expresslogo",
+    "reactlogo",
+    "mobxlogo",
+    "typescriptlogo",
+    "nextjslogo",
   ];
   return (
     <Wrapper>

@@ -1,7 +1,7 @@
 ---
 path: "/[Mobx] Mobx 사용하기/"
-category: "Mobx"
-tags: ["react", "Mobx"]
+category: "mobx"
+tags: ["react", "mobx"]
 title: "[Mobx] Mobx 사용하기"
 date: "2020-07-31T19:23:00.000Z"
 summary: "리액트로 mobx를 다뤄보기 시리즈입니다."

@@ -18,7 +18,6 @@ export const Wrapper = styled(SimpleWrapper)`
 `;
 
 const TitleBig = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
   animation: blink 1.2s ease-in-out infinite alternate;
 
   @keyframes blink {
@@ -38,7 +37,6 @@ const TitleBig = styled.div`
 `;
 
 const Content = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;

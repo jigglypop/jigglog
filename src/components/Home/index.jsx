@@ -111,6 +111,13 @@ const ParallaxComponent = ({ portfolios }) => {
     "reduxlogo",
     "gatsbylogo",
     "csslogo",
+    "mongodblogo",
+    "herokulogo",
+    "graphqllogo",
+    "expresslogo",
+    "mobxlogo",
+    "typescriptlogo",
+    "nextjslogo",
   ];
   let parallax;
 
