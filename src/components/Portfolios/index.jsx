@@ -66,6 +66,7 @@ const Portfolios = ({
       parallax.scrollTo(index + 1);
     }
   };
+  console.log(portfolios);
   return (
     <>
       <Parallax ref={(ref) => (parallax = ref)} pages={portfolios.length}>
@@ -82,7 +83,14 @@ const Portfolios = ({
           (
             {
               node: {
-                frontmatter: { path, title, description, images = [], iconset },
+                frontmatter: {
+                  path,
+                  title,
+                  description,
+                  images = [],
+                  iconset,
+                  site,
+                },
               },
             },
             index
@@ -104,6 +112,7 @@ const Portfolios = ({
                   alignItems: "center",
                   justifyContent: "center",
                   zIndex: "6",
+                  marginTop: "-10vw",
                 }}
               >
                 <Link to={path}>
@@ -118,7 +127,7 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "10vw",
+                  // marginTop: "10vw",
                 }}
                 onClick={() => onClick(index)}
               >
@@ -132,7 +141,7 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "20vw",
+                  marginTop: "10vw",
                 }}
                 onClick={() => onClick(index)}
               >
