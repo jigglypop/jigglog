@@ -4,10 +4,8 @@ import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
 import { CONTENT_PER_PAGE } from "~/constants";
-
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "../../components/parallax/common/moon.webp";
-import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -84,36 +82,38 @@ const CategorizedList = ({ data, location }) => {
               </Grid>
             ))}
           </Grid>
-        </LargeWrapper>
-        <div className="cardpage">
-          {posts.length === 0 ? <div>No posts.</div> : null}
-          {posts.map(
-            ({
-              node: {
-                frontmatter: { images, tags, path, ...otherProps },
-              },
-            }) => (
-              <Card
-                key={path}
-                path={path}
-                images={images}
-                tags={tags}
-                {...otherProps}
+          <div className="cardpage">
+            {posts.length === 0 ? <div>No posts.</div> : null}
+            {posts.map(
+              ({
+                node: {
+                  frontmatter: { images, tags, path, ...otherProps },
+                },
+              }) => (
+                <Card
+                  key={path}
+                  path={path}
+                  images={images}
+                  tags={tags}
+                  {...otherProps}
+                />
+              )
+            )}
+            <div className="pagination">
+              <Pagination
+                count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+                page={page}
+                size="large"
+                onChange={handleChange}
+                style={{
+                  listStyle: "none",
+                  color: "primary",
+                  marginBottom: "100px",
+                }}
               />
-            )
-          )}
-          <Pagination
-            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-            page={page}
-            size="large"
-            onChange={handleChange}
-            style={{
-              listStyle: "none",
-              color: "primary",
-              marginBottom: "100px",
-            }}
-          />
-        </div>
+            </div>
+          </div>
+        </LargeWrapper>
       </PostsWrapper>
     </>
   );

@@ -4,7 +4,6 @@ import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
 import { CONTENT_PER_PAGE } from "~/constants";
-
 import Grid from "@material-ui/core/Grid";
 import { Link } from "gatsby";
 import Pagination from "@material-ui/lab/Pagination";
@@ -85,36 +84,38 @@ const TaggedList = ({ data, location }) => {
               </Grid>
             ))}
           </Grid>
-        </LargeWrapper>
-        <div className="cardpage">
-          {posts.length === 0 ? <div>No posts.</div> : null}
-          {posts.map(
-            ({
-              node: {
-                frontmatter: { images, tags, path, ...otherProps },
-              },
-            }) => (
-              <Card
-                key={path}
-                path={path}
-                tags={tags}
-                images={images}
-                {...otherProps}
+          <div className="cardpage">
+            {posts.length === 0 ? <div>No posts.</div> : null}
+            {posts.map(
+              ({
+                node: {
+                  frontmatter: { images, tags, path, ...otherProps },
+                },
+              }) => (
+                <Card
+                  key={path}
+                  path={path}
+                  tags={tags}
+                  images={images}
+                  {...otherProps}
+                />
+              )
+            )}
+            <div className="pagination">
+              <Pagination
+                count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+                page={page}
+                size="large"
+                onChange={handleChange}
+                style={{
+                  listStyle: "none",
+                  color: "primary",
+                  marginBottom: "100px",
+                }}
               />
-            )
-          )}
-          <Pagination
-            count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-            page={page}
-            size="large"
-            onChange={handleChange}
-            style={{
-              listStyle: "none",
-              color: "primary",
-              marginBottom: "100px",
-            }}
-          />
-        </div>
+            </div>
+          </div>
+        </LargeWrapper>
       </PostsWrapper>
     </>
   );

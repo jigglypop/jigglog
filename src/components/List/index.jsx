@@ -6,7 +6,6 @@ import getPosts from "~/utils/getPosts";
 import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "../../components/parallax/common/moon.webp";
-import styled from "styled-components";
 import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 import PostsWrapper from "../Common/PostsWrapper";
@@ -40,34 +39,36 @@ const List = ({ data, location }) => {
               <div className="jb-text">BLOG LIST</div>
               <div className="jb-under">블로그 모든 글 목록</div>
             </div>
+            {posts.map(
+              ({
+                node: {
+                  frontmatter: { images, tags, path, ...otherProps },
+                },
+              }) => (
+                <Card
+                  key={path}
+                  path={path}
+                  images={images}
+                  tags={tags}
+                  {...otherProps}
+                />
+              )
+            )}
+            <div className="pagination">
+              <Pagination
+                count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+                page={page}
+                size="large"
+                onChange={handleChange}
+                style={{
+                  listStyle: "none",
+                  color: "primary",
+                  marginBottom: "100px",
+                }}
+              />
+            </div>
           </ImageWrapper>
         </LargeWrapper>
-        {posts.map(
-          ({
-            node: {
-              frontmatter: { images, tags, path, ...otherProps },
-            },
-          }) => (
-            <Card
-              key={path}
-              path={path}
-              images={images}
-              tags={tags}
-              {...otherProps}
-            />
-          )
-        )}
-        <Pagination
-          count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-          page={page}
-          size="large"
-          onChange={handleChange}
-          style={{
-            listStyle: "none",
-            color: "primary",
-            marginBottom: "100px",
-          }}
-        />
       </PostsWrapper>
     </>
   );

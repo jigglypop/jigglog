@@ -51,7 +51,6 @@ const ImageWrapper = styled.div`
   }
   @media (max-width: 1000px) {
     margin-top: 0px;
-
     .jb-wrap {
       width: 300px;
       margin: 10px auto;

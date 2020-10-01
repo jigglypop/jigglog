@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Truncate from "react-truncate";
-import { FaTags } from "react-icons/fa";
-import formattedDate from "~/utils/formattedDate";
+// import Truncate from "react-truncate";
+// import { FaTags } from "react-icons/fa";
+// import formattedDate from "~/utils/formattedDate";
 import styled from "styled-components";
 
 const Article = styled.div`

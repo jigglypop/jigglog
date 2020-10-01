@@ -7,7 +7,6 @@ const TagItem = styled.div`
   padding-right: 6px;
   padding-bottom: 3px;
   padding-top: 3px;
-
   border-radius: 10px;
   h1 {
     font-size: 10px;

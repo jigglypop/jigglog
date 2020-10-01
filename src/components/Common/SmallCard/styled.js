@@ -11,7 +11,6 @@ export const StyledArticle = styled.div`
   padding: 0 16px 16px;
   font-size: 30px;
   font-weight: 800;
-
   vertical-align: top;
   @media (max-width: 414px) {
     margin: 0 0 16px;
@@ -19,24 +18,19 @@ export const StyledArticle = styled.div`
     width: 100%;
     border-bottom: 1px solid #eee;
   }
-
   a {
     color: ${({ theme: { color } }) => color};
-
     h3 {
       font-size: 20px;
       font-weight: 700;
     }
-
     p {
       padding: 24px 0 16px;
       font-size: 16px;
-
       span {
         white-space: nowrap;
       }
     }
-
     small {
       margin: 0 0 0 4px;
       font-size: 14px;

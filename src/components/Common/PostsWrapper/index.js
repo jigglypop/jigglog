@@ -5,10 +5,8 @@ const PostsWrapper = styled.div`
   margin: auto;
   padding-top: 10vw;
   padding-bottom: 10vw;
-
   padding-left: 3vw;
   padding-right: 3vw;
-
   max-width: 100%;
   font-size: 0;
 
