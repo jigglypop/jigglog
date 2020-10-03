@@ -12,154 +12,177 @@ images: ["images/1.jpg"]
 
 > 2020 정보 처리 기사 SQL 응용 입니다. 정처기 공부를 할 때 활용하세요.
 
-# 1. DDL - CREATE TABLE
+
+
+# 1. DDL
 
 ---
 
-- `DDL(데이터 정의어)`
-- DB 구조, 데이터 형식, 접근 방식 등 DB를 구축하거나 수정할 목적으로 사용하는 언어
+* `DDL` : _DB 구조, 데이터 형식, 접근 방식 등 DB를 구축하거나 수정할 목적으로 사용하는 언어_
 
-  - DDL은 번역한 결과가 데이터 사전이라는 특별한 파일에 여러 개의 테이블로서 저장
-  - CREATE SCHEMA, CREATE DOMAIN, CREATE TABLE, CREATE VIEW, CREATE INDEX, ALTER TABLE, DROP
+- DDL은 번역한 결과가 데이터 사전이라는 특별한 파일에 여러 개의 테이블로서 저장 (CREATE SCHEMA, CREATE DOMAIN, CREATE TABLE, CREATE VIEW, CREATE INDEX, ALTER TABLE, DROP)
 
-- CREATE TABLE : 테이블을 정의하는 명령문
+- `CREATE TABLE`  : 테이블을 정의하는 명령문
+  - `PRIMARY KEY` : 기본키로 사용할 속성 또는 속성의 집합을 지정
+  - `UNIQUE` : 대체키로 사용할 속성 또는 속성의 집합을 지정하는 것으로 UNIQUE로 지정한 속성은 중복된 값을 가질 수 없음
+  - `ON DELETE` : 참조 테이블의 튜플이 삭제되었을 때 기본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)
+  - `ON UPDATE` : 참조 테이블의 참조 속성 값이 변경되었을 때 본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)
+  - `CONSTRAINT` : 제약 조건의 이름을 지정. 이름을 지정할 필요가 없으면 CHECK절만 사용하여 속성 값에 대한 제약 조건을 명시
+  - `CHECK` : 속성 값에 대한 제약 조건을 정의
 
 ```sql
-CREATE TABLE 테이블명
-  (속성명 데이터_타입 [DEFAULT 기본값] [NOT NULL], … [, PRIMARY KEY(기본키_속성명, …)]
-  [, UNIQUE(대체키_속성명, …)]
-  [, FOREIGN KEY(외래키_속성명, …)] [REFERENCES 참조테이블(기본키_속성명, …)] [ON DELETE 옵션]
-  [ON UPDATE 옵션]
-  [, CONSTRAINT 제약조건명] [CHECK (조건식)]);
+CREATE TABLE 학생(
+    이름 VARCHAR(15) NOT NULL, 
+    학번 CHAR(8), 
+    전공 CHAR(8), 
+    성별 VARCHAR(1), 
+    생년월일 DATE, 
+    PRIMARY KEY(학번), 
+    FOREIGN KEY(전공) REFERENCES 학과(학과코드)
+ON DELETE SET NULL
+ON UPDATE CASCADE, 
+CONSTRAINT 생년월일제약 CHECK(생년월일>='1980-01-01'));
 ```
-
-- `PRIMARY KEY` : 기본키로 사용할 속성 또는 속성의 집합을 지정
-- `UNIQUE` : 대체키로 사용할 속성 또는 속성의 집합을 지정하는 것으로 UNIQUE로 지정한 속성은 중복된 값을 가질 수 없음
-- `ON DELETE` : 참조 테이블의 튜플이 삭제되었을 때 기본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)
-- `ON UPDATE` : 참조 테이블의 참조 속성 값이 변경되었을 때 본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)
-- `CONSTRAINT` : 제약 조건의 이름을 지정. 이름을 지정할 필요가 없으면 CHECK절만 사용하여 속성 값에 대한 제약 조건을 명시
-- `CHECK` : 속성 값에 대한 제약 조건을 정의
 
 * 다른 테이블을 이용한 테이블 정의 : 기존 테이블의 정보를 이용해 새로운 테이블을 정의
 
 ```sql
-CREATE TABLE 신규테이블명 AS SELECT 속성명[, 속성명,
-…] FROM 기존테이블명;
+CREATE TABLE 재학생 
+AS SELECT 학번, 이름
+FROM 학생;
 ```
 
-# 2. DDL - CREATE VIEW
-
----
-
-- 뷰(View)를 정의하는 명령문
+* `CREATE VIEW ` : 뷰(View)를 정의하는 명령문
+  * SELECT문을 서브 쿼리로사용하여 SELECT문의 결과로서 뷰를 생성
+  * 서브 쿼리인 SELECT문에는 UNION이나 ORDER BY절을 사용할 수 없음
+  * 속성명을 기술하지 않으면 SELECT문의 속성명이 자동으로 사용
 
 ```sql
-CREATE VIEW 뷰명[(속성명[, 속성명, …])]
-ASSELECT 문
+CREATE VIEW 건축공학과(이름, 학번)
+AS SELECT 이름, 학번
+FROM 학생
+WHERE 전공='건축';
 ```
 
-- SELECT문을 서브 쿼리로사용하여 SELECT문의 결과로서 뷰를 생성
-- 서브 쿼리인 SELECT문에는 UNION이나 ORDER BY절을 사용할 수 없음
-- 속성명을 기술하지 않으면 SELECT문의 속성명이 자동으로 사용
-
-# 3. DDL - ALTER TABLE
-
----
-
-- 테이블에 대한 정의를 변경
+* `ALTER TABLE` : 테이블에 대한 정의를 변경
+  * `ADD` : 새로운 속성(열)을 추가
+  *  `MODIFY` : 특정 속성의 정의를 변경
+  * `DROP COLUMN` : 특정 속성을 삭제
 
 ```sql
-ALTER TABLE 테이블명 ADD 속성명데이터_타입[DEFAULT‘기본값’];
-ALTER TABLE 테이블명 ALTER| MODIFY 속성명[SETDEFAULT ‘기본값’];
-ALTER TABLE 테이블명 DROP COLUMN 속성명[CASCADE];
+ALTER TABLE 학생 ADD 학년 VARCHAR(3);
+ALTER TABLE 학생 MODIFY 학번 VARCHAR(10) NOT NULL;
 ```
 
-- `ADD` : 새로운 속성(열)을 추가
-- `ALTER` | `MODIFY` : 특정 속성의 정의를 변경
-- `DROP COLUMN` : 특정 속성을 삭제
-
-# 4. DDL - DROP TABLE
-
----
-
-- 기본 테이블 제거
+* `DROP` : 기본 테이블 제거
+  * `CASCADE` : 제거할 요소를 참조하는 다른 모든 개체를 함께 제거. 즉 주 테이블의 데이터 제거시 각 외래키와 관계를 맺고 있는 모든 데이터를 제거하는 참조 무결성 제약 조건을 설정하기 위해 사용
+  * `RESTRICTED` : 다른 개체가 제거할 요소를 참조중일 때는 제거를 취소
 
 ```sql
-DROP TABLE 테이블명 [CASCADE | RESTRICTED];
+DROP TABLE 학생 CASCADE;
 ```
 
-- `CASCADE` : 제거할 요소를 참조하는 다른 모든 개체를 함께 제거. 즉 주 테이블의 데이터 제거시 각 외래키와 관계를 맺고 있는 모든 데이터를 제거하는 참조 무결성 제약 조건을 설정하기 위해 사용
-- `RESTRICTED` : 다른 개체가 제거할 요소를 참조중일 때는 제거를 취소
 
-# 5. DCL - GRANT / REVOKE
+
+# 2. DCL
 
 ---
 
-- `DCL(데이터 제어어)`
-- 데이터의 보안, 무결성, 회복, 병행 제어 등을 정의
-
+- `DCL(데이터 제어어)` : 데이터의 보안, 무결성, 회복, 병행 제어 등을 정의
   - DCL은 데이터베이스 관리자(DBA)가 데이터 관리를 목적으로 사용
   - GRANT, REVOKE, COMMIT, ROLLBACK, SAVEPOINT
-
 - `GRANT / REVOKE`
   - 데이터베이스 관리자가 데이터베이스 사용자에게 권한을 부여하거나 취소
-  - GRANT : 권한 부여
-  - REVOKE : 권한 취소
+  - `GRANT` : 권한 부여
+  - `REVOKE` : 권한 취소
 - 사용자등급 지정 및 해제
+  - `DBA ` : 데이터베이스 관리자
+  - `RESOURCE` : 데이터베이스 및 테이블 생성 가능자
+  - `CONNECT` : 단순 사용자
 
 ```sql
-GRANT 사용자등급 TO 사용자_ID_리스트 [IDENTIFIED BY 암호];
-REVOKE 사용자등급 FROM 사용자_ID_리스트;
+GRANT RESOURCE TO NABI
+-- 사용자 ID가 NABI인 사람에게 데이터베이스 및 테이블 생성 가능 권한 부여
+GRANT CONNECT TO STAR;
+-- 사용자 ID가 STAR인 사람에게 단순 사용자 권한 부여
+REVOKE 사용자등급 FROM 사용자_ID_리스트
 ```
 
 - 테이블 및 속성에 대한 권한 부여 및 취소
+  - 권한 종류 : ALL, SELECT, INSERT, DELETE, UPDATE, ALTER
+  - `WITH GRANT OPTION` : 부여받은 권한을 다른 사용자에게 다시 부여할 수 있는 권한을 부여
+  - `GRANT OPTION FOR` : 다른 사용자에게 권한을 부여할 수 있는 권한을 취소
+  - `CASCADE` : 권한 취소 시 권한을 부여받았던 사용자가 다른 사용자에게 부여한 권한도 연쇄적으로 취소
 
 ```sql
-GRANT 권한_리스트 ON 개체 TO 사용자 [WITH GRANT OPTION];
-REVOKE [GRANT OPTION FOR] 권한_리스트 ON 개체
-FROM 사용자 [CASCADE];
+GRANT ALL ON 고객 TO NABI WITH GRANT OPTION
+-- 사용자 ID가 NABI인 사람에게 테이블에 대한 모든 권한과 다른사람에 대한 권한 부여
+GRANT ALL ON 학생 TO YDH;
+-- YDH에게 학생 테이블의 모든 권한 부여
+GRANT DELETE ON 강좌 TO YDH WITH GRANT OPTION;
+-- YDH에게 강좌 테이블의 삭제 권한과 삭제 권한을 다른 사람에게 부여할 수 있는 권한 부여
+REVOKE SELECT, INSERT, DELETE ON 교수 FROM YDH
+-- YDH에게 부여된 교수에 대한 SELECT, INSERT, DELETE 권한 취소
+REVOKE UPDATE ON 수강 FROM YDH CASCADE
+-- YDH에 부여된 UPDATE 권한과 권한 부여 권한, 다른사람에게 부여한 권한 모두 취소
+REVOKE GRANT OPTION FOR UPDATE ON 고객 FROM STAR;
+-- 사용자 ID가 STAR 인 사람에게 부여한 고객 테이블에 대한 권한 중 UPDATE 권한을 다른 사람에게 부여할 수 있는 권한만 취소
 ```
-
-- 권한 종류 : ALL, SELECT, INSERT, DELETE, UPDATE, ALTER
-- `WITH GRANT OPTION` : 부여받은 권한을 다른 사용자에게 다시 부여할 수 있는 권한을 부여
-- `GRANT OPTION FOR` : 다른 사용자에게 권한을 부여할 수 있는 권한을 취소
-- `CASCADE` : 권한 취소 시 권한을 부여받았던 사용자가 다른 사용자에게 부여한 권한도 연쇄적으로 취소
-
-# 6. COMMIT / ROLLBACK / SAVEPOINT
-
----
 
 - `COMMIT` : 트랜잭션이 성공적으로 끝나면 데이터베이스가 새로운 일관성 상태를 가지기 위해 변경된 모든 내용을 데이터베이스에 반영하여야 할 때
 - `ROLLBACK` : 아직 COMMIT되지 않은 변경된 모든 내용들을 취소하고 데이터베이스를 이전 상태로 되돌림
 - `SAVEPOINT` : 트랜잭션 내에 ROLLBACK 할 위치인 저장점을 지정하는 명령어, 저장점을 지정할 때는 이름을 부여하며, ROLLBACK 시 지정된 저장점까지의 트랜잭션 처리 내용이 취소
 
-# 7. DML - 삽입, 삭제, 갱신문
+
+
+# 3. DML
 
 ---
 
-- `DML(데이터 조작어)`
-  - 데이터베이스 사용자가 응용 프로그램이나 질의어를 통해 저장된 데이터를 실질적으로 관리하는데 사용되는 언어
+- `DML(데이터 조작어)` : 데이터베이스 사용자가 응용 프로그램이나 질의어를 통해 저장된 데이터를 실질적으로 관리하는데 사용되는 언어
   - SELECT, INSERT, DELETE, UPDATE
 
 * `삽입문(INSERT INTO)` : 기본 테이블에 새로운 튜플을 삽입
 
 ```sql
-INSERT INTO 테이블명(속성명1, 속성명2,… )
-VALUES (데이터1, 데이터2,… );
+INSERT INTO 사원(이름, 부서) 
+VALUES('YDH','인터넷')
+
+ -- 사원 테이블에 (이름-YDH, 부서-인터넷) 입력
+ 
+ INSERT INTO 사원 (이름, 부서, 생일, 주소, 기본급) 
+ VALUES ('YDH', '기획', '2020-10-03', '대전', 90);
+ 
+ -- 사원 테이블에 ('YDH', '기획', '2020-10-03', '대전', 90) 삽입
+ 
+ INSERT INTO 편집부원(이름, 생일, 주소, 기본급)
+ SELECT 이름, 생일, 주소, 기본급 FROM 사원
+ WHERE 부서='편집';
+ 
+ -- 사원 테이블에 있는 편집부의 모든 튜플을 편집부원(이름, 생일, 주소, 기본급) 테이블에 삽입
 ```
 
 - `삭제문(DELETE FROM)` : 기본 테이블에 있는 튜플들 중에서 특정 튜플을 삭제
 
 ```sql
 DELETE
-FROM 테이블명 [WHERE 조건];
+FROM 사원
+WHERE 이름='YDH1';
+
+-- 사원 테이블에서 이름이 YDH1인 튜플 삭제
+
+DELETE 
+FROM 사원
+-- 사원 테이블의 모든 레코드 삭제
 ```
 
 - `갱신문(UPDATE SET)` :기본 테이블에 있는 튜플들 중에서 특정 튜플의 내용을 변경
 
 ```sql
-UPDATE 테이블명
-SET 속성명 = 데이터[, 속성명=데이터] [WHERE 조건];
+UPDATE 사원
+SET 주소='세종',기본급 = 기본급 + 90
+WHERE 이름='YDH2';
+-- 사원 테이블에서 YDH2의 주소를 세종으로, 기본급을 90만원 인상
 ```
 
 # 8. DML - SELECT
@@ -251,6 +274,24 @@ ON 테이블명1.속성명 = 테이블명2.속성명;
 
 * _이벤트 : (DECLARE / BIGIN / END)_
 
+```plsql
+CREATE TABLE 대학교
+( 
+    학교 VARCHAR2(30),
+    성적 NUMBER(3),
+    학과 VARCHAR2(30)
+);
+commit;
+```
+
+* 기본 형식
+  * `DECLARE` :프로시저 명칭, 변수, 인수, 데이터 타입 정의
+  * `BEGIN / END` : 프로시저의 시작과 종료
+  * `CONTROL` : 조건문 / 반복문 삽입되어 순차처리
+  * `SQL` : DML, DCL이 삽입되어 데이터 관리를 위한 CRUD 수행
+  * `EXCEPTION` : BEGIN ~ END 안의 구문 실행 시 예외가 발생하면 이를 처리하는 방법 정의
+  * `TRANSACTION` : 수행된 데이터 작업들을 DB에 적용할지 취소할지 결정
+
 ```sql
 DECLARE (필수)
 BEGIN (필수)
@@ -264,29 +305,36 @@ END (필수)
 - 생성
 
 ```sql
-CREATE [OR REPLACE] PROCEDURE 프로시저명(파라미터)
-[지역변수 선언]
+CREATE OR REPLACE PROCEDURE EX_PROC(
+    P_성적 IN NUMBER,
+    P_학과 IN VARCHAR2
+)
+IS 
+P_학교 VARCHAR2(30) := '서울대학교';
 BEGIN
-  프로시저 BODY;
-END;
+    INSERT INTO 대학교(학교, 성적, 학과) VALUES (P_학교, P_성적, P_학과);
+    EXCEPTION
+        WHEN PROGRAM_ERROR THEN
+            ROLLBACK;
+    COMMIT;
+END EX_PROC;
 ```
 
 - 실행
 
 ```sql
-EXECUTE 프로시저명;
-EXEC 프로시저명;
-CALL 프로시저명;
-
+EXECUTE EX_PROC(500,'물리학과');
+EXEC EX_PROC(500,'물리학과');
+CALL EX_PROC(500,'물리학과');
 ```
 
 - 제거
 
 ```sql
-DROP PROCEDURE 프로시저명;
+DROP PROCEDURE EX_PROC;
 ```
 
-# 10. SQL - 트리거(Trigger)
+# 10. 트리거(Trigger)
 
 ---
 
@@ -307,23 +355,22 @@ END (필수)
 - 생성
 
 ```sql
-CREATE [OR REPLACE] TRIGGER 트리거명 [동작시기 옵션]
-  [동작 옵션] ON 테이블명
-REFERENCING [NEW | OLD] AS 테이블명
+CREATE TRIGGER EX_TRIG BEFORE INSERT ON 대학교
+REFERENCING NEW AS NEW_TABLE
 FOR EACH ROW
-[WHEN 조건식]
-BEGIN
-  트리거 BODY;
-END;
+WHEN (NEW_TABLE.학년 IS NULL)
+    BEGIN
+        :NEW_TABLE.학년 := 1;
+    END;
 ```
 
 - 제거
 
 ```sql
-DROP TRIGGER 트리거명;
+DROP TRIGGER EX_TRIG;
 ```
 
-# 10. SQL - 사용자 정의 함수
+# 10. 사용자 정의 함수
 
 ---
 
@@ -368,6 +415,130 @@ UPDATE 테이블명 SET 속성명 = 함수명;
 ```sql
 DROP FUNCTION 함수명;
 ```
+
+# 제어문
+
+---
+
+절차형 SQL은 SQL 명령어가 서술된 순서에 따라 위에서 아래로 차례대로 실행되는데, 이러한 진행 순서를 변경하기 위해 사용하는 명령문
+
+* `IF문` : 조건에 따라 실행할 문장을 달리하는 제어문
+
+```plsql
+ -- IF 단일
+DECLARE 
+    X INT := 20;
+BEGIN
+    IF X > 10 THEN
+        DBMS_OUTPUT.PUT_LINE('TRUE');
+    END IF;
+END;
+
+-- TRUE
+
+-- IF / ELSE
+DECLARE 
+    X INT := 10;
+BEGIN
+    IF X > 10 THEN
+        DBMS_OUTPUT.PUT_LINE('TRUE');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('FALSE');        
+    END IF;
+END;
+
+-- FALSE
+
+-- IF / ELSIF / ELSE
+
+DECLARE 
+    X INT := 0;
+BEGIN
+    IF X > 20 THEN
+        DBMS_OUTPUT.PUT_LINE('TRUE20');
+    ELSIF X > 10 THEN
+        DBMS_OUTPUT.PUT_LINE('TRUE10');   
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('FALSE');        
+    END IF;
+END;
+
+-- FALSE
+```
+
+* `LOOP` : 조건에 따라 실행할 문장을 수행하는 제어문
+
+```PLSQL
+DECLARE
+    I INT := 0;
+    I_SUM INT := 0;
+BEGIN
+    LOOP
+         I := I+1;
+         I_SUM :=I_SUM + I;
+         EXIT WHEN I >= 10;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE(I_SUM);
+END;
+-- 55
+```
+
+* `FOR LOOP` : 초기값부터 종료값까지 증가하면서 실행할 문장 반복 수행
+
+```plsql
+DECLARE
+    I_SUM INT := 0;
+BEGIN
+    FOR I IN 1..10
+    LOOP
+        I_SUM := I_SUM + I;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE(I_SUM);
+END;
+
+-- 55
+```
+
+* `WHILE LOOP` : 조건이 참인 동안 실행할 문장을 반복 수행
+
+```plsql
+DECLARE
+	I INT := 0;
+	I_SUM INT := 0;
+BEGIN
+    WHILE I < 10
+    LOOP
+        I := I+1;
+        I_SUM := I_SUM + I;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE(I_SUM);
+END;
+```
+
+* `CONTINUE` : 반복문의 실행을 제어하기 위해 사용하는 예약어
+
+```plsql
+BEGIN
+    FOR I IN 1..3 LOOP
+        DBMS_OUTPUT.PUT_LINE(I);
+        DBMS_OUTPUT.PUT_LINE('HELLO');
+        CONTINUE WHEN I = 2;
+        DBMS_OUTPUT.PUT_LINE('WORLD');
+    END LOOP;
+END;
+
+
+1
+HELLO
+WORLD
+2
+HELLO
+3
+HELLO
+WORLD
+```
+
+
 
 # 11. SQL - 커서(Cursor)
 
