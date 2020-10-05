@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const ButtonInline = styled.div``;
+
 export const PostWrapper = styled.div`
   margin: auto;
   padding: 10px 0 0;
@@ -178,7 +180,7 @@ export const PostContent = styled.div`
   }
   strong {
     margin-top: 100px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 800;
   }
   li {
@@ -194,6 +196,7 @@ export const PostContent = styled.div`
     font-size: 18px;
   }
   em {
+    visibility: ${(props) => props.lines};
     line-height: 1.2em;
     font-weight: 1000;
     margin-top: 18px;
@@ -220,6 +223,14 @@ export const PostContent = styled.div`
   }
   hr {
     margin-bottom: 30px;
+  }
+  code {
+    visibility: ${(props) => props.answer};
+  }
+  del {
+    visibility: ${(props) => props.dels};
+    text-decoration: none;
+    color: gray;
   }
 
   @media (max-width: 1000px) {
@@ -263,9 +274,11 @@ export const PostContent = styled.div`
     tr,
     td,
     span,
-    strong,
     em {
       font-size: 10px;
+    }
+    strong {
+      font-size: 14px;
     }
   }
 `;
@@ -273,7 +286,6 @@ export const PostContent = styled.div`
 export const PrintTitle = styled.div`
   font-size: 15px;
   font-weight: 800;
-
   margin: 5px;
   text-shadow: 3px 3px 30px white;
 `;
@@ -332,6 +344,12 @@ export const ImageWrapper = styled.div`
     }
   }
 `;
+export const WarpVisible = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+`;
 
 export const Visible = styled.div`
   position: sticky;
@@ -339,8 +357,28 @@ export const Visible = styled.div`
   display: block;
   align-items: center;
   text-align: center;
+  h4 {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  @media (max-width: 1200px) {
+    h4 {
+      font-size: 10px;
+      font-weight: 800;
+    }
+  }
   @media (max-width: 992px) {
     display: none;
+  }
+  .lineblock {
+    display: inline-block;
+  }
+  .smallcircle {
+    display: inline-block;
+    padding-left: 30px;
+    font-weight: 800;
+    color: greenyellow;
+    vertical-align: middle;
   }
 `;
 

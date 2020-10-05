@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { render } from "react-dom";
 import PropTypes from "prop-types";
-
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
 import Bio from "~/components/Bio";
@@ -13,12 +12,13 @@ import {
 } from "~/constants";
 import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
-import styled from "styled-components";
 import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
 import { FaPrint } from "react-icons/fa";
+import { BsCircle, BsCircleFill } from "react-icons/bs";
+
 import Clearfix from "~/components/Common/Clearfix";
 import {
   PostWrapper,
@@ -31,6 +31,8 @@ import {
   VisibleTable,
   ComponentInPost,
   ImageWrapper,
+  ButtonInline,
+  WarpVisible,
 } from "./styled";
 
 const PostTemplate = ({
@@ -173,6 +175,30 @@ const PostTemplate = ({
   const printPage = useCallback(() => {
     global.print();
   }, []);
+  const [answer, setAnswer] = useState("");
+  const blankAnswer = useCallback(() => {
+    if (answer === "") {
+      setAnswer("hidden");
+    } else {
+      setAnswer("");
+    }
+  }, [answer]);
+  const [lines, setLines] = useState("");
+  const blankLines = useCallback(() => {
+    if (lines === "") {
+      setLines("hidden");
+    } else {
+      setLines("");
+    }
+  }, [lines]);
+  const [dels, setDels] = useState("hidden");
+  const blankDels = useCallback(() => {
+    if (dels === "") {
+      setDels("hidden");
+    } else {
+      setDels("");
+    }
+  }, [dels]);
   return (
     <>
       <Helmet>
@@ -205,6 +231,72 @@ const PostTemplate = ({
           <Grid item lg={2} md={2} sm={false} xs={false}>
             <Visible>
               <Bio color={"black"} />
+              <WarpVisible>
+                <div className="lineblock">
+                  <Button type="button" onClick={blankAnswer}>
+                    <h4>블록가리기</h4>
+                  </Button>
+                </div>
+                <div className="lineblock">
+                  {answer == "hidden" ? (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircleFill />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircle />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </WarpVisible>
+              <WarpVisible>
+                <div className="lineblock">
+                  <Button type="button" onClick={blankLines}>
+                    <h4>밑줄가리기</h4>
+                  </Button>
+                </div>
+                <div className="lineblock">
+                  {lines == "hidden" ? (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircleFill />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircle />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </WarpVisible>
+              <WarpVisible>
+                <div className="lineblock">
+                  <Button type="button" onClick={blankDels}>
+                    <h4>요약가리기</h4>
+                  </Button>
+                </div>
+                <div className="lineblock">
+                  {dels == "hidden" ? (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircleFill />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="lineblock">
+                      <div className="smallcircle">
+                        <BsCircle />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </WarpVisible>
             </Visible>
             <script
               data-ad-client="ca-pub-4040588049793807"
@@ -215,14 +307,18 @@ const PostTemplate = ({
 
           <Grid item lg={8} md={8} sm={12} xs={12}>
             <ClearMobile>
-              <Clearfix>
-                <Button type="button" onClick={printPage}>
-                  <FaPrint />
-                  <PrintTitle>PRINT</PrintTitle>
-                </Button>
-              </Clearfix>
+              <ButtonInline>
+                <Clearfix>
+                  <div>
+                    <Button type="button" onClick={printPage}>
+                      <FaPrint />
+                      <PrintTitle>PRINT</PrintTitle>
+                    </Button>
+                  </div>
+                </Clearfix>
+              </ButtonInline>
             </ClearMobile>
-            <PostContent>
+            <PostContent answer={answer} lines={lines} dels={dels}>
               <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
               <hr style={{ marginBottom: "50px" }} />
               <div
