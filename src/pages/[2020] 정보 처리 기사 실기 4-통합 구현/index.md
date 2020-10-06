@@ -72,50 +72,36 @@ images: ["images/1.jpg"]
 | 직접연계 | 연계 및 통합 구현이 단순하고 용이<br/>개발 비용이 저렴 개발 기간이 짧음<br/> 중간 매개체 없는 직접 연계로 데이터 연계 처리 성능이 뛰어남                                                                    | 송·수신 시스템간 결합도가 높아 시스템 변경시 오류가 발생 <br/>보안을 위한 암호화, 복호화 처리와 비즈니스 로직을 적용하기 어려움<br/> 연계 및 통합이 가능한 시스템 환경이 제한적 |
 | 간접연계 | 서로 다른 네트워크, 프로토콜 등 다양한 환경의 연계 및 통합이 가능<br/> 송·수신 시스템 간 인터페이스가 변경되어도 오류 없이 서비스가 가능<br/> 보안 품질 보장과 비즈니스 처리를 위한 로직(Logic)을 쉽게 반영 | 연계 메커니즘과 아키텍처가 복잡<br/> 중간 매개체로 인해 성능이 저하<br/> 개발 및 적용 기간이 비교적 긺                                                                          |
 
-# 5. 연계 메커니즘의 직접 연계 방식
-
-___
-
-
-
 - `직접 연계 방식`: _중간 매개체 없이 송·수신 시스템이 직접 연계하는 방식_
-- `DB Link` : DB에서 제공하는 DB Link 객체를 이용하는 방식
-- `DB Connection` : 수신 시스템의 WAS(웹 애플리케이션 서버)에서 송신 시스템의 DB로 연결해주는 방식
-  - _WAS_: 정적인 콘텐츠를 처리하는 웹 서버와 달리 사용자의 요구에 따라 변하는 동적인 콘텐츠를 처리하기 위해 사용되는 미들웨어
-- `API(Application Programming Interface)/Open API` :데이터를 송신 시스템의 DB에서 읽어와 제공하는 애플리케이션 프로그래밍 인터페이스
-  - _API(Application Programming Interface)_ : 운영체제나 프로그래밍 언어 등에 있는 라이브러리를 응용프로그램 개발 시 이용할 수 있도록 규칙 등에 대해 정의해 놓은 인터페이스
-  - _Open API_ : API의 기능을 누구나 무료로 사용하여 프로그램을 개발하거나 Open API에 새로운 API를 추가할 수 있도록 공개된 API
-- `JDBC(Java DataBase Connectivity)` : Java에서 DB에 접근하여 데이터를 삽입, 삭제, 수정, 조회할 수 있도록 Java와 DB를 연결해 주는 방식
+  - `DB Link` : DB에서 제공하는 DB Link 객체를 이용하는 방식
+  - `DB Connection` : 수신 시스템의 WAS(웹 애플리케이션 서버)에서 송신 시스템의 DB로 연결해주는 방식
+    - _WAS_: 정적인 콘텐츠를 처리하는 웹 서버와 달리 사용자의 요구에 따라 변하는 동적인 콘텐츠를 처리하기 위해 사용되는 미들웨어
+  - `API(Application Programming Interface)/Open API` :데이터를 송신 시스템의 DB에서 읽어와 제공하는 애플리케이션 프로그래밍 인터페이스
+    - _API(Application Programming Interface)_ : 운영체제나 프로그래밍 언어 등에 있는 라이브러리를 응용프로그램 개발 시 이용할 수 있도록 규칙 등에 대해 정의해 놓은 인터페이스
+    - _Open API_ : API의 기능을 누구나 무료로 사용하여 프로그램을 개발하거나 Open API에 새로운 API를 추가할 수 있도록 공개된 API
+  - `JDBC(Java DataBase Connectivity)` : Java에서 DB에 접근하여 데이터를 삽입, 삭제, 수정, 조회할 수 있도록 Java와 DB를 연결해 주는 방식
 
-# 6. 연계 메커니즘의 간접 연계 방식
+* `간접 연계 방식`: _송·수신 시스템 사이에 중간 매개체를 두어 연계하는 방식_
+  * `연계 솔루션` : EAI 서버와 송·수신 시스템에 설치되는 클라이언트(Client)를 이용하는 방식
+  * `ESB(Enterprise Service Bus)` : 애플리케이션 간 연계, 데이터 변환, 웹 서비스 지원 등 표준 기반의 인터페이스를 제공하는 방식
+  * `Web Service` : 웹 서비스(Web Service)에서 WSDL과 UDDI, SOAP 프로토콜을 이용하여 연계하는 방식
+  * `Socket` : 서버는 통신을 위한 소켓을 생성하여 포트를 할당하고 클라이언트의 통신 요청 시 클라이언트와 연결하여 통신하는 네트워크 기술
 
----
+* 연계 메커니즘의 구성
+  * `연계 데이터 생성 및 추출` : 연계 솔루션과 관계없이 응용 프로그램이나 DB 등 응용 시스템에서 연계 데이터를 생성하고 추출하는 것
+  * `코드 매핑 및 데이터 변환` : 송신 시스템에서 사용하는 코드를 수신 시스템에서 사용하는 코드로 매핑 및 변환하는 것
+  * `인터페이스 테이블 또는 파일 생성` : 연계 데이터를 인터페이스 테이블이나 파일 형식으로 생성하는 것
+  * `로그(Log) 기록` : 송·수신 시스템에서 수행되는 모든 과정에 대한 결과 및 오류에 대한 정보를 로그 테이블이나 파일에 기록하는 것
+  * `연계 서버 또는 송·수신 어댑터`
 
-- `간접 연계 방식`: _송·수신 시스템 사이에 중간 매개체를 두어 연계하는 방식_
-- `연계 솔루션` : EAI 서버와 송·수신 시스템에 설치되는 클라이언트(Client)를 이용하는 방식
-- `ESB(Enterprise Service Bus)` : 애플리케이션 간 연계, 데이터 변환, 웹 서비스 지원 등 표준 기반의 인터페이스를 제공하는 방식
-- `Web Service` : 웹 서비스(Web Service)에서 WSDL과 UDDI, SOAP 프로토콜을 이용하여 연계하는 방식
-- `Socket` : 서버는 통신을 위한 소켓을 생성하여 포트를 할당하고 클라이언트의 통신 요청 시 클라이언트와 연결하여 통신하는 네트워크 기술
+  * _연계 서버_ : 송·수신 시스템 중 한 곳에 설치하며 인터페이스 테이블 또는 파일의 데이터를 전송 형식에 맞게 변환하고 송·수신을 수행하는 등 송·수신과 관련된 모든 처리 수행
+  * _송신 어댑터_ : 송신 시스템에 설치하며, 인터페이스 테이블 또는 파일의 데이터를 전송 형식에 맞도록 변환하고 송신 수행
+  * _수신 어댑터_ : 수신 시스템에 설치하며, 송신 시스템으로부터 수신한 데이터를 인터페이스 테이블이나 파일로 생성
 
-# 7. 연계 메커니즘의 구성
+  * `전송` : 송신 시스템에서 생성된 연계 데이터를 네트워크 환경에 맞는 데이터로 변환한 후 수신 시스템으로 보내는 것
+  * `운영 DB에 연계 데이터 반영` : 수신된 인터페이스 테이블 또는 파일 구조의 데이터를 변환 프로그램을 이용하여 수신 시스템의 운영 DB에 반영하는 것
 
----
-
-* `연계 데이터 생성 및 추출` : 연계 솔루션과 관계없이 응용 프로그램이나 DB 등 응용 시스템에서 연계 데이터를 생성하고 추출하는 것
-
-* `코드 매핑 및 데이터 변환` : 송신 시스템에서 사용하는 코드를 수신 시스템에서 사용하는 코드로 매핑 및 변환하는 것
-* `인터페이스 테이블 또는 파일 생성` : 연계 데이터를 인터페이스 테이블이나 파일 형식으로 생성하는 것
-* `로그(Log) 기록` : 송·수신 시스템에서 수행되는 모든 과정에 대한 결과 및 오류에 대한 정보를 로그 테이블이나 파일에 기록하는 것
-* `연계 서버 또는 송·수신 어댑터`
-
-- _연계 서버_ : 송·수신 시스템 중 한 곳에 설치하며 인터페이스 테이블 또는 파일의 데이터를 전송 형식에 맞게 변환하고 송·수신을 수행하는 등 송·수신과 관련된 모든 처리 수행
-- _송신 어댑터_ : 송신 시스템에 설치하며, 인터페이스 테이블 또는 파일의 데이터를 전송 형식에 맞도록 변환하고 송신 수행
-- _수신 어댑터_ : 수신 시스템에 설치하며, 송신 시스템으로부터 수신한 데이터를 인터페이스 테이블이나 파일로 생성
-
-* `전송` : 송신 시스템에서 생성된 연계 데이터를 네트워크 환경에 맞는 데이터로 변환한 후 수신 시스템으로 보내는 것
-* `운영 DB에 연계 데이터 반영` : 수신된 인터페이스 테이블 또는 파일 구조의 데이터를 변환 프로그램을 이용하여 수신 시스템의 운영 DB에 반영하는 것
-
-# 8. 연계 장애 및 오류처리 구현
+# 5. 연계 장애 및 오류처리 구현
 
 ---
 
@@ -136,13 +122,13 @@ ___
 | 연계 데이터 오류   | 유효하지 않은 일자                                                | 연계 프로그램 로그를 확인하여 데이터 보정 후 재전송                        |
 
 - _연계 서버 장애 주요 체크리스트_
-- 연계 서버 엔진에서 기록되는 로그 파일 내용
-- 연계 서버의 정상적 실행 여부
-- 연계 서버의 데이터 전송 변환 과정의 오류 여부
-- 송수신 대상 시스템의 정상 연결 여부(아이피 및 포트 접근 가능 여부)
-- 송수신 연계 테이블 접근 권한 등
+  - 연계 서버 엔진에서 기록되는 로그 파일 내용
+  - 연계 서버의 정상적 실행 여부
+  - 연계 서버의 데이터 전송 변환 과정의 오류 여부
+  - 송수신 대상 시스템의 정상 연결 여부(아이피 및 포트 접근 가능 여부)
+  - 송수신 연계 테이블 접근 권한 등
 
-# 9. 연계 모듈의 구현 환경
+# 6. 연계 모듈의 구현 환경
 
 ---
 
@@ -160,27 +146,133 @@ ___
   - _WSDL(Web Services Description Language)_ : 웹 서비스명, 서비스 제공 위치, 프로토콜 등 웹 서비스에 대한 상세 정보를 XML 형식으로 구현
   - _UDDI(Universal Description, Discovery and Integration)_ : WSDL을 등록하여 서비스와 서비스 제공자를 검색하고 접근하는데 사용됨
 
-# 10. XML(eXtensible Markup Language)
+# 7. XML(eXtensible Markup Language)
 
 ---
 
 - _웹브라우저 간 HTML 문법이 호환되지 않는 문제와 SGML의 복잡함을 해결하기 위하여 개발된 다목적 마크업 언어_
 - 유니코드를 기반으로 다국어를 지원, 사용자가 직접 문서의 태그를 정의할 수 있으며, 다른 사용자가 정의한 태그 사용 가능
-- XML의 구성
+- XML의 첫 문단
+  - _< ? ? >_ : 문서의 첫 문단은 ?기호 포함
+  - _version_ : XML 문서에서 사용된 XML버전 명시
+  - _encoding_ : XML 의 언어셋을 명시한다. 기본값은 UTF-8 이다
+  - _standalone_ : XML문서를 해석할 때 외부 문서의 참조 여부 명시
 
 ```xml
 <xml version="버전" encoding="언어셋" standalone="yes|no"?>
 ```
 
 - XML 요소(Element)의 구성
+  - `요소 이름` : 요소의 이름으로 사용자가 임의로 지정 가능
+  - `속성='속성값'` : 요소와 관련된 속성과 속성값으로, 생략이 가능하다
+  - `내용` : 요소의 내용으로, 생략이 가능하다
 
 ```xml
 <요소이름 속성1="속성값 1" 속성 2="속성값 2"… > 내용</요소이름>
 ```
 
+* XML 예제
+
+```xml
+<?xml version="1.0" encoding="euc-kr" standalone="yes" ?>
+<student school="한국대학교">
+    <member>
+        <name>YDH</name>
+        <year>2</year>
+        <major>인공지능</major>
+    </member>
+    <member>
+        <name>YDJ</name>
+        <year>3</year>
+        <major>웹</major>
+    </member>
+</student>
+```
+
+* `SOAP(Simple Object Access Protocol)` : 컴퓨터 네트워크 상에서 HTTP / HTTPS, SMTP 등을 이용하여 XML을 교환하기 위한 통신 규약
+
+  * _Envelope_ : XML문서를 SOAP 메시지로 정의하는 것으로, 메시지에 대한 요소와 접근 방법을 정의
+
+  * _Header_ : SOAP 메시지에 포함되는 웹 서비스를 정의하는 것으로, 생략이 가능하다
+  * _Body)_ : 실제 SOAP 메시지가 포함됨
+
+*  SOAP 요청
+
+```xml
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+<soap:Body xmlns:m="http://www.example.org/stock">
+    <m:GetStockPrice>
+    <m:StockName>IBM</m:StockName>
+    </m:GetStockPrice>
+</soap:Body>
+</soap:Envelope>
+```
+
+* SOAP 응답
+
+```xml
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+<soap:Body xmlns:m="http://www.example.org/stock">
+    <m:GetStockPriceResponse>
+    <m:Price>34.5</m:Price>
+    </m:GetStockPriceResponse>
+</soap:Body>
+</soap:Envelope>
+```
+
+
+
+* `WSDL(Web Services Description Language)` : 웹 서비스 관련 서식이나 프로토콜 등을 표준적인 방법으로 기술하고 게시하기 위한 언어
+* XML로 작성되며 UDDL의 기초
+
+```xml
+<description>
+	<types>
+        자료형 정의
+    </types>
+    <message>
+        인수와 리턴값 정의
+    </message>
+    <portType>
+        <operation>
+        	메소드 정의
+        </operation>
+    </portType>
+    <binding>
+ 		통신방법 정의
+    </binding>
+    <service>
+        <port>웹 서비스 URL</port>
+    </service>
+</description>
+```
+
+
+
+* `RESTful 프로토콜 ` : HTTP와 REST의 원칙을 사용하여 구성되는 웹 서비스로, HTTP와 자원을 관리하는데 사용되는 웹 서비스 API의 집합
+
 - `JSON(JavaScript Object Notation)` : 속성-값 쌍(Attribute-Value Pairs)으로 이루어진 데이터 객체를 전달하기 위해 사람이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷\_, 비동기 처리에 사용되는 AJAX에서 XML을 대체하여 사용
 
-# 11. 연계 테스트
+- `AJAX (Asynchronous Javascript And XML)`: JavaScript의 라이브러리중 하나이며 Asynchronous Javascript And Xml(비동기식 자바스크립트와 xml)의 약자이다. 브라우저가 가지고있는 XMLHttpRequest 객체를 이용해서 전체 페이지를 새로 고치지 않고도 페이지의 일부만을 위한 데이터를 로드하는 기법 이며 JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는 기술이다.
+
+  
+
+# 8. 연계 테스트
 
 ---
 
