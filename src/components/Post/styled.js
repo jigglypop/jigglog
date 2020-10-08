@@ -452,3 +452,6 @@ export const ComponentInPost = styled.div`
     }
   }
 `;
+
+
+
