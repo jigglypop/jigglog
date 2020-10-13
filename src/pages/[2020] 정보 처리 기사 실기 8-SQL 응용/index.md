@@ -185,7 +185,7 @@ WHERE 이름='YDH2';
 -- 사원 테이블에서 YDH2의 주소를 세종으로, 기본급을 90만원 인상
 ```
 
-# 8. DML - SELECT
+# 4. DML - SELECT(1)
 
 ---
 
@@ -427,7 +427,7 @@ WHERE 여가활동.경력 >= 10 AND 사원.이름 = 여가활동.이름;
 
 
 
-# 8. DML - SELECT
+# 5. DML - SELECT(2)
 
 
 
@@ -587,7 +587,7 @@ GROUP BY CUBE(부서, 상여내역);
 
 
 
-# 9. DML - JOIN
+# 6. DML - JOIN
 
 ---
 
@@ -609,7 +609,7 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, …
 FROM 테이블명1 JOIN 테이블명2 USING(속성명);
 ```
 
-# 9. DML - OUTER JOIN
+# 7. DML - OUTER JOIN
 
 ---
 
@@ -630,7 +630,7 @@ FROM 테이블명1 RIGHT OUTER JOIN 테이블명2
 ON 테이블명1.속성명 = 테이블명2.속성명;
 ```
 
-# 9. 프로시저(Procedure)
+# 8. 프로시저(Procedure)
 
 ---
 
@@ -699,7 +699,7 @@ CALL EX_PROC(500,'물리학과');
 DROP PROCEDURE EX_PROC;
 ```
 
-# 10. 트리거(Trigger)
+# 9. 트리거(Trigger)
 
 ---
 
@@ -781,7 +781,7 @@ UPDATE 테이블명 SET 속성명 = 함수명;
 DROP FUNCTION 함수명;
 ```
 
-# 제어문
+# 11. 제어문
 
 ---
 
@@ -905,7 +905,7 @@ WORLD
 
 
 
-# 11. SQL - 커서(Cursor)
+# 12. SQL - 커서(Cursor)
 
 ---
 
