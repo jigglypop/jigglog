@@ -21,13 +21,14 @@ images: ["images/1.jpg"]
 
 ```c
 #include <stdio.h>
-main() {
+int main() {
 	int i, j;
     for (i = 2; i <= 4; i++) {
     	for (j = 5; j <= 7; j++) {
     	}
     }
     printf("%d × %d = %d", j, i, i * j);
+    return 0;
 }
 
 // 8 x 5 = 40
@@ -55,12 +56,13 @@ main() {
 #include <stdio.h>
 
 int main() {
-	int x = 100, y = 10;
-  do {
-  x -= y;
-      printf("%d, %d\n", x, y++);
-	}
-  while (x > 30);
+    int x = 100, y = 10;
+    do {
+        x -= y;
+        printf("%d, %d\n", x, y++);
+    }
+    while (x > 30);
+    return 0;
 }
 // 25, 15
 ```
@@ -94,6 +96,7 @@ int main() {
 		}
 	}
 	printf("%d", value);
+    return 0;
 }
 
 // 4
@@ -111,8 +114,9 @@ public class Example {
         int[ ] a = {90,100,80,70,60,50,30};
         int hap = 0;
         float avg;
-        for (int i : a)
+        for (int i : a){
             hap = hap + i;
+        }
         avg = (float)hap / a.length;
         System.out.printf("%d, %.2f", hap, avg);
 	}
@@ -147,7 +151,9 @@ public class Test {
     static int[] arr() {
         int a[] = new int[4];
         int b = a.length;
-        for(int i = 0; i < b; i++) a[i] = i;
+        for(int i = 0; i < b; i++){
+			a[i] = i;            
+        }
         return a;
     }
 
@@ -160,6 +166,8 @@ public class Test {
 }
 // 0 1 2 3
 ```
+
+
 
 # 5. 포인터
 
@@ -207,7 +215,9 @@ main() {
         b *= 3;
     }
     // int a[5] = {81,27,9,3,1}
-	for (int i = 4; i > -1; i -= 2) sum += *(a + i);
+	for (int i = 4; i > -1; i -= 2){
+        sum += *(a + i);
+    }
 	printf("%d", sum);
 }
 // 91
@@ -227,21 +237,23 @@ main() {
 void align(int a[]) {
 	int temp;
 	for (int i = 0; i < 4; i++)
-		for (int j = 0; j < 4 - i; j++)
-        if (a[j] > a[j+1]) {
-				  temp = a[j];
-          a[j] = a[j+1];
-				  a[j+1] = temp;
-        }
-			}
+		for (int j = 0; j < 4 - i; j++){
+            if (a[j] > a[j+1]) {
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+            }
 		}
+	}
 }
 
 int main() {
 	int a[] = { 85, 75, 50, 100, 95 };
 	align(a);
-	for (int i = 0; i < 5; i++)
-    printf("%d ", a[i]);
+	for (int i = 0; i < 5; i++){
+    	printf("%d ", a[i]);
+    }
+    return 0;
 }
 // 50 75 85 95 100
 ```
@@ -267,7 +279,7 @@ factorial(int n) {
 int main( )
 {
 	printf("%d", factorial(5));
-  return 0;
+	return 0;
 }
 // 120
 ```
@@ -284,7 +296,7 @@ hrd(num) {
 }
 int main( ) {
 	hrd(5);
-  return 0;
+	return 0;
 }
 // 5 4 3 2 1
 ```
@@ -300,22 +312,22 @@ int main( ) {
 ```java
 public class Example {
     static class AAclass {
-    	int i;
-      int j;
+        int i;
+        int j;
     }
     public static void main(String[ ] args) {
-      AAclass myVal = new AAclass( );
-      myVal.i = 10;
-      myVal.j = 20;
-      myVal = change(myVal);
-      System.out.printf("i=%d, j=%d\n", myVal.i, myVal.j);
+        AAclass myVal = new AAclass( );
+		myVal.i = 10;
+		myVal.j = 20;
+		myVal = change(myVal);
+		System.out.printf("i=%d, j=%d\n", myVal.i, myVal.j);
     }
     static AAclass change(AAclass myVal) {
-      int temp;
-      temp = myVal.i;
-      myVal.i = myVal.j;
-      myVal.j = temp;
-      return myVal;
+		int temp;
+		temp = myVal.i;
+		myVal.i = myVal.j;
+		myVal.j = temp;
+		return myVal;
     }
 }
 ```
@@ -326,7 +338,9 @@ public class Example {
 public class Test {
     static int power(int data, int exp) {
         int i, result = 1;
-        for(i = 0; i < exp; i++) result = result * data;
+        for(i = 0; i < exp; i++){
+			result = result * data;
+        }
         return result;
     }
     public static void main(String args[]) {
@@ -389,4 +403,4 @@ print(x[1].find('i') + val[2])
 | java.net  | 네트워크와 관련된 기능을 제공(Socket, URL, InetAddress)                                                                                  |
 | java.awt  | 사용자 인터페이스(UI)와 관련된 기능(rame, Panel, Dialog, Button, Checkbox)                                                               |
 
-#
+

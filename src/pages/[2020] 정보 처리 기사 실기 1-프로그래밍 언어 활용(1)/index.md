@@ -95,7 +95,7 @@ printf(" %-5.2f ", 200.2);
 - `객체 변수 생성`
 
   - Scanner : 입력에 사용할 객체 변수를 생성할 때 사용하는 클래스 이름
-  - scin : 객체 변수명
+  - sc : 객체 변수명
   - new : 객체 생성 예약어
   - Scanner( ) : 클래스의 이름
   - System.in : 표준 입력장치(키보드)를 의미
@@ -114,9 +114,9 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner scin = new Scanner(System.in);
-		int a = scin.nextInt();
-		int b = scin.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 
 		if (a>b) System.out.println(">");
 		else if(b>a) System.out.println("<");
