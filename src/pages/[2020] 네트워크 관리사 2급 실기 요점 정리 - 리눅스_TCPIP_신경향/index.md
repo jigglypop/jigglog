@@ -69,27 +69,23 @@ images: ["images/1.jpg"]
 
 * 2) 다음 괄호 안에 들어갈 IP 주소는 무엇인가? : ` (가) 8, (나) 16, (다) 24`
 
-  * 10.x.x.x / (가)
-  * 172.16.x.x / (나)
-  * 192.168.9.x / (다)
+```bash
+* 10.x.x.x / (가)
+* 172.16.x.x / (나)
+* 192.168.9.x / (다)
+```
 
-  
 
 * 3 ) 아래의 내용과 그림에서 설명하는 것은 무엇인가?  : `라우터(Router)`
-  * OSI 7 Layer에서 3계층인 네트워크 계층에 속한다
-  * LAN과 LAN 또는 LAN과 WAN 등을 연결하는 인터네트워킹 장치이다
-  * 네트워크 계층 간을 연결하여 접속할 호스트의 최적 경로를 설정한다
 
-[![img](http://postfiles8.naver.net/MjAxODExMDJfMjk5/MDAxNTQxMTQ2MDYwMDgw.4sJrSimbMGCAybJ_gFOlXxMOR84Rc34Vgno6bqXgJ2Ug.LAfC8ZWVN0Tbchlx0zdvufpaBcJvIfXbIQiSk96dXhsg.JPEG.jbhjjjjj/image_7817796371541145588086.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
-
-
+```bash
+* OSI 7 Layer에서 3계층인 네트워크 계층에 속한다
+* LAN과 LAN 또는 LAN과 WAN 등을 연결하는 인터네트워킹 장치이다
+* 네트워크 계층 간을 연결하여 접속할 호스트의 최적 경로를 설정한다
+```
 
 
 * 4 ) 아래<그림>은 Switching Hub에서 해당 포트를 물리적 변경을 하지 않고, 소프트웨어에 의해 LAN 망을 구분한 것이다. 이것을 무엇이라 하는가? : ` VLAN`
-
-[![img](http://postfiles5.naver.net/MjAxODExMDJfNDMg/MDAxNTQxMTQ2MDYyNjI5.l-l1kKufgZFsWHXOXjWFamGXaHWT2SKF9gB-oSLs88sg.IRIWGoKJZ1F1XyzldTWubemr0xktnPh3aPD6xKq3ljUg.JPEG.jbhjjjjj/image_7389594641541145588048.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
-
-
 
 * 5 ) Cisco Router의 Interface란 Router 접속 포트를 말한다. 아래 <설명>의 (가)와 (나)에 해당하는 용어는 무엇인가? : 
 
@@ -103,68 +99,74 @@ images: ["images/1.jpg"]
 
 * 6 ) 다음 <네트워크 구성도>를 보고 <설명>하는 기술이 무엇인가? : `클러스터링(Clustering)`
 
-  * 서버 한대 이상이 고장 났을 경우에도 서비스 운영이 계속되도록 여러 대의 서버를 서로 연결하여 거대한 하나의 시스템으로 보이게 만드는 기술이다.
-  * 두 개 이상의 서버를 마치 하나의 서버처럼 작동하도록 서로 연결함으로써 병렬 처리나 부하 배분 및 공장 대비 등의 여러 가지 목적에 맞도록 대비하기 위해서 사용하는 기술이다.
+```bash
+* 서버 한대 이상이 고장 났을 경우에도 서비스 운영이 계속되도록 여러 대의 서버를 서로 연결하여 거대한 하나의 시스템으로 보이게 만드는 기술이다.
+* 두 개 이상의 서버를 마치 하나의 서버처럼 작동하도록 서로 연결함으로써 병렬 처리나 부하 배분 및 공장 대비 등의 여러 가지 목적에 맞도록 대비하기 위해서 사용하는 기술이다.
+```
 
 
 
 * 7 ) 아래 <설명>에 해당하는 인터넷 사기 수법은? : `피싱`
 
-  * (A) 은/는 불특정 다수의 이메일 사용자에게 신용카드나 은행 계좌 정보에 문제가 발생해 수정이 필요하다는 거짓 이메일을 발송해 가짜 웹사이트로 유인하여 관련 금융기관의 신용카드 정보나 계좌 정보 등을 빼내는 해킹 기법이다.
+```bash
+* (A) 은/는 불특정 다수의 이메일 사용자에게 신용카드나 은행 계좌 정보에 문제가 발생해 수정이 필요하다는 거짓 이메일을 발송해 가짜 웹사이트로 유인하여 관련 금융기관의 신용카드 정보나 계좌 정보 등을 빼내는 해킹 기법이다.
+* A) 은/는 점점 거 복잡한 미끼들을 사용해서 사용자의 금융 정보와 패스워드를 낚는다는 데서 유래되었다.
+```
 
-  * A) 은/는 점점 거 복잡한 미끼들을 사용해서 사용자의 금융 정보와 패스워드를 낚는다는 데서 유래되었다.
 
-    
 
 * 8 ) 아래 <설명>에 해당하는 인터넷 사기 수법은? : ` 파밍`
 
-  * (B) 은/는 합법적으로 사용되고 있는 사용자의 도메인을 탈취하거나 도메인 네임 시스템(DNS) 이름을 속여 사용자들이 진짜 사이트로 온 인하도록 유인하여 개인 정보를 훔치는 새로운 수법이다.
+```bash
+* (B) 은/는 합법적으로 사용되고 있는 사용자의 도메인을 탈취하거나 도메인 네임 시스템(DNS) 이름을 속여 사용자들이 진짜 사이트로 온 인하도록 유인하여 개인 정보를 훔치는 새로운 수법이다.
+* (B) 은/는 아예 해당 사이트가 공식적으로 운영하고 있던 도메인 자체를 탈취하여 사용자들이 의심 없이 개인 ID, 패스워드, 계좌 정보 등을 빼내는 신종 해킹 기법이다.
+```
 
-  * (B) 은/는 아예 해당 사이트가 공식적으로 운영하고 있던 도메인 자체를 탈취하여 사용자들이 의심 없이 개인 ID, 패스워드, 계좌 정보 등을 빼내는 신종 해킹 기법이다.
 
-    
 
 * 9 ) 아래 <화면>을 보고 현재 사용하고 있는 IP Address와 SubnetMask 값을 답인 란에 입력하시오
-
 * `IP Address - 192.168.10.13, SubnetMask - 255.255.255.0`
 
-[![img](http://postfiles8.naver.net/MjAxODExMDJfOTMg/MDAxNTQxMTQ2MDY4MDM2.YHFtoHx5diQfi8kcXUf2i5kxdaYKWuVGGt1HusdZs8gg.MdguIVt1yinyINRnf2R8Li-ER32UB-qwiiFTE2q1Gjgg.JPEG.jbhjjjjj/image_4067460261541145587966.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
 * 10 ) <네트워크 구성도>의 (A)에 대한 <설명>이다. (A)는 무엇인가? : `AP`
 
-[![img](http://postfiles1.naver.net/MjAxODExMDJfODQg/MDAxNTQxMTQ2MDcwNDQz.dcpZIKSgkyvCb57WdYsm4UykaoV9YrLiVsJQbitI4hkg.bUGXXl0DzyGjXYWjMQQYTY4QrtPjF-1jkocDe4aPT8cg.JPEG.jbhjjjjj/image_9006084811541145587926.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
-
 
 
 * 11) 브리지나 스위치, 라우터 등 네트워크 장비에서 스패닝 트리 알고리즘을 사용하는 이유를 아래 <그림>과 <설명>을 참조하여 답하시오 : `루프방지`
-  * Segment a~d : 브리지, 라우터, 허브 또는 스위치 등에 의해 묶여 있는 네트워크의 한 부분을 말함.
-  *  B1 ~ B4 : 브리지(Bridge)
 
-[![img](http://postfiles15.naver.net/MjAxODExMDJfMTU3/MDAxNTQxMTQ2MDcyMTc2.ChdyONtdC6QxDNuN8YnZ2hhD0FFZWGv5Yk7AjLHeXwIg.-pxdyYDZOlA0FIDWImS1c6euhuRd8_gV0gheVkAaAQUg.JPEG.jbhjjjjj/image_8679295151541145587867.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+```BASH
+* Segment a~d : 브리지, 라우터, 허브 또는 스위치 등에 의해 묶여 있는 네트워크의 한 부분을 말함.
+* B1 ~ B4 : 브리지(Bridge)
+```
 
 
 
-* 12 ) 다음 <보기>중 서비스 포트 번호를 연결한 것이다. 틀린 것 두 개만 선택하시오
-* `FTP(21), POP3(110)`
-  * SSH - 21번     
-  * FTP - 22번
-  * Telnet - 23번   
-  * TFTP - 89번
-  * WWW - 80번   
-  * POP3 - 120번
-    
+
+
+* 12 ) 다음 <보기>중 서비스 포트 번호를 연결한 것이다. 틀린 것 두 개만 선택하시오`FTP(21), POP3(110)`
+
+```bash
+* SSH - 21번     
+* FTP - 22번
+* Telnet - 23번   
+* TFTP - 89번
+* WWW - 80번   
+* POP3 - 120번
+
+```
+
+
 
 * 13 ) 다음은 두 개의 네트워크가 서로 연결된 그림이다. <그림>에서 원형 안의 역할만 하는 장비는? : `Router`
-
-[![img](http://postfiles11.naver.net/MjAxODExMDJfMTUy/MDAxNTQxMTQ2MDc0Mjgz.7bUt14JYM2tK0s7PjIcV9dFLzOitNFis_YdPhp0ZUZgg.hhjHlm1gqfoGJCf_fB8bCFiwqh9i2jBh8OEcRB4teMAg.JPEG.jbhjjjjj/image_5603369891541145649076.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
 
 
 
 * 14 ) 아래 <네트워크 구성도>와 같은 환경에서 슈퍼넷(Supernet)을 구성하려고 한다. 이때 가능한 슈퍼넷 마스크(Supernetn Mask)에 해당하는 값을 보기에서 하나 선택하시오 : `255.255.252.0`
 
-[![img](http://postfiles8.naver.net/MjAxODExMDJfMjIw/MDAxNTQxMTQ2MDc2MzY0.K6vZlooUWHKD3DSi4En1WERH6ofsGNew3RgoL2HF8D4g.684IUgjRzkWKThYBNKCN5sbL4rIOhq-G_l3ObcPjcIIg.JPEG.jbhjjjjj/image_5824426241541145723963.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 * 15) 아래에서 OUI(Organizationally Unique Identifler)에 해당하는 값은? : ` 06-01-02`
 
@@ -177,20 +179,24 @@ images: ["images/1.jpg"]
   
 
 * 17 ) 아래 <그림>과 관련된 네트워크 기술은 무엇인가? : `VPN`
-  * 공중 통신망 기반 시설을 터널링 프로토콜과 보안 절차 등을 사용하여 개별 기업의 목적에 맞게 구성한 네트워크이다.
-  * 오직 한 회사에 의해서만 사용될 수 있는 자체망이나 전용회선과 대비되는 개념이다.
-  * 오늘날 회사들은 주로 엑스트라넷이나 넓은 지역에 퍼져있는 자사들 간의 인트라넷에 이 기술을 이용한다.
 
-  
+```bash
+* 공중 통신망 기반 시설을 터널링 프로토콜과 보안 절차 등을 사용하여 개별 기업의 목적에 맞게 구성한 네트워크이다.
+* 오직 한 회사에 의해서만 사용될 수 있는 자체망이나 전용회선과 대비되는 개념이다.
+* 오늘날 회사들은 주로 엑스트라넷이나 넓은 지역에 퍼져있는 자사들 간의 인트라넷에 이 기술을 이용한다.
+```
+
+
 
 * 18 ) 이것은 무엇인가 : SSL(Secure Socket Layer)
+  
   * 데이터를 안전하게 주고받기 위한 업계 표준 프로토콜이다.
   * 미국 넷스케이브 커뮤니케이션즈가 개발하였고, 마이크로소프트 사등 주요 웹 제품 업체가 채택하고 있다.
   * 웹서버뿐만 아니라 FTP 등 다른 TCP/IP 애플리케이션에 적용할 수 있으며, 인증 암호화 기능이 있다.
-  * URL 부분에서 HTTP:// 가 HTTPS://로 변경된다
-
+* URL 부분에서 HTTP:// 가 HTTPS://로 변경된다
   
 
+  
 * 19 ) 아래에서 설명하는 것은 무엇인가? : `Blretooth(블루투스)`
   * 무선 통신 기기 간에 근거리에서 저 전력으로 무선통신을 하기 위한 표준(IEEE802.15)
   * 인텔, IBM, 노키아, 에릭슨 등 업체 공동 개발
@@ -201,7 +207,7 @@ images: ["images/1.jpg"]
 
 *  20 )  아래의 Network Layer에서 동작되는 <프로토콜>은 무엇인가? : `ARP, RARP, ICMP, IGMP`
 
-[![img](http://postfiles10.naver.net/MjAxODExMDJfMTg2/MDAxNTQxMTQ2MDU3NDAz.-Eskd_aU0UDfdG-09j5acnPk68jZjx_Y_10BHgMnjKEg.Q7jaGhc3n6meIqCL08HWuOUO2WqcXCwnRy09DPcQoZQg.JPEG.jbhjjjjj/image_6707953101541145789275.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
@@ -283,7 +289,7 @@ images: ["images/1.jpg"]
 
 * 29 ) 아래 <그림>의 (A)는 OSI 7 Layer 모델에서 모든 계층의 기능(프로토콜 변환기)을 수행하는 장치이다. (A)는 무엇인가? : `Gateway`
 
-[![img](http://postfiles2.naver.net/MjAxODExMDJfMTYy/MDAxNTQxMTQ2NzQ2NTg4.1TaFvJfXh9UUDXuhg_ZrlXGXhpkXGepvSA19p96EaVYg.JCrSDjcXgP8UwGrLo2_uTpCEnccx7sgsmv3P6RV2Sngg.JPEG.jbhjjjjj/image_5605381931541146343013.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
@@ -297,7 +303,7 @@ images: ["images/1.jpg"]
 
 * 33 ) 아래 <네트워크 구성도>에서 슈퍼넷을 구성하고자 한다. 적합한 슈퍼넷 마스크는? : `255.255.252.0`
 
-[![img](http://postfiles10.naver.net/MjAxODExMDJfMjgw/MDAxNTQxMTQ2NzUxNTQ1.t40beJ-BJTMKUj2tcwRCN3p30Gu5VMz2Qp2neoUFbtcg.6w5WhPdRpXBKzF-dmo9EfTMW3Js8_goGv2zzDK0ctrcg.JPEG.jbhjjjjj/image_1823352781541146393099.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
@@ -305,13 +311,13 @@ images: ["images/1.jpg"]
 
 * 35 ) 아래 <홈 네트워크 구성도>의 (A)는 댁내 네트워크와 댁외 네트워크를 상호 접속 중재하는 장치이다. (A)에 들어갈 가장 적절한 장비는 무엇인가? : `홈 게이트웨이`
 
-[![img](http://postfiles1.naver.net/MjAxODExMDJfMzUg/MDAxNTQxMTQ2NzU2Njcy.Xip6IzqtvzFszjAWG8Lte2pDY0rbVnCr2rG4sFrZhwcg.dAA2hxA_v67MGlWk2QfjNm6Oqwmpv4snicHstsREEIEg.JPEG.jbhjjjjj/image_7472071611541146429207.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
 * 36 ) 이것은 아래 <그림>과 같이 무선 환경에서 사용되는 프로토콜이다. 채널의 반송파를 감지한 후 충돌이 일어나지 않도록 충돌을 회피하는 프로토콜은 무엇인가? : `CSMA/CA`
 
-[![img](http://postfiles3.naver.net/MjAxODExMDJfMjc1/MDAxNTQxMTQ2NzU5MDQ5.Ldp0BJ9lY3x0MffwbD5pvekehP910JwP-p7ok4ey7Usg.A6f0rLEojCgTmkw08qbymTfGSi1u7NYzCh-aquPcPW0g.JPEG.jbhjjjjj/image_3229430341541146441843.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
 
 
 
@@ -319,15 +325,15 @@ images: ["images/1.jpg"]
   * A Class : 10.0.0.0 ~ 10.255.255.255
   * B Class : 172.(가).0.0 ~ 172.(나).255.255
   * C Class : 192.(다).0.0 ~ 192.(다).255.255
-* `가(16), 나(31), 다(168)`
+*  `가(16), 나(31), 다(168)`
+*  38 ) 아래 <설명>을 보고 <네트워크 구성도>의 (A)를 적으시오 : `DMZ`
 
-* 38 ) 아래 <설명>을 보고 <네트워크 구성도>의 (A)를 적으시오 : `DMZ`
-  * 방화벽에 의해 보호받고 있는 네트워크에서 어쩔 수 없이 외부에 노출되어야 하는 서버들의 네트워크 지역
-  * (A) 지역에는 기본적으로 FTP, WEB, FILE 서버들 구성
-  * 관리자는 방화벽에서 FTP, WEB, FILE 서버의 서비스를 위해 네트워크 일부분을 해제
-  * 외부에 노출시켜야 하는 서버들을 한곳에 모아두고 네트워크를 따로 관리하여 보안 사고 시에도 내부 네트워크 PC들을 방화벽에 의해 안전하게 보호됨
-
-[![img](http://postfiles10.naver.net/MjAxODExMDJfMTMw/MDAxNTQxMTQ2NzM4NjE1.yq0qFo7sYKjJDpNbMJJLoQ_aWnShyTXLEmDAKKZyxyAg._b8uB3X9y0Wt5Pu0Q-haUlPrWv4s5vNErwHgF2x1rAog.JPEG.jbhjjjjj/image_9941018471541146474628.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+```BASH
+* 방화벽에 의해 보호받고 있는 네트워크에서 어쩔 수 없이 외부에 노출되어야 하는 서버들의 네트워크 지역
+* (A) 지역에는 기본적으로 FTP, WEB, FILE 서버들 구성
+* 관리자는 방화벽에서 FTP, WEB, FILE 서버의 서비스를 위해 네트워크 일부분을 해제
+* 외부에 노출시켜야 하는 서버들을 한곳에 모아두고 네트워크를 따로 관리하여 보안 사고 시에도 내부 네트워크 PC들을 방화벽에 의해 안전하게 보호됨
+```
 
 
 
@@ -395,8 +401,7 @@ images: ["images/1.jpg"]
   * (A)란 물리적인 네트워크 구성에 제한을 받지않고 네트워크 구성요소가 삭제나 변경이 발생 했을 경우 논리 네트워크를 구성함으로써 유연하게 대응 할 수 있는 LAN 기능
   * (A)는 네트워크 자원 액세스를 제한함으로써 보안을 향상시키고, Brodcast Domain의 크기를 줄여서 Brodcast Traffic량을 줄이는 효과를 발생하여, 전체적으로 네트워크 성능을 향상시킴
   *  (A)는 접속 포트나 MAC(IP) Address 또는 Protocol을 이용하여 그룹화 하는 방식을 사용.
-    
-
+  
 * 51) 아래 <설명>은 어떤 장비에 대한 설명인가 : `스테커블 또는 스테커블 스위치`
   * 백플레인이 훨씬 빨라지고 연결된 장비중 하나가 고장 나도 다른 장비에 영향을 주지 않는 등의 많은 장점을 가지고 있다.
   * 즉, 혼자일때 보다 여러 대가 스택으로 연결되면 훨씬 더 좋은 성능을 발휘하도록 하는게 (이것)의 특징이다
@@ -433,321 +438,7 @@ images: ["images/1.jpg"]
 
 
 
- 
 
-2 . IP와 Subnet Mask를 보고, 네트워크 아이디를 구하여라
-
-Ex - 1
-
-1) 172.168.100.2 / 19
-
-2) 148.120.210.12 / 18
-
-3) 212.254.70.180 / 25
-
-4) XXX.XXX.XXX.150 / 25
-
- 
-
-Ex - 2
-
-B클래스이며, IP는 172.168.102.5 Subnet은 255.255.224.0
-
- 
-
-Ex - 3
-
-162.128.1.1 / 18
-
-162.128.1.2 / 18
-
-....
-
-162.128.1.253 / 18
-
-162.128.1.254 / 18
-
- 
-
-위 문제는 서브넷 마스크의 개념과 네트워크 아이디를 구하는 법을 잘 알고있는지를 물어보는 것이다.
-
-
-
- 
-
-4 . IPv4와 IPv6을 비교하는 문제
-
-IPv4는 유니캐스트, 멀티캐스트 / 8씩 총 4부분이며 32비트
-
-IPv6은 애니캐스트 / 128비트
-
-
-
- 
-
-
-
- 
-
-12 . 빈칸이 주어지고, 거기에 해당되는 IP를 적어넣는 문제
-
-1) 아래는 사설망 IP에 사용되는 주소이다. 가, 나, 다에 들어갈 주소는?
-
-Class A 10.0.0.0 ~ 10.255.255.255
-
-Class B 172.(가).0.0 ~ 172.(나).255.255
-
-Class C 192.(다).0.0 ~ 192.(다).255.255
-
-`가 - 16, 나 - 31, 다 - 168`
-
-
-
- 
-
-
-
-
-
-1) IP와 서브넷 마스크 정보를 바탕으로 네트워크 ID(IP)를 구하시오.
-
-```bash
-172.150.72.1 / 255.255.224.0
-```
-
-
-
-먼저 172.150.72.1 / 255.255.224.0 요부분 255에서 224를 빼줍니다255 - 224 = 31 이죠
-
-범위는
-
-0~31
-
-32~63
-
-64~95
-
-96~127
-
-.
-
-.
-
-.
-
-~255
-
-이렇게 됩니다.
-
-72는 위에 범위 중 64~95에 해당하네요. 범위 중 앞에 숫자가 네트워크 ID가 됩니다.
-
-`172.150.64.0`
-
-
-
-2) 서브넷 마스크를 보고 네트워크 아이디를 구하라
-
-```bash
-172.168.100.2 / 19
-```
-
-서브넷마스크 19 bit = 255.255.224.0 입니다.
-
-( 11111111.11111111.11100000.0 )
-
-0을 제외한 제일 뒤쪽의 숫자를 256에서 빼줍니다
-
-256 - 224 = 32 (위에 문제 처럼 255에서 빼고 0~31,   32~63,  64~95 이런식으로 범위를 정해서 풀 수도 있어요 )서브넷마스크를 기반으로 범위를 찾고 해당하는 네트워크 아이디를 찾아줍니다
-
-[![img](https://mblogthumb-phinf.pstatic.net/MjAxOTAzMzBfMTE2/MDAxNTUzOTQyNzUzNjY5.qjixIq6-f676gq4nZndcenu2Hj5fwdPGWrZDOm4nA8Mg.AvwZzM7ZfP2VLQICCLH9Ot_u9miKlNdhOtcsBzQ7_eAg.PNG.hai0416/image.png?type=w800)](https://m.blog.naver.com/PostView.nhn?blogId=hai0416&logNo=221501400775&proxyReferer=https:%2F%2Fwww.google.com%2F#)
-
--문제에서의 IP는 172.168.100.2였습니다.100은 어느 범위에 해당할까요?
-
-`172.168.96.0`
-
-
-
-3) 호스트들의 IP중에서 
-
-네트워크 ID에 해당하는 값을 입력하시오
-
-[![img](https://mblogthumb-phinf.pstatic.net/MjAxOTAzMzBfOSAg/MDAxNTUzOTQzMDA0ODM5.VWHakOmdqa6kobiRX3A-ZrznNBzZ2LqcJzuY5mQ4iaYg.5i6MSQnrCwVWATd1-237p3v-xC-bSJnApf1CY3ssGNMg.PNG.hai0416/image.png?type=w80_blur)                                 ](https://m.blog.naver.com/PostView.nhn?blogId=hai0416&logNo=221501400775&proxyReferer=https:%2F%2Fwww.google.com%2F#)
-
-
-
--위 네트워크는 162.128.0.0 ~ 162.128.255.255 까지변하는 네트워크 입니다. 162.128은 변하지 않기 때문에 네트워크 ID에 해당하는 값입니다.
-
-`162.128`
-
-( 만약 네트워크 아이디를 물어봤다면 162.128.0.0 )
-
-
-
-4) 설명에 해당하는 Class는?
-
-```bash
-할당가능 네트워크 주소는 2^14개이다.
-할당가능 호스트 주소 수는 2^16개이다.
-( 앞의 식별코드 2비트는 네트워크 주소에서 제외된다 )
-```
-
-A 클래스 : 할당가능 네트워크 주소 수 = 2^7개
-
-할당가능 호스트 주소 수 = 2^24개
-
-B 클래스 : 할당가능 네트워크 주소 수 = 2^14개
-
-할당가능 호스트 주소 수 = 2^16개
-
-C 클래스 : 할당가능 네트워크 주소 수 = 2^21개
-
-할당가능 호스트 주소 수 = 2^8개
-
-`B 클래스`
-
-
-
-5) 계층별 프로토콜
-
-네트워크 계층 : `RARP,  ARP,  RIP,  ICMP,  IGMP`
-
-전송 계층 : `TCP, UDP`
-
-응용계층 : `SMTP, Telnet, FTP HTTP`
-
-
-
-6) 다음이 설명하는 네트워크 기술은?
-
-인터넷망과 같은 공중망을 사설망처럼 이용해 회선 비용을 크게 절감할 수 있는 기업통신 서비스.
-
-`VPN ( 가상사설망 )`
-
-
-
-7) IDS(침입탐지시스템)은 크게 오용탐지와 비정상행위탐지 두가지로 분류된다.
-
-오용탐지에 해당하는 특징은 무엇인가?
-
-`새로운 침입유형은 탐지 불가능하다. 비정상행위를 정의하고 이에 대항하는 행동을 찾는다.`
-
-비정상행위탐지
-
-`새로운 침입유형들을 탐지 가능하다. 정상행위를 정의하고 이를 벗어나는 행동을 찾는다.`
-
-
-
-8) 네트워크에서 공격 서명을 찾아내어 자동으로 모종의 조치를 취함으로써 비정상적인 트래픽을 중단시키는 보안 솔루션.
-
-수동적인 방어 개념의 침입탐지시스템(IDS)와 달리 침입 경고 이전에 공격을 중단시키는데에 초점을 두었다. 비정상 행위를 통제
-
-`IPS (침입차단시스템)`
-
-
-
-9) 네트워크 스위치의 어떤 한 포트에서 보이는 모든 네트워크 패킷 혹은 전체 VLAN을 모든 패킷들을 다른 모니터링 포트로 복제하는데 사용된다.
-
-`포트 미러링 `
-
-
-
-10) IP주소를 사용하는 것의 낭비를 막기 위해 모든 호스트에 공인 IP주소를 설정하는 대신, 내부적으로 사설 IP를 설정하여 사용하고, 인터넷에 접속할 때에만 공인 IP로 변환하는 기술.
-
-`NAT`
-
-
-
-11) 2개이상의 다른- 혹은 같은 종류의 통신망을 상호 접속하여 통신망 간 정보를 주고 받을 수 있게하는 기능의 단위 또는 장치
-
-`게이트웨이`
-
-
-
-12 ) Class별 주소
-
-ClassA : `0.0.0.0`
-
-ClassB : `128.0.0.0`
-
-ClassC : `192.0.0.0`
-
-ClassD : `224.0.0.0`
-
-ClassE : `240.0.0.0 `
-
-
-
-13) 데이터링크 계층 중  MAC계층에서 일하며 두 세그먼트 사이에서 데이터링크 계층간의 패킷 전송을 담당하는 장치는?
-
-`브릿지`
-
-
-
-14)  매니지먼트와 에이전트 사이에서 관리정보를 주고 받기 위한 프로토콜이며, 정보교환 단위는 메세지는?
-
-` SNMP`
-
-
-
-15) TCP/IP기반 네트워크 상에서 서버나 라우터가 에러나 예상치 못한 사건들을 보고할 목적으로 만들어진 프로토콜로 
-
-RFC792에 정의 되어있는 프로토콜은 무엇인가
-
-`ICMP`
-
-
-
-16) 동적디스크 볼륨 중 볼륨자체에서 하나의 디스크 손상시 다른 하드디스크의 data로 손상된 부분을 복구할 수 있는 내결함성을 지원하는 볼륨. 
-
-해당 볼륨의 종류는 RAID1과 RAID 0+1이 있다.( RAID 1 = 패리티가 없는 미러링 세트 )
-
-`미러링`
-
-
-
-17) 임의로 구성된 웹사이트를 통하여 이용자의 정보를 빼가는 해킹수법의 하나
-
-`스푸핑`
-
-
-
-18) 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있게 해주는 응용프로그램, 또는 그 프로토콜을 의미한다.
-
-`SSH`
-
-
-
-19) '스위칭'이라는 LAN기술을 기반으로 물리적 시간만 고려되었던 LAN분야에 가상이라는 개념을 도입한 것이다. 
-
-네트워크 구성에 대한 지리적 제한을 최소화 하면서 사용자가 원하는 최대한의 논리적인 네트워크를 구성할 수 있도록 수단을 제공한다.
-
-`VLAN, 가상랜`
-
-
-
-20) 무슨 클래스 인가?
-
-```bash
-Class의 IP Address는 처음 1개의 bit가 항상 0이다.
-할당가능 Network수는 2의7승, 127개이다.
-할당가능한 Host수는 2의24승, 16,777,216개이다.
-```
-
-`A 클래스`
-
-
-
-21) 서브넷마스크 255.255.224.0 주소를 기준으로 했을 때, 사용 가능한 서브넷 수는 몇 개인가?
-
-` 8개`
-
-( 256 - 224 = 32 , 256 / 32 = 8 )
-
-
-
-22) 이미 발견되어 있는 공격 패턴을 미리 입력해두고,해당하는 패턴을 탐지하는 기법. 알려진 기법 이외에는 탐지할 수 없기 때문에새로운 공격에는 비효율적이다. 다른 말로 Signature Base나 Knowledge Base로 불리운다.
-
-`오용 탐지 기법`
 
  
 
