@@ -21,603 +21,9 @@ images: ["images/1.jpg"]
 
 
 
-# 1. 라우터 (확인/변경)
 
----
 
-
-
-* 확인
-  * 인터페이스 정보를 확인하라
-
-  ```bash
-  enable
-  show interface
-  copy r s
-  ```
-
-  * 접속한 사용자를 확인하라
-
-  ```bash
-  enable
-  show user(s)
-  copy r s
-  ```
-
-  * 라우팅 테이블을 확인하라
-
-  ```bash
-  enable
-  show ip route
-  copy r s
-  ```
-
-  * 플래쉬를 확인하라
-
-  ```bash
-  enable
-  show flash
-  copy r s
-  ```
-
-  
-
-* _변경_
-  * 호스트 네임을 변경하라
-
-  ```bash
-  enable
-  config terminal
-  hostname ICQA
-  exit
-  copy r s
-  ```
-
-  * Ethenet 0 인터페이스를 설정하고, NVRAN에 저장하시오
-
-  http://blog.naver.com/limits2018/220429068419
-
-  ```bash
-  enable
-  config terminal
-  interface Ethernet 0
-  ip address 192.168.200.2 255.255.255.252
-  ip directed-broadcast
-  exit
-  exit
-  copy r s
-  ```
-
-  * Serial 0의 대역폭을 2048k로 설정하고, NVRAM에 저장하시오
-
-  http://blog.naver.com/limits2018/220429100392
-
-  ```bash
-  en
-  conf t
-  interface serial 0
-  bandwidth 2048
-  exit
-  exit
-  copy r s
-  ```
-
-  * Serial 0의 clock rate을 72k로 설정하고, NVRAM에 저장하시오
-
-  http://blog.naver.com/limits2018/220429100392
-
-  ```bash
-  en
-  conf t
-  int s0 - clock rate 72000
-  exit
-  exit
-  copy r s
-  ```
-
-  * Ethernet 0의 description을 설정하고 NVRAM에 저장하시오(Description : ICQA)
-
-  http://blog.naver.com/limits2018/220429147376
-
-  ```bash
-  en
-  conf t
-  int e0 - description ICQA
-  exit 
-  exit 
-  copy r s
-  ```
-
-  * Secondary 설정
-
-  http://blog.naver.com/limits2018/220429165281
-
-  Ethernet 0의 IP Address를 192.168.2.1/30과 192.168.3.1/30 Secondary로 설정하고 저장하시오
-
-  ```bash
-  en
-  conf t
-  interface ethernet 0 
-  ip address 192.168.2.1 255.255.255.252 
-  ip address 192.168.3.1 255.255.255.252 secondary
-  exit 
-  exit 
-  copy r s
-  ```
-
-  * Default-Gateway를 설정하고 저장하시오
-
-  http://blog.naver.com/limits2018/220429181934
-
-  IP : 192.168.0.10
-
-  ```bash
-  en 
-  conf t
-  ip default-gateway 192.168.0.10
-  exit
-  copy r s
-  ```
-
-  * 텔넷 패스워드 설정
-
-  http://blog.naver.com/limits2018/220429482496
-
-  Router1 Telnet에 접근하는 Password를 "TELPass"로 설정하고, 상태를 저장하시오
-
-  ```bash
-  en  
-  conf t
-  line vty 0 4
-  password TELPass
-  login
-  exit
-  exit
-  copy r s
-  ```
-
-  * 텔넷(콘솔) 자동종료 설정
-
-  http://blog.naver.com/limits2018/220429502079
-
-  telnet에 5분 50초 동안 신호가 없을 시 해당 세션을 자동으로 종료하도록 라우터를 설정하시오
-
-  ```bash
-  en
-  conf t
-  line vty 0 4
-  exec-timeout 05 50
-  login
-  exit
-  exit
-  copy r s
-  ```
-
-  * 콘솔 패스위드 설정
-
-  http://blog.naver.com/limits2018/220429515003
-
-  Router1 console의 패드워드를 ICQACon으로 설정하고 저장하시오
-
-  ```bash
-  en
-  conf t
-  line console 0
-  login
-  password ICQACon
-  exit
-  exit
-  copy r s
-  ```
-
-  * 활성화 설정
-
-  http://blog.naver.com/limits2018/220429521802
-
-  Router2의 Interface Serial 0을 활성화시키고 저장하시오
-
-  ```bash
-  en
-  conf t
-  interface serial 0
-  no shutdown
-  exit
-  exit
-  copy r s
-  ```
-
-  * 호스트(도메인)네임, 패스워드 설정
-
-  http://blog.naver.com/limits2018/220429534052
-
-  Hostname을 network2로 변경하고, console 0의 Password를 route5로 변경하고 login하라
-
-  ```bash
-  en
-  conf t
-  hostname network2
-  line console 0
-  password route5
-  login
-  exit
-  exit
-  copy r s
-  ```
-
-  * 도메인 네임 설정
-
-  ```bash
-  en
-  conf t
-  ip domain
-  name AAA
-  exit
-  copy r s
-  ```
-
-  
-
-
-
-
-
-# 2. Window 2008 Server R2
-
----
-
-
-
-유형 9가지 중 8 문제 출제
-
-1. TCP / IP Setting
-2. DNS Setting
-3. DHCP Setting
-4. IIS FTPServer Setting
-5. IIS WebServer Setting
-6. 계정추가
-7. SMTP Setting
-8. 로컬보안정책 Setting
-9. Service Setting
-
- 
-
-*  1 ) TCP/IP Setting(네트워크 속성)
-
-http://blog.naver.com/limits2018/220429907842
-
-```bash
-네트워크 환경을 아래와 같이 설정하시오
-IP Address : 10101100.00010000.10010110.01110011
-Subnet Mask : 22 bit
-Default Gateway : 192.168.100.254
-DNS Server : 200.100.100.200
-
-추가 Gateway : 192.168.100.253
-보조 DNS Servers : 201.100.100.201
-```
-
-
-
-* 10101100.00010000.10010110.01110011
-  * 10101100.00010000.10010110.01110011 
-  * (128+32+8+4) .   (16)    . (128+16+4+2) . (64+32+16+2+1)
-  * 172.16.150.115
-
-* SubnetMask  22bit -> 11111111.11111111.11111100.00000000 (255.255.252.0)
-  * A 클래스 기본값 (255.0.0.0)
-  * B 클래스 기본값 (255.255.0.0)
-  * C 클래스 기본값 (255.255.255.0)
-
-* Internet Protocol Version 4 (TCP/IP v4) 를 선택하고 속성 선택
-
-![img](http://postfiles15.naver.net/20150724_206/limits2018_1437706278969Cs1zv_PNG/%C4%B8%C3%B3.PNG?type=w1) 
-
-
-
-*  IP주소와 서브넷마스크, 기본 게이트웨이 기본 설정 DNS서버와 보조 DNS서버를 작성
-
-  ![img](http://postfiles16.naver.net/20150724_31/limits2018_143770644702890L0o_PNG/IP%B9%AE%C1%A6.PNG?type=w1) 
-
-
-
-* 고급 TCP/IP 설정 
-
-* 추가 탭
-
-  * TCP/IP 게이트웨이 주소 -> 기본 게이트웨이 주소를 설정해주고 추가
-
-  ![img](http://postfiles4.naver.net/20150724_99/limits2018_1437706589844cAyMk_PNG/IP%B9%AE%C1%A6_2.PNG?type=w1) 
-
-
-
- 
-
-*  2) DNS Setting
-
-http://blog.naver.com/limits2018/220430006406
-
-```bash
-아래의 설정값을 참고하여 DNS서버를 설정하시오
-@ IN SOA ns.icqa.or.kr admin.icqa.or.kr (
-10 ; Serial
-15분 ; Refresh
-10분 ; Retry
-1일 ; Expire
-1시간 ); Minimum
-www IN A 192.168.100.20
-ftp IN CNAME www
-```
-
-
-
-![img](http://postfiles2.naver.net/20150724_65/limits2018_1437710583087vTGX5_PNG/1.PNG?type=w1)
-
-
-
-풀이시작을 누르면 창이 하나 뜰텐데 - 정방향 조회 영역을 오른쪽클릭 합니다.
-
-그리고 새 영역을 누르면 새 영역 마법사가 시작될텐데- 다음 다음을 누릅니다**  ![img](http://postfiles10.naver.net/20150724_41/limits2018_1437710583598ilVN8_PNG/2.png?type=w1)*
-
-*******영역 이름을 적는 부분에서 icqa.or.kr 을 적은 뒤 다음X3 - 마침을 눌러줍니다.** ![img](http://postfiles10.naver.net/20150724_89/limits2018_1437710959349F9Fbz_PNG/3.png?type=w1)*
-
-**새 영역을 만들고나면 정방향 조회영역 앞에 +가 활성화 되어있을 것입니다.****그것을 누르면 icqa.or.kr라는 폴더가 나오는데- 그것을 오른쪽 클릭하고 속성을 들어갑니다.속성에서 위의 탭중 SOA(권한 시작) 탭으로 들어가면 오른쪽 창과 같이 나옵니다.여기서 일련번호, 주 서버, 책입자, 새로고침간격, 다시시도간격, 다음날짜이후에만료, 최소TTL을 설정해줍니다.**문제는 다음과 같았습니다.**@ IN SOA ns.icqa.or.kr (주 서버)  admin.icqa.or.kr (책임자) (10    ; Serial  (일련번호)15분   ; Refresh (새로고침 간격)10분   ; Retry   (다시시도 간격)1일   ; Expire  (다음 날짜 이후에 만료)1시간 ); Minimum (최소 TTL)**﻿﻿확인을 눌러주면 위 설정은 끝이납니다. 남은것은 이번 기출예제에서 처음 본 세팅 **www  IN   A       192.168.100.20****ftp    IN   CNAME  www**   **에﻿﻿ 대한﻿﻿ 설명﻿﻿ 들어갑니다.** ![img](http://postfiles8.naver.net/20150724_183/limits2018_1437711722730D44MA_PNG/4.png?type=w1)*
-
-***www   IN          A       192.168.100.20****~~~  이름으로   새호스트를 만들고  IP를 ~~~로 배정하라. ********자 해석 되셨습니까? A의 뜻은 새호스트 입니다.****따라서 www라는 이름을 가지고 192.168.100.20의 IP를 배정받는 새호스트를 만들어라. 라는 해석이 되겠습니다.************우선 icqa.or.kr 오른쪽 클릭 후 새 호스트로 들어갑니다.그 뒤 이름에 www를 적고 IP주소에 192.168.100.20 을 적고 호스트 추가를 누릅니다. 끗.**
-
-  ![img](http://postfiles9.naver.net/20150724_72/limits2018_1437711723155pxYVI_PNG/5.png?type=w1) 
-
-***ftp      IN       CNAME       www****~~~   이름으로   새 별칭을 만들고    FQDN은 ~~~이다.** **위의 A가 새 호스트 였다면, 여기서는 CNAME이 새 별칭을 의미합니다.****호스트를 해보셨다면 별칭의 경우는 별 문제없이 바로 하실 수 있으시리라 생각합니다.icqa.or.kr을 오른쪽 클릭 후 새 별칭으로 들어간 뒤 ftp와 www를 적어주고 확인을 누릅니다.
-
-
-
- 
-
-* 3) DHCP Setting
-
-http://blog.naver.com/limits2018/220430095823
-
-```bash
-아래와 같이 ip를 할당할 수 있는 DHCP를 설정하시오
-
-범위이름 : 네트워크관리사
-설명 : 한국정보통신자격협회 (미기출 문제)
-분배할 주소 범위 : 192.168.106.1 ~ 254
-제외할 주소 범위 : 192.168.106.2~25
-임대 기간 : 8일
-서브넷 마스크 : 255.255.255.0(24bit)
-게이트웨이 설정 : 192.168.106.1 (미기출 문제)
-
-예약설정 (미기출 문제)
-IP : 192.168.106.200
-예약이름 : Example
-MAC 주소 : ff-ff-ff-ff-ff-ff
-설명 : 예약
-모두 설정한 뒤 활성화하시오
-```
-
-* IPv4를 오른쪽클릭 한 뒤 새범위를 누릅니다. 창이 나오면 다음을 눌러준 뒤, 범위 이름과 설명을 적는 창이 나오는데 작성하고 다음
-
-![img](http://postfiles5.naver.net/20150724_148/limits2018_1437715458018Bt3i0_PNG/1.png?type=w1) 
-
-
-
-* 분배할 IP의 범위와 서브넷마스크, 그리고 제외할 IP의 범위를 적어준 뒤 임대기간을 설정하고 다음
-
-![img](http://postfiles3.naver.net/20150724_130/limits2018_1437715544967ot2t4_PNG/2.png?type=w1)
-
- 
-
- 
-
-* 나중에 구성하겠습니다를 선택하고 다음 - 마침
-
-![img](http://postfiles1.naver.net/20150724_16/limits2018_1437715786840gd1CK_PNG/3.png?type=w1)
-
-
-
-
-
-![img](http://postfiles7.naver.net/20150724_214/limits2018_1437715956044fLL9t_PNG/4.png?type=w1) 
-
-
-
-
-
-* 게이트웨이 설정 방법
-
-* IPv4의 +탭을 누르면 범위가 나오는데, 범위의 +탭를 누르면 다음과 같게 .이 중 범위옵션을 오른쪽 클릭 - 옵션 구성을 클릭하면 오른쪽과 같은 창이 나오는데여기서 003 라우터를 클릭하시고 아래 IP주소에 게이트웨이로 설정할 IP를 삽입하신 뒤 추가
-
-   ![img](http://postfiles9.naver.net/20150724_88/limits2018_1437716449450O1tAT_PNG/5.png?type=w1) 
-
-* 범위+ 탭을 누른 후 예약 오른쪽클릭 - 새 예약을 누른 뒤 나오는 창에 작성을 한 후 추가![img](http://postfiles16.naver.net/20150724_175/limits2018_1437716734815X3dU7_PNG/17.PNG?type=w1) 
-
-
-
-
-
- 
-
-* 4) IIS FTPServer Setting - ftp
-
-http://blog.naver.com/limits2018/220430151482
-
-```bash
-<아래>와 같이 FTP사이트를 추가 설정하시오
-
-FTP사이트 이름 : ICQA
-실제 경로: C:\inetpub\ftproot
-IP주소 : 192.168.100.10, 포트 : 2121
-엑세스 허용 : 익명 사용자(읽기 권한만)
-엑세스 거부 IP주소 : 200.115.100.0/24
-최대 연결수 메시지 : 최대 접속 인원수를 초과하였습니다.
-```
-
-![img](http://postfiles11.naver.net/20150724_282/limits2018_1437718810259kgqsT_PNG/111.png?type=w1) 
-
-**사이트 오른쪽 클릭 후 FTP사이트 추가 클릭. 이름과 실제경로 입력 후 다음**
-
-*IP주소와 포트를 입력한 뒤 다음을 누릅니다.**
-
- ![img](http://postfiles9.naver.net/20150724_152/limits2018_1437718943499yrwx9_PNG/4.PNG?type=w1)  
-
-**엑세스 허용을 익명 사용자들에게 했으며, 권한을 읽기만 줬으므로 체크하고 마침을 누릅니다.**  ![img](http://postfiles2.naver.net/20150724_97/limits2018_1437719154224mnpF1_PNG/5.PNG?type=w1) 
-
-**엑세스 거부IP를 설정하는 방법입니다.** **ICQA를 누르면 여러가지 FTP를 설정할 수 있는 화면이 나오는데, 그 중 FTP IPv4주소 및 도메인 제한 을 더블클릭합니다.****들어가게 되면 빈 화면이 나오는데 여기서 오른쪽 클릭을 하면 허용항목추가 와 거부항목추가 가 나옵니다.거부항목추가를 누릅니다.** **누르면 나오는 창에서 IP주소- 단일이라면 하나만 적고, 본 문제처럼 서브넷마스크가 주어진다면 범위이므로 IP주소범위를 설정합니다. 24bit는 11111111.11111111.11111111.00000000 이므로 255.255.255.0입니다.** ![img](http://postfiles2.naver.net/20150724_289/limits2018_14377194410968WTo8_PNG/8.PNG?type=w1)
-
- 
-
-* 5) IIS FTPServer Setting - web
-
-http://blog.naver.com/limits2018/220430492638
-
-```bash
-<아래>와 같이 Web사이트를 추가 설정하시오
-웹사이트 이름 : ICQA
-실제 경로 : C:\inetpub\webroot
-웹사이트 IP주소 : 192.168.100.10
-포트 : 80
-호스트 이름 : [http://www.icqa.or.kr](http://www.icqa.or.kr/)
-엑세스 허용 IP주소 : 192.168.100.0/24
-```
-
-* 사이트 오른쪽 클릭 -> 웹사이트 추가 클릭 -> 입력
-
-![img](http://postfiles7.naver.net/20150724_246/limits2018_1437739399645DeeL1_PNG/1.PNG?type=w1)
-
-* P주소 및 도메인 제한 -> 오른쪽 클릭 후 허용 항목 추가 -> IP범위와 서브넷마스크를 작성하고 확인
-* 24비트 : 11111111.11111111.11111111.00000000 = 255.255.255.0
-
-![img](http://postfiles6.naver.net/20150724_133/limits2018_1437739494159j9Win_PNG/3.PNG?type=w1) 
-
-
-
- 
-
-* 6) 계정 추가하기(로컬 사용자 및 그룹 설정)
-
-http://blog.naver.com/limits2018/220431172848
-
-```bash
-<아래>와 같이 계정을 추가 설정하시오
-ID : ICQA
-Password : ICQAPass
-전체 이름 : 전체관리자
-설명 : 한국정보통신자격협회
-암호 변경할 수 없음
-소속그룹 : Administrators
-```
-
-
-
-* 사용자 폴더를 오른쪽클릭 후 새사용자:
-  * 사용자 이름 :ICQA
-  * 전체이름 : 전체관리자
-  * 설명 : 한국정보통신자격협회
-  * 새 암호, 암호 확인 : ICQAPass
-  * '다음 로그온 시 사용자가 반드시 암호를 변경해야 합니다' 버튼 풀기
-  * '사용자가 암호를 변경할 수 없음' , '암호 사용 기간 제한 없음' 체크
-
-![img](http://postfiles10.naver.net/20150725_169/limits2018_1437813625305b0qEy_PNG/1-1.PNG?type=w1)
-
-* 소속그룹을 설정 : 
-  *  ICQA 계정을 오른쪽 클릭
-  * 속성을 누른 뒤뜨는 창에서 위 탭의 소속 그룹 지금찾기
-  *  Administrators를 클릭한 후 확인
-
-![img](http://postfiles6.naver.net/20150725_165/limits2018_1437813681005RsSYG_PNG/1-3.PNG?type=w1) 
-
-* 로컬경로를 설정 : 
-  * ICQA 오른쪽클릭 
-  * 속성 후 위의 탭에서 프로필을 눌러준 뒤, 작성하고 확인
-
-![img](http://postfiles13.naver.net/20150725_252/limits2018_14378137647749HGUC_PNG/1-5.PNG?type=w1)*
-
-
-
-
-
- 
-
-* 7) SMTP Setting
-
-http://blog.naver.com/limits2018/220431319063
-
-```bash
-ip주소 : 192.168.100.102
-릴레이 제한 : 192.1168.100.11. 주소만 릴레이 가능
-로그작성기간 : 매일
-로그 내용 : 날짜, 시간, 클라이언트 IP주소, 사용자 이름 추가
-```
-
-
-
-![img](http://postfiles7.naver.net/20150725_246/limits2018_1437824396917jK91Y_PNG/1.PNG?type=w1) 2008서버로 바뀌기 전 2000서버의 IIS- SMTP문제를 설정하는 창입니다. 보시다시피 FTP를 설정하는데에 필요한 FTP 사이트(Web사이트 설정도 같은 에뮬입니다)아래쪽에 기본 SMTP 가상 서버 라는것이 보입니다. SMTP Setting문제의 경우, 저것을 오른쪽클릭하여 시작하는 문제인데이번 변경된 2008서버에서는 SMTP를 설정할 수 있는 창이 보이지가 않습니다. 제가 못찾았을 가능성도 있겠지만- IIS, 즉 인터넷 정보 서비스라는 에뮬에 들어갔을때에 SMTP와 관련이 보이는 설정은 ![img](http://postfiles5.naver.net/20150725_196/limits2018_14378246989373X7AF_PNG/1.PNG?type=w1) 저것 하나뿐입니다. 그러나 저것을 설정하기위해 들어가게 되면 ![img](http://postfiles10.naver.net/20150725_9/limits2018_1437824727663R6td5_PNG/2.PNG?type=w1) 이 창밖에 발견할 수 없는데, 이 창에서는 기출문제에서 제시했던 문제들을 해결할 무언가가 없습니다. 예로 과거 기출문제의 경우 **<아래>의 내용을 기준으로 하여 SMTP서비스를 셋팅하십시오.********** **1. IP주소 : 192.168.100.102** **2. 릴레이 제한 : 192.168.100.110 주소만 릴레이 가능****3. 로그작성기간 : 매일****4. 로그 내용 : 날짜, 시간, 클라이언트 IP주소, 사용자 이름추가** 이렇습니다. 위의 창에서는 IP주소를 적을 칸을 포함하여 어느것 하나 보이지 않습니다.  제가 생각하기에는 두가지가 의심되는데 **첫번째로, 제가 발견을 하지 못한 경우입니다.** 다른 에뮬로 이동되어 있거나 혹은 저기 어딘가에 있는것을 제가 찾지 못했을 가능성이 있습니다. 그러나 만약 이 문제가 출제된다 하더라도- 제가 이전에 해설드렸던 문제를 충분히 다 숙지하시고 안보고도 손쉽게 풀 수 있으시다면이 유형은 해설을 보지 않아도 충분히 맞추실 수 있으실 것입니다. **두번째로, 사용되지 않아 사라졌고- 그로 인하여 문제에서 퇴출된 경우입니다.** 장담은 하지 못합니다.허나 문제의 난이도로 생각한다면 나와도 땡큐고 안나와도 다른문제 역시 쉽기 때문에 크게 신경쓸 것은 아닙니다. 앞서 포스팅했던 문제들을 보셨다면 사실 뒤에나오는 에뮬문제들 역시도 해설드리지 않아도 오른쪽클릭 몇번만 해보고 뒤적거리면 다 나오고, 입력만 하고 확인만 누르면 끝나는 정도의 문제입니다. 제가 나머지 유형들을 해설드리는 이유는 특정 유형들은 과거 기출문제들에서도 100% 출제되었기 때문에,아예 안보고 가는것과 그래도 한번은 풀어보고- 보고 가는것과는 엄연히 다르기때문에 눈에 조금이라도 익으시라고 해드리는 것입니다. 사실 에뮬 2~3시간만 툭툭 건드려봐도 이런걸 왜 궂이 시험까지 치는지 궁금해질정도로 단순한 것들이 많습니다.마우스 클릭 몇번하고 키보드 좀 치면 끝나는 문제들이니까요. 변경 전 2000서버에서의 에뮬의 경우는![img](http://postfiles8.naver.net/20150725_119/limits2018_14378261568811gfdg_PNG/1.PNG?type=w1) 다음과 같았습니다. 1번창에 문제와 빨간박스 쳐져있는 작업형 시뮬레이션 시작 버튼이 있었고,그 버튼을 누르면 왼쪽의 노란박스창. ICQA 가상 윈도우 설정이 나오고 그 중 해당되는 설정으로 들어가서 작업을 하는 구조였습니다. 그러나 지금 변경된 에뮬레이터를 확인해보면 ![img](http://postfiles10.naver.net/20150725_185/limits2018_1437826474943tAm8Q_PNG/1.PNG?type=w1) 위 사진처럼 FTP사이트를 추가하고 설정하는 문제에서의 풀이시작을 누를 시 ![img](http://postfiles2.naver.net/20150725_193/limits2018_1437826587242umcrv_PNG/2.PNG?type=w1)2000서버처럼 창에서 다시 설정창으로 들어가는것이 아닌, 바로 문제를 설정할 수 있는 창이 나오게 됩니다.따라서 만약 SMTP문제가 나온다면, 풀이시작을 눌렀을 때 바로 SMTP와 관련된 창이 생성되어 문제를 쉽게 푸실 수 있으실겁니다.
-
-
-
-
-
-
-
- 
-
-* 8) 로컬보안정책 Setting
-
-http://blog.naver.com/limits2018/220431336407
-
- ```bash
-<아래>와 같이 로컬보안정책을 설정하십시오. 
-1. 패스워드는 최소 10일에서 최대 20일 사용(암호 복잡성 만족 사용 설정)
-2. 패스워드는 3번 로그인 실패 시 60분간 계정잠금
-
- ```
-
-*  최대암호사용기간은 20일, 최소암호사용기간은 10일로 설정, 암호 복잡성 만족 사용 설정
-
-![img](http://postfiles10.naver.net/20150725_169/limits2018_1437827758083d3uFd_PNG/1.PNG?type=w1) 
-
-
-
-* 계정잠금정책
-  * 계정잠금임계값 에 3을 입력,확인을 누르면 저 창이 뜨는데 그냥 확인을 눌러주고 빠져나옴
-  * 계정 잠금 기간을 설정 30분에서 60분으로 변경
-
-![img](http://postfiles2.naver.net/20150725_289/limits2018_1437827797668VVr9m_PNG/2.PNG?type=w1)
-
-
-
-
-
-* 9) Service Setting
-
-http://blog.naver.com/limits2018/220431349076
-
-```bash
-2015.03.15 64회차
-<아래>와 같이 서비스를 설정하십시오
-SMTP 서비스를 사용하지 않음
-서버를 재시작해도 네트워크를 통해서 전자메일을 전송하지 않음
-
-2014.12.14 63회차
-<아래>와 같이 서비스를 설정하십시오
-원격 사용자가 Telnet을 이용하여 파일을 삭제하여 왔으나 
-정책이 변경되어 원격사용자가 더 이상 로그온 할 필요가 없어졌다. 
-해당 기능을 중지시키고, 다시 시작할 수 없게 설정하시오
-```
-
- 여기서 잠깐-W7 유형에서 말씀드렸던 SMTP가 없어 발견하지 못했다고 말씀드렸는데,이것 역시도 SMTP에 관련된 서비스가 보이지 않습니다.두개의 에뮬에서 모두 보이지 않는것으로 보아 아마 없어진것이 아닌가하는 생각이 듭니다.다른 기출문제로 설명드리겠습니다.2014.12.14 63회차 기출문제입니다.**<아래>와 같이 서비스를 설정하십시오.************원격 사용자가 Telnet을 이용하여 파일을 삭제하여 왔으나****정책이 변경되어 원격사용자가 더 이상 로그온 할 필요가 없어졌다.해당 기능을 중지시키고, 다시 시작할 수 없게 설정하시오.
-
-**에뮬입니다.![img](http://postfiles7.naver.net/20150725_70/limits2018_1437828692923BCAuB_PNG/1.PNG?type=w1)
-
-Telnet을 설정하라고 했으니, 문제에 맞는 서비스를 찾아서 더블클릭 해 줍니다![img](http://postfiles3.naver.net/20150725_146/limits2018_1437828693350rzIHl_PNG/2.PNG?type=w1)
-
-Telnet의 경우 더블클릭하면 위 창이 나오는데,
-
-********해당 기능을 중지시키고, 다시 시작할 수 없게 설정하라고 하였으니서비스상태에서 중지를 눌러주고, 시작유형을 사용 안 함으로 바꾸어준다.** ******Telnet뿐만이 아니라 과거에는 SMTP를 포함하여 다양한 서비스를 설정하라고 하였는데,위의 해설처럼 정확한 서비스를 찾기만 한다면 설정하는것에 있어서는 아무런 문제가 없습니다.**W1 ~ W9까지만 보셔도 에뮬문제 9문제 중 8문제는 가뿐히 맞추실 수 있을거라고 장담합니다.새로 바뀌었다고 하여 나오지 않았던 유형의 문제가 나와도 어차피 고놈이 고놈이고 조금만 뒤적거리면 다 해결 가능할겁니다
-
-
-
-# 3. Linux 문제
+# 1. Linux 문제
 
 ---
 
@@ -651,15 +57,381 @@ Telnet의 경우 더블클릭하면 위 창이 나오는데,
 
  
 
-# 4. 단답형 문제
+# 2. 단답형 문제
 
 ---
 
-3문제가 출제된다.
 
-http://blog.naver.com/limits2018/220434408071
 
- 
+
+* 1) IPv4와 IPv6을 함께 사용할 수 있는 장비는 무엇인가 : `듀얼스택(Dual Stack)`
+
+
+* 2) 다음 괄호 안에 들어갈 IP 주소는 무엇인가? : ` (가) 8, (나) 16, (다) 24`
+
+  * 10.x.x.x / (가)
+  * 172.16.x.x / (나)
+  * 192.168.9.x / (다)
+
+  
+
+* 3 ) 아래의 내용과 그림에서 설명하는 것은 무엇인가?  : `라우터(Router)`
+  * OSI 7 Layer에서 3계층인 네트워크 계층에 속한다
+  * LAN과 LAN 또는 LAN과 WAN 등을 연결하는 인터네트워킹 장치이다
+  * 네트워크 계층 간을 연결하여 접속할 호스트의 최적 경로를 설정한다
+
+[![img](http://postfiles8.naver.net/MjAxODExMDJfMjk5/MDAxNTQxMTQ2MDYwMDgw.4sJrSimbMGCAybJ_gFOlXxMOR84Rc34Vgno6bqXgJ2Ug.LAfC8ZWVN0Tbchlx0zdvufpaBcJvIfXbIQiSk96dXhsg.JPEG.jbhjjjjj/image_7817796371541145588086.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+
+* 4 ) 아래<그림>은 Switching Hub에서 해당 포트를 물리적 변경을 하지 않고, 소프트웨어에 의해 LAN 망을 구분한 것이다. 이것을 무엇이라 하는가? : ` VLAN`
+
+[![img](http://postfiles5.naver.net/MjAxODExMDJfNDMg/MDAxNTQxMTQ2MDYyNjI5.l-l1kKufgZFsWHXOXjWFamGXaHWT2SKF9gB-oSLs88sg.IRIWGoKJZ1F1XyzldTWubemr0xktnPh3aPD6xKq3ljUg.JPEG.jbhjjjjj/image_7389594641541145588048.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 5 ) Cisco Router의 Interface란 Router 접속 포트를 말한다. 아래 <설명>의 (가)와 (나)에 해당하는 용어는 무엇인가? : 
+
+* `(가) Ethernet, (나) Serial`
+
+  * (가) 포트는 내부 네트워크, 즉 랜(LAN)을 위한 접속 포트로 내부의 허브나 스위치 등과 연결을 위한 포트이다. 요즘 많이 쓰는 UTP 케이블과 연결하기 위해서 MAU라는 트랜시러를 사용한다.
+
+  * (나) 포트는 외부 네트워크 접속을 위한 포트로 DSU/CSU와 연결 위한 V.35 케이블을 사용한다. WAN 포트라고도 한다
+
+    
+
+* 6 ) 다음 <네트워크 구성도>를 보고 <설명>하는 기술이 무엇인가? : `클러스터링(Clustering)`
+
+  * 서버 한대 이상이 고장 났을 경우에도 서비스 운영이 계속되도록 여러 대의 서버를 서로 연결하여 거대한 하나의 시스템으로 보이게 만드는 기술이다.
+  * 두 개 이상의 서버를 마치 하나의 서버처럼 작동하도록 서로 연결함으로써 병렬 처리나 부하 배분 및 공장 대비 등의 여러 가지 목적에 맞도록 대비하기 위해서 사용하는 기술이다.
+
+
+
+* 7 ) 아래 <설명>에 해당하는 인터넷 사기 수법은? : `피싱`
+
+  * (A) 은/는 불특정 다수의 이메일 사용자에게 신용카드나 은행 계좌 정보에 문제가 발생해 수정이 필요하다는 거짓 이메일을 발송해 가짜 웹사이트로 유인하여 관련 금융기관의 신용카드 정보나 계좌 정보 등을 빼내는 해킹 기법이다.
+
+  * A) 은/는 점점 거 복잡한 미끼들을 사용해서 사용자의 금융 정보와 패스워드를 낚는다는 데서 유래되었다.
+
+    
+
+* 8 ) 아래 <설명>에 해당하는 인터넷 사기 수법은? : ` 파밍`
+
+  * (B) 은/는 합법적으로 사용되고 있는 사용자의 도메인을 탈취하거나 도메인 네임 시스템(DNS) 이름을 속여 사용자들이 진짜 사이트로 온 인하도록 유인하여 개인 정보를 훔치는 새로운 수법이다.
+
+  * (B) 은/는 아예 해당 사이트가 공식적으로 운영하고 있던 도메인 자체를 탈취하여 사용자들이 의심 없이 개인 ID, 패스워드, 계좌 정보 등을 빼내는 신종 해킹 기법이다.
+
+    
+
+* 9 ) 아래 <화면>을 보고 현재 사용하고 있는 IP Address와 SubnetMask 값을 답인 란에 입력하시오
+
+* `IP Address - 192.168.10.13, SubnetMask - 255.255.255.0`
+
+[![img](http://postfiles8.naver.net/MjAxODExMDJfOTMg/MDAxNTQxMTQ2MDY4MDM2.YHFtoHx5diQfi8kcXUf2i5kxdaYKWuVGGt1HusdZs8gg.MdguIVt1yinyINRnf2R8Li-ER32UB-qwiiFTE2q1Gjgg.JPEG.jbhjjjjj/image_4067460261541145587966.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 10 ) <네트워크 구성도>의 (A)에 대한 <설명>이다. (A)는 무엇인가? : `AP`
+
+[![img](http://postfiles1.naver.net/MjAxODExMDJfODQg/MDAxNTQxMTQ2MDcwNDQz.dcpZIKSgkyvCb57WdYsm4UykaoV9YrLiVsJQbitI4hkg.bUGXXl0DzyGjXYWjMQQYTY4QrtPjF-1jkocDe4aPT8cg.JPEG.jbhjjjjj/image_9006084811541145587926.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 11) 브리지나 스위치, 라우터 등 네트워크 장비에서 스패닝 트리 알고리즘을 사용하는 이유를 아래 <그림>과 <설명>을 참조하여 답하시오 : `루프방지`
+  * Segment a~d : 브리지, 라우터, 허브 또는 스위치 등에 의해 묶여 있는 네트워크의 한 부분을 말함.
+  *  B1 ~ B4 : 브리지(Bridge)
+
+[![img](http://postfiles15.naver.net/MjAxODExMDJfMTU3/MDAxNTQxMTQ2MDcyMTc2.ChdyONtdC6QxDNuN8YnZ2hhD0FFZWGv5Yk7AjLHeXwIg.-pxdyYDZOlA0FIDWImS1c6euhuRd8_gV0gheVkAaAQUg.JPEG.jbhjjjjj/image_8679295151541145587867.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 12 ) 다음 <보기>중 서비스 포트 번호를 연결한 것이다. 틀린 것 두 개만 선택하시오
+* `FTP(21), POP3(110)`
+  * SSH - 21번     
+  * FTP - 22번
+  * Telnet - 23번   
+  * TFTP - 89번
+  * WWW - 80번   
+  * POP3 - 120번
+    
+
+* 13 ) 다음은 두 개의 네트워크가 서로 연결된 그림이다. <그림>에서 원형 안의 역할만 하는 장비는? : `Router`
+
+[![img](http://postfiles11.naver.net/MjAxODExMDJfMTUy/MDAxNTQxMTQ2MDc0Mjgz.7bUt14JYM2tK0s7PjIcV9dFLzOitNFis_YdPhp0ZUZgg.hhjHlm1gqfoGJCf_fB8bCFiwqh9i2jBh8OEcRB4teMAg.JPEG.jbhjjjjj/image_5603369891541145649076.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 14 ) 아래 <네트워크 구성도>와 같은 환경에서 슈퍼넷(Supernet)을 구성하려고 한다. 이때 가능한 슈퍼넷 마스크(Supernetn Mask)에 해당하는 값을 보기에서 하나 선택하시오 : `255.255.252.0`
+
+[![img](http://postfiles8.naver.net/MjAxODExMDJfMjIw/MDAxNTQxMTQ2MDc2MzY0.K6vZlooUWHKD3DSi4En1WERH6ofsGNew3RgoL2HF8D4g.684IUgjRzkWKThYBNKCN5sbL4rIOhq-G_l3ObcPjcIIg.JPEG.jbhjjjjj/image_5824426241541145723963.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+* 15) 아래에서 OUI(Organizationally Unique Identifler)에 해당하는 값은? : ` 06-01-02`
+
+  * 06-01-02-01-2C-4B
+
+    
+
+* 16 ) PKI에 기반하여 전자 우편의 암호화 및 디지털 서명 기능을 제공하는 프로토콜은 무엇인가? : `S/MIME`
+
+  
+
+* 17 ) 아래 <그림>과 관련된 네트워크 기술은 무엇인가? : `VPN`
+  * 공중 통신망 기반 시설을 터널링 프로토콜과 보안 절차 등을 사용하여 개별 기업의 목적에 맞게 구성한 네트워크이다.
+  * 오직 한 회사에 의해서만 사용될 수 있는 자체망이나 전용회선과 대비되는 개념이다.
+  * 오늘날 회사들은 주로 엑스트라넷이나 넓은 지역에 퍼져있는 자사들 간의 인트라넷에 이 기술을 이용한다.
+
+  
+
+* 18 ) 이것은 무엇인가 : SSL(Secure Socket Layer)
+  * 데이터를 안전하게 주고받기 위한 업계 표준 프로토콜이다.
+  * 미국 넷스케이브 커뮤니케이션즈가 개발하였고, 마이크로소프트 사등 주요 웹 제품 업체가 채택하고 있다.
+  * 웹서버뿐만 아니라 FTP 등 다른 TCP/IP 애플리케이션에 적용할 수 있으며, 인증 암호화 기능이 있다.
+  * URL 부분에서 HTTP:// 가 HTTPS://로 변경된다
+
+  
+
+* 19 ) 아래에서 설명하는 것은 무엇인가? : `Blretooth(블루투스)`
+  * 무선 통신 기기 간에 근거리에서 저 전력으로 무선통신을 하기 위한 표준(IEEE802.15)
+  * 인텔, IBM, 노키아, 에릭슨 등 업체 공동 개발
+  * 이동 컴퓨터, 휴대폰, 헤드셋, 개인휴대정보단말기(PDA), PC 및 프린터 등의 기기 간에 정보 전송 등을 목적으로 사용
+  * 통신이 가능한 최대 범위는 10M이며, 데이터전송은 1Mbps의 속도 보장
+
+  
+
+*  20 )  아래의 Network Layer에서 동작되는 <프로토콜>은 무엇인가? : `ARP, RARP, ICMP, IGMP`
+
+[![img](http://postfiles10.naver.net/MjAxODExMDJfMTg2/MDAxNTQxMTQ2MDU3NDAz.-Eskd_aU0UDfdG-09j5acnPk68jZjx_Y_10BHgMnjKEg.Q7jaGhc3n6meIqCL08HWuOUO2WqcXCwnRy09DPcQoZQg.JPEG.jbhjjjjj/image_6707953101541145789275.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392287908&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 21 ) 다음 표를 보고 빈칸(A)에 해당하는 내용을 입력하시오 : `128bit`
+
+|           | IPv4                               | IPv6                             |
+| --------- | ---------------------------------- | -------------------------------- |
+| 주소체계  | 32비트                             | ( A )                            |
+| 주소 개수 | Over 109 (42억 개)                 | Over 1038 (무한개)               |
+| 주소 유형 | 유니캐스트 멀티캐스트 브로드캐스트 | 유니캐스트 멀티캐스트 애니캐스트 |
+
+
+
+* 22 ) TCP와 UDP의 특징 중 TCP 특징에 해당하는 것을 모두 선택하시오
+  * 연결형 프로토콜이다.
+  * 비연결형 프로토콜이다.
+  * 수신순서는 송신순서와 동일하다.
+  * 수신순서는 송신순서와 다를 수 있다.
+  * 신뢰성이 있다.
+  * 신뢰성이 없다.
+* `TCP - 연결형, 순서동일, 신뢰성`
+* `UDP - 비연결형, 다른순서, 신뢰성 없음`
+
+
+
+* 23 ) 아래에 무선 네트워크에서 사용하는 보안 프로토콜에 대한 설명이다. 이 프로토콜은 무엇인가? : `WEP`
+  * 유선랜에서 기대할 수 있는 것과 같은 보안과 프라이버시 수준의 무선랜의 보안 프로토콜이다.
+  * 데이터 암호화는 노출되기 쉬운 회선 접속을 보호하고, 비밀번호, 단말 간 암호, 가살 사설 통신망(VPN) 인증 등 전형적인 랜 보안 체계가 프라이버시를 보호하고 있다.
+  * IEEE Wi-Fi 표준 802.11b에 기술되어 있다.
+
+
+
+* 24 ) 아래의 설명을 보고 (A)에 들어갈 공통된 용어는 : `쿠키`
+
+  *  웹사이트 접속 시 개인 정보 유출 가능성이 있어 인터넷 익스플로러 5.0 이상에서는 (A) 거부 기능을 추가하였다.
+  * (A)는 웹서버가 사용자의 브라우저 저장하는 작은 텍스트 파일로서 ID 번호, 암호, 웹 사이트에서의 쇼핑 방법, 해당 사이트에 방문한 횟수 등 사용자에 대한 정보를 포함하게 된다.
+  * 사용자가 웹서버에 연결할 때마다 웹서버가 (A) 정보를 액세스할 수 있다.
+
+  
+
+  
+
+* 25 ) 아래에서는 Telnet과 SSH를 비교한 것이다. 올바른 것을 고르시오
+  * 1) 패킷이 암호화 전송 
+  * 2) 패킷이 비 암호화 전송
+  * 3) 기본 포트는 22번    
+  * 4) 기본 포트는 23번
+
+* `Telnet - 2, 4 (패킷이 비암호화되어 전송, 포트는 23번)`
+
+* `SSH - 1, 3 (패킷이 암호화되어 전송, 포트는 22번)`
+
+
+
+* 26 ) 아래 설명과 <개념도>를 보고 (A)는 무엇인가? : ` DMB`
+  * 이동 중에도 개인정보단말기나 차량용 단말기를 통해 CD, DVD 급의 고음질 고화질 방송을 즐길 수 있다.
+  * 음성/영상 등 다양한 멀티미디어 신호를 제공하는 방송서비스로 "내 손안의 TV"라 불린다.
+  * 우리나라 지상파 (A)은/는 2005년 12월 1일 첫 방송을 시작하였다.
+  *  신호 송신 방식에 따라 위성파 또는 지상파 로 나누어진다.
+
+
+
+
+
+
+
+* 27 ) 아래 IP 주소가 속한 Class에 해당하는 사설 IP 주소 중 임의의 주소 하나를 답안란에 입력하시오
+
+* IP Address : 132.23.101.99
+* `B class이므로 172.16.1.1 ~ 172.31.255.254 사이에서 1개 적는다`
+
+
+*  28 ) 아래에서 <설명>하는 인터넷 서비스 제공 시스템은? : `DDNS`
+  * 유동 IP Address를 고정된 IP Address 처럼 사용할 수 있도록 해주는 서비스를 위한 시스템
+  * 이 시스템의 역할은 유동 IP Address를 도메인과 연결해주는 역할을 한다.
+  * 컴퓨터는 먼저 할당된 유동 IP Address를 이 시스템에 알려주고 시스템에서는 도메인 이름과 IP Address 정보를 관리하며 외부에서 요청이 오면 해당 정보를 알려준다.
+
+  
+
+* 29 ) 아래 <그림>의 (A)는 OSI 7 Layer 모델에서 모든 계층의 기능(프로토콜 변환기)을 수행하는 장치이다. (A)는 무엇인가? : `Gateway`
+
+[![img](http://postfiles2.naver.net/MjAxODExMDJfMTYy/MDAxNTQxMTQ2NzQ2NTg4.1TaFvJfXh9UUDXuhg_ZrlXGXhpkXGepvSA19p96EaVYg.JCrSDjcXgP8UwGrLo2_uTpCEnccx7sgsmv3P6RV2Sngg.JPEG.jbhjjjjj/image_5605381931541146343013.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 30 ) 아래에서 설명하는 보안장비는?: `침입방지시스템`
+  * 차세대 능동형 보안 네트워크 솔루션으로서 인터넷 웜과 같은 악성코드 및 해킹 등에 기인한 유해 트래픽을 차단해 준다.
+  * 침입탐지시스템은 특정 패턴을 기반으로 공격자의 침입을 탐지하는 반면 이 시스템은 실제 피해를 주기 전에 미리 능동적으로 공격을 차단한다.
+  * 특히 정상적으로 작동하는 네트워크의 트래픽 상태를 기억해주어 비정상적인 트래픽이 발생할 때 이를 기반으로 알려지지 않은 공격까지 차단할 수 있다.
+* 31 ) 특정 포트로 흐르는 패킷을 다른 임의의 포트로 Copy 해 보내는 기술로써, 아래 <네트워크 구성도>와 같이 네트워크 기반 IDS(침입탐지시스템)를 구축하기 위해 Switching Hub에서 사용하는 <기능>이 무엇인가? : `Port Mirroring`
+
+* 32 ) 원격 호스트에 접속하기 위해 Telnet을 사용할 경우 스니핑을 이용한 패스워드 유출이 가능하다. 이를 방지하기 위해 사용하는 Telnet과 유사한 암호화 접속 방식"을 무엇이라 하는가? : `SSH`
+
+* 33 ) 아래 <네트워크 구성도>에서 슈퍼넷을 구성하고자 한다. 적합한 슈퍼넷 마스크는? : `255.255.252.0`
+
+[![img](http://postfiles10.naver.net/MjAxODExMDJfMjgw/MDAxNTQxMTQ2NzUxNTQ1.t40beJ-BJTMKUj2tcwRCN3p30Gu5VMz2Qp2neoUFbtcg.6w5WhPdRpXBKzF-dmo9EfTMW3Js8_goGv2zzDK0ctrcg.JPEG.jbhjjjjj/image_1823352781541146393099.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 34 ) 가정에 들어오는 50~60hz의 교류 전기에다 1~30Mhz의 고주파 대역 통신 신호를 함께 실어 보내는 방식으로 전기가 공급되는 전력선 위에다 데이터를 얹어 보내는 디지털 통신 기술을 무엇이라 하는가? : `PLC(Power Line Communication) 전력선 통신`
+
+* 35 ) 아래 <홈 네트워크 구성도>의 (A)는 댁내 네트워크와 댁외 네트워크를 상호 접속 중재하는 장치이다. (A)에 들어갈 가장 적절한 장비는 무엇인가? : `홈 게이트웨이`
+
+[![img](http://postfiles1.naver.net/MjAxODExMDJfMzUg/MDAxNTQxMTQ2NzU2Njcy.Xip6IzqtvzFszjAWG8Lte2pDY0rbVnCr2rG4sFrZhwcg.dAA2hxA_v67MGlWk2QfjNm6Oqwmpv4snicHstsREEIEg.JPEG.jbhjjjjj/image_7472071611541146429207.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 36 ) 이것은 아래 <그림>과 같이 무선 환경에서 사용되는 프로토콜이다. 채널의 반송파를 감지한 후 충돌이 일어나지 않도록 충돌을 회피하는 프로토콜은 무엇인가? : `CSMA/CA`
+
+[![img](http://postfiles3.naver.net/MjAxODExMDJfMjc1/MDAxNTQxMTQ2NzU5MDQ5.Ldp0BJ9lY3x0MffwbD5pvekehP910JwP-p7ok4ey7Usg.A6f0rLEojCgTmkw08qbymTfGSi1u7NYzCh-aquPcPW0g.JPEG.jbhjjjjj/image_3229430341541146441843.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+*  37 ) 아래 내용은 Class 별 사설 IP 범위를 보여주고 있다. (가), (나), (다)에 맞는 것을 기술하시오
+  * A Class : 10.0.0.0 ~ 10.255.255.255
+  * B Class : 172.(가).0.0 ~ 172.(나).255.255
+  * C Class : 192.(다).0.0 ~ 192.(다).255.255
+* `가(16), 나(31), 다(168)`
+
+* 38 ) 아래 <설명>을 보고 <네트워크 구성도>의 (A)를 적으시오 : `DMZ`
+  * 방화벽에 의해 보호받고 있는 네트워크에서 어쩔 수 없이 외부에 노출되어야 하는 서버들의 네트워크 지역
+  * (A) 지역에는 기본적으로 FTP, WEB, FILE 서버들 구성
+  * 관리자는 방화벽에서 FTP, WEB, FILE 서버의 서비스를 위해 네트워크 일부분을 해제
+  * 외부에 노출시켜야 하는 서버들을 한곳에 모아두고 네트워크를 따로 관리하여 보안 사고 시에도 내부 네트워크 PC들을 방화벽에 의해 안전하게 보호됨
+
+[![img](http://postfiles10.naver.net/MjAxODExMDJfMTMw/MDAxNTQxMTQ2NzM4NjE1.yq0qFo7sYKjJDpNbMJJLoQ_aWnShyTXLEmDAKKZyxyAg._b8uB3X9y0Wt5Pu0Q-haUlPrWv4s5vNErwHgF2x1rAog.JPEG.jbhjjjjj/image_9941018471541146474628.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221392586527&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+*  39 ) 아래에서 설명하는 휴대 인터넷의 기술 표준은 무엇인가? : `와이브로`
+  * 정보통신부, 한국정보통신기술협회, 이동통신업체 등이 중심이 되어 2006년 상용서비스를 목표로 개발하고 있는 무선 휴대 인터넷 서비스이다.
+  * 휴대전화처럼 이동하면서 초고속 인터넷을 이용할 수 있는 서비스로 휴대전화와 무선랜 중간 영역에 위치한다.
+  * IEEE 802.16e의 표준을 준수하며 60Km 이내로 이동하면서 초고속 인터넷을 사용할 수 있다.
+    
+
+* 40 ) 아래 <그림>과 <설명>에 해당하는 (A)은? : ` 랙(Rack)`
+  * (A)는 서버나 네트워크 장비 등을 수용하기 위해 사용되는 철제 프레임이다.
+  * 표준 (A)는 폭 19인치이지만, 좀 더 폭이 넓은 장비를 수용하기 위해 폭이 23인치인 광폭(A)도 있다.
+  * (A)의 높이는 다양하지만, 대게 1.75높이의 RU 24개 또는 42개이다.
+    
+
+* 41) 개인정보를 불법적으로 획득하려는 사람이 금융기관을 사칭하여 불특정 다수의 사용자에게 "신용 카드나 은행 계좌 정보에 문제가 발생하여 수정이 필요" 하다는 등에 거짓 이메일을 발송하여 금융기관의 카드나 계좌 번호 등을 빼내 불법적으로 이용하는 것을 무엇이라 하는가 : `피싱`
+
+* 42 ) 대형 라우터 기능에서 전원이 온 되어있는 상태에서 모듈을 교체 가능하게 해 주는 기능 : `핫스왑(HOT SWAP)`
+
+* 43 ) 침입탐지시스템은 오용탐지와 비정상행위탐지로 크게 분류하고있다. 이 분류 방법에 의해 구분할 때 아래 보기 중 오용탐지에 해당하는 것을 모두 고르시오 : ` 2, 3`
+  * 1) 새로운 침입 유형 탐지 가능
+  * 2) 새로운 침입 유형 탐지 불가능
+  * 3)비정상 행위를 정의라고 이해 해당하는 행위를 찾음
+  * 4) 정상 행위를 정의하고 이를 벗어나는 행위를 찾음
+
+
+* 44 ) 아래 설명에서 (A)는 무엇인지 <네트워크 구성도>를 참조 하여 답을 입력하시오 : `슈퍼넷`
+  * (A)를 이용하여 C 클래스에 x.y.32.0 ~ x.y.35.255의 범위를 하나의 네트워크 대역으로 설계하여 보다 많을 주소를 사용 가능
+  * 서브넷팅 반대개념
+  * 네트워크 ID의 비트를 호스트 ID의 비트로 취급
+
+[![img](http://postfiles2.naver.net/MjAxODExMDJfNjIg/MDAxNTQxMTQ5MjUwMTgw.3YiHnDPi1nJ48qrPZUf6wMufGmkXLjFfo1SPckIIV9Yg.Y9FRaycivRbctzcd6XowacHdfQjOAZt67S09OaOIb_8g.JPEG.jbhjjjjj/image_2098360471541149177825.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221393353935&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+
+
+* 45 ) IP 주소 사용의 낭비를 막기 위해 내부네트워크에 모든 호스트에 인터넷 전체에서 유일한 공인 IP 주소를 설정 하지 않고 내부적으로는 사설 IP 주소를 설정하여 사용하다가 인터넷에 접속할 때만 공인 IP 주소로 변환하는 기술이 무엇인지 입력하시오 : `NAT`
+
+* 46 ) C 클래스에 해당하는 사설 IP 주소를 모두 선택하시오 : `2, 4`
+  * 1 ) 10.20.30.40      
+  * 2) 192.168.2.11
+  * 3) 125.225.215.234  
+  * 4) 192.168.100.200
+  * 5) 172.30.127.20    
+  * 6) 203.238.100.200
+
+* 47 ) (A)은 리눅스에서 사용자나 운영 프로그램이 내린 명령을 해석하고 이해한 후 운영체제에 전달하는 역할의 프로그램이다. 여러 하드웨어 장치에 상태나 운영체제에 메시지들을 사용자에게 전달하는 역할을 한다.
+  즉, (A)은 사용자와 운영체제 사이에서 명령을 전달하고 그 결과 값을 보여 주는 역할을 하는 것이다 리눅스에서 주로 기본으로 설정되어 사용하는 애인은 (A), C (A), Korn(A) 등이 있다 :` Shell`
+
+*  48 ) 다음 설명하는 기능을 무엇인가?
+  * <화면1>에서 A가 C로 보낸 패킷은 연결되어 있는 다른 모든 컴퓨터로 함께 전송되어 동시에 다른 컴퓨터들은 데이터 전송을 할수 없다.
+  * <화면2>에서 A가 C로 파일을 전송하는 경우, A의 패킷은 C로만 전송되고, 동시에 B와 D도 네트워크 전송이 가능하다
+
+[![img](http://postfiles12.naver.net/MjAxODExMDJfMzMg/MDAxNTQxMTQ5MjUxOTMw.7MqKdJeCZtz8EzM1RbFW1yy6TbwLrzEFIwjyvDnat8Eg.8XVel-4-RUqtmXaL7lIAVsD8jhW4svO1A5r-_97sN1cg.JPEG.jbhjjjjj/image_1638700841541149196466.jpg?type=w580)](http://blog.naver.com/PostView.nhn?blogId=jbhjjjjj&logNo=221393353935&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView#)
+
+* `스위칭`
+
+* 49 ) 아래의 <설명>을 보고 A에 들어갈 공통된 단어는? : `쿠키`
+  * (A)는 HTTP 프로토콜을 통해 서버나 스크립트가 클라이언트 컴퓨터의 정보를 유지 관리 하는 방법이다.
+  * (A)는 웹 서버가 사용자의 브라우저에 저장하는 작은 텍스트 파일로서 ID번호, 암호, 웹 사이트에서의 쇼핑 방법, 해당 사이트를 방문한 횟수 등 사용자에 대한 정보를 포함하게 된다.
+  * 사용자가 웹 서버에 연결할 때마다 웹서버가 (A)를 액세스할 수 있다.
+
+  
+
+* 50 ) 아래 <설명>을 보고 (A)에 들어갈 단어를 적으시오 : ` VLAN`
+  * (A)란 물리적인 네트워크 구성에 제한을 받지않고 네트워크 구성요소가 삭제나 변경이 발생 했을 경우 논리 네트워크를 구성함으로써 유연하게 대응 할 수 있는 LAN 기능
+  * (A)는 네트워크 자원 액세스를 제한함으로써 보안을 향상시키고, Brodcast Domain의 크기를 줄여서 Brodcast Traffic량을 줄이는 효과를 발생하여, 전체적으로 네트워크 성능을 향상시킴
+  *  (A)는 접속 포트나 MAC(IP) Address 또는 Protocol을 이용하여 그룹화 하는 방식을 사용.
+    
+
+* 51) 아래 <설명>은 어떤 장비에 대한 설명인가 : `스테커블 또는 스테커블 스위치`
+  * 백플레인이 훨씬 빨라지고 연결된 장비중 하나가 고장 나도 다른 장비에 영향을 주지 않는 등의 많은 장점을 가지고 있다.
+  * 즉, 혼자일때 보다 여러 대가 스택으로 연결되면 훨씬 더 좋은 성능을 발휘하도록 하는게 (이것)의 특징이다
+
+* 52 ) OSI 7 Layer 에 맞는 <장비>? : `A(라우터), B(게이트웨이), C(리피터)`
+
+* 53) 아래 <설명>은 어떤 용어에 대한 설명인가?	: `레이드`
+  * (이것)은 중요한 데이터를 가지고 있는 서버에 주로 사용되며, 여러 대의 하드디스크가 있을 때 동일한 데이터를 다른 위치에 중복해서 저장하는 방법이다.
+  * 데이터를 여러대의 디스크에 저장함에 따라 입출력 작업이 균형을 이루며 겹치게 되어 전체적인 성능이 개선된다.
+  * 여러 대의 기스크는 MTBF를 증가시키기 때문에 데이터를 중복해서 저장하면 고장에 대비하는 능력도 향상된다
+    
+
+* 54 ) 네트워크 데이터를 무선으로 전파하는데 적당한 형태인, 신호로 변환하는 변조방식에 대한 <설명>이다. <설명>에 해당하는 용어는? : `OFDM`
+  * 수백 개의 반송파를 사용하는 다반송파변조 방식
+  * 반송파는 직교 관계에 있기 때문에 각 반송파의 주파수 성분이 서로 겹처 있어도 됨
+  * 대역폭당 전송속도의 향상과 멀티패스 간섭의 방지를 위한 디지털 변조방식
+  * 802.11b에서 지원하는 DSSS 기술보다 높은 대역폭을 지원하는 주파수 변조기법
+
+
+* 55) DDos 공격에서 좀비PC들 끼리 형성된 네트워크를 무엇이라 하는가? `봇넷(BOTNET)`
+
+* 56 ) 아래의 <설명>하는 용어는? :  `홈 PNA`
+  * 가정에서 전화선을 이용하여 2대 이상의 컴퓨터들을 서로 공유할 수 있도록 하는 네트워킹 솔루션,
+  * 전화선상의 방해 전파를 피할 수 있고, 신호는 집안에서 전화선을 통해 이동하기 때문에 외부 조건과 관계없이 신뢰성이 있으며 안전하다.
+    
+
+* 57) 해당하는 RAID Level의 번호는? `RAID-1`
+  * 디스크 미러링 이라고도 한다.
+  * 각 드라이브를 동시에 읽을 수 있어 읽기 성능이 좋다.
+  * 쓰기 성능은 단일 디스크 드라이브의 경우와 같다.
+
+
+* 58) Server Load Balancing 에서 가장 많이 사용되는 방식은? `Round Robin`
+
+
 
  
 
@@ -981,7 +753,7 @@ Class의 IP Address는 처음 1개의 bit가 항상 0이다.
 
  
 
-# 6. 케이블 문제
+# 3. 케이블 문제
 
 ---
 
