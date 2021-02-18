@@ -125,16 +125,14 @@ Router#copy r s
 
 
 
-* 아래와 같이 Router 1의 Ethernet 0 인터페이스를 설정하고, NVRAN에 저장하시오.
-* Router#show running-configBuilding configuration...Using #### out of #### bytes!version ##.#!Interface Ethernet 0ip address 192.168.200.2 255.255.255.252ip directed-broadcast!
-
+* 아래와 같이 Router 1의 FastEthernet 0 인터페이스를 설정하고, NVRAN에 저장하시오.
 
 
 ```bash
 Router>en
 Router#conf t
 
-Router(config)#int e0
+Router(config)#int fa0/0
 Router(config-if)#ip add 192.168.200.2 255.255.255.252
 Router(config-if)#ip directed-broadcast
 
@@ -151,7 +149,7 @@ Router#copy r s
 Router>en
 Router#conf t
 
-Router(config)#int s0
+Router(config)#int s2/0
 Router(config-if)#ban 2048
 
 Router(config-if)#exit
@@ -167,7 +165,7 @@ Router#copy r s
 Router>en
 Router#conf t
 
-Router(config)#int s0
+Router(config)#int s2/0
 Router(config-if)#clock rate 72000
 
 Router(config-if)#exit
@@ -177,14 +175,14 @@ Router#copy r s
 
 
 
-* Ethernet 0의 description을 설정하고 NVRAM에 저장하시오.
+* FastEthernet 0의 description을 설정하고 NVRAM에 저장하시오.
 * Description : ICQA
 
 ```bash
 Router>en
 Router#conf t
 
-Router(config)#int e0
+Router(config)#int fa0/0
 Router(config-if)#des ICQA
 
 Router(config-if)#exit
@@ -195,13 +193,13 @@ Router#copy r s
 
 
 
-* Ethernet 0의 IP Address를 192.168.2.1/30과 192.168.3.1/30 Secondary로 설정하고 저장하시오.
+* FastEthernet 0의 IP Address를 192.168.2.1/30과 192.168.3.1/30 Secondary로 설정하고 저장하시오.
 
 ```bash
 Router>en
 Router#conf t
 
-Router(config)#int e0
+Router(config)#int fa0/0
 Router(config-if)#ip add 192.168.2.1 255.255.255.252
 Router(config-if)#ip add 192.168.3.1 255.255.255.252 secondary
 
@@ -268,8 +266,8 @@ Router>en
 Router#conf t
 
 Router(config)#li c 0
-Router(config-line)#login
 Router(config-line)#password ICQACon
+Router(config-line)#login
 
 Router(config-line)#exit
 Router(config)#exit
@@ -284,7 +282,7 @@ Router#copy r s
 Router>en
 Router#conf t
 
-Router(config)#int s0
+Router(config)#int s2/0
 Router(config-if)#no sh
 
 Router(config-if)#exit
