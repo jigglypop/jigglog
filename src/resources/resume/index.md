@@ -30,6 +30,9 @@ path: "/resume/"
 
 - LANGUAGE TOGETHER(URL 서비스중) : 테드, 뉴스 등을 이용한 영어 공부 사이트
 - CAPTURE BLOG(URL 서비스중) : 마크다운 편집기능 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
+- MBTI WORLD(URL 서비스중) : NEXT.JS없는 서버사이드 프로젝트 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
+- ANGULOG(URL 서비스중) : 앵귤러 개인 블로그 사이트
+
 
 # skills
 
@@ -41,11 +44,11 @@ path: "/resume/"
 
 ##### 자바스크립트
 
-- react, redux , react-three-fiber, nodejs 사용
+- react, redux , angular, ngrx, rxjs, redux-saga, redux-thunk, react-three-fiber, nodejs 사용
 
 ##### 타입스크립트
 
-- CAPTURE BLOG 개인 프로젝트에 사용
+- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용
 
 ##### 파이썬
 
@@ -78,7 +81,7 @@ path: "/resume/"
 
 ##### Node.js express
 
-- CAPTURE BLOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
+- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
 
 ##### GraphQl SERVER
 
@@ -91,6 +94,10 @@ path: "/resume/"
 ##### React/Redux
 
 - 싸피 웹 프로젝트에 사용 : react , redux , react-three-fiber
+
+##### Angular/ngrx/rxjs
+
+- 앵귤러 개인 블로그 프로젝트
 
 ##### Mobx
 
@@ -118,7 +125,7 @@ path: "/resume/"
 
 ##### Mongo DB
 
-- CAPTURE BLOG 개인 프로젝트에 사용
+- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용
 
 ##### MySql
 

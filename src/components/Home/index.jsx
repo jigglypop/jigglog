@@ -116,6 +116,9 @@ const ParallaxComponent = ({ portfolios }) => {
     "graphqllogo",
     "expresslogo",
     "mobxlogo",
+    "angularlogo",
+    "rxjslogo",
+    "ngrxlogo",
     "typescriptlogo",
     "nextjslogo",
   ];
