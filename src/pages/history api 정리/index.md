@@ -2,7 +2,7 @@
 path: "/history api 정리/"
 category: "자격증"
 tags: ["네트워크 관리사 2급", "자격증", "소프트웨어"]
-title: "프로그래머스 데브매칭 고양이 정리"
+title: "history api 정리"
 date: "2021-03-03T12:23:00.000Z"
 summary: "history api 정리"
 images: ["images/1.jpg"]
@@ -95,5 +95,72 @@ window.addEventListener("popstate", () => {
   currentHistoryState();
 });
 
+```
+
+
+
+## 3. store
+
+```javascript
+/* 
+  store.js 임시 구현
+  
+  context를 create하는 컴포넌트 => constructor에서 store.set('context', initialData)하기
+  context의 update에 따라 리렌더링되는 컴포넌트 => constructor에서 store.subscribe('context', this)하기
+  
+  context를 set하는 코드 라인 => data를 업데이트하는 곳에서 store.set('context', data)하기
+  context를 get하는 코드 라인 => data를 사용하는 곳에서 store.get('context')하기
+*/
+
+const store = {
+  subscribe: (context, ref) => {
+    store[context].refs.push(ref);
+  },
+  get: (context) => {
+    return store[context].data;
+  },
+  set: (context, data) => {
+    const initialSet = !store[context];
+
+    if (initialSet) {
+      store[context] = {
+        data: data,
+        refs: [],
+      };
+      return;
+    }
+
+    console.log('new data', data);
+    store[context].data = data;
+    store[context].refs.forEach((ref) => ref.render());
+  },
+};
+
+export default store;
+
+// SearchHistory.js
+
+import store from '../../store.js';
+
+export default class SearchHistory {
+  constructor($target) {
+    this.$target = $target;
+
+    this.$el = document.createElement('ul');
+    this.$el.className = 'SearchHistory';
+
+    this.$target.append(this.$el);
+
+    store.set('search-history', []); // create 'search-history' context, initialData is []
+    store.subscribe('search-history', this); // subscribe 'search-history' context
+  }
+
+  render() { // 'search-history'가 다른 곳에서 업데이트될 경우 render()가 실행됨
+    this.$el.innerHTML = store
+      .get('search-history') // get 'search-history' context
+      .map((searched) => `<li>${searched}</li>`)
+      .join('');
+  }
+}
 ```
 
