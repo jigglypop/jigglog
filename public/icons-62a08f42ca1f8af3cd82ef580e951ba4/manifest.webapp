@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "gatsby-advanced-blog",
+  "description": null,
+  "icons": {
+    "60": "/icons-62a08f42ca1f8af3cd82ef580e951ba4/firefox_app_60x60.png",
+    "128": "/icons-62a08f42ca1f8af3cd82ef580e951ba4/firefox_app_128x128.png",
+    "512": "/icons-62a08f42ca1f8af3cd82ef580e951ba4/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}

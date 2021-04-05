@@ -1,0 +1,11 @@
+Model Information:
+* title:	Realistic Earth (Free)
+* source:	https://sketchfab.com/3d-models/realistic-earth-free-9cdd0b621de34bdcb1c6c8e839ee7633
+* author:	Mokitoby (https://sketchfab.com/mokitoby)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Realistic Earth (Free)" (https://sketchfab.com/3d-models/realistic-earth-free-9cdd0b621de34bdcb1c6c8e839ee7633) by Mokitoby (https://sketchfab.com/mokitoby) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

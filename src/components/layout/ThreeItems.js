@@ -8,7 +8,7 @@ import { extend, useFrame } from 'react-three-fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useSpring, animated } from 'react-spring/three'
 import { navigate } from "gatsby"
-
+import path from 'path'
 extend({
   MapControls,
   OrbitControls,
@@ -18,7 +18,8 @@ export const distance = 1600;
 
 // 바깥
 export const Outer = () => {
-  return ImportGltf('/gallaxy/scene.gltf', '바깥', 'outer', true);
+    console.log(path.resolve(__dirname, 'src'))
+  return ImportGltf('~/resources/warehouse/outer.gltf', '바깥', 'outer', true);
 };
 // 지구
 export const PlanetEarth = ({ categorySet, hasPortfolio } ) => {
