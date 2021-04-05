@@ -1,9 +1,6 @@
-import React, { useReducer, useCallback, useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useReducer, useCallback } from "react";
 import { Link, navigate } from "gatsby";
-import styled, { css } from "styled-components";
 import { RiMoonClearLine } from "react-icons/ri";
-
 import { FaSearch, FaTags } from "react-icons/fa";
 import {
   GnbWrapper,
@@ -11,39 +8,14 @@ import {
   SubMenu,
   ListMenu,
   StyledLink,
-  SearchBarWrapper,
-  SearchBar,
   SearchedPosts,
   Title,
   Summary,
   Tag,
   SearchedPost,
+  MenuTitle,
+  SmallItem
 } from "./styled";
-// import moon from "./moon.png";
-import moon from "./moon.webp";
-
-const MenuTitle = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
-
-  font-size: 18px;
-  font-weight: 800;
-  text-shadow: 2px 2px 20px white;
-  @media (max-width: 600px) {
-    font-size: 13px;
-  }
-`;
-
-const SmallItem = styled.div`
-  /* font-family: "NanumBarunGothic" !important; */
-
-  margin: 10px;
-  font-size: 15px;
-  font-weight: 800;
-  text-shadow: 1px 1px 10px white;
-  @media (max-width: 600px) {
-    font-size: 13px;
-  }
-`;
 
 const TOGGLE_MENU = "TOGGLE_MENU";
 const TOGGLE_SUB_MENU = "TOGGLE_SUB_MENU";
@@ -59,7 +31,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_MENU: {
       const isMenuOpened = !state.isMenuOpened;
-
       return {
         ...state,
         isMenuOpened,
@@ -67,7 +38,6 @@ const reducer = (state = initialState, action) => {
     }
     case TOGGLE_SUB_MENU: {
       const isSubMenuClosed = !state.isSubMenuClosed;
-
       return {
         ...state,
         isSubMenuClosed,
@@ -75,7 +45,6 @@ const reducer = (state = initialState, action) => {
     }
     case INPUT_KEYWORD: {
       const { searchKeyword } = action;
-
       return {
         ...state,
         searchKeyword,
@@ -97,16 +66,9 @@ const Gnb = ({
   const toggleMenu = useCallback(() => {
     dispatch({ type: TOGGLE_MENU });
   }, []);
-  // const toggleSubMenu = useCallback(() => {
-  //   dispatch({ type: TOGGLE_SUB_MENU });
-  // }, []);
   const navigateToPath = useCallback((path) => {
     navigate(path);
   }, []);
-  const inputKeyword = useCallback((e) => {
-    const searchKeyword = e.target.value;
-    dispatch({ type: INPUT_KEYWORD, searchKeyword });
-  });
 
   const filteredPosts =
     searchKeyword.length > 0
@@ -128,12 +90,12 @@ const Gnb = ({
   const isHome = pathname.replace(/\/$/, "") === "";
   const isResume = pathname.replace(/\/$/, "") === "/resume";
   const isPost = !(isPortfolio || isHome || isResume);
+
   return (
     <GnbWrapper>
       <List>
         <ListMenu>
           <StyledLink to="/">
-            {/* <img src={moon} style={{ width: "45px", height: "45px" }} /> */}
             <RiMoonClearLine
               style={{
                 width: "25px",
@@ -170,17 +132,6 @@ const Gnb = ({
           </StyledLink>
         </ListMenu>
       </List>
-      <SearchBarWrapper>
-        <label htmlFor="search">
-          <FaSearch />
-        </label>
-        <SearchBar
-          id="search"
-          type="text"
-          value={searchKeyword}
-          onChange={inputKeyword}
-        />
-      </SearchBarWrapper>
       <SearchedPosts isEmpty={filteredPosts.length === 0}>
         {filteredPosts.map(({ path, title, summary, tags }) => (
           <SearchedPost key={path}>
@@ -238,19 +189,6 @@ const CategoryMenu = ({ categories, categorySet, toggleMenu }) => {
       })}
     </div>
   );
-};
-
-Gnb.propTypes = {
-  location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
-    .isRequired,
-  categories: PropTypes.arrayOf(PropTypes.shape({})),
-  postInformations: PropTypes.arrayOf(PropTypes.shape({})),
-  hasPortfolio: PropTypes.bool.isRequired,
-};
-
-Gnb.defaultProps = {
-  categories: [],
-  postInformations: [],
 };
 
 export default Gnb;

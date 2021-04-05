@@ -1,8 +1,12 @@
 import React, { Children, cloneElement } from "react";
-import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { POST, PORTFOLIO } from "~/constants";
 import App from "~/components/App";
+import { LayoutWrapper, OuterWrapper } from './styled'
+import Three from './Three'
+import Gnb from "~/components/Gnb";
+import Main from "~/components/Main";
+
 
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -77,11 +81,14 @@ const Layout = ({ children, location }) => (
         object[currentValue]["length"]++;
         return object;
       }, {});
-
       const results = [];
       for (var i in result) {
         results.push(result[i]);
       }
+      // 포트폴리오셋
+      const portfolioSet = portfolios.map(item => item.node.frontmatter)
+
+
       // 태그셋
       const tagSet = [];
       edges.filter(({ node: { frontmatter: { type, tags } } }) =>
@@ -89,7 +96,6 @@ const Layout = ({ children, location }) => (
           ? Object.entries(tags).map((item) => tagSet.push(item[1]))
           : ""
       );
-
       const tagResult = tagSet.reduce((object, currentValue) => {
         if (!object[currentValue]) {
           object[currentValue] = { key: currentValue, length: 0 };
@@ -129,33 +135,31 @@ const Layout = ({ children, location }) => (
         },
         []
       );
-
       const hasPortfolio = portfolios.length > 0;
-
       const childrenWithProps = Children.map(children, (child) =>
         cloneElement(child, { portfolios })
       );
 
       return (
-        <App
-          location={location}
-          categories={categories}
-          postInformations={postInformations}
-          hasPortfolio={hasPortfolio}
-          categorySet={results}
-          tagSet={tagResults}
-        >
-          {childrenWithProps}
-        </App>
+        <OuterWrapper>
+          <LayoutWrapper id="layoutwrapper" isMain={location.pathname === '/' ? true: false}>
+            <App
+              location={location}
+              categories={categories}
+              postInformations={postInformations}
+              hasPortfolio={hasPortfolio}
+              categorySet={results}
+              tagSet={tagResults}
+            >
+              {childrenWithProps}
+            </App>
+          </LayoutWrapper>
+          {location.pathname === '/' && <Main/>}
+          {location.pathname === '/' && <Three categorySet={results} hasPortfolio={portfolioSet}/>}
+        </OuterWrapper>
       );
     }}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
-    .isRequired,
-};
 
 export default Layout;

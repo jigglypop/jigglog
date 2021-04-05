@@ -225,6 +225,7 @@ export const PostContent = styled.div`
     margin-bottom: 30px;
   }
   code {
+    position: relative;
     visibility: ${(props) => props.answer};
   }
   del {
@@ -327,9 +328,10 @@ export const ImageWrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: -100px;
+    background-color: black;
+    padding: 5%;
+    line-height: 2em;
 
-    animation: blink 1.2s ease-in-out infinite alternate;
     @media (max-width: 600px) {
       font-size: 15px;
     }
@@ -454,4 +456,21 @@ export const ComponentInPost = styled.div`
 `;
 
 
-
+export const TocItemDiv = styled.div`
+    display: block;
+    margin-right: 20px;
+    font-size: 10px;
+    border-left: 7px solid black;
+    cursor: pointer;
+    h4 {
+      padding: 0.4em 0 0.4em;
+      color: #263238;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    &.isintersect h4{
+      color: black;
+      font-size: 16px;
+      padding: 0.5em 0 0.5em;
+    }
+`

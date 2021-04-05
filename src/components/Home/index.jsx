@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { TITLE } from "~/constants";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
@@ -11,77 +10,10 @@ import { Link } from "gatsby";
 import Six from "../parallax/06.webp";
 import Seven from "../parallax/07.webp";
 import "./styled.css";
-import styled from "styled-components";
 import IconSet from "../IconSet/IconSet";
+import { IconObject } from './IconObject'
+import { BlinkImage, IconWrapper, Title, TitleRed, Content } from './styled'
 
-const BlinkImage = styled.img`
-  animation: blink 0.5s ease-in-out infinite alternate;
-
-  @keyframes blink {
-    50% {
-      opacity: 0.1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-const IconWrapper = styled.div`
-  position: absolute;
-  margin-left: 60%;
-  margin-top: 10%;
-  z-index: 18;
-  @media (max-width: 1000px) {
-    font-size: 20px;
-    margin-top: 30%;
-  }
-`;
-
-const Title = styled.div`
-  animation: blink 1.2s ease-in-out infinite alternate;
-
-  @keyframes blink {
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  font-size: 40px;
-  font-weight: 800;
-  text-shadow: 4px 4px 40px white;
-  @media (max-width: 600px) {
-    font-size: 20px;
-    font-weight: 800;
-    text-shadow: 4px 4px 40px white;
-  }
-`;
-
-const TitleRed = styled.div`
-  color: #e94057;
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 800;
-  text-shadow: 4px 4px 40px #e94057;
-  @media (max-width: 600px) {
-    font-size: 13px;
-    font-weight: 800;
-    text-shadow: 4px 4px 40px white;
-  }
-`;
-
-const Content = styled.div`
-  font-size: 20px;
-  font-weight: 800;
-  text-shadow: 4px 4px 40px white;
-  @media (max-width: 600px) {
-    font-size: 13px;
-    font-weight: 800;
-    text-shadow: 4px 4px 40px white;
-  }
-`;
 const url = (name, wrap = false) =>
   `${
     wrap ? "url(" : ""
@@ -90,42 +22,8 @@ const url = (name, wrap = false) =>
   }`;
 
 const ParallaxComponent = ({ portfolios }) => {
-  const IconObject = [
-    "htmllogo",
-    "cpluslogo",
-    "awslogo",
-    "jquerylogo",
-    "mysqllogo",
-    "pythonlogo",
-    "reactlogo",
-    "springlogo",
-    "tensorflowlogo",
-    "djangologo",
-    "flasklogo",
-    "dartlogo",
-    "clogo",
-    "nodejslogo",
-    "vuelogo",
-    "javalogo",
-    "javascriptlogo",
-    "reduxlogo",
-    "gatsbylogo",
-    "csslogo",
-    "mongodblogo",
-    "herokulogo",
-    "graphqllogo",
-    "expresslogo",
-    "mobxlogo",
-    "angularlogo",
-    "rxjslogo",
-    "ngrxlogo",
-    "typescriptlogo",
-    "nextjslogo",
-  ];
   let parallax;
-
   const ref = useRef();
-
   return (
     <Parallax ref={(ref) => (parallax = ref)} pages={3}>
       <ParallaxLayer
@@ -324,22 +222,13 @@ const ParallaxComponent = ({ portfolios }) => {
 const Home = ({ portfolios }) => {
   return (
     <>
-      <ParallaxComponent portfolios={portfolios} />
-
       <Helmet>
         <title>{TITLE}</title>
         <meta name="og:title" content={TITLE} />
       </Helmet>
+      {/* <ParallaxComponent portfolios={portfolios} /> */}
     </>
   );
-};
-
-Home.propTypes = {
-  portfolios: PropTypes.arrayOf(PropTypes.shape({})),
-};
-
-Home.defaultProps = {
-  portfolios: [],
 };
 
 export default Home;

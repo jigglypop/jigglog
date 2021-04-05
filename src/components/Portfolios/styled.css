@@ -2,5 +2,7 @@
   padding: 0 !important;
 }
 body {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
   height: 100vh;
+  color: white;
 }

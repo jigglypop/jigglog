@@ -45,6 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
     const resume = path.resolve('./src/templates/Resume.jsx');
     const portfolios = path.resolve('./src/templates/Portfolios.jsx');
     const portfolio = path.resolve('./src/templates/Portfolio.jsx');
+    const home = path.resolve('./src/templates/Home.jsx');
 
     resolve(
       graphql(`
@@ -71,6 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const tagMatrix = [];
         const categoryMatrix = [];
+
 
         // Create blog posts pages.
         edges.forEach(({ node: { frontmatter: { path, tags, category, type, hide } } }) => {
@@ -106,6 +108,8 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         });
+
+
 
         const portfoliosCount = edges
           .filter(({ node: { frontmatter: { type } } }) => (type === PORTFOLIO))

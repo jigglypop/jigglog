@@ -3,7 +3,6 @@ const getPage = ({ pathname }) => {
   if (type === "pages") {
     return Number($2) || 1;
   }
-
   return Number($3) || 1;
 };
 

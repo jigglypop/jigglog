@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { useRef } from "react";
 import Helmet from "react-helmet";
 import { Link } from "gatsby";
@@ -10,6 +9,7 @@ import IconSetBig from "../IconSet/IconSetBig";
 import "./styled.css";
 
 export const Wrapper = styled(SimpleWrapper)`
+
   padding: 100px 0 0;
 
   @media (max-width: 414px) {
@@ -66,10 +66,12 @@ const Portfolios = ({
       parallax.scrollTo(index + 1);
     }
   };
-  console.log(portfolios);
   return (
     <>
-      <Parallax ref={(ref) => (parallax = ref)} pages={portfolios.length}>
+      <Parallax ref={(ref) => (parallax = ref)} pages={portfolios.length}
+          style={{
+            backgroundColor: "linear-gradient(45deg, #8e2de2, #4a00e0)",
+          }}>
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -127,7 +129,6 @@ const Portfolios = ({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  // marginTop: "10vw",
                 }}
                 onClick={() => onClick(index)}
               >
@@ -159,8 +160,6 @@ const Portfolios = ({
   );
 };
 
-Portfolios.propTypes = {
-  data: PropTypes.shape({}).isRequired,
-};
+
 
 export default Portfolios;

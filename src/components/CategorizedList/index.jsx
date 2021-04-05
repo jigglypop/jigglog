@@ -12,8 +12,11 @@ import Pagination from "@material-ui/lab/Pagination";
 import { Link } from "gatsby";
 import PostsWrapper from "../Common/PostsWrapper";
 import ImageWrapper from "../Common/ImageWrapper";
-import CategoryItem from "../Common/CategoryItem";
+// import CategoryItem from "../Common/CategoryItem";
 import LargeWrapper from "../Common/LargeWrapper";
+import OuterButton from "../Common/OuterButton";
+import ClipText from "../Common/ClipText";
+import { CategoryWrapper, ListImage, ListTitle, ListContent, ListPage, ListCategory } from './styled'
 
 const CategorizedList = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -59,30 +62,29 @@ const CategorizedList = ({ data, location }) => {
           <meta name="og:title" content={decodeURI(category)} />
         </Helmet>
         <LargeWrapper>
-          <ImageWrapper>
-            <div className="jb-wrap">
-              <MoonBackgroundAnimation>
-                <img src={moon} />
-              </MoonBackgroundAnimation>
-              <h1 className="jb-text">{decodeURI(category)}</h1>
-              <h1 className="jb-under">카테고리</h1>
-            </div>
-          </ImageWrapper>
-          <Grid
-            container
-            style={{ justifyContent: "center", paddingBottom: "10px" }}
-          >
-            {results.map(({ key, length }) => (
-              <Grid item key={key}>
-                <Link to={`/categories/${key}/1`}>
-                  <CategoryItem>
-                    <h1>{key}</h1>
-                  </CategoryItem>
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
-          <div className="cardpage">
+          <CategoryWrapper>
+            <ListImage>
+              <ClipText>
+                <h1>CATEGORY</h1>
+              </ClipText>
+            </ListImage>
+            <ListTitle>
+                <h3>카테고리</h3>
+            </ListTitle>
+            <ListCategory>
+              <div>
+              {results.map(({ key, length }) => (
+                <div style={{ display: "inline-block"}}>
+                  <Link to={`/categories/${key}/1`}>
+                    <OuterButton>
+                      <h4>{key}</h4>
+                    </OuterButton>
+                  </Link>
+                </div>
+              ))}
+              </div>
+            </ListCategory>
+            <ListContent>
             {posts.length === 0 ? <div>No posts.</div> : null}
             {posts.map(
               ({
@@ -99,8 +101,9 @@ const CategorizedList = ({ data, location }) => {
                 />
               )
             )}
-            <div className="pagination">
-              <Pagination
+            </ListContent>
+            <ListPage>
+            <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_PAGE)}
                 page={page}
                 size="large"
@@ -111,17 +114,13 @@ const CategorizedList = ({ data, location }) => {
                   marginBottom: "100px",
                 }}
               />
-            </div>
-          </div>
+            </ListPage>
+          </CategoryWrapper>
         </LargeWrapper>
       </PostsWrapper>
     </>
   );
 };
 
-CategorizedList.propTypes = {
-  data: PropTypes.shape({}).isRequired,
-  location: PropTypes.shape({}).isRequired,
-};
 
 export default CategorizedList;

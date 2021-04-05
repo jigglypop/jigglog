@@ -1,24 +1,28 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
-import { PRIMARY_COLOR } from "~/components/Common/constants";
 
 export const GnbWrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Lato");
-  font-family: "NanumBarunGothicSubset" !important;
-
+  /* @import url("https://fonts.googleapis.com/css?family=Lato"); */
+  font-family: "NanumBarunGothicSubset";
+  src: local("NanumBarunGothicSubset"),
+    url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
+  /* font-family: "NanumBarunGothicSubset" !important; */
   position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
   width: 100%;
   font-size: 14px;
-  font-family: Lato;
   font-weight: 600;
   z-index: 3000;
+  background-color: #141414;
 `;
 
 export const List = styled.ul`
   display: flex;
   align-items: center;
   height: 80px;
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 `;
 
 export const SubMenu = styled.ul`
@@ -29,7 +33,6 @@ export const SubMenu = styled.ul`
   font-weight: 500;
   overflow: hidden;
   transition: max-height 0.4s ease-out 0.1s;
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
   li {
     padding: 6px 12px;
@@ -44,11 +47,6 @@ export const ListMenu = styled.li`
   position: relative;
   padding: 0 0 0 2em;
   font-weight: 500;
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
-
-  a {
-    color: ${({ theme: { color } }) => color};
-  }
 
   ul {
     max-height: 0;
@@ -114,43 +112,12 @@ export const SearchBarWrapper = styled.div`
   }
 `;
 
-export const SearchBar = styled.input`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 36px;
-  margin: auto;
-  padding: 0 0.4em;
-  width: 240px;
-  height: 2.4em;
-  line-height: 2.4em;
-  color: ${({ theme: { color } }) => color};
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
-  border-radius: 4px;
-  border: 1px solid ${({ theme: { color } }) => color};
-  font-size: 14px;
-  outline: 0;
-  z-index: 1000;
-
-  @media (max-width: 414px) {
-    display: none;
-    right: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  &:focus {
-    border-color: ${PRIMARY_COLOR};
-  }
-`;
-
 export const SearchedPosts = styled.div`
   position: absolute;
   top: 80px;
   right: 3px;
   width: 317px;
   max-height: 500px;
-  background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
   box-shadow: ${({ isEmpty }) =>
     isEmpty ? "0 0 0" : "0 2px 4px rgba(0,0,0,0.2)"};
   box-shadow: ${({ isEmpty }) =>
@@ -214,5 +181,24 @@ export const SearchedPost = styled.article`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+`;
+
+export const MenuTitle = styled.div`
+  font-size: 15px;
+  font-weight: 800;
+  /* text-shadow: 2px 2px 20px white; */
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+export const SmallItem = styled.div`
+  margin: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  text-shadow: 1px 1px 10px white;
+  @media (max-width: 600px) {
+    font-size: 13px;
   }
 `;

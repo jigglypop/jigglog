@@ -6,7 +6,6 @@ ul {
 }
 
 .gatsby-highlight pre[class*="language-"] {
-  overflow: initial;
   min-width: 100%;
   font-family: "NanumBarunGothic" !important;
   padding: 30px;
@@ -14,7 +13,6 @@ ul {
 code[class*="language-"],
 pre[class*="language-"] {
   color: white;
-  /* font-weight: 800; */
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {

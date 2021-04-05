@@ -47,15 +47,16 @@ export default class HTML extends Component {
             dangerouslySetInnerHTML={{ __html: stylesStr }}
           />
         </head>
-
+        
         <body {...bodyAttributes}>
-          {preBodyComponents}
-          <div
-            key="body"
-            id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: body }}
-          />
-          {postBodyComponents}
+            {preBodyComponents}
+            <div
+              key="body"
+              id="___gatsby"
+              dangerouslySetInnerHTML={{ __html: body }}
+            >
+            </div>
+            {postBodyComponents}
         </body>
       </html>
     );

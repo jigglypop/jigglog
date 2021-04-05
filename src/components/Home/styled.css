@@ -1,6 +1,4 @@
-.feUeJY {
-  padding: 0 !important;
-}
+
 
 @font-face {
   font-family: "NanumBarunGothicSubset";
@@ -8,20 +6,31 @@
     url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
 }
 
-.hjYBZW,
 body {
   font-family: "NanumBarunGothicSubset" !important;
+  width: 100vw;
+  height: 100vh;
 }
 
-.hjYBZW,
-body {
-  /* font-family: "NanumBarunGothic"  */
-  color: #fefefe;
-  /* background-color: #1f1f24; */
-  /* background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59) !important; */
-  /* background: linear-gradient(45deg, #434343, #232526) !important; */
-  /* background: linear-gradient(90deg, #c31432, #240b36) !important; */
-  /* background: linear-gradient(45deg, #7b4397, #dc2430) !important; */
-  /* background: linear-gradient(45deg, #6a3093, #a044ff) !important; */
-  background: linear-gradient(45deg, #5c258d, #4389a2) !important;
+#___gatsby{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+::-webkit-scrollbar {
+  width: 23px;
+  background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #8E2DE2, #4A00E0);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color:transparent;
+}
+::-webkit-scrollbar-corner{
+  background-color: #141414;
 }

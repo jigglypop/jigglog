@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PostsWrapper = styled.div`
-  background: linear-gradient(90deg, #5c258d, #4389a2) !important;
   margin: auto;
   padding-top: 10vw;
   padding-bottom: 10vw;

@@ -6,6 +6,7 @@ export default function TableOfContents({ items, currentHeaderUrl }) {
   if (!currentHeaderUrl) {
     return null;
   }
+  console.group(currentHeaderUrl)
   const tempHeader = [];
   const currentSplit = currentHeaderUrl.split("-");
   for (const i in currentSplit) {

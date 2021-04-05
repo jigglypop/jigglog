@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { animated, useSpring } from "react-spring";
 import Grid from "@material-ui/core/Grid";
+import OuterButton from '../OuterButton'
 import {
   TagItem,
   TagWrapper,
@@ -48,9 +49,9 @@ const Card = ({ tags, path, images, title, date, summary }) => {
                   <TagWrapper>
                     {tags.map((tag) => (
                       <Link key={tag} to={`/tags/${tag}/1`}>
-                        <TagItem>
-                          <h1 className="tagitem">#{tag}</h1>
-                        </TagItem>
+                        <OuterButton fontSize="10px" height="38px" borderColor="#66d9ef" color="#66d9ef">
+                          <h4 className="tagitem">#{tag}</h4>
+                        </OuterButton>
                       </Link>
                     ))}
                   </TagWrapper>

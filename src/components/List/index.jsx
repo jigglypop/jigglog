@@ -4,13 +4,13 @@ import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
 import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
-import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
-import moon from "../../components/parallax/common/moon.webp";
 import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 import PostsWrapper from "../Common/PostsWrapper";
 import ImageWrapper from "../Common/ImageWrapper";
 import LargeWrapper from "../Common/LargeWrapper";
+import ClipText from "../Common/ClipText";
+import { ListImage, ListTitle, ListContent, ListPage } from './styled'
 
 const List = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -32,13 +32,15 @@ const List = ({ data, location }) => {
         </Helmet>
         <LargeWrapper>
           <ImageWrapper>
-            <div className="jb-wrap">
-              <MoonBackgroundAnimation>
-                <img src={moon} />
-              </MoonBackgroundAnimation>
-              <div className="jb-text">BLOG LIST</div>
-              <div className="jb-under">블로그 모든 글 목록</div>
-            </div>
+            <ListImage>
+              <ClipText>
+                <h1>BLOG LIST</h1>
+              </ClipText>
+            </ListImage>
+            <ListTitle>
+              <h3>블로그 모든 글 목록</h3>
+            </ListTitle>
+            <ListContent>
             {posts.map(
               ({
                 node: {
@@ -54,19 +56,17 @@ const List = ({ data, location }) => {
                 />
               )
             )}
-            <div className="pagination">
+            </ListContent>
+
+
+            <ListPage>
               <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_PAGE)}
                 page={page}
                 size="large"
                 onChange={handleChange}
-                style={{
-                  listStyle: "none",
-                  color: "primary",
-                  marginBottom: "100px",
-                }}
               />
-            </div>
+            </ListPage>
           </ImageWrapper>
         </LargeWrapper>
       </PostsWrapper>

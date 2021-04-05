@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { render } from "react-dom";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
 import Bio from "~/components/Bio";
@@ -14,7 +13,6 @@ import formattedDate from "~/utils/formattedDate";
 import "./styled.css";
 import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
-import TableOfContents from "./tableOfContent";
 import Grid from "@material-ui/core/Grid";
 import { FaPrint } from "react-icons/fa";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
@@ -33,13 +31,14 @@ import {
   ImageWrapper,
   ButtonInline,
   WarpVisible,
+  TocItemDiv
 } from "./styled";
+
 
 const PostTemplate = ({
   data: {
     post: {
       html,
-      tableOfContents,
       frontmatter: { title, date, images = [], components = [] },
     },
     posts,
@@ -74,11 +73,9 @@ const PostTemplate = ({
 
       code.appendChild(button);
     });
-
     const clipboard = new Clipboard(".copy-button", {
       target: ({ previousElementSibling }) => previousElementSibling,
     });
-
     clipboard.on("success", (e) => {
       e.clearSelection();
     });
@@ -144,37 +141,44 @@ const PostTemplate = ({
   };
 
   // 여기
-  const [currentHeaderUrl, setCurrentHeaderUrl] = useState(null);
-  const tocItems = tableOfContents;
+  const [tocEls, setTocEls] = useState(null)
+  useEffect(()=>{
+    const tocItems = document.querySelectorAll('h1, h2')
+    tocItems.forEach((tocitem, index )=> {
+      // const toctext = tocitem.innerText.replace(/[0-9|\.|\s]/g, '')
+      tocitem.classList.add(`toctextlink${index}`)
+    })
+    setTocEls(tocItems)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          const tocitemall = document.querySelectorAll('.tocitem')
+          tocitemall.forEach((items) => 
+              items.classList.remove('isintersect')
+          )
+          const entryId = entry.target.className.replace("toctextlink", '')
+          const tocItem = document.querySelector(`#tocitem${entryId}`)
+          const toctextitem =  document.querySelector(`.toctextlink${entryId}`)
 
-  const handleScroll = () => {
-    let aboveHeaderUrl;
-    const currentOffsetY = window.pageYOffset;
-    const headerElements = document.querySelectorAll(".anchor-header");
-    for (const elem of headerElements) {
-      const { top } = elem.getBoundingClientRect();
-      const elemTop = top + currentOffsetY;
-      const isLast = elem === headerElements[headerElements.length - 1];
-      if (currentOffsetY < elemTop - 300) {
-        aboveHeaderUrl &&
-          setCurrentHeaderUrl(aboveHeaderUrl.split(location.origin)[1]);
-        !aboveHeaderUrl && setCurrentHeaderUrl(null);
-      } else {
-        isLast && setCurrentHeaderUrl(elem.href.split(location.origin)[1]);
-        !isLast && (aboveHeaderUrl = elem.href);
-      }
+          if (tocItem && toctextitem){
+            tocItem.classList.add('isintersect')
+          }
+        }
+      });
+    });
+    if (tocItems){
+      tocItems.forEach((tocEl) => {
+        observer.observe(tocEl);
+      })
     }
-  };
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+    return () => observer && observer.disconnect();
+  }, [])
+
+  // 프린트
   const printPage = useCallback(() => {
     global.print();
   }, []);
+  // 답
   const [answer, setAnswer] = useState("");
   const blankAnswer = useCallback(() => {
     if (answer === "") {
@@ -183,6 +187,7 @@ const PostTemplate = ({
       setAnswer("");
     }
   }, [answer]);
+  // 라인
   const [lines, setLines] = useState("");
   const blankLines = useCallback(() => {
     if (lines === "") {
@@ -191,6 +196,7 @@ const PostTemplate = ({
       setLines("");
     }
   }, [lines]);
+  // 삭제선
   const [dels, setDels] = useState("hidden");
   const blankDels = useCallback(() => {
     if (dels === "") {
@@ -199,6 +205,19 @@ const PostTemplate = ({
       setDels("");
     }
   }, [dels]);
+
+  // 스크롤하기
+  const onClick = (e) => {
+    const targettext = document.querySelector(`.toctextlink${e.currentTarget.id.replace("tocitem", '')}`)
+    const main = document.querySelector('#layoutwrapper')
+
+    main.scrollTo({
+      top: targettext.offsetTop - 200,
+      behavior: 'smooth'
+    });
+  }
+  
+  
   return (
     <>
       <Helmet>
@@ -222,10 +241,12 @@ const PostTemplate = ({
                     />
                   )}
                 </div>
+                
+                <div className="jb-text">
+                  {title}
+                </div>
               </div>
-              <div className="jb-text">
-                <p>{title}</p>
-              </div>
+
             </ImageWrapper>
           </Grid>
           <Grid item lg={2} md={2} sm={false} xs={false}>
@@ -331,10 +352,15 @@ const PostTemplate = ({
 
           <Grid item lg={2} md={2} sm={false} xs={false}>
             <VisibleTable>
-              <TableOfContents
-                items={tocItems}
-                currentHeaderUrl={currentHeaderUrl}
-              />
+              {tocEls && [...tocEls].map((item, index) => 
+              <TocItemDiv 
+                key={index} 
+                groupId={index} 
+                className={`tocitem ${item.innerText}`} 
+                id={`tocitem${index}`}
+                onClick={e => onClick(e)}>
+                  <h4>{item.innerText}</h4>
+              </TocItemDiv>)}
             </VisibleTable>
           </Grid>
         </Grid>
@@ -381,9 +407,5 @@ const PostTemplate = ({
   );
 };
 
-PostTemplate.propTypes = {
-  data: PropTypes.shape({ date: PropTypes.object }).isRequired,
-  location: PropTypes.shape({}).isRequired,
-};
 
 export default PostTemplate;

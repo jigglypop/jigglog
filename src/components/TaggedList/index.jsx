@@ -9,11 +9,14 @@ import { Link } from "gatsby";
 import Pagination from "@material-ui/lab/Pagination";
 import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
 import moon from "../../components/parallax/common/moon.webp";
-import styled from "styled-components";
+// import styled from "styled-components";
 import PostsWrapper from "../Common/PostsWrapper";
 import ImageWrapper from "../Common/ImageWrapper";
-import TagItem from "../Common/TagItem";
+// import TagItem from "../Common/TagItem";
 import LargeWrapper from "../Common/LargeWrapper";
+import OuterButton from "../Common/OuterButton";
+import ClipText from "../Common/ClipText";
+import { CategoryWrapper, ListImage, ListTitle, ListContent, ListPage, ListCategory } from './styled'
 
 const TaggedList = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -61,30 +64,27 @@ const TaggedList = ({ data, location }) => {
           <meta name="og:title" content={decodeURI(tag)} />
         </Helmet>
         <LargeWrapper>
-          <ImageWrapper>
-            <div className="jb-wrap">
-              <MoonBackgroundAnimation>
-                <img src={moon} />
-              </MoonBackgroundAnimation>
-              <h1 className="jb-text">{decodeURI(tag)}</h1>
-              <h1 className="jb-under">태그</h1>
-            </div>
-          </ImageWrapper>
-          <Grid
-            container
-            style={{ justifyContent: "center", paddingBottom: "10px" }}
-          >
+          <CategoryWrapper>
+            <ListImage>
+              <ClipText>
+                <h1>TAGS</h1>
+              </ClipText>
+            </ListImage>
+            <ListTitle>
+                <h3>태그</h3>
+            </ListTitle>
+            <ListCategory>
             {tagResults.map(({ key, length }) => (
               <Grid item key={key}>
                 <Link to={`/tags/${key}/1`}>
-                  <TagItem>
-                    <h1>#{key}</h1>
-                  </TagItem>
+                  <OuterButton>
+                    <h4>#{key}</h4>
+                  </OuterButton>
                 </Link>
               </Grid>
             ))}
-          </Grid>
-          <div className="cardpage">
+            </ListCategory>
+            <ListContent>
             {posts.length === 0 ? <div>No posts.</div> : null}
             {posts.map(
               ({
@@ -101,8 +101,9 @@ const TaggedList = ({ data, location }) => {
                 />
               )
             )}
-            <div className="pagination">
-              <Pagination
+            </ListContent>
+            <ListPage>
+            <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_PAGE)}
                 page={page}
                 size="large"
@@ -113,8 +114,8 @@ const TaggedList = ({ data, location }) => {
                   marginBottom: "100px",
                 }}
               />
-            </div>
-          </div>
+            </ListPage>
+          </CategoryWrapper>
         </LargeWrapper>
       </PostsWrapper>
     </>
