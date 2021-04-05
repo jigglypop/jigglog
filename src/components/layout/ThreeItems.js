@@ -18,8 +18,7 @@ export const distance = 1600;
 
 // 바깥
 export const Outer = () => {
-    console.log(path.resolve(__dirname, 'src'))
-  return ImportGltf('~/resources/warehouse/outer.gltf', '바깥', 'outer', true);
+  return ImportGltf('/gallaxy/scene.gltf', '바깥', 'outer', true);
 };
 // 지구
 export const PlanetEarth = ({ categorySet, hasPortfolio } ) => {
