@@ -16,7 +16,8 @@ exports.DESCRIPTION = "새로운 개발을 좋아하는 개발자";
 exports.AUTHOR = "JIGGLYPOP";
 exports.EMAIL = "donghwanyeom@gmail.com";
 exports.KEYWORDS = ["Gatsby", "ReactJS"].join(", ");
-exports.SITE_URL = "https://jigglog.netlify.app";
+// exports.SITE_URL = "https://jigglog.netlify.app";
+exports.SITE_URL = "http://jigglog.s3-website.ap-northeast-2.amazonaws.com";
 exports.PROFILE = "https://pbs.twimg.com/media/CsEjsJTVMAAtl0V.jpg:large";
 
 // Social

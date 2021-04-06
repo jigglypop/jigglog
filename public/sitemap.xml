@@ -1,114 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(10)-프로그래밍 언어 활용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(10)-프로그래밍 언어 활용(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(1)-요구사항 확인/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(12)-제품 소프트웨어 패키징/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(10)-프로그래밍 언어 활용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(11)-응용 SW 기초 기술 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(2)-데이터 입출력 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(3)-통합 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(4)-서버 프로그램 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(4)-서버 프로그램 구현(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(4)-서버 프로그램 구현(4)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(7)-애플리케이션 테스트 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(5)-인터페이스 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(8)-SQL 응용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(6)-화면설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(9)-소프트웨어 개발 보안 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 실기 요점 정리(8)-SQL 응용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 필기 요점 정리(4)-정보시스템 구축 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 필기 요점 정리(3)-소프트웨어 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 필기 요점 정리(5)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 11-제품 소프트웨어 패키징/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 2-요구 사항 확인/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 3-데이터 입출력 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 4-통합 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 5-서버 프로그램 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 6-화면 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 7-애플리케이션 테스트 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 8-SQL 응용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[2020] 정보 처리 기사 실기 9-소프트웨어 보안 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[파이썬] itertools 에 대해서 알아보자/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[파이썬] 파이썬을 이용한 이진탐색트리 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/portfolios/MOVIE STAR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/portfolios/LANGUAGE TOGETHER/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/resume/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[리액트 3D] 리액트 + three.js 시작하기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/[백준 2042번] 구간 합/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/portfolios</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/pages/7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 실기/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/프로그래밍 언어 활용/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/프로그래밍 언어 활용/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/서버 프로그램 구현/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/서버 프로그램 구현/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/SQL 응용/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/SQL 응용/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정처기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정처기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/정처기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/파이썬/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/파이썬/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/itertools/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/itertools/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/이진탐색트리/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/이진탐색트리/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/react/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/react/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/three.js/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/three.js/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/3D/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/3D/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/백준/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/백준/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/세그먼트 트리/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/세그먼트 트리/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/구간합/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/tags/구간합/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기 요약/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기 요약/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/정보처리기사 실기 요약/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/리액트 + three.js/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/categories/리액트 + three.js/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jigglog.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/2020 정보처리기사 필기 요점 정리(2)-소프트웨어 개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/2020 정보처리기사 필기 요점 정리(1)-데이터베이스 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/2020 정보처리기사 필기 요점 정리(3)-소프트웨어 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/2020 정보처리기사 필기 요점 정리(4)-정보시스템 구축 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/2020 정보처리기사 필기 요점 정리(5)-프로그래밍 언어 활용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/history api 정리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/vue공부1일차/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 네트워크 관리사 2급 실기 요점 정리 - 라우터/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/react 공부/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 네트워크 관리사 2급 실기 요점 정리 - 리눅스_TCPIP_신경향/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 네트워크 관리사 2급 실기 요점 정리 - 윈도우 서버/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 네트워크 관리사 2급 실기 요점 정리 - 정리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 리눅스 마스터 2급 2차 요점 정리 - 리눅스 일반/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 1-프로그래밍 언어 활용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 10-응용 SW 기초 기술 활용(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 12-정보 용어 정리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 11-제품 소프트웨어 패키징/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 14-단답형 문제(2)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 16-단답형 문제(4)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 13-단답형 문제(1)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 2-요구 사항 확인/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 15-단답형 문제(3)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 3-데이터 입출력 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 4-통합 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 6-화면 설계/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 5-서버 프로그램 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[파이썬] itertools 에 대해서 알아보자/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 7-애플리케이션 테스트 관리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 9-소프트웨어 보안 구축/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[파이썬] 파이썬을 이용한 이진탐색트리 구현/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/프로그래머스 데브매칭 고양이 정리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/[2020] 정보 처리 기사 실기 8-SQL 응용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/CAPTURE BLOG/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/COLORBERRY/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/DT CENTER/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/ANGULOG/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/LANGUAGE TOGETHER/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/MOVIE STAR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/MBTI WORLD/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios/VUELOG/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/resume/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/portfolios</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/pages/7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 필기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/데이터베이스 구축/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/데이터베이스 구축/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/네트워크 관리사 2급/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/네트워크 관리사 2급/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/자격증/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/자격증/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/소프트웨어/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/소프트웨어/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/vue.js/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/vue.js/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/프론트엔드/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/프론트엔드/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/react.js/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/react.js/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 실기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 실기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 실기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정보처리기사 실기/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정처기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정처기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정처기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/정처기/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/리눅스 마스터 2급/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/리눅스 마스터 2급/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/파이썬/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/파이썬/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/itertools/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/itertools/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/이진탐색트리/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/tags/이진탐색트리/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 필기/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 필기/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 필기/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/자격증/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/자격증/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/vue.js/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/vue.js/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/react/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/react/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 실기 요약/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 실기 요약/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 실기 요약/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/정보처리기사 실기 요약/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/알고리즘/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/알고리즘/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jigglog.s3-website.ap-northeast-2.amazonaws.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

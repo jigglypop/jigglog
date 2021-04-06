@@ -101,8 +101,8 @@
     "clean": "rm -rf .cache && rm -rf public",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "aws s3 sync ./public s3://jigglog --profile=jigglog"
   },
   "browserslist": [
     "> 10%",
