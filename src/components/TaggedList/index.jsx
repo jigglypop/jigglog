@@ -7,16 +7,18 @@ import { CONTENT_PER_PAGE } from "~/constants";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "gatsby";
 import Pagination from "@material-ui/lab/Pagination";
-import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
-import moon from "../../components/parallax/common/moon.webp";
-// import styled from "styled-components";
 import PostsWrapper from "../Common/PostsWrapper";
-import ImageWrapper from "../Common/ImageWrapper";
-// import TagItem from "../Common/TagItem";
 import LargeWrapper from "../Common/LargeWrapper";
 import OuterButton from "../Common/OuterButton";
 import ClipText from "../Common/ClipText";
-import { CategoryWrapper, ListImage, ListTitle, ListContent, ListPage, ListCategory } from './styled'
+import { 
+  ListWrapper, 
+  ListImage, 
+  ListTitle, 
+  ListContent, 
+  ListPage, 
+  ListCategory
+} from '../Common/List/styled'
 
 const TaggedList = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -64,7 +66,7 @@ const TaggedList = ({ data, location }) => {
           <meta name="og:title" content={decodeURI(tag)} />
         </Helmet>
         <LargeWrapper>
-          <CategoryWrapper>
+          <ListWrapper>
             <ListImage>
               <ClipText>
                 <h1>TAGS</h1>
@@ -92,13 +94,13 @@ const TaggedList = ({ data, location }) => {
                   frontmatter: { images, tags, path, ...otherProps },
                 },
               }) => (
-                <Card
-                  key={path}
-                  path={path}
-                  tags={tags}
-                  images={images}
-                  {...otherProps}
-                />
+                  <Card
+                    key={path}
+                    path={path}
+                    tags={tags}
+                    images={images}
+                    {...otherProps}
+                  />
               )
             )}
             </ListContent>
@@ -115,7 +117,7 @@ const TaggedList = ({ data, location }) => {
                 }}
               />
             </ListPage>
-          </CategoryWrapper>
+          </ListWrapper>
         </LargeWrapper>
       </PostsWrapper>
     </>

@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
-import { PREFIX, CONTENT_PER_PAGE, PAGE_PER_SCREEN } from "~/constants";
+import { PREFIX, CONTENT_PER_PAGE } from "~/constants";
 import Pagination from "@material-ui/lab/Pagination";
 import "./styled.css";
 import PostsWrapper from "../Common/PostsWrapper";
-import ImageWrapper from "../Common/ImageWrapper";
 import LargeWrapper from "../Common/LargeWrapper";
 import ClipText from "../Common/ClipText";
-import { ListImage, ListTitle, ListContent, ListPage } from './styled'
+import { 
+  ListWrapper,
+  ListImage, 
+  ListTitle, 
+  ListContent, 
+  ListPage, 
+} from '../Common/List/styled'
 
 const List = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -31,7 +35,7 @@ const List = ({ data, location }) => {
           <meta name="og:title" content={`${PREFIX}POST`} />
         </Helmet>
         <LargeWrapper>
-          <ImageWrapper>
+          <ListWrapper>
             <ListImage>
               <ClipText>
                 <h1>BLOG LIST</h1>
@@ -67,16 +71,11 @@ const List = ({ data, location }) => {
                 onChange={handleChange}
               />
             </ListPage>
-          </ImageWrapper>
+          </ListWrapper>
         </LargeWrapper>
       </PostsWrapper>
     </>
   );
-};
-
-List.propTypes = {
-  data: PropTypes.shape({}).isRequired,
-  location: PropTypes.shape({}).isRequired,
 };
 
 export default List;

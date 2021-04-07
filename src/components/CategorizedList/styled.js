@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const CategoryWrapper = styled.div`
-  display: grid;
-  grid-template-rows: 200px 100px 100px 1fr 200px;
+    display: grid;
+    grid-template-rows: 200px 100px 100px 1fr 200px;
 `;
 
 export const ListImage = styled.div`
     grid-row: 1/2;
+    background-image: url('/back.jpg');
+    background-size: cover;
 `;
 
 export const ListTitle = styled.div`

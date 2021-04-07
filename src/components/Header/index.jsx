@@ -1,18 +1,12 @@
 import React, { useReducer, useCallback } from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import { RiMoonClearLine } from "react-icons/ri";
-import { FaSearch, FaTags } from "react-icons/fa";
 import {
-  GnbWrapper,
+  HeaderWrapper,
   List,
   SubMenu,
   ListMenu,
   StyledLink,
-  SearchedPosts,
-  Title,
-  Summary,
-  Tag,
-  SearchedPost,
   MenuTitle,
   SmallItem
 } from "./styled";
@@ -55,7 +49,7 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-const Gnb = ({
+const Header = ({
   location,
   categories,
   postInformations,
@@ -66,25 +60,8 @@ const Gnb = ({
   const toggleMenu = useCallback(() => {
     dispatch({ type: TOGGLE_MENU });
   }, []);
-  const navigateToPath = useCallback((path) => {
-    navigate(path);
-  }, []);
 
-  const filteredPosts =
-    searchKeyword.length > 0
-      ? postInformations.filter(({ category = "", title = "", tags = [] }) => {
-          const c = category.toLowerCase();
-          const h = title.toLowerCase();
-          const t = tags.map((tag) => tag.toLowerCase());
 
-          const searchedWithCategory = c.search(searchKeyword) !== -1;
-          const searchedWithTitle = h.search(searchKeyword) !== -1;
-          const searchedWithTags =
-            t.filter((t) => t.search(searchKeyword) !== -1).length > 0;
-
-          return searchedWithCategory || searchedWithTitle || searchedWithTags;
-        })
-      : [];
   const { pathname } = location;
   const isPortfolio = pathname.replace(/\/$/, "").startsWith("/portfolios");
   const isHome = pathname.replace(/\/$/, "") === "";
@@ -92,7 +69,7 @@ const Gnb = ({
   const isPost = !(isPortfolio || isHome || isResume);
 
   return (
-    <GnbWrapper>
+    <HeaderWrapper>
       <List>
         <ListMenu>
           <StyledLink to="/">
@@ -132,42 +109,11 @@ const Gnb = ({
           </StyledLink>
         </ListMenu>
       </List>
-      <SearchedPosts isEmpty={filteredPosts.length === 0}>
-        {filteredPosts.map(({ path, title, summary, tags }) => (
-          <SearchedPost key={path}>
-            <Title
-              onClick={() => {
-                navigateToPath(path);
-              }}
-            >
-              {title}
-            </Title>
-            <Summary
-              onClick={() => {
-                navigateToPath(path);
-              }}
-            >
-              {summary}
-            </Summary>
-            {tags.length > 0 ? <FaTags /> : null}
-            {[...new Set(tags)].map((tag) => (
-              <Tag
-                key={tag}
-                onClick={() => {
-                  navigateToPath(`/tags/${tag}/1`);
-                }}
-              >
-                <small>{tag}</small>
-              </Tag>
-            ))}
-          </SearchedPost>
-        ))}
-      </SearchedPosts>
-    </GnbWrapper>
+    </HeaderWrapper>
   );
 };
 
-const CategoryMenu = ({ categories, categorySet, toggleMenu }) => {
+const CategoryMenu = ({ categorySet, toggleMenu }) => {
   return (
     <div>
       {categorySet.map(({ key, length }) => {
@@ -191,4 +137,4 @@ const CategoryMenu = ({ categories, categorySet, toggleMenu }) => {
   );
 };
 
-export default Gnb;
+export default Header;

@@ -49,7 +49,7 @@ export const CommentContent = styled.div`
     font-weight: 800;
   }
   h2 {
-    margin-top: 40px;
+    margin-top: 3em;
     font-size: 28px;
     font-weight: 800;
   }
@@ -147,31 +147,35 @@ export const CommentContent = styled.div`
     }
   }
 `;
+// 포스트 부분
 export const PostContent = styled.div`
   padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
   h1 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5em;
     font-size: 32px;
     font-weight: 800;
   }
   h2 {
-    margin-top: 40px;
+    margin-top: 5em;
     font-size: 28px;
     font-weight: 800;
   }
   h3 {
-    margin-top: 40px;
+    margin-top: 1em;
     font-size: 24px;
     font-weight: 800;
   }
-  h4,
-  h5 {
-    margin-top: 40px;
-    font-weight: 800;
+  h4 {
+    margin-top: 1em;
     font-size: 21px;
+    font-weight: 800;
+  }
+  h5 {
+    margin-top: 1em;
+    font-size: 19px;
+    font-weight: 800;
   }
   p {
     margin-top: 10px;
@@ -212,14 +216,19 @@ export const PostContent = styled.div`
     margin: 20px;
     background: #f9f9f9;
   }
+  thead {
+    background: #e2e2e2;
+    font-weight: 800;
+  }
   th,
   tr,
   td {
     border: 2px solid gray;
     color: black;
     padding: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-size: 14px;
+    min-width: 3rem;
   }
   hr {
     margin-bottom: 30px;
@@ -242,26 +251,28 @@ export const PostContent = styled.div`
       margin-bottom: 10px;
     }
     h1 {
-      margin-top: 2px;
       margin-bottom: 2px;
       font-size: 18px;
     }
     h2 {
-      margin-top: 2px;
-      font-size: 14px;
+      font-size: 16px;
     }
     h3 {
-      margin-top: 2px;
+      font-size: 14px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+    h5 {
       font-size: 10px;
     }
-    h4,
-    h5,
     p,
     blockquote,
     pre {
       margin-top: 5px;
       font-size: 10px;
     }
+
     li {
       line-height: 2.5em;
       margin-top: 5px;
@@ -459,18 +470,21 @@ export const ComponentInPost = styled.div`
 export const TocItemDiv = styled.div`
     display: block;
     margin-right: 20px;
+    padding-left: 10px;
     font-size: 10px;
     border-left: 7px solid black;
+    transform: all 0.5s ease-in-out;
+    text-align: left;
     cursor: pointer;
     h4 {
       padding: 0.4em 0 0.4em;
-      color: #263238;
+      color: rgb(150, 150, 150);
       font-size: 12px;
       font-weight: 800;
     }
     &.isintersect h4{
       color: black;
-      font-size: 16px;
+      font-size: 14px;
       padding: 0.5em 0 0.5em;
     }
 `

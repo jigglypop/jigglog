@@ -70,7 +70,6 @@ const PostTemplate = ({
       const button = document.createElement("button");
       button.setAttribute("class", "copy-button");
       button.innerHTML = "COPY";
-
       code.appendChild(button);
     });
     const clipboard = new Clipboard(".copy-button", {
@@ -81,30 +80,7 @@ const PostTemplate = ({
     });
   }, []);
 
-  const renderComponents = useCallback((components) => {
-    if (Array.isArray(components)) {
-      try {
-        components.forEach(
-          ({ rootId: componentRootId, fileName: componentFileName }) => {
-            const $componentContainer = global.document.getElementById(
-              componentRootId
-            );
-            const App = require(`~/postComponents/${componentFileName}`)
-              .default;
 
-            render(
-              <ComponentInPost>
-                <App />
-              </ComponentInPost>,
-              $componentContainer
-            );
-          }
-        );
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-  }, []);
 
   useEffect(() => {
     const { pathname: identifier } = location;
@@ -118,8 +94,8 @@ const PostTemplate = ({
 
   useEffect(() => {
     createCopyButton();
-    renderComponents(components);
   }, []);
+
   const [image = null] = images;
   // 윗포스트
   const [page, setPage] = useState(1);
@@ -145,7 +121,6 @@ const PostTemplate = ({
   useEffect(()=>{
     const tocItems = document.querySelectorAll('h1, h2')
     tocItems.forEach((tocitem, index )=> {
-      // const toctext = tocitem.innerText.replace(/[0-9|\.|\s]/g, '')
       tocitem.classList.add(`toctextlink${index}`)
     })
     setTocEls(tocItems)

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "gatsby";
-import { animated, useSpring } from "react-spring";
+import { useSpring } from "react-spring";
 import Grid from "@material-ui/core/Grid";
 import OuterButton from '../OuterButton'
 import {
@@ -13,27 +12,16 @@ import {
   Picture,
 } from "./styled";
 
+
 const Card = ({ tags, path, images, title, date, summary }) => {
-  const [image = null] = images;
-  const [active, setActive] = useState(false);
-  const props = useSpring({
-    transform: active ? "scale(1.02)" : "scale(1)",
-  });
 
   return (
     <DivWrapper>
-      <animated.div
-        className="spring-div"
-        onMouseOver={() => setActive(true)}
-        onMouseOut={() => setActive(false)}
-        style={{
-          transform: props.transform,
-        }}
-      >
         <Link to={path}>
           <StyledCard>
             <Content>
               <Grid container>
+
                 <Grid item xs={3}>
                   <Picture
                     src={
@@ -43,9 +31,12 @@ const Card = ({ tags, path, images, title, date, summary }) => {
                     }
                   />
                 </Grid>
-                <Grid item xs={12} class="grid">
+
+
+                <Grid item xs={12} >
                   <h1 className="title">{title}</h1>
                   <h1 className="summary">{summary}</h1>
+
                   <TagWrapper>
                     {tags.map((tag) => (
                       <Link key={tag} to={`/tags/${tag}/1`}>
@@ -63,32 +54,16 @@ const Card = ({ tags, path, images, title, date, summary }) => {
                           .replace(".000Z", "")
                       : date}
                   </h1>
+
                 </Grid>
               </Grid>
             </Content>
           </StyledCard>
         </Link>
-      </animated.div>
       <hr />
     </DivWrapper>
   );
 };
 
-Card.propTypes = {
-  tags: PropTypes.arrayOf(PropTypes.string),
-  path: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string,
-  date: PropTypes.string,
-  summary: PropTypes.string,
-};
-
-Card.defaultProps = {
-  tags: [],
-  images: [],
-  title: "",
-  date: "",
-  summary: "",
-};
 
 export default Card;

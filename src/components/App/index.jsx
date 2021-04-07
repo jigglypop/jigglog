@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-// import { ThemeProvider } from "styled-components";
-import Gnb from "~/components/Gnb";
+import Header from "~/components/Header";
 import { Wrapper } from './styled'
 
 export default class App extends Component {
-  
   render() {
     const {
       location,
@@ -19,7 +17,7 @@ export default class App extends Component {
     return (
         <Wrapper>
           <nav>
-            <Gnb
+            <Header
               location={location}
               categories={categories}
               postInformations={postInformations}

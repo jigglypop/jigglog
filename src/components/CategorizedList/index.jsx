@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
 import { CONTENT_PER_PAGE } from "~/constants";
-import MoonBackgroundAnimation from "../base/common/LargeMoon.js";
-import moon from "../../components/parallax/common/moon.webp";
-import Grid from "@material-ui/core/Grid";
 import Pagination from "@material-ui/lab/Pagination";
-
 import { Link } from "gatsby";
 import PostsWrapper from "../Common/PostsWrapper";
-import ImageWrapper from "../Common/ImageWrapper";
-// import CategoryItem from "../Common/CategoryItem";
 import LargeWrapper from "../Common/LargeWrapper";
 import OuterButton from "../Common/OuterButton";
 import ClipText from "../Common/ClipText";
-import { CategoryWrapper, ListImage, ListTitle, ListContent, ListPage, ListCategory } from './styled'
+import { 
+  ListWrapper, 
+  ListImage, 
+  ListTitle, 
+  ListContent, 
+  ListPage, 
+  ListCategory
+} from '../Common/List/styled'
 
 const CategorizedList = ({ data, location }) => {
   const [page, setPage] = useState(1);
@@ -62,7 +62,7 @@ const CategorizedList = ({ data, location }) => {
           <meta name="og:title" content={decodeURI(category)} />
         </Helmet>
         <LargeWrapper>
-          <CategoryWrapper>
+          <ListWrapper>
             <ListImage>
               <ClipText>
                 <h1>CATEGORY</h1>
@@ -115,7 +115,7 @@ const CategorizedList = ({ data, location }) => {
                 }}
               />
             </ListPage>
-          </CategoryWrapper>
+          </ListWrapper>
         </LargeWrapper>
       </PostsWrapper>
     </>

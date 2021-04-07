@@ -4,7 +4,6 @@ import { POST, PORTFOLIO } from "~/constants";
 import App from "~/components/App";
 import { LayoutWrapper, OuterWrapper } from './styled'
 import Three from './Three'
-import Gnb from "~/components/Gnb";
 import Main from "~/components/Main";
 
 
@@ -141,23 +140,22 @@ const Layout = ({ children, location }) => (
       );
 
       return (
-        <OuterWrapper>
-          <LayoutWrapper id="layoutwrapper" isMain={location.pathname === '/' ? true: false}>
-            <App
-              location={location}
-              categories={categories}
-              postInformations={postInformations}
-              hasPortfolio={hasPortfolio}
-              categorySet={results}
-              tagSet={tagResults}
-            >
-              {childrenWithProps}
-            </App>
-          </LayoutWrapper>
-          {location.pathname === '/' && <Main/>}
-          {location.pathname === '/' && <Three categorySet={results} hasPortfolio={portfolioSet}/>}
-        </OuterWrapper>
-      );
+          <OuterWrapper>
+            <LayoutWrapper id="layoutwrapper" isMain={location.pathname === '/' ? true: false}>
+              <App
+                location={location}
+                categories={categories}
+                postInformations={postInformations}
+                hasPortfolio={hasPortfolio}
+                categorySet={results}
+                tagSet={tagResults}
+              >
+                {childrenWithProps}
+              </App>
+            </LayoutWrapper>
+            {location.pathname === '/' && <Main/>}
+            {location.pathname === '/' && <Three categorySet={results} hasPortfolio={portfolioSet}/>}
+          </OuterWrapper>);
     }}
   />
 );
