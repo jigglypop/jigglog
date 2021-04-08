@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "~/components/layout";
-import Portfolio from "~/components/Portfolio";
+import Portfolio from "~/components/Portfolio/index.tsx";
 
 const PortfolioTemplate = (props) => (
   <Layout {...props}>

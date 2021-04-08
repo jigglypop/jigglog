@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { render } from "react-dom";
 import Helmet from "react-helmet";
 import Clipboard from "clipboard";
-import Bio from "~/components/Bio";
+import Bio from "../Bio/index.tsx";
 import {
   PREFIX,
   SITE_URL,
@@ -14,26 +13,22 @@ import "./styled.css";
 import SmallCard from "~/components/Common/SmallCard";
 import Pagination from "@material-ui/lab/Pagination";
 import Grid from "@material-ui/core/Grid";
-import { FaPrint } from "react-icons/fa";
 import { BsCircle, BsCircleFill } from "react-icons/bs";
-
 import Clearfix from "~/components/Common/Clearfix";
 import {
   PostWrapper,
-  PrintTitle,
   ClearMobile,
   Button,
   CommentContent,
   PostContent,
   Visible,
   VisibleTable,
-  ComponentInPost,
   ImageWrapper,
   ButtonInline,
   WarpVisible,
   TocItemDiv
-} from "./styled";
-
+} from "./styled.tsx";
+import PrintButton from "../Common/PrintButton";
 
 const PostTemplate = ({
   data: {
@@ -149,10 +144,7 @@ const PostTemplate = ({
     return () => observer && observer.disconnect();
   }, [])
 
-  // 프린트
-  const printPage = useCallback(() => {
-    global.print();
-  }, []);
+
   // 답
   const [answer, setAnswer] = useState("");
   const blankAnswer = useCallback(() => {
@@ -162,6 +154,7 @@ const PostTemplate = ({
       setAnswer("");
     }
   }, [answer]);
+  
   // 라인
   const [lines, setLines] = useState("");
   const blankLines = useCallback(() => {
@@ -184,9 +177,7 @@ const PostTemplate = ({
   // 스크롤하기
   const onClick = (e) => {
     const targettext = document.querySelector(`.toctextlink${e.currentTarget.id.replace("tocitem", '')}`)
-    const main = document.querySelector('#layoutwrapper')
-
-    main.scrollTo({
+    window.scrollTo({
       top: targettext.offsetTop - 200,
       behavior: 'smooth'
     });
@@ -216,15 +207,13 @@ const PostTemplate = ({
                     />
                   )}
                 </div>
-                
                 <div className="jb-text">
                   {title}
                 </div>
               </div>
-
             </ImageWrapper>
           </Grid>
-          <Grid item lg={2} md={2} sm={false} xs={false}>
+          <Grid item lg={2} md={2} sm={false} xs={false} className="stickyvisible">
             <Visible>
               <Bio color={"black"} />
               <WarpVisible>
@@ -305,12 +294,7 @@ const PostTemplate = ({
             <ClearMobile>
               <ButtonInline>
                 <Clearfix>
-                  <div>
-                    <Button type="button" onClick={printPage}>
-                      <FaPrint />
-                      <PrintTitle>PRINT</PrintTitle>
-                    </Button>
-                  </div>
+                  <PrintButton/>
                 </Clearfix>
               </ButtonInline>
             </ClearMobile>
@@ -325,7 +309,7 @@ const PostTemplate = ({
             </PostContent>
           </Grid>
 
-          <Grid item lg={2} md={2} sm={false} xs={false}>
+          <Grid item lg={2} md={2} sm={false} xs={false} className="stickyvisible">
             <VisibleTable>
               {tocEls && [...tocEls].map((item, index) => 
               <TocItemDiv 

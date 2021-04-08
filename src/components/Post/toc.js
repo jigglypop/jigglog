@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { TocItemDiv } from './styled'
 
-
-
 export const InSection = ( props ) => {
     const domRef = useRef();
     useEffect(() => {

@@ -5,50 +5,60 @@ date: "2000-01-01T00:00:00.000Z"
 path: "/resume/"
 ---
 
-# Education
+# 교육사항
 
 ---
 
 - 삼성 소프트웨어 아카데미 2기 수료 (2019.07.01 ~ 2020.06.30)
 
-# Projects
+
+# 자격증
+---
+
+- 정보처리기사
+- 리눅스 마스터 2급
+- 네트워크 관리사 2급
+
+# 프로젝트
 
 ---
 
-#### TEAM
+#### 팀 프로젝트
 
 ---
 
-- MOVIE STAR(URL 서비스중) : 싸피 영화 추천 사이트 프로젝트
-- COLORBERRY PI : 라즈베리 파이를 이용한 미술관 프로젝트
+- MOVIE STAR ([링크](https://moviestarreboot.herokuapp.com)) : 싸피 영화 추천 사이트 프로젝트
+- COLORBERRY PI ([링크](http://colorberry.s3-website.ap-northeast-2.amazonaws.com/)) : 라즈베리 파이를 이용한 미술관 프로젝트
 - SSAFY ART : 인공지능을 이용한 사진 화풍묘사 프로젝트
 - SSAFY PORTFOLIO : 구직활동 포트폴리오 프로젝트
 
-#### PERSONAL
+#### 개인 프로젝트
+
+---
+- LANGUAGE TOGETHER ([링크](http://languagetogether.s3-website.ap-northeast-2.amazonaws.com/)) : 테드, 뉴스 등을 이용한 영어 공부 사이트
+- CAPTURE BLOG ([링크](https://floating-fortress-71700.herokuapp.com/)) : 마크다운 편집기능 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
+- MBTI WORLD ([링크](http://ec2-54-180-150-73.ap-northeast-2.compute.amazonaws.com/)) : NEXT.JS없는 서버사이드 프로젝트 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
+- ANGULOG ([링크](http://angularblog.s3-website.ap-northeast-2.amazonaws.com/)) : 앵귤러 개인 블로그 사이트
+- DT CENTER ([링크](http://dtcenterwarehouse.s3-website.ap-northeast-2.amazonaws.com/)) : 물류 센터 3D 시뮬레이션 사이트
+- VUELOG ([링크](http://vuelog.s3-website.ap-northeast-2.amazonaws.com/)) : 뷰 개인 블로그 사이트
+
+
+# 스킬
 
 ---
 
-- LANGUAGE TOGETHER(URL 서비스중) : 테드, 뉴스 등을 이용한 영어 공부 사이트
-- CAPTURE BLOG(URL 서비스중) : 마크다운 편집기능 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
-- MBTI WORLD(URL 서비스중) : NEXT.JS없는 서버사이드 프로젝트 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
-- ANGULOG(URL 서비스중) : 앵귤러 개인 블로그 사이트
-
-
-# skills
-
----
-
-### LANGUAGE
+### 사용 언어
 
 ---
 
 ##### 자바스크립트
 
-- react, redux , angular, ngrx, rxjs, redux-saga, redux-thunk, react-three-fiber, nodejs 사용
+- react, reduxredux-saga, redux-thunk, react-three-fiber, nodejs 사용
 
 ##### 타입스크립트
 
-- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용
+- angular, ngrx, rxjs, vue, vuex
+- CAPTURE BLOG, MBTI WORLD, ANGULOG, VUELOG 개인 프로젝트에 사용
 
 ##### 파이썬
 
@@ -56,38 +66,15 @@ path: "/resume/"
 
 ##### 자바
 
-- 싸피 심화 프로젝트 잡 컨설팅 사이트 사용.
+- 싸피 심화 프로젝트 잡 컨설팅 사이트 사용
 
 ##### C/C++
 
 - 개인 공부
 
-### BACK END
 
----
 
-##### Django
-
-- 싸피 관통 프로젝트 영화 API 추천 사이트
-- 싸피 웹 프로젝트 django rest api 서버 담당
-
-##### SpringBoot
-
-- 싸피 심화 프로젝트 잡 컨설팅 사이트 백엔드 서버 담당.
-
-##### flask
-
-- 싸피 특화 프로젝트 rest api 인공지능 부분 서버 사용
-
-##### Node.js express
-
-- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
-
-##### GraphQl SERVER
-
-- CAPTURE BLOG 개인 프로젝트에 사용
-
-### FRONT END
+### 프론트엔드
 
 ---
 
@@ -111,7 +98,33 @@ path: "/resume/"
 
 - CAPTURE BLOG 개인 프로젝트에 사용
 
-### DEEP LEARNING
+### 백엔드
+---
+
+##### Django
+
+- 싸피 관통 프로젝트 영화 API 추천 사이트
+- 싸피 웹 프로젝트 django rest api 서버 담당
+
+##### SpringBoot
+
+- 싸피 심화 프로젝트 잡 컨설팅 사이트 백엔드 서버 담당.
+
+##### flask
+
+- 싸피 특화 프로젝트 rest api 인공지능 부분 서버 사용
+
+##### Node.js express
+
+- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
+
+##### GraphQl SERVER
+
+- CAPTURE BLOG 개인 프로젝트에 사용
+
+
+
+### 딥러닝
 
 ---
 
@@ -119,13 +132,13 @@ path: "/resume/"
 
 - 싸피 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 SSAFY ART
 
-### DB
+### 데이터베이스
 
 ---
 
 ##### Mongo DB
 
-- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용
+- CAPTURE BLOG, MBTI WORLD, ANGULOG, VUELOG 개인 프로젝트에 사용
 
 ##### MySql
 

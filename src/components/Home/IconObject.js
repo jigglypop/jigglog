@@ -29,4 +29,4 @@ export const IconObject = [
     "ngrxlogo",
     "typescriptlogo",
     "nextjslogo",
-  ];
+];

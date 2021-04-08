@@ -17,12 +17,4 @@ export const ThreeWrapper = styled.div`
 export const OuterWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
-  overflow: scroll;
-  z-index: 1;
-  ::-webkit-scrollbar{
-    background-color: ${props => props.isMain? "transparent" : '#141414'};
-  }
-  ::-webkit-scrollbar-corner{
-    background-color: ${props => props.isMain? "transparent" : '#141414'};
-  }
 `

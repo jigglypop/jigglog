@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
-import Resume from '~/components/Resume';
+import Resume from '~/components/Resume/index.tsx';
 
 const ResumeTemplate = props => (
   <Layout {...props}>
