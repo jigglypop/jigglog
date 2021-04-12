@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import Card from "~/components/Common/Card";
 import getPosts from "~/utils/getPosts";
@@ -16,17 +16,17 @@ import {
   ListPage, 
 } from '../Common/List/styled'
 
-const List = ({ data, location }) => {
-  const [page, setPage] = useState(1);
-  const allPosts = getPosts(data);
-  const postCount = allPosts.length;
-  const posts = allPosts.slice(
-    (page - 1) * CONTENT_PER_PAGE,
-    page * CONTENT_PER_PAGE
-  );
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
+const List = () => {
+  // const [page, setPage] = useState(1);
+  // const allPosts = getPosts(data);
+  // const postCount = allPosts.length;
+  // const posts = allPosts.slice(
+  //   (page - 1) * CONTENT_PER_PAGE,
+  //   page * CONTENT_PER_PAGE
+  // );
+  // const handleChange = (event, value) => {
+  //   setPage(value);
+  // };
   return (
     <>
       <PostsWrapper>
@@ -35,7 +35,7 @@ const List = ({ data, location }) => {
           <meta name="og:title" content={`${PREFIX}POST`} />
         </Helmet>
         <LargeWrapper>
-          <ListWrapper>
+          {/* <ListWrapper>
             <ListImage>
               <ClipText>
                 <h1>BLOG LIST</h1>
@@ -61,8 +61,6 @@ const List = ({ data, location }) => {
               )
             )}
             </ListContent>
-
-
             <ListPage>
               <Pagination
                 count={Math.ceil(postCount / CONTENT_PER_PAGE)}
@@ -71,7 +69,7 @@ const List = ({ data, location }) => {
                 onChange={handleChange}
               />
             </ListPage>
-          </ListWrapper>
+          </ListWrapper> */}
         </LargeWrapper>
       </PostsWrapper>
     </>

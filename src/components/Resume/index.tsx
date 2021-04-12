@@ -28,7 +28,6 @@ import {
 import { IconObject } from './IconObject'
 import PrintButton from "../Common/PrintButton";
 
-
 export interface IResume {
   data : {
     resume : {

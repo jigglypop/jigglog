@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
-import TaggedList from '~/components/TaggedList';
+import CategorizedList from '~/components/CategorizedList';
 
 const TaggedListTemplate = props => (
   <Layout {...props}>
-    <TaggedList {...props} />
+    <CategorizedList title={["TAG", "태그"]} {...props} />
   </Layout>
 );
 

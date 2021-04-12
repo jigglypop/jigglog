@@ -75,11 +75,11 @@ export const Button = styled.button`
 `;
 
 export const NameTitle = styled.div`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
   text-shadow: 3px 3px 30px white;
   @media (max-width: 600px) {
-    font-size: 25px;
+    font-size: 20px;
   }
 `;
 
@@ -116,7 +116,7 @@ export const PostContent = styled.section`
 
   h1 {
     margin-top: 40px;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 800;
     color: black;
     background: white;
@@ -156,8 +156,7 @@ export const PostContent = styled.section`
     h1 {
       margin-top: 4px;
       margin-bottom: 2px;
-
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 800;
     }
     h2 {

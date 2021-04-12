@@ -11,7 +11,6 @@ import {
 import { CONTENT_PER_SMALL_PAGE, PAGE_PER_SMALL_SCREEN } from "~/constants";
 import getPage from "~/utils/getPage";
 import { Wrapper } from "./styled";
-import styled from "styled-components";
 
 const SmallPagination = ({ postCount, location, prefix }) => {
   const pageCount = postCount

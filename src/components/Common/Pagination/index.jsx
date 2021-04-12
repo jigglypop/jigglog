@@ -105,12 +105,6 @@ const Pagination = ({ postCount, location, prefix }) => {
   );
 };
 
-Pagination.propTypes = {
-  postCount: PropTypes.number.isRequired,
-  location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
-    .isRequired,
-  prefix: PropTypes.string,
-};
 
 Pagination.defaultProps = {
   prefix: "/pages/",

@@ -1,17 +1,11 @@
-import React, { useReducer, useCallback } from "react";
-import { Link } from "gatsby";
+import React from "react";
 import { RiMoonClearLine } from "react-icons/ri";
 import {
-  List,
-  SubMenu,
-  ListMenu,
   StyledLink,
   MenuTitle,
-  SmallItem,
   HeaderDiv
 } from "./styled";
 import { GiHamburgerMenu } from "react-icons/gi";
-
 
 export interface IHeader {
   location : {
@@ -19,45 +13,13 @@ export interface IHeader {
   }
   categories: object[];
   hasPortfolio: object;  
-  // postInformations: object;
   categorySet: object;
-};
-
-const TOGGLE_MENU = "TOGGLE_MENU";
-const TOGGLE_SUB_MENU = "TOGGLE_SUB_MENU";
-
-const initialState = {
-  isMenuOpened: false,
-  isSubMenuClosed: false,
-  searchKeyword: "",
-};
-
-const reducer = (state = initialState, action: { type: string }) => {
-  switch (action.type) {
-    case TOGGLE_MENU: {
-      const isMenuOpened = !state.isMenuOpened;
-      return {
-        ...state,
-        isMenuOpened,
-      };
-    }
-    case TOGGLE_SUB_MENU: {
-      const isSubMenuClosed = !state.isSubMenuClosed;
-      return {
-        ...state,
-        isSubMenuClosed,
-      };
-    }
-    default:
-      return state;
-  }
 };
 
 const toggleHam = () =>{
   const SideBarEl = document.querySelector('.SideBarDiv');
   const SideBarInnerEl = document.querySelector('.SideBarInnerDiv');
   const HeaderDivEl =  document.querySelector('.HeaderDiv');
-
   if (SideBarEl && HeaderDivEl && SideBarInnerEl) {
     SideBarInnerEl.classList.toggle('active')
     HeaderDivEl.classList.toggle('active')
@@ -68,17 +30,9 @@ const toggleHam = () =>{
 const Header = ({
   location,
 }: IHeader) => {
-  const [{ searchKeyword }, dispatch] = useReducer(reducer, initialState);
-  const toggleMenu = useCallback(() => {
-    dispatch({ type: TOGGLE_MENU });
-  }, []);
-
   const { pathname } = location;
   const isPortfolio = pathname.replace(/\/$/, "").startsWith("/portfolios");
-  const isHome = pathname.replace(/\/$/, "") === "";
   const isResume = pathname.replace(/\/$/, "") === "/resume";
-  const isPost = !(isPortfolio || isHome || isResume);
-
   return (
     <HeaderDiv className="HeaderDiv">
         <div className="container">

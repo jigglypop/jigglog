@@ -5,7 +5,7 @@ import CategorizedList from '~/components/CategorizedList';
 
 const CategorizedListTemplate = props => (
   <Layout {...props}>
-    <CategorizedList {...props} />
+    <CategorizedList title={["CATEGORY", "카테고리"]} {...props} />
   </Layout>
 );
 
