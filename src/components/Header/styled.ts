@@ -1,5 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "gatsby";
+
+const boxFade = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`
 
 export const Notice = styled.div`
   position: fixed;
@@ -7,18 +16,21 @@ export const Notice = styled.div`
   top: 10vh;
   color: white;
   background-color: #141414;
-  width: 1000px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: 100%;
   padding: 10px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
   div{
     margin: 10px;
   }
+  a {
+    animation: ${boxFade} 0.5s infinite linear alternate;
+    color: red;
+    font-size: 30px;
+  }
 `
+
 
 export const List = styled.ul`
   display: flex;
