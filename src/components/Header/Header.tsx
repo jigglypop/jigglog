@@ -3,13 +3,15 @@ import { RiMoonClearLine } from "react-icons/ri";
 import {
   StyledLink,
   MenuTitle,
-  HeaderDiv
+  HeaderDiv,
+  Notice
 } from "./styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export interface IHeader {
   location : {
     pathname: string;
+    host: string;
   }
   categories: object[];
   hasPortfolio: object;  
@@ -30,10 +32,11 @@ const toggleHam = () =>{
 const Header = ({
   location,
 }: IHeader) => {
-  const { pathname } = location;
+  const { pathname, host } = location;
   const isPortfolio = pathname.replace(/\/$/, "").startsWith("/portfolios");
   const isResume = pathname.replace(/\/$/, "") === "/resume";
   return (
+    <div>
     <HeaderDiv className="HeaderDiv">
         <div className="container">
           <div className="ul">
@@ -74,7 +77,19 @@ const Header = ({
             </div>
           </div>
         </div>
-    </HeaderDiv>
+        <Notice>
+          <div className="">
+            <h1>블로그 주소를 이전했습니다</h1>
+          </div>
+          <div className="">
+            <h1>
+              {host !== "http://jigglog.s3-website.ap-northeast-2.amazonaws.com/" && <a href={`http://jigglog.s3-website.ap-northeast-2.amazonaws.com${pathname}`}>주소 바로가기</a>}
+            </h1>
+          </div>
+        </Notice>
+      </HeaderDiv>
+    </div>
+
   );
 };
 

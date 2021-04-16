@@ -1,6 +1,25 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
+export const Notice = styled.div`
+  position: fixed;
+  display: flex;
+  top: 10vh;
+  color: white;
+  background-color: #141414;
+  width: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  div{
+    margin: 10px;
+  }
+`
+
 export const List = styled.ul`
   display: flex;
   align-items: center;
