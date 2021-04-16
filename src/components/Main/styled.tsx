@@ -12,14 +12,12 @@ export const MainTitle = styled.div`
     font-weight: 800;
     color: white;
   }
-
   h3 {
     padding: 10px;
     font-size: 15px;
     font-weight: 800;
     color: white;
   }
-
   left:50%;
   top: 50%;
   transform: translate(-50%, -50%);

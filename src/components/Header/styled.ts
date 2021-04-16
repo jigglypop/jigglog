@@ -26,7 +26,6 @@ export const Notice = styled.div`
   }
   a {
     animation: ${boxFade} 0.5s infinite linear alternate;
-    color: red;
     font-size: 30px;
   }
 `

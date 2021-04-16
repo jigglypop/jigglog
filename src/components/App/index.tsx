@@ -6,6 +6,7 @@ import { Wrapper } from './styled'
 export interface IApp {
   location : {
     pathname: string;
+    host: string;
   }
   categories: object[];
   hasPortfolio: object;  
