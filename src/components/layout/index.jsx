@@ -158,8 +158,7 @@ const Layout = ({ children, location }) => (
             {location.pathname === '/' && <Main/>}
             {location.pathname === '/' && <Three categorySet={results} hasPortfolio={portfolioSet}/>}
           </OuterWrapper>
-        </Provider>
-);
+        </Provider>);
     }}
   />
 );

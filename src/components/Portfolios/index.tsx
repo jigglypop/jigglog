@@ -43,6 +43,10 @@ const Portfolios = ({
   };
   return (
     <PortfoliosWrapper>
+      <Helmet>
+        <title>{`${PREFIX}PORTFOLIOS`}</title>
+        <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
+      </Helmet>
       <Parallax
         ref={(ref) => (parallax = ref)}
         pages={portfolios.length}
@@ -106,10 +110,7 @@ const Portfolios = ({
             </div>)
         )}
       </Parallax>
-      <Helmet>
-        <title>{`${PREFIX}PORTFOLIOS`}</title>
-        <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
-      </Helmet>
+
     </PortfoliosWrapper>
   );
 };

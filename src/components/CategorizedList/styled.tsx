@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const TagButton = styled.div`
   transition: all 0.2s ease-in-out;
-  transition: 0.5s;
   background-color: transparent;
   h4 {
     font-size: 14px;
@@ -49,7 +48,6 @@ export const ListCategory = styled.div`
     font-weight: 800;
     color: white;
   }
-  /* padding: 5%; */
 `;
 
 export const ListContent = styled.div`
@@ -64,8 +62,6 @@ export const ListPage = styled.div`
   text-align: center;
 `;
 
-
-
 export const LargeWrapper = styled.div`
   width: 100%;
   background: rgb(31, 31, 36);
@@ -78,8 +74,8 @@ export const LargeWrapper = styled.div`
 `;
 
 export const ListWrapper = styled.div`
-    display: grid;
-    grid-template-rows: 200px 100px 100px 1fr 200px;
+  display: grid;
+  grid-template-rows: 200px 100px 100px 1fr 200px;
 `;
 
 

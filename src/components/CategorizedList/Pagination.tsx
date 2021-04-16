@@ -1,5 +1,4 @@
 import React from "react";
-import { CONTENT_PER_PAGE } from "../../constants";
 import Pagination from "@material-ui/lab/Pagination";
 
 

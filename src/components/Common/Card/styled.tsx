@@ -54,11 +54,12 @@ export const Picture = styled.img`
 export const CommentCountButton = styled.div`
   transition: all 0.2s ease-in-out;
   transition: 0.5s;
-  border: 2px solid#FF416C;
+  /* border: 2px solid#FF416C; */
   background-color: transparent;
   display: flex;
   justify-content: center;
   text-align: center;
+  align-items: center;
   h4 {
     padding: 5px;
     font-size: 12px;
@@ -68,6 +69,32 @@ export const CommentCountButton = styled.div`
   cursor: pointer;
   &:hover {
     transform: scale(1.2);
+  }
+  .textouter{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .countwhite{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .countwhitetext{
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .count{
+    color: #e94057;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .counttext{
+    color: #e94057;
+    font-size: 15px;
+    font-weight: 800;
   }
 `;
 
@@ -88,13 +115,8 @@ export const GridThree = styled.div`
   grid-row: 3/4;
   display: flex;
   justify-content: space-between;
-  padding: 0 20% 0 0;
-  .count{
-    color: #e94057;
-    line-height: 1.5em;
-    font-size: 16px;
-    font-weight: 800;
-  }
+  padding: 0 5% 0 0;
+
 `
 
 export const Content = styled.div`

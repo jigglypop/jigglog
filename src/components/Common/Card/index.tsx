@@ -15,6 +15,7 @@ import {
   Right,
   CommentCountButton
 } from "./styled";
+import { AiOutlineMessage } from 'react-icons/ai'
 
 const Card = ({ tags, path, images, title, date, summary, count } : any) => {
   return (
@@ -61,7 +62,14 @@ const Card = ({ tags, path, images, title, date, summary, count } : any) => {
                     </div>
                     <div className="inlines">
                       <CommentCountButton>
-                        <h4>{count}개의 댓글</h4>
+                        {count === 0 ? 
+                          <div className="textouter">
+                            <AiOutlineMessage className="countwhite"/><h4 className="countwhitetext">{count}</h4>
+                          </div>:
+                          <div className="textouter">
+                            <AiOutlineMessage className="count"/><h4 className="counttext">{count}</h4>
+                          </div>
+                        }
                       </CommentCountButton>
                     </div>
                   </GridThree>

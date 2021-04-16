@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   MapControls,
   OrbitControls,
@@ -27,7 +27,6 @@ export default function Three({ categorySet, hasPortfolio }) {
     });
     return <mapControls args={[camera, gl.domElement]} ref={orbitRef} />;
   };
-  const domnodeRef = useRef();
   return (
     <ThreeWrapper>
       <Canvas
@@ -37,11 +36,11 @@ export default function Three({ categorySet, hasPortfolio }) {
         }}
       >
         <Controls />
-        <fog attach="fog" args={["#23074d"]} position={[0, 100, -100]} />
+        <fog attach="fog" args={["black"]} position={[0, 100, -100]} />
         <Outer />
         <PlanetEarth />
-        <PlanetMars categorySet={categorySet} hasPortfolio={hasPortfolio} />
-        <PlanetMercury categorySet={categorySet} hasPortfolio={hasPortfolio} />
+        {/* <PlanetMars categorySet={categorySet} hasPortfolio={hasPortfolio} />
+        <PlanetMercury categorySet={categorySet} hasPortfolio={hasPortfolio} /> */}
 
         <directionalLight
           intensity={0.3}
@@ -50,25 +49,9 @@ export default function Three({ categorySet, hasPortfolio }) {
           castShadow
         />
         <directionalLight
-          intensity={0.5}
+          intensity={0.7}
           color={"#f64f59"}
           position={[-10, -10, -10]}
-          castShadow
-        />
-        <directionalLight
-          intensity={0.2}
-          color={"white"}
-          position={[10, 20, 10]}
-          castShadow
-        />
-
-        <rectAreaLight
-          width={2}
-          height={2}
-          intensity={200}
-          color={"white"}
-          position={[0, 0, 0]}
-          rotation={[0, 180, 0]}
           castShadow
         />
       </Canvas>
