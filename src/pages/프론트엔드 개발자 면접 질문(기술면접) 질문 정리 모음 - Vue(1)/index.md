@@ -1,180 +1,182 @@
 ---
-path: "/vue공부1일차/"
-category: "vue.js"
-tags: ["vue.js", "프론트엔드"]
-title: "vue 공부 1일차"
-date: "2021-04-04T12:23:00.000Z"
-summary: "vue 공부 1일차"
-images: ["images/1.jpg"]
+path: "/프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue/"
+category: "기술 면접"
+tags: ["프론트엔드", "개발자", "면접", "기술면접", "Vue"]
+title: "프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue"
+date: "2021-04-15T01:00:00.000Z"
+summary: "프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue"
+images: ["images/2.jpg"]
 ---
 
+> 프론트 엔드 면접 질문용(Vue) 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요
 
 
-1. ### VueJS란 무엇인가
 
-   **Vue.js**는 사용자 인터페이스를 만들기 위한 진보적인 프레임워크입니다. 핵심 라이브러리는 `뷰 레이어`만 초점을 맞추어, 다른 라이브러리나 기존 프로젝트와의 통합이 쉽습니다.
+### VueJS란 무엇인가
 
-2. ### VueJS의 주요 특징은
+**Vue.js**는 사용자 인터페이스를 만들기 위한 진보적인 프레임워크입니다. 핵심 라이브러리는 `뷰 레이어`만 초점을 맞추어, 다른 라이브러리나 기존 프로젝트와의 통합이 쉽습니다.
 
-   아래의 항목들은 VueJS의 주요 특징들입니다.
+### VueJS의 주요 특징은
 
-   1. **가상 DOM(Virtual DOM):** VueJS에서는 ReactJS, Ember 프레임워크와 유사하게 가상 DOM을 사용합니다. 가상 DOM은 원본 HTML DOM을 표현하는 메모리 상의 가벼운 DOM 트리로, 원본 DOM에 영향을 미치지 않고 업데이트를 할 수 있습니다.
-   2. **컴포넌트(Components):** VueJS 어플리케이션에서 재사용할 수 있는 엘리먼트들을 만들 수 있습니다.
-   3. **템플릿(Templates):** VueJS는 Vue 인스턴스 데이터와 DOM에 접근할 수 있는 HTML 기반의 템플릿을 제공합니다.
-   4. **라우팅(Routing):** 페이지의 전환은 vue-router를 이용합니다.
-   5. **저용량(Light weight):** VueJS는 다른 프레임워크와 비교해 저용량입니다.
+아래의 항목들은 VueJS의 주요 특징들입니다.
 
-3. ### VueJS의 라이프사이클(lifecycle) 함수는
+1. **가상 DOM(Virtual DOM):** VueJS에서는 ReactJS, Ember 프레임워크와 유사하게 가상 DOM을 사용합니다. 가상 DOM은 원본 HTML DOM을 표현하는 메모리 상의 가벼운 DOM 트리로, 원본 DOM에 영향을 미치지 않고 업데이트를 할 수 있습니다.
+2. **컴포넌트(Components):** VueJS 어플리케이션에서 재사용할 수 있는 엘리먼트들을 만들 수 있습니다.
+3. **템플릿(Templates):** VueJS는 Vue 인스턴스 데이터와 DOM에 접근할 수 있는 HTML 기반의 템플릿을 제공합니다.
+4. **라우팅(Routing):** 페이지의 전환은 vue-router를 이용합니다.
+5. **저용량(Light weight):** VueJS는 다른 프레임워크와 비교해 저용량입니다.
 
-   라이프사이클 훅(Lifecycle hook)은 사용중인 라이브러리가 어떤 순서로 동작하는지를 알려주는 역할을 합니다. 훅을 이용해 컴포넌트가 언제 생성되고, 언제 DOM에 추가되며, 언제 업데이트되고 언제 사라지는지 알 수 있습니다. 아래의 다이어그램을 통해 VueJS의 전반적인 라이프사이클을 확인할 수 있습니다.
+### VueJS의 라이프사이클(lifecycle) 함수는
 
-   ![img](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/vuelifecycle.png)
+라이프사이클 훅(Lifecycle hook)은 사용중인 라이브러리가 어떤 순서로 동작하는지를 알려주는 역할을 합니다. 훅을 이용해 컴포넌트가 언제 생성되고, 언제 DOM에 추가되며, 언제 업데이트되고 언제 사라지는지 알 수 있습니다. 아래의 다이어그램을 통해 VueJS의 전반적인 라이프사이클을 확인할 수 있습니다.
 
-   1. **Creation(초기화):** Create 훅은 컴포넌트가 DOM에 추가되기 전에 실행되는 단계입니다. 클라이언트와 서버가 렌더링 단계 전에 컴포넌트에 설정해야 할 것들이 있을 때 사용하는 단계입니다. 다른 훅과는 다르게, Create 훅은 서버 사이드 렌더링에서도 지원되는 훅입니다.
+![img](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/vuelifecycle.png)
 
-      1. beforeCreate: `beforeCreate` 훅은 컴포넌트 초기화 단계 중 가장 처음으로 실행됩니다. 이 훅에서는 컴포넌트의 data를 관찰하고, 이벤트를 초기화합니다. 이 단계에서 data는 아직까지 반응적이지 않으며, 컴포넌트의 라이프사이클에서 발생하는 이벤트 역시 설정되지 않은 상태입니다.
+1. **Creation(초기화):** Create 훅은 컴포넌트가 DOM에 추가되기 전에 실행되는 단계입니다. 클라이언트와 서버가 렌더링 단계 전에 컴포넌트에 설정해야 할 것들이 있을 때 사용하는 단계입니다. 다른 훅과는 다르게, Create 훅은 서버 사이드 렌더링에서도 지원되는 훅입니다.
 
-      ```
-          new Vue({
-            data: {
-             count: 10
-            },
-            beforeCreate: function () {
-              console.log('Nothing gets called at this moment')
-              // `this` points to the view model instance
-              console.log('count is ' + this.count);
-            }
-          })
-             // count is undefined
-      ```
+   1. beforeCreate: `beforeCreate` 훅은 컴포넌트 초기화 단계 중 가장 처음으로 실행됩니다. 이 훅에서는 컴포넌트의 data를 관찰하고, 이벤트를 초기화합니다. 이 단계에서 data는 아직까지 반응적이지 않으며, 컴포넌트의 라이프사이클에서 발생하는 이벤트 역시 설정되지 않은 상태입니다.
 
-      1. created: `created` 훅은 Vue 인스턴스가 이벤트를 설정하고 data를 관찰할 때 발생합니다. 이 단계에서 템플릿은 아직 마운트되거나 렌더링되지 않았지만, 이벤트들이 활성화되며 data에 반응적으로 접근하는 것이 가능합니다.
+   ```
+       new Vue({
+         data: {
+          count: 10
+         },
+         beforeCreate: function () {
+           console.log('Nothing gets called at this moment')
+           // `this` points to the view model instance
+           console.log('count is ' + this.count);
+         }
+       })
+          // count is undefined
+   ```
 
-      ```
-        new Vue({
-          data: {
-           count: 10
-          },
-          created: function () {
-            // `this` points to the view model instance
-            console.log('count is: ' + this.count)
-          }
-        })
-           // count is: 10
-      ```
+   1. created: `created` 훅은 Vue 인스턴스가 이벤트를 설정하고 data를 관찰할 때 발생합니다. 이 단계에서 템플릿은 아직 마운트되거나 렌더링되지 않았지만, 이벤트들이 활성화되며 data에 반응적으로 접근하는 것이 가능합니다.
 
-      **주의:** Create 훅에서는 DOM에 직접 접근하거나 마운트할 엘리먼트(`this.$el`)에 직접 접근할 수 없다는 점을 기억하세요.
+   ```
+     new Vue({
+       data: {
+        count: 10
+       },
+       created: function () {
+         // `this` points to the view model instance
+         console.log('count is: ' + this.count)
+       }
+     })
+        // count is: 10
+   ```
 
-   2. **Mounting(DOM 추가):** Mount 훅은 가장 많이 사용되는 단계로, 컴포넌트가 렌더링되기 직전이나 직후에 컴포넌트에 접근할 수 있는 단계입니다.
+   **주의:** Create 훅에서는 DOM에 직접 접근하거나 마운트할 엘리먼트(`this.$el`)에 직접 접근할 수 없다는 점을 기억하세요.
 
-      1. beforeMount: `beforeMount` 훅은 컴포넌트가 DOM에 추가되기 직전에 실행되는 훅입니다.
+2. **Mounting(DOM 추가):** Mount 훅은 가장 많이 사용되는 단계로, 컴포넌트가 렌더링되기 직전이나 직후에 컴포넌트에 접근할 수 있는 단계입니다.
 
-      ```
-        new Vue({
-          beforeMount: function () {
-            // `this` points to the view model instance
-            console.log(`this.$el is yet to be created`);
-          }
-        })
-      ```
+   1. beforeMount: `beforeMount` 훅은 컴포넌트가 DOM에 추가되기 직전에 실행되는 훅입니다.
 
-      1. mounted: `mounted` 훅은 반응적인 data, 템플릿, 렌더링된 DOM(`this.$el`) 모두에 접근할 수 있어서 가장 많이 사용되는 훅입니다. 흔히 컴포넌트에서 필요한 데이터를 외부에서 가져오는(fetch) 용도로 많이 사용됩니다.
+   ```
+     new Vue({
+       beforeMount: function () {
+         // `this` points to the view model instance
+         console.log(`this.$el is yet to be created`);
+       }
+     })
+   ```
 
-      ```
-      <div id="app">
-          <p>I’m text inside the component.</p>
-      </div>
-        new Vue({
-          el: '#app',
-          mounted: function() {
-            console.log(this.$el.textContent); // I'm text inside the component.
-          }
-        })
-      ```
+   1. mounted: `mounted` 훅은 반응적인 data, 템플릿, 렌더링된 DOM(`this.$el`) 모두에 접근할 수 있어서 가장 많이 사용되는 훅입니다. 흔히 컴포넌트에서 필요한 데이터를 외부에서 가져오는(fetch) 용도로 많이 사용됩니다.
 
-   3. **Updating (재 렌더링):** Update 훅은 컴포넌트 내부의 반응적인 속성이 변했거나, 그 외의 것들이 재 렌더링을 일으킬 때 실행되는 단계입니다.
+   ```
+   <div id="app">
+       <p>I’m text inside the component.</p>
+   </div>
+     new Vue({
+       el: '#app',
+       mounted: function() {
+         console.log(this.$el.textContent); // I'm text inside the component.
+       }
+     })
+   ```
 
-      1. beforeUpdate: `beforeUpdate` 훅은 컴포넌트의 data가 변경되어 업데이트 사이클이 시작될 때 실행됩니다.
+3. **Updating (재 렌더링):** Update 훅은 컴포넌트 내부의 반응적인 속성이 변했거나, 그 외의 것들이 재 렌더링을 일으킬 때 실행되는 단계입니다.
 
-      ```
-      <div id="app">
-        <p>{{counter}}</p>
-      </div>
-      ...// rest of the code
-        new Vue({
-          el: '#app',
-          data() {
-            return {
-              counter: 0
-            }
-          },
-           created: function() {
-            setInterval(() => {
-              this.counter++
-            }, 1000)
-          },
-      
-          beforeUpdate: function() {
-            console.log(this.counter) // Logs the counter value every second, before the DOM updates.
-          }
-        })
-      ```
+   1. beforeUpdate: `beforeUpdate` 훅은 컴포넌트의 data가 변경되어 업데이트 사이클이 시작될 때 실행됩니다.
 
-      1. updated: `updated` 훅은 컴포넌트의 data가 변하여 재 렌더링이 일어난 후에 실행됩니다.
+   ```
+   <div id="app">
+     <p>{{counter}}</p>
+   </div>
+   ...// rest of the code
+     new Vue({
+       el: '#app',
+       data() {
+         return {
+           counter: 0
+         }
+       },
+        created: function() {
+         setInterval(() => {
+           this.counter++
+         }, 1000)
+       },
+   
+       beforeUpdate: function() {
+         console.log(this.counter) // Logs the counter value every second, before the DOM updates.
+       }
+     })
+   ```
 
-      ```
-      <div id="app">
-        <p ref="dom">{{counter}}</p>
-      </div>
-      ...//
-        new Vue({
-          el: '#app',
-          data() {
-            return {
-              counter: 0
-            }
-          },
-           created: function() {
-            setInterval(() => {
-              this.counter++
-            }, 1000)
-          },
-          updated: function() {
-            console.log(+this.$refs['dom'].textContent === this.counter) // Logs true every second
-          }
-        })
-      ```
+   1. updated: `updated` 훅은 컴포넌트의 data가 변하여 재 렌더링이 일어난 후에 실행됩니다.
 
-   4. **Destruction(해체):** Destruction 훅은 컴포넌트를 더 이상 사용하지 않을 때 사용하는 단계입니다.
+   ```
+   <div id="app">
+     <p ref="dom">{{counter}}</p>
+   </div>
+   ...//
+     new Vue({
+       el: '#app',
+       data() {
+         return {
+           counter: 0
+         }
+       },
+        created: function() {
+         setInterval(() => {
+           this.counter++
+         }, 1000)
+       },
+       updated: function() {
+         console.log(+this.$refs['dom'].textContent === this.counter) // Logs true every second
+       }
+     })
+   ```
 
-      1. beforeDestroy: `beforeDestroy` 훅은 컴포넌트가 해체되기 직전에 실행됩니다. 이 훅은 반응적인 이벤트들이나 data들을 해체하는 훅으로 적합합니다. 이 단계에서 컴포넌트는 여전히 문제없이 잘 동작합니다.
+4. **Destruction(해체):** Destruction 훅은 컴포넌트를 더 이상 사용하지 않을 때 사용하는 단계입니다.
 
-      ```
-      new Vue ({
-        data() {
-          return {
-            message: 'Welcome VueJS developers'
-          }
-        },
-      
-        beforeDestroy: function() {
-          this.message = null
-          delete this.message
-        }
-      })
-      ```
+   1. beforeDestroy: `beforeDestroy` 훅은 컴포넌트가 해체되기 직전에 실행됩니다. 이 훅은 반응적인 이벤트들이나 data들을 해체하는 훅으로 적합합니다. 이 단계에서 컴포넌트는 여전히 문제없이 잘 동작합니다.
 
-      1. destroyed: `destroyed` 훅은 컴포넌트가 해체되고 난 직후에 호출됩니다. 모든 지시자들의 바인딩이 해제되었으며, 이벤트 리스너가 제거된 상태입니다.
+   ```
+   new Vue ({
+     data() {
+       return {
+         message: 'Welcome VueJS developers'
+       }
+     },
+   
+     beforeDestroy: function() {
+       this.message = null
+       delete this.message
+     }
+   })
+   ```
 
-      ```
-      new Vue ({
-          destroyed: function() {
-            console.log(this) // Nothing to show here
-          }
-        })
-      ```
+   1. destroyed: `destroyed` 훅은 컴포넌트가 해체되고 난 직후에 호출됩니다. 모든 지시자들의 바인딩이 해제되었으며, 이벤트 리스너가 제거된 상태입니다.
 
-4. ### 조건부 지시자(conditional directives)란
+   ```
+   new Vue ({
+       destroyed: function() {
+         console.log(this) // Nothing to show here
+       }
+     })
+   ```
+
+1. ### 조건부 지시자(conditional directives)란
 
    VueJS는 조건에 따라 엘리먼트를 보여주거나 숨길 수 있는 지시자들을 제공합니다. 사용할 수 있는 지시자들은 **v-if, v-else, v-else-if and v-show**가 있습니다.
 
@@ -214,7 +216,7 @@ images: ["images/1.jpg"]
    <span v-show="user.name">Welcome user,{{user.name}}</span>
    ```
 
-5. ### v-show와 v-if의 차이점은
+2. ### v-show와 v-if의 차이점은
 
    **v-show**와 **v-if**의 주요 차이점은 다음과 같습니다.
 
@@ -223,7 +225,7 @@ images: ["images/1.jpg"]
    3. v-if는 토글할 때 높은 렌더링 비용이 들지만, v-show는 초기의 렌더링 작업에서 높은 비용이 듭니다. 즉, v-show는 요소를 자주 켜고 끄는 경우 성능 상의 이점이 있지만, 초기 렌더링 작업에서는 v-if가 더 효율적입니다.
    4. v-if는 `<template>`태그에서 사용할 수 있지만 v-show는 사용할 수 없습니다.
 
-6. ### v-for를 쓰는 목적은
+3. ### v-for를 쓰는 목적은
 
    v-for 지시자는 배열이나 객체를 순환하면서 반복적인 렌더링을 가능하게 합니다.
 
@@ -270,7 +272,7 @@ images: ["images/1.jpg"]
    })
    ```
 
-7. ### Vue 인스턴스란
+4. ### Vue 인스턴스란
 
    모든 Vue 어플리케이션은 Vue 함수를 이용해 Vue 인스턴스를 생성하면서 동작합니다. 일반적으로 `vm`(ViewModel의 축약형)이라는 변수를 이용해 Vue 인스턴스를 참조합니다. 아래와 같은 방법으로 Vue 인스턴스를 생성할 수 있습니다.
 
@@ -282,7 +284,7 @@ images: ["images/1.jpg"]
 
    위의 코드에서 볼 수 있듯, 옵션을 설정하기 위한 객체를 전달해야 합니다. 이 옵션은 API 문서에서 자세히 확인할 수 있습니다.
 
-8. ### 여러 엘리먼트들을 한 번에 조건부로 나타내는 방법은
+5. ### 여러 엘리먼트들을 한 번에 조건부로 나타내는 방법은
 
    렌더링에 영향을 미치지 않는 `<template>` 태그에 **v-if** 지시자를 적용함으로써 여러 엘리먼트들을 한 번에 조건부로 나타낼 수 있습니다. 예를 들어, 아래와 같이 유효한 사용자인 경우에 한해서 사용자 정보를 보여줄 수 있습니다.
 
@@ -294,7 +296,7 @@ images: ["images/1.jpg"]
    </template>
    ```
 
-9. ### key 속성을 이용해 엘리먼트를 재사용하는 방법은
+6. ### key 속성을 이용해 엘리먼트를 재사용하는 방법은
 
    Vue는 가능한 한 엘리먼트를 효율적으로 렌더링하려 합니다. 그래서 엘리먼트를 처음부터 다시 만들기보다는 재사용하려 합니다. 그러나 이는 몇 가지 상황에서 문제를 일으킬 수 있습니다. 예를 들어, `input` 엘리먼트를 `v-if`와 `v-else` 블록 양쪽에서 사용하면, `input` 엘리먼트는 조건문에 따라 바뀌지 않고 최초에 렌더링 된 엘리먼트의 상태를 유지하고 있습니다.
 
@@ -324,103 +326,103 @@ images: ["images/1.jpg"]
 
    위의 경우는 두 개의 `input` 엘리먼트가 별개의 것으로 취급되며 서로에게 어떤 영향도 끼치지 않습니다.
 
-10. ### 같은 엘리먼트에서 v-for와 v-if를 함께 쓰면 안 되는 이유는
+7. ### 같은 엘리먼트에서 v-for와 v-if를 함께 쓰면 안 되는 이유는
 
-    v-for 지시자는 v-if 보다 더 높은 우선 순위를 갖고 있기 때문에, 한 엘리먼트 내에서 v-for와 v-if를 함께 쓰는 것은 권장되지 않습니다. 일반적으로 다음과 같은 이유 때문에 두 지시자를 함께 쓰곤 합니다.
+   v-for 지시자는 v-if 보다 더 높은 우선 순위를 갖고 있기 때문에, 한 엘리먼트 내에서 v-for와 v-if를 함께 쓰는 것은 권장되지 않습니다. 일반적으로 다음과 같은 이유 때문에 두 지시자를 함께 쓰곤 합니다.
 
-    1. 리스트의 요소를 필터링하기 위해 예를 들어, v-if 지시자를 이용해 리스트에 있는 아이템을 필터링하고 싶은 경우입니다.
+   1. 리스트의 요소를 필터링하기 위해 예를 들어, v-if 지시자를 이용해 리스트에 있는 아이템을 필터링하고 싶은 경우입니다.
 
-    ```
-    <ul>
-      <li
-        v-for="user in users"
-        v-if="user.isActive"
-        :key="user.id"
-      >
-        {{ user.name }}
-      <li>
-    </ul>
-    ```
+   ```
+   <ul>
+     <li
+       v-for="user in users"
+       v-if="user.isActive"
+       :key="user.id"
+     >
+       {{ user.name }}
+     <li>
+   </ul>
+   ```
 
-    이 경우는 아래와 같이 사전에 computed 속성을 이용해 필터링된 리스트를 만들어 사용할 수 있습니다.
+   이 경우는 아래와 같이 사전에 computed 속성을 이용해 필터링된 리스트를 만들어 사용할 수 있습니다.
 
-    ```
-    computed: {
-      activeUsers: function () {
-        return this.users.filter(function (user) {
-          return user.isActive
-        })
-      }
-    }
-    ...... //
-    ...... //
-    <ul>
-      <li
-        v-for="user in activeUsers"
-        :key="user.id">
-        {{ user.name }}
-      <li>
-    </ul>
-    ```
+   ```
+   computed: {
+     activeUsers: function () {
+       return this.users.filter(function (user) {
+         return user.isActive
+       })
+     }
+   }
+   ...... //
+   ...... //
+   <ul>
+     <li
+       v-for="user in activeUsers"
+       :key="user.id">
+       {{ user.name }}
+     <li>
+   </ul>
+   ```
 
-    1. 리스트 자체가 숨겨져야 할 때 예를 들어, v-if를 이용해 반복되는 리스트를 숨기고 싶은 경우입니다.
+   1. 리스트 자체가 숨겨져야 할 때 예를 들어, v-if를 이용해 반복되는 리스트를 숨기고 싶은 경우입니다.
 
-    ```
-    <ul>
-      <li
-        v-for="user in users"
-        v-if="shouldShowUsers"
-        :key="user.id"
-      >
-        {{ user.name }}
-      <li>
-    </ul>
-    ```
+   ```
+   <ul>
+     <li
+       v-for="user in users"
+       v-if="shouldShowUsers"
+       :key="user.id"
+     >
+       {{ user.name }}
+     <li>
+   </ul>
+   ```
 
-    이 경우는 아래와 같이 조건문을 상위 엘리먼트로 옮김으로써 해결할 수 있습니다.
+   이 경우는 아래와 같이 조건문을 상위 엘리먼트로 옮김으로써 해결할 수 있습니다.
 
-    ```
-    <ul v-if="shouldShowUsers">
-      <li
-        v-for="user in users"
-        :key="user.id"
-      >
-        {{ user.name }}
-      <li>
-    </ul>
-    ```
+   ```
+   <ul v-if="shouldShowUsers">
+     <li
+       v-for="user in users"
+       :key="user.id"
+     >
+       {{ user.name }}
+     <li>
+   </ul>
+   ```
 
-11. ### v-for에서 key 속성이 필요한 이유
+8. ### v-for에서 key 속성이 필요한 이유
 
-    Vue에서 개별 DOM 노드들을 추적하고 기존 엘리먼트의 재사용/재정렬을 위해, v-for의 요소에 고유한 key 속성을 제공해야 합니다. key에 대한 이상적인 값은 각 항목을 식별할 수 있는 고유한 ID입니다.
+   Vue에서 개별 DOM 노드들을 추적하고 기존 엘리먼트의 재사용/재정렬을 위해, v-for의 요소에 고유한 key 속성을 제공해야 합니다. key에 대한 이상적인 값은 각 항목을 식별할 수 있는 고유한 ID입니다.
 
-    ```
-    <div v-for="item in items" :key="item.id">
-      {{item.name}}
-    </div>
-    ```
+   ```
+   <div v-for="item in items" :key="item.id">
+     {{item.name}}
+   </div>
+   ```
 
-    반복되는 DOM 내용이 단순한 경우나 의도적인 성능 향상을 위해 기본 동작에 의존하지 않는 경우를 제외하면, 가능하면 언제나 v-for에 key를 추가하는 것이 좋습니다. **Note:** 객체나 배열처럼, 기본 타입(Primitive value)이 아닌 값을 키로 사용해서는 안됩니다. 문자열이나 숫자를 사용하세요.
+   반복되는 DOM 내용이 단순한 경우나 의도적인 성능 향상을 위해 기본 동작에 의존하지 않는 경우를 제외하면, 가능하면 언제나 v-for에 key를 추가하는 것이 좋습니다. **Note:** 객체나 배열처럼, 기본 타입(Primitive value)이 아닌 값을 키로 사용해서는 안됩니다. 문자열이나 숫자를 사용하세요.
 
-12. ### 배열을 변화시키는 함수(Mutation method)란
+9. ### 배열을 변화시키는 함수(Mutation method)란
 
-    이름에서 볼 수 있듯, 배열을 변화시키는 함수(mutation methods)는 원본 배열을 변경시킵니다. 아래의 함수는 뷰(view) 업데이트를 일으킵니다.
+   이름에서 볼 수 있듯, 배열을 변화시키는 함수(mutation methods)는 원본 배열을 변경시킵니다. 아래의 함수는 뷰(view) 업데이트를 일으킵니다.
 
-    1. push()
-    2. pop()
-    3. shift()
-    4. unshift()
-    5. splice()
-    6. sort()
-    7. reverse()
+   1. push()
+   2. pop()
+   3. shift()
+   4. unshift()
+   5. splice()
+   6. sort()
+   7. reverse()
 
-    예를 들어, 아래와 같이 `todos` 배열에 `push` 함수를 실행시키면 뷰 업데이트가 일어납니다.
+   예를 들어, 아래와 같이 `todos` 배열에 `push` 함수를 실행시키면 뷰 업데이트가 일어납니다.
 
-    ```
-    vm.todos.push({ message: 'Baz' })
-    ```
+   ```
+   vm.todos.push({ message: 'Baz' })
+   ```
 
-13. ### 배열을 대체하는 함수(Non-mutation method)란
+10. ### 배열을 대체하는 함수(Non-mutation method)란
 
     배열을 대체하는 함수는 원본 배열을 수정하지 않고, 항상 새로운 배열을 반환합니다. 아래의 함수는 배열을 대체하는 함수입니다.
 
@@ -438,7 +440,7 @@ images: ["images/1.jpg"]
 
     Vue가 DOM을 효율적으로 재사용하기 때문에, 전체 리스트가 새로 렌더링되지는 않습니다.
 
-14. ### 배열 변경을 탐지할 때 주의할 점
+11. ### 배열 변경을 탐지할 때 주의할 점
 
     Vue는 아래의 두 가지 경우의 변경 사항을 감지할 수 없습니다.
 
@@ -474,7 +476,7 @@ images: ["images/1.jpg"]
     vm.todos.splice(todosLength)
     ```
 
-15. ### 객체 변경을 탐지할 때 주의할 점
+12. ### 객체 변경을 탐지할 때 주의할 점
 
     Vue는 추가되거나 삭제된 속성에 반응형으로 접근할 수 없습니다.
 
@@ -504,7 +506,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-16. ### v-for를 특정 횟수만큼 반복하는 방법은?
+13. ### v-for를 특정 횟수만큼 반복하는 방법은?
 
     `v-for` 지시자에 정수를 사용해 특정 횟수만큼 반복해 렌더링 할 수 있습니다.
 
@@ -516,7 +518,7 @@ images: ["images/1.jpg"]
 
     이 경우 1부터 20까지 숫자가 출력됩니다.
 
-17. ### v-for로 템플릿을 반복하는 방법은
+14. ### v-for로 템플릿을 반복하는 방법은
 
     `<template>`에서 v-if를 사용한 것과 유사하게, `<template>`에서 v-for 문법을 사용할 수 있습니다.
 
@@ -529,7 +531,7 @@ images: ["images/1.jpg"]
     </ul>
     ```
 
-18. ### 이벤트 핸들러를 사용하는 방법은?
+15. ### 이벤트 핸들러를 사용하는 방법은?
 
     VueJS에서는 순수 자바스크립트와 유사하게 이벤트 핸들러를 사용할 수 있습니다. 함수에서 `$event` 변수를 호출해 사용할 수 있습니다.
 
@@ -547,7 +549,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-19. ### Vue에서 이벤트 수식어(Event modifier)란?
+16. ### Vue에서 이벤트 수식어(Event modifier)란?
 
     일반적으로 자바스크립트에서는 이벤트 핸들러 내부에서 `event.preventDefault()` 또는 `event.stopPropagation()`를 제공합니다. Vue의 메소드 내부에서도 이 작업을 할 수 있지만, DOM에서 발생한 이벤트와 메소드의 로직은 별개로 구분하는 것이 좋습니다.
 
@@ -574,7 +576,7 @@ images: ["images/1.jpg"]
     <a v-on:click.stop.prevent="doThat"></a>
     ```
 
-20. ### 키 수식어(Key modifiers)란?
+17. ### 키 수식어(Key modifiers)란?
 
     Vue는 키보드 이벤트를 제어하기 위해 `v-on` 지시자에 키 수식어를 제공합니다.
 
@@ -606,7 +608,7 @@ images: ["images/1.jpg"]
 
     **키 코드 이벤트의 사용은 최신 브라우저에서는 지원되지 않을 수 있습니다.**
 
-21. ### 키 수식어를 커스터마이징하는 방법은?
+18. ### 키 수식어를 커스터마이징하는 방법은?
 
     전역 `config.keyCodes` 객체를 통해 키 수식어를 커스터마이징할 수 있습니다. 여기에는 몇 가지 규칙들이 있습니다.
 
@@ -621,7 +623,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-22. ### 시스템 수식어 키(System modifier key)란?
+19. ### 시스템 수식어 키(System modifier key)란?
 
     Vue에서는 다음 수식어를 사용해 해당 수식어 키가 눌러진 경우에만 마우스 또는 키보드 이벤트를 발생시킬 수 있습니다.
 
@@ -637,7 +639,7 @@ images: ["images/1.jpg"]
     <div @click.ctrl="doSomething">Do something</div>
     ```
 
-23. ### 마우스 버튼 수식어(Mouse button modifier)란?
+20. ### 마우스 버튼 수식어(Mouse button modifier)란?
 
     Vue는 특정한 마우스 버튼으로 발생한 이벤트를 제어할 수 있습니다.
 
@@ -655,7 +657,7 @@ images: ["images/1.jpg"]
      />
     ```
 
-24. ### v-model의 역할은?
+21. ### v-model의 역할은?
 
     `v-model` 지시자를 이용해 `input`, `textarea`, `select` 엘리먼트의 데이터를 양방향으로 제어할 수 있습니다. 아래의 `input` 엘리먼트를 살펴보세요.
 
@@ -666,7 +668,7 @@ images: ["images/1.jpg"]
 
     `v-model`은 모든 `form` 엘리먼트에서 HTML 속성(attribute)으로 선언된 `value`, `checked` 그리고 `selected`를 무시합니다. 그 대신 Vue 인스턴스에서 `v-model`로 바인딩한 값을 이용합니다. 따라서 컴포넌트의 data에서 초기값을 선언해야 합니다.
 
-25. ### v-model에서 지원되는 수식어는?
+22. ### v-model에서 지원되는 수식어는?
 
     `v-model` 지시자에는 세 가지 수식어가 지원됩니다.
 
@@ -689,7 +691,7 @@ images: ["images/1.jpg"]
     <input v-model.trim="msg">
     ```
 
-26. ### 컴포넌트(Component)란?
+23. ### 컴포넌트(Component)란?
 
     컴포넌트란 **재사용 가능하면서 이름이 명명된 Vue 인스턴스**입니다. 컴포넌트는 Vue처럼 data, computed, watch, methods, 라이프사이클 옵션을 갖고 있습니다. 아래는 Vue에 전역으로 컴포넌트를 추가하는 예시입니다.
 
@@ -715,7 +717,7 @@ images: ["images/1.jpg"]
     var vm = new Vue({ el: '#app' });
     ```
 
-27. ### props란?
+24. ### props란?
 
     props는 상위 컴포넌트의 정보를 하위 컴포넌트로 전달할 수 있는 사용자 지정의 속성입니다. 상위 컴포넌트에서 전달되는 props는 하위 컴포넌트의 속성으로 여겨지며, 하위 컴포넌트에서는 props 옵션을 사용하여 수신할 것으로 예상되는 props를 명시적으로 선언해야 합니다.
 
@@ -732,7 +734,7 @@ images: ["images/1.jpg"]
     <todo-item title="Learn Vue conceptsnfirst"></todo-item>
     ```
 
-28. ### 컴포넌트에서 여러 엘리먼트를 쓰려면?
+25. ### 컴포넌트에서 여러 엘리먼트를 쓰려면?
 
     템플릿이 여러 개의 엘리먼트들로 구성되어 있을 때, **컴포넌트의 최상단 템플릿은 반드시 단일 엘리먼트로 감싸져 있어야 합니다.**
 
@@ -745,7 +747,7 @@ images: ["images/1.jpg"]
 
     그렇지 않다면, `"Component template should contain exactly one root element..."`라는 에러를 발생시킵니다.
 
-29. ### 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하는 방법은?
+26. ### 하위 컴포넌트에서 상위 컴포넌트로 이벤트를 전달하는 방법은?
 
     하위 컴포넌트에서 `$event` 객체를 이용해 상위 컴포넌트로 이벤트를 발생킬 수 있습니다.
 
@@ -779,7 +781,7 @@ images: ["images/1.jpg"]
     <span> Total todos count is {{total}}</span>
     ```
 
-30. ### 사용자 정의의 input 컴포넌트에서 v-model을 사용하는 법은?
+27. ### 사용자 정의의 input 컴포넌트에서 v-model을 사용하는 법은?
 
     사용자 정의 input 컴포넌트에서도 `v-model`을 활용할 수 있습니다. 해당 컴포넌트의 `input`은 아래 규칙들을 준수해야 합니다.
 
@@ -804,7 +806,7 @@ images: ["images/1.jpg"]
     <custom-input v-model="searchInput"></custom-input>
     ```
 
-31. ### slots이란?
+28. ### slots이란?
 
     Vue에서는 `<slot>`을 이용해 상위 컴포넌트에서 하위 컴포넌트 내부에 사용자 정의의 컨텐츠를 집어 넣을 수 있습니다. 하위 컴포넌트에 `<slot>`을 이용해 문구를 동적으로 넣을 수 있는 컴포넌트를 만들어봅시다.
 
@@ -827,7 +829,7 @@ images: ["images/1.jpg"]
     </alert>
     ```
 
-32. ### 컴포넌트를 전역 등록하는 방법은?
+29. ### 컴포넌트를 전역 등록하는 방법은?
 
     컴포넌트를 전역으로 등록하게 되면 모든 Vue 인스턴스에서 해당 컴포넌트를 사용할 수 있습니다. 컴포넌트는 `Vue.component()` 함수를 이용해 전역 등록할 수 있습니다.
 
@@ -859,7 +861,7 @@ images: ["images/1.jpg"]
 
     전역으로 등록한 컴포넌트들은 하위 컴포넌트에서도 사용이 가능합니다.
 
-33. ### 컴포넌트의 지역 등록이 필요한 이유는?
+30. ### 컴포넌트의 지역 등록이 필요한 이유는?
 
     전역 등록으로 인해 사용되지 않는 컴포넌트가 빌드 시에 여전히 남아있을 수 있습니다. 이는 불필요한 자바스크립트를 만들죠. 이를 방지하기 위해, 아래와 같이 컴포넌트를 지역 등록할 수 있습니다.
 
@@ -896,7 +898,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-34. ### 모듈 시스템에서 전역 등록과 지역 등록의 차이점은?
+31. ### 모듈 시스템에서 전역 등록과 지역 등록의 차이점은?
 
     **지역 등록**의 경우, 각 컴포넌트를 디렉토리에 생성하고 각각의 컴포넌트는 다른 컴포넌트 안에서 `import` 하여 사용하는 것이 권장됩니다. 만약 여러분들이 컴포넌트 C에서 컴포넌트 A와 B를 사용하고 싶다면 아래와 같은 설정을 해야 합니다.
 
@@ -953,7 +955,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-35. ### Prop 타입의 종류는?
+32. ### Prop 타입의 종류는?
 
     `props`에는 타입을 지정할 수도, 지정하지 않을 수도 있습니다. 하지만 일반적으로 타입을 지정하면 다른 개발자들이 해당 코드에서 잘못된 타입의 `props`를 넘겨주는 실수를 줄여주기 때문에, 가능하면 타입을 지정해주는 것이 좋습니다.
 
@@ -969,7 +971,7 @@ images: ["images/1.jpg"]
 
     `props` 객체의 속성과 값을 선언함으로서, 타입을 선언할 수 있습니다.
 
-36. ### props에 의한 데이터 흐름은?
+33. ### props에 의한 데이터 흐름은?
 
     모든 `props`는 하위 속성과 상위 속성 사이에서 단방향 바인딩을 형성합니다. 즉, 상위 속성이 변경되는 것은 하위 속성에게 전달되지만, 그 반대는 안됩니다. 원칙적으로, 하위 컴포넌트에서는 상위 컴포넌트에서 받은 `props`을 수정해서는 안됩니다.
 
@@ -1001,7 +1003,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-37. ### Props가 아닌 속성은?
+34. ### Props가 아닌 속성은?
 
     `props`가 아닌 속성이란, 컴포넌트에 전달되기는 하지만 해당 `props`가 하위 컴포넌트에서 정의되지는 않은 속성을 말합니다. 만약 `data-tooltip` 속성을 요구하는 컴포넌트를 사용하고 있다고 가정해봅시다. 이 속성을 컴포넌트 인스턴스에 다음과 같이 추가 할 수 있습니다.
 
@@ -1019,7 +1021,7 @@ images: ["images/1.jpg"]
     <input type="date" class="date-control">
     ```
 
-38. ### props를 검증하는 방법은?
+35. ### props를 검증하는 방법은?
 
     Vue에서는 타입, 필수 여부, 디폴트 값 등 `props`의 유효성 검증을 제공하고 있습니다. 아래와 같이 `props`를 검증하는 규칙이 속성으로 담긴 객체를 제공하면 됩니다.
 
@@ -1060,7 +1062,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-39. ### 컴포넌트에서 v-model을 사용자 정의하는 방법은?
+36. ### 컴포넌트에서 v-model을 사용자 정의하는 방법은?
 
     일반적인 컴포넌트에서 `v-model` 지시자는 **value**를 `props`로 사용하고 **input**을 이벤트로 사용하지만, 체크 박스나 라디오 버튼같은 일부 입력 타입은 다른 목적으로 `value` 속성을 사용할 수 있습니다. 이런 경우에는 `v-model`을 커스터마이징해서 사용하는 것이 좋습니다.
 
@@ -1091,7 +1093,7 @@ images: ["images/1.jpg"]
 
     `selectFramework` 속성은 `props` 중 `checked`로 넘어갈 것이고, 체크 박스 컴포넌트에서 값이 변경되면 이벤트를 발생시킬 것입니다.
 
-40. ### 트랜지션 효과를 넣을 수 있는 방법은?
+37. ### 트랜지션 효과를 넣을 수 있는 방법은?
 
     Vue에서는 항목들이 DOM에서 추가, 갱신 또는 삭제될 때, 다양한 방법으로 트랜지션 효과를 입힐 수 있습니다.
 
@@ -1100,7 +1102,7 @@ images: ["images/1.jpg"]
     3. 트랜지션 훅 중에 JavaScript를 사용하여 DOM을 직접 조작
     4. Velocity.js와 같은 써드파티 JavaScript 애니메이션 라이브러리 통합
 
-41. ### Vue Router란?
+38. ### Vue Router란?
 
     Vue Router는 Vue에서 동작하는 공식적인 라우팅 라이브러리입니다.
 
@@ -1113,7 +1115,7 @@ images: ["images/1.jpg"]
     7. HTML5 히스토리 모드 또는 해시 모드(IE9에서 자동으로 폴백)
     8. 사용자 정의 가능한 스크롤 동작
 
-42. ### Vue Router를 사용하는 방법은?
+39. ### Vue Router를 사용하는 방법은?
 
     Vue를 사용하고 있다면, 쉽게 Vue Router를 통합할 수 있습니다.
 
@@ -1178,7 +1180,7 @@ images: ["images/1.jpg"]
 
     이제 Vue 어플리케이션에서 다른 페이지(Home, Services)로 네비게이트 할 수 있습니다.
 
-43. ### 동적 라우트 매칭이란?
+40. ### 동적 라우트 매칭이란?
 
     주어진 패턴을 가진 라우트를 동일한 컴포넌트에 매핑해야하는 경우가 자주 있습니다. 동적 세그먼트를 이용해 `/user/john/post/123`나 `/user/jack/post/235`와 같이 매핑된 URL을 가지는 컴포넌트를 만들어봅시다.
 
@@ -1195,7 +1197,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-44. ### 라우터 params를 반응적으로 만드는 방법은?
+41. ### 라우터 params를 반응적으로 만드는 방법은?
 
     매개 변수와 함께 라우트를 사용할 때 주의 해야할 점은 사용자가 `/user/foo`에서 `/user/bar`로 이동할 때 동일한 컴포넌트 인스턴스가 재사용된다는 것입니다. 두 라우트 모두 동일한 컴포넌트를 렌더링하므로 이전 인스턴스를 삭제 한 다음 새 인스턴스를 만드는 것보다 효율적입니다. 그러나 이는 또한 컴포넌트의 라이프 사이클 훅이 호출되지 않음을 의미합니다.
 
@@ -1227,7 +1229,7 @@ images: ["images/1.jpg"]
 
     `beforeRouteEnter` 가드에서는 `this`에 접근할 권한이 없다는 것을 기억하세요. 대신, `next` 콜백 함수를 이용해 인스턴스에 접근할 수 있습니다.
 
-45. ### 라우트의 우선 순위는?
+42. ### 라우트의 우선 순위는?
 
     동일한 URL이 여러 라우트와 일치하는 경우가 있습니다. 이 경우 일치하는 우선 순위는 라우트 정의의 순서에 따라 결정됩니다. 즉, 경로가 더 먼저 정의 될수록 우선 순위가 높아집니다.
 
@@ -1242,7 +1244,7 @@ images: ["images/1.jpg"]
          })
     ```
 
-46. ### 중첩된 라우트란?
+43. ### 중첩된 라우트란?
 
     일반적으로 어플리케이션은 여러 단계의 중첩된 컴포넌트로 이루어져 있습니다. URL의 세그먼트 역시 중첩된 컴포넌트의 특정 구조와 일치합니다. 중첩된 아웃렛에서 컴포넌트를 렌더링하려면 `VueRouter` 생성자에서 `config`로 `children`을 설정해야 합니다.
 
@@ -1272,7 +1274,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-47. ### 싱글 파일 컴포넌트란?
+44. ### 싱글 파일 컴포넌트란?
 
     아마 하나의 페이지에서 HTML, CSS, JavaScript을 다른 파일로 분리해 관리해본 경험이 있을 것입니다. 하지만 싱글 파일 컴포넌트에서는 템플릿과 스타일, 로직들을 하나의 파일에 정리합니다.
 
@@ -1301,7 +1303,7 @@ images: ["images/1.jpg"]
     </style>
     ```
 
-48. ### 관심사 분리(separation of concerns)이란?
+45. ### 관심사 분리(separation of concerns)이란?
 
     주목해야 할 중요한 점은 관심사 분리가 파일 타입 분리와 같지 않다는 것입니다. 현대적인 UI 개발에서 코드베이스를 서로 얽혀있는 세 개의 거대한 레이어로 나누는 대신, 느슨하게 결합 된 컴포넌트로 나누고 구성하는 것이 더 중요합니다. 컴포넌트 내부에서 템플릿, 로직 및 스타일이 본질적으로 결합되어 배치되면 컴포넌트의 응집력과 유지 보수성이 향상됩니다.
 
@@ -1315,7 +1317,7 @@ images: ["images/1.jpg"]
     <style src="./my-component.css"></style>
     ```
 
-49. ### 싱글 파일 컴포넌트는 왜 필요할까?
+46. ### 싱글 파일 컴포넌트는 왜 필요할까?
 
     복잡한 프로젝트의 경우 또는 프론트엔드가 JavaScript 기반인 경우 단점이 분명해집니다. 싱글 파일 컴포넌트가 아닌 경우에는 아래와 같은 문제점이 있을 수 있습니다.
 
@@ -1326,7 +1328,7 @@ images: ["images/1.jpg"]
 
     싱글 파일 컴포넌트는 JavaScript 기반에서 발생하는 문제점을 해결하기 위해, 별도의 `.vue` 확장자의 파일로 작성합니다.
 
-50. ### filter란?
+47. ### filter란?
 
     `filter`는 텍스트 형식화를 위해 사용됩니다. 이 필터들은 자바스크립트 표현식에 파이프(`|`) 기호와 함께 추가되어야 합니다. 크게 두 가지 경우에서 사용될 수 있습니다.
 
@@ -1355,7 +1357,7 @@ images: ["images/1.jpg"]
     <div v-bind:id="username | capitalize"></div>
     ```
 
-51. ### filter를 전역적 또는 지역적으로 만드는 법은?
+48. ### filter를 전역적 또는 지역적으로 만드는 법은?
 
     1. **지역 필터(Local filters):** 지역 필터는 컴포넌트의 옵션에서 정의할 수 있습니다. 이 경우, 필터는 해당 컴포넌트에서만 사용 가능합니다.
 
@@ -1383,7 +1385,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-52. ### filter를 연속해 쓰는 방법은?
+49. ### filter를 연속해 쓰는 방법은?
 
     일반적으로 아래와 같이, 표현식에서 필터 뒤에 또 다른 필터를 사용할 수 있습니다.
 
@@ -1399,7 +1401,7 @@ images: ["images/1.jpg"]
     {{ birthday | dateFormat | uppercase }}
     ```
 
-53. ### filter에 파라미터를 전달할 수 있을까?
+50. ### filter에 파라미터를 전달할 수 있을까?
 
     필터는 기본적으로 자바스크립트 함수이기 때문에, 아래와 같이 두 개 이상의 인수를 받을 수 있습니다.
 
@@ -1413,7 +1415,7 @@ images: ["images/1.jpg"]
     {{ 2 | exponentialStrength(10) }} // prints 2 power 10 = 1024
     ```
 
-54. ### 플러그인이란?
+51. ### 플러그인이란?
 
     플러그인은 일반적으로 전역 수준 기능을 Vue 어플리케이션에 추가합니다.
 
@@ -1423,7 +1425,7 @@ images: ["images/1.jpg"]
     4. `Vue.prototype`를 이용해 Vue에 인스턴스 메소드를 추가
     5. 위의 기능과 함께 자체 API를 제공하는 라이브러리(vue-router)
 
-55. ### 플러그인을 만드는 방법은?
+52. ### 플러그인을 만드는 방법은?
 
     플러그인에서는 `install` 메소드를 정의해야 합니다. 이 메소드는 첫 번째 인자로 Vue 생성자와 외부에서 설정 가능한 옵션을 파라미터로 전달받습니다.
 
@@ -1457,7 +1459,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-56. ### 플러그인을 사용하는 방법은?
+53. ### 플러그인을 사용하는 방법은?
 
     `Vue.use()` 전역 메소드를 호출하여 플러그인을 사용할 수 있습니다. 이 함수는 생성자 `new Vue()`로 Vue 인스턴스를 생성하기 전에 호출되어야 합니다.
 
@@ -1470,7 +1472,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-57. ### 믹스인이란?
+54. ### 믹스인이란?
 
     Mixins는 Vue 컴포넌트에 재사용 가능한 기능을 배포하는 유연한 방법입니다. 믹스인에 존재하는 기능들은 호출된 컴포넌트의 기능들과 합쳐집니다.
 
@@ -1490,7 +1492,7 @@ images: ["images/1.jpg"]
 
     **Note:** 여러 믹스인은 배열의 형태로 사용할 수 있습니다.
 
-58. ### 전역 믹스인이란?
+55. ### 전역 믹스인이란?
 
     Vue 어플리케이션의 모든 컴포넌트에 동일한 옵션이나 기능을 확장해 사용할 필요가 있을 수 있습니다. 이 경우, 전역 믹스인을 활용해 Vue의 모든 컴포넌트에 영향을 줄 수 있습니다.
 
@@ -1508,11 +1510,11 @@ images: ["images/1.jpg"]
 
     위의 전역 믹스인은 해당 Vue 인스턴스에서 각 컴포넌트가 생성될 때마다 `created` 훅에서 로그를 발생시킵니다. 즉 모든 단일 Vue 인스턴스에 영향을 주기 때문에 적게 이용하고 신중하게 사용해야 합니다.
 
-59. ### CLI 환경에서 믹스인을 사용하는 법은?
+56. ### CLI 환경에서 믹스인을 사용하는 법은?
 
     Vue CLI를 사용한다면, 믹스인은 일반적으로 `/src/mixins` 디렉토리에서 `.js`파일로 작성합니다. `export` 키워드로 외부에 내보낸다는 것을 선언해야 하며 사용할 Vue 컴포넌트에서 `import` 키워드로 불러올 수 있습니다.
 
-60. ### 믹스인의 옵션이 컴포넌트의 옵션과 충돌한다면?
+57. ### 믹스인의 옵션이 컴포넌트의 옵션과 충돌한다면?
 
     믹스인과 컴포넌트에서 충돌하는 옵션이 있다면, 옵션은 몇 가지 방법을 통해 충돌하는 옵션을 병합합니다.
 
@@ -1591,7 +1593,7 @@ images: ["images/1.jpg"]
     vm.contact() // "+91 893839389"
     ```
 
-61. ### 믹스인의 병합 방법을 사용자 정의하는 방법은?
+58. ### 믹스인의 병합 방법을 사용자 정의하는 방법은?
 
     Vue에서는 사용자 지정 옵션을 병합할 때 기본적으로 기존 값을 덮어는 방법을 이용합니다. 만약 사용자 정의의 로직을 사용해 커스텀 옵션을 병합하려면,`Vue.config.optionMergeStrategies`에 함수를 추가할 필요가 있습니다.
 
@@ -1616,7 +1618,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-62. ### 사용자 정의 지시자(Custom directive)란?
+59. ### 사용자 정의 지시자(Custom directive)란?
 
     지시자는 DOM 엘리먼트에 부착할 수 있는 명령어입니다. 위에서 본 것처럼 `v-`로 시작하는 문법을 사용해 Vue가 이 명령어를 인식할 수 있도록 해야 합니다. 일반적으로 하위 수준의 DOM을 제어하기 위해 직접 접근해야 할 필요가 있을 때 유용하게 사용됩니다.
 
@@ -1639,7 +1641,7 @@ images: ["images/1.jpg"]
     <input v-focus>
     ```
 
-63. ### 지시자를 지역 등록하는 방법은?
+60. ### 지시자를 지역 등록하는 방법은?
 
     지시자를 지역 등록하기 위해서는 `directives` 옵션을 이용합니다.
 
@@ -1660,7 +1662,7 @@ images: ["images/1.jpg"]
     <input v-focus>
     ```
 
-64. ### 지시자에 의해 제공되는 라이프 사이클 훅은?
+61. ### 지시자에 의해 제공되는 라이프 사이클 훅은?
 
     지시자 객체가 등록될 때 몇 개의 라이프 사이클 훅을 제공합니다.
 
@@ -1672,7 +1674,7 @@ images: ["images/1.jpg"]
 
     **Note:** 위의 훅에서는 특정한 전달인자(Argument)를 받는다.
 
-65. ### 디렉티브 훅의 전달인자는?
+62. ### 디렉티브 훅의 전달인자는?
 
     모든 훅에서는 전달인자로 `el`, `binding`와 `vnode`를 갖고 있습니다. 그와 함께, **update**와 **componentUpdated**훅에서는 새 값과 이전 값을 비교하기 위해 `oldVnode`를 추가적으로 갖고 있습니다.
 
@@ -1697,7 +1699,7 @@ images: ["images/1.jpg"]
 
     [![custom-directives](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/custom-directives.svg)](https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/custom-directives.svg)
 
-66. ### 지시자에 여러 값들을 전달하는 방법은?
+63. ### 지시자에 여러 값들을 전달하는 방법은?
 
     지시자는 유효한 자바스크립트 표현식은 모두 수용할 수 있습니다. 따라서 지사자에 여러 값들을 전달하려면, 자바스크립트 객체 리터럴을 이용해 전달할 수 있습니다.
 
@@ -1716,7 +1718,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-67. ### 지시자 훅에서 함수 약어는?
+64. ### 지시자 훅에서 함수 약어는?
 
     드문 경우지만, 다른 훅과는 상관없이 `bind`나 `update` 훅에서 같은 동작을 하기 원할 수 있습니다. 이 경우에는 함수 약어를 사용할 수 있습니다.
 
@@ -1726,11 +1728,11 @@ images: ["images/1.jpg"]
     })
     ```
 
-68. ### render 함수를 사용하는 이유는?
+65. ### render 함수를 사용하는 이유는?
 
     일반적인 경우 Vue의 템플릿을 이용해 HTML을 작성하는 것을 권장합니다. 하지만 `input`이나 `slot`의 값을 이용해 동적인 컴포넌트를 생성하는 것처럼, 일부 특별한 경우에는 JavaScript가 필요한 경우가 있습니다. 이때 `render` 함수를 사용하며, `render`함수는 JavaScript로 작성하기 때문에 프로그래밍 환경을 온전히 이용할 수 있다는 장점이 있습니다.
 
-69. ### render 함수란?
+66. ### render 함수란?
 
     `render` 함수는 `createElement`라는 함수를 첫 번째 인자로 받아 가상 노드를 생성하는 함수입니다. 내부적으로 Vue의 템플릿은 빌드 타임에서 `render` 함수를 이용해 컴파일하고 있습니다. 그러므로 템플릿은 `render` 함수를 문법적으로 보기 쉽게 만들어 놓은 것에 가깝습니다.
 
@@ -1756,7 +1758,7 @@ images: ["images/1.jpg"]
       },
     ```
 
-70. ### createElement 함수란?
+67. ### createElement 함수란?
 
     `createElement` 함수는 몇 가지의 약속된 전달인자를 받는데, 이를 이용해 템플릿에서 사용되는 기능을 JavaScript 코드로 작성할 수 있습니다.
 
@@ -1818,7 +1820,7 @@ images: ["images/1.jpg"]
 
     자세한 내용은 [공식 문서](https://vuejs.org/v2/guide/render-function.html#The-Data-Object-In-Depth)에서 확인할 수 있습니다.
 
-71. ### 가상 노드를 여러 번 사용할 수 있는 방법은?
+68. ### 가상 노드를 여러 번 사용할 수 있는 방법은?
 
     컴포넌트 트리의 모든 가상 노드(VNodes)는 고유해야 합니다. 즉, 직접 가상 노드를 여러 번 사용할 수는 없습니다. 만약 같은 엘리먼트나 컴포넌트를 여러 번 반복해서 사용해야 한다면, 팩토리 패턴을 이용해 작성해야 합니다.
 
@@ -1845,7 +1847,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-72. ### render 함수와 템플릿을 비교한다면?
+69. ### render 함수와 템플릿을 비교한다면?
 
     Vue에서 HTML을 작성하는데 사용되는 템플릿과 render 함수를 비교해봅시다.
 
@@ -1857,7 +1859,7 @@ images: ["images/1.jpg"]
     | 이벤트 수식어와 키 수식어: `.stop`, `.prevent`, `.self`, keys(`.enter`, `.13`) and Modifiers Keys(`.ctrl`, `.alt`, `.shift`, `.meta`) | JavaScript로 해결, `event.stopPropagation()`, `event.preventDefault()`, `if (event.target !== event.currentTarget) return`, `if (event.keyCode !== 13) return`, `if (!event.ctrlKey) return` |
     | 슬롯 속성 활용                                               | 렌더 함수의 `this.$slots`와 `this.$scopedSlots` 활용         |
 
-73. ### 함수형 컴포넌트(Functional component)란?
+70. ### 함수형 컴포넌트(Functional component)란?
 
     함수형 컴포넌트는 `context`를 통해 전달받은 정보로만 생성되는 간단한 컴포넌트입니다.
 
@@ -1881,13 +1883,13 @@ images: ["images/1.jpg"]
     })
     ```
 
-74. ### Vue와 React의 공통점은?
+71. ### Vue와 React의 공통점은?
 
     1. 두 프레임워크 모두 **가상 DOM** 모델을 사용합니다.
     2. 반응적이고 조합 가능한 컴포넌트를 제공합니다.
     3. 코어 라이브러리에만 집중하고 있고, 라우팅 및 상태 관리와 같은 라이브러리가 부가적으로 있습니다.
 
-75. ### Vue와 React의 차이점은?
+72. ### Vue와 React의 차이점은?
 
     | 특징              | Vue                       | React                    |
     | ----------------- | ------------------------- | ------------------------ |
@@ -1896,20 +1898,20 @@ images: ["images/1.jpg"]
     | 복잡도            | 상대적으로 간단           | 상대적으로 복잡          |
     | 빌드 어플리케이션 | Vue-cli                   | CRA (`Create-React-App`) |
 
-76. ### Vue가 React에 비해 나은 점은?
+73. ### Vue가 React에 비해 나은 점은?
 
     1. 가볍고 빠릅니다.
     2. 템플릿이 개발 과정을 쉽게 만들어줍니다.
     3. JSX에 비해 가벼운 JavaScript 문법을 사용합니다.
 
-77. ### React가 Vue에 비해 나은 점은?
+74. ### React가 Vue에 비해 나은 점은?
 
     1. 큰 규모의 어플리케이션을 유연하게 만들 수 있습니다.
     2. 테스트가 쉽습니다.
     3. 모바일 앱 제작에도 적합합니다.
     4. 생태계가 크고 풍부합니다.
 
-78. ### Vue와 AngularJS의 차이점은?
+75. ### Vue와 AngularJS의 차이점은?
 
     Vue의 개발 초기 단계에서 AngularJS를 참고했기 때문에, Vue와 AngularJS의 문법은 상당히 비슷합니다. 하지만 차이점 역시 존재합니다.
 
@@ -1921,7 +1923,7 @@ images: ["images/1.jpg"]
     | 모델          | 가상 DOM 기반            | MVC                                              |
     | 작성된 언어   | JavaScript               | TypeScript                                       |
 
-79. ### 동적 컴포넌트란?
+76. ### 동적 컴포넌트란?
 
     `<component>` 태그에서 `v-bind:is`로 바인딩된 컴포넌트를 동적으로 전환할 수 있습니다.
 
@@ -1956,7 +1958,7 @@ images: ["images/1.jpg"]
     </div>
     ```
 
-80. ### keep-alive 태그란?
+77. ### keep-alive 태그란?
 
     `<keep-alive>`는 컴포넌트의 상태를 보존해서 재 렌더링을 막아주는 추상 컴포넌트입니다. 만약 동적인 컴포넌트를 `<keep-alive>` 태그로 감싼다면, 컴포넌트 인스턴스를 없애지 않고 메모리에 유지해 보존합니다.
 
@@ -1979,7 +1981,7 @@ images: ["images/1.jpg"]
 
     **Note:** `<keep-alive>`는 DOM에 렌더링 되지 않습니다.
 
-81. ### 비동기 컴포넌트(Async component)란?
+78. ### 비동기 컴포넌트(Async component)란?
 
     대규모 응용 프로그램에서는 응용 프로그램을 더 작은 덩어리로 나누고 실제로 필요할 때만 서버에서 컴포넌트를 로드해야 할 수도 있습니다. Vue를 사용하면 컴포넌트 정의를 비동기식으로 해결하는 팩토리 함수로 컴포넌트를 정의 할 수 있습니다.
 
@@ -1992,7 +1994,7 @@ images: ["images/1.jpg"]
 
     Vue는 Vue는 컴포넌트가 렌더링되어야 할 때만 팩토리 함수를 실행시키고, 이후의 나중에 있을 리렌더링을 위해 결과를 캐시합니다.
 
-82. ### 비동기 컴포넌트 팩토리 패턴이란?
+79. ### 비동기 컴포넌트 팩토리 패턴이란?
 
     비동기 컴포넌트 팩토리는 다음 형태의 객체를 반환할 수 있습니다.
 
@@ -2012,7 +2014,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-83. ### 인라인 템플릿(inline templates)이란?
+80. ### 인라인 템플릿(inline templates)이란?
 
     하위 컴포넌트에 `inline-template` 속성이 존재할 때, 컴포넌트는 내부 컨텐츠를 템플릿으로 사용합니다. 따라서 보다 유연한 템플릿 작성이 가능합니다.
 
@@ -2027,7 +2029,7 @@ images: ["images/1.jpg"]
 
     **Note:** `inline-template`은 템플릿의 범위를 추론하기 어렵게 만듭니다. 가장 좋은 방법은 `template` 옵션을 사용하거나 `.vue` 파일의 `template` 엘리먼트를 사용하여 컴포넌트 내부에 템플릿을 정의하는 것입니다.
 
-84. ### X-Templates이란?
+81. ### X-Templates이란?
 
     템플릿를 정의하는 또 다른 방법은 `text/x-template` 유형의 스크립트 엘리먼트 내부의 ID로 템플릿을 참조하는 것입니다.
 
@@ -2043,7 +2045,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-85. ### 재귀 컴포넌트(recursive components)란?
+82. ### 재귀 컴포넌트(recursive components)란?
 
     컴포넌트는 자신의 템플릿에서 자기 자신을 재귀적으로 호출할 수 있습니다.
 
@@ -2058,7 +2060,7 @@ images: ["images/1.jpg"]
 
     **Note:** 위와 같은 컴포넌트는 최대 스택 크기 초과 오류가 발생하므로 재귀 호출이 조건부인지 확인해야 합니다.
 
-86. ### 컴포넌트 사이의 순환 참조 해결 방법은?
+83. ### 컴포넌트 사이의 순환 참조 해결 방법은?
 
     복잡한 어플리케이션에서 Vue 컴포넌트가 서로가 서로를 호출하고 있는 상황이 발생할 수 있습니다. 컴포넌트 A와 컴포넌트 B가 서로 순환 참조를 하고 있는 상황을 살펴봅시다.
 
@@ -2094,19 +2096,19 @@ images: ["images/1.jpg"]
     }
     ```
 
-87. ### CSP 환경에서 Vue 어플리케이션을 빌드하는 법은?
+84. ### CSP 환경에서 Vue 어플리케이션을 빌드하는 법은?
 
     Google 크롬 앱과 같은 일부 환경에서는 CSP(컨텐츠 보안 정책)를 적용하여 표현식을 평가하는 데 `new Function()` 을 사용할 수 없습니다. 전체 빌드는 이 기능을 사용하여 템플릿을 컴파일하므로 이러한 환경에서는 사용할 수 없습니다.
 
     반면 런타임 전용 빌드는 CSP와 완벽하게 호환됩니다. Webpack + vue-loader 또는 Browserify + vueify로 런타임 전용 빌드를 사용하는 경우 템플릿은 CSP 환경에서 완벽하게 작동하는 `render` 함수로 미리 컴파일됩니다.
 
-88. ### 전체 빌드와 런타임 빌드의 차이점은?
+85. ### 전체 빌드와 런타임 빌드의 차이점은?
 
     **1. 전체 빌드(Full):** 컴파일러와 런타임 빌드를 동시에 포함합니다. 템플릿을 작성한 경우 필요합니다.
 
     **2. 런타임 빌드(Runtime):** Vue 인스턴스 생성과 `render` 함수, 가상 돔을 포함하고 있지만 컴파일러 빌드를 포함하고 있지 않습니다.
 
-89. ### Vue의 빌드 종류는?
+86. ### Vue의 빌드 종류는?
 
     | 타입                    | UMD                | CommonJS              | ES Module (for bundlers) | ES Module (for browsers) |
     | ----------------------- | ------------------ | --------------------- | ------------------------ | ------------------------ |
@@ -2115,7 +2117,7 @@ images: ["images/1.jpg"]
     | 전체 빌드 (배포 모드)   | vue.min.js         | NA                    | NA                       | vue.esm.browser.min.js   |
     | 런타임 빌드 (배포 모드) | vue.runtime.min.js | NA                    | NA                       | NA                       |
 
-90. ### 웹팩에서 Vue 설정을 하는 방법은?
+87. ### 웹팩에서 Vue 설정을 하는 방법은?
 
     `alias`를 이용해 Vue를 설정할 수 있습니다.
 
@@ -2130,7 +2132,7 @@ images: ["images/1.jpg"]
     }
     ```
 
-91. ### Vue 컴파일러의 목적은?
+88. ### Vue 컴파일러의 목적은?
 
     Vue는 컴파일러를 이용해 템플릿을 `render` 함수로 변환합니다.
 
@@ -2148,7 +2150,7 @@ images: ["images/1.jpg"]
     })
     ```
 
-92. ### DevTool이란?
+89. ### DevTool이란?
 
     DevTool은 Vue 어플리케이션을 사용자 친화적인 인터페이스로 디버그 할 수 있게 도와주는 브라우저 확장 프로그램입니다.
 
@@ -2156,11 +2158,11 @@ images: ["images/1.jpg"]
 
     **Note:** Vue 페이지가 배포 모드일 경우에는 DevTool로 디버그할 수 없습니다.
 
-93. ### VueJS의 브라우저 지원은?
+90. ### VueJS의 브라우저 지원은?
 
     ECMAScript5를 지원하는 브라우저에서 동작 가능합니다. IE8 이하의 브라우저에서는 지원하지 않습니다.
 
-94. ### CDN으로 Vue를 사용하는 방법은?
+91. ### CDN으로 Vue를 사용하는 방법은?
 
     Vue는 jsdelivr, unpkg, cdnjs에서 제공하는 CDN을 이용해서도 사용이 가능합니다. 일반적으로 초기 기획, 학습용으로 적합합니다.
 
@@ -2176,13 +2178,13 @@ images: ["images/1.jpg"]
 
     **Note:** 버전 정보를 지우면 항상 최신 버전을 가져옵니다.
 
-95. ### 강제로 업데이트를 발생시키는 방법은?
+92. ### 강제로 업데이트를 발생시키는 방법은?
 
     매우 드문 경우지만, 데이터가 변경되지 않았음에도 재 렌더링을 위해 강제로 업데이트를 발생시켜야 할 수도 있습니다. 이 경우 `vm.$forceUpdate()` API 메소드를 이용할 수 있습니다.
 
     **Note:** 모든 하위 컴포넌트에는 영향이 미치지 않으며, 슬롯 그 자체가 삽입된 슬롯 자체 및 하위 컴포넌트에만 영향을 미칩니다.
 
-96. ### 템플릿에서 once 지시자를 쓰는 이유는?
+93. ### 템플릿에서 once 지시자를 쓰는 이유는?
 
     많은 양의 정적 컨텐츠를 렌더링 할 때, 성능 향상을 위해 엘리먼트 및 컴포넌트를 한번만 렌더링하는 용도로 사용합니다.
 
@@ -2199,7 +2201,7 @@ images: ["images/1.jpg"]
 
     **Note:** 정적 컨텐츠가 많아서 느려지는 일이 발생하지 않는 한, 과다하게 사용하지 않는 것이 좋습니다.
 
-97. ### 루트 Vue 인스턴스에 접근하는 방법은?
+94. ### 루트 Vue 인스턴스에 접근하는 방법은?
 
     루트 Vue 인스턴스(`new Vue()`)는 `$root` 속성을 이용해 접근할 수 있습니다.
 
@@ -2236,7 +2238,7 @@ images: ["images/1.jpg"]
 
     상태 관리를 위한 용도라면 Vuex를 사용하는 것이 낫습니다.
 
-98. ### Vue를 사용하고 있는 기업들은?
+95. ### Vue를 사용하고 있는 기업들은?
 
     아래는 Vue를 사용하고 있는 유명 기업들입니다.
 
@@ -2251,7 +2253,7 @@ images: ["images/1.jpg"]
     9. GitLab
     10. Laracasts
 
-99. ### renderError 메소드의 목적은?
+96. ### renderError 메소드의 목적은?
 
     기본 `render` 함수가 렌더링 도중 에러가 발생하면, 대체되는 렌더링 결과를 제공합니다. `renderError`의 두 번째 전달인자로 에러가 전달됩니다.
 
@@ -2266,50 +2268,50 @@ images: ["images/1.jpg"]
     }).$mount('#app')
     ```
 
-100. ### 하위 컴포넌트에서 상위 컴포넌트로 직접 접근하는 방법은?
+97. ### 하위 컴포넌트에서 상위 컴포넌트로 직접 접근하는 방법은?
 
-     상위 컴포넌트에서는 하위 컴포넌트들을 `$children` 배열로 참조하며, 하위 컴포넌트에서 상위 컴포넌트를 `$parent` 속성으로 참조합니다.
+    상위 컴포넌트에서는 하위 컴포넌트들을 `$children` 배열로 참조하며, 하위 컴포넌트에서 상위 컴포넌트를 `$parent` 속성으로 참조합니다.
 
-101. ### vuex란?
+98. ### vuex란?
 
-     Vuex는 Vue.js 애플리케이션을 위한 상태 관리 패턴 + 라이브러리(Flux에서 영감을 받은 애플리케이션 아키텍처)입니다. 예측 가능한 방식으로만 상태가 변경될 수 있도록 보장하는 규칙을 가지고 있는 애플리케이션의 모든 컴포넌트를 위한 중앙 집중식 저장소입니다.
+    Vuex는 Vue.js 애플리케이션을 위한 상태 관리 패턴 + 라이브러리(Flux에서 영감을 받은 애플리케이션 아키텍처)입니다. 예측 가능한 방식으로만 상태가 변경될 수 있도록 보장하는 규칙을 가지고 있는 애플리케이션의 모든 컴포넌트를 위한 중앙 집중식 저장소입니다.
 
-102. ### 상태 관리 패턴의 주요 구성 요소는 무엇입니까?
+99. ### 상태 관리 패턴의 주요 구성 요소는 무엇입니까?
 
-     상태 관리의 주요 구성요소는 상태 및 뷰, 액션입니다. 이러한 구성요소에 따른 패턴을 애플리케이션에서 상태 관리 패턴이라고 합니다. 아래에 자세한 구성 요소가 자세히 설명되어 있습니다.
+    상태 관리의 주요 구성요소는 상태 및 뷰, 액션입니다. 이러한 구성요소에 따른 패턴을 애플리케이션에서 상태 관리 패턴이라고 합니다. 아래에 자세한 구성 요소가 자세히 설명되어 있습니다.
 
-     1. **상태**는 앱을 구동시키는 원천입니다.
-     2. **뷰**는 단지 상태의 선언적 매핑입니다.
-     3. **액션**은 뷰에서 사용자 입력에 반응하여 상태가 변할 수 있도록 하는 방법입니다. 위의 3가지 구성요소와 함께 상태 관리 패턴을 따르는 카운터 예를 들어보겠습니다.
+    1. **상태**는 앱을 구동시키는 원천입니다.
+    2. **뷰**는 단지 상태의 선언적 매핑입니다.
+    3. **액션**은 뷰에서 사용자 입력에 반응하여 상태가 변할 수 있도록 하는 방법입니다. 위의 3가지 구성요소와 함께 상태 관리 패턴을 따르는 카운터 예를 들어보겠습니다.
 
-     ```
-     new Vue({
-       // state
-       data () {
-         return {
-           count: 0
-         }
-       },
-       // view
-       template: `
-         <div>{{ count }}</div>
-       `,
-       // actions
-       methods: {
-         increment () {
-           this.count++
-         }
-       }
-     })
-     ```
+    ```
+    new Vue({
+      // state
+      data () {
+        return {
+          count: 0
+        }
+      },
+      // view
+      template: `
+        <div>{{ count }}</div>
+      `,
+      // actions
+      methods: {
+        increment () {
+          this.count++
+        }
+      }
+    })
+    ```
 
-103. ### Vuex에서 단방향 데이터 흐름 모델을 어떻게 표현합니까?
+100. ### Vuex에서 단방향 데이터 흐름 모델을 어떻게 표현합니까?
 
      Vue.js는 props 속성을 통해 단방향 데이터 흐름 모델을 표현합니다. vuex에서 이와 동일한 개념은 아래와 같이 나타낼 수 있습니다.
 
      ![img](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/flow.png)
 
-104. ### vuejs loader는 무엇입니까?
+101. ### vuejs loader는 무엇입니까?
 
      Vue loader는 Vue 컴포넌트를 싱글 파일 컴포넌트(SFC, SFCs)라고 하는 형식으로 작성할 수 있는 웹팩용 로더입니다. 예를 들어 `HelloWorld` 라는 SFC를 작성하면 아래와 같습니다.
 
@@ -2335,7 +2337,7 @@ images: ["images/1.jpg"]
      </style>
      ```
 
-105. ### 웹팩에서 vue loader를 설정하는 방법은?
+102. ### 웹팩에서 vue loader를 설정하는 방법은?
 
      `Vue-Loader`의 설정은 웹팩 설정에 Vue Loader의 플러그인을 추가하기 때문에 다른 로더와는 약간 다릅니다. Vue 로더 플러그인은 정의된 다른 규칙(js 및 css 규칙)을 복제하여 `.vue` 파일에서 해당 언어 블록(`script` 및 `style`)에 적용하기 위해 필요합니다. Vue 로더에 대한 웹팩 구성의 간단한 예는 다음과 같습니다.
 
@@ -2373,18 +2375,18 @@ images: ["images/1.jpg"]
      }
      ```
 
-106. ### vue-loader의 Asset URL 핸들링 규칙은?
+103. ### vue-loader의 Asset URL 핸들링 규칙은?
 
      1. **절대 경로(Absolute path)**: 만약 URL 경로가 `/images/loader.png`와 같은 절대 경로라면 그대로 보존됩니다.
      2. **상대 경로(Relative path)**: 만약 URL 경로가 `./images/loader.png`와 같은 절대 경로라면 상대 모듈 요청(`require(./images/loader.png)`)으로 컴파일되고 파일 시스템의 폴더 구조를 기반으로 해결됩니다.
      3. **~로 시작하는 경로(URLs starts with ~ symbol)**: 만약 URL 경로가 `./some-node-package/loader.png`와 같은 `~`로 시작된다면, 모듈 요청으로 컴파일됩니다.
      4. **@로 시작하는 경로(URLs starts with @ symbol)**: 만약 URL 경로가 `@`로 시작된다면, 모듈 요청으로 컴파일됩니다. 이것은 웹팩 `config`에 `@`에 대한 별칭이 있는 경우에 유용하며, 기본적으로 `vue-cli`가 만든 모든 프로젝트에서 `/src`를 가리킵니다.
 
-107. ### vue loader에서 전처리기를 사용하는 경우라면?
+104. ### vue loader에서 전처리기를 사용하는 경우라면?
 
      `Vue-loader`는 작성된 언어 블록의 `lang` 속성을 이용해 적절한 로더를 적용하고 웹팩 설정에 적용된 규칙을 따릅니다. `Vue-loader`에서 SASS, LESS, Stylus나 PostCSS 같은 전처리기를 사용할 수 있습니다.
 
-108. ### 범위 CSS(Scoped CSS)란?
+105. ### 범위 CSS(Scoped CSS)란?
 
      범위를 가지는 CSS(Scoped CSS)는 Vue에서 싱글 파일 컴포넌트에서 해당 컴포넌트에 작성된 CSS가 다른 컴포넌트에 영향을 미치지 않도록 그 적용 범위를 제한하는 것을 의미합니다. 즉, `<style>` 태그가 `scoped` 속성을 가지고 있다면, 해당 CSS는 해당 컴포넌트에서만 영향을 미칩니다.
 
@@ -2418,7 +2420,7 @@ images: ["images/1.jpg"]
      </template>
      ```
 
-109. ### 범위 CSS와 전역 CSS를 함께 쓸 수 있을까?
+106. ### 범위 CSS와 전역 CSS를 함께 쓸 수 있을까?
 
      범위가 지정된 스타일과 범위가 지정되지 않은 스타일은 동일한 컴포넌트에 포함할 수 있습니다.
 
@@ -2432,7 +2434,7 @@ images: ["images/1.jpg"]
      </style>
      ```
 
-110. ### 범위 CSS가 자식 컴포넌트에 영향을 미치게 하는 방법은?
+107. ### 범위 CSS가 자식 컴포넌트에 영향을 미치게 하는 방법은?
 
      범위가 지정된 CSS에서, 자식 컴포넌트에 영향을 미치게 하는 방법은 `>>>` 연산자를 사용하면 됩니다.
 
@@ -2450,7 +2452,7 @@ images: ["images/1.jpg"]
 
      **Note:** SASS에서는 `>>>` 연산자가 제대로 작동하지 않을 수 있습니다. 이때는 `/deep/` 또는 `::v-deep` 선택자를 대신 이용합니다.
 
-111. ### 상위 컴포넌트의 범위 CSS가 하위 컴포넌트에 영향을 주는가?
+108. ### 상위 컴포넌트의 범위 CSS가 하위 컴포넌트에 영향을 주는가?
 
      일반적으로 상위 컴포넌트의 스타일은 하위 컴포넌트에 영향을 미치지 않습니다. 하지만 하위 컴포넌트의 루트 노드는 상위 컴포넌트와 하위 컴포넌트의 스타일에 모두 영향을 받습니다. 즉, 하위 컴포넌트의 루트 노드에 상위 컴포넌트에서 사용된 클래스가 사용된다면, 상위 컴포넌트의 스타일이 하위 컴포넌트에도 영향을 끼칩니다. 이는 상위 컴포넌트에서 레이아웃을 위해 하위 컴포넌트에 영향을 미칠 수 있도록 디자인된 것입니다. 아래의 예시는 상위 컴포넌트의 `background`가 하위 컴포넌트에까지 영향을 미치는 예제입니다.
 
@@ -2503,19 +2505,19 @@ images: ["images/1.jpg"]
 
      하위 컴포넌트의 `wrapper` 클래스의 배경색은 빨간색이 아니라 파란색이 됩니다.
 
-112. ### 동적으로 생성된 컨텐츠에 범위 CSS를 적용시키는 방법은?
+109. ### 동적으로 생성된 컨텐츠에 범위 CSS를 적용시키는 방법은?
 
      범위 CSS는 `v-html` 지시자로 동적으로 생성된 내용에 영향을 주지 않습니다. 이 경우, `deep` 선택자를 통해 문제를 해결할 수 있습니다.
 
-113. ### Vue에서 CSS 모듈을 사용할 수 있을까?
+110. ### Vue에서 CSS 모듈을 사용할 수 있을까?
 
      CSS 모듈은 CSS를 모듈화하고 구성하는데 널리 사용되는 시스템입니다. `vue-loader`는 시뮬레이트된 범위 CSS의 대안으로 CSS 모듈과 함께 1급 클래스로의 통합을 제공합니다.
 
-114. ### 모든 템플릿에 대해 런타임 빌드를 할 수 있는가?
+111. ### 모든 템플릿에 대해 런타임 빌드를 할 수 있는가?
 
      안 됩니다. Vue에서 사용되는 템플릿은 오직 `.vue` 파일에서만 사용되며, 다른 경우라면 `render` 함수가 필요합니다.
 
-115. ### Vue에서 CSS 모듈을 사용하는 방법은?
+112. ### Vue에서 CSS 모듈을 사용하는 방법은?
 
      1. **CSS 모듈 활성화:** `webpack.config.js`의 `css-loader`에서 `modules: true` 옵션을 활성화해줍니다.
 
@@ -2567,7 +2569,7 @@ images: ["images/1.jpg"]
 
      `:class`의 객체, 배열 문법에도 동작합니다.
 
-116. ### CSS 모듈을 전처리기에서 사용할 수 있는가?
+113. ### CSS 모듈을 전처리기에서 사용할 수 있는가?
 
      CSS 모듈을 전처리기에서 사용할 수 있습니다. 예를 들어, Sass 전처리기는 웹팩에서 아래와 같이 설정할 수 있습니다.
 
@@ -2586,7 +2588,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-117. ### CSS 모듈에 사용자 정의의 이름을 사용할 수 있는가?
+114. ### CSS 모듈에 사용자 정의의 이름을 사용할 수 있는가?
 
      주입된 CSS 모듈에 `module` 속성을 부여해서, 모듈의 이름을 커스터마이징할 수 있습니다. `*.vue` 파일에서 둘 이상의 `<style>` 태그가 존재할 때, 스타일이 서로 덮어쓰지 않게 하는 데 유용합니다. 예를 들어, 아래와 같이 속성을 줄 수 있습니다.
 
@@ -2600,11 +2602,11 @@ images: ["images/1.jpg"]
      </style>
      ```
 
-118. ### 핫 리로드(Hot Reload)란?
+115. ### 핫 리로드(Hot Reload)란?
 
      핫 리로드는 `*.vue` 파일을 편집할 때 단순히 페이지를 다시 로드하는 것이 아닙니다. 핫 리로드 기능을 사용하면 `*.vue` 파일을 편집할 때 해당 컴포넌트의 모든 인스턴스가 페이지를 리로딩하지 않고 변경됩니다. 심지어 앱의 현재 상태와 변경된 컴포넌트를 보존합니다. 이것은 템플릿 또는 컴포넌트의 스타일을 수정할 때 개발 환경이 크게 개선됩니다.
 
-119. ### 핫 리로드가 비활성화 될 때는?
+116. ### 핫 리로드가 비활성화 될 때는?
 
      핫 리로드는 아래의 상황에서는 비활성화 되어있습니다.
 
@@ -2612,7 +2614,7 @@ images: ["images/1.jpg"]
      2. 웹팩이 코드를 minify할 때
      3. `process.env.NODE_ENV === 'production'`일 때
 
-120. ### 핫 리로드를 명시적으로 비활성화하는 방법은?
+117. ### 핫 리로드를 명시적으로 비활성화하는 방법은?
 
      `hotReload: false` 옵션을 웹팩 로더에서 설정하면 됩니다.
 
@@ -2630,17 +2632,17 @@ images: ["images/1.jpg"]
      }
      ```
 
-121. ### 핫 리로드를 활성화하는 방법은?
+118. ### 핫 리로드를 활성화하는 방법은?
 
      `vue-loader` 플러그인은 내부적으로 핫 리로드를 사용하고 있습니다. 만약 `vue-cli`를 이용해 프로젝트를 시작했다면, 핫 리로드를 바로 사용할 수 있습니다. 만약 프로젝트를 직접 세팅했다면, `webpack-dev-server --hot`옵션으로 프로젝트를 시작해 활성화 할 수 있습니다.
 
-122. ### 핫 리로드에서 상태가 보존되는 규칙은?
+119. ### 핫 리로드에서 상태가 보존되는 규칙은?
 
      1. 컴포넌트의 `<template>`을 수정할 때, 수정된 컴포넌트는 모든 상태를 보존한 채로 다시 렌더링됩니다.
      2. 컴포넌트의 `<script>`를 수정할 때, 수정된 컴포넌트는 해체(destroy) 된 후 다시 생성(re-create)됩니다.
      3. 컴포넌트의 `<style>`을 수정할 때, 핫 리로드는 `vue-style-loader`에 의해 실행되며 상태에 영향을 끼치지 않습니다.
 
-123. ### Vue loader를 이용해 함수형 컴포넌트를 생성하는 방법은?
+120. ### Vue loader를 이용해 함수형 컴포넌트를 생성하는 방법은?
 
      `functional` 속성을 템플릿에 추가해 함수형 컴포넌트를 생성할 수 있습니다.
 
@@ -2650,7 +2652,7 @@ images: ["images/1.jpg"]
      </template>
      ```
 
-124. ### 함수형 컴포넌트에서 전역 속성에 접근하는 방법은?
+121. ### 함수형 컴포넌트에서 전역 속성에 접근하는 방법은?
 
      `Vue.prototype`에 전역으로 정의된 속성에 접근해야 한다면, `parent` 속성을 이용해 접근할 수 있습니다.
 
@@ -2660,12 +2662,12 @@ images: ["images/1.jpg"]
      </template>
      ```
 
-125. ### Vue에서 테스트 하는 방법은?
+122. ### Vue에서 테스트 하는 방법은?
 
      1. **vue-cli:** 유닛 테스트와 e2e 테스트 환경이 미리 설정되어 제공됩니다.
      2. **직접 세팅:** `@vue/test-utils`에서 `mocha-webpack`이나 `jest`를 `*.vue` 파일을 대상으로 직접 설정합니다.
 
-126. ### CSS에 Lint를 설정하는 방법은?
+123. ### CSS에 Lint를 설정하는 방법은?
 
      Stylelint를 이용해 Vue의 싱글 파일 컴포넌트의 스타일 부분의 Lint를 설정할 수 있습니다. 특정 `.vue` 파일의 Lint는 아래와 같이 실행합니다.
 
@@ -2688,7 +2690,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-127. ### eslint 플러그인을 사용하는 방법은?
+124. ### eslint 플러그인을 사용하는 방법은?
 
      공식 `eslint-plugin-vue` 플러그인은 Vue의 싱글 파일 컴포넌트의 템플릿과 스크립트 부분에 대해 Lint를 제공합니다.
 
@@ -2707,7 +2709,7 @@ images: ["images/1.jpg"]
      eslint --ext js,vue MyComponent.vue
      ```
 
-128. ### eslint-loader를 사용하는 이유는?
+125. ### eslint-loader를 사용하는 이유는?
 
      `eslint-loader`를 이용하면 개발 도중에 자동으로 `*.vue` 파일들에 대해 Lint를 적용시킬 수 있습니다.
 
@@ -2736,7 +2738,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-129. ### CSS 단일 파일 추출이란?
+     ### CSS 단일 파일 추출이란?
 
      CSS 단일 파일 추출(CSS Extraction)은 모든 Vue 컴포넌트에서 사용된 CSS를 단일 CSS 파일로 추출하는 것을 의미합니다.
 
@@ -2746,7 +2748,7 @@ images: ["images/1.jpg"]
 
      그 후 웹팩의 설정에 추가해야 합니다.
 
-     ```
+     ```javascript
      // webpack.config.js
      var MiniCssExtractPlugin = require('mini-css-extract-plugin')
      
@@ -2775,7 +2777,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-130. ### 사용자 정의 블록이란?
+     ### 사용자 정의 블록이란?
 
      사용자 정의 블록(Custom block)은 `*.vue` 파일에서 사용할 수 있는 `<template>`, `<script>`, `<style>` 태그 블록 이외의 블록을 정의하는 것을 말합니다. `lang` 속성, 태그 이름, 웹팩 설정의 `resourceQuery` 속성에 의해 정의할 수 있습니다. 아래 예시는 `*.vue` 파일에서 `<message>`로 정의된 태그를 찾는 방법입니다.
 
@@ -2792,7 +2794,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-131. ### What are the features of stylelint?
+126. ### What are the features of stylelint?
 
      Below are the list of major stylelint features
 
@@ -2802,7 +2804,7 @@ images: ["images/1.jpg"]
      4. Parses **CSS-like syntaxes** like SCSS, Sass, Less and SugarSS
      5. Supports **Plugins** for reusing community plugins and creating own plugins
 
-132. ### What are the principles for vuex application structure?
+127. ### What are the principles for vuex application structure?
 
      Vuex enforces below rules to structure any application.
 
@@ -2812,11 +2814,11 @@ images: ["images/1.jpg"]
 
      ![img](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/vuex-app-structure.png)
 
-133. ### Is Vuex supports hot reloading?
+128. ### Is Vuex supports hot reloading?
 
      Yes, Vuex supports hot-reloading for mutations, modules, actions and getters during development. You need to use either webpack's hot module replacement API or browserify's hot module replacement plugin.
 
-134. ### What is the purpose of hotUpdate API of vuex store?
+129. ### What is the purpose of hotUpdate API of vuex store?
 
      The store.hotUpdate() API method is used for mutations and modules. For example, you need to configure vuex store as below,
 
@@ -2856,11 +2858,13 @@ images: ["images/1.jpg"]
      }
      ```
 
-135. ### How do you test mutations?
+130. ### mutations의 테스트
 
      Since mutations are just functions that completely rely on their arguments it will be easier to test. You need to keep mutations inside your store.js file and should also export the mutations as a named export apart from default export. Let's take an example of increment mutations,
 
-     ```
+      mutations 는 단지 그들의 arguments에 전적으로 의존하는 함수이기 때문에 시험하기가 더 쉬울 것이다. store.js 파일 내에 mutations 를 유지해야 하며 기본 내보내기와는 별도로 명명된 내보내기로도 내보내야 합니다. 
+
+     ```javascript
      // mutations.js
      export const mutations = {
        increment: state => state.counter++
@@ -2869,7 +2873,7 @@ images: ["images/1.jpg"]
 
      And test them using mocha and chai as below,
 
-     ```
+     ```javascript
      // mutations.spec.js
      import { expect } from 'chai'
      import { mutations } from './store'
@@ -2889,7 +2893,7 @@ images: ["images/1.jpg"]
      })
      ```
 
-136. ### How do you test your getters?
+131. ### How do you test your getters?
 
      It is easier to test getters similar to mutations. It is recommended to test these getters if they have complicated computation. Let's take a simple todo filter as a getter
 
@@ -2936,13 +2940,13 @@ images: ["images/1.jpg"]
      })
      ```
 
-137. ### What is the procedure to run tests in node?
+132. ### What is the procedure to run tests in node?
 
      By proper mocking, you can bundle tests with webpack and run them on node without having depenceny on Browser API. It involves 2 steps,
 
      1. **Create webpack config:** Create webpack config with proper .babelrc
 
-     ```
+     ```javascript
      // webpack.config.js
      module.exports = {
        entry: './test.js',
@@ -2969,7 +2973,7 @@ images: ["images/1.jpg"]
      mocha test-bundle.js
      ```
 
-138. ### What is the procedure to run tests in browser?
+133. ### What is the procedure to run tests in browser?
 
      Below are the steps to run tests in real browser,
 
@@ -2978,33 +2982,33 @@ images: ["images/1.jpg"]
      3. Start webpack-dev-server using the config.
      4. Go to localhost:8080/webpack-dev-server/test-bundle to see the test result
 
-139. ### What is the purpose of strict mode in vuex?
+134. ### What is the purpose of strict mode in vuex?
 
      In strict mode, whenever Vuex state is mutated outside of mutation handlers, an error will be thrown. It make sure that all state mutations can be explicitly tracked by debugging tools. You can just enable this by passing `strict: true` while creating the vuex store.
 
-     ```
+     ```javascript
      const store = new Vuex.Store({
        // ...
        strict: true
      })
      ```
 
-140. ### Can I use strict mode in production environment?
+135. ### Can I use strict mode in production environment?
 
      No, it is not recommended to use strict mode in production environment. Strict mode runs a synchronous deep watcher on the state tree for detecting inappropriate mutations and it can be quite expensive when you perform large amount of mutations. i.e, It can impact performance if you enable in production mode. Hence it should be handled through build tools,
 
-     ```
+     ```javascript
      const store = new Vuex.Store({
        // ...
        strict: process.env.NODE_ENV !== 'production'
      })
      ```
 
-141. ### What is vuex plugin?
+136. ### What is vuex plugin?
 
      The vuex plugin is an option hat exposes hooks for each mutation. It is a normal function that receives the store as the only argument. You can create your own plugin or use built-in plugins. The plugin skeleton would be as below,
 
-     ```
+     ```javascript
      const myPlugin = store => {
        // called when the store is initialized
        store.subscribe((mutation, state) => {
@@ -3016,18 +3020,18 @@ images: ["images/1.jpg"]
 
      After that plugin can be configured for plugins options as below,
 
-     ```
+     ```javascript
      const store = new Vuex.Store({
        // ...
        plugins: [myPlugin]
      })
      ```
 
-142. ### How do you mutate state in plugins?
+137. ### How do you mutate state in plugins?
 
      Similar to components you can't mutate state directly but they can trigger changes by by committing mutations. This way a plugin can be used to sync a data source to the store. For example, createWebSocketPlugin plugin is used to sync a websocket data source to the store.
 
-     ```
+     ```javascript
      export default function createWebSocketPlugin (socket) {
        return store => {
          socket.on('data', data => {
@@ -3044,7 +3048,7 @@ images: ["images/1.jpg"]
 
      And then configure plugin in vuex store as below
 
-     ```
+     ```javascript
      const plugin = createWebSocketPlugin(socket)
      
      const store = new Vuex.Store({
@@ -3054,20 +3058,20 @@ images: ["images/1.jpg"]
      })
      ```
 
-143. ### What is vuex store?
+138. ### What is vuex store?
 
      A Vuex "store" is basically a container that holds your application state. The store creation is pretty straightforward. Below are the list of instructions to use vuex in an increment application,
 
      1. Configure vuex in vuejs ecosystem
 
-     ```
+     ```javascript
      import Vuex from "vuex";
      Vue.use(Vuex)
      ```
 
      1. Provide an initial state object and some mutations
 
-     ```
+     ```javascript
      // Make sure to call Vue.use(Vuex) first if using a module system
      
      const store = new Vuex.Store({
@@ -3084,28 +3088,28 @@ images: ["images/1.jpg"]
 
      1. Trigger state change with commit and access state variables,
 
-     ```
+     ```javascript
      store.commit('increment')
      
      console.log(store.state.count) // -> 1
      ```
 
-144. ### What are the differences of vuex store and plain global object?
+     
 
-     Below are the two major differences between vuex store and plain global object
+139. vuex 스토어와 일반 글로벌 객체의 차이
 
-     1. **Vuex stores are reactive:** If the store's state changes then vue components will reactively and efficiently get updated
-     2. **Cannot directly mutate the store's state:** The store's state is changed by explicitly committing mutations to ensure that every state change leaves a track-able record for tooling purpose
+     1) Vuex 스토어는 반응성 : 스토어의 상태가 변경되면 vue 구성 요소가 반응성 및 효율적으로 업데이트됩니다.
+     2) 스토어 상태를 직접 변경할 수 없:  모든 상태 변경이 툴링 목적으로 추적 가능한 기록을 남길 수 있도록 mutations를 명시적으로 commit 하면서 스토어의 상태가 변경됩니다.
 
-145. ### What is the reason not to update the state directly?
+140. ### What is the reason not to update the state directly?
 
      We want to explicitly track application state in order to implement tools that can log every mutation, take state snapshots, or even perform time travel debugging. So we need to commit a mutation instead of changing store's state directly.
 
-146. ### What is Single state tree?
+141. ### What is Single state tree?
 
      Vuex's single state tree is single object contains all your application level state and serves as the "single source of truth". It does not conflict with modularity when you split state and mutations into sub modules.
 
-147. ### How do you install vuex?
+142. ### How do you install vuex?
 
      You can install vuex using npm or yarn as below,
 
@@ -3133,7 +3137,7 @@ images: ["images/1.jpg"]
 
      **Note:** You can use a specific version/tag via URLs like https://unpkg.com/vuex@2.0.0. If you don't mention any version then it will point to latest version.
 
-148. ### Do I need promise for vuex?
+143. ### Do I need promise for vuex?
 
      Yes, Vuex requires Promise. If your supporting browsers do not implement Promise (e.g. IE), you can use a polyfill library, such as es6-promise using npm or yarn.
 
@@ -3148,7 +3152,7 @@ images: ["images/1.jpg"]
      import 'es6-promise/auto'
      ```
 
-149. ### How do you display store state in vue components?
+144. ### How do you display store state in vue components?
 
      Since Vuex stores are reactive, you can retrieve" state from store by simply returning store's state from within a computed property. i.e, Whenever store state changes, it will cause the computed property to re-evaluate, and trigger associated DOM updates. Let's take a hello word component which display store's state in the template,
 
@@ -3164,7 +3168,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-150. ### How do you inject store into child components?
+145. ### How do you inject store into child components?
 
      Vuex provides a mechanism to "inject" the store into all child components from the root component with the store option. It will be enabled by vue.use(vuex). For example, let's inject into our app component as below,
 
@@ -3197,7 +3201,7 @@ images: ["images/1.jpg"]
           }
      ```
 
-151. ### What is mapState helper?
+146. ### What is mapState helper?
 
      In Vuex application, creating a computed property every time whenever we want to access the store's state property or getter is going to be repetitive and verbose, especially if a component needs more than one state property. In this case, we can make use of the mapState helper of vuex which generates computed getter functions for us. Let's take an increment example to demonstrate mapState helper,
 
@@ -3231,7 +3235,7 @@ images: ["images/1.jpg"]
      ])
      ```
 
-152. ### How do you combine local computed properties with mapState helper?
+147. ### How do you combine local computed properties with mapState helper?
 
      You can use object spread operator syntax in order to combine mapState helper(which returns an object) with other local computed properties. This way it simplify merging techniques using utilities.
 
@@ -3245,11 +3249,11 @@ images: ["images/1.jpg"]
      }
      ```
 
-153. ### Do you need to replace entire local state with vuex?
+148. ### Do you need to replace entire local state with vuex?
 
      No, if a piece of state strictly belongs to a single component, it could be just fine leaving it as local state. i.e, Eventhough vuex used in the application, it doesn't mean that you need to keep all the local state in vuex store. Other the code becomes more verbose and indirect although it makes your state mutations more explicit and debuggable.
 
-154. ### What are vuex getters??
+149. ### What are vuex getters??
 
      Vuex getters acts as computed properties for stores to compute derived state based on store state. Similar to computed properties, a getter's result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed. Let's take a todo example which as completedTodos getter to find all completed todos,
 
@@ -3272,7 +3276,7 @@ images: ["images/1.jpg"]
 
      **Note:**Getters receive state as first argument.
 
-155. ### What is a property style access?
+150. ### What is a property style access?
 
      You can access values of store's getter object(store.getters) as properties. This is known as property style access. For example, you can access todo's status as a property,
 
@@ -3292,7 +3296,7 @@ images: ["images/1.jpg"]
 
      **Note:** The getters accessed as properties are cached as part of Vue's reactivity system.
 
-156. ### What is a method style access?
+151. ### What is a method style access?
 
      You can access store's state in a method style by passing arguments. For example, you can pass user id to find user profile information as below,
 
@@ -3310,7 +3314,7 @@ images: ["images/1.jpg"]
      store.getters.getUserProfileById(111); {id: '111', name: 'John', age: 33}
      ```
 
-157. ### What is mapGetter helper??
+152. ### What is mapGetter helper??
 
      The mapGetters is a helper that simply maps store getters to local computed properties. For example, the usage of getters for todo app would be as below,
 
@@ -3329,7 +3333,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-158. ### What are mutations?
+153. ### What are mutations?
 
      Vuex mutations are similar to any events with a string `type` and a `handler`. The handler function is where we perform actual state modifications, and it will receive the state as the first argument. For example, the counter example with increment mutation would be as below,
 
@@ -3353,7 +3357,7 @@ images: ["images/1.jpg"]
      store.commit('increment')
      ```
 
-159. ### How do you commit with payload?
+154. ### How do you commit with payload?
 
      You can also pass **payload** for the mutation as an additional argument to `store.commit`. For example, the counter mutation with payload object would be as below,
 
@@ -3375,7 +3379,7 @@ images: ["images/1.jpg"]
 
      **Note:** You can also pass primitives as payload.
 
-160. ### What is object style commit?
+155. ### What is object style commit?
 
      You can also commit a mutation is by directly using an object that has a **type** property.
 
@@ -3396,7 +3400,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-161. ### What are the caveats with vuex mutations?
+156. ### What are the caveats with vuex mutations?
 
      Since a Vuex store's state is made reactive by Vue, the same reactivity caveats of vue will apply to vuex mutations. These are the rules should be followed for vuex mutations,
 
@@ -3413,7 +3417,7 @@ images: ["images/1.jpg"]
      state.stateObject = { ...state.stateObject, newProperty: 'John' }
      ```
 
-162. ### Why mutations should be synchronous?
+157. ### Why mutations should be synchronous?
 
      You need to remember that mutation handler functions must be synchronous. This is why because any state mutation performed in the callback is essentially un-trackable. It is going to be problematic when the devtool will need to capture a "before" and "after" snapshots of the state during the mutations.
 
@@ -3427,7 +3431,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-163. ### How do you perform mutations in components?
+158. ### How do you perform mutations in components?
 
      You can commit mutations in components with either **this.$store.commit('mutation name')** or mapMutations helper to map component methods to **store.commit** calls. For example, the usage of mapMutations helper on counter example would be as below,
 
@@ -3449,7 +3453,7 @@ images: ["images/1.jpg"]
      }
      ```
 
-164. ### Is it mandatory to use constants for mutation types?
+159. ### Is it mandatory to use constants for mutation types?
 
      No, it is not mandatory. But you might observed that State management implementations such Flux and Redux use constants for mutation types. This convention is just a preference and useful to take advantage of tooling like linters, and putting all constants in a single file allows your collaborators to get an at-a-glance view of what mutations are possible in the entire application. For example, the mutations can be declared as below,
 
@@ -3476,13 +3480,13 @@ images: ["images/1.jpg"]
      })
      ```
 
-165. ### How do you perform asynchronous operations?
+160. ### How do you perform asynchronous operations?
 
      In Vuex, mutations are synchronous transactions. But if you want to handle asynchronous operations then you should use **actions**.
 
-166. ### What are differences between mutations and actions?
+     
 
-     Actions are similar to mutations, but there are two main differences,
+161. mutations와 actions의 차이점
 
-     1. Mutations perform mutations on the state, actions commit mutations.
-     2. Actions can contain arbitrary asynchronous operations unlike mutations.
+     \1. Mutations는 state에서 mutations를 일으키고, actions는 commit를 mutations
+     \2. Actions에는 mutations와 달리 임의적인 비동기 작업이 포함될 수 있습니다.
