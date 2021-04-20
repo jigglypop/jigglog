@@ -16,8 +16,13 @@ images: ["images/2.jpg"]
 
 ## 2) this
 
-* this는 자바스크립트 런타임 시에 바인딩이 이루어지는 실행 컨텍스트 중 하나로, 해당 함수가 실행되는 동안에 사용할 수 있으며 함수 호출 부분에서 this가 가리키는 것이 무엇인지를 확인할 수 있다. 
-* 때로는 복잡한 코드에서 암시적 바인딩에 의해 혼란스러운 경우가 많은데, 이런 문제를 해결하기 위해서 call이나 apply 같은 내장 유틸리티를 사용하여 명시적으로 바인딩을 해 준다.
+* 함수 내에서 함수 호출 컨텍스트(맥락)을 의미
+
+* 자바스크립트 런타임 시에 바인딩이 이루어지는 실행 컨텍스트 중 하나 
+
+* 해당 함수가 실행되는 동안에 사용할 수 있으며 함수 호출 부분에서 this가 가리키는 것이 무엇인지를 확인 가능
+
+  
 
 #### (1) 일반함수의 this와 화살표 함수의 this
 
@@ -25,37 +30,18 @@ images: ["images/2.jpg"]
 * 일반함수의 this는 window(전역) 을 가르키며,
 * 화살표 함수의 this는 언제나 상위스코프의 this를 가르킴
 
-use strict모드에서의 this:
+#### (2) Call, Apply, Bind
 
-일반함수에서의 this는 undefined가 바인딩 됨.
-
-## Babel
-
-- 트랜스파일러
-- `컴파일` : 한 언어로 작성된 소스 코드를 다른 언어로 바꾸는것 (C-> 어셈블리어) 
-- `트랜스파일러` : 한언어로 작성된 소스코드를 비슷한 수준의 추상화를 가진 다른 언어로 변환(C++>C, ES6->ES5)
-
-ES6 크롬 정도의 브라우저를 제외하곤 ES6 스펙에 대한 지원이 완벽하지 않은데 해결방법:
-
-- Babel을 사용한다. ES6이상의 문법의 코드들을 브라우저가 이해할 수 있게끔 ES5이하의 문법으로 변환
-
-
-
-## Call, Apply, Bind
+* 암시적 바인딩에 의해 혼란스러운 문제를 해결하기 위해서 call이나 apply 같은 내장 유틸리티를 사용하여 명시적으로 바인딩
 
 - this를 바인딩하기 위한 방법
 
-- Call : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자를 하나씩 넘기는 것
+  - Call : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자를 하나씩 넘기는 것
 
-- Apply : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자가 배열
+  - Apply : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자가 배열
 
-- Bind : 함수를 호출하는 것이 아닌 this가 바인딩 된 새로운 함수를 리턴
+  - Bind : 함수를 호출하는 것이 아닌 this가 바인딩 된 새로운 함수를 리턴
 
-  
-
-- 
-
-  
 
 
 ```javascript
@@ -84,10 +70,349 @@ boundSay("bindcity");
 
 
 
+#### (3) this의 상황별 용법
+
+##### (1) 단독으로 쓴 this
+
+* global object를 가리킴
+
+* 브라우저에서 호출하는 경우 [object Window]
+
+*  strict mode(엄격 모드)에서도 동일
+
+```javascript
+'use strict';
+var x = this;
+console.log(x); //Window
+```
+
+##### (2) 함수 안에서 쓴 this
+
+* 함수 안에서 this는 함수의 주인에게 바인딩 
+
+```javascript
+function myFunction() {
+  return this;
+}
+console.log(myFunction()); //Window
+var num = 0;
+function addNum() {
+  this.num = 100;
+  num++;
+  
+  console.log(num); // 101
+  console.log(window.num); // 101
+  console.log(num === window.num); // true
+}
+ 
+addNum();
+
+//위 코드에서 this.num의 this는 window 객체를 가리킵니다.
+//따라서 num은 전역 변수를 가리키게 됩니다.
+```
+
+* strict mode(엄격 모드)에서는 함수 내의 this에 디폴트 바인딩이 없기 때문에 undefined
+
+```javascript
+"use strict";
+ 
+function myFunction() {
+  return this;
+}
+console.log(myFunction()); //undefined
+"use strict";
+ 
+var num = 0;
+function addNum() {
+  this.num = 100; //ERROR! Cannot set property 'num' of undefined
+  num++;
+}
+ 
+addNum();
+
+// 따라서 this.num을 호출하면 undefined.num을 호출하는 것과 마찬가지기 때문에 에러가 납니다.
+```
+
+##### (3) 메서드 안에서 쓴 this
+
+* 메서드 호출 시 메서드 내부 코드에서 사용된 this는 해당 메서드를 호출한 객체로 바인딩
+
+```javascript
+var person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullName: function () {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+person.fullName(); //"John Doe"
+
+var num = 0;
+function showNum() {
+  console.log(this.num);
+}
+showNum(); //0
+ 
+var obj = {
+  num: 200,
+  func: showNum,
+};
+obj.func(); //200
+```
+
+##### (4) 이벤트 핸들러 안에서 쓴 this
+
+* 이벤트를 받는 HTML 요소를 가리킴
+
+```javascript
+var btn = document.querySelector('#btn')
+btn.addEventListener('click', function () {
+  console.log(this); //#btn
+});
+```
+
+##### (5) new 생성자 안에서 쓴 this
+
+* 생성자 함수가 생성하는 객체로 this가 바인딩
+
+```javascript
+function Person(name) {
+  this.name = name;
+}
+ 
+var kim = new Person('kim');
+var lee = new Person('lee');
+ 
+console.log(kim.name); //kim
+console.log(lee.name); //lee
+```
+
+*  new로 바인딩이 되지 않았을 때
+
+```javascript
+var name = 'window';
+function Person(name) {
+  this.name = name;
+}
+ 
+var kim = Person('kim');
+ 
+console.log(window.name); //kim
+```
+
+##### (6) 명시적 바인딩을 한 this
+
+* apply() 와 call() 메서드는 Function Object에 기본적으로 정의된 메서드. 인자를 this로 만들어주는 기능
+
+```javascript
+function whoisThis() {
+  console.log(this);
+}
+whoisThis(); //window
+var obj = {
+  x: 123,
+};
+whoisThis.call(obj); //{x:123}
+```
+
+* apply()에서 매개변수로 받은 첫 번째 값은 함수 내부에서 사용되는 this에 바인딩, 두 번째 값인 배열은 자신을 호출한 함수의 인자로 사용
+
+```javascript
+function Character(name, level) {
+  this.name = name;
+  this.level = level;
+}
+ 
+function Player(name, level, job) {
+  this.name = name;
+  this.level = level;
+  this.job = job;
+}
+```
+
+```javascript
+function Character(name, level) {
+  this.name = name;
+  this.level = level;
+}
+ 
+function Player(name, level, job) {
+  Character.apply(this, [name, level]);
+  this.job = job;
+}
+ 
+var me = new Player('Nana', 10, 'Magician');
+```
+
+* call()도 apply()와 거의 같습니다.
+
+* 차이점이 있다면 call()은 인수 목록을 받고 apply()는 인수 배열을 받는다는 차이가 있어요.
+
+```javascript
+function Character(name, level) {
+  this.name = name;
+  this.level = level;
+}
+ 
+function Player(name, level, job) {
+  Character.call(this, name, level);
+  this.job = job;
+}
+ 
+var me = {};
+Player.call(me, 'nana', 10, 'Magician');
+```
+
+* apply()나 call()은 보통 유사배열 객체에게 배열 메서드를 쓰고자 할 때 사용
+
+*  ex) arguments 객체는 함수에 전달된 인수를 Array 형태로 보여주지만 배열 메서드를 쓸 수가 없어서 사용
+
+```javascript
+function func(a, b, c) {
+  console.log(arguments);
+  arguments.push('hi!'); //ERROR! (arguments.push is not a function);
+}
+
+function func(a, b, c) {
+  var args = Array.prototype.slice.apply(arguments);
+  args.push('hi!');
+  console.dir(args);
+}
+ 
+func(1, 2, 3); // [ 1, 2, 3, 'hi!' ]
+var list = {
+  0: 'Kim',
+  1: 'Lee',
+  2: 'Park',
+  length: 3,
+};
+ 
+Array.prototype.push.call(list, 'Choi');
+console.log(list);
+```
+
+* Array.from : Array인자를 얕게 복사해 새로운 배열 생성
+
+```javascript
+var children = document.body.children; // HTMLCollection
+ 
+children.forEach(function (el) {
+  el.classList.add('on'); //ERROR! (children.forEach is not a function)
+});
+var children = document.body.children; // HTMLCollection
+ 
+Array.from(children).forEach(function (el) {
+  el.classList.add('on'); 
+});
+```
+
+##### (6) 화살표 함수로 쓴 this
+
+* 화살표 함수는 전역 컨텍스트에서 실행되더라도 this를 새로 정의하지 않고 바로 바깥 함수나 클래스의 this를 사용
+
+```javascript
+var Person = function (name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function () {
+    console.log(this); // Person {name: "Nana", age: 28}
+ 
+    setTimeout(function () {
+      console.log(this); // Window
+      console.log(this.name + ' is ' + this.age + ' years old');
+    }, 100);
+  };
+};
+var me = new Person('Nana', 28);
+ 
+me.say(); //global is undefined years old
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+
+
+var Person = function (name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function () {
+    console.log(this); // Person {name: "Nana", age: 28}
+ 
+    setTimeout(() => {
+      console.log(this); // Person {name: "Nana", age: 28}
+      console.log(this.name + ' is ' + this.age + ' years old'); 
+    }, 100);
+  };
+};
+var me = new Person('Nana', 28); //Nana is 28 years old
+```
+
+ 
+
+## 스코프
+
+* 정의 : _식별자가 유효한 범위_
+* 모든 식별자는 자신이 선언된 위치에 의해 다른 코드가 식별자 자신을 참조할 수 있는 유효 범위를 결정
+
+```javascript
+var x = "global";
+function foo() {
+  var x = "local";
+  console.log(x);
+  // "local"
+}
+foo();
+console.log(x);
+// "global"
+```
+
+#### (1) 스코프의 종류
+
+| 구분 | 설명                  | 스코프      | 변수      |
+| ---- | --------------------- | ----------- | --------- |
+| 전역 | 코드의 가장 바깥 영역 | 전역 스코프 | 전역 변수 |
+| 지역 | 함수 몸체 내부        | 지역 스코프 | 지역 변수 |
+
+#### (2) 스코프 체인
+
+* 정의 : _스코프가 계층적으로 연결된 것_
+* 스코프는 하나의 계층적 구조로 연결되며, 모든 지역 스코프의 최상위 스코프는 전역 스코프
+* 변수를 참조할 때 자바스크립트 엔진은 스코프 체인을 통해 변수를 참조하는 코드의 스코프에서 시작하여 상위 스코프 방향으로 이동하며 선언된 변수를 검색
+
+#### (3) 블록 / 함수 레벨 스코프
+
+* 블록 레벨 스코프 : 함수 몸체 뿐만 아니라 모든 코드 블록(if, for, while 등) 이 지역 스코프를 만듦
+* 함수 레벨 스코프 : var로 선언된 변수는 오로지 함수의 코드 블록(함수 몸체) 만을 지역 스코프로 인정
+
+
+
+## 프로퍼티
+
+* 자바스크립트 엔진은 프로퍼티를 생성할 때 프로퍼티의 상태를 나타내는 프로퍼티 어트리뷰트를 기본값으로 자동 정의
+* 프로퍼티의 값(value), 값의 갱신 여부(writeable), 열거 가능 여부(enumerable), 재정의 가능 여부(configurable)
+
+```javascript
+const person = {
+  name: "Lee",
+};
+console.log(Object.getOwnPropertyDescriptor(person, "name"));
+
+// { value: 'Lee', writable: true, enumerable: true, configurable: true }
+```
+
+
+
+#### (1) 프로퍼티
+
+* 데이터 프로퍼티 : 키와 값으로 구성된 일반적인 프로퍼티
+* 접근자 프로퍼티 : 자체적으로는 값을 갖지 않고 다른 데이터 프로퍼티의 값을 읽거나 저장할 때 호출되는 접근자 함수로 구성된 프로퍼티
+
+
+
 ## 3) prototype 
 
 * 자바스크립트 객체에는 Prototype이라는 내부 프로퍼티가 있고, 이는 다른 객체를 참조할 때 사용
 * 자바스크립트에서 상속을 진행할 때는 프로토타입끼리 연결을 하는데  부모 프로토타입을 create()나 setPropertyOf() 메서드를 사용하여 자식 프로토타입과 연결
+* 
 
 #### 1) 프로토타입
 
@@ -164,12 +489,118 @@ var foo = function() {
 ## 7) 호이스팅(Hoisting)
 
 * 인터프리터가 자바스크립트 코드를 해석함에 있어서, Global 영역 또는 함수 영역 안에 대해서 주어진 선언들을 모두 끌어올려서 해당 유효 범위 최상단에 선언하는 것
-
 * 변수를 선언하고 초기화 했을때 선언부분이 최상단으로 끌어올려지는 현상
-
 * 코드 상단에서 console.log(a)를 찍고 하단에서 var a=1; 이라고 하였을때 a는 undefined라고 나오는 현상
 
-  
+
+
+### 호이스팅 이란
+
+변수나 함수의 호출 코드가 선언 코드보다 아래쪽에 있음에도 불구하고 에러가 발생하지 않고, 마치 선언 코드가 호출 코드보다 더 위에 선언된 것과 같이 동작하는 특성을 호이스팅(Hoisting) 이라고 한다.
+
+### 호이스팅 현상이 발생하는 이유
+
+javascript는 코드가 실행될 때 실행 컨텍스트가 생성된다.
+
+
+
+이 때, 실행 컨텍스트 내부 변수 객체에서 현재 컨텍스트에 사용되는 변수 또는 함수를 생성한다.
+
+
+
+변수가 생성되는 과정은 3단계로 나뉜다.
+
+
+
+\1. 변수 선언
+
+\2. 변수 초기화
+
+\3. 변수에 사용자가 지정한 값으로 초기화
+
+
+
+여기서 **3.** **변수에 지정한 값 할당**은 해당 실행 컨텍스트의 변수 객체 생성이 완료된 뒤에 실행된다.
+
+
+
+즉, 변수의 선언 + 초기화 와 사용자가 지정한 값 초기화가 발생되는 환경이 나뉘어 발생된다.
+
+
+
+
+
+
+
+함수의 경우에는 **함수 선언문**인지  **함수 표현식** 형태인지 따라 생성과정에 차이가 있다.
+
+
+
+함수 선언문의 경우에는 변수 객체가 만들어지는 과정에서 함수 선언, 초기화, 사용자 지정 값으로 초기화 3단계가 모두 발생한다. 
+
+
+
+즉, 실행 단계에서 함수 선언문보다 함수 호출이 먼저 발생해도 에러가 나지 않고 정상적으로 실행된다.
+
+
+
+
+
+함수 표현식의 경우에는 익명함수를 생성하여 변수에 할당하는 방식이다. (변수 호이스팅 적용)
+
+
+
+즉, 실행 단계에서 함수 표현식보다 함수 호출이 먼저 발생하게 된다면 TypeError 가 발생한다.
+
+
+
+
+
+
+
+
+
+### 변수 호이스팅 예제 코드
+
+| 12345 | console.log('이름: ', name); var name = "Dubbing"; console.log('이름: ', name); | [cs](http://colorscripter.com/info#e) |
+| ----- | ------------------------------------------------------------ | ------------------------------------- |
+|       |                                                              |                                       |
+
+
+
+변수 선언보다 사용이 먼저 되었으나 호이스팅으로 인해 에러가 발생하지 않는다.
+
+
+
+예제 코드가 실행되면 실행 컨텍스트 내부에 변수 객체에는 name 변수가 선언되고 값은 undefined 로 초기화 된다.
+
+
+
+변수 객체 생성이 마무리 되면 1번 라인이 실행되며, 이 때 변수 name 의 값은 undefined 로 초기화 되어있으므로 undefined 가 출력된다.
+
+
+
+3번 라인에서 사용자가 지정한 값으로 초기화가 이루어진다.
+
+
+
+5번 라인이 실행되는 시점에 변수 name 은 Dubbing 으로 초기화가 이루어졌으므로 Dubbing 이 출력된다.
+
+
+
+
+
+
+
+
+
+### 함수 호이스팅 예제 코드
+
+| 12345678910111213141516 | printName("Dubbing"); // 에러가 발생하지 않음 // 함수 선언문 형태 (함수 호이스팅 발생)function printName(name) { console.log('이름: ', name);} printAge(20); // TypeError 가 발생한다. // 함수 표현식 형태 (변수 호이스팅 발생)var printAge = function(age) { console.log('나이: ', age);} // printAge(20); // 정상 실행된다. |
+| ----------------------- | ------------------------------------------------------------ |
+|                         |                                                              |
+
+
 
 ## 8) Callback, Promise, async/await
 
@@ -227,7 +658,8 @@ var foo = function() {
 
 let, const 중복이나 호이스팅을 선언하지 않는다. 블록 단위의 변수타입이다.
 
-- 
+
+
 - var 와 let, const의 차이점 (function scope와 block scope의 개념에서) : 
 - var은 함수 레벨 스코프 
 - let , const는 블록 레벨 스코프를 지원
@@ -370,5 +802,13 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 
 
 
+## Babel
 
+- 트랜스파일러
+- `컴파일` : 한 언어로 작성된 소스 코드를 다른 언어로 바꾸는것 (C-> 어셈블리어) 
+- `트랜스파일러` : 한언어로 작성된 소스코드를 비슷한 수준의 추상화를 가진 다른 언어로 변환(C++>C, ES6->ES5)
+
+ES6 크롬 정도의 브라우저를 제외하곤 ES6 스펙에 대한 지원이 완벽하지 않은데 해결방법:
+
+- Babel을 사용한다. ES6이상의 문법의 코드들을 브라우저가 이해할 수 있게끔 ES5이하의 문법으로 변환
 

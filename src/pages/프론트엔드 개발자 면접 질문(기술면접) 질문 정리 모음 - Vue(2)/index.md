@@ -75,7 +75,7 @@ images: ["images/2.jpg"]
 
    1. beforeMount: `beforeMount` 훅은 컴포넌트가 DOM에 추가되기 직전에 실행되는 훅입니다.
 
-   ```
+   ```javascript
      new Vue({
        beforeMount: function () {
          // `this` points to the view model instance
@@ -86,7 +86,7 @@ images: ["images/2.jpg"]
 
    1. mounted: `mounted` 훅은 반응적인 data, 템플릿, 렌더링된 DOM(`this.$el`) 모두에 접근할 수 있어서 가장 많이 사용되는 훅입니다. 흔히 컴포넌트에서 필요한 데이터를 외부에서 가져오는(fetch) 용도로 많이 사용됩니다.
 
-   ```
+   ```javascript
    <div id="app">
        <p>I’m text inside the component.</p>
    </div>
@@ -102,7 +102,7 @@ images: ["images/2.jpg"]
 
    1. beforeUpdate: `beforeUpdate` 훅은 컴포넌트의 data가 변경되어 업데이트 사이클이 시작될 때 실행됩니다.
 
-   ```
+   ```javascript
    <div id="app">
      <p>{{counter}}</p>
    </div>
@@ -128,7 +128,7 @@ images: ["images/2.jpg"]
 
    1. updated: `updated` 훅은 컴포넌트의 data가 변하여 재 렌더링이 일어난 후에 실행됩니다.
 
-   ```
+   ```javascript
    <div id="app">
      <p ref="dom">{{counter}}</p>
    </div>
@@ -155,7 +155,7 @@ images: ["images/2.jpg"]
 
    1. beforeDestroy: `beforeDestroy` 훅은 컴포넌트가 해체되기 직전에 실행됩니다. 이 훅은 반응적인 이벤트들이나 data들을 해체하는 훅으로 적합합니다. 이 단계에서 컴포넌트는 여전히 문제없이 잘 동작합니다.
 
-   ```
+   ```javascript
    new Vue ({
      data() {
        return {
@@ -172,7 +172,7 @@ images: ["images/2.jpg"]
 
    1. destroyed: `destroyed` 훅은 컴포넌트가 해체되고 난 직후에 호출됩니다. 모든 지시자들의 바인딩이 해제되었으며, 이벤트 리스너가 제거된 상태입니다.
 
-   ```
+   ```javascript
    new Vue ({
        destroyed: function() {
          console.log(this) // Nothing to show here
@@ -2160,4 +2160,4 @@ new Vue({
 })
 ```
 
-### 
+

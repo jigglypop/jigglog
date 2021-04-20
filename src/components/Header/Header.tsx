@@ -77,7 +77,7 @@ const Header = ({
             </div>
           </div>
         </div>
-        <Notice>
+        {/* <Notice>
           <div className="">
             <h1>블로그 주소를 이전했습니다</h1>
           </div>
@@ -86,7 +86,7 @@ const Header = ({
               {host !== "http://jigglog.s3-website.ap-northeast-2.amazonaws.com/" && <a href={`http://jigglog.s3-website.ap-northeast-2.amazonaws.com/categories/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC%20%EC%8B%A4%EA%B8%B0/1`}>주소 바로가기</a>}
             </h1>
           </div>
-        </Notice>
+        </Notice> */}
       </HeaderDiv>
     </div>
 
