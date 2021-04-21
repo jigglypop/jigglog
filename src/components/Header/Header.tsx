@@ -4,7 +4,6 @@ import {
   StyledLink,
   MenuTitle,
   HeaderDiv,
-  Notice
 } from "./styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 

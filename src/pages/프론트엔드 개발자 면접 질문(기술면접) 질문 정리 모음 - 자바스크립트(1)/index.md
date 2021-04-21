@@ -26,32 +26,63 @@ images: ["images/2.jpg"]
 
 * 자바스크립트의 Number Type :  number는 하나. 정수만을 위한 타입이 없고, 모든 수를 실수로 처리
 
-
-
-## 2) 실행 컨텍스트(Execution Context) 
-
-- 자바스크립트의 코드가 실행되기 위해 정보들을 담고 있는 곳(변수 객체, 스코프 체인, this 정보)
-- 자바스크립트의 코드들이 실행되기 위한 환경(전역 컨텍스트 ,함수 컨텍스트)  
-- 전역 컨텍스트 하나 생성 후에 함수 호출할 때마다 함수 컨텍스트가 생성. 
-- 컨텍스트를 생성시에 변수객체, 스코프 체인, this가 생성. 컨텍스트 생성 후 함수가 실행되는데 사용되는 변수들은 변수 객체 안에서 값을 찾고 없다면 스코프 체인을 따라 올라가며 찾음. 
-- 함수 실행이 마무리되면 해당 컨텍스트는 사라짐. 
-- 페이지가 종료되면 전역 컨텍스트가 사라짐. 
-
-#### 1) 전역 scope를 사용했을 때 장단점
-
-- 변수와 함수 이름의 충돌을 방지하기 위해
-
-- 모든 스크립트는 전역 스쿠프에 접근할 수 있다. 
-
-- 만약 모든 사람이 변수 선언에 전역 네임스페이스를 사용한다면 충돌이 매우 많이 발생할 것이다.
-
-- 모듈 패턴(IIFE 등)으로 직접 선언한 변수는 로컬 네임스페이스에 포함되도록 해야 한다.
-
   
 
+#### (1) 어트리뷰트(속성, Attribute)와 프로퍼티(요소, property)
+
+- 어트리뷰트 : element가 가지고 있는것. element의 형식 지정(<div id=D1...의 id)
+- 프로퍼티 : object가 가지고 있는 구성요소(name, parent, history, innerHeight 등)
 
 
-## 3) 가비지 컬렉터
+
+#### (2) Immutable / Mutable
+
+##### (1) Immutable
+
+* 내용이 변하지 않는 객체
+* 자바스크립트 원시 타입은 Immutable
+* 사용 이유
+  * 성능을 향상시키기 위함 : 객체가 미래에 변할 계획이 없을 때
+  * 메모리 사용을 줄이기 위함 : 전체 객체를 복사하지 않고 객체 참조를 만듦
+  * Thread-safety : 여러개의 쓰레드가 서로 간섭하지 않고 같은 객체를 참조할 수 있음
+
+##### (2) Mutable
+
+* 바뀔 수 있는 변수 타입
+* 자바스크립트 object와 array만 Mutable
+* Mutable한 값을 Immutable하게 만들기 위해서 새로운 변수를 만들어 보관할 수 있지만, 이전 값은 여전히 메모리에 남아있기 때문에 GC가 필요
+
+##### (3) == 과 === 
+
+* `==` : 두 변수의 값 비교
+* `===` : 엄격한 비교(값 + 타입)
+
+```javascript
+0 == false // true 왜? js 에서 0 은 false 한 값이기 때문 
+1 == true     //true 
+
+2 == "2" // true 왜? 자동으로 타입을 캐스팅 해버림 
+0 == ''     //true 
+0 == '0'     //true 
+
+false == '0'    //true 
+null == undefined    //true 
+false == null    //false 
+false == undefined    //false
+```
+
+* == 같은 경우는 피연산자가 서로 다른 타입이면 타입을 강제로 변환하여 비교
+
+#### (3) null과 undefined
+
+* 두 타입 모두 값이 없음을 의미
+* 둘 다 데이터 타입이자 그 변수의 값
+* undefined : 자바스크립트에서 변수를 선언하면 초기값으로 undefined를 할당
+*  null : 값이 비어있음 ''값이 없다''는 값이 등록되어 있는 것
+
+
+
+## 2) 가비지 컬렉터
 
 #### 1) 가비지 컬렉터
 
@@ -62,7 +93,7 @@ images: ["images/2.jpg"]
 
 ##### (2) 메모리 
 
-* 메모리 할당 : 자바스크립트는 값을 선언할 때 자동으로 메모리를 할당한다.
+* 메모리 할당 : 자바스크립트는 값을 선언할 때 자동으로 메모리를 할당
 
 * 메모리 사용 : 메모리를 읽고 쓰는 것을 의미. 메모리가 할당된 변수를 사용하면 읽기와 쓰기 작업이 이루어짐
 
@@ -105,23 +136,12 @@ objectB = null; // 레퍼런스 카운트 0
 
 - HashMap을 구현하기 위해서는 연결리스트로 구현하게 되는데 연결리스트에서 값을 찾기 위해서는 탐색해나가면서 값을 찾는 불상사가 발생
 
-- 이를 해결하기 위해서 타이핑된배열(Int8Array, Float32Array 등) 이 추가되고 있다.
-
-  
-
-## 4) 이벤트 루프, 동시성 모델
-
-- 자바스크립트는 싱글 스레드 기반 언어. 
-- 함수를 실행하면 함수 호출이 스택에 순차적으로 쌓이고 스택의 맨위에서부터 아래로 한번에 하나의 함수만 처리
-- 하지만, 자바스크립트에는 이벤트 루프라는것을 통해 동시성을 지원
-- 동시에 일어나는 것이 아니라 동시에 일어나는 것처럼 보이게 하는것
-- 이벤트 루프는 콜 스택에서 실행 중인 게 있는지 확인하고, Event queue에 작업이 있는지 확인해서 콜스택이 비어있다면 이벤트큐 내의 작업이 콜스택으로 이동되어서 실행된다. 
+- 이를 해결하기 위해서 타이핑된배열(Int8Array, Float32Array 등) 이 추가되고 있음
 
 
 
 
-
-## 5) 클로저
+## 4) 클로저
 
 - 클로저(Closure) : _내부 함수가 외부 함수의 컨텍스트에 접근할 수 있는 것_
 - MDN 정의 : _함수와 함수가 선언된 렉시컬 환경과의 조합_
@@ -144,7 +164,7 @@ objectB = null; // 레퍼런스 카운트 0
 
 | ES                    | 년도 | 추가 기능                                                    |
 | --------------------- | ---- | ------------------------------------------------------------ |
-| ES6 (ECMAScript 2015) | 2015 | let, const, class / 화살표 함수/ 템플릿 리터럴 / 디스트럭처링 할당/ pread 문법, rest 파라미터, Symbol, Promise/ Map, Set / iterator, generator /module import/export |
+| ES6 (ECMAScript 2015) | 2015 | let, const, class / 화살표 함수/ 템플릿 리터럴 / 디스트럭처링 할당/ spread 문법, rest 파라미터, Symbol, Promise/ Map, Set / iterator, generator /module import/export |
 | ES7 (ECMAScript 2016) | 2016 | 지수(**) 연산자, Array.prototype.includes, String.prototype.includes |
 | ES8 (ECMAScript 2017) | 2017 | async/await, Object 정적 메소드(Object.values, Object.entries, Object.getOwnPropertyDescriptors) |
 | ES9 (ECMAScript 2018) | 2018 | Object Rest/Spread 프로퍼티                                  |
@@ -155,7 +175,7 @@ objectB = null; // 레퍼런스 카운트 0
 
 ## Class
 
-- Prototype, function의 ES5 스펙만으로 Class를 구현할수 있음. 
+- Prototype, function의 ES5 스펙만으로 Class를 구현
 - 자바스크립트에는 프로토타입이라는 것이 존재하여 클래스처럼 구현할 수 있음
 - 클래스는 자바스크립트의 프로토타입 기반 패턴의 문법적 설탕
 
@@ -163,70 +183,7 @@ objectB = null; // 레퍼런스 카운트 0
 
 
 
-## AMD와 CommonJS
 
-- 모든 모듈의 로딩이 완료된 후에 실행/ 로딩 완료 이전에 실행(동기 vs 비동기)
-
-  
-
-#### 1) Common.js 
-
-- 모든 모듈이 로컬에 다운로드가 된 이후에 실행하는 방식. node.js에서 사용하는 방식으로 server 환경에서 외부 모듈을 가져올 때 유리
-
-```javascript
-var lib = require("package/lib");
-function foo() {
-	lib.log("hello world!");
-}
-
-exports.foobar = foo;
-```
-
-#### 2) AMD
-
-* 비동기적으로 필요한 파일을 다운로드하는 방식, client단(브라우저 환경)에서 외부 모듈을 가져올 때 유리한 방식 
-
-```javascript
- define(["package/lib"], function (lib) {
-     function foo() {
-     	lib.log("hello world!");
-     }
-     return {
-      foobar : foo
-     }
-}
-```
-
-
-
-
-
-## 속성(Attribute)와 요소(property)
-
-- 속성(Attribute)는 element가 가지고 있는것. element의 형식 지정(<div id=D1...의 id)
-- 요소(property)는 object가 가지고 있는 구성요소(name, parent, history, innerHeight 등)
-
-
-
-
-
-## Immutable / Mutable
-
-#### 1) Immutable
-
-* 내용이 변하지 않는 객체
-
-##### (1) 사용 이유
-
-- 성능을 향상시키기 위함 : 객체가 미래에 변할 계획이 없을 때
-- 메모리 사용을 줄이기 위함 : 전체 객체를 복사하지 않고 객체 참조를 만듦
-- Thread-safety : 여러개의 쓰레드가 서로 간섭하지 않고 같은 객체를 참조할 수 있음
-
-#### 2) Mutable
-
-* 바뀔 수 있는 변수 타입을
-* Javascript에서는 object와 array만 Mutable한 타입이고, 원시 타입은 Immutable
-* Mutable한 값을 Immutable하게 만들기 위해서 새로운 변수를 만들어 보관할 수 있지만, 이전 값은 여전히 메모리에 남아있기 때문에 GC가 필요
 
 
 
@@ -244,85 +201,116 @@ exports.foobar = foo;
 
 
 
-#### 2) 자바스크립트 엔진 구조
+#### 2) 브라우저 부분
 
-##### 1) Memory Heap
+* 자바스크립트 엔진은 싱글스레드로 동작
+* 브라우저는 멀티 스레드로 동작
+
+##### 1) 힙(Memory Heap)(자바스크립트 엔진)
 
 * Memory Heap은 객체를 저장하는 곳. 예제에서 선언한 함수 func1, func2, func3는 모두 Memory Heap에 저장
 
-##### 2) Web API
+##### 2) 콜 스택(call stack)(자바스크립트 엔진)
+
+* 소스코드 평가 과정에서 생성된 실행 컨텍스트가 추가되고 제거되는 스택 자료구조인 실행 컨텍스트 스택
+
+##### 3) Web API
 
 * 브라우저에서 제공하는 API들
+* DOM api, 타이머 함수, HTTP 요청 등 포함
 
-##### 3) Callback Que
+
+
+#### 2) 자바스크립트 엔진 구조
+
+##### 1) 태스크 큐(Callback Que / task Queue / event Queue)
 
 * 함수를 저장하는 자료구조
 * Call stack과 다르게 가장 먼저 들어온 함수를 가장 먼저 처리
 * 특정 이벤트에 따른 콜백 함수를 정의하면, 콜백 함수는 Callback Que에 저장
 
-##### 4) Event Loop
+##### 2) 이벤트 루프(Event Loop)
 
-* call stack이 다 비워지면 callback que에 존재하는 함수를 하나씩 호출 스택으로 옮기는 역할
+- call stack이 다 비워지면 callback que에 존재하는 함수를 하나씩 호출 스택으로 옮기는 역할
+- 이벤트 루프를 통해 동시성을 지원
 
+* 이벤트 루프는 콜 스택에서 실행 중인 게 있는지 확인하고, Event queue에 작업이 있는지 확인해서 콜스택이 비어있다면 이벤트큐 내의 작업이 콜스택으로 이동되어서 실행된다. 
 
+  
 
 #### 3) 동기(Synchronous) 동작 원리
 
-* 코드가 실행되면 순서대로 Call Stack에 실행할 함수가 쌓인다.(push)
+* 코드가 실행되면 순서대로 Call Stack에 실행할 함수가 쌓임
 
 * 쌓인 반대 순서로 함수가 실행
 
-* 실행이 된 함수는 Call Stack에서 제거된다(pop)
+* 실행이 된 함수는 Call Stack에서 제거
 
- 
+
 
 #### 4) 비동기(asynchronous) 동작 원리
 
-* Call Stack에서 비동기 함수가 호출되면 Call Stack에 먼저 쌓였다가 Web API(혹은 백그라운드라고도 한다)로 이동한 후 해당 함수가 등록되고 Call Stack에서 사라진다.
+* Call Stack에서 비동기 함수가 호출되면 Call Stack에 먼저 쌓였다가 Web API(혹은 백그라운드라고도 한다)로 이동한 후 해당 함수가 등록되고 Call Stack에서 사라짐
 
-* Web API(백그라운드)에서 비동기 함수의 이벤트가 발생하면, 해당 콜백 함수는 Callback Queue에 push(이동) 된다.
+* Web API(백그라운드)에서 비동기 함수의 이벤트가 발생하면, 해당 콜백 함수는 Callback Queue에 push(이동) 
 
-* 이제 Call Stack이 비어있는지 이벤트 루프(Event Loop)가 확인을 하는데 만약 비어있으면, Call Stack에 Callback Queue에 있는 콜백 함수를 넘겨준다.(push)
+* 이제 Call Stack이 비어있는지 이벤트 루프(Event Loop)가 확인을 하는데 만약 비어있으면, Call Stack에 Callback Queue에 있는 콜백 함수를 넘겨줌(push)
 
 * Call Stack에 들어온 함수는 실행이 되고 실행이 끝나면 Call Stack에서 사라짐
 
 
 
-## == 과 === 
+## 8) Callback, Promise, async/await
 
-* `==` : 두 변수의 값 비교
-* `===` : 엄격한 비교(값 + 타입)
+* Callback은 비동기 처리를 구현하기 위해 만들어 졌다. 이 함수는 다른 함수에게 인자로 전달되어 어느 시점에 실행될 수 있도록 던져주는 함수이다. 하지만 콜백 지옥이라 불리는 중첩문이 발생하면서 에러처리 한계가 생기기 시작했고 이를 해결하기 위해 Promise가 나타났다.
 
-```javascript
-0 == false // true 왜? js 에서 0 은 false 한 값이기 때문 
-1 == true     //true 
+* Promise는 어떤 값이 생성 되었을 때 그 값을 대신하는 대리자이다. 비동기 연산이 종료된 이후에 그 결과 값이나 에러를 처리할 수 있도록 처리기를 연결하는 역할을 하는 객체이다. Promise 객체를 통해 성공, 실패, 오류에 따른 후속처리가 바로 가능해서 가독성도 좋고, 비동기 에러를 처리하기도 수월하다.
 
-2 == "2" // true 왜? 자동으로 타입을 캐스팅 해버림 
-0 == ''     //true 
-0 == '0'     //true 
+* Async/await은 비동기 코드를 동기식으로 표현하는 더 나은 방법으로 ES2017에 등장하였다. Async와 await는 항상 같이 붙어 있어야 한다. await 모드는 Promise 객체를 받아 처리하고, 만약 비동기 함수가 아닌 동기적 함수라면 리턴 값을 그대로 받는다. Async 함수는 Promise 객체를 통해 비동기적으로 처리된 내용을 동기적인 코드 진행 순서로 보여주는 역할을 한다.
 
-false == '0'    //true 
-null == undefined    //true 
-false == null    //false 
-false == undefined    //false
-```
+- Promise와 Callback의 차이점 / Promise란 무엇이며 코드가 어떻게 구성되어있는가 : 
+
+  - 바스크립트에서 비동기처리를 위해서 사용되는 패턴
+  - Callback 같은 경우 함수의 처리 순서를 보장하기 위해서 함수를 중첩하게 사용되는 경우가 발생해 콜백헬이 발생하는 단점과 에러처리가 힘들다라는 단점 존재
+
+  ```javascript
+  	// Promise 객체의 생성
+  const promise = new Promise((resolve, reject) => {
+    // 비동기 작업을 수행한다.
+    if (/* 비동기 작업 수행 성공 */) {
+      resolve('result');
+    }
+    else { /* 비동기 작업 수행 실패 */
+      reject('failure reason');
+    }
+  });
+  ```
+
+  * 비동기 처리에 성공 : resolve 메소드를 호출해서 비동기 처리 결과를 후속처리 메소드로 전달
+  * 비동기 처리에 실패 : reject 메소드를 호출해서 에러메시지를 후속처리 메소드로 전달
+  * 후속처리 메소드(then과 catch) :  Promise를 반환.
+  * then 을 가지고 메소드 체이닝을 통하여서 콜백 헬 문제를 해결
+
+- Async, Await가 무엇이며, 사용해본 경험 / Async, Await와 Promise의 차이 : 
+
+  - Promise를 더욱 쉽게 사용할 수 있도록 ES2017(ES8) 문법. 
+  - 함수의 앞부분에 async 키워드를 추가하고, 함수 내부에서 Promise의 앞부분에 await 키워드를 사용. 
+  - async, await를 사용할 경우 코드가 간결해지지만
+  - 에러처리를 잡기 위해 try catch를 사용해야 함
+  - 동기적인 코드흐름으로 개발이 가능
+
+  
+
+- Promise가 콜백 대비 장/단점:
+
+  - 가독성 떨어지는 콜백 지옥에서의 탈출
+  - .then()을 사용해서 순차적인 비동기 작업을 가독성 있게 작성할 수 있음
+  - Promise.all()을 사용해서 병렬로 실행되는 비동기 작업을 쉽게 작성할 수 있음
+  - 프로미스가 있으면 콜백만 사용하는 코딩에서 발생하는 콜백을 너무 빨리/늦게/많이/적게 실행, 필요한 환경변수/파라미터의 전달 실패, 확인해야 하는 에러, 예외가 숨어버리는 등이 발생하지 않음
+  - 조금 더 복잡한 코드
+  - ES2015를 지원하지 않는 구형 브라우저에서는 사용할 수 없으며 폴리필이나 Babel을 통한 컴파일이 필요
 
 
-
-== 같은 경우는 피연산자가 서로 다른 타입이면 타입을 강제로 변환하여 비교한다.
-
-위 예제에서 의외인점은 null, undefined 도 falsy 한 값인데.. false == null 에서 false 가 나온다는게 의외다.
-
-254 === '254' //  false true === 1 // false 'abc' === 'abc' // true
-
-
-
-
-
-## DOM
-
-- Angular의 경우 view와 model을 연결시키는 바인딩작업이 있고 변화감지를 통해서 상태를 보고 있다가 업데이트 되는 식
-- React의 경우 가상 DOM이 있고, 가상 DOM이 실제 DOM과 비교하여 state가 변화되었는지 감지
 
 
 
@@ -330,12 +318,17 @@ false == undefined    //false
 
 ## 1) 이벤트 위임
 
-#### (1) 이벤트 버블링(Event Bubbling), 이벤트 캡쳐링(Event Capturing)
+#### (1) DOM
+
+- Angular의 경우 view와 model을 연결시키는 바인딩작업이 있고 변화감지를 통해서 상태를 보고 있다가 업데이트 되는 식
+- React의 경우 가상 DOM이 있고, 가상 DOM이 실제 DOM과 비교하여 state가 변화되었는지 감지
+
+#### (2) 이벤트 버블링(Event Bubbling), 이벤트 캡쳐링(Event Capturing)
 
 * `이벤트 버블링(하위 -> 상위)` :  특정 화면 요소에서 이벤트가 발생했을 때 하위 -> 상위 요소들로 전달
 * `이벤트 캡처링(상위 -> 하위)` : 이벤트 버블링과 반대로 상위 요소 -> 하위 요소로 탐색하며 이벤트를 전파
 
-#### (2) event delegation
+#### (3) event delegation
 
 * 하나의 부모에 이벤트를 등록하여 부모가 이벤트를 위임하는 방식
 * 이 방법은 동적인 요소들에 대한 처리가 수월, 이벤트 핸들러를 더 적게 등록해 주기 때문에 메모리 절약
