@@ -115,7 +115,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "aws s3 sync ./public s3://jigglog --profile=jigglog"
+    "deploy": "aws s3 sync ./public s3://jigglog --profile=jigglog",
+    "start": "gatsby develop"
   },
   "browserslist": [
     "> 10%",
