@@ -1,7 +1,4 @@
 import React from 'react';
-// import { IComment } from 'src/server/models/comment';
-// import ReCommentsComponent from '../recomments/ReCommentsComponent';
-// import { GiCancel } from 'react-icons/gi'
 import { 
     CommentItemDiv,
     CommentNameDiv,

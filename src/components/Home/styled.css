@@ -8,6 +8,7 @@ body {
   font-family: "NanumBarunGothicSubset" !important;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 #___gatsby {

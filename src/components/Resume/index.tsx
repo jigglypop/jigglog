@@ -10,7 +10,8 @@ import {
 } from "../../constants";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
-import IconSet from "../IconSet/IconSet.js";
+// import IconSet from "../IconSet/IconSet.js";
+import IconSet from '../IconSet/IconSetUnder'
 import { 
   ResumeWrapper,
   ResumeInnerWrapper,

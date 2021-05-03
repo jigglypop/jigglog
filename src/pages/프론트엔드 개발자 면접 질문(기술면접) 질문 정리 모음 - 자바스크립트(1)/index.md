@@ -80,6 +80,36 @@ false == undefined    //false
 * undefined : 자바스크립트에서 변수를 선언하면 초기값으로 undefined를 할당
 *  null : 값이 비어있음 ''값이 없다''는 값이 등록되어 있는 것
 
+#### (4) Symbol
+
+* 변경 불가능한 원시 타입의 값
+* 다른 값과 중복되지 않는 유일한 값
+* 이름 충돌이 없는 유일한 프로퍼티 키를 만들기 위해 사용
+
+##### (1) 용도
+
+* 프로퍼티 은닉
+
+```javascript
+const obj = {
+  [Symbol("mySymbol")]: 1,
+};
+// 아무것도 출력되지 않음
+for (const key in obj) {
+  console.log(key);
+}
+// 심볼 프로퍼티 출력
+console.log(Object.getOwnPropertySymbols(obj));
+```
+
+* 표준 빌트인 객체 확장
+
+```javascript
+
+```
+
+
+
 
 
 ## 2) 가비지 컬렉터

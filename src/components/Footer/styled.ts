@@ -13,11 +13,15 @@ export const FooterDiv = styled.nav`
   align-items: center;
   text-align: center;
   bottom: 0;
-  height: 30px;
+  height: 50px;
   width: 100%;
   font-size: 10px;
   font-weight: 600;
   z-index: 2;
   background-color: #141414;
-
+  .text{
+    font-size: 10px;
+    font-weight: 800;
+    padding: 50px;
+  }
 `

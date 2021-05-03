@@ -40,10 +40,10 @@ const Header = ({
         <div className="container">
           <div className="ul">
               <div className="li">
-                  <GiHamburgerMenu 
-                    onClick = {toggleHam}
-                    style={{ color:'white', fontSize:'20px'}} 
-                    className="hamberger"/>
+                <GiHamburgerMenu 
+                  onClick = {toggleHam}
+                  style={{ color:'white', fontSize:'20px'}} 
+                  className="hamberger"/>
               </div>
               <div className="li">
                 <StyledLink to="/">
@@ -61,18 +61,18 @@ const Header = ({
           </div>
           <div className="ul">
             <div className="li">
-                <h4>
-                  <StyledLink to="/portfolios" className={isPortfolio ? "active" : ""}>
-                    <MenuTitle className="menuvisible">포트폴리오</MenuTitle>
-                  </StyledLink>
-                </h4>
+              <h4>
+                <StyledLink to="/portfolios" className={isPortfolio ? "active" : ""}>
+                  <MenuTitle className="menuvisible">포트폴리오</MenuTitle>
+                </StyledLink>
+              </h4>
             </div>
             <div className="li">
-                <h4>
-                  <StyledLink to="/resume" className={isResume ? "active" : ""}>
-                    <MenuTitle className="menuvisible">이력서</MenuTitle>
-                  </StyledLink>
-                </h4>
+              <h4>
+                <StyledLink to="/resume" className={isResume ? "active" : ""}>
+                  <MenuTitle className="menuvisible">이력서</MenuTitle>
+                </StyledLink>
+              </h4>
             </div>
           </div>
         </div>
