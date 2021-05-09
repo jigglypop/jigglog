@@ -46,7 +46,7 @@ images: ["images/2.jpg"]
 
 * !important > id[100] > class[10] > tag[1] > *[0]
 
-* 가상 엘리먼트는 모두 무시한다.
+* 가상 엘리먼트는 모두 무시
 
 
 
@@ -117,7 +117,8 @@ images: ["images/2.jpg"]
 
 #### 2) inline
 
-* content 크기만큼 차지합니다. padding 속성은 적용되나 margin의 경우 좌우에만 설정 가능
+* content 크기만큼 차지
+* padding 속성은 적용되나 margin의 경우 좌우에만 설정 가능
 * 추가적으로 padding 값이 적용이 되지만 실질적으로 크기에 영향을 주는 것은 좌우에만 해당되고 상하는 무시
 * width, height 값을 설정할 수 없음
 
@@ -132,39 +133,30 @@ images: ["images/2.jpg"]
 
 
 
-**8. 요소(position) 배치 방법과 차이점에 대해 설명해주세요.**
+## position 
 
-영역의 위치를 설정하는 속성입니다.
+* 영역의 위치를 설정하는 속성
 
+#### 1) static
 
+* 기본값
+* 별도의 변경없이 문서 흐름에 따라 요소들이 배치
 
-\- static
+#### 2) relative
 
-기본값입니다. 별도의 변경없이 문서 흐름에 따라 요소들이 배치됩니다.
+* 상대적인 위치로 설정
+* 현 위치에 원본을 그대로 두고 복제본을 설정
+* 주변 요소들은 영향 받지 않음
 
+#### 3) absolute
 
+* 절대적인 위치로 설정
+* relative와 다르게 기존 위치에서 벗어나 설정
+* 기존 위치에서 벗어나므로 주변 요소들이 영향을 받음
 
-\- relative
+#### 4) fixed
 
-상대적인 위치로 설정됩니다. **이 속성을 설명할 때 저는 현 위치에 원본을 그대로 두고 복제본을 설정한다고 합니다. 이런 특성으로 인해 주변 요소들은 영향 받지 않습니다.**
-
-
-
-\- absolute
-
-절대적인 위치로 설정됩니다. **relative와 다르게 기존 위치에서 벗어나 설정합니다. 기존 위치에서 벗어나므로 주변 요소들이 영향을 받습니다.**
-
-
-
-\- fixed
-
-브라우저 창을 기준으로 위치를 설정합니다.
-
-
-
-Tip.
-
-위치 속성과 관련하여 자주 사용하는 패턴이 있다. 경우에 따라 부모 요소를 기준으로 자식 요소의 위치를 변경해야하는 경우가 있다. 그런 경우 부모 요소에 position: relative, 자식요소에 position: absolute를 사용하면 된다.
+* 브라우저 창을 기준으로 위치를 설정
 
 
 
@@ -204,37 +196,18 @@ CSS Sprite 기법은 여러 개의 이미지를 하나로 모아 이미지 파�
 
 자세한 내용은 아래 글을 참고하자.
 
-[![img](https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fcphinf.pstatic.net%2Fmooc%2F20190625_114%2F1561452796322SzQ8Q_JPEG%2FvMOZBkZ8rFzXM8fnWMwl.jpg%22&type=ff500_300)](https://www.edwith.org/boostcourse-ui/lecture/47663)[**[LECTURE\] 2) 요소 숨김 처리 : edwith**들어가기 전에 CSS로 대체 텍스트를 화면에서 숨기는 방법은 여러가지가 있습니다. 몇가지 방법들을 살펴보고 사용하지 말아야 할 속성들과 주의해야할 점들을 알아보도록 하겠습니다.  ... - 양동현www.edwith.org](https://www.edwith.org/boostcourse-ui/lecture/47663)
-
-**12. 컨텐츠를 안보이게 하는 기술들의 차이점을 설명해주세요. (추가적으로 스크린 리더에 접근 가능한 방법은?)**
 
 
+#### 컨텐츠 숨기기
 
-\1. display: none;
+* display: none; : 영역 자체가 없어지면서 화면에 보이지 않음
 
-영역 자체가 없어지면서 화면에 보이지 않음
+* visibility: hidden; : 영역 자체가 있지만 화면에 보이지 않음.
 
-\2. visibility: hidden;
-
-영역 자체가 있지만 화면에 보이지 않음.
-
-\3. text-indent, position 등에 음수값 설정
-
-\4. 앞서 설명한 .blind 클래스
+* text-indent, position 등에 음수값 설정
+* .blind 클래스
 
 
-
-**13. 효율적인 CSS를 작성하기 위해 노력한 것에 대해 설명해주세요.**
-
-
-
-\1. 디자인 시안을 분석하여 공통 부분을 추출하여 클래스화할 수 있도록 노력합니다.
-
-\2. BEM과 같은 CSS 방법론을 도입합니다.
-
-\3. 최적의 마크업합니다.
-
-\4. 기타
 
 
 
@@ -244,69 +217,62 @@ HTML 문서에 대한 정보를 나타냅니다.
 
 
 
-**15. 컨텐츠를 가운데 오게 하는 방법에 대해 설명해주세요.**
+
+
+## 컨텐츠 중앙 정렬
 
 
 
-방법 1.
 
-요소 성질을 테이블로 변환하는 방법, 테이블로 레이아웃을 만드는건 다소 이전 방법이다.
 
-\- 부모
+* 1) 요소 성질을 테이블로 변환하는 방법
 
-﻿display: table;
+* 부모 :
+*  display: table;
 
-\- 자식
+* 자식 : 
+* display: table-cell; 
+* text-align: center; 
+* vertical-align: middle;
 
-﻿display: table-cell; text-align: center; vertical-align: middle;
+* 2)
 
-방법 2.
+* 부모
+* position: relative;
 
-\- 부모
+* 자식
+* position: absolute; 
+* top: 50%; 
+* left: 50%; 
+* margin-top: -(자식 요소 높이 값의 절반) margin-left: -(자식 요소 너비 값의 절반)
 
-position: relative;
+* 3)
+* 부모
+* position: relative;
+* 자식
+* position: absolute; 
+* top:50%; 
+* left: 50%; 
+* transform: translate(-50%, -50%);
 
-\- 자식
-
-position: absolute; top: 50%; left: 50%; margin-top: -(자식 요소 높이 값의 절반) margin-left: -(자식 요소 너비 값의 절반)
-
-방법 3.
-
-\- 부모
-
-position: relative;
-
-\- 자식
-
-position: absolute;  top:50%; left: 50%; transform: translate(-50%, -50%);
-
-방법 4.
-
-\- 부모
-
-height: (부모 높이 값); display: flex; justify-content: center; align-items: center;
-
-\- 자식
-
-별도 설정 없음
-
-**16. 반응형과 적응형 웹에 대해 설명해주세요.**
+* 4)
+* 부모
+* height: (부모 높이 값); 
+* display: flex; 
+* justify-content: center; 
+* align-items: center;
 
 
 
-\- 반응형
+#### 반응형과 적응형 웹
 
-전적으로 클라이언트에서 변화를 처리
+* 반응형 : 전적으로 클라이언트에서 변화를 처리
 
-\- 적응형
-
-서버에서 웹에 접근하는 디바이스를 체크하여 디바이스에 최적화된 마크업 호출
+* 적응형 : 서버에서 웹에 접근하는 디바이스를 체크하여 디바이스에 최적화된 마크업 호출
 
 
 
-**17. box-sizing: border-box에 대해서 설명해주세요.**
-
-
+## box-sizing: border-box에 대해서 설명
 
 \- 요소가 width를 계산 할 때 어디까지 포함할지 설정하는 속성입니다. 기본값은 content-box이며 컨텐츠 크기만 고려합니다.
 
@@ -420,17 +386,9 @@ vh & vw는 이해할 수 있는데 vmin & vmax는 어디에서 활용되는지
 
 
 
-*  <select>의 화살표가 브라우저마다 모두 다르므로 이를 제거하고 대체 이미지를 이용해 동일하게 만든 경험
-
-* IE의 경우 Promise 객체가 없어서 폴리필(Pollyfill)을 추가하여 문제를 해결하였다. 
-
-* 날짜 객체(new Date)를 사용하는 프로젝트가 있었는데 이 당시 아이폰(IOS) javascript new Date 이슈가 있었다. moment.js로 문제를 우회하여 해결하였다.
-
-* 프로젝트에서는 순수 자바스크립트보다는 제이쿼리를 이용하였기에 이 외에 크로스브라우징 이슈는 많지는 않았다. 아마 순수 자바스크립트를 이용해 ES6로 구현했다면 관련하여 많은 이슈가 생겼을 것으로 예상한다. IE에서는 화살표 함수나 템플릿 리터럴이 지원하지 않는 것으로 알고 있다. 
+*  IE의 경우 Promise 객체가 없어서 폴리필(Pollyfill)을 추가하여 문제를 해결 
 * 이를 해결하려면 babel과 같은 트랜스파일러가 필요(ES6 코드를 ES5로 변경) 
-* 자동화를 위해 webpack과 같은 번들러 도입
-
-* 모든 크로스브라우징 이슈에 대응하는 것보단 현재 프로젝트가 지원해야하는 브라우저 범위에 따라 기민하게 대응하는게 현실적이다.
+*  자동화를 위해 webpack과 같은 번들러 도입
 
 
 

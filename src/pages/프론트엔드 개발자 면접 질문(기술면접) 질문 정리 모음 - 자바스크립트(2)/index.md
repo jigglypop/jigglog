@@ -393,6 +393,8 @@ console.log(x);
 - 함수 실행이 마무리되면 해당 컨텍스트는 사라짐
 - 페이지가 종료되면 전역 컨텍스트가 사라짐
 
+
+
 #### 1) 전역 scope를 사용했을 때 장단점
 
 - 변수와 함수 이름의 충돌을 방지하기 위해
@@ -572,11 +574,13 @@ console.log(foo); // 456
 
 ## Call by value & call by ref
 
-* call by value : 인자로 값이 넘어올때 복사된 값이 넘어오기 떄문에 중간에 어떤 연산을 해도 변하지 않음
+#### 1) call by value 
+
+* 인자로 값이 넘어올때 복사된 값이 넘어오기 떄문에 중간에 어떤 연산을 해도 변하지 않음
 
 * 자바스크립트는 기본적으로 원시값을 넘겨주면 call by value 로 작동
 
-* q함수 내에서 값을 변경하면 함수에 전달된 데이터만 변경될 뿐 함수 전달된 원본 복사본에는 아무런 영향을 미치지 않는다.
+* q함수 내에서 값을 변경하면 함수에 전달된 데이터만 변경될 뿐 함수 전달된 원본 복사본에는 아무런 영향을 미치지 않음
 
   ```javascript
   let a = 1;
@@ -589,13 +593,17 @@ console.log(foo); // 456
 
   
 
-* call by reference : 인자로 레퍼런스가 넘어올때 가리키는 값을 복사하는 것이 아니라 참조 값을 넘기는 것
+#### 2) call by reference 
 
-* 참조형 데이터는 그 값의 주소를 말 그대로 참조 할 값의 복사본이나 값 자체가 할당되지 않는다. 
+* 인자로 레퍼런스가 넘어올때 가리키는 값을 복사하는 것이 아니라 참조 값을 넘기는 것
 
-* 참조에 의해 할당된 새 변수는 원본 변수가 가르키는 값과 동일한 값을 가르킨다. 
+* 참조형 데이터는 그 값의 주소를 말 그대로 참조 할 값의 복사본이나 값 자체가 할당되지 않음
 
-* 원본 변수와 할당된 변수는 모두 동등하며, 값을 조작하는데 사용될 수 있다. 그래서 할당된 변수(참조)가 변경되면 원본 변수에서도 동일하게 변경된다.
+* 참조에 의해 할당된 새 변수는 원본 변수가 가르키는 값과 동일한 값을 가리킴
+
+* 원본 변수와 할당된 변수는 모두 동등하며, 값을 조작하는데 사용될 수 있음. 
+
+* 그래서 할당된 변수(참조)가 변경되면 원본 변수에서도 동일하게 변경
 
   ```javascript
   let a = {};
@@ -665,6 +673,10 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 
 ## 브라우저의 렌더링 과정
 
+---
+
+
+
 #### 1) 브라우저의 렌더링 과정
 
 * 브라우저는 HTML, CSS, 자바스크립트, 이미지, 폰트 파일 등 렌더링에 필요한 리소스를 요청, 서버 응답
@@ -712,13 +724,65 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 * 브라우저 엔진 : DOM tree와 styles struct를 결합하여 HTML 문서를 구성하는 요소간의 관계와 각각의 요소가 갖는 스타일에 대한 정보를 구성하고 이 정보에 동적으로 실행되는 script code를 결합하여 render tree 생성
 * 브라우저 엔진은 render tree가 생성되면 랜더링을 수행하여 브라우저에 HTML 문서를 출력
 
-##### (2) 리페인트와 리플로우
 
-* 리페인트(스타일) : HTML 문서의 전체 또는 일부 영역의 스타일이 변경되었을 때 브라우저가 변경된 스타일을 다시 적용하는 작업
 
-* 리플로우(크기나 위치) : HTML 문서를 구성하는 요소의 크기나 위치가 변경되었을 때 각각의 요소를 재배치하는 작업
+## 리페인트와 리플로우
 
-* cssText를 이용하여 DOM 객체의 한 요소를 변경하면 padding, width, height 각각을 변경할 때마다 DOM 객체를 수정하는 것이 아니라, cssText를 수정할 때 단 한 번만 DOM 객체를 수정하기 때문에 웹 어플리케이션의 성능 향상
+---
+
+
+
+- 수정된 렌더 트리를 리렌더링 하는 과정에서 발생
+- 웹 애플리케이션의 성능을 저하시키는 주된 원인
+
+#### 1) Reflow
+
+- 리플로우(크기나 위치) : HTML 문서를 구성하는 요소의 크기나 위치가 변경되었을 때 각각의 요소를 재배치하는 작업
+
+- 모든 엘리먼트의 위치와 길이 등을 다시 계산하는 과정에서 발생
+- dom 일부 혹은 전체 렌더링시에 발생
+
+#### 2) Repaint
+
+- 리페인트(스타일) : HTML 문서의 전체 또는 일부 영역의 스타일이 변경되었을 때 브라우저가 변경된 스타일을 다시 적용하는 작업
+- 가시성에 영향을 주는 엘리먼트가 변경되면 발생 (background, display)
+- 무조건은 아니지만, Reflow가 발생하면 Repaint는 같이 발생
+- 브라우저가 DOM트리에 있는 다른 노드의 가시성을 모두 확인해야 하므로 리페인트는 비용이 비쌈
+
+#### 3) Reflow 가 발생 되는 경우
+
+- DOM el 추가, 제거 또는 변경
+- CSS 스타일 추가, 제거 또는 변경
+  - inline-style, class 변경이 일어남으로써 레이아웃이 변경 될 수 있음
+  - DOM el 길이를 변경하면 DOM트리에 있는 다른 노드에 영향을 줄 수 있음
+- CSS 애니메이션, 트렌지션
+  - 애니메이션의 모든 프레임에서 리플로우 발생
+- offsetWidth와 offsetHeight의 사용
+  - 해당 속성을 사용하면, 초기 reflow가 트리거되어 수치가 계산
+  - offset, computed, bounding 같은 속성 및 메소드들은 이미 렌더링 된 DOM기준으로 CSS속성을 `계산만`해서 내려주기 때문에 reflow + repaint가 아닌 순수 reflow만 발생
+- 기타
+  - hover, 텍스트 입력, 창 크기 조절, 글꼴 크기 변경 등등
+  - 활성화 되면 리플로우를 트리거 할 수 있음
+
+#### 4) 성능 저하 최소화
+
+##### (1) 클래스 변경을 통해 스타일을 변경할 경우, 최대한 말단의 노드의 클래스를 변경
+
+- 돔 구조에서 최 하단 노드의 클래스를 변경
+- 중간에 있는 class를 바꾸게 된다면) 위 아래 노드들에게 영향을 미치게 되고, 그 과정에서 리플로우 리페인트가 발생 할 수 있기 때문
+
+##### (2) 인라인 스타일 자제
+
+- 인라인 스타일을 사용하면 HTML이 다운로드 될 때, 레이아웃에 영향을 미치면서 추가 리플로우를 발생
+
+##### (3) 애니메이션이 들어간 엘리먼트는 `position: fixed` 혹은 `position: absolute`로 지정
+
+- `absolute` 또는 `fixed` 위치인 엘리먼트는 다른 엘리먼트 레이아웃에 영향을 미치지 않음
+- 리플로우가 아닌 리페인트 발생, 리페인트가 훨씬 적은 비용이 듦(리플로우 + 리페인트 < 리페인트)
+
+##### (4) 레이아웃을 위한 `<table>` 자제
+
+- 점진적으로 렌더링이 되지 않고, 모두 불려지고 계산된 다음에서야 렌더링이 됨, 작은 변경만으로 테이블의 다른 모든 노드에 대한 `리플로우`가 발생
 
 
 
@@ -728,10 +792,135 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 
 * 의존 관계에 있는 자바스크립트, css, 이미지 등의 리소스를 하나의 파일로 번들링하는 모듈 번들러
 
-#### 2) Babel
+* 모듈 번들러 : 웹 애플리케이션을 구성하는 자원(HTML, CSS, Javscript, Images 등)을 모두 각각의 모듈로 보고 이를 조합해서 병합된 하나의 결과물을 만드는 도구
 
-- 트랜스파일러
-- ES6 스펙에 대한 지원이 완벽하지 않은 부분 해결방법. ES6이상의 문법의 코드들을 브라우저가 이해할 수 있게끔 ES5이하의 문법으로 변환
+#### 2) Webpack 기본 세팅
+
+```javascript
+const path = require('path);
+
+module.exports = {
+    // 모듈 네임
+    name: 'word-relay-setting',
+    // 웹팩 실행 모드: development, production, none
+    mode: 'development',
+    devtool: 'eval',
+    resolve: {
+        // webpack에서 모듈을 읽어올 때 파일 확장자 체크
+        extensions: ['.js', '.jsx']
+    }
+
+    // 입력
+    entry: {
+        app: ['./client', 'WordRelay'],
+    },
+
+    module: {
+        rules: [{
+            test:/\.jsx?/, // 적용할 파일 체크
+            loader: 'babel-loader',
+            options: {
+                presets: [
+                    ['babel/preset-env',{
+                        targets: {
+                            browsers: ['last 2 chrome versions']
+                        }
+                    }
+                ], '@babel/preset-react'],
+                plugins: ['@babel/plugin-proposal-class-properties']
+                // class형 컴포넌트에서 state = {} 문법을 사용할 때 필요
+            }
+        }]
+    }, // 입력받은 모듈에 모듈을 적용
+    plugins: [],
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'app.js'
+    } // 출력
+}
+```
+
+#### 3) webpack기능
+
+##### (1) mode
+
+* mode의 설정값에 따라 웹팩이 다르게 실행
+
+- `none`: 모드 설정 없음
+- `development`: 개발에 좀 더 편하게 웹팩 로그나 결과물이 보임
+- `production`: 성능 최적화 작업(파일 압축, 빌드)
+
+##### (2) entry
+
+* 웹 애플리케이션이 실행될 수 있게 빌드를 하기 위해 모든 소스의 경로가 담겨져 있어야 할 영역
+
+##### (3) output
+
+- 웹팩이 entry 속성을 참고하여 빌드를 한 후 결과물이 저장되는 경로
+- filename과 path 속성을 추가해주어야 함
+
+##### (4) Loader
+
+- 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트가 아닌 소스(html, css, sass, images, babel 등)들을 변환할 수 있게 도와주는 속성
+- webpack.config.js 내에선 `module` 속성으로 표현
+
+```javascript
+module: {
+  rules: [
+    {
+      test: /\.scss$/,
+      use: ['css-loader', 'sass-loader'],
+    },
+  ]
+}
+
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+          options: { modules: true },
+        },
+        { loader: 'sass-loader' },
+      ],
+    },
+  ]
+}
+```
+
+##### (5) Plugin
+
+- 웹팩의 기본 기능에 추가적인 기능을 추가하는 속성
+
+* Plugin과 Loader의 차이점
+  * 로더는 파일을 해석하고 변환하는 과정에 관여한다면 플러그인은 결과물의 형태를 바꿈
+  * 플러그인 속성은 배열의 성격을 띄고 있고 그 안엔 생성자 함수로 생성된 객체 인스턴스만 추가할 수 있음
+
+```javascript
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+  plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()],
+}
+```
+
+
+
+
+
+## Babel
+
+---
+
+* 트랜스파일러
+
+- ES6이상의 문법의 코드들을 브라우저가 이해할 수 있게끔 ES5이하의 문법으로 변환
+
+#### 1) 컴파일과 트랜스파일
 
 ##### (1) 컴파일
 
@@ -742,6 +931,13 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 
 - 한언어로 작성된 소스코드를 비슷한 수준의 추상화를 가진 다른 언어로 변환
 - ex) ES6->ES5
+
+#### 3) babel 적용 방법
+
+- @babel/core: 바벨의 가장 핵심적인 내용이 담긴 모듈
+- @babel/preset-env: 사용자의 브라우저에 맞게 최신 문법을 예전 문법으로 바꿔줌
+- @babel/preset-react: 바벨을 리액트에서 사용할 수 있게해주는 모듈(jsx 지원)
+- babel-loader: 바벨과 웹팩을 연결해줌
 
 
 
