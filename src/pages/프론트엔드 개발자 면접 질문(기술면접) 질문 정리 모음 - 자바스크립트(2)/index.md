@@ -115,13 +115,11 @@ addNum();
 
 ```javascript
 "use strict";
- 
 function myFunction() {
   return this;
 }
 console.log(myFunction()); //undefined
 "use strict";
- 
 var num = 0;
 function addNum() {
   this.num = 100; //ERROR! Cannot set property 'num' of undefined
@@ -179,10 +177,8 @@ btn.addEventListener('click', function () {
 function Person(name) {
   this.name = name;
 }
- 
 var kim = new Person('kim');
 var lee = new Person('lee');
- 
 console.log(kim.name); //kim
 console.log(lee.name); //lee
 ```
@@ -194,9 +190,7 @@ var name = 'window';
 function Person(name) {
   this.name = name;
 }
- 
 var kim = Person('kim');
- 
 console.log(window.name); //kim
 ```
 
@@ -323,7 +317,6 @@ var Person = function (name, age) {
   };
 };
 var me = new Person('Nana', 28);
- 
 me.say(); //global is undefined years old
 
 // --------------------------------------------------------------------
@@ -335,7 +328,6 @@ var Person = function (name, age) {
   this.age = age;
   this.say = function () {
     console.log(this); // Person {name: "Nana", age: 28}
- 
     setTimeout(() => {
       console.log(this); // Person {name: "Nana", age: 28}
       console.log(this.name + ' is ' + this.age + ' years old'); 
@@ -417,7 +409,6 @@ const person = {
   name: "Lee",
 };
 console.log(Object.getOwnPropertyDescriptor(person, "name"));
-
 // { value: 'Lee', writable: true, enumerable: true, configurable: true }
 ```
 
@@ -456,10 +447,6 @@ console.log(Object.getOwnPropertyDescriptor(person, "name"));
 
 
 
-
-
-
-
 ## 6) AJAX
 
 * 자바스크립트를 이용해 비동기적으로 서버와 브라우저가 데이터를 교환할 수 있는 통신 방식
@@ -490,12 +477,12 @@ console.log(Object.getOwnPropertyDescriptor(person, "name"));
 #### (2) 변수 생성 과정
 
 * 1) 변수 선언
-
 * 2) 변수 초기화
-
 * 3) 변수에 지정한 값 할당(변수에 사용자가 지정한 값으로 초기화)
 * 여기서 변수에 지정한 값 할당은 해당 실행 컨텍스트의 변수 객체 생성이 완료된 뒤에 실행
 * 변수의 선언 + 초기화 와 사용자가 지정한 값 초기화가 발생되는 환경이 나뉘어 발생
+
+
 
 #### (3) 함수의 호이스팅
 
@@ -533,8 +520,11 @@ var foo = function() {
 
 ## let, var, const
 
-* let, const 중복이나 호이스팅을 선언하지 않음
+---
 
+
+
+* let, const 중복이나 호이스팅을 선언하지 않음
 * 블록 단위의 변수타입
 
 - var 와 let, const의 차이점 (function scope와 block scope의 개념에서) : 
@@ -616,18 +606,12 @@ console.log(foo); // 456
 
   
 
-
-
 ## 반응형 프로그래밍 
 
 * 데이터 스트림이라는 하나의 일관된 형식으로 만들고, 이 데이터 스트림을 구독하여 데이터 스트림의 상태 변화에 반응하는 방식으로 동작하는 애플리케이션을 만드는 것
 
 - Tv와 Tv방송국이 있다고 가정했을때, Tv방송국이 일정한 시간 단위로 영상에 대한 프레임을 계속해서 방출(emit)하고 TV는 방송국을 관찰하고 있다가 새로운 영상을 방출하면 이를 획득하는 방식
 - 여기서 방송국의 역할이 옵저버블, Tv가 옵저버, 영상프레임이 Notification
-
-
-
-
 
 
 
@@ -742,6 +726,8 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 - 모든 엘리먼트의 위치와 길이 등을 다시 계산하는 과정에서 발생
 - dom 일부 혹은 전체 렌더링시에 발생
 
+
+
 #### 2) Repaint
 
 - 리페인트(스타일) : HTML 문서의 전체 또는 일부 영역의 스타일이 변경되었을 때 브라우저가 변경된 스타일을 다시 적용하는 작업
@@ -749,20 +735,22 @@ console.log(str instanceof String); // false str 는 원시타입 문자열이�
 - 무조건은 아니지만, Reflow가 발생하면 Repaint는 같이 발생
 - 브라우저가 DOM트리에 있는 다른 노드의 가시성을 모두 확인해야 하므로 리페인트는 비용이 비쌈
 
+
+
 #### 3) Reflow 가 발생 되는 경우
 
 - DOM el 추가, 제거 또는 변경
 - CSS 스타일 추가, 제거 또는 변경
   - inline-style, class 변경이 일어남으로써 레이아웃이 변경 될 수 있음
   - DOM el 길이를 변경하면 DOM트리에 있는 다른 노드에 영향을 줄 수 있음
-- CSS 애니메이션, 트렌지션
-  - 애니메이션의 모든 프레임에서 리플로우 발생
+- CSS 애니메이션, 트렌지션 : 애니메이션의 모든 프레임에서 리플로우 발생
 - offsetWidth와 offsetHeight의 사용
   - 해당 속성을 사용하면, 초기 reflow가 트리거되어 수치가 계산
   - offset, computed, bounding 같은 속성 및 메소드들은 이미 렌더링 된 DOM기준으로 CSS속성을 `계산만`해서 내려주기 때문에 reflow + repaint가 아닌 순수 reflow만 발생
-- 기타
-  - hover, 텍스트 입력, 창 크기 조절, 글꼴 크기 변경 등등
-  - 활성화 되면 리플로우를 트리거 할 수 있음
+- hover, 텍스트 입력, 창 크기 조절, 글꼴 크기 변경 등등
+- 활성화 되면 리플로우를 트리거 할 수 있음
+
+
 
 #### 4) 성능 저하 최소화
 
@@ -809,12 +797,10 @@ module.exports = {
         // webpack에서 모듈을 읽어올 때 파일 확장자 체크
         extensions: ['.js', '.jsx']
     }
-
     // 입력
     entry: {
         app: ['./client', 'WordRelay'],
     },
-
     module: {
         rules: [{
             test:/\.jsx?/, // 적용할 파일 체크
@@ -873,7 +859,6 @@ module: {
     },
   ]
 }
-
 module: {
   rules: [
     {
@@ -907,8 +892,6 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()],
 }
 ```
-
-
 
 
 

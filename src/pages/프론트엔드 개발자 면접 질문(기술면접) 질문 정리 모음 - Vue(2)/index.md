@@ -18,62 +18,59 @@ images: ["images/2.jpg"]
 
 
 
-1. ### 플러그인이란?
+#### 1) 개요
 
-   플러그인은 일반적으로 전역 수준 기능을 Vue 어플리케이션에 추가합니다.
+* 일반적으로 전역 수준 기능을 Vue 어플리케이션에 추가
 
-   1. 전역 메소드 또는 속성 추가(`<vue-custom-element>`)
-   2. 하나 이상의 글로벌 에셋 추가(지시자, 필터, 트랜지션)
-   3. 전역 믹스인으로 컴포넌트 옵션(vuex)
-   4. `Vue.prototype`를 이용해 Vue에 인스턴스 메소드를 추가
-   5. 위의 기능과 함께 자체 API를 제공하는 라이브러리(vue-router)
+* 전역 메소드 또는 속성 추가(`<vue-custom-element>`)
 
-2. ### 플러그인을 만드는 방법은?
+* 하나 이상의 글로벌 에셋 추가(지시자, 필터, 트랜지션)
 
-   플러그인에서는 `install` 메소드를 정의해야 합니다. 이 메소드는 첫 번째 인자로 Vue 생성자와 외부에서 설정 가능한 옵션을 파라미터로 전달받습니다.
+* 전역 믹스인으로 컴포넌트 옵션(vuex)
 
-   ```
-   MyPlugin.install = function (Vue, options) {
-     // 1. add global method or property
-     Vue.myGlobalMethod = function () {
-       // some logic ...
-     }
-   
-     // 2. add a global asset
-     Vue.directive('my-directive', {
-       bind (el, binding, vnode, oldVnode) {
-         // some logic ...
-       }
-       ...
-     })
-   
-     // 3. inject some component options
-     Vue.mixin({
-       created: function () {
-         // some logic ...
-       }
-       ...
-     })
-   
-     // 4. add an instance method
-     Vue.prototype.$myMethod = function (methodOptions) {
-       // some logic ...
-     }
-   }
-   ```
+* `Vue.prototype`를 이용해 Vue에 인스턴스 메소드를 추가
+* 위의 기능과 함께 자체 API를 제공하는 라이브러리(vue-router)
 
-3. ### 플러그인을 사용하는 방법은?
 
-   `Vue.use()` 전역 메소드를 호출하여 플러그인을 사용할 수 있습니다. 이 함수는 생성자 `new Vue()`로 Vue 인스턴스를 생성하기 전에 호출되어야 합니다.
 
-   ```
-   // calls `MyPlugin.install(Vue, { someOption: true })`
-   Vue.use(MyPlugin)
-   
-   new Vue({
-     //... options
-   })
-   ```
+#### 2) 플러그인을 만드는 방법
+
+*  `install` 메소드를 정의. 이 메소드는 첫 번째 인자로 Vue 생성자와 외부에서 설정 가능한 옵션을 파라미터로 전달받음
+
+```javascript
+MyPlugin.install = function (Vue, options) {
+  Vue.myGlobalMethod = function () {
+  }
+  Vue.directive('my-directive', {
+    bind (el, binding, vnode, oldVnode) {
+    }
+    ...
+  })
+  Vue.mixin({
+    created: function () {
+    }
+    ...
+  })
+  Vue.prototype.$myMethod = function (methodOptions) {
+  	...
+  }
+}
+```
+
+
+
+#### 3) 사용법
+
+* `Vue.use()` 전역 메소드를 호출하여 플러그인을 사용
+* 이 함수는 생성자 `new Vue()`로 Vue 인스턴스를 생성하기 전에 호출
+
+```javascript
+Vue.use(MyPlugin)
+
+new Vue({
+  //... options
+})
+```
 
 
 
@@ -109,6 +106,7 @@ var app = new Vue({
 * 모든 단일 Vue 인스턴스에 영향을 주기 때문에 적게 이용하고 신중하게 사용
 
 ```javascript
+// 다음 전역 믹스인은 해당 Vue 인스턴스에서 각 컴포넌트가 생성될 때마다 `created` 훅에서 로그를 발생
 Vue.mixin({
    created(){
      console.log("Write global mixins")
@@ -120,116 +118,117 @@ new Vue({
 })
 ```
 
-위의 전역 믹스인은 해당 Vue 인스턴스에서 각 컴포넌트가 생성될 때마다 `created` 훅에서 로그를 발생시킵니다. 
-
 #### 3) CLI 환경에서 믹스인을 사용하는 법
 
-* Vue CLI를 사용한다면, 믹스인은 일반적으로 `/src/mixins` 디렉토리에서 `.js`파일로 작성합니다. 
-* `export` 키워드로 외부에 내보낸다는 것을 선언해야 하며 사용할 Vue 컴포넌트에서 `import` 키워드로 불러올 수 있습니다.
+* Vue CLI를 사용한다면, 믹스인은 일반적으로 `/src/mixins` 디렉토리에서 `.js`파일로 작성
+* `export` 키워드로 외부에 내보낸다는 것을 선언해야 하며 사용할 Vue 컴포넌트에서 `import` 키워드로 불러올 수 있음
 
-1. ### 믹스인의 옵션이 컴포넌트의 옵션과 충돌한다면?
 
-   믹스인과 컴포넌트에서 충돌하는 옵션이 있다면, 옵션은 몇 가지 방법을 통해 충돌하는 옵션을 병합합니다.
 
-   1. `data`는 재귀적으로 병합하되, 충돌되는 속성은 컴포넌트의 데이터가 우선적으로 병합됩니다.
+#### 4) 믹스인의 옵션과 컴포넌트의 옵션의 충돌
 
-   ```
-   var mixin = {
-     data: function () {
-       return {
-         message: 'Hello, this is a Mixin'
-       }
-     }
+* 믹스인과 컴포넌트에서 충돌하는 옵션이 있다면, 옵션은 몇 가지 방법을 통해 충돌하는 옵션을 병합
+
+* data : 재귀적으로 병합하되, 충돌되는 속성은 컴포넌트의 데이터가 우선적
+
+```javascript
+var mixin = {
+  data: function () {
+    return {
+      message: 'Hello, this is a Mixin'
     }
-   new Vue({
-     mixins: [mixin],
-     data: function () {
-       return {
-         message: 'Hello, this is a Component'
-       }
-     },
-     created: function () {
-       console.log(this.$data); // => { message: "Hello, this is a Component'" }
-     }
-   })
-   ```
+  }
+ }
+new Vue({
+  mixins: [mixin],
+  data: function () {
+    return {
+      message: 'Hello, this is a Component'
+    }
+  },
+  created: function () {
+    console.log(this.$data); // => { message: "Hello, this is a Component'" }
+  }
+})
+```
 
-   1. 라이프사이클 훅 함수는 믹스인 함수가 먼저 실행되고, 그 다음에 컴포넌트의 함수가 실행됩니다.
+* 라이프사이클 훅 : 믹스인 함수가 먼저 실행되고, 그 다음에 컴포넌트의 함수가 실행
 
-   ```
-   const myMixin = {
-     created(){
-       console.log("Called from Mixin")
-     }
-   }
-   
-   new Vue({
-     el: '#root',
-     mixins:[myMixin],
-     created(){
-       console.log("Called from Component")
-     }
-   })
-   
-   //Called from Mixin
-   //Called from Component
-   ```
+```javascript
+const myMixin = {
+  created(){
+    console.log("Called from Mixin")
+  }
+}
 
-   1. `methods`, `components`, `directives` 역시 재귀적으로 병합하되, 이러한 객체에 충돌하는 키가 있을 경우 컴포넌트의 옵션이 우선순위를 갖습니다.
+new Vue({
+  el: '#root',
+  mixins:[myMixin],
+  created(){
+    console.log("Called from Component")
+  }
+})
 
-   ```
-   var mixin = {
-     methods: {
-       firstName: function () {
-         console.log('John')
-       },
-       contact: function () {
-         console.log('+65 99898987')
-       }
-     }
-   }
-   
-   var vm = new Vue({
-     mixins: [mixin],
-     methods: {
-       lastName: function () {
-         console.log('Murray')
-       },
-       contact: function () {
-         console.log('+91 893839389')
-       }
-     }
-   })
-   
-   vm.firstName() // "John"
-   vm.lastName() // "Murray"
-   vm.contact() // "+91 893839389"
-   ```
+//Called from Mixin
+//Called from Component
+```
 
-2. ### 믹스인의 병합 방법을 사용자 정의하는 방법은?
+* methods, components, directives : 재귀적으로 병합하되, 이러한 객체에 충돌하는 키가 있을 경우 컴포넌트의 옵션이 우선순위
 
-   Vue에서는 사용자 지정 옵션을 병합할 때 기본적으로 기존 값을 덮어는 방법을 이용합니다. 만약 사용자 정의의 로직을 사용해 커스텀 옵션을 병합하려면,`Vue.config.optionMergeStrategies`에 함수를 추가할 필요가 있습니다.
+```javascript
+var mixin = {
+  methods: {
+    firstName: function () {
+      console.log('John')
+    },
+    contact: function () {
+      console.log('+65 99898987')
+    }
+  }
+}
+var vm = new Vue({
+  mixins: [mixin],
+  methods: {
+    lastName: function () {
+      console.log('Murray')
+    },
+    contact: function () {
+      console.log('+91 893839389')
+    }
+  }
+})
+vm.firstName() // "John"
+vm.lastName() // "Murray"
+vm.contact() // "+91 893839389"
+```
 
-   ```
-   Vue.config.optionMergeStrategies.myOption = function (toVal, fromVal) {
-     // return mergedVal
-   }
-   ```
 
-   더 고급 예제는 Vuex의 1.x 병합 전략에서 확인하실 수 있습니다.
 
-   ```
-   const merge = Vue.config.optionMergeStrategies.computed
-   Vue.config.optionMergeStrategies.vuex = function (toVal, fromVal) {
-     if (!toVal) return fromVal
-     if (!fromVal) return toVal
-     return {
-       getters: merge(toVal.getters, fromVal.getters),
-       state: merge(toVal.state, fromVal.state),
-       actions: merge(toVal.actions, fromVal.actions)
-     }
-   }
-   ```
+#### 3) 믹스인의 병합 방법 사용자 정의
+
+* Vue에서는 사용자 지정 옵션을 병합할 때 기본적으로 기존 값을 덮어는 방법을 이용합니다. 
+* 만약 사용자 정의의 로직을 사용해 커스텀 옵션을 병합하려면,`Vue.config.optionMergeStrategies`에 함수를 추가할 필요가 있습니다.
+
+```javascript
+Vue.config.optionMergeStrategies.myOption = function (toVal, fromVal) {
+  // return mergedVal
+}
+```
+
+더 고급 예제는 Vuex의 1.x 병합 전략에서 확인하실 수 있습니다.
+
+```
+const merge = Vue.config.optionMergeStrategies.computed
+Vue.config.optionMergeStrategies.vuex = function (toVal, fromVal) {
+  if (!toVal) return fromVal
+  if (!fromVal) return toVal
+  return {
+    getters: merge(toVal.getters, fromVal.getters),
+    state: merge(toVal.state, fromVal.state),
+    actions: merge(toVal.actions, fromVal.actions)
+  }
+}
+```
 
 
 
@@ -252,8 +251,6 @@ Vue.directive('focus', {
 <input v-focus>
 ```
 
-
-
 #### 2) 지시자 지역 등록
 
 * directives 옵션 사용
@@ -270,15 +267,17 @@ directives: {
 <input v-focus>
 ```
 
-### 지시자에 의해 제공되는 라이프 사이클 훅은?
 
-지시자 객체가 등록될 때 몇 개의 라이프 사이클 훅을 제공합니다.
 
-1. `bind`: 지시자가 처음 엘리먼트에 부착될 때 한 번 호출됩니다.
-2. `inserted`: 지시자가 부착된 엘리먼트가 DOM에 삽입되었을 때 호출됩니다.
-3. `update`: 해당 엘리먼트가 업데이트 될 때 호출됩니다. 하지만 아직 하위 엘리먼트는 업데이트 되지 않은 상태입니다.
-4. `componentUpdated`: 하위 컴포넌트까지 업데이트 된 상태일 때 호출됩니다.
-5. `unbind`: 지시자가 엘리먼트에서부터 삭제될 때 호출됩니다.
+#### 3) 지시자의 라이프 사이클 훅
+
+* 지시자 객체가 등록될 때 몇 개의 라이프 사이클 훅을 제공
+
+1. `bind`: 지시자가 처음 엘리먼트에 부착될 때 한 번 호출
+2. `inserted`: 지시자가 부착된 엘리먼트가 DOM에 삽입되었을 때 호출
+3. `update`: 해당 엘리먼트가 업데이트 될 때 호출됩니다. 하지만 아직 하위 엘리먼트는 업데이트 되지 않은 상태
+4. `componentUpdated`: 하위 컴포넌트까지 업데이트 된 상태일 때 호출
+5. `unbind`: 지시자가 엘리먼트에서부터 삭제될 때 호출
 
 **Note:** 위의 훅에서는 특정한 전달인자(Argument)를 받는다.
 
@@ -501,9 +500,7 @@ new Vue({
 })
 ```
 
-이제 템플릿에서 `<component>` 태그에 바인딩 될 컴포넌트를 설정할 수 있습니다.
-
-```javascript
+```html
 <div id="app">
    <component v-bind:is="currentPage">
    </component>
@@ -518,7 +515,7 @@ new Vue({
 * 만약 동적인 컴포넌트를 `<keep-alive>` 태그로 감싼다면, 컴포넌트 인스턴스를 없애지 않고 메모리에 유지해 보존합니다.
 * DOM에 렌더링 되지 않음
 
-```
+```html
 <keep-alive>
   <component v-bind:is="currentTabComponent"></component>
 </keep-alive>
@@ -526,7 +523,7 @@ new Vue({
 
 만약 조건문이 있다면, 해당 조건의 하위 컴포넌트만 렌더링됩니다.
 
-```
+```html
 <keep-alive>
   <comp-a v-if="a > 1"></comp-a>
   <comp-b v-else></comp-b>
@@ -535,126 +532,124 @@ new Vue({
 
 
 
-1. ### 비동기 컴포넌트(Async component)란?
+#### 4) 비동기 컴포넌트(Async component)
 
-   대규모 응용 프로그램에서는 응용 프로그램을 더 작은 덩어리로 나누고 실제로 필요할 때만 서버에서 컴포넌트를 로드해야 할 수도 있습니다. Vue를 사용하면 컴포넌트 정의를 비동기식으로 해결하는 팩토리 함수로 컴포넌트를 정의 할 수 있습니다.
+* 대규모 응용 프로그램에서는 응용 프로그램을 더 작은 덩어리로 나누고 실제로 필요할 때만 서버에서 컴포넌트를 로드해야 할 수도 있습니다. 
+* Vue를 사용하면 컴포넌트 정의를 비동기식으로 해결하는 팩토리 함수로 컴포넌트를 정의 할 수 있습니다.
 
-   ```
-   Vue.component('async-webpack-example', function (resolve, reject) {
-     // Webpack automatically split your built code into bundles which are loaded over Ajax requests.
-     require(['./my-async-component'], resolve)
-   })
-   ```
+```javascript
+Vue.component('async-webpack-example', function (resolve, reject) {
+  // Webpack automatically split your built code into bundles which are loaded over Ajax requests.
+  require(['./my-async-component'], resolve)
+})
+```
 
-   Vue는 Vue는 컴포넌트가 렌더링되어야 할 때만 팩토리 함수를 실행시키고, 이후의 나중에 있을 리렌더링을 위해 결과를 캐시합니다.
+Vue는 Vue는 컴포넌트가 렌더링되어야 할 때만 팩토리 함수를 실행시키고, 이후의 나중에 있을 리렌더링을 위해 결과를 캐시합니다.
 
-2. ### 비동기 컴포넌트 팩토리 패턴이란?
 
-   비동기 컴포넌트 팩토리는 다음 형태의 객체를 반환할 수 있습니다.
 
-   ```
-   const AsyncComponent = () => ({
-     // The component to load (should be a Promise)
-     component: import('./MyComponent.vue'),
-     // A component to use while the async component is loading
-     loading: LoadingComponent,
-     // A component to use if the load fails
-     error: ErrorComponent,
-     // Delay before showing the loading component. Default: 200ms.
-     delay: 200,
-     // The error component will be displayed if a timeout is
-     // provided and exceeded. Default: Infinity.
-     timeout: 3000
-   })
-   ```
+#### 5) 비동기 컴포넌트 팩토리 패턴
 
-3. ### 인라인 템플릿(inline templates)이란?
+* 비동기 컴포넌트 팩토리는 다음 형태의 객체를 반환.
 
-   하위 컴포넌트에 `inline-template` 속성이 존재할 때, 컴포넌트는 내부 컨텐츠를 템플릿으로 사용합니다. 따라서 보다 유연한 템플릿 작성이 가능합니다.
+```javascript
+const AsyncComponent = () => ({
+  component: import('./MyComponent.vue'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+```
 
-   ```
-   <my-component inline-template>
-      <div>
-          <h1>Inline templates</p>
-          <p>Treated as component component owne content</p>
-      </div>
-   </my-component>
-   ```
+#### 6) 인라인 템플릿(inline templates)
 
-   **Note:** `inline-template`은 템플릿의 범위를 추론하기 어렵게 만듭니다. 가장 좋은 방법은 `template` 옵션을 사용하거나 `.vue` 파일의 `template` 엘리먼트를 사용하여 컴포넌트 내부에 템플릿을 정의하는 것입니다.
+* 하위 컴포넌트에 `inline-template` 속성이 존재할 때, 컴포넌트는 내부 컨텐츠를 템플릿으로 사용
+*  `inline-template`은 템플릿의 범위를 추론하기 어렵게 만듦
+*  `template` 옵션을 사용하거나 `.vue` 파일의 `template` 엘리먼트를 사용하여 컴포넌트 내부에 템플릿을 정의
 
-4. ### X-Templates이란?
-
-   템플릿를 정의하는 또 다른 방법은 `text/x-template` 유형의 스크립트 엘리먼트 내부의 ID로 템플릿을 참조하는 것입니다.
-
-   ```
-   <script type="text/x-template" id="script-template">
-     <p>Welcome to X-Template feature</p>
-   </script>
-   ```
-
-   ```
-   Vue.component('x-template-example', {
-     template: '#script-template'
-   })
-   ```
-
-5. ### 재귀 컴포넌트(recursive components)란?
-
-   컴포넌트는 자신의 템플릿에서 자기 자신을 재귀적으로 호출할 수 있습니다.
-
-   ```
-   Vue.component('recursive-component', {
-     template: `<!--Invoking myself!-->
-                <recursive-component></recursive-component>`
-   });
-   ```
-
-   재귀 컴포넌트는 블로그의 덧글이나 메뉴처럼 상위 컴포넌트와 하위 컴포넌트가 동등한 기능을 할 때 유용합니다.
-
-   **Note:** 위와 같은 컴포넌트는 최대 스택 크기 초과 오류가 발생하므로 재귀 호출이 조건부인지 확인
-
-   
-
-6. ### 컴포넌트 사이의 순환 참조 해결 방법은?
-
-   복잡한 어플리케이션에서 Vue 컴포넌트가 서로가 서로를 호출하고 있는 상황이 발생할 수 있습니다. 컴포넌트 A와 컴포넌트 B가 서로 순환 참조를 하고 있는 상황을 살펴봅시다.
-
-   ```
-   //ComponentA
+```html
+<my-component inline-template>
    <div>
-     <component-b >
+       <h1>Inline templates</p>
+       <p>Treated as component component owne content</p>
    </div>
-   ```
+</my-component>
+```
 
-   ```
-   //ComponentB
-   <div>
-     <component-b >
-   </div>
-   ```
+#### 7) X-Templates이란?
 
-   이런 경우는 `beforeCreate` 라이프 사이클 훅 시점까지 기다렸다가 해당 컴포넌트를 등록하거나, 웹팩의 비동기 `import`를 활용합니다.
+* 템플릿를 정의하는 또 다른 방법은 `text/x-template` 유형의 스크립트 엘리먼트 내부의 ID로 템플릿을 참조하는 것
 
-   **Solution1:**
+```html
+<script type="text/x-template" id="script-template">
+  <p>Welcome to X-Template feature</p>
+</script>
+```
 
-   ```
-   beforeCreate: function () {
-    this.$options.components.componentB = require('./component-b.vue').default
-   }
-   ```
-
-   **Solution2:**
-
-   ```
-   components: {
-    componentB: () => import('./component-b.vue')
-   }
-   ```
-
-   ### 
+```javascript
+Vue.component('x-template-example', {
+  template: '#script-template'
+})
+```
 
 
+
+#### 8) 재귀 컴포넌트(recursive components)
+
+* 컴포넌트는 자신의 템플릿에서 자기 자신을 재귀적으로 호출 가능
+* 재귀 컴포넌트는 블로그의 덧글이나 메뉴처럼 상위 컴포넌트와 하위 컴포넌트가 동등한 기능을 할 때 유용
+
+
+```javascript
+Vue.component('recursive-component', {
+  template: `<!--Invoking myself!-->
+             <recursive-component></recursive-component>`
+});
+```
+
+
+
+#### 9) 컴포넌트 사이의 순환 참조
+
+* 복잡한 어플리케이션에서 Vue 컴포넌트가 서로가 서로를 호출하고 있는 상황이 발생할 수 있음
+*  `beforeCreate` 라이프 사이클 훅 시점까지 기다렸다가 해당 컴포넌트를 등록하거나, 웹팩의 비동기 `import`를 활용
+
+
+```html
+//ComponentA
+<div>
+  <component-b >
+</div>
+
+//ComponentB
+<div>
+  <component-b >
+</div>
+```
+
+* 해결법 1
+
+```javascript
+beforeCreate: function () {
+ this.$options.components.componentB = require('./component-b.vue').default
+}
+```
+
+* 해결법 2
+
+```javascript
+components: {
+ componentB: () => import('./component-b.vue')
+}
+```
+
+
+
+### 하위 컴포넌트, 상위 컴포넌트
+
+* 상위 컴포넌트에서는 하위 컴포넌트들을 `$children` 배열로 참조하며, 
+* 하위 컴포넌트에서 상위 컴포넌트를 `$parent` 속성으로 참조합니다.
 
 
 
@@ -740,7 +735,7 @@ new Vue({
 
    `alias`를 이용해 Vue를 설정할 수 있습니다.
 
-   ```
+   ```javascript
    module.exports = {
      // ...
      resolve: {
@@ -755,7 +750,7 @@ new Vue({
 
    Vue는 컴파일러를 이용해 템플릿을 `render` 함수로 변환합니다.
 
-   ```
+   ```javascript
    // this requires the compiler
    new Vue({
      template: '<div>{{ message }}</div>'
@@ -769,13 +764,9 @@ new Vue({
    })
    ```
 
-6. ### DevTool이란?
+   
 
-   DevTool은 Vue 어플리케이션을 사용자 친화적인 인터페이스로 디버그 할 수 있게 도와주는 브라우저 확장 프로그램입니다.
-
-   ![img](https://github.com/sudheerj/vuejs-interview-questions/raw/master/images/DevTools.png)
-
-   **Note:** Vue 페이지가 배포 모드일 경우에는 DevTool로 디버그할 수 없습니다.
+   
 
 7. ### VueJS의 브라우저 지원은?
 
@@ -846,37 +837,30 @@ new Vue({
 })
 ```
 
-```
-// Get root data
+```javascript
 this.$root.age
-
-// Set root data
 this.$root.age = 29
-
-// Access root computed properties
 this.$root.fullName
-
-// Call root methods
 this.$root.interest()
 ```
 
 
 
-1. ### renderError 메소드의 목적은?
+### renderError 메소드
 
-   기본 `render` 함수가 렌더링 도중 에러가 발생하면, 대체되는 렌더링 결과를 제공합니다. `renderError`의 두 번째 전달인자로 에러가 전달됩니다.
+* 기본 `render` 함수가 렌더링 도중 에러가 발생하면, 대체되는 렌더링 결과를 제공
+*  `renderError`의 두 번째 전달인자로 에러가 전달
 
-   ```
-   new Vue({
-     render (h) {
-       throw new Error('An error')
-     },
-     renderError (h, err) {
-       return h('div', { style: { color: 'red' }}, err.stack)
-     }
-   }).$mount('#app')
-   ```
+```javascript
+new Vue({
+  render (h) {
+    throw new Error('An error')
+  },
+  renderError (h, err) {
+    return h('div', { style: { color: 'red' }}, err.stack)
+  }
+}).$mount('#app')
+```
 
-2. ### 하위 컴포넌트에서 상위 컴포넌트로 직접 접근하는 방법은?
 
-   상위 컴포넌트에서는 하위 컴포넌트들을 `$children` 배열로 참조하며, 하위 컴포넌트에서 상위 컴포넌트를 `$parent` 속성으로 참조합니다.
+

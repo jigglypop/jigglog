@@ -10,7 +10,46 @@ images: ["images/1.jpg"]
 
 
 
-# 1. App
+
+
+# 1. index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./src/style.css">
+    </head>
+    <body>
+        <main id="App"></main>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
+```
+
+
+
+
+
+# 2. main.js
+
+```javascript
+import App from "./App.js";
+
+new App(document.querySelector("#App"));
+```
+
+
+
+
+
+
+
+
+# 3. App
 
 ```javascript
 import SearchInput from "./components/SearchInput.js";
@@ -174,7 +213,7 @@ export default class App {
 
 ```
 
-## 2. style.css
+## 4. style.css
 
 ```css
 @font-face {
@@ -375,7 +414,7 @@ body[data-theme="dark"] {
 
 
 
-## 3. cache
+## 5. cache
 
 ```javascript
 const cache = {
@@ -394,7 +433,7 @@ export default cache;
 
 
 
-## 4. debounce
+## 6. debounce
 
 ```javascript
 const debouncing = () => {
@@ -415,7 +454,7 @@ export default debouncing;
 
 
 
-## 5. spinnerToggle
+## 7. spinnerToggle
 
 ```javascript
 const spinnerToggle = () => {
@@ -428,7 +467,7 @@ export default spinnerToggle;
 
 
 
-## 6. throttle
+## 8. throttle
 
 ```javascript
 const throttling = () => {
@@ -451,7 +490,7 @@ export default throttling;
 
 
 
-## 7. banner
+## 9. banner
 
 ```javascript
 export default class Banner {
@@ -521,7 +560,7 @@ export default class Banner {
 
 ```
 
-## 8. darkbutton
+## 10. darkbutton
 
 ```javascript
 export default class DarkButton {
@@ -562,7 +601,7 @@ export default class DarkButton {
 
 
 
-## 9. imageinfo
+## 11. imageinfo
 
 ```javascript
 import api from "../api/api.js";
@@ -654,7 +693,7 @@ export default class ImageInfo {
 
 
 
-## 10. searchinput
+## 12. searchinput
 
 ```javascript
 export default class SearchInput {
@@ -697,7 +736,7 @@ export default class SearchInput {
 
 
 
-## 11. searchresult
+## 13. searchresult
 
 ```javascript
 export default class SearchResult {
@@ -817,7 +856,7 @@ export default class SearchResult {
 
 
 
-## 12. spinner
+## 14. spinner
 
 ```javascript
 export default class Spinner {
@@ -844,7 +883,7 @@ export default class Spinner {
 
 
 
-## 13. tags
+## 15. tags
 
 ```java
 export default class Tags {
@@ -890,7 +929,7 @@ export default class Tags {
 
 
 
-## 14. api
+## 16. api
 
 ```javascript
 import cache from "../utils/cache.js";

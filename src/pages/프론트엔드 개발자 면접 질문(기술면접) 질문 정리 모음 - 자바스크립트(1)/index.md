@@ -338,12 +338,6 @@ const promise = new Promise((resolve, reject) => {
 
 
 
-
-
-
-
-
-
 ## 1) 이벤트 위임
 
 #### (1) DOM

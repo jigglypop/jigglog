@@ -65,21 +65,15 @@ images: ["images/2.jpg"]
 
 부모 > 자식 관계에서 자식에 float가 추가되어있다면 부모에
 
+* overflow:hidden 설정
 
+* height 값 설정
 
-\1. overflow:hidden 설정
+* 요소 아래 clear: both 속성 추가
 
-\2. height 값 설정
-
-\3. 요소 아래 clear: both 속성 추가
-
-\4. 가상 요소(::after, ::before)를 이용하여 clear: both 속성 추가
-
-
+* 가상 요소(::after, ::before)를 이용하여 clear: both 속성 추가
 
 하여 문제를 해결할 수 있습니다. 클리어링 기법을 이용하는 이유는 자식에 float 속성을 주는 경우 자식이 부모 요소의 높이를 인지하지 못하는 문제가 있어서 이를 해결하고자 클리어링 기법을 이용합니다.
-
-
 
 .parent { overflow: hidden; } .parent::after { content:""; display:block; clear:both; } .clear { clear:both; }
 
@@ -227,40 +221,39 @@ HTML 문서에 대한 정보를 나타냅니다.
 
 * 1) 요소 성질을 테이블로 변환하는 방법
 
-* 부모 :
-*  display: table;
+  * 부모 :
+  *  display: table;
 
-* 자식 : 
-* display: table-cell; 
-* text-align: center; 
-* vertical-align: middle;
+  * 자식 : 
+  * display: table-cell; 
+  * text-align: center; 
+  * vertical-align: middle;
 
 * 2)
 
-* 부모
-* position: relative;
+  * 부모
+  * position: relative;
 
-* 자식
-* position: absolute; 
-* top: 50%; 
-* left: 50%; 
-* margin-top: -(자식 요소 높이 값의 절반) margin-left: -(자식 요소 너비 값의 절반)
+  * 자식
+  * position: absolute; 
+  * top: 50%; 
+  * left: 50%; 
+  * margin-top: -(자식 요소 높이 값의 절반) margin-left: -(자식 요소 너비 값의 절반)
 
 * 3)
-* 부모
-* position: relative;
-* 자식
-* position: absolute; 
-* top:50%; 
-* left: 50%; 
-* transform: translate(-50%, -50%);
+  * 부모
+  * position: relative;
+  * 자식
+  * position: absolute; 
+  * top:50%; 
+  * left: 50%; 
+  * transform: translate(-50%, -50%);
 
-* 4)
-* 부모
-* height: (부모 높이 값); 
-* display: flex; 
-* justify-content: center; 
-* align-items: center;
+* 4)부모
+  * height: (부모 높이 값); 
+  * display: flex; 
+  * justify-content: center; 
+  * align-items: center;
 
 
 
