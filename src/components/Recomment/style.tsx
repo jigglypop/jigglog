@@ -75,6 +75,12 @@ export const ReCommentDiv = styled.div`
   position:relative;
   display:grid;
   grid-template-rows:  50px 1fr 270px ;
+  @media (max-width: 1000px) {
+    padding:3%;
+  }
+  @media (max-width: 600px) {
+    padding:1%;
+  }
 `
 // 댓글 위 카운트
 export const ReCommentCountDiv = styled.div`
@@ -84,6 +90,20 @@ export const ReCommentCountDiv = styled.div`
     font-size: 16px;
     font-weight: 800;
     color: black;
+  }
+  @media (max-width: 1000px) {
+    h4 {
+      font-size: 12px;
+      font-weight: 800;
+      color: black;
+    }
+  }
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 10px;
+      font-weight: 800;
+      color: black;
+    }
   }
 `
 // 댓글 아이템들
@@ -98,10 +118,14 @@ export const ReCommentWriteDiv = styled.div`
 // 아이템들
 // 외부
 export const ReCommentItemDiv = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 150px 1fr 1fr;
-  grid-template-rows:  1fr 1fr;
+  grid-template-rows:  50px 1fr 1fr;
   margin: 1%;
+  @media(max-width: 1000px){
+    grid-template-columns: 50px 1fr 1fr;
+  }
 `
 // 댓글 아이템 위
 export const ReCommentItemUpperDiv = styled.div`
@@ -179,7 +203,7 @@ export const CommenItemContentDiv = styled.div`
   padding: 10px;
 
   h4 {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 800;
     color: black;
   }

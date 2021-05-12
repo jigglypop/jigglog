@@ -22,6 +22,5 @@ export const FooterDiv = styled.nav`
   .text{
     font-size: 10px;
     font-weight: 800;
-    padding: 50px;
   }
 `

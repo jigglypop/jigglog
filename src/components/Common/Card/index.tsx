@@ -42,7 +42,7 @@ const Card = ({ tags, path, images, title, date, summary, count } : any) => {
                     <TagWrapper>
                       {tags.map((tag: any) => (
                         <Link key={tag} to={`/tags/${tag}/1`}>
-                          <OuterButton fontSize="10px" height="38px" borderColor="#66d9ef" color="#66d9ef">
+                          <OuterButton fontSize="10px" height="38px" color="#66d9ef">
                             <h4 className="tagitem">#{tag}</h4>
                           </OuterButton>
                         </Link>

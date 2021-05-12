@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import Card from "../../components/Common/Card";
-import getPosts, { IData } from "../../utils/getPosts";
+import getPosts from "../../utils/getPosts";
 import { CONTENT_PER_PAGE } from "../../constants";
 import Pagination from "@material-ui/lab/Pagination";
 import { Link } from "gatsby";
@@ -157,8 +157,6 @@ const CategorizedList = ({ title, data, location }: any) => {
   } else{
     return <></>;
   }
-
-
 };
 
 

@@ -45,10 +45,6 @@ new App(document.querySelector("#App"));
 
 
 
-
-
-
-
 # 3. App
 
 ```javascript

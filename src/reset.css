@@ -239,3 +239,9 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(246, 79, 89, 0.4) !important;
+}

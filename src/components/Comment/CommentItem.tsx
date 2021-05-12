@@ -12,6 +12,7 @@ import { IComment } from 'src/module/postcomments';
 import CommentUser from './CommentUser'
 import DeleteComment from './DeleteComment';
 import ReCommentsComponent from '../Recomment/ReCommentsComponent';
+import getDateToString from '../Common/changeDate';
 
 interface ICommentItem {
     comment : IComment
@@ -29,7 +30,7 @@ const CommentItem = ({ comment, openId, setOpen } : ICommentItem) =>{
                 </CommentNameDiv>
                 <CommentItemUpperDiv>
                     <TimeDiv>
-                        <h4>{time.toString()}</h4>
+                        <h4 className="timetext">{getDateToString(time)}</h4>
                     </TimeDiv>
                     <DeleteComment commentId={comment.id + ''}/>
                 </CommentItemUpperDiv>

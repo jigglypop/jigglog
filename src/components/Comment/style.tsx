@@ -81,6 +81,12 @@ export const CommentDiv = styled.div`
   position:relative;
   display:grid;
   grid-template-rows:  50px 1fr 270px ;
+  @media (max-width: 1000px) {
+    padding:3%;
+  }
+  @media (max-width: 600px) {
+    padding:1%;
+  }
 `
 // 댓글 위 카운트
 export const CommentCountDiv = styled.div`
@@ -91,9 +97,24 @@ export const CommentCountDiv = styled.div`
     font-weight: 800;
     color: black;
   }
+  @media (max-width: 1000px) {
+    h4 {
+      font-size: 12px;
+      font-weight: 800;
+      color: black;
+    }
+  }
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 10px;
+      font-weight: 800;
+      color: black;
+    }
+  }
 `
 // 댓글 아이템들
 export const CommentItemsDiv = styled.div`
+  position:relative;
   grid-row: 2/3;
 `
 // 댓글 기입
@@ -104,10 +125,14 @@ export const CommentWriteDiv = styled.div`
 // 아이템들
 // 외부
 export const CommentItemDiv = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 150px 1fr 1fr;
-  grid-template-rows:  50px 1fr 50px;
+  grid-template-rows:  50px 1fr 1fr;
   margin: 1%;
+  @media(max-width: 1000px){
+    grid-template-columns: 50px 1fr 1fr;
+  }
 `
 // 댓글 아이템 위
 export const CommentItemUpperDiv = styled.div`
@@ -119,7 +144,11 @@ export const CommentItemUpperDiv = styled.div`
   grid-column:2/4;
   grid-row:1/2;
   padding: 10px;
-
+  h4 {
+    font-size: 10px;
+    font-weight: 800;
+    color: gray;
+  }
   .cancel {
     cursor:pointer;
     transition: 0.5s;
@@ -131,10 +160,15 @@ export const CommentItemUpperDiv = styled.div`
 // 댓글 시간
 export const TimeDiv = styled.div`
   display: flex;
-  h4 {
+  .timetext {
     font-size: 10px;
     font-weight: 800;
     color: gray;
+  }
+  @media(max-width: 1000px){
+    .timetext {
+      font-size: 4px;
+    }
   }
 `
 
@@ -176,12 +210,13 @@ export const Confirm = styled.div`
 
 // 댓글 컨텐츠
 export const CommenItemContentDiv = styled.div`
-  grid-column:2/3;
+  position: relative;
+  grid-column:2/4;
   grid-row:2/3;
   padding: 10px;
 
   h4 {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 800;
     color: black;
   }

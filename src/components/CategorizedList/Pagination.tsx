@@ -1,7 +1,6 @@
 import React from "react";
 import Pagination from "@material-ui/lab/Pagination";
 
-
 const Paginations = ({ count, page, handleChange } : any) =>{
     return (
         <Pagination
@@ -9,10 +8,11 @@ const Paginations = ({ count, page, handleChange } : any) =>{
             page={page}
             size="large"
             onChange={handleChange}
+            variant="outlined" 
             style={{
-            listStyle: "none",
-            color: "primary",
-            marginBottom: "100px",
+                listStyle: "none",
+                color: "#66d9ef",
+                marginBottom: "100px",
             }}
         />
     )

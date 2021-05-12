@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const TagWrapper = styled.div`
   font-weight: 800;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const StyledCard = styled.div`
@@ -54,7 +57,6 @@ export const Picture = styled.img`
 export const CommentCountButton = styled.div`
   transition: all 0.2s ease-in-out;
   transition: 0.5s;
-  /* border: 2px solid#FF416C; */
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -107,9 +109,15 @@ export const GridWrapper = styled.div`
 `
 export const GridOne = styled.div`
   grid-row: 1/2;
+  @media (max-width: 1000px) {
+    grid-row: 1/3;
+  }
 `
 export const GridTwo = styled.div`
   grid-row: 2/3;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `
 export const GridThree = styled.div`
   grid-row: 3/4;
@@ -139,7 +147,7 @@ export const Content = styled.div`
     font-weight: 800;
   }
   h1.date {
-    color: #66d9ef;
+    color: #FF416C;
     line-height: 1.5em;
     font-size: 10px;
     font-weight: 800;
@@ -157,7 +165,7 @@ export const Content = styled.div`
       font-weight: 800;
     }
     h1.date {
-      color: #66d9ef;
+      color: #FF416C;
       line-height: 1.5em;
       font-size: 8px;
       font-weight: 800;

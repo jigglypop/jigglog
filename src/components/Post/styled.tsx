@@ -12,8 +12,8 @@ export const PostWrapper = styled.div`
   box-shadow: 10px 10px 10px black;
 
   @media (max-width: 600px) {
-    padding: 70px 16px 0;
-    margin: 0 10px 10px 10px;
+    padding: 70px 10px 0;
+    margin: 0;
   }
 
   &:before,
@@ -342,7 +342,6 @@ export const ImageWrapper = styled.div`
     color: white;
     font-weight: 800;
     text-shadow: 2px 2px 20px white;
-    font-size: 30px;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -352,9 +351,6 @@ export const ImageWrapper = styled.div`
     padding: 5%;
     line-height: 2em;
 
-    @media (max-width: 600px) {
-      font-size: 15px;
-    }
 
     @keyframes blink {
       50% {
@@ -363,6 +359,18 @@ export const ImageWrapper = styled.div`
       100% {
         opacity: 1;
       }
+    }
+  }
+  @media (max-width: 1000px) {
+    .jb-text{
+      font-size: 15px;
+      width: 80vw;
+    }
+  }
+  @media (max-width: 600px) {
+    .jb-text{
+      font-size: 12px;
+      width: 90vw;
     }
   }
 `;
