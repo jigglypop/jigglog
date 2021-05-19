@@ -7,13 +7,13 @@ import {
 import { Canvas, useFrame, useThree, extend } from "react-three-fiber";
 import { ThreeWrapper } from "./styled";
 
-import { Outer, PlanetEarth, PlanetMars, PlanetMercury } from "./ThreeItems";
+import { Outer, PlanetEarth } from "./ThreeItems";
 
 extend({
   MapControls,
   OrbitControls,
 });
-export default function Three({ categorySet, hasPortfolio }) {
+export default function Three() {
   const Controls = () => {
     const orbitRef = useRef();
     const { camera, gl } = useThree();
@@ -24,6 +24,8 @@ export default function Three({ categorySet, hasPortfolio }) {
     // });
     useFrame(() => {
       orbitRef.current.update();
+      orbitRef.current.minDistance = 80;
+      orbitRef.current.maxDistance = 150;
     });
     return <mapControls args={[camera, gl.domElement]} ref={orbitRef} />;
   };
@@ -39,9 +41,6 @@ export default function Three({ categorySet, hasPortfolio }) {
         <fog attach="fog" args={["black"]} position={[0, 100, -100]} />
         <Outer />
         <PlanetEarth />
-        {/* <PlanetMars categorySet={categorySet} hasPortfolio={hasPortfolio} />
-        <PlanetMercury categorySet={categorySet} hasPortfolio={hasPortfolio} /> */}
-
         <directionalLight
           intensity={0.3}
           color={"#12c2e9"}
