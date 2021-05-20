@@ -9,8 +9,10 @@ export interface IApp {
     host: string;
   }
   categories: object[];
-  hasPortfolio: object;  
+  postInformations: object;
+  hasPortfolio: any;  
   categorySet: object;
+  tagSet: object;
   children: object;
 };
 
