@@ -80,7 +80,7 @@ export const CommentDiv = styled.div`
   padding:5%;
   position:relative;
   display:grid;
-  grid-template-rows:  50px 1fr 270px ;
+  grid-template-rows:  50px 1fr 300px ;
   @media (max-width: 1000px) {
     padding:3%;
   }

@@ -58,7 +58,6 @@ const PostTemplate = ({
     },
   },
 } : IPostTemplate) => {
-  console.log(process.env.REACT_APP_KAKAO_KEY)
   const [image = null] = images;
   // 여기
   const [tocEls, setTocEls] = useState<any>(null);

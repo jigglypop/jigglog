@@ -11,7 +11,6 @@ export const BioWrapper = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-
   .top{
     grid-row: 1/2;
   }
@@ -22,9 +21,7 @@ export const BioWrapper = styled.div`
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
   }
-
   .biotext {
     font-size: 13px;
     margin-top: 10px;

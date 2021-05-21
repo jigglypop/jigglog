@@ -8,7 +8,6 @@ const ImageWrapper = styled.div`
 
   .jb-wrap {
     width: 400px;
-    /* margin: 10px auto; */
     position: relative;
     justify-content: center;
     text-align: center;
@@ -38,7 +37,6 @@ const ImageWrapper = styled.div`
       }
     }
   }
-
 
   h2 {
     margin: 2px;
@@ -76,7 +74,6 @@ const ImageWrapper = styled.div`
         }
       }
     }
-
 
     h2 {
       margin: 2px;

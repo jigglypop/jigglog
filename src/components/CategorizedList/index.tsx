@@ -50,7 +50,6 @@ const CategorizedList = ({ title, data, location }: any) => {
     }) => tags.indexOf(decodeURI(tag)) !== -1
   );
   const edgeSet = title[0] === 'CATEGORY' ? categoryEdge : tagEdge
-
   const allPosts = edgeSet;
   const postCount = allPosts.length;
 
@@ -105,7 +104,7 @@ const CategorizedList = ({ title, data, location }: any) => {
                 </ClipText>
               </ListImage>
               <ListTitle>
-                  <h3>{title[1]}</h3>
+                <h3>{title[1]} <span className="categoryname">#{decodeURI(category)}</span></h3>
               </ListTitle>
               <ListCategory>
                 <div>
@@ -113,7 +112,7 @@ const CategorizedList = ({ title, data, location }: any) => {
                   <div style={{ display: "inline-block"}}>
                     <Link to={title[0] === 'CATEGORY' ? `/categories/${key}/1` : `/tags/${key}/1`}>
                       <TagButton>
-                        <h4>#{key}</h4>
+                        <h4 className="tagname">#{key}</h4>
                       </TagButton>
                     </Link>
                   </div>

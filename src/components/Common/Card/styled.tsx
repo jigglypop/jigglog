@@ -2,6 +2,21 @@ import styled from "styled-components";
 
 export const TagWrapper = styled.div`
   font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  
+  .tagitem{
+    color: #FF416C;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 5px;
+    transition: all .2s ease-in-out;
+    text-shadow: 0 0 10px #FF416C;
+    &:hover{
+      transform: scale(1.2);
+    }    
+  }
+  
   @media (max-width: 1000px) {
     display: none;
   }

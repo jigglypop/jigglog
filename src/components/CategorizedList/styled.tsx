@@ -8,6 +8,7 @@ export const TagButton = styled.div`
     font-weight: 800;
     padding: 10px;
     color:  #FF416C;
+    text-shadow : 0 0 10px #FF416C;
   }
   cursor: pointer;
   &:hover {
@@ -19,6 +20,7 @@ export const ListImage = styled.div`
   grid-row: 1/2;
   background-image: url("/back.jpg");
   background-size: cover;
+  /* opacity: 0.4; */
 `;
 
 export const ListTitle = styled.div`
@@ -32,6 +34,10 @@ export const ListTitle = styled.div`
     font-size: 32px;
     font-weight: 800;
     color: white;
+  }
+  .categoryname{
+    color:  #FF416C;
+    text-shadow : 0 0 10px #FF416C;  
   }
 `;
 
@@ -75,29 +81,32 @@ export const LargeWrapper = styled.div`
 
 export const ListWrapper = styled.div`
   display: grid;
-  grid-template-rows: 200px 100px 100px 1fr 200px;
+  grid-template-rows: 250px 100px 100px 1fr 200px;
 `;
 
 
 export const ClipText = styled.div`
   background-size: cover;
   position: relative;
+  width: 100%;
   height: 100%;
-
   h1 {
+    position: relative;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 10vw;
+    font-size: 40px;
     font-weight: 800;
     margin: 0 auto;
-    padding: 10px;
-    width: 95%;
+    width: 99%;
+    height: 95%;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     mix-blend-mode: multiply;
-    opacity: 0.8;
   }
 `;
