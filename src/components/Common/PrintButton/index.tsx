@@ -1,8 +1,7 @@
 import React, { useCallback } from "react";
-import { FaPrint } from "react-icons/fa";
+import { BiPrinter } from "react-icons/bi";
 import { 
   Button, 
-  PrintTitle,
 } from './styled'
 
 const PrintButton = () => {
@@ -10,10 +9,9 @@ const PrintButton = () => {
       global.print();
     }, []);
     return (
-        <Button type="button" onClick={printPage}>
-            <FaPrint />
-            <PrintTitle>PRINT</PrintTitle>
-        </Button>);
+      <Button type="button" onClick={printPage}>
+        <BiPrinter className="link-inner"/>
+      </Button>);
 };
   
 export default PrintButton;

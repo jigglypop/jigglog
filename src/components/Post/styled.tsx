@@ -186,7 +186,7 @@ export const PostContent = styled.div<IPostContent>`
   }
   p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 100;
   }
   strong {
@@ -197,7 +197,7 @@ export const PostContent = styled.div<IPostContent>`
   li {
     margin-top: 10px;
     margin-left: 30px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 100;
   }
   blockquote {
@@ -313,16 +313,32 @@ export const ClearMobile = styled.div`
   }
 `;
 export const Button = styled.button`
+  border-radius: 50%;
+  border: none;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  background-color:#141414;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid white;
+  box-shadow : 0 0 10px gray;
   display: flex;
+  justify-content: center;
   align-items: center;
-  color: white;
-  background: linear-gradient(45deg, #000000, #434343);
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  h4{
-    margin: 2px;
+  &.color{
+    border: 2px solid #78ffd6;
+    .link-inner {
+      color: #78ffd6;
+    }
   }
+
+  .link-inner{
+    transition: all 0.5s ease-in-out;
+    color: white;
+    width: 30px;
+    height: 30px;
+  }
+
 `;
 
 export const ImageWrapper = styled.div`
@@ -340,6 +356,8 @@ export const ImageWrapper = styled.div`
   }
   .jb-text {
     color: white;
+    font-size: 20px;
+    width: 80vw;
     font-weight: 800;
     text-shadow: 2px 2px 20px white;
     text-align: center;
@@ -361,10 +379,14 @@ export const ImageWrapper = styled.div`
       }
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .jb-text{
-      font-size: 15px;
-      width: 80vw;
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 900px) {
+    .jb-text{
+      font-size: 16px;
     }
   }
   @media (max-width: 600px) {
@@ -376,9 +398,24 @@ export const ImageWrapper = styled.div`
 `;
 export const WarpVisible = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
   padding-left: 30px;
   padding-right: 30px;
+
+  h4 {
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+  }
+
+  .text {
+    color: black;
+  }
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const Visible = styled.div`

@@ -39,6 +39,7 @@ const HTML = ( props : any ) => {
           <meta property="og:type" content="website" />
           <meta property="og:description" content={DESCRIPTION} />
           <meta property="og:locale" content="ko_KR" />
+          <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
           <style
             id="gatsby-inlined-css"
             dangerouslySetInnerHTML={{ __html: stylesStr }}
@@ -55,6 +56,7 @@ const HTML = ( props : any ) => {
               >
               </div>
             {postBodyComponents}
+            <div className="toasts"></div>
         </body>
       </html>
 

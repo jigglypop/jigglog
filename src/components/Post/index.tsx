@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Helmet from "react-helmet";
 import Bio from "../Bio";
 import {
@@ -6,7 +6,6 @@ import {
 } from "../../constants";
 import "./styled.css";
 import Grid from "@material-ui/core/Grid";
-import { BsCircle, BsCircleFill } from "react-icons/bs";
 import Clearfix from "../../components/Common/Clearfix";
 import {
   PostWrapper,
@@ -22,8 +21,11 @@ import {
   TocItemDiv,
 } from "./styled";
 import PrintButton from "../Common/PrintButton";
-import { usePostComments } from "../../customhooks/postcomment";
 import CommentsComponent from "../Comment/CommentsComponent";
+import KakaoShareButton from "./KakaoShareButton";
+import CopyButton from "./CopyButton";
+import { MdFormatColorText, MdTexture } from "react-icons/md";
+import { ImTextColor } from "react-icons/im"
 
 export interface IPostTemplate {
   data: {
@@ -56,7 +58,7 @@ const PostTemplate = ({
     },
   },
 } : IPostTemplate) => {
-
+  console.log(process.env.REACT_APP_KAKAO_KEY)
   const [image = null] = images;
   // 여기
   const [tocEls, setTocEls] = useState<any>(null);
@@ -90,33 +92,45 @@ const PostTemplate = ({
 
   // 답
   const [answer, setAnswer] = useState("");
-  const blankAnswer = useCallback(() => {
+  const blankAnswer = () => {
+    const answerRef = document.getElementById("answer")
     if (answer === "") {
       setAnswer("hidden");
     } else {
       setAnswer("");
     }
-  }, [answer]);
+    if (answerRef){
+      answerRef.classList.toggle("color")
+    }
+  }
 
   // 라인
   const [lines, setLines] = useState("");
-  const blankLines = useCallback(() => {
+  const blankLines =() => {
+    const linesRef = document.getElementById("lines")
     if (lines === "") {
       setLines("hidden");
     } else {
       setLines("");
     }
-  }, [lines]);
+    if (linesRef){
+      linesRef.classList.toggle("color")
+    }
+  }
 
   // 삭제선
   const [dels, setDels] = useState("hidden");
-  const blankDels = useCallback(() => {
+  const blankDels = () => {
+    const delsRef = document.getElementById("dels")
     if (dels === "") {
       setDels("hidden");
     } else {
       setDels("");
     }
-  }, [dels]);
+    if (delsRef){
+      delsRef.classList.toggle("color")
+    }
+  }
 
   // 스크롤하기
   const onClick = (e : any) => {
@@ -130,6 +144,8 @@ const PostTemplate = ({
       });
     }
   };
+
+
 
   return (
     <>
@@ -169,57 +185,52 @@ const PostTemplate = ({
             <Visible>
               <Bio />
               <WarpVisible>
-                <div className="lineblock">
-                  <Button type="button" onClick={blankAnswer}>
-                    <h4>블록가리기</h4>
+              <div className="lineblock">
+                  <Button type="button" onClick={blankAnswer} className="link-outer color" id="answer">
+                    <MdTexture className="link-inner"  />
                   </Button>
                 </div>
                 <div className="lineblock">
-                  <div className="lineblock">
-                    <div className="smallcircle">
-                      {answer == "hidden" ? <BsCircle /> : <BsCircleFill />}
-                    </div>
-                  </div>
+                  <Button type="button" onClick={blankLines} className="link-outer color" id="lines" >
+                    <MdFormatColorText className="link-inner" />
+                  </Button>
+                </div>
+                <div className="lineblock">
+                  <Button type="button" onClick={blankDels} className="link-outer" id="dels">
+                    <ImTextColor className="link-inner" />
+                  </Button>
+                </div>
+
+              </WarpVisible>
+              <WarpVisible>
+                <div className="lineblock">
+                  <KakaoShareButton title={title} image={image}/>
+                </div>
+                <div className="lineblock">
+                  <h4 className="text">카카오톡 공유</h4>
                 </div>
               </WarpVisible>
               <WarpVisible>
                 <div className="lineblock">
-                  <Button type="button" onClick={blankLines}>
-                    <h4>밑줄가리기</h4>
-                  </Button>
+                  <CopyButton/>
                 </div>
                 <div className="lineblock">
-                  <div className="lineblock">
-                    <div className="smallcircle">
-                      {lines == "hidden" ? <BsCircle /> : <BsCircleFill />}
-                    </div>
-                  </div>
+                  <h4 className="text">URL주소 복사</h4>
                 </div>
               </WarpVisible>
               <WarpVisible>
                 <div className="lineblock">
-                  <Button type="button" onClick={blankDels}>
-                    <h4>요약가리기</h4>
-                  </Button>
+                  <PrintButton />
                 </div>
                 <div className="lineblock">
-                  <div className="lineblock">
-                    <div className="smallcircle">
-                      {dels == "hidden" ? <BsCircle /> : <BsCircleFill />}
-                    </div>
-                  </div>
-                </div>
+                  <h4 className="text">글전체 프린트</h4>
+                </div>            
               </WarpVisible>
             </Visible>
           </Grid>
 
           <Grid item lg={8} md={8} sm={12} xs={12}>
             <ClearMobile>
-              <ButtonInline>
-                <Clearfix>
-                  <PrintButton />
-                </Clearfix>
-              </ButtonInline>
             </ClearMobile>
             <PostContent answer={answer} lines={lines} dels={dels}>
               <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>

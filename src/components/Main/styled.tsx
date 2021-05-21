@@ -111,7 +111,7 @@ export const ToolTip = styled.div`
   line-height: 2em;
 
   h1{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
     margin-bottom: 10px;
   }

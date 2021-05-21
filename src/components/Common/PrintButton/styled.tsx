@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  color: white;
-  background-image: linear-gradient(45deg, #8E2DE2, #4A00E0);
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  box-shadow: 2px 2px 2px black;
-`;
-
-export const PrintTitle = styled.div`
-  font-size: 15px;
-  font-weight: 800;
+  border-radius: 50%;
+  border: none;
+  width: 45px;
+  height: 45px;
   margin: 5px;
-  text-shadow: 3px 3px 30px white;
+  background-color:#141414;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid #4a00e0;
+  box-shadow : 0 0 5px gray;
+  .link-inner{
+    color: #4a00e0;
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    box-shadow : 0 0 20px gray;
+  }
 `;

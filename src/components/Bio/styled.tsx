@@ -1,26 +1,36 @@
 import styled from "styled-components";
 
 export const BioWrapper = styled.div`
-  .divider {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 3px;
-    background-color: gray;
+  background-color: #141414;
+  border-radius : 10px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  transition: all 0.5s ease-in;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+  .top{
+    grid-row: 1/2;
   }
-  img {
-    width: 50px;
-    height: 50px;
+  .mid {
+    grid-row: 2/3;
   }
+  .bottom {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
   .biotext {
-    color: black;
     font-size: 13px;
     margin-top: 10px;
     font-weight: 800;
   }
   .myname {
-    color: black;
     font-size: 13px;
     margin-top: 10px;
     font-weight: 800;
@@ -32,22 +42,39 @@ export const BioWrapper = styled.div`
     margin: 0;
     padding: 0;
   }
+  @media (max-width: 1200px) {
+    .bottom {
+      display: none;
+    }
+  }
 `
 
 
 export const CircleWrapper = styled.div`
-  margin: 10px;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  width: 45px;
   border-radius: 50%;
-  text-align: center;
-  border: 1.5px solid #ebebeb;
-  svg {
-    width: 20px;
-    height: 20px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  background-color:#141414;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid white;
+  box-shadow : 0 0 10px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    border: 2px solid #FF416C;
+    .link-inner {
+      color: #FF416C;
+    }
   }
+
+  .link-inner{
+    transition: all 0.5s ease-in-out;
+    color: white;
+    width: 30px;
+    height: 30px;
+  }
+  
 `;
