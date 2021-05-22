@@ -1,34 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Link } from "gatsby";
-
-const boxFade = keyframes`
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-`
-
-export const Notice = styled.div`
-  position: fixed;
-  display: flex;
-  top: 10vh;
-  color: white;
-  background-color: #141414;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  div{
-    margin: 10px;
-  }
-  a {
-    animation: ${boxFade} 0.5s infinite linear alternate;
-    font-size: 30px;
-  }
-`
 
 
 export const List = styled.ul`
@@ -95,7 +66,7 @@ export const MenuTitle = styled.div`
 `;
 
 export const SmallItem = styled.div`
-  margin: 10px;
+  margin: 10px 5px;
   font-size: 12px;
   font-weight: 800;
   @media (max-width: 600px) {
@@ -123,8 +94,8 @@ export const HeaderDiv = styled.nav`
   background-color: #141414;
 
   .test {
-      padding: 2px;
-      border: 2px solid white;
+    padding: 2px;
+    border: 2px solid white;
   }
 
   &.active{
@@ -164,15 +135,15 @@ export const HeaderDiv = styled.nav`
   }
 
   .be-person {
-      color:white;
+    color:white;
   }
 
   .logout {
-      cursor: pointer;
+    cursor: pointer;
   }
 
   .hamberger {
-      cursor: pointer;
+    cursor: pointer;
   }
 `
 // 사이드바
@@ -232,24 +203,24 @@ export const SideBarTopDiv = styled.div`
 `
 
 export const SideBarTopButtonDiv = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    grid-row: 2/3;
-    z-index: 3;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  grid-row: 2/3;
+  z-index: 3;
 
-    h1 {
-      font-size: 10px;
-      font-weight: 600;
-      margin: 10px;
-    }
-    hr {
-      border: none;
-      background-color : rgba(255,255,255,0.5);
-      width: 60%;
-      height: 2px;
-    }
+  h1 {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 10px;
+  }
+  hr {
+    border: none;
+    background-color : rgba(255,255,255,0.5);
+    width: 60%;
+    height: 2px;
+  }
 `
 
 export const SideBarListDiv = styled.div`

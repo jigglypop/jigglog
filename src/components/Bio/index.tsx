@@ -7,7 +7,6 @@ import {
   INSTARGRAM_ID,
   FACEBOOK_ID,
 } from "../../constants";
-import Grid from "@material-ui/core/Grid";
 import { Link } from "gatsby";
 import { 
   CircleWrapper,

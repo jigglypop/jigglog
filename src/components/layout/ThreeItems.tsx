@@ -37,13 +37,12 @@ export const PlanetEarth = () => {
       if (tooltip) {
         tooltip.classList.add("isvisible");
         tooltip.innerHTML = `
-            <h1>JIGGLYPOP</h1>
-            <h1>염동환</h1>
+            <h1>염동환 #JIGGLYPOP</h1>
             <h3>무언가 만드는 것을 좋아합니다</h3>
             <h3>리액트 프론트 엔드에 관심이 많고 VUE, ANGULAR를 모두 사용합니다.</h3>
             <h3>DJANGO, express, nest.js, spring boot 백엔드도 다룹니다.</h3>
             <h3>3D 웹에 관심이 많으며 항상 프로젝트를 쉬지 않고 합니다.</h3>
-            <h2>행성을 클릭하면 이력서 페이지로 이동합니다.</h2>
+            <h2><<  행성을 클릭하면 이력서 페이지로 이동합니다.</h2>
         `;
       }
     }, 200);

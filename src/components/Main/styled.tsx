@@ -95,6 +95,8 @@ export const ToolTip = styled.div`
   position: absolute;
   top: 10%;
   right: 3%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -111,7 +113,9 @@ export const ToolTip = styled.div`
   line-height: 2em;
 
   h1{
-    font-size: 20px;
+    color: #FF416C;
+    text-shadow: 0 0 20px #e94057;
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 10px;
   }
@@ -121,7 +125,7 @@ export const ToolTip = styled.div`
     font-weight: 800;
   }
   h3 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     color: white;
   }
