@@ -1,0 +1,1313 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.8ab4be3c937b074fb994.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d)!important;font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">jigglog| [2020] 정보 처리 기사 실기 요약 8-SQL 응용</title><meta data-react-helmet="true" name="og:title" content="jigglog| [2020] 정보 처리 기사 실기 요약 8-SQL 응용"/><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.hBjTTW{margin:10px 5px;font-size:12px;font-weight:800;}/*!sc*/
+@media (max-width:600px){.hBjTTW{font-size:10px;}}/*!sc*/
+data-styled.g8[id="styled__SmallItem-sc-8u1x3g-5"]{content:"hBjTTW,"}/*!sc*/
+.kegDIr{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.kegDIr .test{padding:2px;border:2px solid white;}/*!sc*/
+.kegDIr.active{padding-left:200px;}/*!sc*/
+.kegDIr .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.kegDIr .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.kegDIr .logo{font-size:15px;font-weight:800;}/*!sc*/
+.kegDIr .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.kegDIr .be-person{color:white;}/*!sc*/
+.kegDIr .logout{cursor:pointer;}/*!sc*/
+.kegDIr .hamberger{cursor:pointer;}/*!sc*/
+data-styled.g9[id="styled__HeaderDiv-sc-8u1x3g-6"]{content:"kegDIr,"}/*!sc*/
+.ckhgzP{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.ckhgzP.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g10[id="styled__SideBarDiv-sc-8u1x3g-7"]{content:"ckhgzP,"}/*!sc*/
+.kVeApa{display:grid;grid-template-rows:160px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.kVeApa.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g11[id="styled__SideBarInnerDiv-sc-8u1x3g-8"]{content:"kVeApa,"}/*!sc*/
+.fJMSje{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.fJMSje h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.fJMSje hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g12[id="styled__SideBarTopDiv-sc-8u1x3g-9"]{content:"fJMSje,"}/*!sc*/
+.cWbxpm{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;max-height:60vh;overflow:scroll;margin:10px;background-color:#141414;}/*!sc*/
+data-styled.g14[id="styled__SideBarListDiv-sc-8u1x3g-11"]{content:"cWbxpm,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.kbRvHn{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-15v8614-0"]{content:"kbRvHn,"}/*!sc*/
+.hnwaga{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
+.bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.cBddps{background-color:#141414;border-radius:10px;margin:10px;padding:10px;color:white;-webkit-transition:all 0.5s ease-in;transition:all 0.5s ease-in;display:grid;grid-template-rows:1fr 1fr 1fr;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cBddps .top{grid-row:1/2;}/*!sc*/
+.cBddps .mid{grid-row:2/3;}/*!sc*/
+.cBddps .bottom{grid-row:3/4;display:grid;grid-template-columns:1fr 1fr 1fr;}/*!sc*/
+.cBddps .biotext{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .myname{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .gridgap{margin-top:10px;}/*!sc*/
+.cBddps .circle{margin:0;padding:0;}/*!sc*/
+@media (max-width:1200px){.cBddps .bottom{display:none;}}/*!sc*/
+data-styled.g64[id="styled__BioWrapper-sc-1q0fm4m-0"]{content:"cBddps,"}/*!sc*/
+.dZctMr{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.dZctMr:hover{border:2px solid #FF416C;}/*!sc*/
+.dZctMr:hover .link-inner{color:#FF416C;}/*!sc*/
+.dZctMr .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g65[id="styled__CircleWrapper-sc-1q0fm4m-1"]{content:"dZctMr,"}/*!sc*/
+.lmJOuU{margin:auto;padding:10px 0 0;margin:0 40px 40px 40px;font-size:16px;background-color:white;border-radius:10px;box-shadow:10px 10px 10px black;}/*!sc*/
+@media (max-width:600px){.lmJOuU{padding:70px 10px 0;margin:0;}}/*!sc*/
+.lmJOuU:before,.lmJOuU:after{display:block;content:"";clear:both;}/*!sc*/
+.lmJOuU h1{margin:0.67em 0;font-size:36px;}/*!sc*/
+.lmJOuU time{margin:1em 0;font-size:14px;}/*!sc*/
+.lmJOuU a{font-size:12px;font-weight:800;color:gray;}/*!sc*/
+data-styled.g67[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
+.dUDtWR{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
+.dUDtWR h1{margin-top:5em;font-size:32px;font-weight:800;}/*!sc*/
+.dUDtWR h2{margin-top:5em;font-size:28px;font-weight:800;}/*!sc*/
+.dUDtWR h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.dUDtWR h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.dUDtWR h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.dUDtWR p{margin-top:10px;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.dUDtWR li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.dUDtWR em{line-height:1.2em;font-weight:1000;margin-top:18px;font-size:18px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.dUDtWR pre,.dUDtWR span{margin-top:10px;font-size:14px;}/*!sc*/
+.dUDtWR table{margin:20px;background:#f9f9f9;}/*!sc*/
+.dUDtWR thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.dUDtWR th,.dUDtWR tr,.dUDtWR td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.dUDtWR hr{margin-bottom:30px;}/*!sc*/
+.dUDtWR code{position:relative;}/*!sc*/
+.dUDtWR del{visibility:hidden;-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+@media (max-width:1000px){.dUDtWR{padding:0 10px 10px 10px;line-height:2em;color:black;}.dUDtWR hr{margin-bottom:10px;}.dUDtWR h1{margin-bottom:2px;font-size:18px;}.dUDtWR h2{font-size:16px;}.dUDtWR h3{font-size:14px;}.dUDtWR h4{font-size:12px;}.dUDtWR h5{font-size:10px;}.dUDtWR p,.dUDtWR blockquote,.dUDtWR pre{margin-top:5px;font-size:10px;}.dUDtWR li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.dUDtWR table{margin:20px;}.dUDtWR th,.dUDtWR tr,.dUDtWR td,.dUDtWR span,.dUDtWR em{font-size:10px;}.dUDtWR strong{font-size:14px;}}/*!sc*/
+data-styled.g69[id="styled__PostContent-sc-1hokm1n-3"]{content:"dUDtWR,"}/*!sc*/
+@media (max-width:600px){.ilhkQa{display:none;}}/*!sc*/
+data-styled.g71[id="styled__ClearMobile-sc-1hokm1n-5"]{content:"ilhkQa,"}/*!sc*/
+.iaGTzG{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iaGTzG.color{border:2px solid #78ffd6;}/*!sc*/
+.iaGTzG.color .link-inner{color:#78ffd6;}/*!sc*/
+.iaGTzG .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g72[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
+.dsQNWx .jb-wrap{max-height:400px;width:100%;margin:10px auto;position:relative;overflow:hidden;}/*!sc*/
+.dsQNWx .jb-wrap img{max-height:initial;width:100%;vertical-align:middle;}/*!sc*/
+.dsQNWx .jb-text{color:white;font-size:20px;width:80vw;font-weight:800;text-shadow:2px 2px 20px white;text-align:center;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:black;padding:5%;line-height:2em;}/*!sc*/
+@-webkit-keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@media (max-width:1200px){.dsQNWx .jb-text{font-size:20px;}}/*!sc*/
+@media (max-width:900px){.dsQNWx .jb-text{font-size:16px;}}/*!sc*/
+@media (max-width:600px){.dsQNWx .jb-text{font-size:12px;width:90vw;}}/*!sc*/
+data-styled.g73[id="styled__ImageWrapper-sc-1hokm1n-7"]{content:"dsQNWx,"}/*!sc*/
+.iFwxVQ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:4px;padding-left:30px;padding-right:30px;}/*!sc*/
+.iFwxVQ h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
+.iFwxVQ .text{color:black;}/*!sc*/
+@media (max-width:1200px){.iFwxVQ{display:none;}}/*!sc*/
+data-styled.g74[id="styled__WarpVisible-sc-1hokm1n-8"]{content:"iFwxVQ,"}/*!sc*/
+.cSpTsB{position:-webkit-sticky;position:sticky;top:70px;display:block;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.cSpTsB h4{font-size:14px;font-weight:800;}/*!sc*/
+@media (max-width:1200px){.cSpTsB h4{font-size:10px;font-weight:800;}}/*!sc*/
+@media (max-width:992px){.cSpTsB{display:none;}}/*!sc*/
+.cSpTsB .lineblock{display:inline-block;}/*!sc*/
+.cSpTsB .smallcircle{display:inline-block;padding-left:30px;font-weight:800;color:greenyellow;vertical-align:middle;}/*!sc*/
+data-styled.g75[id="styled__Visible-sc-1hokm1n-9"]{content:"cSpTsB,"}/*!sc*/
+.hAenLH{position:-webkit-sticky;position:sticky;display:block;top:20vh;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:992px){.hAenLH{display:none;}}/*!sc*/
+data-styled.g76[id="styled__VisibleTable-sc-1hokm1n-10"]{content:"hAenLH,"}/*!sc*/
+.hWEvTs{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #4a00e0;box-shadow:0 0 5px gray;}/*!sc*/
+.hWEvTs .link-inner{color:#4a00e0;width:30px;height:30px;}/*!sc*/
+.hWEvTs:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g79[id="styled__Button-sc-1aanmmt-0"]{content:"hWEvTs,"}/*!sc*/
+.iRLYFX{padding:5%;position:relative;display:grid;grid-template-rows:50px 1fr 300px;}/*!sc*/
+@media (max-width:1000px){.iRLYFX{padding:3%;}}/*!sc*/
+@media (max-width:600px){.iRLYFX{padding:1%;}}/*!sc*/
+data-styled.g86[id="style__CommentDiv-f1ulxg-6"]{content:"iRLYFX,"}/*!sc*/
+.fGOExz{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #ffe259;box-shadow:0 0 5px gray;}/*!sc*/
+.fGOExz .kakao-inner{width:30px;height:30px;}/*!sc*/
+.fGOExz:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g121[id="KakaoShareButton__KakaoButton-sc-1yy6cgc-0"]{content:"fGOExz,"}/*!sc*/
+.fGwxWy{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #4a00e0;box-shadow:0 0 5px gray;}/*!sc*/
+.fGwxWy .link-inner{width:30px;height:30px;}/*!sc*/
+.fGwxWy:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g122[id="CopyButton__LinkButton-sc-10dc2a0-0"]{content:"fGwxWy,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="shortcut icon" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="48x48" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-48x48.png"/><link rel="manifest" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/manifest.json"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#fff"/><meta name="application-name" content="gatsby-advanced-blog"/><link rel="apple-touch-icon" sizes="57x57" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="167x167" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-167x167.png"/><link rel="apple-touch-icon" sizes="180x180" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-180x180.png"/><link rel="apple-touch-icon" sizes="1024x1024" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-1024x1024.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="gatsby-advanced-blog"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-640x1136.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-750x1334.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-828x1792.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1125x2436.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2688.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1536x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2224.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2388.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x2732.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1620x2160.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1136x640.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1334x750.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1792x828.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2436x1125.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2208x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2688x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x1536.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2224x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2388x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2732x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2160x1620.png"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-173606059-1', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-b95be1d9ade6fc331adc.js"/><link as="script" rel="preload" href="/app-00f4f4faab327431f083.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-2d4804b503525347efbe.js"/><link as="script" rel="preload" href="/545f34e4-537d8b272c482937bf60.js"/><link as="script" rel="preload" href="/78e521c3-462857b96df26c268693.js"/><link as="script" rel="preload" href="/fb7d5399-c2722269e20272c89e2b.js"/><link as="script" rel="preload" href="/d7eeaac4-5e1e412499691f038eec.js"/><link as="script" rel="preload" href="/1bfc9850-3dd8250b2768c110755a.js"/><link as="script" rel="preload" href="/1a48c3c1-665ec41623314f3ed35c.js"/><link as="script" rel="preload" href="/31664189-fa40fe387825bcbcf66d.js"/><link as="script" rel="preload" href="/252f366e-cbed17ab1e62b1b55d2a.js"/><link as="script" rel="preload" href="/7608a4a4e80a2d64cce96855cef341673398a342-32c2992c98ee9d30e767.js"/><link as="script" rel="preload" href="/468967d5554fbdfaa4755e6d87845426800be832-077af773d4d23f0422bd.js"/><link as="script" rel="preload" href="/73bb605ea3e8982cb7cb1d831bcb96853dcd1a75-e7162c7b5cd0bd4b75c2.js"/><link as="script" rel="preload" href="/c2c45664921f384cbb57e917886f75ed18a7c772-f195d5c482de70c8cb04.js"/><link as="script" rel="preload" href="/component---src-templates-post-jsx-f5e1e6d4d680aa581618.js"/><link as="fetch" rel="preload" href="/page-data\[2020] 정보 처리 기사 실기 요약 8-SQL 응용\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(246, 79, 89, 0.4) !important;
+}
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  color: black;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ed213a;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0.5rem;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-15v8614-0 kbRvHn"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-6 kegDIr HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" style="color:white;font-size:20px" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" style="width:25px;height:25px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-7 ckhgzP SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-8 kVeApa SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-9 fJMSje"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a><div class="nameh1"><h1>JIGGLYPOP</h1></div><div class="nameh1"><h1>염동환</h1></div></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-11 cWbxpm"><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/정보처리기사 필기/1">정보처리기사 필기<!-- --> <small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/자격증/1">자격증<!-- --> <small>(6)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/기술 면접/1">기술 면접<!-- --> <small>(12)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<!-- --> <small>(3)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<!-- --> <small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/정보처리기사 실기/1">정보처리기사 실기<!-- --> <small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-5 hBjTTW"><a href="/categories/자바스크립트/1">자바스크립트<!-- --> <small>(2)</small></a></div></div></div></div></nav><main><div class="styled__PostWrapper-sc-1hokm1n-1 lmJOuU"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="styled__ImageWrapper-sc-1hokm1n-7 dsQNWx"><div class="jb-wrap"><div class="jb-image"><img src="/static/1-5f5e3d9ae284b236ec2c64b060aa7893.jpg" alt=""/></div><div class="jb-text">[2020] 정보 처리 기사 실기 요약 8-SQL 응용</div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__Visible-sc-1hokm1n-9 cSpTsB"><div class="styled__BioWrapper-sc-1q0fm4m-0 cBddps"><div class="top"><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div><div class="mid"><p class="biotext">JIGGLYPOP</p><p class="biotext">염동환</p></div><div class="bottom"><a href="https://github.com/jigglypop" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-1 dZctMr"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></div></a><a href="https://www.facebook.com/donghwan.yeom.3" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-1 dZctMr"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></div></a><a href="https://www.instargram.com/yeom_donghwan" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-1 dZctMr"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path></svg></div></a></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="answer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="lines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-opacity=".36" d="M0 20h24v4H0z"></path><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer" id="dels"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.032 13l0.9-3h4.137l0.9 3h1.775l-3-10h-3.488l-3 10h1.776zM7.432 5h1.137l0.9 3h-2.937l0.9-3z"></path></svg></button></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><div class="kakao-share-button"><button id="kakao-link-btn" class="KakaoShareButton__KakaoButton-sc-1yy6cgc-0 fGOExz"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#ffe259" class="kakao-inner" style="color:#ffe259" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M5.678 18.123C3.092 16.566 1.5 14.112 1.5 11.405 1.5 6.701 6.248 3 12 3s10.5 3.701 10.5 8.405c0 4.704-4.748 8.405-10.5 8.405-.442 0-.882-.022-1.318-.065l-3.765 2.458c-.615.326-.957.425-1.485.066-.62-.424-.596-.892-.381-1.56l.627-2.586zM3.5 11.405c0 2.132 1.418 4.123 3.781 5.32l.706.359-.186.77-.401 1.648 2.8-1.83.366.046c.473.061.952.092 1.434.092 4.741 0 8.5-2.93 8.5-6.405S16.741 5 12 5s-8.5 2.93-8.5 6.405zm14.407-.346l1.514 2.155a.472.472 0 1 1-.773.543l-1.428-2.033-.427.413V13.5a.472.472 0 0 1-.944 0v-1.439a.471.471 0 0 1 0-.222V9.282a.472.472 0 0 1 .944 0v1.542l1.928-1.866a.472.472 0 0 1 .656.678l-1.47 1.423zm-2.958 1.925a.472.472 0 0 1 0 .944h-1.932a.472.472 0 0 1-.471-.472V9.297a.472.472 0 1 1 .943 0v3.687h1.46zm-5.857-1.092h1.334l-.638-1.707-.696 1.707zm2.523.488l.345.925a.472.472 0 1 1-.884.33l-.298-.799h-2.07l-.331.813a.472.472 0 1 1-.874-.357l1.66-4.075a.696.696 0 0 1 .654-.447.69.69 0 0 1 .627.474l1.046 2.8a.469.469 0 0 1 .127.32l-.002.016zM8.293 9.302c0 .26-.21.472-.471.472h-1.14v3.736a.472.472 0 0 1-.945 0V9.774h-1.16a.472.472 0 1 1 0-.944h3.245c.26 0 .471.211.471.472z"></path></g></svg></button></div></div><div class="lineblock"><h4 class="text">카카오톡 공유</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button class="CopyButton__LinkButton-sc-10dc2a0-0 fGwxWy"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" color="#4a00e0" class="link-inner" style="color:#4a00e0" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></button></div><div class="lineblock"><h4 class="text">URL주소 복사</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1aanmmt-0 hWEvTs"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19,7h-1V2H6v5H5c-1.654,0-3,1.346-3,3v7c0,1.103,0.897,2,2,2h2v3h12v-3h2c1.103,0,2-0.897,2-2v-7C22,8.346,20.654,7,19,7 z M8,4h8v3H8V4z M16,20H8v-4h8V20z M20,17h-2v-1v-2H6v2v1H4v-7c0-0.551,0.449-1,1-1h14c0.552,0,1,0.449,1,1V17z"></path><path d="M14 10H18V12H14z"></path></svg></button></div><div class="lineblock"><h4 class="text">글전체 프린트</h4></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"><div class="styled__ClearMobile-sc-1hokm1n-5 ilhkQa"></div><div class="styled__PostContent-sc-1hokm1n-3 dUDtWR"><h5>2020-07-17 12:45<!-- --> 시에 저장한 글입니다.</h5><hr style="margin-bottom:50px"/><div id="post-contents" style="margin-bottom:100px"><blockquote>
+<p>정보처리기사 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 책을 참고해서 공부하세요</p>
+</blockquote>
+<blockquote>
+<p>2020 정보 처리 기사 SQL 응용 입니다. 정처기 공부를 할 때 활용하세요.</p>
+</blockquote>
+<h1 id="1-ddl" style="position:relative;"><a href="#1-ddl" aria-label="1 ddl permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. DDL</h1>
+<hr>
+<ul>
+<li><code class="language-text">DDL</code> : <em>DB 구조, 데이터 형식, 접근 방식 등 DB를 구축하거나 수정할 목적으로 사용하는 언어</em></li>
+<li>DDL은 번역한 결과가 데이터 사전이라는 특별한 파일에 여러 개의 테이블로서 저장 (CREATE SCHEMA, CREATE DOMAIN, CREATE TABLE, CREATE VIEW, CREATE INDEX, ALTER TABLE, DROP)</li>
+<li>
+<p><code class="language-text">CREATE TABLE</code>  : 테이블을 정의하는 명령문</p>
+<ul>
+<li><code class="language-text">PRIMARY KEY</code> : 기본키로 사용할 속성 또는 속성의 집합을 지정</li>
+<li><code class="language-text">UNIQUE</code> : 대체키로 사용할 속성 또는 속성의 집합을 지정하는 것으로 UNIQUE로 지정한 속성은 중복된 값을 가질 수 없음</li>
+<li><code class="language-text">ON DELETE</code> : 참조 테이블의 튜플이 삭제되었을 때 기본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)</li>
+<li><code class="language-text">ON UPDATE</code> : 참조 테이블의 참조 속성 값이 변경되었을 때 본 테이블에 취해야 할 사항을 지정(NO ACTION, CASCADE, SET NULL, SET DEFAULT)</li>
+<li><code class="language-text">CONSTRAINT</code> : 제약 조건의 이름을 지정. 이름을 지정할 필요가 없으면 CHECK절만 사용하여 속성 값에 대한 제약 조건을 명시</li>
+<li><code class="language-text">CHECK</code> : 속성 값에 대한 제약 조건을 정의</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 학생<span class="token punctuation">(</span>
+    이름 <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> 
+    학번 <span class="token keyword">CHAR</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    전공 <span class="token keyword">CHAR</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    성별 <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    생년월일 <span class="token keyword">DATE</span><span class="token punctuation">,</span> 
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>학번<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span><span class="token punctuation">(</span>전공<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> 학과<span class="token punctuation">(</span>학과코드<span class="token punctuation">)</span>
+<span class="token keyword">ON</span> <span class="token keyword">DELETE</span> <span class="token keyword">SET</span> <span class="token boolean">NULL</span>
+<span class="token keyword">ON</span> <span class="token keyword">UPDATE</span> <span class="token keyword">CASCADE</span><span class="token punctuation">,</span> 
+<span class="token keyword">CONSTRAINT</span> 생년월일제약 <span class="token keyword">CHECK</span><span class="token punctuation">(</span>생년월일<span class="token operator">>=</span><span class="token string">'1980-01-01'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>다른 테이블을 이용한 테이블 정의 : 기존 테이블의 정보를 이용해 새로운 테이블을 정의</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 재학생 
+<span class="token keyword">AS</span> <span class="token keyword">SELECT</span> 학번<span class="token punctuation">,</span> 이름
+<span class="token keyword">FROM</span> 학생<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">CREATE VIEW</code> : 뷰(View)를 정의하는 명령문</p>
+<ul>
+<li>SELECT문을 서브 쿼리로사용하여 SELECT문의 결과로서 뷰를 생성</li>
+<li>서브 쿼리인 SELECT문에는 UNION이나 ORDER BY절을 사용할 수 없음</li>
+<li>속성명을 기술하지 않으면 SELECT문의 속성명이 자동으로 사용</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">VIEW</span> 건축공학과<span class="token punctuation">(</span>이름<span class="token punctuation">,</span> 학번<span class="token punctuation">)</span>
+<span class="token keyword">AS</span> <span class="token keyword">SELECT</span> 이름<span class="token punctuation">,</span> 학번
+<span class="token keyword">FROM</span> 학생
+<span class="token keyword">WHERE</span> 전공<span class="token operator">=</span><span class="token string">'건축'</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">ALTER TABLE</code> : 테이블에 대한 정의를 변경</p>
+<ul>
+<li><code class="language-text">ADD</code> : 새로운 속성(열)을 추가</li>
+<li><code class="language-text">MODIFY</code> : 특정 속성의 정의를 변경</li>
+<li><code class="language-text">DROP COLUMN</code> : 특정 속성을 삭제</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 학생 <span class="token keyword">ADD</span> 학년 <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 학생 <span class="token keyword">MODIFY</span> 학번 <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">DROP</code> : 기본 테이블 제거</p>
+<ul>
+<li><code class="language-text">CASCADE</code> : 제거할 요소를 참조하는 다른 모든 개체를 함께 제거. 즉 주 테이블의 데이터 제거시 각 외래키와 관계를 맺고 있는 모든 데이터를 제거하는 참조 무결성 제약 조건을 설정하기 위해 사용</li>
+<li><code class="language-text">RESTRICTED</code> : 다른 개체가 제거할 요소를 참조중일 때는 제거를 취소</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> 학생 <span class="token keyword">CASCADE</span><span class="token punctuation">;</span></code></pre></div>
+<h1 id="2-dcl" style="position:relative;"><a href="#2-dcl" aria-label="2 dcl permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. DCL</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">DCL(데이터 제어어)</code> : 데이터의 보안, 무결성, 회복, 병행 제어 등을 정의</p>
+<ul>
+<li>DCL은 데이터베이스 관리자(DBA)가 데이터 관리를 목적으로 사용</li>
+<li>GRANT, REVOKE, COMMIT, ROLLBACK, SAVEPOINT</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">GRANT / REVOKE</code></p>
+<ul>
+<li>데이터베이스 관리자가 데이터베이스 사용자에게 권한을 부여하거나 취소</li>
+<li><code class="language-text">GRANT</code> : 권한 부여</li>
+<li><code class="language-text">REVOKE</code> : 권한 취소</li>
+</ul>
+</li>
+<li>
+<p>사용자등급 지정 및 해제</p>
+<ul>
+<li><code class="language-text">DBA</code> : 데이터베이스 관리자</li>
+<li><code class="language-text">RESOURCE</code> : 데이터베이스 및 테이블 생성 가능자</li>
+<li><code class="language-text">CONNECT</code> : 단순 사용자</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">GRANT</span> RESOURCE <span class="token keyword">TO</span> NABI
+<span class="token comment">-- 사용자 ID가 NABI인 사람에게 데이터베이스 및 테이블 생성 가능 권한 부여</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">CONNECT</span> <span class="token keyword">TO</span> STAR<span class="token punctuation">;</span>
+<span class="token comment">-- 사용자 ID가 STAR인 사람에게 단순 사용자 권한 부여</span>
+<span class="token keyword">REVOKE</span> 사용자등급 <span class="token keyword">FROM</span> 사용자_ID_리스트</code></pre></div>
+<ul>
+<li>
+<p>테이블 및 속성에 대한 권한 부여 및 취소</p>
+<ul>
+<li>권한 종류 : ALL, SELECT, INSERT, DELETE, UPDATE, ALTER</li>
+<li><code class="language-text">WITH GRANT OPTION</code> : 부여받은 권한을 다른 사용자에게 다시 부여할 수 있는 권한을 부여</li>
+<li><code class="language-text">GRANT OPTION FOR</code> : 다른 사용자에게 권한을 부여할 수 있는 권한을 취소</li>
+<li><code class="language-text">CASCADE</code> : 권한 취소 시 권한을 부여받았던 사용자가 다른 사용자에게 부여한 권한도 연쇄적으로 취소</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">GRANT</span> <span class="token keyword">ALL</span> <span class="token keyword">ON</span> 고객 <span class="token keyword">TO</span> NABI <span class="token keyword">WITH</span> <span class="token keyword">GRANT</span> <span class="token keyword">OPTION</span>
+<span class="token comment">-- 사용자 ID가 NABI인 사람에게 테이블에 대한 모든 권한과 다른사람에 대한 권한 부여</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">ALL</span> <span class="token keyword">ON</span> 학생 <span class="token keyword">TO</span> YDH<span class="token punctuation">;</span>
+<span class="token comment">-- YDH에게 학생 테이블의 모든 권한 부여</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">DELETE</span> <span class="token keyword">ON</span> 강좌 <span class="token keyword">TO</span> YDH <span class="token keyword">WITH</span> <span class="token keyword">GRANT</span> <span class="token keyword">OPTION</span><span class="token punctuation">;</span>
+<span class="token comment">-- YDH에게 강좌 테이블의 삭제 권한과 삭제 권한을 다른 사람에게 부여할 수 있는 권한 부여</span>
+<span class="token keyword">REVOKE</span> <span class="token keyword">SELECT</span><span class="token punctuation">,</span> <span class="token keyword">INSERT</span><span class="token punctuation">,</span> <span class="token keyword">DELETE</span> <span class="token keyword">ON</span> 교수 <span class="token keyword">FROM</span> YDH
+<span class="token comment">-- YDH에게 부여된 교수에 대한 SELECT, INSERT, DELETE 권한 취소</span>
+<span class="token keyword">REVOKE</span> <span class="token keyword">UPDATE</span> <span class="token keyword">ON</span> 수강 <span class="token keyword">FROM</span> YDH <span class="token keyword">CASCADE</span>
+<span class="token comment">-- YDH에 부여된 UPDATE 권한과 권한 부여 권한, 다른사람에게 부여한 권한 모두 취소</span>
+<span class="token keyword">REVOKE</span> <span class="token keyword">GRANT</span> <span class="token keyword">OPTION</span> <span class="token keyword">FOR</span> <span class="token keyword">UPDATE</span> <span class="token keyword">ON</span> 고객 <span class="token keyword">FROM</span> STAR<span class="token punctuation">;</span>
+<span class="token comment">-- 사용자 ID가 STAR 인 사람에게 부여한 고객 테이블에 대한 권한 중 UPDATE 권한을 다른 사람에게 부여할 수 있는 권한만 취소</span></code></pre></div>
+<ul>
+<li><code class="language-text">COMMIT</code> : 트랜잭션이 성공적으로 끝나면 데이터베이스가 새로운 일관성 상태를 가지기 위해 변경된 모든 내용을 데이터베이스에 반영하여야 할 때</li>
+<li><code class="language-text">ROLLBACK</code> : 아직 COMMIT되지 않은 변경된 모든 내용들을 취소하고 데이터베이스를 이전 상태로 되돌림</li>
+<li><code class="language-text">SAVEPOINT</code> : 트랜잭션 내에 ROLLBACK 할 위치인 저장점을 지정하는 명령어, 저장점을 지정할 때는 이름을 부여하며, ROLLBACK 시 지정된 저장점까지의 트랜잭션 처리 내용이 취소</li>
+</ul>
+<h1 id="3-dml" style="position:relative;"><a href="#3-dml" aria-label="3 dml permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. DML</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">DML(데이터 조작어)</code> : 데이터베이스 사용자가 응용 프로그램이나 질의어를 통해 저장된 데이터를 실질적으로 관리하는데 사용되는 언어</p>
+<ul>
+<li>SELECT, INSERT, DELETE, UPDATE</li>
+</ul>
+</li>
+<li><code class="language-text">삽입문(INSERT INTO)</code> : 기본 테이블에 새로운 튜플을 삽입</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 사원<span class="token punctuation">(</span>이름<span class="token punctuation">,</span> 부서<span class="token punctuation">)</span> 
+<span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token string">'YDH'</span><span class="token punctuation">,</span><span class="token string">'인터넷'</span><span class="token punctuation">)</span>
+
+ <span class="token comment">-- 사원 테이블에 (이름-YDH, 부서-인터넷) 입력</span>
+ 
+ <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 사원 <span class="token punctuation">(</span>이름<span class="token punctuation">,</span> 부서<span class="token punctuation">,</span> 생일<span class="token punctuation">,</span> 주소<span class="token punctuation">,</span> 기본급<span class="token punctuation">)</span> 
+ <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'YDH'</span><span class="token punctuation">,</span> <span class="token string">'기획'</span><span class="token punctuation">,</span> <span class="token string">'2020-10-03'</span><span class="token punctuation">,</span> <span class="token string">'대전'</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+ <span class="token comment">-- 사원 테이블에 ('YDH', '기획', '2020-10-03', '대전', 90) 삽입</span>
+ 
+ <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 편집부원<span class="token punctuation">(</span>이름<span class="token punctuation">,</span> 생일<span class="token punctuation">,</span> 주소<span class="token punctuation">,</span> 기본급<span class="token punctuation">)</span>
+ <span class="token keyword">SELECT</span> 이름<span class="token punctuation">,</span> 생일<span class="token punctuation">,</span> 주소<span class="token punctuation">,</span> 기본급 <span class="token keyword">FROM</span> 사원
+ <span class="token keyword">WHERE</span> 부서<span class="token operator">=</span><span class="token string">'편집'</span><span class="token punctuation">;</span>
+ 
+ <span class="token comment">-- 사원 테이블에 있는 편집부의 모든 튜플을 편집부원(이름, 생일, 주소, 기본급) 테이블에 삽입</span></code></pre></div>
+<ul>
+<li><code class="language-text">삭제문(DELETE FROM)</code> : 기본 테이블에 있는 튜플들 중에서 특정 튜플을 삭제</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DELETE</span>
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 이름<span class="token operator">=</span><span class="token string">'YDH1'</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 사원 테이블에서 이름이 YDH1인 튜플 삭제</span>
+
+<span class="token keyword">DELETE</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token comment">-- 사원 테이블의 모든 레코드 삭제</span></code></pre></div>
+<ul>
+<li><code class="language-text">갱신문(UPDATE SET)</code> :기본 테이블에 있는 튜플들 중에서 특정 튜플의 내용을 변경</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">UPDATE</span> 사원
+<span class="token keyword">SET</span> 주소<span class="token operator">=</span><span class="token string">'세종'</span><span class="token punctuation">,</span>기본급 <span class="token operator">=</span> 기본급 <span class="token operator">+</span> <span class="token number">90</span>
+<span class="token keyword">WHERE</span> 이름<span class="token operator">=</span><span class="token string">'YDH2'</span><span class="token punctuation">;</span>
+<span class="token comment">-- 사원 테이블에서 YDH2의 주소를 세종으로, 기본급을 90만원 인상</span></code></pre></div>
+<h1 id="4-dml---select1" style="position:relative;"><a href="#4-dml---select1" aria-label="4 dml   select1 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. DML - SELECT(1)</h1>
+<hr>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token punctuation">[</span>PREDICATE<span class="token punctuation">]</span> <span class="token punctuation">[</span>테이블명<span class="token punctuation">.</span><span class="token punctuation">]</span>속성명 <span class="token punctuation">[</span><span class="token keyword">AS</span> 별칭<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>테이블 명<span class="token punctuation">.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> …<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token punctuation">,</span> 그룹함수<span class="token punctuation">(</span>속성명<span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token keyword">AS</span> 별칭<span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">FROM</span> 테이블명<span class="token punctuation">[</span><span class="token punctuation">,</span> 테이블명<span class="token punctuation">,</span> …<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">WHERE</span> 조건<span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 속성명<span class="token punctuation">,</span> 속성명<span class="token punctuation">,</span> …<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">HAVING</span> 조건<span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 속성명 <span class="token punctuation">[</span><span class="token keyword">ASC</span> <span class="token operator">|</span> <span class="token keyword">DESC</span><span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">PREDICATE</code> : 불러올 튜플 수를 제한할 명령어를 기술</p>
+<ul>
+<li><em>ALL</em> : 모든 튜플</li>
+<li><em>DISTINCT</em> : 중복된 튜플이 있으면 그 중 첫 번째 한 개만</li>
+<li><em>DISTINCTROW</em> : 중복된 튜플을 검색하지만 선택된 속성의 값이 아닌, 튜플 전체를 대상</li>
+</ul>
+</li>
+<li>
+<p>속성명 : 검색하여 불러올 속성(열) 및 수식들을 지정</p>
+<ul>
+<li>기본 테이블을 구성하는 모든 속성을 지정할 때 는 ’*’ 를 기술</li>
+<li>두 개 이상의 테이블을 대상으로 검색할 때는 (테이블명.속성명)으로 표현함</li>
+<li>AS : 속성 및 연산의 이름을 다른 제목으로 표시</li>
+</ul>
+</li>
+<li><code class="language-text">FROM절</code> : 질의에 의해 검색될 데이터들을 포함하는 테이블명</li>
+<li><code class="language-text">WHERE절</code> : 검색할 조건</li>
+<li><code class="language-text">ORDER BY절</code> : 특정 속성을 기준으로 정렬하여 검색할 때 사용</li>
+<li><code class="language-text">기본 검색</code></li>
+<li>사원 테이블의 모든 튜플 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> 사원<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> 이름<span class="token punctuation">,</span> 부서<span class="token punctuation">,</span> 생일<span class="token punctuation">,</span> 주소<span class="token punctuation">,</span> 기본급 <span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> 사원<span class="token punctuation">.</span>이름<span class="token punctuation">,</span> 사원<span class="token punctuation">.</span>부서<span class="token punctuation">,</span> 사원<span class="token punctuation">.</span>생일<span class="token punctuation">,</span> 사원<span class="token punctuation">.</span>주소<span class="token punctuation">,</span> 사원<span class="token punctuation">.</span>기본급 <span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+
+이름 부서 생일 주소 기본급
+<span class="token comment">----------------------------------</span>
+홍길동  기획 <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동<span class="token number">120</span>
+임꺽정  인터넷  <span class="token number">69</span><span class="token operator">/</span><span class="token number">09</span><span class="token operator">/</span><span class="token number">01</span> 서교동 <span class="token number">80</span>
+황진이  편집 <span class="token number">75</span><span class="token operator">/</span><span class="token number">07</span><span class="token operator">/</span><span class="token number">21</span> 합정동<span class="token number">100</span>
+김선달  편집 <span class="token number">73</span><span class="token operator">/</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">22</span> 망원동 <span class="token number">90</span>
+성춘향  기획 <span class="token number">64</span><span class="token operator">/</span><span class="token number">02</span><span class="token operator">/</span><span class="token number">20</span> 대흥동<span class="token number">100</span>
+장길산  편집 <span class="token number">67</span><span class="token operator">/</span><span class="token number">03</span><span class="token operator">/</span><span class="token number">11</span> 상암동<span class="token number">120</span>
+일지매  기획 <span class="token number">78</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">29</span> 연남동<span class="token number">110</span>
+강건달  인터넷  <span class="token number">80</span><span class="token operator">/</span><span class="token number">12</span><span class="token operator">/</span><span class="token number">11</span>  <span class="token number">90</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 주소만 검색하되 같은 주소는 한번만 출력</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> 주소 <span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+
+주소                                                                                                  
+<span class="token comment">------</span>
+망원동
+연남동
+서교동
+합정동
+상암동
+대흥동</code></pre></div>
+<ul>
+<li>사원 테이블에서 기본급에 특별수당 10을 더한 월급을 ‘~부서의 ~의 월급 ~‘으로 출력(오라클)</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서 <span class="token operator">||</span> <span class="token string">'부서의'</span> <span class="token keyword">AS</span> 부서<span class="token number">2</span><span class="token punctuation">,</span> 이름 <span class="token operator">||</span> <span class="token string">'의 월급'</span> <span class="token keyword">AS</span> 이름<span class="token number">2</span><span class="token punctuation">,</span> 기본급 <span class="token operator">+</span> <span class="token number">10</span> <span class="token keyword">AS</span> 기본급<span class="token number">2</span>
+<span class="token keyword">FROM</span> 사원<span class="token punctuation">;</span>
+
+
+부서<span class="token number">2</span>  이름<span class="token number">2</span> 기본급<span class="token number">2</span>
+<span class="token comment">---------------------------</span>
+기획부서의 홍길동의 월급<span class="token number">130</span>
+인터넷부서의  임꺽정의 월급 <span class="token number">90</span>
+편집부서의 황진이의 월급<span class="token number">110</span>
+편집부서의 김선달의 월급<span class="token number">100</span>
+기획부서의 성춘향의 월급<span class="token number">110</span>
+편집부서의 장길산의 월급<span class="token number">130</span>
+기획부서의 일지매의 월급<span class="token number">120</span>
+인터넷부서의  강건달의 월급<span class="token number">100</span></code></pre></div>
+<ul>
+<li><code class="language-text">조건 지정 검색</code></li>
+<li>사원 테이블에서 기획부의 모든 튜플</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 부서<span class="token operator">=</span><span class="token string">'기획'</span><span class="token punctuation">;</span>
+
+이름    부서   생일    주소 기본급
+<span class="token comment">------------------------------</span>
+홍길동  기획 <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동 <span class="token number">120</span>
+성춘향  기획 <span class="token number">64</span><span class="token operator">/</span><span class="token number">02</span><span class="token operator">/</span><span class="token number">20</span> 대흥동 <span class="token number">100</span>
+일지매  기획 <span class="token number">78</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">29</span> 연남동 <span class="token number">110</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 부서는 ‘기획’이고 기본급이 110보다 큰 튜플을 검색하는 SQL문을 작성하시오</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 부서<span class="token operator">=</span><span class="token string">'기획'</span> <span class="token operator">AND</span> 기본급 <span class="token operator">></span> <span class="token number">110</span><span class="token punctuation">;</span>
+
+이름    부서   생일    주소 기본급
+<span class="token comment">------------------------------</span>
+홍길동  기획 <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동 <span class="token number">120</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 ‘부서’가 ‘기획’이거나 ‘인터넷’인 튜플 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 부서<span class="token operator">=</span><span class="token string">'기획'</span> <span class="token operator">OR</span> 부서<span class="token operator">=</span><span class="token string">'인터넷'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 부서 <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">'기획'</span><span class="token punctuation">,</span><span class="token string">'인터넷'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+이름    부서     생일    주소   기본급
+<span class="token comment">------------------------------------</span>
+임꺽정  인터넷  <span class="token number">69</span><span class="token operator">/</span><span class="token number">09</span><span class="token operator">/</span><span class="token number">01</span> 서교동  <span class="token number">80</span>
+성춘향  기획    <span class="token number">64</span><span class="token operator">/</span><span class="token number">02</span><span class="token operator">/</span><span class="token number">20</span> 대흥동  <span class="token number">100</span>
+일지매  기획    <span class="token number">78</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">29</span> 연남동  <span class="token number">110</span>
+강건달  인터넷  <span class="token number">80</span><span class="token operator">/</span><span class="token number">12</span><span class="token operator">/</span><span class="token number">11</span>         <span class="token number">90</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 성이 ‘김’인 사람의 튜플 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 이름 <span class="token operator">LIKE</span> <span class="token string">'김%'</span><span class="token punctuation">;</span>
+
+이름   부서   생일    주소 기본급
+<span class="token comment">---------------------------------</span>
+김선달  편집 <span class="token number">73</span><span class="token operator">/</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">22</span> 망원동 <span class="token number">90</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 생일이 ‘69-01-01’에서 ‘73-12-31’</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 생일 <span class="token operator">BETWEEN</span> <span class="token string">'69-01-01'</span> <span class="token operator">AND</span> <span class="token string">'73-12-31'</span><span class="token punctuation">;</span>
+
+이름     부서   생일     주소  기본급
+<span class="token comment">---------------------------------</span>
+임꺽정  인터넷  <span class="token number">69</span><span class="token operator">/</span><span class="token number">09</span><span class="token operator">/</span><span class="token number">01</span> 서교동 <span class="token number">80</span>
+김선달  편집    <span class="token number">73</span><span class="token operator">/</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">22</span> 망원동 <span class="token number">90</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 주소가 NULL인 튜플 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 주소 <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+이름    부서    생일    주소   기본급
+<span class="token comment">-----------------------------------</span>
+강건달  인터넷  <span class="token number">80</span><span class="token operator">/</span><span class="token number">12</span><span class="token operator">/</span><span class="token number">11</span>       <span class="token number">90</span></code></pre></div>
+<ul>
+<li><code class="language-text">정렬 검색</code></li>
+<li>사원 테이블에서 주소를 기준으로 내림차순 정렬시켜 상위 2개 튜플만 검색(오라클)</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span>  <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> ROWNUM <span class="token operator">&lt;=</span> <span class="token number">2</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 주소 <span class="token keyword">DESC</span><span class="token punctuation">;</span>
+
+이름    부서     생일    주소 기본급
+<span class="token comment">------------------------------------</span>
+임꺽정  인터넷  <span class="token number">69</span><span class="token operator">/</span><span class="token number">09</span><span class="token operator">/</span><span class="token number">01</span> 서교동 <span class="token number">80</span>
+홍길동  기획    <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동 <span class="token number">120</span></code></pre></div>
+<ul>
+<li>사원 테이블에서 부서를 기준으로 오름차순 정렬하고 같은 부서에 대해서는 이름을 기준으로 내림차순</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span>  <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 부서 <span class="token keyword">ASC</span><span class="token punctuation">,</span> 이름 <span class="token keyword">DESC</span><span class="token punctuation">;</span>
+
+이름    부서    생일   주소  기본급
+<span class="token comment">-----------------------------------</span>
+홍길동  기획 <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동 <span class="token number">120</span>
+일지매  기획 <span class="token number">78</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">29</span> 연남동 <span class="token number">110</span>
+성춘향  기획 <span class="token number">64</span><span class="token operator">/</span><span class="token number">02</span><span class="token operator">/</span><span class="token number">20</span> 대흥동 <span class="token number">100</span>
+임꺽정  인터넷  <span class="token number">69</span><span class="token operator">/</span><span class="token number">09</span><span class="token operator">/</span><span class="token number">01</span> 서교동 <span class="token number">80</span>
+강건달  인터넷  <span class="token number">80</span><span class="token operator">/</span><span class="token number">12</span><span class="token operator">/</span><span class="token number">11</span>     <span class="token number">90</span>
+황진이  편집 <span class="token number">75</span><span class="token operator">/</span><span class="token number">07</span><span class="token operator">/</span><span class="token number">21</span> 합정동 <span class="token number">100</span>
+장길산  편집 <span class="token number">67</span><span class="token operator">/</span><span class="token number">03</span><span class="token operator">/</span><span class="token number">11</span> 상암동 <span class="token number">120</span>
+김선달  편집 <span class="token number">73</span><span class="token operator">/</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">22</span> 망원동 <span class="token number">90</span></code></pre></div>
+<ul>
+<li><code class="language-text">하위 질의</code></li>
+<li>취미가 나이트댄스인 사원의 이름과 주소를 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 이름<span class="token punctuation">,</span> 주소
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 이름<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SELECT</span> 이름 <span class="token keyword">FROM</span> 여가활동 <span class="token keyword">WHERE</span> 취미<span class="token operator">=</span><span class="token string">'나이트댄스'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+이름    주소                                                                                                 
+<span class="token comment">---------------</span>
+성춘향  대흥동                                                                                              </code></pre></div>
+<ul>
+<li>취미 활동을 하지 않는 사원</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> 사원
+<span class="token keyword">WHERE</span> 이름 <span class="token operator">NOT</span> <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> 이름 <span class="token keyword">FROM</span> 여가활동<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+이름    부서    생일   주소 기본급
+<span class="token comment">---------------------------------</span>
+강건달  인터넷  <span class="token number">80</span><span class="token operator">/</span><span class="token number">12</span><span class="token operator">/</span><span class="token number">11</span>      <span class="token number">90</span>
+홍길동  기획 <span class="token number">61</span><span class="token operator">/</span><span class="token number">04</span><span class="token operator">/</span><span class="token number">05</span> 망원동 <span class="token number">120</span>
+황진이  편집 <span class="token number">75</span><span class="token operator">/</span><span class="token number">07</span><span class="token operator">/</span><span class="token number">21</span> 합정동 <span class="token number">100</span>
+장길산  편집 <span class="token number">67</span><span class="token operator">/</span><span class="token number">03</span><span class="token operator">/</span><span class="token number">11</span> 상암동 <span class="token number">120</span></code></pre></div>
+<ul>
+<li><code class="language-text">복수 테이블 검색</code></li>
+<li>경력이 10년 이상인 사원의 이름, 부서, 취미, 경력 검색</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 사원<span class="token punctuation">.</span>이름<span class="token punctuation">,</span> 사원<span class="token punctuation">.</span>부서<span class="token punctuation">,</span> 여가활동<span class="token punctuation">.</span>취미<span class="token punctuation">,</span> 여가활동<span class="token punctuation">.</span>경력
+<span class="token keyword">FROM</span> 사원<span class="token punctuation">,</span> 여가활동
+<span class="token keyword">WHERE</span> 여가활동<span class="token punctuation">.</span>경력 <span class="token operator">>=</span> <span class="token number">10</span> <span class="token operator">AND</span> 사원<span class="token punctuation">.</span>이름 <span class="token operator">=</span> 여가활동<span class="token punctuation">.</span>이름<span class="token punctuation">;</span>
+
+이름   부서  취미  경력
+<span class="token comment">---------------------------</span>
+김선달  편집 당구 <span class="token number">10</span>
+일지매  기획 태껸 <span class="token number">15</span></code></pre></div>
+<h1 id="5-dml---select2" style="position:relative;"><a href="#5-dml---select2" aria-label="5 dml   select2 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. DML - SELECT(2)</h1>
+<table>
+<thead>
+<tr>
+<th>그룹 함수명</th>
+<th>속성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COUNT(속성명)</td>
+<td>그룹별 튜플 수</td>
+</tr>
+<tr>
+<td>MAX(속성명)</td>
+<td>그룹별 최대값</td>
+</tr>
+<tr>
+<td>MIN(속성명)</td>
+<td>그룹별 최소값</td>
+</tr>
+<tr>
+<td>SUM(속성명)</td>
+<td>그룹별 합계</td>
+</tr>
+<tr>
+<td>AVG(속성명)</td>
+<td>그룹별 평균</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code class="language-text">HAVING절</code> : GROUP BY와 함께 사용, 그룹에 대한 조건 지정</li>
+<li>
+<p><code class="language-text">ORDER BY절</code> : 특정 속성을 기준으로 정렬하여 검색할 때 사용</p>
+<ul>
+<li>속성명 : 정렬의 기준이 되는 속성명을 기술</li>
+<li><em>ASC</em> : 오름차순. 생략하면 오름차순으로 지정</li>
+<li><em>DESC</em> : 내림차순</li>
+</ul>
+</li>
+<li>WINDOW 함수 이용 검색</li>
+<li>상여금 테이블에서 ‘상여내역’별로 ‘상여금’에 대한 일련 번호 구하기</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 상여내역<span class="token punctuation">,</span> 상여금
+	ROW_NUMBER<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">OVER</span> <span class="token punctuation">(</span><span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> 상여내역 <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 상여급 <span class="token keyword">DESC</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> <span class="token keyword">NO</span>
+<span class="token keyword">FROM</span> 상여금<span class="token punctuation">;</span>
+
+상여내역   상여금         <span class="token keyword">NO</span>
+<span class="token comment">---------------------------</span>
+야간근무    <span class="token number">120</span>         <span class="token number">1</span>
+야간근무 	<span class="token number">80</span>          <span class="token number">2</span>
+야간근무 	<span class="token number">80</span>          <span class="token number">2</span>
+야간근무 	<span class="token number">50</span>          <span class="token number">4</span>
+연장근무    <span class="token number">100</span>         <span class="token number">1</span>
+연장근무    <span class="token number">100</span>         <span class="token number">2</span>
+연장근무    <span class="token number">40</span>          <span class="token number">3</span>
+연장근무    <span class="token number">30</span>          <span class="token number">4</span>
+특별근무    <span class="token number">90</span>          <span class="token number">1</span>
+특별근무    <span class="token number">90</span>          <span class="token number">2</span>
+특별근무    <span class="token number">90</span>          <span class="token number">3</span>
+특별근무    <span class="token number">80</span>          <span class="token number">4</span></code></pre></div>
+<ul>
+<li>상여금 테이블에서 ‘상여내역’별로 ‘상여금’에 대한 순위를 구하기</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 상여내역<span class="token punctuation">,</span> 상여금<span class="token punctuation">,</span> RANK<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">OVER</span> <span class="token punctuation">(</span><span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> 상여내역 <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 상여금 <span class="token keyword">DESC</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> 상여금순위
+<span class="token keyword">FROM</span> 상여금<span class="token punctuation">;</span>
+
+상여내역    상여금    상여순위
+<span class="token comment">--------- ---------- ----------</span>
+야간근무   <span class="token number">120</span>          <span class="token number">1</span>
+야간근무    <span class="token number">80</span>          <span class="token number">2</span>
+야간근무    <span class="token number">80</span>          <span class="token number">2</span>
+야간근무    <span class="token number">50</span>          <span class="token number">4</span>
+연장근무   <span class="token number">100</span>          <span class="token number">1</span>
+연장근무   <span class="token number">100</span>          <span class="token number">1</span>
+연장근무    <span class="token number">40</span>          <span class="token number">3</span>
+연장근무    <span class="token number">30</span>          <span class="token number">4</span>
+특별근무    <span class="token number">90</span>          <span class="token number">1</span>
+특별근무    <span class="token number">90</span>          <span class="token number">1</span>
+특별근무    <span class="token number">90</span>          <span class="token number">1</span>
+특별근무    <span class="token number">80</span>          <span class="token number">4</span></code></pre></div>
+<ul>
+<li>그룹 지정 검색</li>
+<li>상여금 테이블에서 ‘부서’별 ‘상여금’의 평균</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서<span class="token punctuation">,</span> <span class="token function">AVG</span><span class="token punctuation">(</span>상여금<span class="token punctuation">)</span> <span class="token keyword">AS</span> 평균
+<span class="token keyword">FROM</span> 상여금
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 부서<span class="token punctuation">;</span>
+
+부서              평균
+<span class="token comment">-------------------------</span>
+기획            <span class="token number">102.5</span>
+인터넷             <span class="token number">70</span>
+편집               <span class="token number">66</span></code></pre></div>
+<ul>
+<li>상여금 테이블에서 ‘부서’별 튜플 수</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> 사원수
+<span class="token keyword">FROM</span> 상여금
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 부서<span class="token punctuation">;</span>
+
+부서         사원수
+<span class="token comment">-------------------</span>
+기획         <span class="token number">4</span>
+인터넷       <span class="token number">3</span>
+편집         <span class="token number">5</span></code></pre></div>
+<ul>
+<li>상여금 테이블에서 ‘상여금’이 100 이상인 사원이 2명 이상인 ‘부서’의 튜플 수</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> 사원수
+<span class="token keyword">FROM</span> 상여금
+<span class="token keyword">WHERE</span> 상여금 <span class="token operator">>=</span> <span class="token number">100</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 부서
+<span class="token keyword">HAVING</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">2</span>
+
+부서         사원수
+<span class="token comment">-------------------</span>
+기획         <span class="token number">3</span></code></pre></div>
+<ul>
+<li>상여금 테이블의 ‘부서’, ‘상여내역’, 그리고 ‘상여금’ 에 대해 부서별 상여내역별 소계와 전체합계(ROLLUP)</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서<span class="token punctuation">,</span> 상여내역<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>상여금<span class="token punctuation">)</span> <span class="token keyword">AS</span> 상여금합계
+<span class="token keyword">FROM</span> 상여금
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> ROLLUP<span class="token punctuation">(</span>부서<span class="token punctuation">,</span> 상여내역<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+부서       상여내역    상여금합계
+<span class="token comment">----------------------------------</span>
+기획     야간근무        <span class="token number">120</span>
+기획     연장근무        <span class="token number">200</span>
+기획     특별근무         <span class="token number">90</span>
+기획                    <span class="token number">410</span>
+편집     야간근무        <span class="token number">210</span>
+편집     연장근무         <span class="token number">40</span>
+편집     특별근무         <span class="token number">80</span>
+편집                    <span class="token number">330</span>
+인터넷   연장근무         <span class="token number">30</span>
+인터넷   특별근무        <span class="token number">180</span>
+인터넷                  <span class="token number">210</span>
+                       <span class="token number">950</span></code></pre></div>
+<ul>
+<li>상여금 테이블의 ‘부서’, ‘상여내역’, 그리고 ‘상여금’ 에 대해 부서별 상여내역별 소계와 전체합계(CUBE)</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 부서<span class="token punctuation">,</span> 상여내역<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>상여금<span class="token punctuation">)</span> <span class="token keyword">AS</span> 상여금합계
+<span class="token keyword">FROM</span> 상여금
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> CUBE<span class="token punctuation">(</span>부서<span class="token punctuation">,</span> 상여내역<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+
+부서       상여내역    상여금합계
+<span class="token comment">---------------------------------</span>
+                        <span class="token number">950</span>
+         야간근무        <span class="token number">330</span>
+         연장근무        <span class="token number">270</span>
+         특별근무        <span class="token number">350</span>
+기획                     <span class="token number">410</span>
+기획     야간근무        <span class="token number">120</span>
+기획     연장근무        <span class="token number">200</span>
+기획     특별근무         <span class="token number">90</span>
+편집                     <span class="token number">330</span>
+편집     야간근무        <span class="token number">210</span>
+편집     연장근무         <span class="token number">40</span>
+편집     특별근무         <span class="token number">80</span>
+인터넷                   <span class="token number">210</span>
+인터넷   연장근무         <span class="token number">30</span>
+인터넷   특별근무        <span class="token number">180</span></code></pre></div>
+<h1 id="6-dml---join" style="position:relative;"><a href="#6-dml---join" aria-label="6 dml   join permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. DML - JOIN</h1>
+<hr>
+<ul>
+<li>2개의 테이블에 대해 연관된 튜플들을 결합하여, 하나의 새로운 릴레이션을 반환</li>
+<li>JOIN은 일반적으로 FROM절에 기술하지만, 릴레이션이 사용되는 어느 곳에서나 사용 가능</li>
+<li><code class="language-text">INNER JOIN</code> : 가장 일반적인 JOIN의 형태로, 관계가 설정된 두 테이 블에서 조인된 필드가 일치하는 행만을 표시</li>
+<li>WHERE절을 이용한 표기 형식</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token punctuation">[</span>테이블명<span class="token number">1.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> <span class="token punctuation">[</span>테이블명<span class="token number">2.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> …
+<span class="token keyword">FROM</span> 테이블명<span class="token number">1</span><span class="token punctuation">,</span> 테이블명<span class="token number">2</span><span class="token punctuation">,</span> …
+<span class="token keyword">WHERE</span> 테이블명<span class="token number">1.</span>속성명 <span class="token operator">=</span> 테이블명<span class="token number">2.</span>속성명<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>NATURAL JOIN을 이용한 표기 형식</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token punctuation">[</span>테이블명<span class="token number">1.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> <span class="token punctuation">[</span>테이블명<span class="token number">2.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> …
+<span class="token keyword">FROM</span> 테이블명<span class="token number">1</span> <span class="token keyword">JOIN</span> 테이블명<span class="token number">2</span> <span class="token keyword">USING</span><span class="token punctuation">(</span>속성명<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h1 id="7-dml---outer-join" style="position:relative;"><a href="#7-dml---outer-join" aria-label="7 dml   outer join permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. DML - OUTER JOIN</h1>
+<hr>
+<ul>
+<li>릴레이션에서 JOIN 조건에 만족하지 않는 튜플도 결과로 출력하기 위한 JOIN 방법</li>
+<li><code class="language-text">LEFT OUTER JOIN</code> : INNER JOIN의 결과를 구한 후, 우측 항 릴레이션의 어떤 튜플과도 맞지 않는 좌측 항의 릴레이션에 있는 튜플들에 NULL 값을 붙여서 INNER JOIN의 결과에 추가</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token punctuation">[</span>테이블명<span class="token number">1.</span><span class="token punctuation">]</span> 속성명<span class="token punctuation">,</span> <span class="token punctuation">[</span>테이블명<span class="token number">2.</span><span class="token punctuation">]</span> 속성명<span class="token punctuation">,</span> …
+<span class="token keyword">FROM</span> 테이블명<span class="token number">1</span> <span class="token keyword">LEFT</span> <span class="token keyword">OUTER</span> <span class="token keyword">JOIN</span> 테이블명<span class="token number">2</span>
+<span class="token keyword">ON</span> 테이블명<span class="token number">1.</span>속성명 <span class="token operator">=</span> 테이블명<span class="token number">2.</span>속성명<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li><code class="language-text">RIGHT OUTER JOIN</code> : INNER JOIN의 결과를 구한 후, 좌측 항 릴레이션의 어떤 튜플과도 맞지 않는 우측 항의 릴레이션에 있는 튜플들에 NULL 값을 붙여서 INNER JOIN의 결과에 추가</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token punctuation">[</span>테이블명<span class="token number">1.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> <span class="token punctuation">[</span>테이블명<span class="token number">2.</span><span class="token punctuation">]</span>속성명<span class="token punctuation">,</span> …
+<span class="token keyword">FROM</span> 테이블명<span class="token number">1</span> <span class="token keyword">RIGHT</span> <span class="token keyword">OUTER</span> <span class="token keyword">JOIN</span> 테이블명<span class="token number">2</span>
+<span class="token keyword">ON</span> 테이블명<span class="token number">1.</span>속성명 <span class="token operator">=</span> 테이블명<span class="token number">2.</span>속성명<span class="token punctuation">;</span></code></pre></div>
+<h1 id="8-프로시저procedure" style="position:relative;"><a href="#8-%ED%94%84%EB%A1%9C%EC%8B%9C%EC%A0%80procedure" aria-label="8 프로시저procedure permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. 프로시저(Procedure)</h1>
+<hr>
+<ul>
+<li>절차형 SQL을 활용하여 특정 기능을 수행하는 일종의 트랜잭션 언어, 호출을 통해 실행되어 미리 저장해 놓은 SQL 작업을 수행</li>
+<li>시스템의 일일 마감 작업, 일괄 작업 등에 주로 사용</li>
+<li><em>이벤트 : (DECLARE / BIGIN / END)</em></li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 대학교
+<span class="token punctuation">(</span> 
+    학교 <span class="token keyword">VARCHAR2</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    성적 <span class="token keyword">NUMBER</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    학과 <span class="token keyword">VARCHAR2</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">commit</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>기본 형식</p>
+<ul>
+<li><code class="language-text">DECLARE</code> :프로시저 명칭, 변수, 인수, 데이터 타입 정의</li>
+<li><code class="language-text">BEGIN / END</code> : 프로시저의 시작과 종료</li>
+<li><code class="language-text">CONTROL</code> : 조건문 / 반복문 삽입되어 순차처리</li>
+<li><code class="language-text">SQL</code> : DML, DCL이 삽입되어 데이터 관리를 위한 CRUD 수행</li>
+<li><code class="language-text">EXCEPTION</code> : BEGIN ~ END 안의 구문 실행 시 예외가 발생하면 이를 처리하는 방법 정의</li>
+<li><code class="language-text">TRANSACTION</code> : 수행된 데이터 작업들을 DB에 적용할지 취소할지 결정</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DECLARE</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+<span class="token keyword">BEGIN</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+  <span class="token operator">*</span> CONTROL
+  <span class="token operator">*</span> <span class="token keyword">SQL</span>
+  <span class="token operator">*</span> EXCEPTION
+  <span class="token operator">*</span> <span class="token keyword">TRANSACTION</span>
+<span class="token keyword">END</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>생성</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> <span class="token keyword">PROCEDURE</span> EX_PROC<span class="token punctuation">(</span>
+    P_성적 <span class="token operator">IN</span> NUMBER<span class="token punctuation">,</span>
+    P_학과 <span class="token operator">IN</span> VARCHAR2
+<span class="token punctuation">)</span>
+<span class="token operator">IS</span> 
+P_학교 VARCHAR2<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span> :<span class="token operator">=</span> <span class="token string">'서울대학교'</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 대학교<span class="token punctuation">(</span>학교<span class="token punctuation">,</span> 성적<span class="token punctuation">,</span> 학과<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span>P_학교<span class="token punctuation">,</span> P_성적<span class="token punctuation">,</span> P_학과<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    EXCEPTION
+        <span class="token keyword">WHEN</span> PROGRAM_ERROR <span class="token keyword">THEN</span>
+            <span class="token keyword">ROLLBACK</span><span class="token punctuation">;</span>
+    <span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span> EX_PROC<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>실행</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">EXECUTE</span> EX_PROC<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token string">'물리학과'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">EXEC</span> EX_PROC<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token string">'물리학과'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">CALL</span> EX_PROC<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token string">'물리학과'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>제거</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">PROCEDURE</span> EX_PROC<span class="token punctuation">;</span></code></pre></div>
+<h1 id="9-트리거trigger" style="position:relative;"><a href="#9-%ED%8A%B8%EB%A6%AC%EA%B1%B0trigger" aria-label="9 트리거trigger permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. 트리거(Trigger)</h1>
+<hr>
+<ul>
+<li>데이터베이스 시스템에서 데이터의 삽입, 갱신, 삭제 등의 이벤트가 발생할 때마다 관련 작업이 자동으로 수행되는 절차형 SQL</li>
+<li>데이터베이스에 저장되며, 데이터 변경 및 무결성 유지, 로그 메시지 출력 등의 목적으로 사용</li>
+<li><em>이벤트 : (DECLARE/EVENT/BEGIN/END)</em></li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DECLARE</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+EVENT <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+<span class="token keyword">BEGIN</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+  <span class="token operator">*</span> CONTROL
+  <span class="token operator">*</span> <span class="token keyword">SQL</span>
+  <span class="token operator">*</span> EXCEPTION
+<span class="token keyword">END</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>생성</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TRIGGER</span> EX_TRIG BEFORE <span class="token keyword">INSERT</span> <span class="token keyword">ON</span> 대학교
+REFERENCING NEW <span class="token keyword">AS</span> NEW_TABLE
+<span class="token keyword">FOR EACH ROW</span>
+<span class="token keyword">WHEN</span> <span class="token punctuation">(</span>NEW_TABLE<span class="token punctuation">.</span>학년 <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">)</span>
+    <span class="token keyword">BEGIN</span>
+        :NEW_TABLE<span class="token punctuation">.</span>학년 :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>제거</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TRIGGER</span> EX_TRIG<span class="token punctuation">;</span></code></pre></div>
+<h1 id="10-사용자-정의-함수" style="position:relative;"><a href="#10-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%95%EC%9D%98-%ED%95%A8%EC%88%98" aria-label="10 사용자 정의 함수 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. 사용자 정의 함수</h1>
+<hr>
+<ul>
+<li>프로시저와 유사하게 SQL을 사용하여 일련의 작업을 연속적으로 처리하며, 종료 시 처리 결과를 단일 값으로 반환하는 절차형 SQL</li>
+<li>데이터베이스에 저장되어 DML문의 호출에 의해 실행</li>
+<li>예약어 RETURN을 통해 값을 반환하기 때문에 출력 파라미터가 없음</li>
+<li><em>이벤트 : (DECLARE/BEGIN/END)</em></li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DECLARE</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+<span class="token keyword">BEGIN</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+  <span class="token operator">*</span> CONTROL
+  <span class="token operator">*</span> <span class="token keyword">SQL</span>
+  <span class="token operator">*</span> EXCEPTION
+  <span class="token operator">*</span> <span class="token keyword">RETURN</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span>
+<span class="token keyword">END</span> <span class="token punctuation">(</span>필수<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>생성</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token punctuation">[</span><span class="token operator">OR</span> <span class="token keyword">REPLACE</span><span class="token punctuation">]</span> <span class="token keyword">FUNCTION</span> 사용자 정의 함수명<span class="token punctuation">(</span>파라미터<span class="token punctuation">)</span> <span class="token punctuation">[</span>지역변수 선언<span class="token punctuation">]</span>
+<span class="token keyword">BEGIN</span>
+  사용자 정의 함수 BODY<span class="token punctuation">;</span>
+<span class="token keyword">RETURN</span> 반환값<span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>실행</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 함수명 <span class="token keyword">FROM</span> 테이블명<span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 테이블명<span class="token punctuation">(</span>속성명<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span>함수명<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> 테이블명 <span class="token keyword">WHERE</span> 속성명 <span class="token operator">=</span> 함수명<span class="token punctuation">;</span>
+<span class="token keyword">UPDATE</span> 테이블명 <span class="token keyword">SET</span> 속성명 <span class="token operator">=</span> 함수명<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>제거</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">FUNCTION</span> 함수명<span class="token punctuation">;</span></code></pre></div>
+<h1 id="11-제어문" style="position:relative;"><a href="#11-%EC%A0%9C%EC%96%B4%EB%AC%B8" aria-label="11 제어문 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11. 제어문</h1>
+<hr>
+<p>절차형 SQL은 SQL 명령어가 서술된 순서에 따라 위에서 아래로 차례대로 실행되는데, 이러한 진행 순서를 변경하기 위해 사용하는 명령문</p>
+<ul>
+<li><code class="language-text">IF문</code> : 조건에 따라 실행할 문장을 달리하는 제어문</li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"> <span class="token comment">-- IF 단일</span>
+<span class="token keyword">DECLARE</span> 
+    X <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">IF</span> X <span class="token operator">></span> <span class="token number">10</span> <span class="token keyword">THEN</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'TRUE'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span> <span class="token keyword">IF</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- TRUE</span>
+
+<span class="token comment">-- IF / ELSE</span>
+<span class="token keyword">DECLARE</span> 
+    X <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">IF</span> X <span class="token operator">></span> <span class="token number">10</span> <span class="token keyword">THEN</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'TRUE'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">ELSE</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'FALSE'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        
+    <span class="token keyword">END</span> <span class="token keyword">IF</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- FALSE</span>
+
+<span class="token comment">-- IF / ELSIF / ELSE</span>
+
+<span class="token keyword">DECLARE</span> 
+    X <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">IF</span> X <span class="token operator">></span> <span class="token number">20</span> <span class="token keyword">THEN</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'TRUE20'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ELSIF X <span class="token operator">></span> <span class="token number">10</span> <span class="token keyword">THEN</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'TRUE10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token keyword">ELSE</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'FALSE'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        
+    <span class="token keyword">END</span> <span class="token keyword">IF</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- FALSE</span></code></pre></div>
+<ul>
+<li><code class="language-text">LOOP</code> : 조건에 따라 실행할 문장을 수행하는 제어문</li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"><span class="token keyword">DECLARE</span>
+    I <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    I_SUM <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">LOOP</span>
+         I <span class="token operator">:=</span> I<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+         I_SUM <span class="token operator">:=</span>I_SUM <span class="token operator">+</span> I<span class="token punctuation">;</span>
+         <span class="token keyword">EXIT</span> <span class="token keyword">WHEN</span> I <span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span> <span class="token keyword">LOOP</span><span class="token punctuation">;</span>
+    DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>I_SUM<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token comment">-- 55</span></code></pre></div>
+<ul>
+<li><code class="language-text">FOR LOOP</code> : 초기값부터 종료값까지 증가하면서 실행할 문장 반복 수행</li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"><span class="token keyword">DECLARE</span>
+    I_SUM <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">FOR</span> I <span class="token operator">IN</span> <span class="token number">1.</span><span class="token number">.10</span>
+    <span class="token keyword">LOOP</span>
+        I_SUM <span class="token operator">:=</span> I_SUM <span class="token operator">+</span> I<span class="token punctuation">;</span>
+    <span class="token keyword">END</span> <span class="token keyword">LOOP</span><span class="token punctuation">;</span>
+    DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>I_SUM<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 55</span></code></pre></div>
+<ul>
+<li><code class="language-text">WHILE LOOP</code> : 조건이 참인 동안 실행할 문장을 반복 수행</li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"><span class="token keyword">DECLARE</span>
+	I <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	I_SUM <span class="token keyword">INT</span> <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">WHILE</span> I <span class="token operator">&lt;</span> <span class="token number">10</span>
+    <span class="token keyword">LOOP</span>
+        I <span class="token operator">:=</span> I<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        I_SUM <span class="token operator">:=</span> I_SUM <span class="token operator">+</span> I<span class="token punctuation">;</span>
+    <span class="token keyword">END</span> <span class="token keyword">LOOP</span><span class="token punctuation">;</span>
+    DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>I_SUM<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li><code class="language-text">CONTINUE</code> : 반복문의 실행을 제어하기 위해 사용하는 예약어</li>
+</ul>
+<div class="gatsby-highlight" data-language="plsql"><pre class="language-plsql"><code class="language-plsql"><span class="token keyword">BEGIN</span>
+    <span class="token keyword">FOR</span> I <span class="token operator">IN</span> <span class="token number">1.</span><span class="token number">.3</span> <span class="token keyword">LOOP</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>I<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'HELLO'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">CONTINUE</span> <span class="token keyword">WHEN</span> I <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'WORLD'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span> <span class="token keyword">LOOP</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+
+
+<span class="token number">1</span>
+HELLO
+WORLD
+<span class="token number">2</span>
+HELLO
+<span class="token number">3</span>
+HELLO
+WORLD</code></pre></div>
+<h1 id="12-sql---커서cursor" style="position:relative;"><a href="#12-sql---%EC%BB%A4%EC%84%9Ccursor" aria-label="12 sql   커서cursor permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. SQL - 커서(Cursor)</h1>
+<hr>
+<ul>
+<li>커서 : 쿼리문의 처리 결과가 저장되어 있는 메모리 공간을 가리키는 포인터. 커서의 수행은 열기, 패치, 닫기의 세 단계로 진행</li>
+<li>
+<p><code class="language-text">묵시적 커서</code> : 내부에서 자동으로 생성되어 사용, DBMS 자체적으로 열리고(Open) 패치(Fetch)되어 사용이 끝나면 닫히지만(Close) 커서의 속성을 조회하여 사용된 쿼리 정보를 열람하는 것이 가능</p>
+<ul>
+<li><code class="language-text">SQL%FOUND</code>: 쿼리 수행의 결과로 패치(Fetch)된 튜플 수가 1개 이상이면 TRUE</li>
+<li><code class="language-text">SQL%NOTFOUND</code> : 쿼리 수행의 결과로 패치(Fetch)된 튜플 수가 0개이면 TRUE</li>
+<li><code class="language-text">SQL%ROWCOUNT</code> : 쿼리 수행의 결과로 패치(Fetch)된 튜플 수를 반환</li>
+<li><code class="language-text">SQL%ISOPEN</code> : 커서가 열린(Open) 상태이면 TRUE , 묵시적 커서는 자동으로 생성된 후 자동으로 닫히기 때문에 항상 FALSE</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">명시적 커서</code> : 사용자가 직접 정의해서 사용</p>
+<ul>
+<li>사용자가 직접 정의해서 사용하는 커서로, 주로 절차형 SQL에서 SELECT문의 결과로 반환되는 여러 튜플들을 제어하기 위해 사용</li>
+<li>커서는 기본적으로 열기 ,패치, 닫기 순으로 이루어지며, 명시적 커서로 사용하기 위해서는 열기 전에 선언을 해야함</li>
+</ul>
+</li>
+</ul></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__VisibleTable-sc-1hokm1n-10 hAenLH"></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="style__CommentDiv-f1ulxg-6 iRLYFX"></div></div></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY 염동환</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/[2020] 정보 처리 기사 실기 요약 8-SQL 응용/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-00f4f4faab327431f083.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-4240f80f9f2c90dab80a.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-7cf4727ab41cc50c39b4.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-01b804407fda08a3434e.js"],"component---src-templates-categorized-list-jsx":["/component---src-templates-categorized-list-jsx-1022c2f03022e8edb644.js"],"component---src-templates-list-jsx":["/component---src-templates-list-jsx-6904af4c090f71f10e84.js"],"component---src-templates-portfolio-jsx":["/component---src-templates-portfolio-jsx-afca090637428c013fea.js"],"component---src-templates-portfolios-jsx":["/component---src-templates-portfolios-jsx-3ec3a6e576f0c52195a3.js"],"component---src-templates-post-jsx":["/component---src-templates-post-jsx-f5e1e6d4d680aa581618.js"],"component---src-templates-resume-jsx":["/component---src-templates-resume-jsx-a81ae775c7a1d61886c2.js"],"component---src-templates-tagged-list-jsx":["/component---src-templates-tagged-list-jsx-34f253b954e67dd02fdd.js"]};/*]]>*/</script><script src="/component---src-templates-post-jsx-f5e1e6d4d680aa581618.js" async=""></script><script src="/c2c45664921f384cbb57e917886f75ed18a7c772-f195d5c482de70c8cb04.js" async=""></script><script src="/73bb605ea3e8982cb7cb1d831bcb96853dcd1a75-e7162c7b5cd0bd4b75c2.js" async=""></script><script src="/468967d5554fbdfaa4755e6d87845426800be832-077af773d4d23f0422bd.js" async=""></script><script src="/7608a4a4e80a2d64cce96855cef341673398a342-32c2992c98ee9d30e767.js" async=""></script><script src="/252f366e-cbed17ab1e62b1b55d2a.js" async=""></script><script src="/31664189-fa40fe387825bcbcf66d.js" async=""></script><script src="/1a48c3c1-665ec41623314f3ed35c.js" async=""></script><script src="/1bfc9850-3dd8250b2768c110755a.js" async=""></script><script src="/d7eeaac4-5e1e412499691f038eec.js" async=""></script><script src="/fb7d5399-c2722269e20272c89e2b.js" async=""></script><script src="/78e521c3-462857b96df26c268693.js" async=""></script><script src="/545f34e4-537d8b272c482937bf60.js" async=""></script><script src="/styles-2d4804b503525347efbe.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-00f4f4faab327431f083.js" async=""></script><script src="/webpack-runtime-b95be1d9ade6fc331adc.js" async=""></script><div class="toasts"></div></body></html>
