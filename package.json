@@ -44,6 +44,7 @@
     "gatsby": "^2.8.5",
     "gatsby-cli": "2.12.42",
     "gatsby-plugin-favicon": "3.1.6",
+    "gatsby-plugin-feed": "3.5.0",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-remark-autolink-headers": "2.3.10",
     "gatsby-remark-classes": "1.0.0",
