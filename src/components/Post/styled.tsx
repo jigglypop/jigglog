@@ -420,7 +420,7 @@ export const WarpVisibleUnder = styled.div`
   justify-content: center;
   align-items: center;
   bottom: 0;
-  margin-top: 100px;
+  margin-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
   h4 {
