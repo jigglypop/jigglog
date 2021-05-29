@@ -37,24 +37,18 @@ const SideBar = ({ categorySet } : ISideBar) => {
                             width="60px"
                             height="60px"/>
                     </Link>
-                    <div className="nameh1">
-                        <h1>JIGGLYPOP</h1>
-                    </div>
-                    <div className="nameh1">
-                        <h1>염동환</h1>
-                    </div>
                 </div>
             </SideBarTopDiv>
             <SideBarListDiv>
+            <h6 className="categorytitle">카테고리 목록</h6>
             {categorySet.map(({ key, length }: any) => {
                 if (key === "__ALL__") {
                     return null;
                 }
                 return (
                     <SmallItem key={key}>
-                        <Link to={`/categories/${key}/1`}>
+                        <Link to={`/categories/${key}/1`} className="smallinner">
                             {key}
-                            &nbsp;
                             <small>{`(${length})`}</small>
                         </Link>
                     </SmallItem>);

@@ -65,14 +65,7 @@ export const MenuTitle = styled.div`
   }
 `;
 
-export const SmallItem = styled.div`
-  margin: 10px 5px;
-  font-size: 12px;
-  font-weight: 800;
-  @media (max-width: 600px) {
-    font-size: 10px;
-  }
-`;
+
 
 
 // 헤더바
@@ -155,6 +148,7 @@ export const SideBarDiv = styled.div`
   position: fixed;
   width: 0;
   height: 100%;
+  padding: 10px;
   z-index: 3;
   transition: all 0.3s ease-in-out;
 
@@ -165,8 +159,11 @@ export const SideBarDiv = styled.div`
 `
 
 export const SideBarInnerDiv = styled.div`
+  position: relative;
+  background-color: #141414;
+  height: 100%;
   display: grid;
-  grid-template-rows: 160px 1fr;
+  grid-template-rows: 100px 1fr;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
   transition-delay: -0.2s;
@@ -225,17 +222,49 @@ export const SideBarTopButtonDiv = styled.div`
 
 export const SideBarListDiv = styled.div`
   grid-row: 2/3;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   text-align: center;
-  align-items: flex-start;
-  max-height: 60vh;
-  overflow: scroll;
   margin: 10px;
   background-color: #141414;
+  .categorytitle{
+    color: rgba(0,207,255);
+    font-size: 16px;
+    font-weight: 800;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: 0 0 10px rgba(0,207,255);
+    border: 2px solid rgba(0,207,255);
+  }
 `
+export const SmallItem = styled.div`
+  position: relative;
+  width: 100%;
+  height: 30px;
+  color: red;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .smallinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
+  &:hover {
+    a {
+      color: rgba(0,207,255);
+    }
+  }
+`;
 export const SideBarItemsDiv = styled.div`
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

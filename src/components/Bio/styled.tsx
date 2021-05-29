@@ -19,8 +19,10 @@ export const BioWrapper = styled.div`
   }
   .bottom {
     grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
   }
   .biotext {
     font-size: 13px;
@@ -44,6 +46,12 @@ export const BioWrapper = styled.div`
       display: none;
     }
   }
+`
+
+export const BottomDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 

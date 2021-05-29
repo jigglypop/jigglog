@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import Bio from "../Bio";
 import {
@@ -6,18 +6,16 @@ import {
 } from "../../constants";
 import "./styled.css";
 import Grid from "@material-ui/core/Grid";
-import Clearfix from "../../components/Common/Clearfix";
 import {
   PostWrapper,
   ClearMobile,
   Button,
-  CommentContent,
   PostContent,
   Visible,
   VisibleTable,
   ImageWrapper,
-  ButtonInline,
   WarpVisible,
+  WarpVisibleUnder,
   TocItemDiv,
 } from "./styled";
 import PrintButton from "../Common/PrintButton";
@@ -144,8 +142,6 @@ const PostTemplate = ({
     }
   };
 
-
-
   return (
     <>
       <Helmet>
@@ -201,14 +197,14 @@ const PostTemplate = ({
                 </div>
 
               </WarpVisible>
-              <WarpVisible>
+              <WarpVisibleUnder>
                 <div className="lineblock">
                   <KakaoShareButton title={title} image={image}/>
                 </div>
                 <div className="lineblock">
                   <h4 className="text">카카오톡 공유</h4>
                 </div>
-              </WarpVisible>
+              </WarpVisibleUnder>
               <WarpVisible>
                 <div className="lineblock">
                   <CopyButton/>

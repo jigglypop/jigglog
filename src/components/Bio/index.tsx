@@ -1,20 +1,13 @@
 import React from "react";
 import {
-  AUTHOR,
-  DESCRIPTION,
-  MYNAME,
-  GITHUB_ID,
-  INSTARGRAM_ID,
-  FACEBOOK_ID,
+  AUTHOR, MYNAME,
 } from "../../constants";
 import { Link } from "gatsby";
 import { 
-  CircleWrapper,
   BioWrapper
 } from './styled'
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { FaFacebook } from "react-icons/fa";
 import BorderSide from "../Common/borderside/BorderSide";
+import CircleIcon from "./CircleIcon";
 
 const Bio = () => (
   <BioWrapper>
@@ -31,45 +24,7 @@ const Bio = () => (
         {MYNAME}
       </p>
     </div>
-    <div className="bottom">
-      {GITHUB_ID ? (
-          <a
-            href={`https://github.com/${GITHUB_ID}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="circle"
-          >
-            <CircleWrapper>
-              <AiFillGithub className="link-inner"/>
-            </CircleWrapper>
-          </a>
-        ) : null}
-          {FACEBOOK_ID ? (
-          <a
-            href={`https://www.facebook.com/${FACEBOOK_ID}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="circle"
-          >
-            <CircleWrapper>
-              <FaFacebook className="link-inner"/>
-            </CircleWrapper>
-          </a>
-        ) : null}
-        {INSTARGRAM_ID ? (
-          <a
-            href={`https://www.instargram.com/${INSTARGRAM_ID}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="circle"
-          >
-            <CircleWrapper>
-              <AiFillInstagram className="link-inner"/>
-            </CircleWrapper>
-          </a>
-        ) : null}
-    </div>
-
+    <CircleIcon/>
   </BioWrapper>
 );
 

@@ -18,9 +18,8 @@ export const TagButton = styled.div`
 
 export const ListImage = styled.div`
   grid-row: 1/2;
-  background-image: url("/back.jpg");
+  background-color: #FF416C;
   background-size: cover;
-  /* opacity: 0.4; */
 `;
 
 export const ListTitle = styled.div`
@@ -39,6 +38,18 @@ export const ListTitle = styled.div`
     color:  #FF416C;
     text-shadow : 0 0 10px #FF416C;  
   }
+
+  @media (max-width: 1200px) {
+    .categorytagtitle{
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 600px) {
+    grid-row: 2/4;
+    .categorytagtitle{
+      font-size: 24px;
+    }
+  }
 `;
 
 export const ListCategory = styled.div`
@@ -53,6 +64,9 @@ export const ListCategory = styled.div`
     font-size: 28px;
     font-weight: 800;
     color: white;
+  }
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 

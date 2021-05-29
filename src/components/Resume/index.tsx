@@ -7,6 +7,7 @@ import {
   GITHUB_ID,
   INSTARGRAM_ID,
   FACEBOOK_ID,
+  MYNAME,
 } from "../../constants";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -15,8 +16,6 @@ import IconSet from '../IconSet/IconSetUnder'
 import { 
   ResumeWrapper,
   ResumeInnerWrapper,
-  ItemWrapper, 
-  CircleWrapper, 
   BasicInformation,
   ClearMobile, 
   SocialInformation, 
@@ -28,6 +27,7 @@ import {
 } from './styled'
 import { IconObject } from './IconObject'
 import PrintButton from "../Common/PrintButton";
+import CircleIcon from "../Bio/CircleIcon";
 
 export interface IResume {
   data : {
@@ -71,50 +71,12 @@ const Resume = ({
           <BasicInformation>
             <img src={"/image/me.png"} alt="" width="120" height="120" />
             <NameTitle>{AUTHOR}</NameTitle>
-            <NameSmallTitle>염동환</NameSmallTitle>
+            <NameSmallTitle>{MYNAME}</NameSmallTitle>
             <NameEmail>{EMAIL}</NameEmail>
+            <CircleIcon/>
           </BasicInformation>
 
           <SocialInformation>
-            {GITHUB_ID ? (
-              <a
-                href={`https://github.com/${GITHUB_ID}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <ItemWrapper>
-                  <CircleWrapper>
-                    <FiGithub />
-                  </CircleWrapper>
-                </ItemWrapper>
-              </a>
-            ) : null}
-            {FACEBOOK_ID ? (
-              <a
-                href={`https://www.facebook.com/${FACEBOOK_ID}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <ItemWrapper>
-                  <CircleWrapper>
-                    <FaFacebookF />
-                  </CircleWrapper>
-                </ItemWrapper>
-              </a>
-            ) : null}
-            {INSTARGRAM_ID ? (
-              <a
-                href={`https://www.instargram.com/${INSTARGRAM_ID}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <ItemWrapper>
-                  <CircleWrapper>
-                    <FaInstagram />
-                  </CircleWrapper>
-                </ItemWrapper>
-              </a>
-            ) : null}
           </SocialInformation>
           <IconWrapper>
             <IconSet IconObject={IconObject} />

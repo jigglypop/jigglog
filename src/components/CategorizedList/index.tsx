@@ -104,7 +104,7 @@ const CategorizedList = ({ title, data, location }: any) => {
                 </ClipText>
               </ListImage>
               <ListTitle>
-                <h3>{title[1]} <span className="categoryname">#{decodeURI(category)}</span></h3>
+                <h3 className="categorytagtitle">{title[1]} <span className="categoryname">#{decodeURI(category)}</span></h3>
               </ListTitle>
               <ListCategory>
                 <div>

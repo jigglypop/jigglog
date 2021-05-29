@@ -211,7 +211,7 @@ export const PostContent = styled.div<IPostContent>`
     line-height: 1.2em;
     font-weight: 1000;
     margin-top: 18px;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: underline;
   }
   pre,
@@ -403,13 +403,11 @@ export const WarpVisible = styled.div`
   margin: 4px;
   padding-left: 30px;
   padding-right: 30px;
-
   h4 {
     font-size: 20px;
     color: white;
     font-weight: 800;
   }
-
   .text {
     color: black;
   }
@@ -417,7 +415,26 @@ export const WarpVisible = styled.div`
     display: none;
   }
 `;
-
+export const WarpVisibleUnder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin-top: 200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  h4 {
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+  }
+  .text {
+    color: black;
+  }
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`;
 export const Visible = styled.div`
   position: sticky;
   top: 70px;

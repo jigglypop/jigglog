@@ -7,7 +7,7 @@ import {
 const Footer = () => {
   return (
     <FooterDiv>
-      <h6 className="text">© 2021 JIGGLOG  |  MADE BY 염동환</h6>
+      <h6 className="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6>
     </FooterDiv>
   );
 };
