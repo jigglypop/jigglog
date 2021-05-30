@@ -5,14 +5,10 @@ tags: ["자바스크립트"]
 title: "자바스크립트 요점 정리 - this"
 date: "2021-04-07T01:00:00.000Z"
 summary: "자바스크립트 요점 정리 - this 파트"
-images: ["images/2.jpg"]
+images: ["images/js.png"]
 ---
 
 > 자바스크립트 요점 정리 - this 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요
-
-
-
-
 
 ## 1) this
 

@@ -5,7 +5,7 @@ tags: ["프로그래머스 데브매칭", "고양이 사진첩"]
 title: "프로그래머스 데브매칭 고양이 정리"
 date: "2021-03-01T12:23:00.000Z"
 summary: "프로그래머스 데브매칭 고양이 정리입니다."
-images: ["images/1.jpg"]
+images: ["images/pg.jpg"]
 ---
 
 

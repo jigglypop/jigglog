@@ -1,11 +1,11 @@
 ---
-path: "/history api 정리/"
-category: "자격증"
-tags: ["네트워크 관리사 2급", "자격증", "소프트웨어"]
-title: "history api 정리"
+path: "/자바스크립트 요점 정리 - history api/"
+category: "자바스크립트"
+tags: ["자바스크립트"]
+title: "자바스크립트 요점 정리 - history api 정리"
 date: "2021-03-03T12:23:00.000Z"
-summary: "history api 정리"
-images: ["images/1.jpg"]
+summary: 자바스크립트 요점 정리 - history api 정리
+images: ["images/js.png"]
 ---
 
 
