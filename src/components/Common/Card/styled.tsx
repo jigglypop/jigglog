@@ -36,6 +36,10 @@ export const DivWrapper = styled.div`
   hr {
     margin: 10px;
   }
+  transition: all 0.2s ease-in;
+  &:hover{
+    background-color: rgba(0,0,0, 0.5);
+  } 
 `;
 
 export const Left = styled.div`
@@ -153,10 +157,13 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 200px 1fr;
   h1.title {
-    margin:20px 0;
+    margin: 20px 0;
     line-height: 1.5em;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
+    transition: all .3s ease-in;
+    text-shadow: 0 0 10px white;
+
   }
   h1.summary {
     margin:20px 0;

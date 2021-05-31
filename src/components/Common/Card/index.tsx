@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import OuterButton from '../OuterButton'
 import {
   TagWrapper,
   StyledCard,
