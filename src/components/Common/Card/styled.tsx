@@ -6,12 +6,12 @@ export const TagWrapper = styled.div`
   flex-direction: row;
   
   .tagitem{
-    color: #FF416C;
+    color: rgba(0,207,255);
     font-size: 14px;
     font-weight: 800;
     margin: 5px;
     transition: all .2s ease-in-out;
-    text-shadow: 0 0 10px #FF416C;
+    text-shadow: 0 0 10px rgba(0,207,255);
     &:hover{
       transform: scale(1.2);
     }    
@@ -81,7 +81,7 @@ export const CommentCountButton = styled.div`
     padding: 5px;
     font-size: 12px;
     font-weight: 800;
-    color: #FF416C
+    color: rgba(0,207,255)
   }
   cursor: pointer;
   &:hover {
@@ -120,7 +120,7 @@ export const CommentCountButton = styled.div`
 
 export const GridWrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr 0.5fr 25px;
+  grid-template-rows: 1fr 0.5fr 16px;
 `
 export const GridOne = styled.div`
   grid-row: 1/2;
@@ -130,6 +130,9 @@ export const GridOne = styled.div`
 `
 export const GridTwo = styled.div`
   grid-row: 2/3;
+  display: flex;
+  text-align: center;
+  align-items: center;
   @media (max-width: 1000px) {
     display: none;
   }
@@ -150,21 +153,21 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 200px 1fr;
   h1.title {
-    margin-bottom: 20px;
+    margin:20px 0;
     line-height: 1.5em;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
   }
   h1.summary {
-    margin-bottom: 20px;
+    margin:20px 0;
     line-height: 1.5em;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 800;
   }
   h1.date {
-    color: #FF416C;
+    color: rgba(0,207,255);
     line-height: 1.5em;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 800;
   }
 
@@ -180,7 +183,7 @@ export const Content = styled.div`
       font-weight: 800;
     }
     h1.date {
-      color: #FF416C;
+      color: rgba(0,207,255);
       line-height: 1.5em;
       font-size: 8px;
       font-weight: 800;

@@ -7,8 +7,8 @@ export const TagButton = styled.div`
     font-size: 14px;
     font-weight: 800;
     padding: 10px;
-    color:  #FF416C;
-    text-shadow : 0 0 10px #FF416C;
+    color:  rgba(0,207,255);
+    text-shadow : 0 0 10px rgba(0,207,255);
   }
   cursor: pointer;
   &:hover {
@@ -18,7 +18,7 @@ export const TagButton = styled.div`
 
 export const ListImage = styled.div`
   grid-row: 1/2;
-  background-color: #FF416C;
+  background-color: rgba(0,207,255);
   background-size: cover;
 `;
 
@@ -35,8 +35,8 @@ export const ListTitle = styled.div`
     color: white;
   }
   .categoryname{
-    color:  #FF416C;
-    text-shadow : 0 0 10px #FF416C;  
+    color:  rgba(0,207,255);
+    text-shadow : 0 0 10px rgba(0,207,255);  
   }
 
   @media (max-width: 1200px) {
