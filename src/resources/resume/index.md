@@ -127,8 +127,8 @@ path: "/resume/"
 
 ##### Tensorflow/Keras
 
-- 싸피 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 SSAFY ART
-- 
+- 소프트웨어 아카데미 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 SSAFY ART
+
 
 ### 데이터베이스
 ---

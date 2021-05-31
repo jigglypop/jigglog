@@ -42,16 +42,12 @@ const Header = ({
               <div className="li">
                 <GiHamburgerMenu 
                   onClick = {toggleHam}
-                  style={{ color:'white', fontSize:'20px'}} 
                   className="hamberger"/>
               </div>
               <div className="li">
                 <StyledLink to="/">
                   <RiMoonClearLine
-                    style={{
-                      width: "25px",
-                      height: "25px",
-                    }}
+                    className="RiMoonClearLine"
                   />
                 </StyledLink>
                 <StyledLink to="/">

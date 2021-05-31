@@ -8,10 +8,10 @@ export const Button = styled.button`
   margin: 5px;
   background-color:#141414;
   transition: all 0.5s ease-in-out;
-  border: 2px solid #4a00e0;
+  border: 2px solid rgba(0,207,255);
   box-shadow : 0 0 5px gray;
   .link-inner{
-    color: #4a00e0;
+    color: rgba(0,207,255);
     width: 30px;
     height: 30px;
   }

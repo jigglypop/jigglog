@@ -57,6 +57,11 @@ export const MenuTitle = styled.div`
   font-weight: 800;
   margin: 0 0.25rem;
   text-shadow: 2px 2px 2px #141414;
+  transition: all .3s ease-out;
+  &:hover{
+    color: rgba(0,207,255);
+    text-shadow: 0 0 10px rgba(0,207,255);
+  }
   @media (max-width: 600px) {
     &.menuvisible{
       visibility: hidden;
@@ -137,6 +142,19 @@ export const HeaderDiv = styled.nav`
 
   .hamberger {
     cursor: pointer;
+    font-size:20px;
+    &:hover{
+      color: rgba(0,207,255);
+      text-shadow: 0 0 10px rgba(0,207,255);
+    }
+  }
+  .RiMoonClearLine{
+    width: 30px;
+    height: 30px;
+    &:hover{
+      color: rgba(0,207,255);
+      text-shadow: 0 0 10px rgba(0,207,255);
+    }
   }
 `
 // 사이드바
