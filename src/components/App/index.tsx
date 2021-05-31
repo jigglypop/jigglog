@@ -28,7 +28,10 @@ const App = ( props: IApp ) =>{
           categorySet={categorySet}
         />
       </nav>
-      <main>{children}</main>
+      <main>
+        {children}
+        <div className="toasts"></div>
+      </main>
       <footer>
         <Footer/>
       </footer>
