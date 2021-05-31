@@ -9,7 +9,7 @@ path: "/resume/"
 
 ---
 
-- 삼성 소프트웨어 아카데미 2기 수료 (2019.07.01 ~ 2020.06.30)
+- 소프트웨어 아카데미 2기 수료 (2019.07.01 ~ 2020.06.30)
 
 
 # 자격증
@@ -27,7 +27,7 @@ path: "/resume/"
 
 ---
 
-- MOVIE STAR ([링크](https://moviestarreboot.herokuapp.com)) : 싸피 영화 추천 사이트 프로젝트
+- MOVIE STAR ([링크](https://moviestarreboot.herokuapp.com)) : 소프트웨어 아카데미 영화 추천 사이트 프로젝트
 - COLORBERRY PI ([링크](http://colorberry.s3-website.ap-northeast-2.amazonaws.com/)) : 라즈베리 파이를 이용한 미술관 프로젝트
 - SSAFY ART : 인공지능을 이용한 사진 화풍묘사 프로젝트
 - SSAFY PORTFOLIO : 구직활동 포트폴리오 프로젝트
@@ -66,7 +66,7 @@ path: "/resume/"
 
 ##### 자바
 
-- 싸피 심화 프로젝트 잡 컨설팅 사이트 사용
+- 소프트웨어 아카데미 심화 프로젝트 잡 컨설팅 사이트 사용
 
 ##### C/C++
 
@@ -80,7 +80,7 @@ path: "/resume/"
 
 ##### React/Redux
 
-- 싸피 웹 프로젝트에 사용 : react , redux , react-three-fiber
+- 소프트웨어 아카데미 웹 프로젝트에 사용 : react , redux , react-three-fiber
 
 ##### Angular/ngrx/rxjs
 
@@ -88,11 +88,11 @@ path: "/resume/"
 
 ##### Mobx
 
-- CAPTURE BLOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
+- CAPTURE BLOG 개인 프로젝트에 사용, 소프트웨어 아카데미 웹 프로젝트 서버 담당
 
 ##### Vue
 
-- 싸피 교육과정 vue.js 부분 수료
+- 소프트웨어 아카데미 교육과정 vue.js 부분 수료
 
 ##### GraphQl Apollo
 
@@ -103,20 +103,20 @@ path: "/resume/"
 
 ##### Django
 
-- 싸피 관통 프로젝트 영화 API 추천 사이트
-- 싸피 웹 프로젝트 django rest api 서버 담당
+- 소프트웨어 아카데미 관통 프로젝트 영화 API 추천 사이트
+- 소프트웨어 아카데미 웹 프로젝트 django rest api 서버 담당
 
 ##### SpringBoot
 
-- 싸피 심화 프로젝트 잡 컨설팅 사이트 백엔드 서버 담당.
+- 소프트웨어 아카데미 심화 프로젝트 잡 컨설팅 사이트 백엔드 서버 담당.
 
 ##### flask
 
-- 싸피 특화 프로젝트 rest api 인공지능 부분 서버 사용
+- 소프트웨어 아카데미 특화 프로젝트 rest api 인공지능 부분 서버 사용
 
 ##### Node.js express
 
-- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용, 싸피 웹 프로젝트 서버 담당
+- CAPTURE BLOG, MBTI WORLD, ANGULOG 개인 프로젝트에 사용, 소프트웨어 아카데미 웹 프로젝트 서버 담당
 
 ##### GraphQl SERVER
 
@@ -130,7 +130,7 @@ path: "/resume/"
 
 ##### Tensorflow/Keras
 
-- 싸피 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 SSAFY ART
+- 소프트웨어 아카데미 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 
 
 ### 데이터베이스
 
