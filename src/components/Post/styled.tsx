@@ -220,6 +220,7 @@ export const PostContent = styled.div<IPostContent>`
     font-size: 14px;
   }
   table {
+    min-width: 45vw;
     margin: 20px;
     background: #f9f9f9;
   }
@@ -539,23 +540,23 @@ export const ComponentInPost = styled.div`
 
 
 export const TocItemDiv = styled.div`
-    display: block;
-    margin-right: 20px;
-    padding-left: 10px;
-    font-size: 10px;
-    border-left: 7px solid black;
-    transform: all 0.5s ease-in-out;
-    text-align: left;
-    cursor: pointer;
-    h4 {
-      padding: 0.4em 0 0.4em;
-      color: rgb(150, 150, 150);
-      font-size: 12px;
-      font-weight: 800;
-    }
-    &.isintersect h4{
-      color: black;
-      font-size: 14px;
-      padding: 0.5em 0 0.5em;
-    }
+  display: block;
+  margin-right: 20px;
+  padding-left: 10px;
+  font-size: 10px;
+  border-left: 7px solid black;
+  transform: all 0.5s ease-in-out;
+  text-align: left;
+  cursor: pointer;
+  h4 {
+    padding: 0.4em 0 0.4em;
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+    font-weight: 800;
+  }
+  &.isintersect h4{
+    color: black;
+    font-size: 14px;
+    padding: 0.5em 0 0.5em;
+  }
 `

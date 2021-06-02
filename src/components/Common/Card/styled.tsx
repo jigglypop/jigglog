@@ -162,7 +162,7 @@ export const Content = styled.div`
     font-size: 24px;
     font-weight: 800;
     transition: all .3s ease-in;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 5px white;
 
   }
   h1.summary {
