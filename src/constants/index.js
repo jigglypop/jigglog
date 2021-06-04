@@ -25,13 +25,13 @@ exports.GITHUB_ID = "jigglypop";
 
 // Disqus (Recommend you to use this)
 exports.DISQUS_ID = "django-english-mentormentee";
-// exports.FACEBOOK_ID = "donghwan.yeom.3";
-// exports.FACEBOOK_APP_ID = "349781909341456";
-// exports.INSTARGRAM_ID = "yeom_donghwan";
-// exports.EMAIL = "donghwanyeom@gmail.com";
-// exports.MYNAME = "염동환";
-exports.MYNAME = "";
-exports.EMAIL = "";
-exports.FACEBOOK_ID = "1";
-exports.FACEBOOK_APP_ID = "1";
-exports.INSTARGRAM_ID = "1";
+exports.FACEBOOK_ID = "donghwan.yeom.3";
+exports.FACEBOOK_APP_ID = "349781909341456";
+exports.INSTARGRAM_ID = "yeom_donghwan";
+exports.EMAIL = "donghwanyeom@gmail.com";
+exports.MYNAME = "염동환";
+// exports.MYNAME = "";
+// exports.EMAIL = "";
+// exports.FACEBOOK_ID = "1";
+// exports.FACEBOOK_APP_ID = "1";
+// exports.INSTARGRAM_ID = "1";

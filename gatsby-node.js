@@ -9,8 +9,7 @@ const {
   POST,
   PORTFOLIO,
   RESUME,
-} = require("./src/constants");
-
+} = require("./src/constants/index.ts");
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   actions.setWebpackConfig({
     externals: {
