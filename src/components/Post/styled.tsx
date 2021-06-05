@@ -159,13 +159,18 @@ export const PostContent = styled.div<IPostContent>`
   padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
+  hr {
+    height: 4px;
+    background-color: rgba(0,0,0,.1);
+    border: none;
+  }
   h1 {
-    margin-top: 5em;
+    margin-top: 3em;
     font-size: 32px;
     font-weight: 800;
   }
   h2 {
-    margin-top: 5em;
+    margin-top: 2em;
     font-size: 28px;
     font-weight: 800;
   }
@@ -186,6 +191,7 @@ export const PostContent = styled.div<IPostContent>`
   }
   p {
     margin-top: 10px;
+    line-height: 2em;
     font-size: 20px;
     font-weight: 100;
   }

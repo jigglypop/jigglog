@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { PREFIX } from "../../constants";
+import { PREFIX } from '../../constants/index.js'
 import IconSetUnder from "../IconSet/IconSetUnder";
 import { 
   PortfolioWrapper,
