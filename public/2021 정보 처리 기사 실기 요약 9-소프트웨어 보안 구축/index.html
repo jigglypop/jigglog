@@ -1,0 +1,769 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.8ab4be3c937b074fb994.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d)!important;font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">jigglog| 2021 정보 처리 기사 실기 요약 9-소프트웨어 보안 구축</title><meta data-react-helmet="true" name="og:title" content="jigglog| 2021 정보 처리 기사 실기 요약 9-소프트웨어 보안 구축"/><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
+.eoDCLg.active{padding-left:200px;}/*!sc*/
+.eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.eoDCLg .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.eoDCLg .logo{font-size:15px;font-weight:800;}/*!sc*/
+.eoDCLg .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.eoDCLg .be-person{color:white;}/*!sc*/
+.eoDCLg .logout{cursor:pointer;}/*!sc*/
+.eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
+.czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.czPAtN.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g10[id="styled__SideBarInnerDiv-sc-8u1x3g-7"]{content:"czPAtN,"}/*!sc*/
+.eVJdij{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.eVJdij h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.eVJdij hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g11[id="styled__SideBarTopDiv-sc-8u1x3g-8"]{content:"eVJdij,"}/*!sc*/
+.gxwMTf{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin:10px;background-color:#141414;}/*!sc*/
+.gxwMTf .categorytitle{color:rgba(0,207,255);font-size:16px;font-weight:800;margin:10px;padding:10px;text-shadow:0 0 10px rgba(0,207,255);border:2px solid rgba(0,207,255);}/*!sc*/
+data-styled.g13[id="styled__SideBarListDiv-sc-8u1x3g-10"]{content:"gxwMTf,"}/*!sc*/
+.YGDjT{position:relative;width:100%;height:30px;color:red;font-size:12px;font-weight:800;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.YGDjT .smallinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:600px){.YGDjT{font-size:10px;}}/*!sc*/
+.YGDjT:hover a{color:rgba(0,207,255);}/*!sc*/
+data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.kbRvHn{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-15v8614-0"]{content:"kbRvHn,"}/*!sc*/
+.hnwaga{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
+.bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.cBddps{background-color:#141414;border-radius:10px;margin:10px;padding:10px;color:white;-webkit-transition:all 0.5s ease-in;transition:all 0.5s ease-in;display:grid;grid-template-rows:1fr 1fr 1fr;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cBddps .top{grid-row:1/2;}/*!sc*/
+.cBddps .mid{grid-row:2/3;}/*!sc*/
+.cBddps .bottom{grid-row:3/4;}/*!sc*/
+.cBddps .biotext{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .myname{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .gridgap{margin-top:10px;}/*!sc*/
+.cBddps .circle{margin:0;padding:0;}/*!sc*/
+@media (max-width:1200px){.cBddps .bottom{display:none;}}/*!sc*/
+data-styled.g64[id="styled__BioWrapper-sc-1q0fm4m-0"]{content:"cBddps,"}/*!sc*/
+.fgFJem{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g65[id="styled__BottomDiv-sc-1q0fm4m-1"]{content:"fgFJem,"}/*!sc*/
+.hczQXg{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.hczQXg:hover{border:2px solid #FF416C;}/*!sc*/
+.hczQXg:hover .link-inner{color:#FF416C;}/*!sc*/
+.hczQXg .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g66[id="styled__CircleWrapper-sc-1q0fm4m-2"]{content:"hczQXg,"}/*!sc*/
+.lmJOuU{margin:auto;padding:10px 0 0;margin:0 40px 40px 40px;font-size:16px;background-color:white;border-radius:10px;box-shadow:10px 10px 10px black;}/*!sc*/
+@media (max-width:600px){.lmJOuU{padding:70px 10px 0;margin:0;}}/*!sc*/
+.lmJOuU:before,.lmJOuU:after{display:block;content:"";clear:both;}/*!sc*/
+.lmJOuU h1{margin:0.67em 0;font-size:36px;}/*!sc*/
+.lmJOuU time{margin:1em 0;font-size:14px;}/*!sc*/
+.lmJOuU a{font-size:12px;font-weight:800;color:gray;}/*!sc*/
+data-styled.g68[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
+.dUDtWR{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
+.dUDtWR hr{height:4px;background-color:rgba(0,0,0,.1);border:none;}/*!sc*/
+.dUDtWR h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
+.dUDtWR h2{margin-top:2em;font-size:28px;font-weight:800;}/*!sc*/
+.dUDtWR h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.dUDtWR h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.dUDtWR h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.dUDtWR p{margin-top:10px;line-height:2em;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.dUDtWR li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.dUDtWR em{line-height:1.2em;font-weight:1000;margin-top:18px;font-size:20px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.dUDtWR pre,.dUDtWR span{margin-top:10px;font-size:16px;}/*!sc*/
+.dUDtWR table{min-width:45vw;margin:20px;background:#f9f9f9;}/*!sc*/
+.dUDtWR thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.dUDtWR th,.dUDtWR tr,.dUDtWR td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.dUDtWR hr{margin-bottom:30px;}/*!sc*/
+.dUDtWR code{position:relative;}/*!sc*/
+.dUDtWR del{visibility:hidden;-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+@media (max-width:1000px){.dUDtWR{padding:0 10px 10px 10px;line-height:2em;color:black;}.dUDtWR hr{margin-bottom:10px;}.dUDtWR h1{margin-bottom:2px;font-size:18px;}.dUDtWR h2{font-size:16px;}.dUDtWR h3{font-size:14px;}.dUDtWR h4{font-size:12px;}.dUDtWR h5{font-size:10px;}.dUDtWR p,.dUDtWR blockquote,.dUDtWR pre{margin-top:5px;font-size:12px;}.dUDtWR li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.dUDtWR table{margin:20px;}.dUDtWR th,.dUDtWR tr,.dUDtWR td,.dUDtWR span,.dUDtWR em{font-size:10px;}.dUDtWR strong{font-size:14px;}}/*!sc*/
+data-styled.g70[id="styled__PostContent-sc-1hokm1n-3"]{content:"dUDtWR,"}/*!sc*/
+@media (max-width:600px){.ilhkQa{display:none;}}/*!sc*/
+data-styled.g72[id="styled__ClearMobile-sc-1hokm1n-5"]{content:"ilhkQa,"}/*!sc*/
+.iaGTzG{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iaGTzG.color{border:2px solid #78ffd6;}/*!sc*/
+.iaGTzG.color .link-inner{color:#78ffd6;}/*!sc*/
+.iaGTzG .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g73[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
+.dsQNWx .jb-wrap{max-height:400px;width:100%;margin:10px auto;position:relative;overflow:hidden;}/*!sc*/
+.dsQNWx .jb-wrap img{max-height:initial;width:100%;vertical-align:middle;}/*!sc*/
+.dsQNWx .jb-text{color:white;font-size:20px;width:80vw;font-weight:800;text-shadow:2px 2px 20px white;text-align:center;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:black;padding:5%;line-height:2em;}/*!sc*/
+@-webkit-keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@media (max-width:1200px){.dsQNWx .jb-text{font-size:20px;}}/*!sc*/
+@media (max-width:900px){.dsQNWx .jb-text{font-size:16px;}}/*!sc*/
+@media (max-width:600px){.dsQNWx .jb-text{font-size:12px;width:90vw;}}/*!sc*/
+data-styled.g74[id="styled__ImageWrapper-sc-1hokm1n-7"]{content:"dsQNWx,"}/*!sc*/
+.iFwxVQ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:4px;padding-left:30px;padding-right:30px;}/*!sc*/
+.iFwxVQ h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
+.iFwxVQ .text{color:black;}/*!sc*/
+@media (max-width:1200px){.iFwxVQ{display:none;}}/*!sc*/
+data-styled.g75[id="styled__WarpVisible-sc-1hokm1n-8"]{content:"iFwxVQ,"}/*!sc*/
+.diEQsN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;bottom:0;margin-top:70px;padding-left:30px;padding-right:30px;}/*!sc*/
+.diEQsN h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
+.diEQsN .text{color:black;}/*!sc*/
+@media (max-width:1200px){.diEQsN{display:none;}}/*!sc*/
+data-styled.g76[id="styled__WarpVisibleUnder-sc-1hokm1n-9"]{content:"diEQsN,"}/*!sc*/
+.kwBnbh{position:-webkit-sticky;position:sticky;top:70px;display:block;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.kwBnbh h4{font-size:14px;font-weight:800;}/*!sc*/
+@media (max-width:1200px){.kwBnbh h4{font-size:10px;font-weight:800;}}/*!sc*/
+@media (max-width:992px){.kwBnbh{display:none;}}/*!sc*/
+.kwBnbh .lineblock{display:inline-block;}/*!sc*/
+.kwBnbh .smallcircle{display:inline-block;padding-left:30px;font-weight:800;color:greenyellow;vertical-align:middle;}/*!sc*/
+data-styled.g77[id="styled__Visible-sc-1hokm1n-10"]{content:"kwBnbh,"}/*!sc*/
+.dKgnrq{position:-webkit-sticky;position:sticky;display:block;top:20vh;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:992px){.dKgnrq{display:none;}}/*!sc*/
+data-styled.g78[id="styled__VisibleTable-sc-1hokm1n-11"]{content:"dKgnrq,"}/*!sc*/
+.hWEvTs{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid rgba(0,207,255);box-shadow:0 0 5px gray;}/*!sc*/
+.hWEvTs .link-inner{color:rgba(0,207,255);width:30px;height:30px;}/*!sc*/
+.hWEvTs:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g81[id="styled__Button-sc-1aanmmt-0"]{content:"hWEvTs,"}/*!sc*/
+.iRLYFX{padding:5%;position:relative;display:grid;grid-template-rows:50px 1fr 300px;}/*!sc*/
+@media (max-width:1000px){.iRLYFX{padding:3%;}}/*!sc*/
+@media (max-width:600px){.iRLYFX{padding:1%;}}/*!sc*/
+data-styled.g88[id="style__CommentDiv-f1ulxg-6"]{content:"iRLYFX,"}/*!sc*/
+.fGOExz{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #ffe259;box-shadow:0 0 5px gray;}/*!sc*/
+.fGOExz .kakao-inner{width:30px;height:30px;}/*!sc*/
+.fGOExz:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g123[id="KakaoShareButton__KakaoButton-sc-1yy6cgc-0"]{content:"fGOExz,"}/*!sc*/
+.fGwxWy{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #4a00e0;box-shadow:0 0 5px gray;}/*!sc*/
+.fGwxWy .link-inner{width:30px;height:30px;}/*!sc*/
+.fGwxWy:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g124[id="CopyButton__LinkButton-sc-10dc2a0-0"]{content:"fGwxWy,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="shortcut icon" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="48x48" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-48x48.png"/><link rel="manifest" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/manifest.json"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#fff"/><meta name="application-name" content="gatsby-advanced-blog"/><link rel="apple-touch-icon" sizes="57x57" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="167x167" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-167x167.png"/><link rel="apple-touch-icon" sizes="180x180" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-180x180.png"/><link rel="apple-touch-icon" sizes="1024x1024" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-1024x1024.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="gatsby-advanced-blog"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-640x1136.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-750x1334.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-828x1792.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1125x2436.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2688.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1536x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2224.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2388.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x2732.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1620x2160.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1136x640.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1334x750.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1792x828.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2436x1125.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2208x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2688x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x1536.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2224x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2388x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2732x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2160x1620.png"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-173606059-1', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-37dbd9df0a19c3f25883.js"/><link as="script" rel="preload" href="/app-cb09e21c8561defc5742.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-2d4804b503525347efbe.js"/><link as="script" rel="preload" href="/545f34e4-d852f4cbef9f85ad0693.js"/><link as="script" rel="preload" href="/78e521c3-464c80c1d674145aa73b.js"/><link as="script" rel="preload" href="/fb7d5399-2c194787786362b50057.js"/><link as="script" rel="preload" href="/d7eeaac4-a4b9f97cec7e8681bdfb.js"/><link as="script" rel="preload" href="/1bfc9850-c5a69d782689db0ff35d.js"/><link as="script" rel="preload" href="/1a48c3c1-815e1b17a9be0f8f8cd2.js"/><link as="script" rel="preload" href="/31664189-05f8af049756fc87b416.js"/><link as="script" rel="preload" href="/252f366e-1c12a0eaa48ff8868fa3.js"/><link as="script" rel="preload" href="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-19e6aefe52759fa5db61.js"/><link as="script" rel="preload" href="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-57713c2759173a7ed1fe.js"/><link as="script" rel="preload" href="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js"/><link as="script" rel="preload" href="/component---src-templates-post-tsx-541704a3e66ecae60395.js"/><link as="fetch" rel="preload" href="/page-data\2021 정보 처리 기사 실기 요약 9-소프트웨어 보안 구축\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 207, 255, 0.5) !important;
+}
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  color: black;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ed213a;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0.5rem;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-15v8614-0 kbRvHn"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(6)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div></div></div></div></nav><main><div class="styled__PostWrapper-sc-1hokm1n-1 lmJOuU"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="styled__ImageWrapper-sc-1hokm1n-7 dsQNWx"><div class="jb-wrap"><div class="jb-image"><img src="/static/1-5f5e3d9ae284b236ec2c64b060aa7893.jpg" alt=""/></div><div class="jb-text">2021 정보 처리 기사 실기 요약 9-소프트웨어 보안 구축</div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__Visible-sc-1hokm1n-10 kwBnbh"><div class="styled__BioWrapper-sc-1q0fm4m-0 cBddps"><div class="top"><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div><div class="mid"><p class="biotext">JIGGLYPOP</p><p class="biotext">염동환</p></div><div class="styled__BottomDiv-sc-1q0fm4m-1 fgFJem bottom"><a href="https://github.com/jigglypop" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></div></a><a href="https://www.facebook.com/donghwan.yeom.3" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></div></a><a href="https://www.instargram.com/yeom_donghwan" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path></svg></div></a></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="answer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="lines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-opacity=".36" d="M0 20h24v4H0z"></path><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer" id="dels"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.032 13l0.9-3h4.137l0.9 3h1.775l-3-10h-3.488l-3 10h1.776zM7.432 5h1.137l0.9 3h-2.937l0.9-3z"></path></svg></button></div></div><div class="styled__WarpVisibleUnder-sc-1hokm1n-9 diEQsN"><div class="lineblock"><div class="kakao-share-button"><button id="kakao-link-btn" class="KakaoShareButton__KakaoButton-sc-1yy6cgc-0 fGOExz"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#ffe259" class="kakao-inner" style="color:#ffe259" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M5.678 18.123C3.092 16.566 1.5 14.112 1.5 11.405 1.5 6.701 6.248 3 12 3s10.5 3.701 10.5 8.405c0 4.704-4.748 8.405-10.5 8.405-.442 0-.882-.022-1.318-.065l-3.765 2.458c-.615.326-.957.425-1.485.066-.62-.424-.596-.892-.381-1.56l.627-2.586zM3.5 11.405c0 2.132 1.418 4.123 3.781 5.32l.706.359-.186.77-.401 1.648 2.8-1.83.366.046c.473.061.952.092 1.434.092 4.741 0 8.5-2.93 8.5-6.405S16.741 5 12 5s-8.5 2.93-8.5 6.405zm14.407-.346l1.514 2.155a.472.472 0 1 1-.773.543l-1.428-2.033-.427.413V13.5a.472.472 0 0 1-.944 0v-1.439a.471.471 0 0 1 0-.222V9.282a.472.472 0 0 1 .944 0v1.542l1.928-1.866a.472.472 0 0 1 .656.678l-1.47 1.423zm-2.958 1.925a.472.472 0 0 1 0 .944h-1.932a.472.472 0 0 1-.471-.472V9.297a.472.472 0 1 1 .943 0v3.687h1.46zm-5.857-1.092h1.334l-.638-1.707-.696 1.707zm2.523.488l.345.925a.472.472 0 1 1-.884.33l-.298-.799h-2.07l-.331.813a.472.472 0 1 1-.874-.357l1.66-4.075a.696.696 0 0 1 .654-.447.69.69 0 0 1 .627.474l1.046 2.8a.469.469 0 0 1 .127.32l-.002.016zM8.293 9.302c0 .26-.21.472-.471.472h-1.14v3.736a.472.472 0 0 1-.945 0V9.774h-1.16a.472.472 0 1 1 0-.944h3.245c.26 0 .471.211.471.472z"></path></g></svg></button></div></div><div class="lineblock"><h4 class="text">카카오톡 공유</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button class="CopyButton__LinkButton-sc-10dc2a0-0 fGwxWy"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" color="#4a00e0" class="link-inner" style="color:#4a00e0" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></button></div><div class="lineblock"><h4 class="text">URL주소 복사</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1aanmmt-0 hWEvTs"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19,7h-1V2H6v5H5c-1.654,0-3,1.346-3,3v7c0,1.103,0.897,2,2,2h2v3h12v-3h2c1.103,0,2-0.897,2-2v-7C22,8.346,20.654,7,19,7 z M8,4h8v3H8V4z M16,20H8v-4h8V20z M20,17h-2v-1v-2H6v2v1H4v-7c0-0.551,0.449-1,1-1h14c0.552,0,1,0.449,1,1V17z"></path><path d="M14 10H18V12H14z"></path></svg></button></div><div class="lineblock"><h4 class="text">글전체 프린트</h4></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"><div class="styled__ClearMobile-sc-1hokm1n-5 ilhkQa"></div><div class="styled__PostContent-sc-1hokm1n-3 dUDtWR"><h5>2021-05-11 19:00<!-- --> 시에 저장한 글입니다.</h5><hr style="margin-bottom:50px"/><div id="post-contents" style="margin-bottom:100px"><blockquote>
+<p>정보처리기사 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 책을 참고해서 공부하세요
+2021 정보 처리 기사 소프트웨어 보안 구축 요약 입니다. 정처기 공부를 할 때 활용하세요.</p>
+</blockquote>
+<h1 id="1-소프트웨어-개발의-비용-산정-기법" style="position:relative;"><a href="#1-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9D%98-%EB%B9%84%EC%9A%A9-%EC%82%B0%EC%A0%95-%EA%B8%B0%EB%B2%95" aria-label="1 소프트웨어 개발의 비용 산정 기법 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 소프트웨어 개발의 비용 산정 기법</h1>
+<hr>
+<ul>
+<li>소프트웨어의 개발 규모를 소요되는 인원, 자원, 기간 등으로 확인하여 실행 가능한 계획을 수립하기 위해 필요한 비용을 산정하는 것</li>
+<li>
+<p><code class="language-text">하향식 비용 산정 기법</code> : 과거의 유사한 경험을 바탕으로 전문 지식이 많은 개발자들이 참여한 회의를 통해 비용을 산정하는 비과학적인 방법</p>
+<ul>
+<li><code class="language-text">전문가 감정 기법</code> : 조직 내에 있는 경험이 많은 두 명 이상의 전문가에게 비용 산정을 의뢰</li>
+<li><code class="language-text">델파이 기법</code> : 전문가 감정 기법의 주관적인 편견을 보완 하기 위해 많은 전문가의 의견을 종합하여 산정</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">상향식 비용 산정 기법</code> : 프로젝트의 세부적인 작업 단위별로 비용을 산정한 후 집계하여 전체 비용을 산정</p>
+<ul>
+<li><code class="language-text">LOC</code> : 소프트웨어 각 기능의 원시 코드 라인 수 의 비관치, 낙관치, 기대치를 측정하여 예측치를 구하고 이를 이용하여 비용을 산정</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql">노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span> <span class="token operator">=</span> 개발 기간 × 투입 인원 <span class="token operator">=</span> LOC <span class="token operator">/</span> <span class="token number">1</span>인당 월평균 생산 코드 라인 수
+<span class="token punctuation">(</span>E <span class="token operator">=</span> D x N <span class="token operator">=</span> LOC <span class="token operator">/</span> M<span class="token punctuation">)</span>
+개발 비용 <span class="token operator">=</span> 노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span> × 단위 비용 <span class="token punctuation">(</span><span class="token number">1</span>인당 월평균 인건비<span class="token punctuation">)</span>
+<span class="token punctuation">(</span>C <span class="token operator">=</span> E x U<span class="token punctuation">)</span>
+개발 기간 <span class="token operator">=</span> 노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span> <span class="token operator">/</span> 투입 인원
+<span class="token punctuation">(</span>D <span class="token operator">=</span> E <span class="token operator">/</span> N<span class="token punctuation">)</span>
+생산성 <span class="token operator">=</span> LOC <span class="token operator">/</span> 노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span>
+<span class="token punctuation">(</span>H <span class="token operator">=</span> LOC <span class="token operator">/</span> E<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li><code class="language-text">개발 단계별 인월수 기법</code> : LOC 기법을 보완하기 위한 기법으로, 각 기능을 구현시키는 데 필요한 노력을 생명 주기의 각 단계별로 산정</li>
+</ul>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token punctuation">[</span>예제<span class="token punctuation">]</span>LOC 기법에 의하여 예측된 총 라인 수가 <span class="token number">30</span><span class="token punctuation">,</span><span class="token number">000</span>라인<span class="token punctuation">,</span> 개발에 참여할 프로그래머가 <span class="token number">5</span>명<span class="token punctuation">,</span>
+프로그래머들의 평균 생산성이 월간 <span class="token number">300</span>라인일 때 개발에 소요되는 기간은?
+ <span class="token operator">-</span> 노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span> <span class="token operator">=</span> LOC<span class="token operator">/</span><span class="token number">1</span>인당 월평균 생산 코드 라인 수 <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span><span class="token number">000</span><span class="token operator">/</span><span class="token number">300</span> <span class="token operator">=</span> <span class="token number">100</span>명
+ <span class="token operator">-</span> 개발 기간 <span class="token operator">=</span> 노력<span class="token punctuation">(</span>인월<span class="token punctuation">)</span><span class="token operator">/</span>투입 인원 <span class="token operator">=</span> <span class="token number">100</span><span class="token operator">/</span><span class="token number">5</span> <span class="token operator">=</span> <span class="token number">20</span>개월</code></pre></div>
+<h1 id="2-공격-기법의-이해" style="position:relative;"><a href="#2-%EA%B3%B5%EA%B2%A9-%EA%B8%B0%EB%B2%95%EC%9D%98-%EC%9D%B4%ED%95%B4" aria-label="2 공격 기법의 이해 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 공격 기법의 이해</h1>
+<hr>
+<ul>
+<li><code class="language-text">분산 서비스 거부(DDoS) 공격</code> : 여러 곳에 분산된 공격 지점에서 한 곳의 서버에 대해 분산 서비스 공격을 수행하는 것으로, 네트워크에서 취약점이 있는 호스트들을 탐색한 후 이들 호스트들에 분산 서비스 공격용 툴을 설치하여 에이전트로 만든 후 DDoS 공격에 이용</li>
+<li>
+<p><code class="language-text">자원 고갈 공격</code> : <em>서버의 자원을 고갈시킬 목적으로 다수의 공격자 또는 시스템에서 대량의 데이터를 한 곳의 서버에 집중적으로 전송함으로써 서버의 정상적인 기능을 방해</em></p>
+<ul>
+<li><code class="language-text">SYN 플러딩(SYN Flooding)</code> : TCP는 신뢰성있는 전송을 위해 3-way-handshake를 거친 후에 데이터를 전송하게 되는데, SYN Flooding은 공격자가 가상의 클라이언트로 위장하여 3-way-handshake과정을 의도적으로 중단시킴으로써 서버가 대기 상태에 놓여 정상적인 서비스를 수행하지 못하게 함</li>
+<li><code class="language-text">UDP 플러딩(UDP Flooding)</code> : 대량의 UDP 패킷을 만들어 임의의 포트 번호로 전송하여 응답 메시지를 생성하게 하여 자원을 고갈시키는 공격. ICMP 패킷은 변조되어 공격자에게 전달되지 않아 대기함</li>
+<li><code class="language-text">스머핑(Smurfing)</code> : IP나 ICMP의 특성을 악용하여 엄청난 양의 데이터를 한 사이트에 집중적으로 보냄으로써 네트워크 또는 시스템의 상태를 불능으로 만듦</li>
+<li><code class="language-text">죽음의 핑(poD = Ping of Death)</code> : Ping 명령을 전송할 때 패킷의 크기를 인터넷 프로토콜 허용 범위 이상으로 전송하여 공격 대상의 네트워크를 마비</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">애플리케이션 공격</code> </p>
+<ul>
+<li><code class="language-text">HTTP GET 플러딩(Flooding)</code> : Cache Control Attack 공격. http 캐시 옵션을 조작하여 캐싱 서버가 아닌 웹서버가 직접 처리하도록 유도해서 웹서버 자원을 소진시키는 서비스 거부 공격</li>
+<li><code class="language-text">Slowloris(Slow HTTP Header DoS)</code> : HTTP GET 메소드를 사용하여 헤더의 최종 끝을 알리는 개행 문자열인 \r\n\r\n을 전송하지 않고 \r\n만 전송하여 대상 웹서버와 연결 상테를 장시간 지속시키고 연결 자원을 모두 소진시키는 공격</li>
+<li><code class="language-text">RUDY</code> :요청 헤더의 Content-length를 비정상적으로 크게 설정하여 메시지 바디 부분을 매우 소량으로 보내 계속 연결 상태를 유지시키는 공격</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">네트워크 서비스 공격</code></p>
+<ul>
+<li><code class="language-text">네트워크 스캐너(Scanner)/스니퍼(Sniffer)</code> : 네트워크 하드웨어 및 소프트웨어 구성의 취약점 파일을 위해 공격자가 사용하는 공격 도구</li>
+<li><code class="language-text">패스워드 크래킹(Password Cracking)</code> : 사전 크래킹과 무차별 크래킹 방법을 사용해 네트워크 패스워드를 탐색</li>
+<li><code class="language-text">IP 스푸핑(IP Spoofing)</code> : 서버에 대한 인증되지 않은 액세스 권한을 입수하는데 사용하는 기법</li>
+<li><code class="language-text">트로이 목마</code> : 정상적인 기능을 하는 프로그램으로 위장하여 프로그램 내에 숨어 있다가 해당 프로그램이 동작할 때 활성화되어 부작용을 일으킴</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">취약점 공격</code>:</p>
+<ul>
+<li><code class="language-text">랜드 어택(Land Attack)</code> : 패킷을 전송할 때 송신 IP 주소와 수신 IP 주소를 모두 공격 대상의 IP 주소로 하여 공격 대상에게 전송하는 것으로, 이 패킷을 받은 공격 대상은 송신 IP 주소가 자신이므로 자신에게 응답을 수행하게 되는데, 이러한 패킷이 계속해서 전송될 경우 자신에 대해 무한히 응답</li>
+<li><code class="language-text">봉크/보잉크(Bonk/Boink)</code> : 프로토콜의 오류 제어를 이용한 공격기법으로서 시스템의 패킷 재전송과 재조립이 과부하를 유발</li>
+<li><code class="language-text">티어 드롭(TearDrop)</code> : 데이터의 송·수신 과정에서 패킷의 크기가 커 여러 개로 분할되어 전송될 때 분할 순서를 알수 있도록 Fragment Offset값을 함께 전송하는데, 이 값을 변경시켜 수신측에서 패킷을 재조립할 때 오류로 인한 과부하를 발생</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-네트워크-침해-공격-관련-용어" style="position:relative;"><a href="#3-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%B9%A8%ED%95%B4-%EA%B3%B5%EA%B2%A9-%EA%B4%80%EB%A0%A8-%EC%9A%A9%EC%96%B4" aria-label="3 네트워크 침해 공격 관련 용어 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 네트워크 침해 공격 관련 용어</h1>
+<hr>
+<ul>
+<li><code class="language-text">스미싱</code> : 문자 메시지를 이용해 사용자의 개인 신용 정보를 빼내는 수법</li>
+<li><code class="language-text">스피어 피싱(Spear Phishing)</code> : 사회 공학의 한 기법으로 특정 대상을 선정한 후 일반적인 이메일로 위장한 메일을 지속적으로 발송하여, 발송 메일의 링크나 파일을 클릭하도록 유도해 사용자의 개인정보를 탈취</li>
+<li><code class="language-text">APT(지능형 지속 위협)</code> : 다양한 IT 기술과 방식들을 이용해 조직적으로 특정 기업이나 조직 네트워크에 침투해 활동 거점을 마련한 뒤 때를 기다리면서 보안을 무력화시키고 정보를 수집한 다음 외부로 빼돌리는 형태의 공격</li>
+<li><code class="language-text">무작위 대입 공격(Brute Force Attack)</code> : 암호화된 문서의 암호키를 찾아내기 위해 적용 가능한 모든 값을 대입하여 공격</li>
+<li><code class="language-text">큐싱(Qshing)</code>: QR코드를 통해 악성 앱의 다운로드를 유도하거나 악성 프로 그램을 설치하도록 하는 금융사기 기법의 하나로, QR코드와 개인정보 및 금융정보를 낚는다는 의미의 합성 신조어</li>
+<li><code class="language-text">SQL 삽입(Injection) 공격</code> : 전문 스캐너 프로그램 혹은 봇넷 등을 이용해 웹사이트를 무차별적으로 공격하는 과정에서 취약한 사이트가 발견되면 데이 터베이스 등의 데이터를 조작하는 일련의 공격 방식</li>
+</ul>
+<h1 id="4-정보-보안-침해-공격-관련-용어" style="position:relative;"><a href="#4-%EC%A0%95%EB%B3%B4-%EB%B3%B4%EC%95%88-%EC%B9%A8%ED%95%B4-%EA%B3%B5%EA%B2%A9-%EA%B4%80%EB%A0%A8-%EC%9A%A9%EC%96%B4" aria-label="4 정보 보안 침해 공격 관련 용어 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 정보 보안 침해 공격 관련 용어</h1>
+<hr>
+<ul>
+<li><code class="language-text">좀비 PC</code> : 악성코드에 감염되어 다른 프로그램이나 컴퓨터를 조종하도록 만들어진 컴퓨터로, C&#x26;C서버의 제어를 받아 주로 DDoS 공격 등에 이용</li>
+<li><code class="language-text">C&amp;C 서버</code> : 해커가 원격지에서 감염된 좀비 PC에 명령을 내리고 악성코드를 제어하기 위한 용도로 사용하는 서버</li>
+<li><code class="language-text">봇넷</code> : 악성 프로그램에 감염되어 악의적인 의도로 사용될 수 있는 다수의 컴퓨터들이 네트워크로 연결된 형태</li>
+<li><code class="language-text">웜</code> : 네트워크를 통해 연속적으로 자신을 복제하여 시스템의 부하를 높임으로써 결국 시스템을 다운시키는 바이러스의 일종</li>
+<li><code class="language-text">제로 데이 공격</code> : 보안 취약점이 발견되었을 때 발견된 취약점의 존재 자체가 널리 공표되기도 전에 해당 취약점을 통하여 이루어지는 보안 공격</li>
+<li><code class="language-text">키로거 공격</code> : 컴퓨터 사용자의 키보드 움직임을 탐지해 ID, 패스워드, 계좌번호, 카드번호 등과 같은 개인의 중요한 정보를 몰래 빼가는 해킹 공격</li>
+<li><code class="language-text">랜섬웨어</code> : 인터넷 사용자의 컴퓨터에 잠입해 내부 문서나 파일 등을 암호화해 사용자가 열지 못하게 하는 프로그램</li>
+<li><code class="language-text">백도어</code> : 시스템 설계자가 서비스 기술자나 유지 보수 프로그램 작성자의 액세스 편의를 위해 시스템 보안을 제거하여 만들어놓은 비밀 통로로, 컴퓨터 범죄에 악용되기도 함</li>
+</ul>
+<h1 id="5-소프트웨어-개발-보안" style="position:relative;"><a href="#5-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C-%EB%B3%B4%EC%95%88" aria-label="5 소프트웨어 개발 보안 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. 소프트웨어 개발 보안</h1>
+<hr>
+<ul>
+<li><em>소프트웨어 개발 과정에서 발생할 수 있는 보안 취약점을 최소화하여 보안 위협으로부터 안전한 소프트웨어를 개발하기 위한 일련의 보안 활동</em></li>
+<li>소프트웨어 개발 보안의 목표<del>(기무가)</del> : <code class="language-text">기밀성, 무결성, 가용성</code> 유지</li>
+<li><em>소프트웨어 개발 보안 관련 기관</em></li>
+<li><code class="language-text">행정안전부</code> : 소프트웨어 개발 보안 정책을 총괄</li>
+<li><code class="language-text">한국 인터넷 진흥원</code> : 소프트웨어 개발 보안 정책 및 가이드를 개발</li>
+<li><code class="language-text">발주기관</code> : 소프트웨어 개발 보안의 계획을 수립</li>
+<li><code class="language-text">사업자</code> : 소프트웨어 개발 보안 관련 기술 수준 및 적용 계획을 명시</li>
+<li><code class="language-text">감리법인</code> : 감리 계획을 수립하고 협의</li>
+</ul>
+<h1 id="6-소프트웨어-개발-보안-활동-관련-법령" style="position:relative;"><a href="#6-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C-%EB%B3%B4%EC%95%88-%ED%99%9C%EB%8F%99-%EA%B4%80%EB%A0%A8-%EB%B2%95%EB%A0%B9" aria-label="6 소프트웨어 개발 보안 활동 관련 법령 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. 소프트웨어 개발 보안 활동 관련 법령</h1>
+<hr>
+<ul>
+<li><em>개인정보 보호법</em>: 개인정보의 처리 및 보호에 관한 사항을 정함으로써 개인의 자유와 권리를 보호</li>
+<li><em>정보통신망 이용촉진 및 정보보호 등에 관한 법률</em> : 정보통신망의 이용 촉진 및 정보통신 서비스를 이용하는 이용자들의 개인 정보를 보호</li>
+<li><em>신용정보의 이용 및 보호에 관한 법률</em> : 개인 신용정보의 효율적 이용과 체계적인 관리를 통해 정보의 오남용을 방지</li>
+<li><em>위치정보의 보호 및 이용 등에 관한 법률</em> : 개인 위치정보의 안전한 이용 환경을 조성하여 정보의 유출이나 오남용을 방지</li>
+<li><em>표준 개인정보 보호 지침</em> : 개인정보의 처리에 관한 기준, 개인정보 침해의 유형 및 예방조치 등에 관한 세부사항을 규정</li>
+<li><em>개인정보의 안전성 확보 조치</em> : 기준개인정보 처리자가 개인정보를 처리하는데 있어 개인정보가 분실, 도난, 유출, 위조, 변조, 훼손되지 않도록 안전성 확보에 필요한 기술적, 관리적, 물리적 안전조치에 관한 최소한의 기준을 규정</li>
+<li><em>개인정보 영향평가에 관한 고시</em> : 개인정보 영향평가를 위한 평가기관의 지정, 영향평가의 절차 등에 관한 세부기준을 규정</li>
+</ul>
+<h1 id="7-secure-sdlc" style="position:relative;"><a href="#7-secure-sdlc" aria-label="7 secure sdlc permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Secure SDLC</h1>
+<hr>
+<ul>
+<li><em>보안상 안전한 소프트웨어를 개발하기 위해 SDLC에 보안 강화를 위한 프로세스를 포함한 것을 의미</em></li>
+<li><em>SDLC(소프트웨어 개발 생명주기)</em> : 소프트웨어 개발 방법론의 바탕이 되는 것으로, 소프트웨어를 개발하기 위해 정의하고 운용, 유지보수 등의 전 과정을 각 단계별로 나눈 것</li>
+<li>SDLC 전체 단계에 걸쳐 수행되어야 할 보안 활동을 제시</li>
+<li><code class="language-text">요구사항 분석 단계</code> : 보안 항목에 해당하는 요구사항을 식별하는 작업을 수행, 전산화되는 정보가 가지고 있는 보안 수준을 보안요소별로 등급을 구분하여 분류</li>
+<li><code class="language-text">설계 단계</code> : 식별된 보안 요구사항들을 소프트웨어 설계서에 반영, 보안 설계서를 작성</li>
+<li><code class="language-text">구현 단계</code> : 표준 코딩 정의서 및 소프트웨어 개발 보안 가이드를 준수하며, 설계서에 따라 보안 요구사항들을 구현</li>
+<li><code class="language-text">테스트 단계</code> : 설계 단계에서 작성한 보안 설계서를 바탕으로 보안 사항들이 정확히 반영되고 동작되는지 점검</li>
+<li><code class="language-text">유지 보수 단계</code> : 이전 과정을 모두 수행하였음에도 발생할 수 있는 보안 사고들을 식별하고, 사고 발생 시 이를 해결하고 보안 패치를 실시</li>
+<li><code class="language-text">시큐어 코딩</code> : 소프트웨어의 구현단계에서 발생할 수 있는 보안 취약점들을 최소화하기 위해 보안 요소들을 고려하며 코딩하는 것</li>
+</ul>
+<h1 id="8-보안-요소" style="position:relative;"><a href="#8-%EB%B3%B4%EC%95%88-%EC%9A%94%EC%86%8C" aria-label="8 보안 요소 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. 보안 요소</h1>
+<hr>
+<ul>
+<li><em>소프트웨어 개발에 있어 충족시켜야할 요소 및 요건</em></li>
+<li><code class="language-text">기밀성</code> : 시스템 내의 정보와 자원은 인가된 사용자에게만 접근이 허용</li>
+<li><code class="language-text">무결성</code> : 시스템 내의 정보는 오직 인가된 사용자만 수정</li>
+<li><code class="language-text">가용성</code> : 인가받은 사용자는 언제라도 사용</li>
+<li><code class="language-text">인증</code> : 시스템 내의 정보와 자원을 사용하려는 사용자가 합법적인 사용자인지를 확인하는 모든 행위</li>
+<li><code class="language-text">부인 방지</code> : 데이터를 송·수신한 자가 송·수신 사실을 부인할 수 없도록 송·수신 증거 제공</li>
+</ul>
+<h1 id="9-보안-점검---세션-통제" style="position:relative;"><a href="#9-%EB%B3%B4%EC%95%88-%EC%A0%90%EA%B2%80---%EC%84%B8%EC%85%98-%ED%86%B5%EC%A0%9C" aria-label="9 보안 점검   세션 통제 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. 보안 점검 - 세션 통제</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">세션 통제</code></p>
+<ul>
+<li><em>세션</em> : 서버와 클라이언트의 연결</li>
+<li><em>세션 통제</em> :  세션의 연결과 연결로 인해 발생하는 정보를 관리하는 것, 세션 통제는 요구사항 분석 및 설계 단계에서 진단해야 하는 보안 점검 내용</li>
+<li><em>세션 통제의 보안 약점</em></li>
+<li><em>불충분한 세션 관리</em> : 일정한 규칙이 존재하는 세션ID가 발급되거나 타임아웃이 너무 길게 설정되어 있는 경우</li>
+<li><em>잘못된 세션에 의한 정보 노출</em> : 다중 스레드(Multi-Thread) 환경에서 멤버 변수에 정보를 저장할 때 발생. 멤버 변수보다 지역 변수를 활용하여 변수의 범위를 제한</li>
+<li><em>세션ID(SessionID)</em>: 서버가 클라이언트들을 구분하기 위해 부여하는 키(Key), 클라이언트가 서버에 요청을 보낼 때마다 세션ID를 통해 인증 수행</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">입력 데이터 검증 및 표현</code></p>
+<ul>
+<li><em>입력 데이터로 인해 발생하는 문제들을 예방하기 위해 구현 단계에서 검증해야 하는 보안 점검 항목</em></li>
+<li><em>SQL 삽입</em> : 입력란에 SQL을 삽입하여 무단으로 DB를 조회하거나 조작. 동적 쿼리에 사용되는 입력 데이터에 예약 어 및 특수문자가 입력되지 않게 필터링 되도록 설정</li>
+<li><em>경로 조작 및 자원 삽입</em> :  데이터 입출력 경로를 조작하여 서버 자원을 수정· 삭제. 사용자 입력값을 식별자로 사용하는 경우, 경로 순회 공격을 막는 필터를 사용</li>
+<li><em>크로스사이트스크립팅(XSS)</em> :  웹페이지에 악의적인 스크립트를 삽입하여 방문자들의 정보를 탈취,비정상적인 기능수행을 유발. HTML 태그의 사용을 제한, 스크립트에 삽입되지 않도록 ‘&#x3C;’, ‘>’, ‘&#x26;’ 등의 문자를 다른 문자로 치환</li>
+<li><em>운영체제 명령어 삽입</em> :  외부 입력값을 통해 시스템 명령어의 실행을 유도해 권한을 탈취하거나 시스템 장애를 유발. 웹 인터페이스를 통해 시스템 명령어가 전달되지 않도록 하고, 외부 입력값을 검증 없이 내부 명령어로 사용하지 않게함</li>
+<li><em>위험한 형식 파일 업로드</em> : 악의적인 명령어가 포함된 스크립트 파일을 업로드함으로써 시스템에 손상, 시스템을 제어. 업로드 되는 파일의 확장자 제한, 파일명의 암호화, 웹사이트와 파일 서버의 경로 분리, 실행 속성을 제거</li>
+<li><em>신뢰되지 않는 URL 주소로 자동 접속 연결</em> : 입력 값으로 사이트 주소를 받는 경우 이를 조작하여 방문자를 피싱 사이트로 유도. 연결되는 외부 사이트의 주소를 화이트 리스트로 관리</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">보안 기능</code></p>
+<ul>
+<li><em>소프트웨어 개발의 구현 단계에서 코딩하는 기능인 인증, 접근제어, 기밀성, 암호화 등을 올바르게 구현하기 위한 보안 점검 항목</em></li>
+<li><em>적절한 인증 없이 중요기능 허용</em> : 보안검사를 우회하여 인증과정 없이 중요한 정보 또는 기능에 접근 및 변경이 가능, 중요정보나 기능을 수행하는 페이지에서는 재인증 기능을 수행하도록 함</li>
+<li><em>부적절한 인가</em> : 접근제어 기능이 없는 실행경로를 통해 정보 또는 권한을 탈취.모든 실행경로에 대해 접근제어 검사를 수행, 사용자에게는 반드시 필요한 접근 권한만을 부여</li>
+<li><em>중요한 자원에 대한 잘못된 권한 설정</em> : 권한 설정이 잘못된 자원에 접근하여 해당 자원을 임의로 사용, 소프트웨어 관리자만 자원들을 읽고 쓸 수 있도록 설정하고, 인가되지 않은 사용자의 중요 자원에 대한 접근 여부를 검사</li>
+<li><em>취약한 암호화 알고리즘 사용</em> : 암호화된 환경설정 파일을 해독하여 비밀번호 등의 중요정보를 탈취, 안전한 암호화 알고리즘을 이용하고, 업무 관련 내용이나 개인정보 등에 대해서는 IT보안 인증 사무국이 안정성을 확인한 암호모듈을 이용</li>
+<li><em>중요 정보 평문 저장 및 전송</em> : 암호화되지 않은 평문 데이터를 탈취하여 중요한 정보를 획득, 중요한 정보를 저장하거나 전송할 때는 반드시 암호화 과정을 거치도록 하고, HTTPS 또는 SSL과 같은 보안 채널을 이용함으로써 방지</li>
+<li><em>하드코드된 비밀번호</em> : 소스코드 유출 시 내부에 하드코드된 패스워드를 이용하여 관리자 권한을 탈취, 패스워드는 암호화하여 별도의 파일에 저장하고, 디폴트 패스워드나 디폴드 키의 사용을 피함</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">시간 및 상태</code></p>
+<ul>
+<li><em>동시 수행을 지원하는 병렬 처리 시스템이나 다수의 프로세스가 동작하는 환경에서 시간과 실행 상태를 관리하여 시스템이 원활하게 동작되도록 하기 위한 보안 검증 항목</em>. 시간 및 상태를 점검하지 않은 코딩이 유발하는 보안 약점</li>
+<li><em>TOCTOU 경쟁 조건</em> : 검사 시점(Time Of Check)과 사용 시점(Time Of Use)을 고려하지 않고 코딩하는 경우 발생. 코드 내에 동기화 구문을 사용하여 해당 자원에는 한 번에 하나의 프로세스만 접근 가능하도록 구성함으로써 방지</li>
+<li><em>종료되지 않는 반복문 또는 재귀함수</em> : 반복문이나 재귀함수에서 종료 조건을 정의하지 않았거나 논리 구조상 종료될 수 없는 경우 발생. 모든 반복문이나 재귀함수의 수행 횟수를 제한하는 설정을 추가하거나, 종료 조건을 점검하여 반복 또는 호출의 종료 여부를 확인함으로써 방지</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">에러 처리</code></p>
+<ul>
+<li><em>소프트웨어 실행 중 발생할 수 있는 오류들을 사전에 정의하여 오류로 인해 발생할 수 있는 문제들을 예방하기 위한 보안 점검 항목</em>. 에러처리의 미비로 인한 코딩이 유발하는 보안 약점</li>
+<li><em>오류 메시지를 통한 정보노출</em> : 오류 발생으로 실행 환경, 사용자 정보, 디버깅 정보 등의 중요 정보를 소프트웨어가 메시지로 외부에 노출. 예외처리 구문에 예외의 이름이나 스택 트레이스를 출력하도록 코딩한 경우 해커는 소프트웨어의 내부구조를 쉽게 파악하기 때문에 오류 발생 시 가능한 한 내부에서만 처리되도록 하거나 메시지를 출력할 경우 최소한의 정보 또는 사전에 준비된 메시지만 출력되도록 함.</li>
+<li><em>오류 상황 대응 부재</em> : 소프트웨어 개발 중 예외처리를 하지 않았거나 미비로 인해 발생. 오류가 발생할 수 있는 부분에 예외처리 구문을 작성하고, 제어문을 활용하여 오류가 악용되지 않도록 코딩</li>
+<li><em>부적절한 예외처리</em> : 함수의 반환값 또는 오류들을 세분화하여 처리하지 않고 광범위하게 묶어 한 번에 처리, 누락된 예외가 존재. 모든 함수의 반환값이 의도대로 출력되는지 확인하고, 세분화된 예외처리를 수행</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">코드 오류</code></p>
+<ul>
+<li><em>소프트웨어 구현 단계에서 개발자들이 코딩 중 실수하기 쉬운 형 변환, 자원 반환 등의 오류를 예방</em>.</li>
+<li><em>널 포인터 역참조</em>  : 널 포인터가 가리키는 메모리에 어떠한 값을 저장할 때 발생</li>
+<li><em>널 포인터</em> : 널 포인터는 포인터(메모리의 위치를 가리키는 요소)에 널(값이 없음)이 저장되어 어떠한 곳도 가리키지 못하는 상태의 요소</li>
+<li><em>부적절한 자원 해제</em>  : 자원을 반환하는 코드를 누락하거나 프로그램 오류로 할당된 자원을 반환하지 못했을 때 발생. 프로그램 내에 자원 반환 코드가 누락되었는지 확인, 오류로 인해 함수가 중간에 종료되었을 때 예외처리에 관계없이 자원이 반환되도록 코딩</li>
+<li><em>해제된 자원 사용</em>  : 이미 사용이 종료되어 반환된 메모리를 참조하는 경우. 반환된 메모리에 접근할 수 없도록 주소를 저장하고 있는 포인터를 초기화</li>
+<li><em>초기화되지 않은 변수 사용</em>  : 변수 선언 후 값이 부여되지 않은 변수를 사용할 때. 변수 선언 시 할당된 메모리를 초기화</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">캡슐화</code></p>
+<ul>
+<li><em>정보 은닉이 필요한 중요한 데이터와 기능을 불충분하게 캡슐화하거나 잘못 사용함으로써 발생할 수 있는 문제를 예방하기 위함</em></li>
+<li><em>잘못된 세션에 의한 정보 노출</em> : 다중 스레드 환경에서 멤버 변수에 정보를 저장할 때. 멤버 변수보다 지역 변수를 활용하여 변수의 범위를 제한함으로써 방지</li>
+<li><em>제거되지 않고 남은 디버그 코드</em> : 개발 중에 버그 수정이나 결과값 확인을 위해 남겨둔 코드들로 인해 발생. 소프트웨어를 배포하기 전에 코드 검사를 통해 남아있는 디버그 코드를 삭제</li>
+<li><em>시스템 데이터 정보 노출</em> : 시스템의 내부 정보를 시스템 메시지 등을 통해 외부로 출력하도록 코딩했을 때. 시스템 메시지를 통해 노출되는 메시지는 최소한의 정보만을 제공</li>
+<li><em>Public 메소드로부터 반환된 Private 배열</em> : 선언된 클래스 내에서만 접근이 가능한 Private 배열을 모든 클래스에서 접근이 가능한 Public 메소드에서 반환할 때. Private 배열을 별도의 메소드를 통해 조작하거나, 동일한 형태의 복제본으로 반환받은 후 값을 전달</li>
+<li><em>Private 배열에 Public 데이터 할당</em> : Private 배열에 Public으로 선언된 데이터 또는 메소드의 파라미터를 저장할 때. Public으로 선언된 데이터를 Private 배열에 저장할 때, 레퍼런스가 아닌 값을 직접 저장</li>
+<li>Java의 접근 제어자(제한자) : Java에서 특정 개체를 선언할 때 외부로부터의 접근을 제한하기 위해 사용되는 예약어(Public, Private, Protected, Default)</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">API 오용</code></p>
+<ul>
+<li><em>소프트웨어 구현 단계에서 API를 잘못 사용하거나 보안에 취약한 API를 사용하지 않도록 하기 위한 보안 검증 항목</em></li>
+<li><em>API 오용으로 발생할 수 있는 보안 약점</em></li>
+<li><code class="language-text">DNS Lookup에 의존한 보안 결정</code> : 도메인명에 의존하여 인증이나 접근 통제 등의 보안 결정을 내리는 경우 DNS 검색을 통해 도메인 이름을 비교하지 않고 IP 주소를 직접 입력하여 접근</li>
+<li><code class="language-text">취약한 API 사용</code>: 보안 문제로 사용이 금지된 API를 사용하거나, 잘못된 방식으로 API를 사용했을 때. 보안 문제로 금지된 함수(strcat, strcpy, sprintf 등)는 안전한 함수로 대체하고, API의 매뉴얼을 참고하여 보안이 보장되는 인터페이스를 사용</li>
+</ul>
+</li>
+</ul>
+<h1 id="10-암호-알고리즘" style="position:relative;"><a href="#10-%EC%95%94%ED%98%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="10 암호 알고리즘 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. 암호 알고리즘</h1>
+<hr>
+<ul>
+<li><em>패스워드, 주민번호, 은행계좌와 같은 중요정보를 보호하기 위해 평문을 암호화된 문장으로 만드는 절차 또는 방법</em></li>
+<li>해시(Hash)를 사용하는 <em>단방향 암호화 방식</em>과, 개인키 및 공개키로 분류되는 <em>양방향 암호화 방식</em></li>
+<li><code class="language-text">개인키 암호화 기법(대칭 암호 기법/단일키 암호화 기법)</code> : 동일한 키로 데이터를 암호화하고 복호화</li>
+<li><code class="language-text">공개키 암호화 기법(비대칭 암호 기법)</code>: 데이터를 암호화할 때 사용하는 공개키는 데이터베이스 사용자에게 공개, 복호화할 때의 비밀키는 관리자가 비밀리에 관리</li>
+<li><code class="language-text">해시(Hash)</code> : 임의의 길이의 입력 데이터나 메시지를 고정된 길이의 값이나 키로 변환하는 것</li>
+</ul>
+<h1 id="11-개인키대칭키-암호화-알고리즘" style="position:relative;"><a href="#11-%EA%B0%9C%EC%9D%B8%ED%82%A4%EB%8C%80%EC%B9%AD%ED%82%A4-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="11 개인키대칭키 암호화 알고리즘 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11. 개인키(대칭키) 암호화 알고리즘</h1>
+<hr>
+<ul>
+<li><code class="language-text">개인키 암호화 알고리즘</code> : 암호화와 복호화에 같은 암호키를 쓰는 알고리즘</li>
+<li>
+<p><code class="language-text">블록 암호 방식</code> : 긴 평문을 암호화하기 위해 고정 길이의 블록을 암호화하는 블록 암호 알고리즘을 반복하는 방법</p>
+<ul>
+<li><code class="language-text">SEED</code>(128) : 1999년 한국인터넷진흥원(KISA)에서 개발한 블록 암호화 알고리즘, 블록 크기는 128비트이며, 키 길이에 따라 128, 256으로 분류</li>
+<li><code class="language-text">ARIA(Academy,Research Institute,Agency)</code>(128) : 2004년 국가정보원과 산학연협회가 개발한 블록 암호화 알고리즘, 블록 크기는 128비트이며, 키 길이에 따라 128, 192, 256으로 분류</li>
+<li><code class="language-text">DES(Data Encryption Standard)</code>(64) : 1975년 미국 NBS에서 발표한 개인키 암호화 알고리즘, 블록 크기는 64비트이며, 키 길이는 56비트</li>
+<li><code class="language-text">AES(Advanced Encryption Standard)</code>(128) : 2001년 미국 표준 기술 연구소(NIST)에서 발표한 개인키 암호화 알고리즘, 블록 크기는 128비트이며, 키 길이에 따라 128, 192, 256으로 분류</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">스트림 암호 방식</code> : 매우 긴 주기의 난수열을 발생시켜 평문과 더불어 암호문을 생성하는 방식</p>
+<ul>
+<li><code class="language-text">RC4</code>: 로널드 라이베스트가 만든 스트림 암호로, 전송 계층 보안(TLS)이나 WEP등의 여러 프로토콜에 사용</li>
+</ul>
+</li>
+</ul>
+<h1 id="12-공개키비대칭키-암호화-알고리즘" style="position:relative;"><a href="#12-%EA%B3%B5%EA%B0%9C%ED%82%A4%EB%B9%84%EB%8C%80%EC%B9%AD%ED%82%A4-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="12 공개키비대칭키 암호화 알고리즘 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. 공개키(비대칭키) 암호화 알고리즘</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">공개키 암호화 알고리즘</code> : 데이터를 암호화할 때 사용하는 공개키는 데이터베이스 사용자에게 공개, 복호화할 때의 비밀키는 관리자가 비밀리에 관리</p>
+<ul>
+<li><code class="language-text">디피-헬만</code> : 암호 키를 교환하는 방법으로서 두 사람이 암호화되지 않은 통신망을 통해 공통의 비밀 키를 공유할 수 있도록 하는 방식</li>
+<li><code class="language-text">RSA</code> : <em>로널드 라이베스트, 아디 샤미르, 레너드 애들먼의 앞글자를 딴 비대칭 키(공개 키 )암호화 알고리즘. 현재 비대칭 키 암호 방식 중 가장 널리 쓰임</em>. 소인수 분해의 어려움 이용</li>
+</ul>
+</li>
+</ul>
+<h1 id="13-해시-방식-암호화-알고리즘" style="position:relative;"><a href="#13-%ED%95%B4%EC%8B%9C-%EB%B0%A9%EC%8B%9D-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="13 해시 방식 암호화 알고리즘 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>13. 해시 방식 암호화 알고리즘</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">해시 방식</code> : 단방향 알고리즘으로서 임의의 데이터를 고정된 길이의 데이터로 매핑하는 함수</p>
+<ul>
+<li><code class="language-text">SHA</code> :  <em>미국 국가안보국(NSA) 이 1993년에 처음으로 설계했으며, 미국 국가 표준으로 지정된 해시 암호화 알고리즘.</em>(SHA-2 : SHA-224, SHA-256, SHA-384, SHA-512)</li>
+<li><code class="language-text">MD5</code> : (128bit)<em>RFC 1321로 지정되어 있으며, 로널드 라이베스트가 예전에 쓰이던  MD4를 대체하기 위해 고안한 알고리즘</em></li>
+</ul>
+</li>
+</ul></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__VisibleTable-sc-1hokm1n-11 dKgnrq"></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="style__CommentDiv-f1ulxg-6 iRLYFX"></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2021 정보 처리 기사 실기 요약 9-소프트웨어 보안 구축/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-cb09e21c8561defc5742.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-bfe5b4cf4329fd108113.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-a6aa5274597c79ae48b1.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-69eca40e6a5763e7938b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-fc54355f4b559c134de8.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-301e482c0f09f2b26d67.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-541704a3e66ecae60395.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-5791998c69c5dcc513a6.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-678705be73863bc4dce1.js"]};/*]]>*/</script><script src="/component---src-templates-post-tsx-541704a3e66ecae60395.js" async=""></script><script src="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js" async=""></script><script src="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-57713c2759173a7ed1fe.js" async=""></script><script src="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-19e6aefe52759fa5db61.js" async=""></script><script src="/252f366e-1c12a0eaa48ff8868fa3.js" async=""></script><script src="/31664189-05f8af049756fc87b416.js" async=""></script><script src="/1a48c3c1-815e1b17a9be0f8f8cd2.js" async=""></script><script src="/1bfc9850-c5a69d782689db0ff35d.js" async=""></script><script src="/d7eeaac4-a4b9f97cec7e8681bdfb.js" async=""></script><script src="/fb7d5399-2c194787786362b50057.js" async=""></script><script src="/78e521c3-464c80c1d674145aa73b.js" async=""></script><script src="/545f34e4-d852f4cbef9f85ad0693.js" async=""></script><script src="/styles-2d4804b503525347efbe.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-cb09e21c8561defc5742.js" async=""></script><script src="/webpack-runtime-37dbd9df0a19c3f25883.js" async=""></script><div class="toasts"></div></body></html>

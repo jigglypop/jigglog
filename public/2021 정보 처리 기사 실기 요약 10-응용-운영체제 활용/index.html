@@ -1,0 +1,945 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.8ab4be3c937b074fb994.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d)!important;font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><style type="text/css">
+    .anchor-header.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor-header.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor-header svg,
+    h2 .anchor-header svg,
+    h3 .anchor-header svg,
+    h4 .anchor-header svg,
+    h5 .anchor-header svg,
+    h6 .anchor-header svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor-header svg,
+    h2:hover .anchor-header svg,
+    h3:hover .anchor-header svg,
+    h4:hover .anchor-header svg,
+    h5:hover .anchor-header svg,
+    h6:hover .anchor-header svg,
+    h1 .anchor-header:focus svg,
+    h2 .anchor-header:focus svg,
+    h3 .anchor-header:focus svg,
+    h4 .anchor-header:focus svg,
+    h5 .anchor-header:focus svg,
+    h6 .anchor-header:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">jigglog| 2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용</title><meta data-react-helmet="true" name="og:title" content="jigglog| 2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용"/><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
+.eoDCLg.active{padding-left:200px;}/*!sc*/
+.eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.eoDCLg .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.eoDCLg .logo{font-size:15px;font-weight:800;}/*!sc*/
+.eoDCLg .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.eoDCLg .be-person{color:white;}/*!sc*/
+.eoDCLg .logout{cursor:pointer;}/*!sc*/
+.eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
+.czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.czPAtN.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g10[id="styled__SideBarInnerDiv-sc-8u1x3g-7"]{content:"czPAtN,"}/*!sc*/
+.eVJdij{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.eVJdij h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.eVJdij hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g11[id="styled__SideBarTopDiv-sc-8u1x3g-8"]{content:"eVJdij,"}/*!sc*/
+.gxwMTf{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin:10px;background-color:#141414;}/*!sc*/
+.gxwMTf .categorytitle{color:rgba(0,207,255);font-size:16px;font-weight:800;margin:10px;padding:10px;text-shadow:0 0 10px rgba(0,207,255);border:2px solid rgba(0,207,255);}/*!sc*/
+data-styled.g13[id="styled__SideBarListDiv-sc-8u1x3g-10"]{content:"gxwMTf,"}/*!sc*/
+.YGDjT{position:relative;width:100%;height:30px;color:red;font-size:12px;font-weight:800;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.YGDjT .smallinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:600px){.YGDjT{font-size:10px;}}/*!sc*/
+.YGDjT:hover a{color:rgba(0,207,255);}/*!sc*/
+data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.kbRvHn{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-15v8614-0"]{content:"kbRvHn,"}/*!sc*/
+.hnwaga{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
+.bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.cBddps{background-color:#141414;border-radius:10px;margin:10px;padding:10px;color:white;-webkit-transition:all 0.5s ease-in;transition:all 0.5s ease-in;display:grid;grid-template-rows:1fr 1fr 1fr;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cBddps .top{grid-row:1/2;}/*!sc*/
+.cBddps .mid{grid-row:2/3;}/*!sc*/
+.cBddps .bottom{grid-row:3/4;}/*!sc*/
+.cBddps .biotext{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .myname{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .gridgap{margin-top:10px;}/*!sc*/
+.cBddps .circle{margin:0;padding:0;}/*!sc*/
+@media (max-width:1200px){.cBddps .bottom{display:none;}}/*!sc*/
+data-styled.g64[id="styled__BioWrapper-sc-1q0fm4m-0"]{content:"cBddps,"}/*!sc*/
+.fgFJem{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g65[id="styled__BottomDiv-sc-1q0fm4m-1"]{content:"fgFJem,"}/*!sc*/
+.hczQXg{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.hczQXg:hover{border:2px solid #FF416C;}/*!sc*/
+.hczQXg:hover .link-inner{color:#FF416C;}/*!sc*/
+.hczQXg .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g66[id="styled__CircleWrapper-sc-1q0fm4m-2"]{content:"hczQXg,"}/*!sc*/
+.lmJOuU{margin:auto;padding:10px 0 0;margin:0 40px 40px 40px;font-size:16px;background-color:white;border-radius:10px;box-shadow:10px 10px 10px black;}/*!sc*/
+@media (max-width:600px){.lmJOuU{padding:70px 10px 0;margin:0;}}/*!sc*/
+.lmJOuU:before,.lmJOuU:after{display:block;content:"";clear:both;}/*!sc*/
+.lmJOuU h1{margin:0.67em 0;font-size:36px;}/*!sc*/
+.lmJOuU time{margin:1em 0;font-size:14px;}/*!sc*/
+.lmJOuU a{font-size:12px;font-weight:800;color:gray;}/*!sc*/
+data-styled.g68[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
+.dUDtWR{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
+.dUDtWR hr{height:4px;background-color:rgba(0,0,0,.1);border:none;}/*!sc*/
+.dUDtWR h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
+.dUDtWR h2{margin-top:2em;font-size:28px;font-weight:800;}/*!sc*/
+.dUDtWR h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.dUDtWR h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.dUDtWR h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.dUDtWR p{margin-top:10px;line-height:2em;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.dUDtWR li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.dUDtWR blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.dUDtWR em{line-height:1.2em;font-weight:1000;margin-top:18px;font-size:20px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.dUDtWR pre,.dUDtWR span{margin-top:10px;font-size:16px;}/*!sc*/
+.dUDtWR table{min-width:45vw;margin:20px;background:#f9f9f9;}/*!sc*/
+.dUDtWR thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.dUDtWR th,.dUDtWR tr,.dUDtWR td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.dUDtWR hr{margin-bottom:30px;}/*!sc*/
+.dUDtWR code{position:relative;}/*!sc*/
+.dUDtWR del{visibility:hidden;-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+@media (max-width:1000px){.dUDtWR{padding:0 10px 10px 10px;line-height:2em;color:black;}.dUDtWR hr{margin-bottom:10px;}.dUDtWR h1{margin-bottom:2px;font-size:18px;}.dUDtWR h2{font-size:16px;}.dUDtWR h3{font-size:14px;}.dUDtWR h4{font-size:12px;}.dUDtWR h5{font-size:10px;}.dUDtWR p,.dUDtWR blockquote,.dUDtWR pre{margin-top:5px;font-size:12px;}.dUDtWR li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.dUDtWR table{margin:20px;}.dUDtWR th,.dUDtWR tr,.dUDtWR td,.dUDtWR span,.dUDtWR em{font-size:10px;}.dUDtWR strong{font-size:14px;}}/*!sc*/
+data-styled.g70[id="styled__PostContent-sc-1hokm1n-3"]{content:"dUDtWR,"}/*!sc*/
+@media (max-width:600px){.ilhkQa{display:none;}}/*!sc*/
+data-styled.g72[id="styled__ClearMobile-sc-1hokm1n-5"]{content:"ilhkQa,"}/*!sc*/
+.iaGTzG{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iaGTzG.color{border:2px solid #78ffd6;}/*!sc*/
+.iaGTzG.color .link-inner{color:#78ffd6;}/*!sc*/
+.iaGTzG .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g73[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
+.dsQNWx .jb-wrap{max-height:400px;width:100%;margin:10px auto;position:relative;overflow:hidden;}/*!sc*/
+.dsQNWx .jb-wrap img{max-height:initial;width:100%;vertical-align:middle;}/*!sc*/
+.dsQNWx .jb-text{color:white;font-size:20px;width:80vw;font-weight:800;text-shadow:2px 2px 20px white;text-align:center;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:black;padding:5%;line-height:2em;}/*!sc*/
+@-webkit-keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@keyframes blink{50%{opacity:0.8;}100%{opacity:1;}}/*!sc*/
+@media (max-width:1200px){.dsQNWx .jb-text{font-size:20px;}}/*!sc*/
+@media (max-width:900px){.dsQNWx .jb-text{font-size:16px;}}/*!sc*/
+@media (max-width:600px){.dsQNWx .jb-text{font-size:12px;width:90vw;}}/*!sc*/
+data-styled.g74[id="styled__ImageWrapper-sc-1hokm1n-7"]{content:"dsQNWx,"}/*!sc*/
+.iFwxVQ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:4px;padding-left:30px;padding-right:30px;}/*!sc*/
+.iFwxVQ h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
+.iFwxVQ .text{color:black;}/*!sc*/
+@media (max-width:1200px){.iFwxVQ{display:none;}}/*!sc*/
+data-styled.g75[id="styled__WarpVisible-sc-1hokm1n-8"]{content:"iFwxVQ,"}/*!sc*/
+.diEQsN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;bottom:0;margin-top:70px;padding-left:30px;padding-right:30px;}/*!sc*/
+.diEQsN h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
+.diEQsN .text{color:black;}/*!sc*/
+@media (max-width:1200px){.diEQsN{display:none;}}/*!sc*/
+data-styled.g76[id="styled__WarpVisibleUnder-sc-1hokm1n-9"]{content:"diEQsN,"}/*!sc*/
+.kwBnbh{position:-webkit-sticky;position:sticky;top:70px;display:block;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.kwBnbh h4{font-size:14px;font-weight:800;}/*!sc*/
+@media (max-width:1200px){.kwBnbh h4{font-size:10px;font-weight:800;}}/*!sc*/
+@media (max-width:992px){.kwBnbh{display:none;}}/*!sc*/
+.kwBnbh .lineblock{display:inline-block;}/*!sc*/
+.kwBnbh .smallcircle{display:inline-block;padding-left:30px;font-weight:800;color:greenyellow;vertical-align:middle;}/*!sc*/
+data-styled.g77[id="styled__Visible-sc-1hokm1n-10"]{content:"kwBnbh,"}/*!sc*/
+.dKgnrq{position:-webkit-sticky;position:sticky;display:block;top:20vh;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:992px){.dKgnrq{display:none;}}/*!sc*/
+data-styled.g78[id="styled__VisibleTable-sc-1hokm1n-11"]{content:"dKgnrq,"}/*!sc*/
+.hWEvTs{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid rgba(0,207,255);box-shadow:0 0 5px gray;}/*!sc*/
+.hWEvTs .link-inner{color:rgba(0,207,255);width:30px;height:30px;}/*!sc*/
+.hWEvTs:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g81[id="styled__Button-sc-1aanmmt-0"]{content:"hWEvTs,"}/*!sc*/
+.iRLYFX{padding:5%;position:relative;display:grid;grid-template-rows:50px 1fr 300px;}/*!sc*/
+@media (max-width:1000px){.iRLYFX{padding:3%;}}/*!sc*/
+@media (max-width:600px){.iRLYFX{padding:1%;}}/*!sc*/
+data-styled.g88[id="style__CommentDiv-f1ulxg-6"]{content:"iRLYFX,"}/*!sc*/
+.fGOExz{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #ffe259;box-shadow:0 0 5px gray;}/*!sc*/
+.fGOExz .kakao-inner{width:30px;height:30px;}/*!sc*/
+.fGOExz:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g123[id="KakaoShareButton__KakaoButton-sc-1yy6cgc-0"]{content:"fGOExz,"}/*!sc*/
+.fGwxWy{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid #4a00e0;box-shadow:0 0 5px gray;}/*!sc*/
+.fGwxWy .link-inner{width:30px;height:30px;}/*!sc*/
+.fGwxWy:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g124[id="CopyButton__LinkButton-sc-10dc2a0-0"]{content:"fGwxWy,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><link rel="shortcut icon" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="48x48" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/favicon-48x48.png"/><link rel="manifest" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/manifest.json"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#fff"/><meta name="application-name" content="gatsby-advanced-blog"/><link rel="apple-touch-icon" sizes="57x57" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="167x167" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-167x167.png"/><link rel="apple-touch-icon" sizes="180x180" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-180x180.png"/><link rel="apple-touch-icon" sizes="1024x1024" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-icon-1024x1024.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="gatsby-advanced-blog"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-640x1136.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-750x1334.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-828x1792.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1125x2436.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1242x2688.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1536x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2224.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1668x2388.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x2732.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1620x2160.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1136x640.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1334x750.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-1792x828.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2436x1125.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2208x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2688x1242.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2048x1536.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2224x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2388x1668.png"/><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2732x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/icons-62a08f42ca1f8af3cd82ef580e951ba4/apple-touch-startup-image-2160x1620.png"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-173606059-1', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-37dbd9df0a19c3f25883.js"/><link as="script" rel="preload" href="/app-cb09e21c8561defc5742.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-2d4804b503525347efbe.js"/><link as="script" rel="preload" href="/545f34e4-d852f4cbef9f85ad0693.js"/><link as="script" rel="preload" href="/78e521c3-464c80c1d674145aa73b.js"/><link as="script" rel="preload" href="/fb7d5399-2c194787786362b50057.js"/><link as="script" rel="preload" href="/d7eeaac4-a4b9f97cec7e8681bdfb.js"/><link as="script" rel="preload" href="/1bfc9850-c5a69d782689db0ff35d.js"/><link as="script" rel="preload" href="/1a48c3c1-815e1b17a9be0f8f8cd2.js"/><link as="script" rel="preload" href="/31664189-05f8af049756fc87b416.js"/><link as="script" rel="preload" href="/252f366e-1c12a0eaa48ff8868fa3.js"/><link as="script" rel="preload" href="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-19e6aefe52759fa5db61.js"/><link as="script" rel="preload" href="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-57713c2759173a7ed1fe.js"/><link as="script" rel="preload" href="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js"/><link as="script" rel="preload" href="/component---src-templates-post-tsx-541704a3e66ecae60395.js"/><link as="fetch" rel="preload" href="/page-data\2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 207, 255, 0.5) !important;
+}
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  color: black;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ed213a;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0.5rem;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-15v8614-0 kbRvHn"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(6)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div></div></div></div></nav><main><div class="styled__PostWrapper-sc-1hokm1n-1 lmJOuU"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="styled__ImageWrapper-sc-1hokm1n-7 dsQNWx"><div class="jb-wrap"><div class="jb-image"><img src="/static/1-5f5e3d9ae284b236ec2c64b060aa7893.jpg" alt=""/></div><div class="jb-text">2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용</div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__Visible-sc-1hokm1n-10 kwBnbh"><div class="styled__BioWrapper-sc-1q0fm4m-0 cBddps"><div class="top"><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div><div class="mid"><p class="biotext">JIGGLYPOP</p><p class="biotext">염동환</p></div><div class="styled__BottomDiv-sc-1q0fm4m-1 fgFJem bottom"><a href="https://github.com/jigglypop" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></div></a><a href="https://www.facebook.com/donghwan.yeom.3" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></div></a><a href="https://www.instargram.com/yeom_donghwan" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path></svg></div></a></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="answer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="lines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-opacity=".36" d="M0 20h24v4H0z"></path><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer" id="dels"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.032 13l0.9-3h4.137l0.9 3h1.775l-3-10h-3.488l-3 10h1.776zM7.432 5h1.137l0.9 3h-2.937l0.9-3z"></path></svg></button></div></div><div class="styled__WarpVisibleUnder-sc-1hokm1n-9 diEQsN"><div class="lineblock"><div class="kakao-share-button"><button id="kakao-link-btn" class="KakaoShareButton__KakaoButton-sc-1yy6cgc-0 fGOExz"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#ffe259" class="kakao-inner" style="color:#ffe259" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M5.678 18.123C3.092 16.566 1.5 14.112 1.5 11.405 1.5 6.701 6.248 3 12 3s10.5 3.701 10.5 8.405c0 4.704-4.748 8.405-10.5 8.405-.442 0-.882-.022-1.318-.065l-3.765 2.458c-.615.326-.957.425-1.485.066-.62-.424-.596-.892-.381-1.56l.627-2.586zM3.5 11.405c0 2.132 1.418 4.123 3.781 5.32l.706.359-.186.77-.401 1.648 2.8-1.83.366.046c.473.061.952.092 1.434.092 4.741 0 8.5-2.93 8.5-6.405S16.741 5 12 5s-8.5 2.93-8.5 6.405zm14.407-.346l1.514 2.155a.472.472 0 1 1-.773.543l-1.428-2.033-.427.413V13.5a.472.472 0 0 1-.944 0v-1.439a.471.471 0 0 1 0-.222V9.282a.472.472 0 0 1 .944 0v1.542l1.928-1.866a.472.472 0 0 1 .656.678l-1.47 1.423zm-2.958 1.925a.472.472 0 0 1 0 .944h-1.932a.472.472 0 0 1-.471-.472V9.297a.472.472 0 1 1 .943 0v3.687h1.46zm-5.857-1.092h1.334l-.638-1.707-.696 1.707zm2.523.488l.345.925a.472.472 0 1 1-.884.33l-.298-.799h-2.07l-.331.813a.472.472 0 1 1-.874-.357l1.66-4.075a.696.696 0 0 1 .654-.447.69.69 0 0 1 .627.474l1.046 2.8a.469.469 0 0 1 .127.32l-.002.016zM8.293 9.302c0 .26-.21.472-.471.472h-1.14v3.736a.472.472 0 0 1-.945 0V9.774h-1.16a.472.472 0 1 1 0-.944h3.245c.26 0 .471.211.471.472z"></path></g></svg></button></div></div><div class="lineblock"><h4 class="text">카카오톡 공유</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button class="CopyButton__LinkButton-sc-10dc2a0-0 fGwxWy"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" color="#4a00e0" class="link-inner" style="color:#4a00e0" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></button></div><div class="lineblock"><h4 class="text">URL주소 복사</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1aanmmt-0 hWEvTs"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19,7h-1V2H6v5H5c-1.654,0-3,1.346-3,3v7c0,1.103,0.897,2,2,2h2v3h12v-3h2c1.103,0,2-0.897,2-2v-7C22,8.346,20.654,7,19,7 z M8,4h8v3H8V4z M16,20H8v-4h8V20z M20,17h-2v-1v-2H6v2v1H4v-7c0-0.551,0.449-1,1-1h14c0.552,0,1,0.449,1,1V17z"></path><path d="M14 10H18V12H14z"></path></svg></button></div><div class="lineblock"><h4 class="text">글전체 프린트</h4></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"><div class="styled__ClearMobile-sc-1hokm1n-5 ilhkQa"></div><div class="styled__PostContent-sc-1hokm1n-3 dUDtWR"><h5>2021-05-03 21:01<!-- --> 시에 저장한 글입니다.</h5><hr style="margin-bottom:50px"/><div id="post-contents" style="margin-bottom:100px"><blockquote>
+<p>정보처리기사 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 책을 참고해서 공부하세요</p>
+</blockquote>
+<blockquote>
+<p>2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용 요약 입니다. 정처기 공부를 할 때 활용하세요.</p>
+</blockquote>
+<h1 id="1-운영체제os" style="position:relative;"><a href="#1-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9Cos" aria-label="1 운영체제os permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 운영체제(OS)</h1>
+<hr>
+<ul>
+<li><em>컴퓨터 시스템의 자원들을 효율적으로 관리하며, 사용자가 컴퓨터를 편리하고 효과적으로 사용할 수 있도록 환경을 제공하는 여러 프로그램의 모임</em></li>
+<li><code class="language-text">처리 능력</code> : 일정 시간 내에 시스템이 처리하는 일의 양</li>
+<li><code class="language-text">반환 시간</code> : 시스템에 작업을 의뢰한 시간부터 처리가 완료될 때까지 걸린 시간</li>
+<li><code class="language-text">사용 가능도</code> : 시스템을 사용할 필요가 있을 때 즉시 사용 가능한 정도</li>
+<li><code class="language-text">신뢰도</code> : 시스템이 주어진 문제를 정확하게 해결하는 정도</li>
+<li>
+<p><em>기능</em></p>
+<ul>
+<li>프로세서, 기억장치, 입·출력장치, 파일 및 정보 등 의 자원 관리</li>
+<li>자원의 효과적인 경영 스케줄링 기능 제공</li>
+<li>사용자와 시스템 간의 편리한 인터페이스 제공</li>
+<li>시스템의 각종 하드웨어와 네트워크 관리·제어</li>
+<li>시스템의 오류 검사 및 복구, 데이터 관리, 데이터 및 자원 공유</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-windows" style="position:relative;"><a href="#2-windows" aria-label="2 windows permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Windows</h1>
+<hr>
+<h4>1) windows</h4>
+<ul>
+<li>마이크로소프트에서 개발한 운영체제</li>
+</ul>
+<h4>2) Windows 시스템의 특징</h4>
+<ul>
+<li>그래픽 사용자 인터페이스(GUI, Graphci User Interface) : 키보드로 명령어를 수행하지 않고 마우스로 아이콘이나 메뉴를 선택하여 모든 작업을 수행</li>
+<li>선점형 멀티태스킹 : 동시에 여러 개의 프로그램을 실행하는 멀티태스킹을 하면서 운영체제가 각 작업의 CPU 이용 시간을 제어하여 응용 프로그램 실행 중 문제가 발생하면 해당 프로그램을 강제 종료시키고 모든 시스템 자원을 반환</li>
+<li>Pnp(Plug and Play) : 하드웨어를 설치할 때 해당 하드웨어를 사용하는데 필요한 시스템 환경을 운영체제가 자동으로 구성해주는 기능</li>
+<li>OLE(Object Linking and Embedding) : 다른 응용 프로그램에서 작성된 문자나 그림 등의 개체 현재 작성 중인 문서에 자유롭게 연결하거나 삽입하여 편집할 수 있는 기능</li>
+<li>Single User 시스템 : 컴퓨터 한대를 한 사람이 독점 사용</li>
+</ul>
+<h1 id="3-unix--linux--macos" style="position:relative;"><a href="#3-unix--linux--macos" aria-label="3 unix  linux  macos permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. UNIX / LINUX / MacOS</h1>
+<hr>
+<h3 id="1-unix의-개요-및-특징" style="position:relative;"><a href="#1-unix%EC%9D%98-%EA%B0%9C%EC%9A%94-%EB%B0%8F-%ED%8A%B9%EC%A7%95" aria-label="1 unix의 개요 및 특징 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) UNIX의 개요 및 특징</h3>
+<ul>
+<li>1960년대 AT&#x26;T 벨(Bell) 연구소, MIT, General Electric이 공동 개발한 운영체제</li>
+<li>시분할 시스템을 위해 설계된 대화식 운영체제</li>
+<li>소스코드가 개방형 시스템로 구성되어 있음</li>
+<li>대부분 C언어로 작성되어 이식성이 높으며 장치, 프로세스 간 호환성이 높음</li>
+<li>다중 사용자(Multi-User) 및 다중 작업(Multi-Tasking)을 지원</li>
+<li>트리 구조의 파일 시스템을 가짐</li>
+</ul>
+<h3 id="2-unix-시스템의-구성" style="position:relative;"><a href="#2-unix-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98-%EA%B5%AC%EC%84%B1" aria-label="2 unix 시스템의 구성 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) UNIX 시스템의 구성</h3>
+<h4>(1) 커널(Kernel)</h4>
+<ul>
+<li>컴퓨터가 부팅될 때 주기억장치에 적재된 후 상주하면서 실행됨</li>
+<li>하드웨어를 보호하고 프로그램과 하드웨어 간의 인터페이스 역할을 담당</li>
+<li>프로세스 관리, 기억장치 관리, 파일 관리, 입출력 관리, 프로세스 간 통신, 데이터 전송 및 변환 등 여러 가지 기능 수행</li>
+</ul>
+<h4>(2) 쉘(Shell)</h4>
+<ul>
+<li>명령어를 인식하여 수행하는 명령어 해석기</li>
+<li>시스템과 사용자 간의 인터페이스 담당</li>
+<li>DOS의 COMMAND.COM과 같은 기능 수행</li>
+<li>주기억장치에 상주하지 않고 명령어가 포함된 파일 형태로 존재</li>
+<li>보조기억장치에서 교체 처리 가능</li>
+<li>파이프라인 기능(둘 이상의 명령을 함께 묶어 처리한 결과를 다른 명령의 입력으로 전환하는 기능) 지원</li>
+<li>입출력 재지정을 통해 입력과 출력의 방향을 변경할 수 있음</li>
+<li>공용 Shell이나 사용자가 만들 Shell을 사용할 수 있음</li>
+</ul>
+<h4>(3) 유틸리티(Utility Program)</h4>
+<ul>
+<li>사용자가 작성한 외부 프로그램을 처리</li>
+<li>DOS에서의 외부 명령어에 해당</li>
+<li>에디터, 컴파일러, 인터프리터, 디버거 등</li>
+</ul>
+<h4>3) LINUX의 개요 및 특징</h4>
+<ul>
+<li>1991년 리누스 토발즈가 UNIX를 기반으로 개발한 운영체제</li>
+<li>프로그램 소스 코드가 무료로 공개되어 있어 사용자가 원하는 기능을 추할 수 있고 다양한 플랫폼에 설치하여 사용이 가능하여 재배포가 가능</li>
+<li>UNIX와 완벽하게 호환</li>
+<li>대부분의 특징이 UNIX와 동일</li>
+</ul>
+<h4>4) MacOS의 개요 및 특징</h4>
+<ul>
+<li>1980년대 애플사가 UNIX를 기반으로 개발한 운영체제</li>
+<li>애플사에서 생산하는 제품에서만 사용 가능</li>
+<li>드라이버 설치 및 install / uninstall 과정이 단순</li>
+</ul>
+<h4>5) UNIX 시스템의 구성</h4>
+<ul>
+<li>
+<p><code class="language-text">커널(Kernel)</code></p>
+<ul>
+<li>UNIX의 가장 핵심적인 부분, 하드웨어를 보호(캡슐화)하고, 프로그램들과 하드웨어 간의 인터페이스 역할을 담당</li>
+<li>컴퓨터 부팅 시 주기억장치에 적재되어 상주하면서 실행</li>
+<li>프로세스, 기억장치, 파일, 입·출력 관리, 프로세스 간 통신, 데이터 전송 및 변환 등</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">쉘(Shell)</code></p>
+<ul>
+<li>사용자의 명령어를 인식하여 프로그램을 호출하고, 명령을 수행하는 명령어 해석기</li>
+<li>시스템과 사용자 간의 인터페이스를 담당</li>
+<li>DOS의 COMMAND.COM과 같은 기능을 수행</li>
+<li>주기억장치에 상주하지 않고, 명령어가 포함된 파일 형태로 존재하며 보조기억장치에서 교체 처리가 가능</li>
+<li>종류 : Bourne Shell, C Shell, Korn Shell 등</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-windows의-cli-기본-명령어" style="position:relative;"><a href="#4-windows%EC%9D%98-cli-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-label="4 windows의 cli 기본 명령어 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Windows의 CLI 기본 명령어</h1>
+<hr>
+<ul>
+<li><code class="language-text">dir</code> : 현재 디렉터리의 파일 목록 표시</li>
+<li><code class="language-text">copy</code> : 파일 복사</li>
+<li><code class="language-text">del</code> : 파일 삭제</li>
+<li><code class="language-text">type</code> : 파일 내용 표시</li>
+<li><code class="language-text">ren</code> : 파일 이름 변경</li>
+<li><code class="language-text">md</code> : 디렉터리 생성</li>
+<li><code class="language-text">cd</code> : 동일한 드라이브에서 디렉터리 위치 변경</li>
+<li><code class="language-text">cls</code> : 화면 내용 지움</li>
+<li><code class="language-text">attrib</code> : 파일 속성 변경</li>
+<li><code class="language-text">find</code> : 파일에서 문자열 찾음</li>
+<li><code class="language-text">chkdsk</code> : 디스크 상태 점검</li>
+<li><code class="language-text">format</code> : 디스크 표면을 트랙과 섹터로 나누어 초기화</li>
+<li><code class="language-text">move</code> : 파일 이동</li>
+</ul>
+<h1 id="5-unix--linux의-cli-기본-명령어" style="position:relative;"><a href="#5-unix--linux%EC%9D%98-cli-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-label="5 unix  linux의 cli 기본 명령어 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. UNIX / LINUX의 CLI 기본 명령어</h1>
+<hr>
+<h3 id="1-검색-기능-명령어" style="position:relative;"><a href="#1-%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-label="1 검색 기능 명령어 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) 검색 기능 명령어</h3>
+<ul>
+<li>
+<p><code class="language-text">ls</code> : 현재 디렉터리의 파일 목록 표시</p>
+<ul>
+<li>-a : 전부 </li>
+<li>-l : 상세정보 (소유자, 크기, 수정시간 등)</li>
+<li>-S : 크기별 정렬</li>
+<li>-h : 단위 표현 변경 </li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">ls</span> -al 
+// 리스트 상세하게 출력</code></pre></div>
+<ul>
+<li><code class="language-text">man</code> : 명령어 도움말</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">man</span> <span class="token function">ls</span>
+// <span class="token function">ls</span> 명령어 도움말 출력</code></pre></div>
+<ul>
+<li><code class="language-text">cd</code> : 디렉터리 위치 변경</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /abc
+// 루트에서 abc 디렉토리로 이동
+<span class="token builtin class-name">cd</span> ./abc
+// 현재 위치에서 abc 디렉토리로 이동</code></pre></div>
+<ul>
+<li><code class="language-text">pwd</code> : 현재 작업중인 디렉터리 경로를 화면에 표시</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">pwd</span></code></pre></div>
+<ul>
+<li><code class="language-text">mkdir</code> : 디렉터리 생성</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">mkdir</span> /test1/abc
+// test1 폴더에 abc 폴더 생성</code></pre></div>
+<ul>
+<li><code class="language-text">rmdir</code> : 디렉터리 삭제</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">rmdir</span> /test1
+// test1 폴더 삭제</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">rm</code> : 파일 삭제</p>
+<ul>
+<li>-r : 하위 디렉토리 삭제</li>
+<li>-f : 강제로 삭제</li>
+<li>-i : 파일 지울지 물어봄</li>
+<li>-v : 삭제 정보 보여줌</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">rm</span> /test/abc.txt
+// <span class="token builtin class-name">test</span> 디렉토리 안의 abc.txt 파일 삭제
+<span class="token function">rm</span> -fr/test/*
+// <span class="token builtin class-name">test</span> 디렉토리 안의 모든 디렉토리와 파일 삭제</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">mv</code> : 파일 이동</p>
+<ul>
+<li>-i : 동일한 파일명 있을 경우 덮어쓸지 물어봄</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">mv</span> /test1/aaa.txt /test2/bbb.txt
+// test1의 aaa.txt파일을 test2 디렉토리로 옮기고 파일명을 bbb.txt로 변경</code></pre></div>
+<ul>
+<li><code class="language-text">touch</code> : 용량 0의 파일 생성</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">touch</span> abc.txt
+// 내용이 없는 abc.txt 생성
+<span class="token function">touch</span> a.txt b.txt c.txt
+// 내용이 없는 파일 <span class="token number">3</span>개 생성
+<span class="token function">touch</span> -t 01051054 
+// <span class="token number">1</span>월 <span class="token number">5</span>일 <span class="token number">10</span>시 <span class="token number">54</span>분으로 시간 수정</code></pre></div>
+<ul>
+<li><code class="language-text">cat/more</code> : 파일 내용을 화면에 표시(cat : 짦게, more : 길게)</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">cat</span> abc.txt
+
+<span class="token function">more</span> abc.txt</code></pre></div>
+<ul>
+<li><code class="language-text">head</code> : 처음 10줄을 출력</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">head</span> abc.txt</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">tail</code> : 마지막 10줄을 출력</p>
+<ul>
+<li>-f : 실시간으로 조회 (Log 확인시 주로 사용)</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">tail</span> abc.txt
+<span class="token function">tail</span> -f abc.log
+// abc.log 파일이 변경될 때마다 실시간 출력</code></pre></div>
+<ul>
+<li><code class="language-text">clear</code> : 화면을 clear함</li>
+<li>
+<p><code class="language-text">wc</code> : 단어 줄 수를 세어줌</p>
+<ul>
+<li>-l : line 수를 Count</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">wc</span> -l abc.txt        
+// abc.txt파일의 Line 수를 Count</code></pre></div>
+<ul>
+<li><code class="language-text">alias/unalias</code> : 별칭을 지어주고 삭제</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">alias</span> <span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token string">'cd /a/b/c/d/e/f/g'</span>        
+// <span class="token builtin class-name">alias</span> 지정 후 a를 입력하면 해당 명령어가 실행됨
+<span class="token builtin class-name">unalias</span> a        
+// a로 지정된 <span class="token builtin class-name">alias</span> 를 삭제</code></pre></div>
+<ul>
+<li><code class="language-text">|</code> : (pipe) 명령의 결과를 다음 멍령의 입력으로 넘긴다</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">ls</span> -al <span class="token operator">|</span> <span class="token function">wc</span> -l
+// <span class="token function">ls</span> 명령어의 라인수를 count</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">tar</code> : 파일을 묶어줌</p>
+<ul>
+<li>c : 파일을 묶어줌</li>
+<li>v : 작업 과정 확인</li>
+<li>f : 저장될 파일명 지정</li>
+<li>x : 묶은 파일을 풀어줌</li>
+<li>z : tar + gzip</li>
+<li>j : tar + bzip2</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">tar</span> cvf abc.tar ./bbb        
+// bbb 디렉토리를 abc.tar 파일로 묶어라
+
+<span class="token function">tar</span> xvf abc.tar        
+// abc.tar 파일을 풀어라</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">find</code> : 파일 검색</p>
+<ul>
+<li>-name : 파일 이름으로 검색</li>
+<li>-user : 소유자 이름으로 검색</li>
+<li>-size : 파일 크기로 검색</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">find</span> ./bbb -name <span class="token string">'b.*'</span> -size <span class="token number">0</span>        
+// bbb 디렉토리에 파일명이 b이고 모든 확장자, size가 <span class="token number">0</span>인 파일 찾기</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">grep</code> : 파일에 포함된 특정 단어 검색</p>
+<ul>
+<li>-i : 대소문자 구분 안함</li>
+<li>-n : 라인 번호 출력</li>
+<li>-v : 검색어가 없는 Line 보여달라</li>
+<li>-c : 라인의 개수 출력</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">grep</span> -ic <span class="token string">'Feb'</span> ./d.txt        
+// 대소문자 구분하지 않고 d.txt 에 <span class="token string">'Feb'</span> 가 있는 행 Count 
+<span class="token function">grep</span> -iv <span class="token string">'feb'</span> ./d.txt        
+// 대소문자 구분하지 않고 d.txt에 <span class="token string">'feb'</span> 가 없는 Line 
+<span class="token function">grep</span> -ivn <span class="token string">'feb'</span> ./d.txt        
+// 위의 명령어에 Line 번호도 출력</code></pre></div>
+<ul>
+<li><code class="language-text">fsck</code> : 파일 시스템 검사 및 보수</li>
+<li><code class="language-text">ps</code> : 파일 복사</li>
+</ul>
+<h3 id="2-사용자-및-그룹-관리" style="position:relative;"><a href="#2-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%B0%8F-%EA%B7%B8%EB%A3%B9-%EA%B4%80%EB%A6%AC" aria-label="2 사용자 및 그룹 관리 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) 사용자 및 그룹 관리</h3>
+<ul>
+<li>
+<p><code class="language-text">groupadd</code> : 새로운 그룹 생성</p>
+<ul>
+<li>-g : 그룹번호 지정 (중복시키지 말것)</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">groupadd</span> -g <span class="token number">500</span> dba            
+// 그룹번호 <span class="token number">500</span>번으로 dba 그룹 생성
+<span class="token function">groupadd</span> dba2            
+// 가장 마지막 생성된 그룹번호의 다음 번호로 dba2 계정을 생성</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">groupmod</code> : 그룹 설정 변경</p>
+<ul>
+<li>-g : 그룹번호 변경</li>
+<li>-n : 그룹명 변경</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">groupmod</span> -g <span class="token number">501</span> -n dbag dba            
+// dba 그룹의 그룹번호를 <span class="token number">501</span>로, 그룹명을 dbag로 변경</code></pre></div>
+<ul>
+<li><code class="language-text">groupdel</code> : 그룹 삭제</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">groupdel</span> dba</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">useradd</code> : 사용자 계정 생성</p>
+<ul>
+<li>-u : 유저번호(UID) 설정</li>
+<li>-g : 그룹번호(GID) 설정</li>
+<li>-G : 보조 그룹번호(GID) 설정</li>
+<li>-d : 홈 디렉토리 설정</li>
+<li>-s : 사용할 Shell 설정</li>
+<li>-c : 계정에 대한 설명(Comment) 남김</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">useradd</span> user1
+<span class="token function">useradd</span> -u <span class="token number">501</span> -g <span class="token number">550</span> -c testuser user2</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">usermod</code> : 사용자 계정 변경</p>
+<ul>
+<li>-u : 유저번호(UID) 설정</li>
+<li>-g : 그룹번호(GID) 설정</li>
+<li>-G : 보조 그룹번호(GID) 설정</li>
+<li>-d : 홈 디렉토리 설정</li>
+<li>-s : 사용할 Shell 설정</li>
+<li>-c : 계정에 대한 설명(Comment) 남김</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">userdel</code> : 사용자 삭제</p>
+<ul>
+<li>-r : 홈 디렉토리까지 삭제</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">userdel</span> -r user2</code></pre></div>
+<h3 id="3-권한-관리" style="position:relative;"><a href="#3-%EA%B6%8C%ED%95%9C-%EA%B4%80%EB%A6%AC" aria-label="3 권한 관리 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3) 권한 관리</h3>
+<ul>
+<li>
+<p>권한 관리</p>
+<ul>
+<li>r : readable / 읽을 수 있음</li>
+<li>w : writeable / 쓸 수 있음</li>
+<li>x : executable / 실행할 수 있음</li>
+<li>-: denied / 접근 거부</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">- rw- r-- r-- <span class="token number">1</span> root root   <span class="token number">0</span> Feb  <span class="token number">5</span> <span class="token number">16</span>:42 a.txt
+<span class="token number">1</span><span class="token operator">|</span><span class="token number">2</span>  <span class="token operator">|</span><span class="token number">3</span>  <span class="token operator">|</span><span class="token number">4</span>  <span class="token operator">|</span> 
+
+// 소유자는 read, <span class="token function">write</span> 가능, 그룹은 <span class="token builtin class-name">read</span> 가능, 그 외는 <span class="token builtin class-name">read</span> 가능
+// <span class="token number">1</span>번 <span class="token builtin class-name">:</span> 파일종류, <span class="token number">2</span>번 <span class="token builtin class-name">:</span> 소유자의 권한, <span class="token number">3</span>번 <span class="token builtin class-name">:</span> 그룹의 권한, <span class="token number">4</span>번 <span class="token builtin class-name">:</span> 이 외의 권한</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">chmod</code>  : 권한변경 - 영문자 할당법</p>
+<ul>
+<li>chmod 옵션 a.txt  : 어느 부분 그리고 추가할지 삭제할지, 그리고 어떤 권한을 줄지를 정해줌</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>u : user</th>
+<th>+ : permission 추가</th>
+<th>r : read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g : group</td>
+<td>- : permission 삭제</td>
+<td>w : write</td>
+</tr>
+<tr>
+<td>o : other</td>
+<td>= : permission 추가</td>
+<td>x : execute</td>
+</tr>
+<tr>
+<td>a : all</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">chmod</span> a+r a.txt    
+// a.txt 파일 모든 사용자에게 <span class="token builtin class-name">read</span> 권한 부여
+<span class="token function">chmod</span> a+w a.txt    
+// a.txt 파일 모든 사용자에게 <span class="token function">write</span> 권한 부여
+<span class="token function">chmod</span> a+x a.txt    
+// a.txt 파일 모든 사용자에게 execute 권한 부여
+<span class="token function">chmod</span> o-r a.txt    
+// a.txt 파일 관련 없는 사람은 <span class="token builtin class-name">read</span> 권한 제거</code></pre></div>
+<ul>
+<li>
+<p><code class="language-text">chmod</code>   : 권한변경 - 숫자 할당법</p>
+<ul>
+<li>chmod 옵션 b.txt    // 옵션 부분은 3자리 숫자가 들어감</li>
+<li>이진수 첫번째 자리는 user, 두번째 자리는 group, 세번째 자리는 other</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>4 (100(2))</th>
+<th>read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (010(2))</td>
+<td>write</td>
+</tr>
+<tr>
+<td>1(001(2))</td>
+<td>execute</td>
+</tr>
+</tbody>
+</table>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">chmod</span> <span class="token number">777</span> b.txt    
+// b.txt 파일 모든 사용자에게 read, write, execute 권한 부여
+<span class="token function">chmod</span> <span class="token number">751</span> b.txt    
+// b.txt 파일 user 는 모든 권한, group 은 read, execute 권한, other 는 execute 권한 부여
+<span class="token function">chmod</span> <span class="token number">700</span> b.txt    
+// b.txt 파일 user 는 모든 권한 나머지는 권한 제거</code></pre></div>
+<h3 id="4-프로세스-관리" style="position:relative;"><a href="#4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EA%B4%80%EB%A6%AC" aria-label="4 프로세스 관리 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4) 프로세스 관리</h3>
+<ul>
+<li><code class="language-text">kill</code> : PID(프로세스 고유 번호)를 이용하여 프로세스 종료</li>
+<li><code class="language-text">killall</code> : 프로세스의 이름을 이용하여 프로세스 종료</li>
+<li><code class="language-text">ps</code> : 현재 실행중인 프로세스 표시</li>
+<li><code class="language-text">top</code> : 시스템의 프로세스와 메모리 사용 현황 표시</li>
+<li><code class="language-text">who</code> : 현재 시스템에 접속해 있는 사용자 표시</li>
+</ul></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__VisibleTable-sc-1hokm1n-11 dKgnrq"></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="style__CommentDiv-f1ulxg-6 iRLYFX"></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2021 정보 처리 기사 실기 요약 10-응용-운영체제 활용/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-cb09e21c8561defc5742.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-bfe5b4cf4329fd108113.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-a6aa5274597c79ae48b1.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-69eca40e6a5763e7938b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-fc54355f4b559c134de8.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-301e482c0f09f2b26d67.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-541704a3e66ecae60395.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-5791998c69c5dcc513a6.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-678705be73863bc4dce1.js"]};/*]]>*/</script><script src="/component---src-templates-post-tsx-541704a3e66ecae60395.js" async=""></script><script src="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js" async=""></script><script src="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-57713c2759173a7ed1fe.js" async=""></script><script src="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-19e6aefe52759fa5db61.js" async=""></script><script src="/252f366e-1c12a0eaa48ff8868fa3.js" async=""></script><script src="/31664189-05f8af049756fc87b416.js" async=""></script><script src="/1a48c3c1-815e1b17a9be0f8f8cd2.js" async=""></script><script src="/1bfc9850-c5a69d782689db0ff35d.js" async=""></script><script src="/d7eeaac4-a4b9f97cec7e8681bdfb.js" async=""></script><script src="/fb7d5399-2c194787786362b50057.js" async=""></script><script src="/78e521c3-464c80c1d674145aa73b.js" async=""></script><script src="/545f34e4-d852f4cbef9f85ad0693.js" async=""></script><script src="/styles-2d4804b503525347efbe.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-cb09e21c8561defc5742.js" async=""></script><script src="/webpack-runtime-37dbd9df0a19c3f25883.js" async=""></script><div class="toasts"></div></body></html>
