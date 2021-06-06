@@ -1,15 +1,14 @@
 ---
-path: "/리액트 공부 - redux-toolkit - 튜토리얼/"
-category: "리액트"
+path: "/redux-toolkit - 튜토리얼/"
+category: "redux-toolkit"
 tags: ["리액트", "react", "redux", "redux-toolkit"]
-title: "리액트 공부 - redux-toolkit - 튜토리얼"
+title: "redux-toolkit - 튜토리얼"
 date: "2021-06-05T01:06:00.000Z"
-summary: "리액트 공부 - redux-toolkit - 튜토리얼 정리 자료입니다."
+summary: "redux-toolkit - 튜토리얼 정리 자료입니다."
 images: ["images/react.jpg"]
 ---
 
-> 리액트 공부 - redux-toolkit - 튜토리얼 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요
->
+> redux-toolkit - 튜토리얼 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요
 > redux-toolkit 공식 문서를 해석했습니다.
 
 

@@ -223,7 +223,7 @@ export const PostContent = styled.div<IPostContent>`
   pre,
   span {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
   table {
     min-width: 45vw;
@@ -283,7 +283,7 @@ export const PostContent = styled.div<IPostContent>`
     blockquote,
     pre {
       margin-top: 5px;
-      font-size: 10px;
+      font-size: 12px;
     }
 
     li {
