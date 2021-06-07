@@ -32,7 +32,7 @@ pre[class*="language-"] {
 }
 
 code.language-text {
-  background: linear-gradient(45deg, #00c9ff, #92fe9d) !important;
+  background: linear-gradient(45deg, #00c9ff, #92fe9d);
 
   font-family: "NanumBarunGothic" !important;
   color: #292929;

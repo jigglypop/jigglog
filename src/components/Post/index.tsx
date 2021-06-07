@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import Bio from "../Bio";
-import {
-  PREFIX,
-} from "../../constants";
 import "./styled.css";
 import Grid from "@material-ui/core/Grid";
 import {
@@ -24,6 +21,8 @@ import KakaoShareButton from "./KakaoShareButton";
 import CopyButton from "./CopyButton";
 import { MdFormatColorText, MdTexture } from "react-icons/md";
 import { ImTextColor } from "react-icons/im"
+
+const PREFIX = "jigglog| ";
 
 export interface IPostTemplate {
   data: {
@@ -141,6 +140,28 @@ const PostTemplate = ({
       });
     }
   };
+
+  // 마크다운 색 바꾸기
+  useEffect(()=>{
+    const tds = document.querySelectorAll('td')
+    for (let td of tds){
+      const em = td.querySelector('em')
+      if (em){
+        td.style.background = '#91EAE4'
+        em.style.background = 'none'
+      }
+      const code = td.querySelector('code')
+      if (code){
+        td.style.background = '#ffdde1'
+        code.style.background = 'none'
+      }
+      const del = td.querySelector('del')
+      if (del){
+        td.style.background = '#FAFFD1'
+        del.style.background = 'none'
+      }
+    }
+  },[])
 
   return (
     <>
