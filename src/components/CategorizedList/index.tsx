@@ -21,7 +21,6 @@ import { usePageCount } from "../../customhooks/pagecount";
 
 const CategorizedList = ({ title, data, location }: any) => {
   const { postAll, setPages } = usePageCount()
-
   const [page, setPage] = useState(1);
   const [, , category] = location.pathname.split("/");
   const [, , tag] = location.pathname.split("/");
@@ -109,7 +108,7 @@ const CategorizedList = ({ title, data, location }: any) => {
               <ListCategory>
                 <div>
                 {results && results.map(({ key, length }: any) => (
-                  <div style={{ display: "inline-block"}}>
+                  <div style={{ display: "inline-block"}} key={key}>
                     <Link to={title[0] === 'CATEGORY' ? `/categories/${key}/1` : `/tags/${key}/1`}>
                       <TagButton>
                         <h4 className="tagname">#{key}</h4>

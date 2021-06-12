@@ -19,7 +19,7 @@ import { AiOutlineMessage } from 'react-icons/ai'
 const Card = ({ tags, path, images, title, date, summary, count } : any) => {
   return (
     <DivWrapper>
-        <Link to={path}>
+        <div>
           <StyledCard>
             <Content>
               <Left>
@@ -34,8 +34,10 @@ const Card = ({ tags, path, images, title, date, summary, count } : any) => {
               <Right>
                 <GridWrapper>
                   <GridOne>
-                    <h1 className="title">{title}</h1>
-                    <h1 className="summary">{summary}</h1>
+                    <Link to={path}>
+                      <h1 className="title">{title}</h1>
+                      <h1 className="summary">{summary}</h1>
+                    </Link>
                   </GridOne>
                   <GridTwo>
                     <TagWrapper>
@@ -74,7 +76,7 @@ const Card = ({ tags, path, images, title, date, summary, count } : any) => {
               </Right>
             </Content>            
           </StyledCard>
-        </Link>
+        </div>
       <hr />
     </DivWrapper>
   );

@@ -9,12 +9,15 @@ const {
   POST,
   PORTFOLIO,
   RESUME,
-} = require("./src/constants/index.ts");
+} = require("./src/constants/index.js");
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   actions.setWebpackConfig({
     externals: {
       document: true,
       discus_config: true,
+    },
+    node: {
+      fs: "empty",
     },
     resolve: {
       alias: {
@@ -39,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
     const resume = path.resolve("./src/templates/Resume.tsx");
     const portfolios = path.resolve("./src/templates/Portfolios.tsx");
     const portfolio = path.resolve("./src/templates/Portfolio.tsx");
+    const markdown = path.resolve("./src/templates/Markdown.tsx");
 
     resolve(
       graphql(`
@@ -94,6 +98,8 @@ exports.createPages = ({ graphql, actions }) => {
                     component = resume;
                     break;
                   case POST:
+                    component = post;
+                    break;
                   default:
                     component = post;
                     break;
@@ -169,6 +175,7 @@ exports.createPages = ({ graphql, actions }) => {
             });
           });
 
+          // 카테고리
           const categories = [...new Set(categoryMatrix)];
 
           categories.forEach((category) => {
@@ -203,6 +210,19 @@ exports.createPages = ({ graphql, actions }) => {
                 component: categorizedList,
                 context: {},
               });
+            });
+
+            // 마크다운
+            edges.forEach((item) => {
+              if (item.node.frontmatter.type === null) {
+                createPage({
+                  path: "markdown" + item.node.frontmatter.path,
+                  component: markdown,
+                  context: {
+                    match: item.node.frontmatter.path,
+                  },
+                });
+              }
             });
           });
         }

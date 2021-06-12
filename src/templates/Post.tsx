@@ -11,7 +11,7 @@ const PostTemplate = (props: any) => (
 
 export default PostTemplate;
 
-export const pageQuery = graphql`
+export const pagesQuery = graphql`
   query PostByPath($path: String!) {
     site {
       siteMetadata {

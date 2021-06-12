@@ -1,11 +1,11 @@
-import { renderToString } from 'react-dom/server';
-import Helmet from 'react-helmet';
-import { ServerStyleSheet } from 'styled-components';
+import { renderToString } from "react-dom/server";
+import Helmet from "react-helmet";
+import { ServerStyleSheet } from "styled-components";
 
 export const replaceRenderer = ({
   bodyComponent,
   replaceBodyHTMLString,
-  setHeadComponents
+  setHeadComponents,
 }) => {
   const sheet = new ServerStyleSheet();
   const body = renderToString(sheet.collectStyles(bodyComponent));
@@ -16,11 +16,10 @@ export const replaceRenderer = ({
   return;
 };
 
-export const onRenderBody = ({
-  setHeadComponents,
-  setHtmlAttributes,
-  setBodyAttributes,
-}, pluginOptions) => {
+export const onRenderBody = (
+  { setHeadComponents, setHtmlAttributes, setBodyAttributes },
+  pluginOptions
+) => {
   const helmet = Helmet.renderStatic();
   setHtmlAttributes(helmet.htmlAttributes.toComponent());
   setBodyAttributes(helmet.bodyAttributes.toComponent());

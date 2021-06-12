@@ -10,71 +10,39 @@ images: ["images/js.png"]
 
 > 자바스크립트 요점 정리 - this 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요
 
-## 1) this
+
+
+# this
+
+---
+
+
+
+## 1) 개요
+
+---
+
+
 
 * 함수 내에서 함수 호출 컨텍스트(맥락)을 의미
-
 * 자바스크립트 런타임 시에 바인딩이 이루어지는 실행 컨텍스트 중 하나 
-
 * 해당 함수가 실행되는 동안에 사용할 수 있으며 함수 호출 부분에서 this가 가리키는 것이 무엇인지를 확인 가능
 
-  
 
-#### (1) 일반함수의 this와 화살표 함수의 this
 
-* 내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든지 this는 전역객체를 가르킴
-* 일반함수의 this는 window(전역) 을 가르키며,
-* 화살표 함수의 this는 언제나 상위스코프의 this를 가르킴
-
-#### (2) Call, Apply, Bind
-
-* 암시적 바인딩에 의해 혼란스러운 문제를 해결하기 위해서 call이나 apply 같은 내장 유틸리티를 사용하여 명시적으로 바인딩
-
-- this를 바인딩하기 위한 방법
-
-  - Call : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자를 하나씩 넘기는 것
-
-  - Apply : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자가 배열
-
-  - Bind : 함수를 호출하는 것이 아닌 this가 바인딩 된 새로운 함수를 리턴
+## 2) this의 상황별 용법
 
 
 
-```javascript
-// call
-const obj1 = { name: "Call" };
-const say1 = function (city) {
-  console.log(Hello, my name is ${this.name}, I live in ${city});
-};
-say1.call(obj1, "callcity");
+### (1) 전역 공간에서의 this
 
-// apply
-const obj2 = { name: "Apply" };
-const say2 = function (city) {
-  console.log(Hello, my name is ${this.name}, I live in ${city});
-};
-say2.apply(obj2, ["applycity"]);
+---
 
-// bind
-const obj3 = { name: "Bind" };
-const say3 = function (city) {
-  console.log(Hello, my name is ${this.name}, I live in ${city});
-};
-const boundSay = say3.bind(obj3);
-boundSay("bindcity");
-```
+* 전역 공간에서의 this : 전역 객체
+* 브라우저 환경 : window
+* node.js 환경 : global
 
-
-
-#### (3) this의 상황별 용법
-
-##### (1) 단독으로 쓴 this
-
-* global object를 가리킴
-
-* 브라우저에서 호출하는 경우 [object Window]
-
-*  strict mode(엄격 모드)에서도 동일
+* strict mode(엄격 모드)에서도 동일
 
 ```javascript
 'use strict';
@@ -82,9 +50,100 @@ var x = this;
 console.log(x); //Window
 ```
 
+
+
+### (2) 메서드 호출 시 this
+
+---
+
+* 함수 : 자체적으로 독립적 기능 수행
+* 메서드 : 자신을 호출한 객체에 관한 동작 수행
+
+```javascript
+// 함수
+const func = function (x) {
+  console.log(this, x);
+};
+
+func(1);
+// Window {...}
+
+
+// 메서드
+const obj = {
+  method: func,
+};
+obj.method(2);
+// { method: f } 2
+```
+
+* 함수 앞에 점이 있으면 메서드
+
+
+
+#### 1) 메서드 내부에서의 this
+
+* 마지막 점 앞에 명시된 객체
+
+```javascript
+const obj = {
+  methodA: function () {
+    console.log(this);
+  },
+  inner: {
+    methodB: function () {
+      console.log(this);
+    },
+  },
+};
+
+obj.methodA();
+obj["methodA"]();
+// {
+//    methodA: [Function: methodA],
+//    inner: { methodB: [Function: methodB] }
+// }
+// obj 를 가리킴
+obj.inner.methodB();
+obj.inner["methodB"]();
+obj["inner"].methodB();
+obj["inner"]["methodB"]();
+// { methodB: [Function: methodB] }
+// obj.inner 를 가리킴
+```
+
+
+
+
+
+
+
 ##### (2) 함수 안에서 쓴 this
 
 * 함수 안에서 this는 함수의 주인에게 바인딩 
+
+```javascript
+const obj1 = {
+  outer: function () {
+    console.log(this);
+    const innerFunc = function () {
+      console.log(this);
+    };
+    // (2) widow
+    innerFunc();
+
+    const obj2 = {
+      innerMethod: innerFunc,
+    };
+    // (3) obj2
+    obj2.innerMethod();
+  },
+};
+// (1) obj1
+obj1.outer();
+```
+
+
 
 ```javascript
 function myFunction() {
@@ -190,6 +249,106 @@ var kim = Person('kim');
 console.log(window.name); //kim
 ```
 
+
+
+```javascript
+var children = document.body.children; // HTMLCollection
+ 
+children.forEach(function (el) {
+  el.classList.add('on'); //ERROR! (children.forEach is not a function)
+});
+var children = document.body.children; // HTMLCollection
+ 
+Array.from(children).forEach(function (el) {
+  el.classList.add('on'); 
+});
+```
+
+##### (6) 화살표 함수로 쓴 this
+
+* 화살표 함수는 전역 컨텍스트에서 실행되더라도 this를 새로 정의하지 않고 바로 바깥 함수나 클래스의 this를 사용
+
+```javascript
+var Person = function (name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function () {
+    console.log(this); // Person {name: "Nana", age: 28}
+ 
+    setTimeout(function () {
+      console.log(this); // Window
+      console.log(this.name + ' is ' + this.age + ' years old');
+    }, 100);
+  };
+};
+var me = new Person('Nana', 28);
+me.say(); //global is undefined years old
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+
+
+var Person = function (name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function () {
+    console.log(this); // Person {name: "Nana", age: 28}
+    setTimeout(() => {
+      console.log(this); // Person {name: "Nana", age: 28}
+      console.log(this.name + ' is ' + this.age + ' years old'); 
+    }, 100);
+  };
+};
+var me = new Person('Nana', 28); //Nana is 28 years old
+```
+
+
+
+
+
+#### (1) 일반함수의 this와 화살표 함수의 this
+
+* 내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든지 this는 전역객체를 가르킴
+* 일반함수의 this는 window(전역) 을 가르키며,
+* 화살표 함수의 this는 언제나 상위스코프의 this를 가르킴
+
+
+
+# Call, Apply, Bind
+
+## 1) call
+
+* 메서드의 호출 주체인 함수를 즉시 실행하도록 함
+
+```javascript
+const func = function (a, b, c) {
+ console.log(this.x, a, b, c);
+};
+
+func.call({ x: 1 }, 2, 3, 4);
+
+// 1 2 3 4
+```
+
+* 메서드를 그냥 호출하면 객체를 참조하지만 call 메서드를 이용하면 임의의 객체를 this로 지정 가능
+
+```javascript
+var obj = {
+  a: 1,
+  method: function (x, y) {
+    console.log(this.a, x, y);
+  },
+};
+
+obj.method(2, 3);
+obj.method.call({ a: 2 }, 2, 3);
+
+// 1 2 3 
+// 2 2 3
+```
+
+
+
 ##### (6) 명시적 바인딩을 한 this
 
 * apply() 와 call() 메서드는 Function Object에 기본적으로 정의된 메서드. 인자를 this로 만들어주는 기능
@@ -254,7 +413,7 @@ Player.call(me, 'nana', 10, 'Magician');
 
 * apply()나 call()은 보통 유사배열 객체에게 배열 메서드를 쓰고자 할 때 사용
 
-*  ex) arguments 객체는 함수에 전달된 인수를 Array 형태로 보여주지만 배열 메서드를 쓸 수가 없어서 사용
+* ex) arguments 객체는 함수에 전달된 인수를 Array 형태로 보여주지만 배열 메서드를 쓸 수가 없어서 사용
 
 ```javascript
 function func(a, b, c) {
@@ -282,53 +441,43 @@ console.log(list);
 
 * Array.from : Array인자를 얕게 복사해 새로운 배열 생성
 
-```javascript
-var children = document.body.children; // HTMLCollection
- 
-children.forEach(function (el) {
-  el.classList.add('on'); //ERROR! (children.forEach is not a function)
-});
-var children = document.body.children; // HTMLCollection
- 
-Array.from(children).forEach(function (el) {
-  el.classList.add('on'); 
-});
-```
 
-##### (6) 화살표 함수로 쓴 this
 
-* 화살표 함수는 전역 컨텍스트에서 실행되더라도 this를 새로 정의하지 않고 바로 바깥 함수나 클래스의 this를 사용
+* 암시적 바인딩에 의해 혼란스러운 문제를 해결하기 위해서 call이나 apply 같은 내장 유틸리티를 사용하여 명시적으로 바인딩
+
+- this를 바인딩하기 위한 방법
+
+  - Call : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자를 하나씩 넘기는 것
+
+  - Apply : this를 바인딩하면서 함수를 호출하는 것, 두번째 인자가 배열
+
+  - Bind : 함수를 호출하는 것이 아닌 this가 바인딩 된 새로운 함수를 리턴
+
+
 
 ```javascript
-var Person = function (name, age) {
-  this.name = name;
-  this.age = age;
-  this.say = function () {
-    console.log(this); // Person {name: "Nana", age: 28}
- 
-    setTimeout(function () {
-      console.log(this); // Window
-      console.log(this.name + ' is ' + this.age + ' years old');
-    }, 100);
-  };
+// call
+const obj1 = { name: "Call" };
+const say1 = function (city) {
+  console.log(Hello, my name is ${this.name}, I live in ${city});
 };
-var me = new Person('Nana', 28);
-me.say(); //global is undefined years old
+say1.call(obj1, "callcity");
 
-// --------------------------------------------------------------------
-// --------------------------------------------------------------------
-
-
-var Person = function (name, age) {
-  this.name = name;
-  this.age = age;
-  this.say = function () {
-    console.log(this); // Person {name: "Nana", age: 28}
-    setTimeout(() => {
-      console.log(this); // Person {name: "Nana", age: 28}
-      console.log(this.name + ' is ' + this.age + ' years old'); 
-    }, 100);
-  };
+// apply
+const obj2 = { name: "Apply" };
+const say2 = function (city) {
+  console.log(Hello, my name is ${this.name}, I live in ${city});
 };
-var me = new Person('Nana', 28); //Nana is 28 years old
+say2.apply(obj2, ["applycity"]);
+
+// bind
+const obj3 = { name: "Bind" };
+const say3 = function (city) {
+  console.log(Hello, my name is ${this.name}, I live in ${city});
+};
+const boundSay = say3.bind(obj3);
+boundSay("bindcity");
 ```
+
+
+
