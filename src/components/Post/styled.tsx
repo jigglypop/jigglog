@@ -4,8 +4,8 @@ export const ButtonInline = styled.div``;
 
 export const PostWrapper = styled.div`
   margin: auto;
-  padding: 10px 0 0;
-  margin: 0 40px 40px 40px;
+  /* padding: 10px 0 0;
+  margin: 0 40px 40px 40px; */
   font-size: 16px;
   background-color: white;
   border-radius: 10px;

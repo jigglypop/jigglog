@@ -203,20 +203,6 @@ objectB = null; // 레퍼런스 카운트 0
 
 
 
-## Class
-
-- Prototype, function의 ES5 스펙만으로 Class를 구현
-- 자바스크립트에는 프로토타입이라는 것이 존재하여 클래스처럼 구현할 수 있음
-- 클래스는 자바스크립트의 프로토타입 기반 패턴의 문법적 설탕
-
-
-
-
-
-
-
-
-
 ## 동기, 비동기
 
 <img src="https://blog.kakaocdn.net/dn/bMlLfs/btqFQ9i1iD3/ZQE2tqi7lx7LUhTwK1tDtK/img.png" alt="img" style="zoom:50%;" />*
@@ -359,5 +345,11 @@ const promise = new Promise((resolve, reject) => {
 
   - 동적으로 노드를 생성하고 삭제할 때 각 노드에 대해 이벤트를 추가 하지 않고, 상위 노드에서 하위 노드의 이벤트를 제어 
 
-    
+
+
+## Class
+
+- Prototype, function의 ES5 스펙만으로 Class를 구현
+- 자바스크립트에는 프로토타입이라는 것이 존재하여 클래스처럼 구현할 수 있음
+- 클래스는 자바스크립트의 프로토타입 기반 패턴의 문법적 설탕
 
