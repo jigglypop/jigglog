@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styled.css";
 import { PostContent } from "../Post/styled";
+import * as fs from 'fs';
 
 const PREFIX = "jigglog| ";
 
