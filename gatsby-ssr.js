@@ -1,6 +1,6 @@
-import { renderToString } from "react-dom/server";
-import Helmet from "react-helmet";
-import { ServerStyleSheet } from "styled-components";
+import { renderToString } from 'react-dom/server';
+import Helmet from 'react-helmet';
+import { ServerStyleSheet } from 'styled-components';
 
 export const replaceRenderer = ({
   bodyComponent,
@@ -18,7 +18,7 @@ export const replaceRenderer = ({
 
 export const onRenderBody = (
   { setHeadComponents, setHtmlAttributes, setBodyAttributes },
-  pluginOptions
+  _,
 ) => {
   const helmet = Helmet.renderStatic();
   setHtmlAttributes(helmet.htmlAttributes.toComponent());

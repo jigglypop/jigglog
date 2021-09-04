@@ -1,15 +1,15 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 const {
   CONTENT_PER_PAGE,
   POST,
   PORTFOLIO,
   RESUME,
-} = require("./src/constants/index.js");
+} = require('./src/constants/index.js');
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   actions.setWebpackConfig({
     externals: {
@@ -17,16 +17,16 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
       discus_config: true,
     },
     node: {
-      fs: "empty",
+      fs: 'empty',
     },
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "src"),
+        '~': path.resolve(__dirname, 'src'),
       },
     },
     plugins: [
       plugins.define({
-        __DEVELOPMENT__: stage === "develop" || stage === "develop-html",
+        __DEVELOPMENT__: stage === 'develop' || stage === 'develop-html',
       }),
     ],
   });
@@ -36,13 +36,13 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const post = path.resolve("./src/templates/Post.tsx");
-    const taggedList = path.resolve("./src/templates/TaggedList.tsx");
-    const categorizedList = path.resolve("./src/templates/CategorizedList.tsx");
-    const resume = path.resolve("./src/templates/Resume.tsx");
-    const portfolios = path.resolve("./src/templates/Portfolios.tsx");
-    const portfolio = path.resolve("./src/templates/Portfolio.tsx");
-    const markdown = path.resolve("./src/templates/Markdown.tsx");
+    const post = path.resolve('./src/templates/Post.tsx');
+    const taggedList = path.resolve('./src/templates/TaggedList.tsx');
+    const categorizedList = path.resolve('./src/templates/CategorizedList.tsx');
+    const resume = path.resolve('./src/templates/Resume.tsx');
+    const portfolios = path.resolve('./src/templates/Portfolios.tsx');
+    const portfolio = path.resolve('./src/templates/Portfolio.tsx');
+    const markdown = path.resolve('./src/templates/Markdown.tsx');
 
     resolve(
       graphql(`
@@ -69,7 +69,6 @@ exports.createPages = ({ graphql, actions }) => {
           },
         }) => {
           if (errors) {
-            console.log(errors); // eslint-disable-line no-console
             reject(errors);
           }
 
@@ -86,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
                 if (Array.isArray(tags)) {
                   tagMatrix.push(tags);
                 }
-                if (typeof category === "string") {
+                if (typeof category === 'string') {
                   categoryMatrix.push(category);
                 }
                 let component = null;
@@ -113,7 +112,7 @@ exports.createPages = ({ graphql, actions }) => {
                   });
                 }
               }
-            }
+            },
           );
 
           const portfoliosCount = edges.filter(
@@ -121,12 +120,12 @@ exports.createPages = ({ graphql, actions }) => {
               node: {
                 frontmatter: { type },
               },
-            }) => type === PORTFOLIO
+            }) => type === PORTFOLIO,
           ).length;
 
           if (portfoliosCount) {
             createPage({
-              path: "/portfolios",
+              path: '/portfolios',
               component: portfolios,
               context: {},
             });
@@ -135,12 +134,12 @@ exports.createPages = ({ graphql, actions }) => {
             ...new Set(
               tagMatrix.reduce(
                 (prev, curr) => (curr !== null ? [...prev, ...curr] : prev),
-                []
-              )
+                [],
+              ),
             ),
           ];
 
-          tags.forEach((tag) => {
+          tags.forEach(tag => {
             const taggedPostCount = edges.reduce(
               (
                 count,
@@ -148,7 +147,7 @@ exports.createPages = ({ graphql, actions }) => {
                   node: {
                     frontmatter: { tags: postTags },
                   },
-                }
+                },
               ) => {
                 if (postTags !== null && postTags.includes(tag)) {
                   return count + 1;
@@ -156,17 +155,17 @@ exports.createPages = ({ graphql, actions }) => {
 
                 return count;
               },
-              0
+              0,
             );
             const taggedListCount = taggedPostCount
               ? Math.ceil(taggedPostCount / CONTENT_PER_PAGE) + 1
               : 1;
             const taggedListPages = Array.from(
               new Array(taggedListCount),
-              (el, i) => i + 1
+              (el, i) => i + 1,
             );
 
-            taggedListPages.forEach((taggedListPage) => {
+            taggedListPages.forEach(taggedListPage => {
               createPage({
                 path: `/tags/${tag}/${taggedListPage}`,
                 component: taggedList,
@@ -178,7 +177,7 @@ exports.createPages = ({ graphql, actions }) => {
           // 카테고리
           const categories = [...new Set(categoryMatrix)];
 
-          categories.forEach((category) => {
+          categories.forEach(category => {
             const categorizedPostCount = edges.reduce(
               (
                 count,
@@ -186,7 +185,7 @@ exports.createPages = ({ graphql, actions }) => {
                   node: {
                     frontmatter: { category: postCategory },
                   },
-                }
+                },
               ) => {
                 if (postCategory !== null && postCategory.includes(category)) {
                   return count + 1;
@@ -194,17 +193,17 @@ exports.createPages = ({ graphql, actions }) => {
 
                 return count;
               },
-              0
+              0,
             );
             const categorizedListCount = categorizedPostCount
               ? Math.ceil(categorizedPostCount / CONTENT_PER_PAGE) + 1
               : 1;
             const categorizedListPages = Array.from(
               new Array(categorizedListCount),
-              (el, i) => i + 1
+              (el, i) => i + 1,
             );
 
-            categorizedListPages.forEach((categorizedListPage) => {
+            categorizedListPages.forEach(categorizedListPage => {
               createPage({
                 path: `/categories/${category}/${categorizedListPage}`,
                 component: categorizedList,
@@ -213,10 +212,10 @@ exports.createPages = ({ graphql, actions }) => {
             });
 
             // 마크다운
-            edges.forEach((item) => {
+            edges.forEach(item => {
               if (item.node.frontmatter.type === null) {
                 createPage({
-                  path: "markdown" + item.node.frontmatter.path,
+                  path: 'markdown' + item.node.frontmatter.path,
                   component: markdown,
                   context: {
                     match: item.node.frontmatter.path,
@@ -225,8 +224,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
             });
           });
-        }
-      )
+        },
+      ),
     );
   });
 };
@@ -234,11 +233,11 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode });
 
     createNodeField({
-      name: "slug",
+      name: 'slug',
       node,
       value,
     });

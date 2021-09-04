@@ -1,7 +1,7 @@
 import React, { Children, cloneElement } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { POST, PORTFOLIO } from "../../constants";
-import App from "../App";
+import App from "../../App";
 import { LayoutWrapper, OuterWrapper } from './styled'
 import Three from './Three'
 import Main from "../../components/Main/index";

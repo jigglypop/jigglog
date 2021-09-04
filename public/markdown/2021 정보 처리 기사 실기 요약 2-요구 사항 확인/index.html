@@ -1,0 +1,585 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.bfc78898c2aa09bf4448.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}.language-text,:not(pre)>code[class*=language-],pre[class*=language-]{@media (max-width:600px){margin-top:-100px;font-size:10px}}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d);font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
+.eoDCLg.active{padding-left:200px;}/*!sc*/
+.eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.eoDCLg .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.eoDCLg .logo{font-size:15px;font-weight:800;}/*!sc*/
+.eoDCLg .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.eoDCLg .be-person{color:white;}/*!sc*/
+.eoDCLg .logout{cursor:pointer;}/*!sc*/
+.eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
+.czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.czPAtN.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g10[id="styled__SideBarInnerDiv-sc-8u1x3g-7"]{content:"czPAtN,"}/*!sc*/
+.eVJdij{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.eVJdij h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.eVJdij hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g11[id="styled__SideBarTopDiv-sc-8u1x3g-8"]{content:"eVJdij,"}/*!sc*/
+.gxwMTf{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin:10px;background-color:#141414;}/*!sc*/
+.gxwMTf .categorytitle{color:rgba(0,207,255);font-size:16px;font-weight:800;margin:10px;padding:10px;text-shadow:0 0 10px rgba(0,207,255);border:2px solid rgba(0,207,255);}/*!sc*/
+data-styled.g13[id="styled__SideBarListDiv-sc-8u1x3g-10"]{content:"gxwMTf,"}/*!sc*/
+.YGDjT{position:relative;width:100%;height:30px;color:red;font-size:12px;font-weight:800;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.YGDjT .smallinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:600px){.YGDjT{font-size:10px;}}/*!sc*/
+.YGDjT:hover a{color:rgba(0,207,255);}/*!sc*/
+data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.hpPYFw{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-10t2n1r-0"]{content:"hpPYFw,"}/*!sc*/
+.hnwaga{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
+.bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.bzQDAz{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
+.bzQDAz hr{height:4px;background-color:rgba(0,0,0,.1);border:none;}/*!sc*/
+.bzQDAz h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
+.bzQDAz h2{margin-top:2em;font-size:28px;font-weight:800;}/*!sc*/
+.bzQDAz h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.bzQDAz h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.bzQDAz h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.bzQDAz p{margin-top:10px;line-height:2em;font-size:20px;font-weight:100;}/*!sc*/
+.bzQDAz strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.bzQDAz li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.bzQDAz blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.bzQDAz em{line-height:1.2em;font-weight:1000;margin-top:18px;font-size:20px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.bzQDAz pre,.bzQDAz span{margin-top:10px;font-size:16px;}/*!sc*/
+.bzQDAz table{min-width:45vw;margin:20px;background:#f9f9f9;}/*!sc*/
+.bzQDAz thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.bzQDAz th,.bzQDAz tr,.bzQDAz td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.bzQDAz hr{margin-bottom:30px;}/*!sc*/
+.bzQDAz code{position:relative;}/*!sc*/
+.bzQDAz del{-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+@media (max-width:1000px){.bzQDAz{padding:0 10px 10px 10px;line-height:2em;color:black;}.bzQDAz hr{margin-bottom:10px;}.bzQDAz h1{margin-bottom:2px;font-size:18px;}.bzQDAz h2{font-size:16px;}.bzQDAz h3{font-size:14px;}.bzQDAz h4{font-size:12px;}.bzQDAz h5{font-size:10px;}.bzQDAz p,.bzQDAz blockquote,.bzQDAz pre{margin-top:5px;font-size:12px;}.bzQDAz li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.bzQDAz table{margin:20px;}.bzQDAz th,.bzQDAz tr,.bzQDAz td,.bzQDAz span,.bzQDAz em{font-size:10px;}.bzQDAz strong{font-size:14px;}}/*!sc*/
+data-styled.g56[id="styled__PostContent-sc-1hokm1n-3"]{content:"bzQDAz,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 748px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1004px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-173606059-1', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-e4b9ac1969a0f14f87a8.js"/><link as="script" rel="preload" href="/app-6a0445d51fe27801467d.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-ae6d046c35c187471a06.js"/><link as="script" rel="preload" href="/545f34e4-537d8b272c482937bf60.js"/><link as="script" rel="preload" href="/78e521c3-462857b96df26c268693.js"/><link as="script" rel="preload" href="/fb7d5399-f19a7654ef6c4f56cd33.js"/><link as="script" rel="preload" href="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js"/><link as="script" rel="preload" href="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js"/><link as="script" rel="preload" href="/component---src-templates-markdown-tsx-078aca313851f5448acd.js"/><link as="fetch" rel="preload" href="/page-data\markdown\2021 정보 처리 기사 실기 요약 2-요구 사항 확인\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 207, 255, 0.5) !important;
+}
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  color: black;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ed213a;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0.5rem;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-10t2n1r-0 hpPYFw"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 테크 캠프 4기/1">우아한 테크 캠프 4기<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 리액트/1">우아한 리액트<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(7)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div></div></div></div></nav><main><div><div class="styled__PostContent-sc-1hokm1n-3 bzQDAz"><div id="post-contents" style="margin-bottom:100px"><blockquote>
+<p>정보처리기사 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 책을 참고해서 공부하세요</p>
+</blockquote>
+<blockquote>
+<p>2021 정보 처리 기사 실기 요약 2-요구 사항 확인 요약 입니다. 정처기 공부를 할 때 활용하세요.</p>
+</blockquote>
+<h1>1. 현행 시스템 파악 절차</h1>
+<hr>
+<ul>
+<li><code class="language-text">시스템 구성 파악</code> : 현행 시스템의 구성은 조직의 주요 업무를 담당하는 기간 업무와 이를 지원하는 지원 업무로 구분하여 기술</li>
+<li><code class="language-text">시스템 기능 파악</code> : 현행 시스템의 기능은 단위 업무 시스템이 현재 제공하는 기능들을 주요 기능과 하부 기능, 세부 기능으로 구분하여 계층형으로 표시</li>
+<li><code class="language-text">시스템 인터페이스 파악</code> : 현행 시스템의 인터페이스에는 단위 업무 시스템 간에 주고받는 데이터의 종류, 형식, 프로토콜, 연계 유형, 주기 등을 명시</li>
+<li><code class="language-text">아키텍처 구성 파악</code> : 현행 시스템의 아키텍처 구성은 기간 업무 수행에 어떠한 기술 요소들이 사용되는지 최상위 수준에서 계층별로 표현한 아키텍처 구성도로 작성</li>
+<li><code class="language-text">소프트웨어 구성 파악</code> : 소프트웨어 구성에는 단위 업무 시스템별로 업무 처리를 위해 설치되어 있는 소프트웨어들의 제품명, 용도, 라이선스 적용 방식, 라이선스 수 등을 명시</li>
+<li><code class="language-text">하드웨어 구성 파악</code> : 하드웨어 구성에는 단위 업무 시스템들이 운용되는 서버의 주요 사양과 수량, 그리고 이중화의 적용 여부를 명시</li>
+<li><code class="language-text">네트워크 구성 파악</code> : 네트워크 구성은 업무 시스템들의 네트워크 구성을 파악할 수 있도록 서버의 위치, 서버 
+간의 네트워크 연결 방식을 네트워크 구성도로 작성</li>
+</ul>
+<h1>2. 개발 기술 환경</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">운영체제(OS)</code></p>
+<ul>
+<li>컴퓨터 시스템의 자원들을 효율적으로 관리하며, 사용자가 컴퓨터를 편리하고 효율적으로 사용할 수 있도록 환경을 제공하는 소프트웨어</li>
+<li>고려사항 : <em>가용성, 성능, 기술 지원, 구축 비용, 주변 기기</em></li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">데이터베이스 관리 시스템(DBMS)</code></p>
+<ul>
+<li>사용자와  데이터베이스  사이에서  사용자의 요구에 따라 정보를 생성해 주고, 데이터베이스를 관리해 주는 소프트웨어</li>
+<li>고려사항 : <em>가용성, 성능, 기술 지원, 상호 호환성, 구축 비용</em></li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">웹 애플리케이션 서버(WAS)</code></p>
+<ul>
+<li>정적인 콘텐츠 처리를 하는 웹 서버와 달리 사용자의 요구에 따라 변하는 동적인 콘텐츠를 처리하기 위해 사용되는 미들웨어</li>
+<li>고려사항  : <em>가용성, 성능, 기술 지원, 구축 비용</em></li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">오픈 소스</code></p>
+<ul>
+<li>누구나 별다른 제한 없이 사용할 수 있도록 소스 코드를 공개한 것으로 오픈 소스 라이선스를 만족하는 소프트웨어</li>
+<li>고려사항 : <em>라이선스의 종류, 사용자 수, 기술의 지속 가능성</em></li>
+</ul>
+</li>
+</ul>
+<h1>3. 요구사항 유형</h1>
+<hr>
+<ul>
+<li><code class="language-text">기능 요구사항</code> : 시스템이 갖춰야할 필수적인 기능에 대한 요구사항</li>
+<li><code class="language-text">비기능 요구사항</code> : 필수 기능 외의 품질이나 제약사항에 관한 요구사항</li>
+<li><code class="language-text">사용자 요구사항</code> : 사용자 관점에서 본 시스템이 제공해야 할 요구사항</li>
+<li><code class="language-text">시스템 요구사항</code> : 개발자 관점에서 본 시스템 전체가 사용자와 다른 시스템에 제공해야 할 요구사항</li>
+</ul>
+<h1>4. 요구사항 개발 프로세스</h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">요구사항 도출</code> : 시스템, 사용자, 그리고 시스템 개발에 관련된 사람들이 서로 의견을 교환하여 요구사항이 어디에 있는지, 어떻게 수집할 것인지를 식별하고 이해하는 과정</p>
+<ul>
+<li>주요 기법 : 인터뷰, 설문, 브레인스토밍, 워크샵, 프로토타이핑, 유스케이스</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">요구사항 분석</code> : 개발 대상에 대한 사용자의 요구사항 중 명확하지 않거나 모호하여 이해되지 않는 부분을 발견하고 이를 걸러내기 위한 과정</p>
+<ul>
+<li>비용과 일정에 대한 제약 설정, 타당성 조사</li>
+</ul>
+</li>
+<li><code class="language-text">요구사항 명세</code> : 요구사항을 체계적으로 분석한 후 승인될 수 있도록 문서화</li>
+<li><code class="language-text">요구사항 확인</code> : 개발 자원을 요구사항에 할당하기 전에 요구사항 명세서가 정확하고 완전하게 작성되었는지를 검토</li>
+</ul>
+<h1>5. 요구사항 분석 기법</h1>
+<hr>
+<ul>
+<li><em>개발 대상에 대한 사용자의 요구사항 중 명확하지 않거나 모호한 부분을 걸러내기 위한 방법</em></li>
+<li><code class="language-text">요구사항 분류</code>: 요구사항을 명확히 확인할 수 있도록 요구사항을 분류함</li>
+<li><code class="language-text">개념 모델링</code></li>
+<li><em>모델</em> : 요구사항을 보다 쉽게 이해할 수 있도록 현실 세계의 상황을 단순화하여 개념적으로 표현한 것</li>
+<li><em>모델링</em> : 모델을 만드는 과정</li>
+<li>개념 모델 종류 : 유스케이스 다이어그램, 데이터 흐름 모델, 상태 모델, 목표기반 모델, 사용자 인터액션, 객체 모델, 데이터 모델 등</li>
+<li><code class="language-text">요구사항 할당</code> : 요구사항을 만족시키기 위한 구성 요소를 식별하는 것</li>
+<li><code class="language-text">요구사항 협상</code> : 요구사항이 서로 충돌될 경우 이를 적절히 해결하는 과정</li>
+<li><code class="language-text">정형 분석</code>: 구문(Syntax)과 의미(Semantics)를 갖는 정형화된 언어를 이용해 요구사항 분석</li>
+<li><code class="language-text">자료 흐름도(DFD) (=자료 흐름 그래프, 버블 차트)</code> : 요구사항 분석에서 자료의 흐름 및 변환 과정과 기능을 도형 중심으로 기술하는 방법</li>
+<li><em>프로세스</em> : 자료를 변환시키는 시스템의 한 부분(처리 과정)을 나타내며 처리, 기능, 변환, 버블이라고 함. 원이나 둥근 사각형으로 표시하고 그 안에 프로세스 이름을 기입</li>
+<li><em>자료 흐름</em> : 자료의 이동(흐름)이나 연관관계를 나타냄. 화살표 위에 자료의 이름을 기입</li>
+<li><em>자료 저장소</em> : 시스템에서의 자료 저장소(파일, 데이터베이스)를 나타냄. 도형 안에 자료 저장소 이름을 기입</li>
+<li><em>단말</em> : 시스템과 교신하는 외부 개체로, 입력 데이터가 만들어지고 출력 데이터를 받음(정보의 생산자와 소비자). 도형 안에 이름을 기입</li>
+</ul>
+<h1>6. 요구사항 확인 기법</h1>
+<hr>
+<ul>
+<li><em>요구사항 개발 과정을 거쳐 문서화된 요구사항 관련 내용을 확인하고 검증하는 방법</em></li>
+<li><code class="language-text">요구사항 검토</code> : 문서화된 요구사항을 훑어보면서 확인하는 것으로 가장 일반적인 요구사항 검증 방법</li>
+<li><code class="language-text">프로토타이핑</code> : 초기 도출된 요구사항을 토대로 프로토타입을 만든 후 대상 시스템의 개발이 진행되는 동안 도출되는 요구사항을 반영하면서 지속적으로 프로토타입을 재작성하는 과정</li>
+<li><em>프로토타입</em> : 상품이나 서비스가 출시되기 전에 개발 대상 시스템 또는 그 일부분을 개략적으로 만든 원형</li>
+<li><code class="language-text">모델 검증</code> : 요구사항 분석 단계에서 개발된 모델이 요구사항을 충족시키는지 검증하는 것</li>
+<li><code class="language-text">인수 테스트</code> : 사용자가 실제로 사용될 환경에서 요구사항들이 모두 충족되는지 사용자 입장에서 확인하는 과정</li>
+</ul>
+<h1>7. UML(Unified Modeling Language)</h1>
+<hr>
+<ul>
+<li><em>시스템 분석, 설계, 구현 등 시스템 개발 과정에서 개발자와 고객 또는 개발자 상호 간의 의사소통이 원활하게 이루어지도록 표준화한 대표적인 객체지향 모델링 언어</em></li>
+<li><code class="language-text">사물</code> : 모델을 구성하는 가장 중요한 기본 요소로, 다이어그램 안에서 관계가 형성될 수 있는 대상들</li>
+<li><em>구조 사물</em> : 시스템의 개념적, 물리적 요소를 표현</li>
+<li><em>행동 사물</em> : 시간과 공간에 따른 요소들의 행위를 표현</li>
+<li><em>그룹 사물</em>  :  요소들을 그룹으로 묶어서 표현</li>
+<li><em>주해 사물</em> : 부가적인 설명이나 제약조건 등을 표현</li>
+<li><code class="language-text">관계</code> : 사물과 사물사이의 연관성을 표현하는 것</li>
+<li><em>연관 관계</em> : 2개 이상의 사물이 서로 관련되어 있음</li>
+<li><em>집합 관계</em> : 하나의 사물이 다른 사물에 포함되어 있는 관계</li>
+<li><em>포함 관계</em> : 집합 관계의 특수한 형태로, 포함하는 사물의 변화가 포함되는 사물에게 영향을 미치는 관계</li>
+<li><em>일반화 관계</em>  :  하나의 사물이 다른 사물에 비해 더 일반적인지 구체적인지</li>
+<li><em>의존 관계</em>  :  연관 관계와 같이 사물 사이에 서로 연관은 있으나 필요에 의해 서로에게 영향을 주는 짧은 시간 동안만 연관을 유지하는 관계</li>
+<li><em>실체화 관계</em> : 사물이 할 수 있거나 해야 하는 기능(행위, 인터페이스)으로 서로를 그룹화 할 수 있는 관계</li>
+<li><code class="language-text">다이어그램</code> : 사물과 관계를 도형으로 표현한 것</li>
+<li><em>정적 모델링</em> :  사용자가 요구한 기능을 구현하는데 필요한 자료들의 논리적인 구조를 표현한 것(구조적 다이어그램 사용)</li>
+<li><em>동적 모델링</em>  :  시스템의 내부 구성 요소들의 상태가 시간의 흐름에 따라 변화하는 과정과 변화하는 과정에서 발생하는 상호 작용을 표현한 것(행위 다이어그램 사용)</li>
+</ul>
+<h1>8. 구조적 다이어그램</h1>
+<hr>
+<ul>
+<li><code class="language-text">클래스 다이어그램</code> :클래스와 클래스가 가지는 속성, 클래스 사이의 관계를 표현</li>
+<li><em>클래스</em> : 각각의 객체들이 갖는 속성과 오퍼레이션(동작)을 표현, 일반적으로 3개의 구획으로 나눠 클래스의 이름, 속성, 오퍼레이션을 표기</li>
+<li><em>속성</em> : 클래스의 상태나 정보를 표현</li>
+<li><em>오퍼레이션(연산)</em> : 클래스가 수행할 수 있는 동작으로, 함수(메소드)라고도 함</li>
+<li><em>제약조건</em> : 속성에 입력될 값에 대한 제약조건이나 오퍼레이션 수행 전후에 지정해야 할 조건이 있다면 이를 적음</li>
+<li><em>관계</em> : 클래스와 클래스 사이의 연관성을 표현</li>
+<li><code class="language-text">객체 다이어그램</code> : 클래스에 속한 사물(객체)들, 즉 인스턴스를 특정 시점의 객체와 객체 사이의 관계로 표현</li>
+<li><code class="language-text">컴포넌트 다이어그램</code> : 실제 구현 모듈인 컴포넌트 간의 관계나 컴포넌트 간의 인터페이스를 표현</li>
+<li><code class="language-text">배치 다이어그램</code> : 결과물, 프로세스, 컴포넌트 등 물리적 요소들의 위치를 표현</li>
+<li><code class="language-text">복합체 구조 다이어그램</code> : 클래스나 컴포넌트가 복합 구조를 갖는 경우 그 내부 구조를 표현</li>
+<li><code class="language-text">패키지 다이어그램</code> : 유스케이스나 클래스 등의 모델 요소들을 그룹화한 패키지들의 관계를 표현</li>
+</ul>
+<h1>9. 시퀀스 다이어그램</h1>
+<hr>
+<ul>
+<li><em>시스템이나 객체들이 메시지를 주고받으며 시간의 흐름에 따라 상호 작용하는 과정을 그림으로 표현한 것</em></li>
+<li><code class="language-text">액터</code>: 시스템으로부터 서비스를 요청하는 외부 요소로, 사람이나 외부 시스템</li>
+<li><code class="language-text">객체</code>: 메시지를 주고받는 주체, 콜론(:)을 기준으로 앞쪽에는 객체명을 뒤쪽에는 클래스명 기술</li>
+<li><code class="language-text">라이프라인</code> : 객체가 메모리에 존재하는 기간으로, 객체 아래쪽에 점선을 그어 표현</li>
+<li><code class="language-text">활성 상자</code> : 객체가 메시지를 주고받으며 구동되고 있음을 라이프라인 상에 겹쳐 직사각형 형태로 표현</li>
+<li><code class="language-text">메시지</code>: 객체가 상호 작용을 위해 주고받는 메시지</li>
+<li><code class="language-text">객체 소멸</code> : 라이프라인 상에서 객체 소멸 표시를 만나면 해당 객체는 더이상 메모리에 존재하지 않음을 의미</li>
+<li><code class="language-text">프레임</code>: 다이어그램의 전체 또는 일부를 묶어 표현</li>
+</ul>
+<h1>10. 커뮤니케이션 다이어그램</h1>
+<hr>
+<ul>
+<li><em>시퀀스 다이어그램과 같이 동작에 참여하는 객체들이 주고받는 메시지를 표현하는데, 메시지뿐만 아니라 객체들 간의 연관까지 표현</em></li>
+<li><code class="language-text">링크(Link)</code> : 객체들 간의 관계를 표현하는 데 사용 , 액터와 객체, 객체와 객체 간에 실선을 그어 표현</li>
+</ul>
+<h1>11. 상태 다이어그램</h1>
+<hr>
+<ul>
+<li><em>하나의 객체가 자신이 속한 클래스의 상태 변화 혹은 다른 객체와의 상호 작용에 따라 상태가 어떻게 변화하는지를 표현</em></li>
+<li>
+<p><code class="language-text">상태</code> : 객체의 상태를 둥근 사간형 안에 기술</p>
+<ul>
+<li><em>시작 상태</em> : 속이 채워진 원(●)</li>
+<li><em>종료 상태</em> : 속이 채워진 원을 둘러싼 원(⊙)</li>
+</ul>
+</li>
+<li><code class="language-text">이벤트</code> : 조건, 외부 신호, 시간의 흐름 등 상태에 변화를 주는 현상</li>
+<li><code class="language-text">상태 전환</code> : 상태 사이의 흐름, 변화를 화살표로 표현</li>
+<li><code class="language-text">프레임</code> : 상태 다이어그램의 범위를 표현</li>
+</ul>
+<h1>12 유스케이스 다이어그램</h1>
+<hr>
+<ul>
+<li><em>개발될 시스템과 관련된 외부 요소들, 즉 사용자와 다른 외부 시스템들이 개발될 시스템을 이용해 수행할 수 있는 기능을 사용자의 관점(View)에서 표현한 것</em></li>
+<li><code class="language-text">시스템 범위</code> : 시스템 내부에서 수행되는 기능들을 외부 시스템과 구분하기 위해 시스템 내부의 유스케이스들을 사각형으로 묶어 시스템의 범위를 표현</li>
+<li><code class="language-text">액터</code> : 시스템과 상호 작용을 하는 모든 외부 요소로, 사람이나 외부 시스템을 의미</li>
+<li><code class="language-text">유스케이스</code> : 사용자가 보는 관점에서 시스템이 액터에게 제공하는 서비스 또는 기능을 표현한 것</li>
+<li><code class="language-text">관계</code> : 유스케이스 다이이그램에서 관계는 액터와 유스케이스, 유스케이스와 유스케이스 사이에서 나타날 수 있으며, 포함 관계, 확장 관계, 일반화 관계의 3종류가 있음</li>
+</ul>
+<h1>13. 활동 다이어그램</h1>
+<hr>
+<ul>
+<li><em>자료 흐름도와 유사한 것으로, 사용자의 관점(View)에서 시스템이 수행하는 기능을 처리 흐름에 따라 순서대로 표현한 것</em></li>
+<li><code class="language-text">액션/ 액티비티</code></li>
+<li><em>액션</em> : 더 이상 분해할 수 없는 단일 작업</li>
+<li><em>액티비티</em> : 몇 개의 액션으로 분리될 수 있는 작업</li>
+<li><code class="language-text">노드</code></li>
+<li><em>시작 노드</em> : 액션이나 액티비티가 시작됨을 의미</li>
+<li><em>종료 노드</em> : 액티비티 안의 모든 흐름이 종료됨을 의미</li>
+<li><em>조건(판단) 노드</em>  :  조건에 따라 제어의 흐름이 분리됨을 표현</li>
+<li><em>병합 노드</em> : 여러 경로의 흐름이 하나로 합쳐짐을 표현</li>
+<li><em>포크 노드</em> : 액티비티의 흐름이 분리되어 수행됨을 표현</li>
+<li><em>조인 노드</em> : 분리되어 수행되던 액티비티의 흐름이 다시 합쳐짐을 표현</li>
+<li><code class="language-text">스윔레인</code> : 액티비티 수행을 담당하는 주체를 구분</li>
+</ul>
+<h1>14. SOLID 원칙</h1>
+<hr>
+<h4>1) 단일 책임 원칙(SRP, Single Responsibility Principle)</h4>
+<ul>
+<li><em>객체는 단 하나의 책임만을 가져야 함</em></li>
+<li>어떤 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 하며(책임 = 변경 사유) 같은 이유로 변화하는 것끼리 묶고, 다른 이유로 변화하는 것끼리는 분리함</li>
+</ul>
+<h4>2) 개방 폐쇄 원칙(OCP, Open-Closed Principle)</h4>
+<ul>
+<li><em>기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 함</em></li>
+<li>어떤 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 하며(책임 = 변경 사유) 같은 이유로 변화하는 것끼리 묶고, 다른 이유로 변화하는 것끼리는 분리함</li>
+</ul>
+<h4>3) 리스코프 치환의 원칙(LSP, Liskov Substitution Principle)</h4>
+<ul>
+<li><em>자식 클래스는 최소한 자신의 부모 클래스에서 가능한 행위는 수행할 수 있어야 함</em></li>
+<li>하위 클래스 및 타입들은 상위 타입들이 사용되는 곳에 대체될 수 있어야 함</li>
+<li>자식 클래스가 부모 클래스 기능을 재정의 하지 않으면 대체 가능함</li>
+</ul>
+<h4>4) 인터페이스 분리의 원칙(ISP, Interface Segregation Principle)</h4>
+<ul>
+<li><em>인터페이스를 클라이언트에 특화되도록 분리하라는 설계의 원칙</em></li>
+<li>하나의 일반적인 인터페이스보다 구체적인 여러 개의 인터페이스가 나음</li>
+</ul>
+<h4>5) 의존성 역전의 원칙(DIP, Dependency Inversion Principle)</h4>
+<ul>
+<li><em>의존 관계를 맺을 때 변화하기 쉬운 것  또는 자주 변화하는 것보다는 변화하기 어렵거나 거의 변화가 없는 것에 의존하라는 것</em></li>
+<li>추상화된 (인터페이스 등) 것에 의존하게 만들고 구체 클래스에 의존하도록 만들지 않도록 함</li>
+</ul></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/markdown/2021 정보 처리 기사 실기 요약 2-요구 사항 확인/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-6a0445d51fe27801467d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-bfe5b4cf4329fd108113.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-590e679004f0571e6fd3.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-69eca40e6a5763e7938b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-markdown-tsx":["/component---src-templates-markdown-tsx-078aca313851f5448acd.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-5b8b2ed16c49dde8646c.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-5a943ecd679f46d62879.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-0a1b0d71c35a3e57e632.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-edbcd01f07097bf8c7bf.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-c3526d8cf6d48927e6c1.js"]};/*]]>*/</script><script src="/component---src-templates-markdown-tsx-078aca313851f5448acd.js" async=""></script><script src="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js" async=""></script><script src="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js" async=""></script><script src="/fb7d5399-f19a7654ef6c4f56cd33.js" async=""></script><script src="/78e521c3-462857b96df26c268693.js" async=""></script><script src="/545f34e4-537d8b272c482937bf60.js" async=""></script><script src="/styles-ae6d046c35c187471a06.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-6a0445d51fe27801467d.js" async=""></script><script src="/webpack-runtime-e4b9ac1969a0f14f87a8.js" async=""></script><div class="toasts"></div></body></html>

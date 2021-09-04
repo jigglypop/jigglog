@@ -1,0 +1,598 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.bfc78898c2aa09bf4448.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}.language-text,:not(pre)>code[class*=language-],pre[class*=language-]{@media (max-width:600px){margin-top:-100px;font-size:10px}}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d);font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
+.eoDCLg.active{padding-left:200px;}/*!sc*/
+.eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.eoDCLg .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.eoDCLg .logo{font-size:15px;font-weight:800;}/*!sc*/
+.eoDCLg .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.eoDCLg .be-person{color:white;}/*!sc*/
+.eoDCLg .logout{cursor:pointer;}/*!sc*/
+.eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
+.czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.czPAtN.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g10[id="styled__SideBarInnerDiv-sc-8u1x3g-7"]{content:"czPAtN,"}/*!sc*/
+.eVJdij{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.eVJdij h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.eVJdij hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g11[id="styled__SideBarTopDiv-sc-8u1x3g-8"]{content:"eVJdij,"}/*!sc*/
+.gxwMTf{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin:10px;background-color:#141414;}/*!sc*/
+.gxwMTf .categorytitle{color:rgba(0,207,255);font-size:16px;font-weight:800;margin:10px;padding:10px;text-shadow:0 0 10px rgba(0,207,255);border:2px solid rgba(0,207,255);}/*!sc*/
+data-styled.g13[id="styled__SideBarListDiv-sc-8u1x3g-10"]{content:"gxwMTf,"}/*!sc*/
+.YGDjT{position:relative;width:100%;height:30px;color:red;font-size:12px;font-weight:800;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.YGDjT .smallinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:600px){.YGDjT{font-size:10px;}}/*!sc*/
+.YGDjT:hover a{color:rgba(0,207,255);}/*!sc*/
+data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.hpPYFw{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-10t2n1r-0"]{content:"hpPYFw,"}/*!sc*/
+.hnwaga{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
+.bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.bzQDAz{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
+.bzQDAz hr{height:4px;background-color:rgba(0,0,0,.1);border:none;}/*!sc*/
+.bzQDAz h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
+.bzQDAz h2{margin-top:2em;font-size:28px;font-weight:800;}/*!sc*/
+.bzQDAz h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.bzQDAz h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.bzQDAz h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.bzQDAz p{margin-top:10px;line-height:2em;font-size:20px;font-weight:100;}/*!sc*/
+.bzQDAz strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.bzQDAz li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.bzQDAz blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.bzQDAz em{line-height:1.2em;font-weight:1000;margin-top:18px;font-size:20px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.bzQDAz pre,.bzQDAz span{margin-top:10px;font-size:16px;}/*!sc*/
+.bzQDAz table{min-width:45vw;margin:20px;background:#f9f9f9;}/*!sc*/
+.bzQDAz thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.bzQDAz th,.bzQDAz tr,.bzQDAz td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.bzQDAz hr{margin-bottom:30px;}/*!sc*/
+.bzQDAz code{position:relative;}/*!sc*/
+.bzQDAz del{-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+@media (max-width:1000px){.bzQDAz{padding:0 10px 10px 10px;line-height:2em;color:black;}.bzQDAz hr{margin-bottom:10px;}.bzQDAz h1{margin-bottom:2px;font-size:18px;}.bzQDAz h2{font-size:16px;}.bzQDAz h3{font-size:14px;}.bzQDAz h4{font-size:12px;}.bzQDAz h5{font-size:10px;}.bzQDAz p,.bzQDAz blockquote,.bzQDAz pre{margin-top:5px;font-size:12px;}.bzQDAz li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.bzQDAz table{margin:20px;}.bzQDAz th,.bzQDAz tr,.bzQDAz td,.bzQDAz span,.bzQDAz em{font-size:10px;}.bzQDAz strong{font-size:14px;}}/*!sc*/
+data-styled.g56[id="styled__PostContent-sc-1hokm1n-3"]{content:"bzQDAz,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 748px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1004px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-173606059-1', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-e4b9ac1969a0f14f87a8.js"/><link as="script" rel="preload" href="/app-6a0445d51fe27801467d.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-ae6d046c35c187471a06.js"/><link as="script" rel="preload" href="/545f34e4-537d8b272c482937bf60.js"/><link as="script" rel="preload" href="/78e521c3-462857b96df26c268693.js"/><link as="script" rel="preload" href="/fb7d5399-f19a7654ef6c4f56cd33.js"/><link as="script" rel="preload" href="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js"/><link as="script" rel="preload" href="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js"/><link as="script" rel="preload" href="/component---src-templates-markdown-tsx-078aca313851f5448acd.js"/><link as="fetch" rel="preload" href="/page-data\markdown\우아한 테크 캠프 4기 - 바닐라로 함수형 리액트 만들기 (1) - useState, useEffect 만들기\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.MuiPaginationItem-root {
+  color: white !important;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 207, 255, 0.5) !important;
+}
+.toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  color: black;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ed213a;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0.5rem;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-10t2n1r-0 hpPYFw"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 테크 캠프 4기/1">우아한 테크 캠프 4기<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 리액트/1">우아한 리액트<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(7)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div></div></div></div></nav><main><div><div class="styled__PostContent-sc-1hokm1n-3 bzQDAz"><div id="post-contents" style="margin-bottom:100px"><blockquote>
+<p>우아한 테크 캠프 4기 중 만들고 있는 우아한 리액트 연재글입니다</p>
+<p>다음 프로젝트는 <a href="https://github.com/jigglypop/woowa-react" target="_blank" rel="nofollow noopener noreferrer">https://github.com/jigglypop/woowa-react</a> 에서 보실 수 있습니다.</p>
+</blockquote>
+<h1>1. 들어가기에 앞서</h1>
+<hr>
+<ul>
+<li>안녕하세요 이번에 우아한 테크 캠프 4기에 합류하게 된 염동환입니다. 우아한 테크 캠프 4기 합격 발표 이후 바로 시작해서 지금까지 바닐라로 리액트를 만들어보고자 혼자 고군분투하고 있습니다.</li>
+<li>그리고 첫 주 금요일 미니 세미나때 이 내용에 대해 발표를 했었고, 그 부분과 어떤 부분에서 어려움이 있었는지 기능별로 쭉 정리를 해보고자 합니다</li>
+</ul>
+<h2>1) 왜 만드는가</h2>
+<hr>
+<ul>
+<li>저는 리액트를 거의 1년여동안 써 오면서 막연하게 useState는 이렇게 동작하겠구나..하고 써왔고 원리에 대해서는 매우 무지하다는 것을 깨달았습니다.</li>
+<li>그리고 우아한 테크 캠프에서 공개된 커리큘럼을 보면 1달 정도는 리액트를 사용할 수 없는데, 그 동안 쓸 바닐라 자바스크립트를 좀 준비해 볼 겸, 공부를 할 겸 만들게 되었습니다</li>
+</ul>
+<h2>2) 어떻게 만드는가</h2>
+<ul>
+<li>우선 클래스형 리액트는 다양한 과제 테스트에서 사용해 보았고, 비교적 큰 어려움은 없었던 것 같습니다. 하지만 함수형 리액트는 몇배는 더 어려운 과정이라고 생각합니다. 그만큼 코드가 간결하기 때문입니다.</li>
+<li>리액트 함수형의 가장 큰 핵심은 훅이라고 생각합니다. 그리고 그 훅의 가장 핵심은 <code class="language-text">클로저</code>입니다</li>
+</ul>
+<h2>3) 클로저</h2>
+<hr>
+<ul>
+<li>먼저 사전적 정의는 이렇습니다</li>
+</ul>
+<blockquote>
+<p>“A closure is the combination of a function and the lexical environment within which that function was declared.”
+클로저는 함수와 그 함수가 선언됐을 때의 렉시컬 환경(Lexical environment)과의 조합이다.</p>
+<p>(MDN)</p>
+</blockquote>
+<ul>
+<li>공식적인 설명은 이렇습니다만…확실히 와닿지는 않는 개념입니다. 예제를 보겠습니다</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function-variable function">const Redux </span><span class="token operator">=</span> <span class="token keyword">function</span><span class="token function"> </span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+<span class="token function">    setCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      count<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">    getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> redux1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Redux</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+redux1<span class="token punctuation">.</span><span class="token function">setCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> redux2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Redux</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+redux2<span class="token punctuation">.</span><span class="token function">setCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+redux2<span class="token punctuation">.</span><span class="token function">setCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>redux1<span class="token punctuation">.</span><span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>redux2<span class="token punctuation">.</span><span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>다음과 같이 redux라는 함수를 따로따로 new 생성자로 생성해주었다고 합시다. setCount의 입장에서 보면 count는 이해할 수 없습니다. setCount 아무곳에서도 count가 선언된 곳을 찾을 수 없기 때문입니다.</li>
+<li>하지만 결론적으로 말하자면 count를 setCount에서 쓸 수 있습니다. 반환된 내부함수가 자신이 선언됐을 때의 환경(Lexical environment)인 스코프를 기억하여 자신이 선언됐을 때의 환경(스코프) 밖에서 호출되어도 그 환경(스코프)에 접근할 수 있는 함수이기 때문입니다.</li>
+<li>그래서 count가 선언된 새로 생성된 redux1, 그리고 redux2의 환경에서 따로 setCount를 해 주었을 경우, 각각의 기억된 환경의 count를 추가합니다</li>
+<li>따라서 답은 <code class="language-text">1, 2</code>입니다.</li>
+<li>그리고 리액트는 각각의 컴포넌트에서 useState를 해 줄 경우 각각 다른 상태를 모두 저장합니다. 모든 컴포넌트에 클로저를 잡아주면 useState를 사용할 수 있다는 말입니다.</li>
+</ul>
+<h1>2. 이제 만들어보자</h1>
+<ul>
+<li>오늘 만들 개략적인 파일 트리는 이렇습니다</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// 리액트 실행부입니다. 이 부분만 우리가 건드릴 겁니다</span>
+react
+	<span class="token comment">// 클로저를 생성할 파일</span>
+	ㄴ Closure<span class="token punctuation">.</span>js
+	<span class="token comment">// uuid 만들기</span>
+	ㄴ getID<span class="token punctuation">.</span>js
+	<span class="token comment">// 앱 시작할 때</span>
+	ㄴ initApp<span class="token punctuation">.</span>js
+	<span class="token comment">// 전역 상태를 저장할 전역 클로저</span>
+    ㄴ memo<span class="token punctuation">.</span>js
+	<span class="token comment">// 핵심부. 훅 등이 들어있음</span>
+    ㄴ react<span class="token punctuation">.</span>js
+	<span class="token comment">// 정규표현식으로 jsx를 파싱할 곳</span>
+    ㄴ tag<span class="token punctuation">.</span>js
+<span class="token comment">// 사용자가 작성할 파일</span>
+src
+	ㄴ <span class="token punctuation">[</span>components<span class="token punctuation">]</span>
+        ㄴ count<span class="token punctuation">.</span>js
+        ㄴ word<span class="token punctuation">.</span>js
+        ㄴ wordB<span class="token punctuation">.</span>js
+	ㄴApp<span class="token punctuation">.</span>js
+<span class="token operator">...</span>
+<span class="token comment">// 인덱스 파일. 전역 클로저 시작부분입니다. 그리고 이 곳에 모듈을 등록해주어야 합니다.</span>
+index<span class="token punctuation">.</span>js</code></pre></div>
+<ul>
+<li>이번 시간에는 react.js의 useState, useEffect만 볼겁니다.</li>
+<li>우선 가장 핵심부 react.js부터 보시죠</li>
+</ul>
+<h2>1) react.js</h2>
+<hr>
+<ul>
+<li>이 곳에서 useState, useEffect와 같은 핵심 처리가 이루어집니다.</li>
+<li>나중에 클로저로 감싸질 곳이고, global이라는 변수로 전역의 상태를 공유하고, i인덱스로 훅의 순서를 잡습니다. 또한 $target으로 자신의 부모 노드를 가리킵니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">React</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 클로저 내부(훅 인덱스, 루트 타겟)</span>
+  <span class="token keyword">let</span> global <span class="token operator">=</span> <span class="token punctuation">{</span>
+    hooks<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    callback<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> $target <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// useState</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 훅에서 상태 찾기</span>
+    <span class="token keyword">const</span> hooks <span class="token operator">=</span> global<span class="token punctuation">.</span>hooks<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> _state <span class="token operator">=</span> global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">||</span> state<span class="token punctuation">;</span>
+    hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> _state<span class="token punctuation">;</span>
+    <span class="token comment">// setState(클로저 내의 클로저)</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 내부 클로저 index 고정</span>
+      <span class="token keyword">let</span> _i <span class="token operator">=</span> i<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> target <span class="token operator">=</span> $target<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>_i<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token comment">// 리렌더링 함수로</span>
+        <span class="token function">rerender</span><span class="token punctuation">(</span>global<span class="token punctuation">.</span>Component<span class="token punctuation">,</span> target<span class="token punctuation">,</span> target<span class="token punctuation">,</span> global<span class="token punctuation">.</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 인덱스 늘리기</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>_state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// useEffect</span>
+  <span class="token keyword">function</span> <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">cb<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> hooks <span class="token operator">=</span> global<span class="token punctuation">.</span>hooks<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> _value <span class="token operator">=</span> hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> changed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token comment">// value에서 변한 것이 있는지 찾음</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_value<span class="token punctuation">)</span> changed <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">d<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> d <span class="token operator">!==</span> _value<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 바뀌었으면 콜백 함수 글로벌에 push</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>changed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token comment">// 인덱스 늘리기</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    render<span class="token punctuation">,</span>
+    useState<span class="token punctuation">,</span>
+    useEffect<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> React<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>개략적으로 다음과 같이 됩니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">  <span class="token comment">// 클로저 내부(훅 인덱스, 루트 타겟)</span>
+  <span class="token keyword">let</span> global <span class="token operator">=</span> <span class="token punctuation">{</span>
+    hooks<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> $target <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>이 부분에서 global 내의 hooks를 정의합니다. 나중에 hook을 저장하고 여기에서 꺼내오게 됩니다</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">  <span class="token comment">// useState</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 훅에서 상태 찾기</span>
+    <span class="token keyword">const</span> _state <span class="token operator">=</span> global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">||</span> state<span class="token punctuation">;</span>
+    global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> _state<span class="token punctuation">;</span>
+    <span class="token comment">// setState(클로저 내의 클로저)</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 내부 클로저 index 고정</span>
+      <span class="token keyword">let</span> _i <span class="token operator">=</span> i<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> target <span class="token operator">=</span> $target<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>_i<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token comment">// 리렌더링 함수로</span>
+        <span class="token function">rerender</span><span class="token punctuation">(</span>global<span class="token punctuation">.</span>Component<span class="token punctuation">,</span> target<span class="token punctuation">,</span> target<span class="token punctuation">,</span> global<span class="token punctuation">.</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 인덱스 늘리기</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>_state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>useState입니다.</li>
+<li>처음 선언할 당시 useState는 초기값을 받습니다. 그리고 글로벌 내의 훅에서 현재 인덱스로 상태를 찾아온 뒤 있으면 그 값을 갱신하기 위해 _state를 global.hooks[i]로 하고 , 아니면 state(초기값)으로 합니다.</li>
+<li>setState는 클로저 내의 클로저입니다. setState는 클로저 내부에 target과 i를 고정시키고 호출될 시 global.hooks의 클로저 내부 지정된 인덱스 값을 갱신해주고 rerender링 해줍니다. </li>
+<li>마지막으로 다른 훅을 위해 인덱스를 늘려주고 state와 setState함수를 리턴해주고 마칩니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">  <span class="token comment">// useEffect</span>
+  <span class="token keyword">function</span> <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token parameter">cb<span class="token punctuation">,</span> hook</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// const hooks = global.hooks;</span>
+    <span class="token keyword">let</span> _hook <span class="token operator">=</span> global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> changed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token comment">// hook에서 변한 것이 있는지 찾음</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_hook<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      changed <span class="token operator">=</span> hook<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">h<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> h <span class="token operator">!==</span> _hook<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 바뀌었으면 콜백 함수 글로벌에 push</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>changed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      memoset<span class="token punctuation">.</span><span class="token function">setCallback</span><span class="token punctuation">(</span>global<span class="token punctuation">.</span>id<span class="token punctuation">,</span> i<span class="token punctuation">,</span> cb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    global<span class="token punctuation">.</span>hooks<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> hook<span class="token punctuation">;</span>
+    <span class="token comment">// 인덱스 늘리기</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>useEffect입니다. 이 함수는 아시다시피 뒤에 배열로 바뀐 것을 추적할 값을 넣어줍니다. 빈 배열이면 그냥 초기 렌더링 이후에 실행되구요. </li>
+<li>value가 값들의 배열입니다. 호출될 시 훅이 변했을 시 호출됩니다.</li>
+</ul>
+<h2>어려웠던 점?</h2>
+<hr>
+<h3>리액트는 컴포넌트마다 클로저를 잡아준다</h3>
+<ul>
+<li>리액트는 컴포넌트 하나하나마다 모두 클로저가 있습니다.</li>
+<li>저도 그렇게 만들고자 노력했을 때 상당한 난관에 부딪혔습니다. </li>
+<li>훅을 잡아 준 상위 컴포넌트에서 재랜더링이 호출되어 자식 컴포넌트를 다시 랜더링할 당시 클로저가 삭제되어버렸기 때문입니다.</li>
+<li>이 부분은 트리구조를 다시 공부하면서 하나하나 자식부터 순회하면서 클로저를 복원시켜주면서 해결해야 했습니다. </li>
+<li>상당히 난이도가 있는 작업이었기 때문에 알고리즘을 다시 공부하면서 혼자 3일정도를 보고 해결해 왔던 것 같습니다.</li>
+</ul>
+<h3>this 바인딩과 컴포넌트별로 분리</h3>
+<ul>
+<li>리액트라는 객체를 거쳐서 빠져나온 컴포넌트 자식별로 리액트스럽게 분리시키고 싶었습니다</li>
+<li>하지만 그 부분에서 다시 반복되는 코드가 많이 들어가는 등의 문제가 있었습니다.</li>
+<li>그리고 하나하나가 제대로 분리되지 않는 문제점이 발생하였습니다.</li>
+<li>이 부분은 this의 명시적 바인딩 bind로 해결하였고, this의 개념을 다시 공부하는 계기가 되었습니다.</li>
+</ul>
+<h2>마무리</h2>
+<hr>
+<ul>
+<li>
+<p>대략적인 훅의 개념을 알아봤습니다. 진짜 리액트는 이것보다 더 복잡하고 잘 구현되어 있을 겁니다. </p>
+<p>부족하지만 리액트를 이해하기 위해서 구현해봤습니다. 다음에는 본격적인 렌더링을 구현해보겠습니다. </p>
+</li>
+</ul></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/markdown/우아한 테크 캠프 4기 - 바닐라로 함수형 리액트 만들기 (1) - useState, useEffect 만들기/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-6a0445d51fe27801467d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-bfe5b4cf4329fd108113.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-590e679004f0571e6fd3.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-69eca40e6a5763e7938b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-markdown-tsx":["/component---src-templates-markdown-tsx-078aca313851f5448acd.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-5b8b2ed16c49dde8646c.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-5a943ecd679f46d62879.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-0a1b0d71c35a3e57e632.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-edbcd01f07097bf8c7bf.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-c3526d8cf6d48927e6c1.js"]};/*]]>*/</script><script src="/component---src-templates-markdown-tsx-078aca313851f5448acd.js" async=""></script><script src="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js" async=""></script><script src="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js" async=""></script><script src="/fb7d5399-f19a7654ef6c4f56cd33.js" async=""></script><script src="/78e521c3-462857b96df26c268693.js" async=""></script><script src="/545f34e4-537d8b272c482937bf60.js" async=""></script><script src="/styles-ae6d046c35c187471a06.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-6a0445d51fe27801467d.js" async=""></script><script src="/webpack-runtime-e4b9ac1969a0f14f87a8.js" async=""></script><div class="toasts"></div></body></html>

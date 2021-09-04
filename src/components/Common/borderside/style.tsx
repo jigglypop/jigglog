@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-interface IAdmin{
+interface IAdmin {
   width: string;
   height: string;
   border: string;
@@ -16,15 +16,15 @@ export const BorderDiv = styled.div<IAdmin>`
   }
 
   img {
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
-    border: ${(props) => props.border} solid transparent;
+    width: ${props => props.width};
+    height: ${props => props.height};
+    border: ${props => props.border} solid transparent;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: ${(props) => props.shadow} ${(props) => props.shadow}
-      ${(props) => props.shadow} black;
+    box-shadow: ${props => props.shadow} ${props => props.shadow}
+      ${props => props.shadow} black;
   }
-  .admin{
+  .admin {
     background: linear-gradient(45deg, #000000, #000000) padding-box,
       linear-gradient(45deg, #00b09b, #96c93d) border-box;
   }

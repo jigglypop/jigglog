@@ -1,20 +1,20 @@
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 
-import { useFrame } from "react-three-fiber";
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useSpring } from "@react-spring/three";
-import { navigate } from "gatsby";
-import { a } from "@react-spring/three";
+import { useFrame } from 'react-three-fiber';
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { useSpring } from '@react-spring/three';
+import { navigate } from 'gatsby';
+import { a } from '@react-spring/three';
 
 // 지구
 export const PlanetEarth = () => {
   const [model, setModel] = useState<GLTF>();
   useMemo(
     () =>
-      new GLTFLoader().load("/earth/scene.gltf", (e: GLTF) => {
+      new GLTFLoader().load('/earth/scene.gltf', (e: GLTF) => {
         setModel(e);
       }),
-    ["/earth/scene.gltf"]
+    ['/earth/scene.gltf'],
   );
   const [active, setActive] = useState(0);
   const { spring } = useSpring({
@@ -22,20 +22,20 @@ export const PlanetEarth = () => {
     config: { mass: 5, tension: 400, friction: 50, precision: 0.0001 },
   });
   useEffect(() => {
-    document.body.style.cursor = active ? 'pointer' : 'auto'
-  }, [active])
+    document.body.style.cursor = active ? 'pointer' : 'auto';
+  }, [active]);
 
   const scale = spring.to([0, 40], [40, 200]);
-  const tooltip : Element | null = document.querySelector("#tooltip");
+  const tooltip: Element | null = document.querySelector('#tooltip');
   let timerA: NodeJS.Timeout;
   const onPointHover = () => {
     if (timerA) {
       clearTimeout(timerA);
     }
     timerA = setTimeout(function() {
-      setActive(1)
+      setActive(1);
       if (tooltip) {
-        tooltip.classList.add("isvisible");
+        tooltip.classList.add('isvisible');
         tooltip.innerHTML = `
             <h1>#JIGGLYPOP</h1>
             <h3>무언가 만드는 것을 좋아합니다</h3>
@@ -47,40 +47,40 @@ export const PlanetEarth = () => {
       }
     }, 200);
   };
-  let timerB : NodeJS.Timeout;
+  let timerB: NodeJS.Timeout;
   const onPointOut = () => {
     if (timerB) {
       clearTimeout(timerB);
     }
     timerB = setTimeout(function() {
-      setActive(0)
-      if (tooltip){
-        tooltip.classList.remove("isvisible");
+      setActive(0);
+      if (tooltip) {
+        tooltip.classList.remove('isvisible');
       }
     }, 200);
   };
 
   const onClick = () => {
-    navigate("/resume");
+    navigate('/resume');
   };
-  const mesh : any = useRef();
+  const mesh: any = useRef();
   useFrame(() => (mesh.current.rotation.y += 0.001));
   return (
-      <group>
-        <a.mesh
-          onClick={() => onClick()}
-          onPointerOver={() => onPointHover()}
-          onPointerOut={() => onPointOut()}
-          ref={mesh}
-          scale-x={scale}
-          scale-y={scale}
-          scale-z={scale}
-          receiveShadow
-          castShadow
-        >
-          {model && <primitive object={model.scene} receiveShadow castShadow />}
-        </a.mesh>
-      </group>
+    <group>
+      <a.mesh
+        onClick={() => onClick()}
+        onPointerOver={() => onPointHover()}
+        onPointerOut={() => onPointOut()}
+        ref={mesh}
+        scale-x={scale}
+        scale-y={scale}
+        scale-z={scale}
+        receiveShadow
+        castShadow
+      >
+        {model && <primitive object={model.scene} receiveShadow castShadow />}
+      </a.mesh>
+    </group>
   );
 };
 
@@ -89,12 +89,12 @@ export const Outer = () => {
   const [model, setModel] = useState<GLTF>();
   useMemo(
     () =>
-      new GLTFLoader().load("/gallaxy/scene.gltf", (e: GLTF) => {
+      new GLTFLoader().load('/gallaxy/scene.gltf', (e: GLTF) => {
         setModel(e);
       }),
-    ["/gallaxy/scene.gltf"]
+    ['/gallaxy/scene.gltf'],
   );
-  const mesh : any = useRef();
+  const mesh: any = useRef();
   useFrame(() => (mesh.current.rotation.y += 0.001));
   return (
     <group>
@@ -104,6 +104,3 @@ export const Outer = () => {
     </group>
   );
 };
-
-
-
