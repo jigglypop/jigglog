@@ -9,10 +9,8 @@ export const replaceRenderer = ({
 }) => {
   const sheet = new ServerStyleSheet();
   const body = renderToString(sheet.collectStyles(bodyComponent));
-
   replaceBodyHTMLString(body);
   setHeadComponents([sheet.getStyleElement()]);
-
   return;
 };
 

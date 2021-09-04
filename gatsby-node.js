@@ -1,7 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
-
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const {
@@ -10,6 +9,8 @@ const {
   PORTFOLIO,
   RESUME,
 } = require('./src/constants/index.js');
+const { setTagPage, setCategoryPage } = require('./setPage.js');
+
 exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   actions.setWebpackConfig({
     externals: {
@@ -32,18 +33,16 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
   });
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
+  const post = path.resolve('./src/templates/Post.tsx');
+  const taggedList = path.resolve('./src/templates/TaggedList.tsx');
+  const categorizedList = path.resolve('./src/templates/CategorizedList.tsx');
+  const resume = path.resolve('./src/templates/Resume.tsx');
+  const portfolios = path.resolve('./src/templates/Portfolios.tsx');
+  const portfolio = path.resolve('./src/templates/Portfolio.tsx');
+  const markdown = path.resolve('./src/templates/Markdown.tsx');
   const { createPage } = actions;
-
   return new Promise((resolve, reject) => {
-    const post = path.resolve('./src/templates/Post.tsx');
-    const taggedList = path.resolve('./src/templates/TaggedList.tsx');
-    const categorizedList = path.resolve('./src/templates/CategorizedList.tsx');
-    const resume = path.resolve('./src/templates/Resume.tsx');
-    const portfolios = path.resolve('./src/templates/Portfolios.tsx');
-    const portfolio = path.resolve('./src/templates/Portfolio.tsx');
-    const markdown = path.resolve('./src/templates/Markdown.tsx');
-
     resolve(
       graphql(`
         {
@@ -130,100 +129,24 @@ exports.createPages = ({ graphql, actions }) => {
               context: {},
             });
           }
-          const tags = [
-            ...new Set(
-              tagMatrix.reduce(
-                (prev, curr) => (curr !== null ? [...prev, ...curr] : prev),
-                [],
-              ),
-            ),
-          ];
 
-          tags.forEach(tag => {
-            const taggedPostCount = edges.reduce(
-              (
-                count,
-                {
-                  node: {
-                    frontmatter: { tags: postTags },
-                  },
-                },
-              ) => {
-                if (postTags !== null && postTags.includes(tag)) {
-                  return count + 1;
-                }
-
-                return count;
-              },
-              0,
-            );
-            const taggedListCount = taggedPostCount
-              ? Math.ceil(taggedPostCount / CONTENT_PER_PAGE) + 1
-              : 1;
-            const taggedListPages = Array.from(
-              new Array(taggedListCount),
-              (el, i) => i + 1,
-            );
-
-            taggedListPages.forEach(taggedListPage => {
-              createPage({
-                path: `/tags/${tag}/${taggedListPage}`,
-                component: taggedList,
-                context: {},
-              });
-            });
-          });
+          // 태그
+          setTagPage(
+            tagMatrix,
+            taggedList,
+            edges,
+            createPage,
+            CONTENT_PER_PAGE,
+          );
 
           // 카테고리
-          const categories = [...new Set(categoryMatrix)];
-
-          categories.forEach(category => {
-            const categorizedPostCount = edges.reduce(
-              (
-                count,
-                {
-                  node: {
-                    frontmatter: { category: postCategory },
-                  },
-                },
-              ) => {
-                if (postCategory !== null && postCategory.includes(category)) {
-                  return count + 1;
-                }
-
-                return count;
-              },
-              0,
-            );
-            const categorizedListCount = categorizedPostCount
-              ? Math.ceil(categorizedPostCount / CONTENT_PER_PAGE) + 1
-              : 1;
-            const categorizedListPages = Array.from(
-              new Array(categorizedListCount),
-              (el, i) => i + 1,
-            );
-
-            categorizedListPages.forEach(categorizedListPage => {
-              createPage({
-                path: `/categories/${category}/${categorizedListPage}`,
-                component: categorizedList,
-                context: {},
-              });
-            });
-
-            // 마크다운
-            edges.forEach(item => {
-              if (item.node.frontmatter.type === null) {
-                createPage({
-                  path: 'markdown' + item.node.frontmatter.path,
-                  component: markdown,
-                  context: {
-                    match: item.node.frontmatter.path,
-                  },
-                });
-              }
-            });
-          });
+          setCategoryPage(
+            categoryMatrix,
+            categorizedList,
+            edges,
+            createPage,
+            CONTENT_PER_PAGE,
+          );
         },
       ),
     );

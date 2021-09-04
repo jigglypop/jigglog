@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import Post from "../components/Post";
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Post from '../components/Post';
 
 const PostTemplate = (props: any) => (
   <Layout {...props}>

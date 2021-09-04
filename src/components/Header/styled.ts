@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { Link } from "gatsby";
-
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const List = styled.ul`
   display: flex;
@@ -44,7 +43,7 @@ export const ListMenu = styled.li`
 
 export const StyledLink = styled(Link)`
   @media (max-width: 414px) {
-    &[href="/"] {
+    &[href='/'] {
       display: flex;
       height: 60px;
       align-items: center;
@@ -57,51 +56,46 @@ export const MenuTitle = styled.div`
   font-weight: 800;
   margin: 0 0.25rem;
   text-shadow: 2px 2px 2px #141414;
-  transition: all .3s ease-out;
-  &:hover{
-    color: rgba(0,207,255);
-    text-shadow: 0 0 10px rgba(0,207,255);
+  transition: all 0.3s ease-out;
+  &:hover {
+    color: rgba(0, 207, 255);
   }
   @media (max-width: 600px) {
-    &.menuvisible{
+    &.menuvisible {
       visibility: hidden;
     }
     font-size: 12px;
   }
 `;
 
-
-
-
 // 헤더바
 export const HeaderDiv = styled.nav`
   grid-row: 1/2;
   grid-column: 1/3;
   transition: all 0.3s ease-in-out;
-  font-family: "NanumBarunGothicSubset";
-  src: local("NanumBarunGothicSubset"),
-    url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
   position: fixed;
   align-items: center;
   top: 0;
-  height: 60px;
+  height: 50px;
   width: 100%;
   font-size: 14px;
   font-weight: 600;
   z-index: 2;
-  background-color: #141414;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-backdrop-filter: brightness(1.1) blur(50px);
+  backdrop-filter: brightness(1.1) blur(50px);
 
   .test {
     padding: 2px;
     border: 2px solid white;
   }
 
-  &.active{
+  &.active {
     padding-left: 200px;
   }
 
-  .container{
-    height : 100%;
+  .container {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +111,7 @@ export const HeaderDiv = styled.nav`
     margin: 0 0.5rem;
   }
 
-  .logo{
+  .logo {
     font-size: 15px;
     font-weight: 800;
   }
@@ -133,7 +127,7 @@ export const HeaderDiv = styled.nav`
   }
 
   .be-person {
-    color:white;
+    color: white;
   }
 
   .logout {
@@ -142,26 +136,28 @@ export const HeaderDiv = styled.nav`
 
   .hamberger {
     cursor: pointer;
-    font-size:20px;
-    &:hover{
-      color: rgba(0,207,255);
-      text-shadow: 0 0 10px rgba(0,207,255);
+    font-size: 20px;
+    &:hover {
+      color: rgba(0, 207, 255);
     }
   }
-  .RiMoonClearLine{
+  .RiMoonClearLine {
     width: 30px;
     height: 30px;
-    &:hover{
-      color: rgba(0,207,255);
-      text-shadow: 0 0 10px rgba(0,207,255);
+    &:hover {
+      color: rgba(0, 207, 255);
     }
   }
-`
+`;
 // 사이드바
 export const SideBarDiv = styled.div`
   grid-row: 1/3;
   grid-column: 1/3;
-  background: linear-gradient(20deg, rgba(172,0,255,0.8) 46%, rgba(0,207,255,0.8) 100%);
+  background: linear-gradient(
+    20deg,
+    rgba(172, 0, 255, 0.8) 46%,
+    rgba(0, 207, 255, 0.8) 100%
+  );
   visibility: hidden;
   position: fixed;
   width: 0;
@@ -170,11 +166,11 @@ export const SideBarDiv = styled.div`
   z-index: 3;
   transition: all 0.3s ease-in-out;
 
-  &.active{
+  &.active {
     visibility: visible;
     width: 200px;
   }
-`
+`;
 
 export const SideBarInnerDiv = styled.div`
   position: relative;
@@ -187,16 +183,16 @@ export const SideBarInnerDiv = styled.div`
   transition-delay: -0.2s;
   z-index: 2;
 
-  &.active{
+  &.active {
     transition-delay: 0.2s;
     visibility: visible;
   }
-`
+`;
 
 export const SideBarTopDiv = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   text-align: center;
   grid-row: 1/2;
@@ -211,17 +207,17 @@ export const SideBarTopDiv = styled.div`
   }
   hr {
     border: none;
-    background-color : rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 60%;
     height: 2px;
   }
-`
+`;
 
 export const SideBarTopButtonDiv = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   grid-row: 2/3;
   z-index: 3;
 
@@ -232,11 +228,11 @@ export const SideBarTopButtonDiv = styled.div`
   }
   hr {
     border: none;
-    background-color : rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 60%;
     height: 2px;
   }
-`
+`;
 
 export const SideBarListDiv = styled.div`
   grid-row: 2/3;
@@ -246,16 +242,16 @@ export const SideBarListDiv = styled.div`
   text-align: center;
   margin: 10px;
   background-color: #141414;
-  .categorytitle{
-    color: rgba(0,207,255);
+  .categorytitle {
+    color: rgba(0, 207, 255);
     font-size: 16px;
     font-weight: 800;
     margin: 10px;
     padding: 10px;
-    text-shadow: 0 0 10px rgba(0,207,255);
-    border: 2px solid rgba(0,207,255);
+    text-shadow: 0 0 10px rgba(0, 207, 255);
+    border: 2px solid rgba(0, 207, 255);
   }
-`
+`;
 export const SmallItem = styled.div`
   position: relative;
   width: 100%;
@@ -267,7 +263,7 @@ export const SmallItem = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  .smallinner{
+  .smallinner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,12 +275,12 @@ export const SmallItem = styled.div`
   }
   &:hover {
     a {
-      color: rgba(0,207,255);
+      color: rgba(0, 207, 255);
     }
   }
 `;
 export const SideBarItemsDiv = styled.div`
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   h1 {
     font-size: 10px;
@@ -293,20 +289,20 @@ export const SideBarItemsDiv = styled.div`
   }
   hr {
     border: none;
-    background-color : rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 90%;
     height: 2px;
   }
-`
+`;
 
 export const SideBarItemDiv = styled.div`
   width: 40px;
   height: 40px;
-  position: relative; 
+  position: relative;
   background: #141414;
   margin: 2px;
-  display:flex;
+  display: flex;
   flex-direction: row;
-  justify-content:center;
-  align-items:center;
-`
+  justify-content: center;
+  align-items: center;
+`;

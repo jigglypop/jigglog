@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "NanumBarunGothicSubset";
-  src: local("NanumBarunGothicSubset"),
-    url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");
+  font-family: 'NanumBarunGothicSubset';
+  src: local('NanumBarunGothicSubset'),
+    url('./fonts/NanumBarunGothicSubset.woff2') format('woff2');
 }
 
 body {
-  font-family: "NanumBarunGothicSubset" !important;
+  font-family: 'NanumBarunGothicSubset' !important;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -17,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 23px;
+  width: 16px;
   background-color: #141414;
 }
 ::-webkit-scrollbar-thumb {

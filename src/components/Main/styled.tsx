@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MainTitle = styled.div`
   position: absolute;
@@ -18,11 +18,10 @@ export const MainTitle = styled.div`
     font-weight: 800;
     color: white;
   }
-  left:50%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-`
-
+`;
 
 export const BlinkImage = styled.img`
   animation: blink 0.5s ease-in-out infinite alternate;
@@ -105,22 +104,22 @@ export const ToolTip = styled.div`
   width: 30vw;
   height: 40vh;
 
-  border: 2px solid #8E2DE2;
+  border: 2px solid #8e2de2;
 
   color: white;
   padding: 20px;
   visibility: hidden;
   line-height: 2em;
 
-  h1{
-    color: #FF416C;
+  h1 {
+    color: #ff416c;
     text-shadow: 0 0 20px #e94057;
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 10px;
   }
-  h2{
-    color: #FF416C;
+  h2 {
+    color: #ff416c;
     font-size: 15px;
     font-weight: 800;
   }
@@ -135,7 +134,7 @@ export const ToolTip = styled.div`
     font-weight: 800;
     color: white;
   }
-  &.isvisible{
+  &.isvisible {
     visibility: visible;
   }
   @media (max-width: 1000px) {
@@ -148,4 +147,4 @@ export const ToolTip = styled.div`
       display: none;
     }
   }
-`
+`;

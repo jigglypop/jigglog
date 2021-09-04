@@ -1,7 +1,6 @@
 import React from 'react';
 import { NAME, TITLE, DESCRIPTION, AUTHOR, KEYWORDS } from './constants';
 
-const stylesStr = require('!raw-loader!./reset.css');
 const HTML = (props: any) => {
   const {
     htmlAttributes,
@@ -43,14 +42,13 @@ const HTML = (props: any) => {
           name="naver-site-verification"
           content="de786acecfbe10288c6688e80f28aea2992ccf04"
         />
-        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css"
         />
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
       </head>
-
       <body {...bodyAttributes}>
         {preBodyComponents}
         <div

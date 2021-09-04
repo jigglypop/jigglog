@@ -1,23 +1,29 @@
-import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer/Footer";
-import { Wrapper } from './styled'
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer/Footer';
+import { Wrapper } from './styled';
 
 export interface IApp {
-  location : {
+  location: {
     pathname: string;
     host: string;
-  }
+  };
   categories: object[];
   postInformations: object;
-  hasPortfolio: any;  
+  hasPortfolio: any;
   categorySet: object;
   tagSet: object;
   children: object;
-};
+}
 
-const App = ( props: IApp ) =>{
-  const { location, categories, hasPortfolio, children, categorySet } : IApp = props;
+const App = (props: IApp) => {
+  const {
+    location,
+    categories,
+    hasPortfolio,
+    children,
+    categorySet,
+  }: IApp = props;
   return (
     <Wrapper>
       <nav>
@@ -33,8 +39,9 @@ const App = ( props: IApp ) =>{
         <div className="toasts"></div>
       </main>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
-    </Wrapper>);
-}
-export default App
+    </Wrapper>
+  );
+};
+export default App;
