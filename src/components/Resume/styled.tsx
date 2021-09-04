@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ResumeWrapper = styled.div`
   position: relative;
@@ -10,18 +10,18 @@ export const ResumeInnerWrapper = styled.div`
   padding: 2%;
   background-color: #141414;
   box-shadow: 8px 8px 8px black;
-  @media (max-width: 1200px){
-    margin: 5% 2%
+  @media (max-width: 1200px) {
+    margin: 5% 2%;
   }
-  @media (max-width: 600px){
-    margin: 4% 1%
+  @media (max-width: 600px) {
+    margin: 4% 1%;
   }
 `;
 
 export const ItemWrapper = styled.div`
   display: inline-block;
-  -webkit-filter: drop-shadow( 3px 3px 2px gray);
-  filter: drop-shadow( 3px 3px 2px gray);
+  -webkit-filter: drop-shadow(3px 3px 2px gray);
+  filter: drop-shadow(3px 3px 2px gray);
 `;
 
 export const CircleWrapper = styled.div`
@@ -77,7 +77,6 @@ export const Button = styled.button`
 export const NameTitle = styled.div`
   font-size: 25px;
   font-weight: 800;
-  text-shadow: 3px 3px 30px white;
   @media (max-width: 600px) {
     font-size: 20px;
   }
@@ -106,7 +105,6 @@ export const PrintTitle = styled.div`
   font-weight: 800;
 
   margin: 5px;
-  text-shadow: 3px 3px 30px white;
 `;
 
 export const PostContent = styled.section`
@@ -130,56 +128,48 @@ export const PostContent = styled.section`
   h3 {
     margin-top: 20px;
     font-size: 24px;
-    font-weight: 800;
   }
   h4 {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 21px;
-    font-weight: 800;
   }
   h5 {
     margin-top: 20px;
     font-size: 18px;
-    font-weight: 800;
-    text-shadow: 3px 3px 30px white;
   }
   p {
     margin-top: 10px;
     font-size: 16px;
-    font-weight: 800;
   }
 
   @media (max-width: 1000px) {
     padding: 0 20px 20px 20px;
     line-height: 2em;
     color: white;
+
     h1 {
       margin-top: 4px;
       margin-bottom: 2px;
       font-size: 15px;
       font-weight: 800;
     }
+
     h2 {
       margin-top: 2px;
       font-size: 20px;
-      font-weight: 800;
     }
     h3 {
       margin-top: 4px;
       font-size: 18px;
-      font-weight: 800;
     }
     h4 {
       margin-top: 4px;
-      font-weight: 800;
       font-size: 16px;
     }
     h5 {
       margin-top: 4px;
       font-size: 14px;
-      font-weight: 800;
     }
-
     p {
       margin-top: 2px;
       font-size: 12px;

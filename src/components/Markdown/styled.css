@@ -5,17 +5,17 @@ ul {
   padding: 0;
 }
 
-.gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*='language-'] {
   min-width: 100%;
-  font-family: "NanumBarunGothic" !important;
+  font-family: 'NanumBarunGothic' !important;
   padding: 30px;
 }
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: white;
 }
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   background-color: #373b44;
   padding: 7px;
   @media (max-width: 600px) {
@@ -34,7 +34,7 @@ pre[class*="language-"] {
 code.language-text {
   background: linear-gradient(45deg, #00c9ff, #92fe9d);
 
-  font-family: "NanumBarunGothic" !important;
+  font-family: 'NanumBarunGothic' !important;
   color: #292929;
   font-weight: 400;
 }

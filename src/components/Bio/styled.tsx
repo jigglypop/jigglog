@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BioWrapper = styled.div`
   background-color: #141414;
-  border-radius : 10px;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
   color: white;
@@ -11,7 +11,7 @@ export const BioWrapper = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  .top{
+  .top {
     grid-row: 1/2;
   }
   .mid {
@@ -19,10 +19,6 @@ export const BioWrapper = styled.div`
   }
   .bottom {
     grid-row: 3/4;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; */
   }
   .biotext {
     font-size: 13px;
@@ -46,14 +42,13 @@ export const BioWrapper = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const BottomDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
-
+`;
 
 export const CircleWrapper = styled.div`
   border-radius: 50%;
@@ -61,25 +56,24 @@ export const CircleWrapper = styled.div`
   width: 45px;
   height: 45px;
   margin: 10px;
-  background-color:#141414;
+  background-color: #141414;
   transition: all 0.5s ease-in-out;
   border: 2px solid white;
-  box-shadow : 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
   display: flex;
   justify-content: center;
   align-items: center;
   &:hover {
-    border: 2px solid #FF416C;
+    border: 2px solid #ff416c;
     .link-inner {
-      color: #FF416C;
+      color: #ff416c;
     }
   }
 
-  .link-inner{
+  .link-inner {
     transition: all 0.5s ease-in-out;
     color: white;
     width: 30px;
     height: 30px;
   }
-  
 `;

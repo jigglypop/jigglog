@@ -1,6 +1,6 @@
-import { renderToString } from "react-dom/server";
-import Helmet from "react-helmet";
-import { ServerStyleSheet } from "styled-components";
+import { renderToString } from 'react-dom/server';
+import Helmet from 'react-helmet';
+import { ServerStyleSheet } from 'styled-components';
 
 export const replaceRenderer = ({
   bodyComponent,
@@ -9,16 +9,14 @@ export const replaceRenderer = ({
 }) => {
   const sheet = new ServerStyleSheet();
   const body = renderToString(sheet.collectStyles(bodyComponent));
-
   replaceBodyHTMLString(body);
   setHeadComponents([sheet.getStyleElement()]);
-
   return;
 };
 
 export const onRenderBody = (
   { setHeadComponents, setHtmlAttributes, setBodyAttributes },
-  pluginOptions
+  _,
 ) => {
   const helmet = Helmet.renderStatic();
   setHtmlAttributes(helmet.htmlAttributes.toComponent());
