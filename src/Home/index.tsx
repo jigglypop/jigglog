@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { TITLE } from '../constants';
 import './styled.css';
-import './reset.css';
 
 const Home = () => {
   return (

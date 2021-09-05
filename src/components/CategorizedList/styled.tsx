@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TagButton = styled.div`
   transition: all 0.2s ease-in-out;
@@ -7,8 +7,7 @@ export const TagButton = styled.div`
     font-size: 14px;
     font-weight: 800;
     padding: 10px;
-    color:  rgba(0,207,255);
-    text-shadow : 0 0 10px rgba(0,207,255);
+    color: rgba(0, 207, 255);
   }
   cursor: pointer;
   &:hover {
@@ -18,7 +17,7 @@ export const TagButton = styled.div`
 
 export const ListImage = styled.div`
   grid-row: 1/2;
-  background-color: rgba(0,207,255);
+  background-color: rgba(0, 207, 255);
   background-size: cover;
 `;
 
@@ -34,19 +33,19 @@ export const ListTitle = styled.div`
     font-weight: 800;
     color: white;
   }
-  .categoryname{
-    color:  rgba(0,207,255);
-    text-shadow : 0 0 10px rgba(0,207,255);  
+  .categoryname {
+    color: rgba(0, 207, 255);
+    text-shadow: 0 0 10px rgba(0, 207, 255);
   }
 
   @media (max-width: 1200px) {
-    .categorytagtitle{
+    .categorytagtitle {
       font-size: 28px;
     }
   }
   @media (max-width: 600px) {
     grid-row: 2/4;
-    .categorytagtitle{
+    .categorytagtitle {
       font-size: 24px;
     }
   }
@@ -97,7 +96,6 @@ export const ListWrapper = styled.div`
   display: grid;
   grid-template-rows: 250px 100px 100px 1fr 200px;
 `;
-
 
 export const ClipText = styled.div`
   background-size: cover;

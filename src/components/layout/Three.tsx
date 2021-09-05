@@ -1,72 +1,49 @@
-import React, { useRef } from 'react';
-import { MapControls } from 'three/examples/jsm/controls/OrbitControls';
-import {
-  Canvas,
-  useFrame,
-  useThree,
-  extend,
-  ReactThreeFiber,
-} from 'react-three-fiber';
-import { ThreeWrapper } from './styled';
-import { Outer, PlanetEarth } from './ThreeItems';
+import React, { useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { MainTitle, Tag, ThreeWrapper } from './styled';
+import { Earth, Star } from './ThreeItems';
+import { OrbitControls } from '@react-three/drei';
+import Progress from './Progress';
+import Stars from './star';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      mapControls: ReactThreeFiber.Object3DNode<
-        MapControls,
-        typeof MapControls
-      >;
-    }
-  }
-}
+export default function Three({ categorySet }: any) {
+  const [progress, setProgress] = useState(0);
 
-interface MapRef {
-  obj: {
-    update: Function;
-  };
-  minDistance: number;
-  maxDistance: number;
-}
-
-extend({
-  MapControls,
-});
-
-const Controls: React.FC<any> = props => {
-  const ref = useRef<MapRef>(null);
-  const { camera, gl } = useThree();
-  useFrame(() => {
-    ref.current?.obj?.update();
-    if (ref.current) {
-      ref.current.minDistance = 80;
-      ref.current.maxDistance = 150;
-    }
-  });
-  return <mapControls ref={ref} args={[camera, gl.domElement]} {...props} />;
-};
-
-export default function Three() {
   return (
     <ThreeWrapper>
+      <MainTitle>
+        <h1>JIGGLOG</h1>
+        <h3>JIGGLOG에 오신 것을 환영합니다</h3>
+        <Progress progress={progress} />
+      </MainTitle>
+      <Tag className="isWide" id="earth-tag">
+        <h1>JIGGLYPOP</h1>
+        <h3>무언가 만드는 것을 좋아합니다</h3>
+        <h3>REACT 프론트 엔드에 관심이 많고 VUE, ANGULAR를 모두 사용합니다.</h3>
+        <h3>DJANGO, express, nest.js, spring boot 백엔드도 다룹니다.</h3>
+        <h3>3D 웹에 관심이 많으며 항상 프로젝트를 쉬지 않고 합니다.</h3>
+        <h2>행성을 클릭하면 이력서 페이지로 이동합니다.</h2>
+      </Tag>
       <Canvas
         camera={{
           position: [100, 10, 10],
           far: 10000,
         }}
       >
-        <Controls />
-        <Outer />
-        <PlanetEarth />
+        <OrbitControls minDistance={80} maxDistance={120} />
+
+        <Earth setProgress={setProgress} />
+        <Star setProgress={setProgress} />
+        <Stars categorySet={categorySet} />
         <directionalLight
-          intensity={0.3}
-          color={'#12c2e9'}
+          intensity={0.1}
+          color={'#f1ffca'}
           position={[5, 40, 10]}
           castShadow
         />
         <directionalLight
-          intensity={0.7}
-          color={'#f64f59'}
+          intensity={0.1}
+          color={'#12c2e9'}
           position={[-10, -10, -10]}
           castShadow
         />
