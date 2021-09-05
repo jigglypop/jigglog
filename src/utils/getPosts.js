@@ -1,12 +1,12 @@
-import { POST } from "~/constants";
+import { POST } from '~/constants';
 
-const getPosts = (data) =>
+const getPosts = data =>
   data.posts.edges.filter(
     ({
       node: {
         frontmatter: { hide, type },
       },
-    }) => hide !== true && (type || POST) === POST
+    }) => hide !== true && (type || POST) === POST,
   );
 
 export default getPosts;

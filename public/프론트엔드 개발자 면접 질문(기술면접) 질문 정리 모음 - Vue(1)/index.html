@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.bfc78898c2aa09bf4448.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:23px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}.language-text,:not(pre)>code[class*=language-],pre[class*=language-]{@media (max-width:600px){margin-top:-100px;font-size:10px}}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d);font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><title data-react-helmet="true">jigglog| 프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)</title><meta data-react-helmet="true" name="og:title" content="jigglog| 프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)"/><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href="/"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.41291e80922f51891d89.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:16px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d);font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><title data-react-helmet="true">jigglog| 프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)</title><meta data-react-helmet="true" name="og:title" content="jigglog| 프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)"/><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href='/']{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
 data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
-.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}/*!sc*/
-.cILVHy:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);}/*!sc*/
 @media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
 data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
-.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:60px;width:100%;font-size:14px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:50px;width:100%;font-size:14px;font-weight:600;z-index:2;background:rgba(0,0,0,0.9);-webkit-backdrop-filter:brightness(1.1) blur(50px);-webkit-backdrop-filter:brightness(1.1) blur(50px);backdrop-filter:brightness(1.1) blur(50px);}/*!sc*/
 .eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
 .eoDCLg.active{padding-left:200px;}/*!sc*/
 .eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
@@ -14,11 +14,11 @@ data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
 .eoDCLg .be-person{color:white;}/*!sc*/
 .eoDCLg .logout{cursor:pointer;}/*!sc*/
 .eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
-.eoDCLg .hamberger:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);}/*!sc*/
 .eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
-.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);text-shadow:0 0 10px rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);}/*!sc*/
 data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
-.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient(20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100%);visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient( 20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100% );visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
 .bRGrce.active{visibility:visible;width:200px;}/*!sc*/
 data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
 .czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
@@ -41,7 +41,7 @@ data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
 .iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
 .iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
 data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
-.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-family:"NanumBarunGothicSubset";src:local("NanumBarunGothicSubset"),url("../../fonts/NanumBarunGothicSubset.woff2") format("woff2");position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:50px;width:100%;font-size:10px;font-weight:600;z-index:2;background-color:#141414;}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:40px;width:100%;font-size:10px;font-weight:600;z-index:2;background:rgba(0,0,0,0.9);-webkit-backdrop-filter:brightness(1.1) blur(50px);-webkit-backdrop-filter:brightness(1.1) blur(50px);backdrop-filter:brightness(1.1) blur(50px);}/*!sc*/
 .dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
 data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
 .hpPYFw{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
@@ -50,13 +50,30 @@ data-styled.g19[id="styled__Wrapper-sc-10t2n1r-0"]{content:"hpPYFw,"}/*!sc*/
 data-styled.g20[id="styled__LayoutWrapper-sc-1x92zxt-0"]{content:"hnwaga,"}/*!sc*/
 .bkWEwV{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
 data-styled.g22[id="styled__OuterWrapper-sc-1x92zxt-2"]{content:"bkWEwV,"}/*!sc*/
+.cBddps{background-color:#141414;border-radius:10px;margin:10px;padding:10px;color:white;-webkit-transition:all 0.5s ease-in;transition:all 0.5s ease-in;display:grid;grid-template-rows:1fr 1fr 1fr;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cBddps .top{grid-row:1/2;}/*!sc*/
+.cBddps .mid{grid-row:2/3;}/*!sc*/
+.cBddps .bottom{grid-row:3/4;}/*!sc*/
+.cBddps .biotext{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .myname{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
+.cBddps .gridgap{margin-top:10px;}/*!sc*/
+.cBddps .circle{margin:0;padding:0;}/*!sc*/
+@media (max-width:1200px){.cBddps .bottom{display:none;}}/*!sc*/
+data-styled.g64[id="styled__BioWrapper-sc-1q0fm4m-0"]{content:"cBddps,"}/*!sc*/
+.fgFJem{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g65[id="styled__BottomDiv-sc-1q0fm4m-1"]{content:"fgFJem,"}/*!sc*/
+.hczQXg{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.hczQXg:hover{border:2px solid #ff416c;}/*!sc*/
+.hczQXg:hover .link-inner{color:#ff416c;}/*!sc*/
+.hczQXg .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
+data-styled.g66[id="styled__CircleWrapper-sc-1q0fm4m-2"]{content:"hczQXg,"}/*!sc*/
 .lmJOuU{margin:auto;font-size:16px;background-color:white;border-radius:10px;box-shadow:10px 10px 10px black;}/*!sc*/
 @media (max-width:600px){.lmJOuU{padding:70px 10px 0;margin:0;}}/*!sc*/
 .lmJOuU:before,.lmJOuU:after{display:block;content:"";clear:both;}/*!sc*/
 .lmJOuU h1{margin:0.67em 0;font-size:36px;}/*!sc*/
 .lmJOuU time{margin:1em 0;font-size:14px;}/*!sc*/
 .lmJOuU a{font-size:12px;font-weight:800;color:gray;}/*!sc*/
-data-styled.g54[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
+data-styled.g68[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
 .dUDtWR{padding:0 20px 20px 20px;line-height:2em;color:black;}/*!sc*/
 .dUDtWR hr{height:4px;background-color:rgba(0,0,0,.1);border:none;}/*!sc*/
 .dUDtWR h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
@@ -77,14 +94,14 @@ data-styled.g54[id="styled__PostWrapper-sc-1hokm1n-1"]{content:"lmJOuU,"}/*!sc*/
 .dUDtWR code{position:relative;}/*!sc*/
 .dUDtWR del{visibility:hidden;-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
 @media (max-width:1000px){.dUDtWR{padding:0 10px 10px 10px;line-height:2em;color:black;}.dUDtWR hr{margin-bottom:10px;}.dUDtWR h1{margin-bottom:2px;font-size:18px;}.dUDtWR h2{font-size:16px;}.dUDtWR h3{font-size:14px;}.dUDtWR h4{font-size:12px;}.dUDtWR h5{font-size:10px;}.dUDtWR p,.dUDtWR blockquote,.dUDtWR pre{margin-top:5px;font-size:12px;}.dUDtWR li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.dUDtWR table{margin:20px;}.dUDtWR th,.dUDtWR tr,.dUDtWR td,.dUDtWR span,.dUDtWR em{font-size:10px;}.dUDtWR strong{font-size:14px;}}/*!sc*/
-data-styled.g56[id="styled__PostContent-sc-1hokm1n-3"]{content:"dUDtWR,"}/*!sc*/
+data-styled.g70[id="styled__PostContent-sc-1hokm1n-3"]{content:"dUDtWR,"}/*!sc*/
 @media (max-width:600px){.ilhkQa{display:none;}}/*!sc*/
-data-styled.g58[id="styled__ClearMobile-sc-1hokm1n-5"]{content:"ilhkQa,"}/*!sc*/
+data-styled.g72[id="styled__ClearMobile-sc-1hokm1n-5"]{content:"ilhkQa,"}/*!sc*/
 .iaGTzG{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
 .iaGTzG.color{border:2px solid #78ffd6;}/*!sc*/
 .iaGTzG.color .link-inner{color:#78ffd6;}/*!sc*/
 .iaGTzG .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
-data-styled.g59[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
+data-styled.g73[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
 .dsQNWx .jb-wrap{max-height:400px;width:100%;margin:10px auto;position:relative;overflow:hidden;}/*!sc*/
 .dsQNWx .jb-wrap img{max-height:initial;width:100%;vertical-align:middle;}/*!sc*/
 .dsQNWx .jb-text{color:white;font-size:20px;width:80vw;font-weight:800;text-shadow:2px 2px 20px white;text-align:center;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:black;padding:5%;line-height:2em;}/*!sc*/
@@ -93,47 +110,30 @@ data-styled.g59[id="styled__Button-sc-1hokm1n-6"]{content:"iaGTzG,"}/*!sc*/
 @media (max-width:1200px){.dsQNWx .jb-text{font-size:20px;}}/*!sc*/
 @media (max-width:900px){.dsQNWx .jb-text{font-size:16px;}}/*!sc*/
 @media (max-width:600px){.dsQNWx .jb-text{font-size:12px;width:90vw;}}/*!sc*/
-data-styled.g60[id="styled__ImageWrapper-sc-1hokm1n-7"]{content:"dsQNWx,"}/*!sc*/
+data-styled.g74[id="styled__ImageWrapper-sc-1hokm1n-7"]{content:"dsQNWx,"}/*!sc*/
 .iFwxVQ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:4px;padding-left:30px;padding-right:30px;}/*!sc*/
 .iFwxVQ h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
 .iFwxVQ .text{color:black;}/*!sc*/
 @media (max-width:1200px){.iFwxVQ{display:none;}}/*!sc*/
-data-styled.g61[id="styled__WarpVisible-sc-1hokm1n-8"]{content:"iFwxVQ,"}/*!sc*/
+data-styled.g75[id="styled__WarpVisible-sc-1hokm1n-8"]{content:"iFwxVQ,"}/*!sc*/
 .diEQsN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;bottom:0;margin-top:70px;padding-left:30px;padding-right:30px;}/*!sc*/
 .diEQsN h4{font-size:20px;color:white;font-weight:800;}/*!sc*/
 .diEQsN .text{color:black;}/*!sc*/
 @media (max-width:1200px){.diEQsN{display:none;}}/*!sc*/
-data-styled.g62[id="styled__WarpVisibleUnder-sc-1hokm1n-9"]{content:"diEQsN,"}/*!sc*/
+data-styled.g76[id="styled__WarpVisibleUnder-sc-1hokm1n-9"]{content:"diEQsN,"}/*!sc*/
 .kwBnbh{position:-webkit-sticky;position:sticky;top:70px;display:block;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
 .kwBnbh h4{font-size:14px;font-weight:800;}/*!sc*/
 @media (max-width:1200px){.kwBnbh h4{font-size:10px;font-weight:800;}}/*!sc*/
 @media (max-width:992px){.kwBnbh{display:none;}}/*!sc*/
 .kwBnbh .lineblock{display:inline-block;}/*!sc*/
 .kwBnbh .smallcircle{display:inline-block;padding-left:30px;font-weight:800;color:greenyellow;vertical-align:middle;}/*!sc*/
-data-styled.g63[id="styled__Visible-sc-1hokm1n-10"]{content:"kwBnbh,"}/*!sc*/
+data-styled.g77[id="styled__Visible-sc-1hokm1n-10"]{content:"kwBnbh,"}/*!sc*/
 .dKgnrq{position:-webkit-sticky;position:sticky;display:block;top:20vh;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
 @media (max-width:992px){.dKgnrq{display:none;}}/*!sc*/
-data-styled.g64[id="styled__VisibleTable-sc-1hokm1n-11"]{content:"dKgnrq,"}/*!sc*/
-.cBddps{background-color:#141414;border-radius:10px;margin:10px;padding:10px;color:white;-webkit-transition:all 0.5s ease-in;transition:all 0.5s ease-in;display:grid;grid-template-rows:1fr 1fr 1fr;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
-.cBddps .top{grid-row:1/2;}/*!sc*/
-.cBddps .mid{grid-row:2/3;}/*!sc*/
-.cBddps .bottom{grid-row:3/4;}/*!sc*/
-.cBddps .biotext{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
-.cBddps .myname{font-size:13px;margin-top:10px;font-weight:800;}/*!sc*/
-.cBddps .gridgap{margin-top:10px;}/*!sc*/
-.cBddps .circle{margin:0;padding:0;}/*!sc*/
-@media (max-width:1200px){.cBddps .bottom{display:none;}}/*!sc*/
-data-styled.g78[id="styled__BioWrapper-sc-1q0fm4m-0"]{content:"cBddps,"}/*!sc*/
-.fgFJem{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
-data-styled.g79[id="styled__BottomDiv-sc-1q0fm4m-1"]{content:"fgFJem,"}/*!sc*/
-.hczQXg{border-radius:50%;border:none;width:45px;height:45px;margin:10px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 10px gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
-.hczQXg:hover{border:2px solid #ff416c;}/*!sc*/
-.hczQXg:hover .link-inner{color:#ff416c;}/*!sc*/
-.hczQXg .link-inner{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;color:white;width:30px;height:30px;}/*!sc*/
-data-styled.g80[id="styled__CircleWrapper-sc-1q0fm4m-2"]{content:"hczQXg,"}/*!sc*/
-.hWEvTs{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid rgba(0,207,255);box-shadow:0 0 5px gray;}/*!sc*/
-.hWEvTs .link-inner{color:rgba(0,207,255);width:30px;height:30px;}/*!sc*/
-.hWEvTs:hover{box-shadow:0 0 20px gray;}/*!sc*/
+data-styled.g78[id="styled__VisibleTable-sc-1hokm1n-11"]{content:"dKgnrq,"}/*!sc*/
+.hWEvTs{border-radius:50%;border:none;width:45px;height:45px;margin:5px;background-color:#141414;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;border:2px solid white;box-shadow:0 0 5px gray;}/*!sc*/
+.hWEvTs .link-inner{color:white;width:30px;height:30px;}/*!sc*/
+.hWEvTs:hover{box-shadow:0 0 10px white;}/*!sc*/
 data-styled.g81[id="styled__Button-sc-1aanmmt-0"]{content:"hWEvTs,"}/*!sc*/
 .iRLYFX{padding:5%;position:relative;display:grid;grid-template-rows:50px 1fr 300px;}/*!sc*/
 @media (max-width:1000px){.iRLYFX{padding:3%;}}/*!sc*/
@@ -147,23 +147,7 @@ data-styled.g123[id="KakaoShareButton__KakaoButton-sc-1yy6cgc-0"]{content:"fGOEx
 .fGwxWy .link-inner{width:30px;height:30px;}/*!sc*/
 .fGwxWy:hover{box-shadow:0 0 20px gray;}/*!sc*/
 data-styled.g124[id="CopyButton__LinkButton-sc-10dc2a0-0"]{content:"fGwxWy,"}/*!sc*/
-</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 748px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1004px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
-  
-  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='UA-173606059-1',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
-  if(true) {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  }
-  if (typeof ga === "function") {
-    ga('create', 'UA-173606059-1', 'auto', {});
-      ga('set', 'anonymizeIp', true);
-      
-      
-      
-      
-      }</script><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-e4b9ac1969a0f14f87a8.js"/><link as="script" rel="preload" href="/app-6a0445d51fe27801467d.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-ae6d046c35c187471a06.js"/><link as="script" rel="preload" href="/545f34e4-537d8b272c482937bf60.js"/><link as="script" rel="preload" href="/78e521c3-462857b96df26c268693.js"/><link as="script" rel="preload" href="/fb7d5399-f19a7654ef6c4f56cd33.js"/><link as="script" rel="preload" href="/d7eeaac4-bfb69f86cbc2987413ed.js"/><link as="script" rel="preload" href="/1bfc9850-c5a69d782689db0ff35d.js"/><link as="script" rel="preload" href="/1a48c3c1-815e1b17a9be0f8f8cd2.js"/><link as="script" rel="preload" href="/31664189-05f8af049756fc87b416.js"/><link as="script" rel="preload" href="/252f366e-1c12a0eaa48ff8868fa3.js"/><link as="script" rel="preload" href="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js"/><link as="script" rel="preload" href="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js"/><link as="script" rel="preload" href="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js"/><link as="script" rel="preload" href="/component---src-templates-post-tsx-0a1b0d71c35a3e57e632.js"/><link as="fetch" rel="preload" href="/page-data\프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><meta name="naver-site-verification" content="de786acecfbe10288c6688e80f28aea2992ccf04"/><script src="https://developers.kakao.com/sdk/js/kakao.js"></script><style id="gatsby-inlined-css">html,
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 748px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1004px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-b96958d8953a0dd41549.js"/><link as="script" rel="preload" href="/app-4cfd29633f93061ac90f.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-2d4804b503525347efbe.js"/><link as="script" rel="preload" href="/545f34e4-d852f4cbef9f85ad0693.js"/><link as="script" rel="preload" href="/78e521c3-464c80c1d674145aa73b.js"/><link as="script" rel="preload" href="/fb7d5399-1bedfd520d91ec5c091f.js"/><link as="script" rel="preload" href="/d7eeaac4-a4b9f97cec7e8681bdfb.js"/><link as="script" rel="preload" href="/1bfc9850-c5a69d782689db0ff35d.js"/><link as="script" rel="preload" href="/1a48c3c1-815e1b17a9be0f8f8cd2.js"/><link as="script" rel="preload" href="/31664189-05f8af049756fc87b416.js"/><link as="script" rel="preload" href="/252f366e-1c12a0eaa48ff8868fa3.js"/><link as="script" rel="preload" href="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-b5766a33ea0811f8ffb3.js"/><link as="script" rel="preload" href="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-6eca689ba05f0d18a1f4.js"/><link as="script" rel="preload" href="/74a43851c045d3a10e30a03c74bfbb730bafe566-49a30760942bc3435fc6.js"/><link as="script" rel="preload" href="/component---src-templates-post-tsx-9a1f8645bd3b19f22b4f.js"/><link as="fetch" rel="preload" href="/page-data\프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><style id="gatsby-inlined-css">html,
 body,
 div,
 span,
@@ -371,7 +355,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -399,42 +383,7 @@ label {
 *[disabled] {
   cursor: not-allowed;
 }
-
-body {
-  width: 100vw;
-  height: 100vh;
-}
-.MuiPaginationItem-root {
-  color: white !important;
-}
-.MuiPaginationItem-page.Mui-selected {
-  background-color: rgba(0, 207, 255, 0.5) !important;
-}
-.toasts {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 20;
-  color: black;
-}
-.toast {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 400px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid #ed213a;
-  color: white;
-  font-size: 13px;
-  font-weight: 800;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 0.5rem;
-}
-</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-10t2n1r-0 hpPYFw"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 테크 캠프 4기/1">우아한 테크 캠프 4기<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 리액트/1">우아한 리액트<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(7)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div></div></div></div></nav><main><div class="styled__PostWrapper-sc-1hokm1n-1 lmJOuU"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="styled__ImageWrapper-sc-1hokm1n-7 dsQNWx"><div class="jb-wrap"><div class="jb-image"><img src="/static/2-2a7e015bedc8f30d7b558bcb7b76cfee.jpg" alt=""/></div><div class="jb-text">프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)</div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__Visible-sc-1hokm1n-10 kwBnbh"><div class="styled__BioWrapper-sc-1q0fm4m-0 cBddps"><div class="top"><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div><div class="mid"><p class="biotext">JIGGLYPOP</p><p class="biotext">염동환</p></div><div class="styled__BottomDiv-sc-1q0fm4m-1 fgFJem bottom"><a href="https://github.com/jigglypop" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></div></a><a href="https://www.facebook.com/donghwan.yeom.3" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></div></a><a href="https://www.instargram.com/yeom_donghwan" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path></svg></div></a></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="answer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="lines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-opacity=".36" d="M0 20h24v4H0z"></path><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer" id="dels"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.032 13l0.9-3h4.137l0.9 3h1.775l-3-10h-3.488l-3 10h1.776zM7.432 5h1.137l0.9 3h-2.937l0.9-3z"></path></svg></button></div></div><div class="styled__WarpVisibleUnder-sc-1hokm1n-9 diEQsN"><div class="lineblock"><div class="kakao-share-button"><button id="kakao-link-btn" class="KakaoShareButton__KakaoButton-sc-1yy6cgc-0 fGOExz"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#ffe259" class="kakao-inner" style="color:#ffe259" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M5.678 18.123C3.092 16.566 1.5 14.112 1.5 11.405 1.5 6.701 6.248 3 12 3s10.5 3.701 10.5 8.405c0 4.704-4.748 8.405-10.5 8.405-.442 0-.882-.022-1.318-.065l-3.765 2.458c-.615.326-.957.425-1.485.066-.62-.424-.596-.892-.381-1.56l.627-2.586zM3.5 11.405c0 2.132 1.418 4.123 3.781 5.32l.706.359-.186.77-.401 1.648 2.8-1.83.366.046c.473.061.952.092 1.434.092 4.741 0 8.5-2.93 8.5-6.405S16.741 5 12 5s-8.5 2.93-8.5 6.405zm14.407-.346l1.514 2.155a.472.472 0 1 1-.773.543l-1.428-2.033-.427.413V13.5a.472.472 0 0 1-.944 0v-1.439a.471.471 0 0 1 0-.222V9.282a.472.472 0 0 1 .944 0v1.542l1.928-1.866a.472.472 0 0 1 .656.678l-1.47 1.423zm-2.958 1.925a.472.472 0 0 1 0 .944h-1.932a.472.472 0 0 1-.471-.472V9.297a.472.472 0 1 1 .943 0v3.687h1.46zm-5.857-1.092h1.334l-.638-1.707-.696 1.707zm2.523.488l.345.925a.472.472 0 1 1-.884.33l-.298-.799h-2.07l-.331.813a.472.472 0 1 1-.874-.357l1.66-4.075a.696.696 0 0 1 .654-.447.69.69 0 0 1 .627.474l1.046 2.8a.469.469 0 0 1 .127.32l-.002.016zM8.293 9.302c0 .26-.21.472-.471.472h-1.14v3.736a.472.472 0 0 1-.945 0V9.774h-1.16a.472.472 0 1 1 0-.944h3.245c.26 0 .471.211.471.472z"></path></g></svg></button></div></div><div class="lineblock"><h4 class="text">카카오톡 공유</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button class="CopyButton__LinkButton-sc-10dc2a0-0 fGwxWy"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" color="#4a00e0" class="link-inner" style="color:#4a00e0" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></button></div><div class="lineblock"><h4 class="text">URL주소 복사</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1aanmmt-0 hWEvTs"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19,7h-1V2H6v5H5c-1.654,0-3,1.346-3,3v7c0,1.103,0.897,2,2,2h2v3h12v-3h2c1.103,0,2-0.897,2-2v-7C22,8.346,20.654,7,19,7 z M8,4h8v3H8V4z M16,20H8v-4h8V20z M20,17h-2v-1v-2H6v2v1H4v-7c0-0.551,0.449-1,1-1h14c0.552,0,1,0.449,1,1V17z"></path><path d="M14 10H18V12H14z"></path></svg></button></div><div class="lineblock"><h4 class="text">글전체 프린트</h4></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"><div class="styled__ClearMobile-sc-1hokm1n-5 ilhkQa"></div><div class="styled__PostContent-sc-1hokm1n-3 dUDtWR"><h5>2021-04-15 01:00<!-- --> 시에 저장한 글입니다.</h5><hr style="margin-bottom:50px"/><div id="post-contents" style="margin-bottom:100px"><blockquote>
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="styled__OuterWrapper-sc-1x92zxt-2 bkWEwV"><div id="layoutwrapper" class="styled__LayoutWrapper-sc-1x92zxt-0 hnwaga"><div class="styled__Wrapper-sc-10t2n1r-0 hpPYFw"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 테크 캠프 4기/1">우아한 테크 캠프 4기<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(7)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 리액트/1">우아한 리액트<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div></div></div></div></nav><main><div class="styled__PostWrapper-sc-1hokm1n-1 lmJOuU"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="styled__ImageWrapper-sc-1hokm1n-7 dsQNWx"><div class="jb-wrap"><div class="jb-image"><img src="/static/2-2a7e015bedc8f30d7b558bcb7b76cfee.jpg" alt=""/></div><div class="jb-text">프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)</div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__Visible-sc-1hokm1n-10 kwBnbh"><div class="styled__BioWrapper-sc-1q0fm4m-0 cBddps"><div class="top"><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div><div class="mid"><p class="biotext">JIGGLYPOP</p><p class="biotext">염동환</p></div><div class="styled__BottomDiv-sc-1q0fm4m-1 fgFJem bottom"><a href="https://github.com/jigglypop" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></div></a><a href="https://www.facebook.com/donghwan.yeom.3" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></div></a><a href="https://www.instargram.com/yeom_donghwan" target="_blank" rel="noreferrer noopener" class="circle"><div class="styled__CircleWrapper-sc-1q0fm4m-2 hczQXg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path></svg></div></a></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="answer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.51 3.08L3.08 19.51c.09.34.27.65.51.9.25.24.56.42.9.51L20.93 4.49c-.19-.69-.73-1.23-1.42-1.41zM11.88 3L3 11.88v2.83L14.71 3h-2.83zM5 3c-1.1 0-2 .9-2 2v2l4-4H5zm14 18c.55 0 1.05-.22 1.41-.59.37-.36.59-.86.59-1.41v-2l-4 4h2zm-9.71 0h2.83L21 12.12V9.29L9.29 21z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer color" id="lines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-opacity=".36" d="M0 20h24v4H0z"></path><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"></path></svg></button></div><div class="lineblock"><button type="button" class="styled__Button-sc-1hokm1n-6 iaGTzG link-outer" id="dels"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.032 13l0.9-3h4.137l0.9 3h1.775l-3-10h-3.488l-3 10h1.776zM7.432 5h1.137l0.9 3h-2.937l0.9-3z"></path></svg></button></div></div><div class="styled__WarpVisibleUnder-sc-1hokm1n-9 diEQsN"><div class="lineblock"><div class="kakao-share-button"><button id="kakao-link-btn" class="KakaoShareButton__KakaoButton-sc-1yy6cgc-0 fGOExz"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#ffe259" class="kakao-inner" style="color:#ffe259" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M5.678 18.123C3.092 16.566 1.5 14.112 1.5 11.405 1.5 6.701 6.248 3 12 3s10.5 3.701 10.5 8.405c0 4.704-4.748 8.405-10.5 8.405-.442 0-.882-.022-1.318-.065l-3.765 2.458c-.615.326-.957.425-1.485.066-.62-.424-.596-.892-.381-1.56l.627-2.586zM3.5 11.405c0 2.132 1.418 4.123 3.781 5.32l.706.359-.186.77-.401 1.648 2.8-1.83.366.046c.473.061.952.092 1.434.092 4.741 0 8.5-2.93 8.5-6.405S16.741 5 12 5s-8.5 2.93-8.5 6.405zm14.407-.346l1.514 2.155a.472.472 0 1 1-.773.543l-1.428-2.033-.427.413V13.5a.472.472 0 0 1-.944 0v-1.439a.471.471 0 0 1 0-.222V9.282a.472.472 0 0 1 .944 0v1.542l1.928-1.866a.472.472 0 0 1 .656.678l-1.47 1.423zm-2.958 1.925a.472.472 0 0 1 0 .944h-1.932a.472.472 0 0 1-.471-.472V9.297a.472.472 0 1 1 .943 0v3.687h1.46zm-5.857-1.092h1.334l-.638-1.707-.696 1.707zm2.523.488l.345.925a.472.472 0 1 1-.884.33l-.298-.799h-2.07l-.331.813a.472.472 0 1 1-.874-.357l1.66-4.075a.696.696 0 0 1 .654-.447.69.69 0 0 1 .627.474l1.046 2.8a.469.469 0 0 1 .127.32l-.002.016zM8.293 9.302c0 .26-.21.472-.471.472h-1.14v3.736a.472.472 0 0 1-.945 0V9.774h-1.16a.472.472 0 1 1 0-.944h3.245c.26 0 .471.211.471.472z"></path></g></svg></button></div></div><div class="lineblock"><h4 class="text">카카오톡 공유</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button class="CopyButton__LinkButton-sc-10dc2a0-0 fGwxWy"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" color="#4a00e0" class="link-inner" style="color:#4a00e0" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></button></div><div class="lineblock"><h4 class="text">URL주소 복사</h4></div></div><div class="styled__WarpVisible-sc-1hokm1n-8 iFwxVQ"><div class="lineblock"><button type="button" class="styled__Button-sc-1aanmmt-0 hWEvTs"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="link-inner" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19,7h-1V2H6v5H5c-1.654,0-3,1.346-3,3v7c0,1.103,0.897,2,2,2h2v3h12v-3h2c1.103,0,2-0.897,2-2v-7C22,8.346,20.654,7,19,7 z M8,4h8v3H8V4z M16,20H8v-4h8V20z M20,17h-2v-1v-2H6v2v1H4v-7c0-0.551,0.449-1,1-1h14c0.552,0,1,0.449,1,1V17z"></path><path d="M14 10H18V12H14z"></path></svg></button></div><div class="lineblock"><h4 class="text">글전체 프린트</h4></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"><div class="styled__ClearMobile-sc-1hokm1n-5 ilhkQa"></div><div class="styled__PostContent-sc-1hokm1n-3 dUDtWR"><h5>2021-04-15 01:00<!-- --> 시에 저장한 글입니다.</h5><hr style="margin-bottom:50px"/><div id="post-contents" style="margin-bottom:100px"><blockquote>
 <p>프론트 엔드 면접 질문용(Vue) 공부 후 정리 자료입니다. 정확하지 않을 수 있으니 꼭 다시 책이나 자료를 참고하여 공부하세요</p>
 </blockquote>
 <h2>Vue 개요</h2>
@@ -618,9 +567,9 @@ body {
 <ul>
 <li>조건에 따라 DOM 엘리먼트를 추가하거나 제거</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Logout<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Logout<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre></div>
 <ul>
-<li>엘리먼트들을 <code class="language-text">&lt;template&gt;</code> 태그로 감싼다면, 하나의 v-if만으로 여러 엘리먼트들의 조건을 설정할 수 있음</li>
+<li>엘리먼트들을 <code class="language-text">&lt;template></code> 태그로 감싼다면, 하나의 v-if만으로 여러 엘리먼트들의 조건을 설정할 수 있음</li>
 </ul>
 <div class="gatsby-highlight" data-language="vue"><pre class="language-vue"><code class="language-vue">&lt;template v-if=&quot;isLoggedIn&quot;&gt;
   &lt;label&gt; Logout &lt;/button&gt;
@@ -631,28 +580,28 @@ body {
 <li>인접한 v-if 지시자 또는 v-else-if 지시자가 false일 때만 그 내용이 나타남</li>
 <li>조건을 지정할 필요가 없음</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Logout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Logout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-else</span><span class="token punctuation">></span></span> Log In <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre></div>
 <h4>3) v-else-if</h4>
 <ul>
 <li>v-if 이외의 다른 조건을 추가로 확인해야 할 때 사용</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Logout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">v-else-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isLoginDisabled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> User login disabled <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>isLoggedIn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Logout <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">v-else-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>isLoginDisabled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> User login disabled <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-else</span><span class="token punctuation">></span></span> Log In <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre></div>
 <h4>4) v-show</h4>
 <ul>
 <li>v-if 지시자와 비슷한 기능을 하지만, DOM에 엘리먼트가 추가된 상태에서 CSS의 display 값을 이용해 보여주고 숨김을 결정</li>
 <li>조건문이 자주 토글될 때 권장</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user.name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome user,{{user.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user.name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome user,{{user.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre></div>
 <h4>5) v-show와 v-if의 차이점</h4>
 <ul>
 <li>v-if는 조건이 일치하는 엘리먼트만 DOM에 렌더링하는 반면, v-show는 모든 엘리먼트를 DOM에 렌더링한 후 CSS를 이용해 내용을 보여주거나 숨김</li>
 <li>v-if와 v-else-if에서는 v-else를 사용할 수 있지만, v-show에서는 사용할 수 없음</li>
 <li>v-if는 토글할 때 높은 렌더링 비용이 들지만, v-show는 초기의 렌더링 작업에서 높은 비용이 듦</li>
 <li>v-show는 요소를 자주 켜고 끄는 경우 성능 상의 이점이 있지만, 초기 렌더링 작업에서는 v-if가 더 효율적</li>
-<li>v-if는 <code class="language-text">&lt;template&gt;</code>태그에서 사용할 수 있지만 v-show는 사용할 수 없음</li>
+<li>v-if는 <code class="language-text">&lt;template></code>태그에서 사용할 수 있지만 v-show는 사용할 수 없음</li>
 </ul>
 <h2>v-for</h2>
 <hr>
@@ -662,18 +611,18 @@ body {
 <ol>
 <li>배열의 경우:</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul id=&quot;list&quot;&gt;
-  &lt;li v-for=&quot;(item, index) in items&quot;&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul id="list">
+  &lt;li v-for="(item, index) in items">
     {{ index }} - {{ item.message }}
-  &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;/li>
+&lt;/ul>
 
 var vm = new Vue({
-  el: &#39;#list&#39;,
+  el: '#list',
   data: {
     items: [
-      { message: &#39;John&#39; },
-      { message: &#39;Locke&#39; }
+      { message: 'John' },
+      { message: 'Locke' }
     ]
   }
 })</code></pre></div>
@@ -681,27 +630,27 @@ var vm = new Vue({
 <ol>
 <li>객체의 경우:</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div id=&quot;object&quot;&gt;
-  &lt;div v-for=&quot;(value, key, index) in user&quot;&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div id="object">
+  &lt;div v-for="(value, key, index) in user">
     {{ index }}. {{ key }}: {{ value }}
-  &lt;/div&gt;
-&lt;/div&gt;
+  &lt;/div>
+&lt;/div>
 
 var vm = new Vue({
-  el: &#39;#object&#39;,
+  el: '#object',
   data: {
     user: {
-      firstName: &#39;John&#39;,
-      lastName: &#39;Locke&#39;,
+      firstName: 'John',
+      lastName: 'Locke',
       age: 30
     }
   }
 })</code></pre></div>
 <h3>v-for에서 key 속성이 필요한 이유</h3>
 <p>Vue에서 개별 DOM 노드들을 추적하고 기존 엘리먼트의 재사용/재정렬을 위해, v-for의 요소에 고유한 key 속성을 제공해야 합니다. key에 대한 이상적인 값은 각 항목을 식별할 수 있는 고유한 ID입니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div v-for="item in items" :key="item.id">
   {{item.name}}
-&lt;/div&gt;</code></pre></div>
+&lt;/div></code></pre></div>
 <p>반복되는 DOM 내용이 단순한 경우나 의도적인 성능 향상을 위해 기본 동작에 의존하지 않는 경우를 제외하면, 가능하면 언제나 v-for에 key를 추가하는 것이 좋습니다. <strong>Note:</strong> 객체나 배열처럼, 기본 타입(Primitive value)이 아닌 값을 키로 사용해서는 안됩니다. 문자열이나 숫자를 사용하세요.</p>
 <h3>Vue 인스턴스란</h3>
 <p>모든 Vue 어플리케이션은 Vue 함수를 이용해 Vue 인스턴스를 생성하면서 동작합니다. 일반적으로 <code class="language-text">vm</code>(ViewModel의 축약형)이라는 변수를 이용해 Vue 인스턴스를 참조합니다. 아래와 같은 방법으로 Vue 인스턴스를 생성할 수 있습니다.</p>
@@ -712,23 +661,23 @@ var vm = new Vue({
 <li>
 <h3>key 속성을 이용해 엘리먼트를 재사용하는 방법은</h3>
 <p>Vue는 가능한 한 엘리먼트를 효율적으로 렌더링하려 합니다. 그래서 엘리먼트를 처음부터 다시 만들기보다는 재사용하려 합니다. 그러나 이는 몇 가지 상황에서 문제를 일으킬 수 있습니다. 예를 들어, <code class="language-text">input</code> 엘리먼트를 <code class="language-text">v-if</code>와 <code class="language-text">v-else</code> 블록 양쪽에서 사용하면, <code class="language-text">input</code> 엘리먼트는 조건문에 따라 바뀌지 않고 최초에 렌더링 된 엘리먼트의 상태를 유지하고 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;template v-if=&quot;loginType === &#39;Admin&#39;&quot;&gt;
- &lt;label&gt;Admin&lt;/label&gt;
- &lt;input placeholder=&quot;Enter your ID&quot;&gt;
-&lt;/template&gt;
-&lt;template v-else&gt;
- &lt;label&gt;Guest&lt;/label&gt;
- &lt;input placeholder=&quot;Enter your name&quot;&gt;
-&lt;/template&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;template v-if="loginType === 'Admin'">
+ &lt;label>Admin&lt;/label>
+ &lt;input placeholder="Enter your ID">
+&lt;/template>
+&lt;template v-else>
+ &lt;label>Guest&lt;/label>
+ &lt;input placeholder="Enter your name">
+&lt;/template></code></pre></div>
 <p>이 경우에서 <code class="language-text">input</code> 엘리먼트는 재사용되어서는 안 되기 때문에, <strong>key</strong> 속성을 이용해 두 개의 <code class="language-text">input</code> 엘리먼트를 별개의 것으로 취급하도록 선언할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">   &lt;template v-if=&quot;loginType === &#39;Admin&#39;&quot;&gt;
-     &lt;label&gt;Admin&lt;/label&gt;
-     &lt;input placeholder=&quot;Enter your ID&quot; key=&quot;admin-id&quot;&gt;
-   &lt;/template&gt;
-   &lt;template v-else&gt;
-     &lt;label&gt;Guest&lt;/label&gt;
-     &lt;input placeholder=&quot;Enter your name&quot; key=&quot;user-name&quot;&gt;
-   &lt;/template&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">   &lt;template v-if="loginType === 'Admin'">
+     &lt;label>Admin&lt;/label>
+     &lt;input placeholder="Enter your ID" key="admin-id">
+   &lt;/template>
+   &lt;template v-else>
+     &lt;label>Guest&lt;/label>
+     &lt;input placeholder="Enter your name" key="user-name">
+   &lt;/template></code></pre></div>
 <p>위의 경우는 두 개의 <code class="language-text">input</code> 엘리먼트가 별개의 것으로 취급되며 서로에게 어떤 영향도 끼치지 않습니다.</p>
 </li>
 </ol>
@@ -737,15 +686,15 @@ var vm = new Vue({
 <ol>
 <li>리스트의 요소를 필터링하기 위해 예를 들어, v-if 지시자를 이용해 리스트에 있는 아이템을 필터링하고 싶은 경우입니다.</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul>
   &lt;li
-    v-for=&quot;user in users&quot;
-    v-if=&quot;user.isActive&quot;
-    :key=&quot;user.id&quot;
-  &gt;
+    v-for="user in users"
+    v-if="user.isActive"
+    :key="user.id"
+  >
     {{ user.name }}
-  &lt;li&gt;
-&lt;/ul&gt;</code></pre></div>
+  &lt;li>
+&lt;/ul></code></pre></div>
 <p>이 경우는 아래와 같이 사전에 computed 속성을 이용해 필터링된 리스트를 만들어 사용할 수 있습니다.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">computed: {
   activeUsers: function () {
@@ -756,34 +705,34 @@ var vm = new Vue({
 }
 ...... //
 ...... //
-&lt;ul&gt;
+&lt;ul>
   &lt;li
-    v-for=&quot;user in activeUsers&quot;
-    :key=&quot;user.id&quot;&gt;
+    v-for="user in activeUsers"
+    :key="user.id">
     {{ user.name }}
-  &lt;li&gt;
-&lt;/ul&gt;</code></pre></div>
+  &lt;li>
+&lt;/ul></code></pre></div>
 <ol>
 <li>리스트 자체가 숨겨져야 할 때 예를 들어, v-if를 이용해 반복되는 리스트를 숨기고 싶은 경우입니다.</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul>
   &lt;li
-    v-for=&quot;user in users&quot;
-    v-if=&quot;shouldShowUsers&quot;
-    :key=&quot;user.id&quot;
-  &gt;
+    v-for="user in users"
+    v-if="shouldShowUsers"
+    :key="user.id"
+  >
     {{ user.name }}
-  &lt;li&gt;
-&lt;/ul&gt;</code></pre></div>
+  &lt;li>
+&lt;/ul></code></pre></div>
 <p>이 경우는 아래와 같이 조건문을 상위 엘리먼트로 옮김으로써 해결할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul v-if=&quot;shouldShowUsers&quot;&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul v-if="shouldShowUsers">
   &lt;li
-    v-for=&quot;user in users&quot;
-    :key=&quot;user.id&quot;
-  &gt;
+    v-for="user in users"
+    :key="user.id"
+  >
     {{ user.name }}
-  &lt;li&gt;
-&lt;/ul&gt;</code></pre></div>
+  &lt;li>
+&lt;/ul></code></pre></div>
 <ol>
 <li>
 <h3>배열을 변화시키는 함수(Mutation method)란</h3>
@@ -798,7 +747,7 @@ var vm = new Vue({
 <li>reverse()</li>
 </ol>
 <p>예를 들어, 아래와 같이 <code class="language-text">todos</code> 배열에 <code class="language-text">push</code> 함수를 실행시키면 뷰 업데이트가 일어납니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">vm.todos.push({ message: &#39;Baz&#39; })</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">vm.todos.push({ message: 'Baz' })</code></pre></div>
 </li>
 <li>
 <h3>배열을 대체하는 함수(Non-mutation method)란</h3>
@@ -840,7 +789,7 @@ vm.todos.splice(indexOfTodo, 1, newTodoValue)</code></pre></div>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">var vm = new Vue({
  data: {
    user: {
-     name: &#39;John&#39;
+     name: 'John'
    }
  }
 })
@@ -849,7 +798,7 @@ vm.todos.splice(indexOfTodo, 1, newTodoValue)</code></pre></div>
 
 vm.email = john@email.com // `vm.email` is NOT reactive</code></pre></div>
 <p>이 경우는 <code class="language-text">Vue.set(object, key, value)</code>나 <code class="language-text">Object.assign()</code>를 이용함으로써 반응형 속성을 추가할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Vue.set(vm.user, &#39;email&#39;, john@email.com);</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Vue.set(vm.user, 'email', john@email.com);</code></pre></div>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">vm.user = Object.assign({}, vm.user, {
  email: john@email.com
 })</code></pre></div>
@@ -857,20 +806,20 @@ vm.email = john@email.com // `vm.email` is NOT reactive</code></pre></div>
 <li>
 <h3>v-for를 특정 횟수만큼 반복하는 방법은?</h3>
 <p><code class="language-text">v-for</code> 지시자에 정수를 사용해 특정 횟수만큼 반복해 렌더링 할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div&gt;
- &lt;span v-for=&quot;n in 20&quot;&gt;{{ n }} &lt;/span&gt;
-&lt;/div&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;div>
+ &lt;span v-for="n in 20">{{ n }} &lt;/span>
+&lt;/div></code></pre></div>
 <p>이 경우 1부터 20까지 숫자가 출력됩니다.</p>
 </li>
 <li>
 <h3>v-for로 템플릿을 반복하는 방법은</h3>
-<p><code class="language-text">&lt;template&gt;</code>에서 v-if를 사용한 것과 유사하게, <code class="language-text">&lt;template&gt;</code>에서 v-for 문법을 사용할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul&gt;
- &lt;template v-for=&quot;todo in todos&quot;&gt;
-   &lt;li&gt;{{ todo.title }}&lt;/li&gt;
-   &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
- &lt;/template&gt;
-&lt;/ul&gt;</code></pre></div>
+<p><code class="language-text">&lt;template></code>에서 v-if를 사용한 것과 유사하게, <code class="language-text">&lt;template></code>에서 v-for 문법을 사용할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ul>
+ &lt;template v-for="todo in todos">
+   &lt;li>{{ todo.title }}&lt;/li>
+   &lt;li class="divider">&lt;/li>
+ &lt;/template>
+&lt;/ul></code></pre></div>
 </li>
 <li>
 <h3>이벤트 핸들러를 사용하는 방법은?</h3>
@@ -899,17 +848,17 @@ methods: {
 <li><code class="language-text">.passive</code></li>
 </ol>
 <p><code class="language-text">.stop</code> 수식어를 예로 들어보겠습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- the click event&#39;s propagation will be stopped --&gt;
-&lt;a v-on:click.stop=&quot;methodCall&quot;&gt;&lt;/a&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- the click event's propagation will be stopped -->
+&lt;a v-on:click.stop="methodCall">&lt;/a></code></pre></div>
 <p>수식어는 연속해서 사용할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- modifiers can be chained --&gt;
-&lt;a v-on:click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- modifiers can be chained -->
+&lt;a v-on:click.stop.prevent="doThat">&lt;/a></code></pre></div>
 </li>
 <li>
 <h3>키 수식어(Key modifiers)란?</h3>
 <p>Vue는 키보드 이벤트를 제어하기 위해 <code class="language-text">v-on</code> 지시자에 키 수식어를 제공합니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- only call `vm.show()` when the `keyCode` is 13 --&gt;
-&lt;input v-on:keyup.13=&quot;show&quot;&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- only call `vm.show()` when the `keyCode` is 13 -->
+&lt;input v-on:keyup.13="show"></code></pre></div>
 <p>모든 키 코드를 외우는 것은 어렵기 때문에, Vue에서는 자주 사용되는 키들은 별칭을 제공하고 있습니다.</p>
 <ol>
 <li><code class="language-text">.enter</code></li>
@@ -923,10 +872,10 @@ methods: {
 <li><code class="language-text">.right</code></li>
 </ol>
 <p>위 예시의 키 코드는 아래와 같이 별칭으로 다시 쓸 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;input v-on:keyup.enter=&quot;submit&quot;&gt;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;input v-on:keyup.enter="submit">
 // (OR)
-&lt;!-- with shorthand notation--&gt;
-&lt;input @keyup.enter=&quot;submit&quot;&gt;</code></pre></div>
+&lt;!-- with shorthand notation-->
+&lt;input @keyup.enter="submit"></code></pre></div>
 <p><strong>키 코드 이벤트의 사용은 최신 브라우저에서는 지원되지 않을 수 있습니다.</strong></p>
 </li>
 <li>
@@ -938,7 +887,7 @@ methods: {
 </ol>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Vue.config.keyCodes = {
   f1: 112,
-  &quot;media-play-pause&quot;: 179,
+  "media-play-pause": 179,
   down: [40, 87]
 }</code></pre></div>
 </li>
@@ -952,8 +901,8 @@ methods: {
 <li><code class="language-text">.meta</code></li>
 </ol>
 <p>아래는 컨트롤 키가 눌린 상태에서 클릭 이벤트를 활성화 하는 예시입니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- Ctrl + Click --&gt;
-&lt;div @click.ctrl=&quot;doSomething&quot;&gt;Do something&lt;/div&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;!-- Ctrl + Click -->
+&lt;div @click.ctrl="doSomething">Do something&lt;/div></code></pre></div>
 </li>
 <li>
 <h3>마우스 버튼 수식어(Mouse button modifier)란?</h3>
@@ -965,10 +914,10 @@ methods: {
 </ol>
 <p>마우스 이벤트로 <code class="language-text">.right</code>를 이용한 예시입니다.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"> &lt;button
-   v-if=&quot;button === &#39;right&#39;&quot;
-   v-on:mousedown.right=&quot;increment&quot;
-   v-on:mousedown.left=&quot;decrement&quot;
- /&gt;</code></pre></div>
+   v-if="button === 'right'"
+   v-on:mousedown.right="increment"
+   v-on:mousedown.left="decrement"
+ /></code></pre></div>
 </li>
 </ol>
 <h2>v-model</h2>
@@ -977,8 +926,8 @@ methods: {
 <ul>
 <li><code class="language-text">input</code>, <code class="language-text">textarea</code>, <code class="language-text">select</code> 엘리먼트의 데이터를 양방향으로 제어할 수 있음</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;input v-model=&quot;message&quot; placeholder=&quot;Enter input here&quot;&gt;
-&lt;p&gt;The message is: {{ message }}&lt;/p&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;input v-model="message" placeholder="Enter input here">
+&lt;p>The message is: {{ message }}&lt;/p></code></pre></div>
 <p><code class="language-text">v-model</code>은 모든 <code class="language-text">form</code> 엘리먼트에서 HTML 속성(attribute)으로 선언된 <code class="language-text">value</code>, <code class="language-text">checked</code> 그리고 <code class="language-text">selected</code>를 무시합니다. 그 대신 Vue 인스턴스에서 <code class="language-text">v-model</code>로 바인딩한 값을 이용합니다. 따라서 컴포넌트의 data에서 초기값을 선언해야 합니다.</p>
 <h4>2) v-model에서 지원되는 수식어</h4>
 <h5>(1) lazy</h5>
@@ -986,18 +935,18 @@ methods: {
 <li><code class="language-text">v-model</code>은 하나의 키 입력 이벤트가 발생할 때마다 data가 업데이트</li>
 <li>이를 방지하기 위해서 <code class="language-text">.lazy</code> 수식어를 이용</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.lazy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.lazy</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span></code></pre></div>
 <h5>(2) number</h5>
 <ul>
 <li><code class="language-text">v-model</code>에 <code class="language-text">.number</code> 수식어를 붙이면 자동적으로 사용자의 입력의 자료형이 <code class="language-text">Number</code>로 변환</li>
-<li>HTML <code class="language-text">input</code> 태그의 속성이 <code class="language-text">type=&quot;number&quot;</code>일지라도 반환되는 값의 자료형은 문자열이기 때문에, 숫자 자료형이 필요하다면 <code class="language-text">.number</code> 수식어를 사용</li>
+<li>HTML <code class="language-text">input</code> 태그의 속성이 <code class="language-text">type="number"</code>일지라도 반환되는 값의 자료형은 문자열이기 때문에, 숫자 자료형이 필요하다면 <code class="language-text">.number</code> 수식어를 사용</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.number</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.number</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
 <h5>(3) trim</h5>
 <ul>
 <li><code class="language-text">.trim</code> 수식어를 사용자 입력에서 처음과 끝에 들어있는 공백을 자동으로 제거</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.trim</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model.trim</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
 <h4>3) 컴포넌트에서 v-model을 사용자 정의하는 방법</h4>
 <p>일반적인 컴포넌트에서 <code class="language-text">v-model</code> 지시자는 <strong>value</strong>를 <code class="language-text">props</code>로 사용하고 <strong>input</strong>을 이벤트로 사용하지만, </p>
 <p>체크 박스나 라디오 버튼같은 일부 입력 타입은 다른 목적으로 <code class="language-text">value</code> 속성을 사용할 수 있습니다. </p>
@@ -1019,7 +968,7 @@ methods: {
   `
 })</code></pre></div>
 <p>이 컴포넌트에서 <code class="language-text">v-model</code>은 다음과 같이 사용할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-checkbox v-model=&quot;selectFramework&quot;&gt;&lt;/custom-checkbox&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-checkbox v-model="selectFramework">&lt;/custom-checkbox></code></pre></div>
 <p><code class="language-text">selectFramework</code> 속성은 <code class="language-text">props</code> 중 <code class="language-text">checked</code>로 넘어갈 것이고, 체크 박스 컴포넌트에서 값이 변경되면 이벤트를 발생시킬 것입니다.</p>
 <h4>4) 사용자 정의의 input 컴포넌트에서 v-model을 사용하는 법</h4>
 <ul>
@@ -1027,17 +976,17 @@ methods: {
 <li><code class="language-text">input</code>의 <code class="language-text">value</code>를 props를 이용해 바인딩합니다.</li>
 <li>새로운 값이 입력되는 <code class="language-text">input</code> 이벤트 발생 시, 해당 값을 <code class="language-text">emit</code>하여 상위 컴포넌트로 이벤트를 전달합니다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Vue.component(&#39;custom-input&#39;, {
-  props: [&#39;value&#39;],
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Vue.component('custom-input', {
+  props: ['value'],
   template: `
     &lt;input
-      v-bind:value=&quot;value&quot;
-      v-on:input=&quot;$emit(&#39;input&#39;, $event.target.value)&quot;
-    &gt;
+      v-bind:value="value"
+      v-on:input="$emit('input', $event.target.value)"
+    >
   `
 })</code></pre></div>
 <p>이 경우 상위 컴포넌트에서 <code class="language-text">v-model</code>을 이용해 값을 바인딩할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-input v-model=&quot;searchInput&quot;&gt;&lt;/custom-input&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-input v-model="searchInput">&lt;/custom-input></code></pre></div>
 <h3></h3>
 <h3>컴포넌트(Component)</h3>
 <hr>
@@ -1066,9 +1015,9 @@ var vm = new Vue({ el: &#39;#app&#39; });</code></pre></div>
 <ul>
 <li>템플릿이 여러 개의 엘리먼트들로 구성되어 있을 때 컴포넌트의 최상단 템플릿은 반드시 단일 엘리먼트로 감싸져 있어야 함</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>todo-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>{{ title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-html</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre></div>
 <h4>2)하위 컴포넌트에서 상위 컴포넌트로 이벤트 전달</h4>
 <ul>
@@ -1089,27 +1038,27 @@ var vm = new Vue({ el: &#39;#app&#39; });</code></pre></div>
 <ul>
 <li>상위 컴포넌트에서는 <code class="language-text">v-on</code> 지시자를 이용해 하위 컴포넌트에서 명명한 이벤트와 값을 사용할 수 있음</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>todo in todos<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo in todos<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>todo-item</span>
-     <span class="token attr-name"><span class="token namespace">v-bind:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>todo.id<span class="token punctuation">"</span></span>
-     <span class="token attr-name"><span class="token namespace">v-bind:</span>todo</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>todo<span class="token punctuation">"</span></span>
-     <span class="token attr-name"><span class="token namespace">v-on:</span>increment-count</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>total += 1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+     <span class="token attr-name"><span class="token namespace">v-bind:</span>key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo.id<span class="token punctuation">"</span></span>
+     <span class="token attr-name"><span class="token namespace">v-bind:</span>todo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo<span class="token punctuation">"</span></span>
+     <span class="token attr-name"><span class="token namespace">v-on:</span>increment-count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>total += 1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>todo-item</span><span class="token punctuation">></span></span>
  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span> Total todos count is {{total}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre></div>
 <h3>slots</h3>
-<p>Vue에서는 <code class="language-text">&lt;slot&gt;</code>을 이용해 상위 컴포넌트에서 하위 컴포넌트 내부에 사용자 정의의 컨텐츠를 집어 넣을 수 있습니다. 하위 컴포넌트에 <code class="language-text">&lt;slot&gt;</code>을 이용해 문구를 동적으로 넣을 수 있는 컴포넌트를 만들어봅시다.</p>
+<p>Vue에서는 <code class="language-text">&lt;slot></code>을 이용해 상위 컴포넌트에서 하위 컴포넌트 내부에 사용자 정의의 컨텐츠를 집어 넣을 수 있습니다. 하위 컴포넌트에 <code class="language-text">&lt;slot></code>을 이용해 문구를 동적으로 넣을 수 있는 컴포넌트를 만들어봅시다.</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html">Vue.component('alert', {
   template: `
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>alert-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>Error!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   `
 })</code></pre></div>
-<p><code class="language-text">&lt;alert&gt;</code> 태그 안에 넣은 값은 컴포넌트 내부의 <code class="language-text">&lt;slot&gt;</code>의 컨텐츠로 들어가게 됩니다.</p>
+<p><code class="language-text">&lt;alert></code> 태그 안에 넣은 값은 컴포넌트 내부의 <code class="language-text">&lt;slot></code>의 컨텐츠로 들어가게 됩니다.</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alert</span><span class="token punctuation">></span></span>
   There is an issue with in application.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>alert</span><span class="token punctuation">></span></span></code></pre></div>
@@ -1130,7 +1079,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <ul>
 <li>사용(전역으로 등록한 컴포넌트들은 하위 컴포넌트에서도 사용이 가능)</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component-a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component-a</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component-b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component-b</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component-c</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component-c</span><span class="token punctuation">></span></span>
@@ -1148,7 +1097,7 @@ var ComponentC = { /* ... */ }</code></pre></div>
 
 var ComponentB = {
   components: {
-    &#39;component-a&#39;: ComponentA
+    'component-a': ComponentA
   },
   // ...
 }</code></pre></div>
@@ -1156,18 +1105,18 @@ var ComponentB = {
 <li>Vue 인스턴스에서 <code class="language-text">components</code> 속성에 사용할 컴포넌트들을 정의할 수 있습니다.</li>
 </ol>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">new Vue({
-  el: &#39;#app&#39;,
+  el: '#app',
   components: {
-    &#39;component-a&#39;: ComponentA,
-    &#39;component-b&#39;: ComponentB
+    'component-a': ComponentA,
+    'component-b': ComponentB
   }
 })</code></pre></div>
 <ol>
 <li>
 <h3>모듈 시스템에서 전역 등록과 지역 등록의 차이점은?</h3>
 <p><strong>지역 등록</strong>의 경우, 각 컴포넌트를 디렉토리에 생성하고 각각의 컴포넌트는 다른 컴포넌트 안에서 <code class="language-text">import</code> 하여 사용하는 것이 권장됩니다. 만약 여러분들이 컴포넌트 C에서 컴포넌트 A와 B를 사용하고 싶다면 아래와 같은 설정을 해야 합니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import ComponentA from &#39;./ComponentA&#39;
-import ComponentB from &#39;./ComponentC&#39;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import ComponentA from './ComponentA'
+import ComponentB from './ComponentC'
 
 export default {
  components: {
@@ -1177,21 +1126,21 @@ export default {
 }</code></pre></div>
 <p>위의 경우 컴포넌트 A와 컴포넌트 B는 컴포넌트 C의 템플릿에서 사용할 수 있습니다.</p>
 <p><strong>전역 등록</strong>의 경우, 공통적으로 사용되는 컴포넌트를 각각의 파일에서 <code class="language-text">export</code>해야합니다. 하지만 <code class="language-text">webpack</code>과 같은 유명한 번들러들은 <code class="language-text">require.context</code>라는 문법을 이용해서 컴포넌트를 쉽게 전역적으로 등록할 수 있게 해줍니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import Vue from &#39;vue&#39;
-import upperFirst from &#39;lodash/upperFirst&#39;
-import camelCase from &#39;lodash/camelCase&#39;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import Vue from 'vue'
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
 
 const requireComponent = require.context(
- &#39;./components&#39;,
+ './components',
  false,
  /Base[A-Z]\w+\.(vue|js)$/
 )
 
-requireComponent.keys().forEach(fileName =&gt; {
+requireComponent.keys().forEach(fileName => {
  const componentConfig = requireComponent(fileName)
  const componentName = upperFirst(
    camelCase(
-     fileName.replace(/^\.\/(.*)\.\w+$/, &#39;$1&#39;)
+     fileName.replace(/^\.\/(.*)\.\w+$/, '$1')
    )
  )
  Vue.component(
@@ -1215,7 +1164,7 @@ requireComponent.keys().forEach(fileName =&gt; {
 <ul>
 <li>하위 컴포넌트에서 props가 등록되고 나면, 상위 컴포넌트에서는 사용자 지정 속성을 이용해 값을 전달할 수 있음</li>
 </ul>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>todo-item</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learn Vue conceptsnfirst<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>todo-item</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>todo-item</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Learn Vue conceptsnfirst<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>todo-item</span><span class="token punctuation">></span></span></code></pre></div>
 <h4>2) Prop 타입의 종류</h4>
 <ul>
 <li><code class="language-text">props</code>에는 타입을 지정할 수도, 지정하지 않을 수도 있음</li>
@@ -1240,7 +1189,7 @@ requireComponent.keys().forEach(fileName =&gt; {
 <li>상위 컴포넌트의 <code class="language-text">props</code>는 하위 컴포넌트의 초기값 설정에만 사용되고 그 이후에는 로컬 데이터 속성으로 활용되는 경우:</li>
 </ol>
 <p>이 경우, 하위 컴포넌트에서 사용할 속성을 <code class="language-text">data</code>에 선언하고, 그 값을 <code class="language-text">props</code>로 초기화하면 됩니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">props: [&#39;defaultUser&#39;],
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">props: ['defaultUser'],
 data: function () {
   return {
     username: this.defaultUser
@@ -1250,7 +1199,7 @@ data: function () {
 <li>상위 컴포넌트에서 <code class="language-text">props</code>로 전해주는 값이 수정되는 경우</li>
 </ol>
 <p>이 경우, 하위 컴포넌트에서 <code class="language-text">computed</code> 속성을 이용해 <code class="language-text">props</code>의 값이 바뀔 때마다 신규 값을 얻을 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">props: [&#39;environment&#39;],
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">props: ['environment'],
 computed: {
   localEnvironment: function () {
     return this.environment.trim().toUpperCase()
@@ -1262,16 +1211,16 @@ computed: {
 <li>만약 <code class="language-text">data-tooltip</code> 속성을 요구하는 컴포넌트를 사용하고 있다고 가정해봅시다. </li>
 <li>이 속성을 컴포넌트 인스턴스에 다음과 같이 추가 할 수 있습니다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-input data-tooltip=&quot;Enter your input&quot; /&gt;</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;custom-input data-tooltip="Enter your input" /></code></pre></div>
 <ul>
 <li>상위 컴포넌트에서부터 <code class="language-text">props</code>가 아닌 속성을 넘겨주려 한다면, 하위 컴포넌트에서 같은 이름을 가진 속성은 덮어씌워집니다. </li>
 <li>하지만 <code class="language-text">class</code>나 <code class="language-text">style</code>같은 <code class="language-text">props</code>는 예외로, 이 값들은 하위 컴포넌트와 합쳐집니다.</li>
 </ul>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">//Parent component
-&lt;custom-input class=&quot;custom-class&quot; /&gt;
+&lt;custom-input class="custom-class" />
 
 //Child component
-&lt;input type=&quot;date&quot; class=&quot;date-control&quot;&gt;</code></pre></div>
+&lt;input type="date" class="date-control"></code></pre></div>
 <h4>5) props 검증</h4>
 <ul>
 <li>타입, 필수 여부, 디폴트 값 등 <code class="language-text">props</code>의 유효성 검증을 제공</li>
@@ -1380,7 +1329,7 @@ computed: {
 </ul>
 <h4>2) 사용법</h4>
 <ul>
-<li>템플릿에서 <code class="language-text">&lt;router-link&gt;</code>태그를 설정</li>
+<li>템플릿에서 <code class="language-text">&lt;router-link></code>태그를 설정</li>
 </ul>
 <div class="gatsby-highlight" data-language="vue"><pre class="language-vue"><code class="language-vue">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;
@@ -1454,7 +1403,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
   template<span class="token operator">:</span> <span class="token string">'&lt;div>User {{ $route.params.name }} &lt;/div>'</span><span class="token punctuation">,</span>
   watch<span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string">'$route'</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token string">'$route'</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> from<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
@@ -1463,7 +1412,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 </ol>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
   template<span class="token operator">:</span> <span class="token string">'&lt;div>User {{ $route.params.name }} &lt;/div>'</span><span class="token punctuation">,</span>
-  <span class="token function">beforeRouteUpdate</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">beforeRouteUpdate</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
 <h4>3) 라우트의 우선 순위</h4>
@@ -1566,6 +1515,6 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span> message <span class="token operator">|</span> <span class="token function">filterA</span><span class="token punctuation">(</span><span class="token string">'arg1'</span><span class="token punctuation">,</span> arg2<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li><code class="language-text">filterA</code>는 세 개의 인수를 받는 함수로 정의</li>
-<li><code class="language-text">message</code>의 값은 첫번째 인수로 전달될 것이며, 순수 문자열인 <code class="language-text">&#39;arg1&#39;</code>은 두번째 인수로 전달될 것이며, 자바스크립트 표현식인 <code class="language-text">arg2</code>는 표현식이 실행된 이후에 세번째 인수로 전달</li>
+<li><code class="language-text">message</code>의 값은 첫번째 인수로 전달될 것이며, 순수 문자열인 <code class="language-text">'arg1'</code>은 두번째 인수로 전달될 것이며, 자바스크립트 표현식인 <code class="language-text">arg2</code>는 표현식이 실행된 이후에 세번째 인수로 전달</li>
 </ul>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token number">2</span> <span class="token operator">|</span> <span class="token function">exponentialStrength</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> </code></pre></div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__VisibleTable-sc-1hokm1n-11 dKgnrq"></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="style__CommentDiv-f1ulxg-6 iRLYFX"></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-6a0445d51fe27801467d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-bfe5b4cf4329fd108113.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-590e679004f0571e6fd3.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-69eca40e6a5763e7938b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-markdown-tsx":["/component---src-templates-markdown-tsx-078aca313851f5448acd.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-5b8b2ed16c49dde8646c.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-5a943ecd679f46d62879.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-0a1b0d71c35a3e57e632.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-edbcd01f07097bf8c7bf.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-c3526d8cf6d48927e6c1.js"]};/*]]>*/</script><script src="/component---src-templates-post-tsx-0a1b0d71c35a3e57e632.js" async=""></script><script src="/74a43851c045d3a10e30a03c74bfbb730bafe566-e7162c7b5cd0bd4b75c2.js" async=""></script><script src="/3d55074564604cbead5a1774ce411d301e2105d7-cf637c2165dfcc02bd1a.js" async=""></script><script src="/707862b9ecc33c5335a4f7bd8150ac94bf62dd57-e3a3cd924dc47e0b249b.js" async=""></script><script src="/252f366e-1c12a0eaa48ff8868fa3.js" async=""></script><script src="/31664189-05f8af049756fc87b416.js" async=""></script><script src="/1a48c3c1-815e1b17a9be0f8f8cd2.js" async=""></script><script src="/1bfc9850-c5a69d782689db0ff35d.js" async=""></script><script src="/d7eeaac4-bfb69f86cbc2987413ed.js" async=""></script><script src="/fb7d5399-f19a7654ef6c4f56cd33.js" async=""></script><script src="/78e521c3-462857b96df26c268693.js" async=""></script><script src="/545f34e4-537d8b272c482937bf60.js" async=""></script><script src="/styles-ae6d046c35c187471a06.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-6a0445d51fe27801467d.js" async=""></script><script src="/webpack-runtime-e4b9ac1969a0f14f87a8.js" async=""></script><div class="toasts"></div></body></html>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token number">2</span> <span class="token operator">|</span> <span class="token function">exponentialStrength</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> </code></pre></div></div></div></div><div class="MuiGrid-root stickyvisible MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"><div class="styled__VisibleTable-sc-1hokm1n-11 dKgnrq"></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="style__CommentDiv-f1ulxg-6 iRLYFX"></div></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/프론트엔드 개발자 면접 질문(기술면접) 질문 정리 모음 - Vue(1)/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4cfd29633f93061ac90f.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-0d422017ad732d80a5ad.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-d3d6f2464ed6b3e9c547.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-c6c788f52c59ab64863b.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-2860345188e3cfe259c7.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-4876ea859092d3ef3743.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-45795784f23a0dc61923.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-9a1f8645bd3b19f22b4f.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-11ca8e0dfee3daf7ee24.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-678705be73863bc4dce1.js"]};/*]]>*/</script><script src="/component---src-templates-post-tsx-9a1f8645bd3b19f22b4f.js" async=""></script><script src="/74a43851c045d3a10e30a03c74bfbb730bafe566-49a30760942bc3435fc6.js" async=""></script><script src="/ea6c887a5edf90dbcced3b7d12c1c6761c8be28f-6eca689ba05f0d18a1f4.js" async=""></script><script src="/c66f20181120a6d7ea2a1e0e0a6c6c3606101129-b5766a33ea0811f8ffb3.js" async=""></script><script src="/252f366e-1c12a0eaa48ff8868fa3.js" async=""></script><script src="/31664189-05f8af049756fc87b416.js" async=""></script><script src="/1a48c3c1-815e1b17a9be0f8f8cd2.js" async=""></script><script src="/1bfc9850-c5a69d782689db0ff35d.js" async=""></script><script src="/d7eeaac4-a4b9f97cec7e8681bdfb.js" async=""></script><script src="/fb7d5399-1bedfd520d91ec5c091f.js" async=""></script><script src="/78e521c3-464c80c1d674145aa73b.js" async=""></script><script src="/545f34e4-d852f4cbef9f85ad0693.js" async=""></script><script src="/styles-2d4804b503525347efbe.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-4cfd29633f93061ac90f.js" async=""></script><script src="/webpack-runtime-b96958d8953a0dd41549.js" async=""></script></body></html>

@@ -158,7 +158,7 @@ const Layout = ({ children, location }: any) => (
               </App>
             </LayoutWrapper>
             {location.pathname === '/' && <Main />}
-            {location.pathname === '/' && <Three />}
+            {location.pathname === '/' && <Three categorySet={results} />}
           </OuterWrapper>
         </Provider>
       );
