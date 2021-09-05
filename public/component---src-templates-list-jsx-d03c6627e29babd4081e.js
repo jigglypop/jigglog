@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{VOFg:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),c=t.n(a),o=t("Ac47");e.default=function(n){return c.a.createElement(o.a,n)}}}]);
-//# sourceMappingURL=component---src-templates-list-jsx-d03c6627e29babd4081e.js.map

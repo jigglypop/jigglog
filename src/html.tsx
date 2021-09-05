@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import { NAME, TITLE, DESCRIPTION, AUTHOR, KEYWORDS } from '../src/constants';
-=======
-import { NAME, TITLE, DESCRIPTION, AUTHOR, KEYWORDS } from '~/constants';
->>>>>>> 32f9f06ee4f41ba0ee030974dc1737a6960e4a30
 
 const stylesStr = require('!raw-loader!./reset.css');
 
@@ -16,11 +12,7 @@ export default class HTML extends Component {
       preBodyComponents,
       body,
       postBodyComponents,
-<<<<<<< HEAD
     }: any = this.props;
-=======
-    } = this.props;
->>>>>>> 32f9f06ee4f41ba0ee030974dc1737a6960e4a30
 
     return (
       <html {...htmlAttributes} lang="ko">
