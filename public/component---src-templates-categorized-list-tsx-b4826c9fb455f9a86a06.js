@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{"4Cvf":function(t,n,e){"use strict";e.r(n);e("UsjJ");var r=e("q1tI"),a=e.n(r),c=e("Ac47"),o=e("1WaW");function i(){return(i=Object.assign||function(t){for(var n=1;n<arguments.length;n++){var e=arguments[n];for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&(t[r]=e[r])}return t}).apply(this,arguments)}n.default=function(t){return a.a.createElement(c.a,t,a.a.createElement(o.a,i({title:["CATEGORY","카테고리"]},t)))}}}]);
+//# sourceMappingURL=component---src-templates-categorized-list-tsx-b4826c9fb455f9a86a06.js.map

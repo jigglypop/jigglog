@@ -9,25 +9,26 @@ export interface IHeader {
     host: string;
   };
   categories: object[];
-  hasPortfolio: object;
+  hasPortfolio: any;
   categorySet: object;
 }
 
-const toggleHam = () => {
-  const SideBarEl = document.querySelector('.SideBarDiv');
-  const SideBarInnerEl = document.querySelector('.SideBarInnerDiv');
-  const HeaderDivEl = document.querySelector('.HeaderDiv');
-  if (SideBarEl && HeaderDivEl && SideBarInnerEl) {
-    SideBarInnerEl.classList.toggle('active');
-    HeaderDivEl.classList.toggle('active');
-    SideBarEl.classList.toggle('active');
-  }
-};
-
 const Header = ({ location }: IHeader) => {
-  const { pathname, host } = location;
+  const { pathname } = location;
   const isPortfolio = pathname.replace(/\/$/, '').startsWith('/portfolios');
   const isResume = pathname.replace(/\/$/, '') === '/resume';
+
+  const toggleHam = () => {
+    const SideBarEl = document.querySelector('.SideBarDiv');
+    const SideBarInnerEl = document.querySelector('.SideBarInnerDiv');
+    const HeaderDivEl = document.querySelector('.HeaderDiv');
+    if (SideBarEl && HeaderDivEl && SideBarInnerEl) {
+      SideBarInnerEl.classList.toggle('active');
+      HeaderDivEl.classList.toggle('active');
+      SideBarEl.classList.toggle('active');
+    }
+  };
+
   return (
     <div>
       <HeaderDiv className="HeaderDiv">

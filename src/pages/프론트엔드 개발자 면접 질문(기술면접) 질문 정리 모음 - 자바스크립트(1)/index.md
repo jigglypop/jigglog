@@ -102,12 +102,6 @@ for (const key in obj) {
 console.log(Object.getOwnPropertySymbols(obj));
 ```
 
-* 표준 빌트인 객체 확장
-
-```javascript
-
-```
-
 
 
 
@@ -251,6 +245,8 @@ objectB = null; // 레퍼런스 카운트 0
 - 이벤트 루프를 통해 동시성을 지원
 
 * 이벤트 루프는 콜 스택에서 실행 중인 게 있는지 확인하고, Event queue에 작업이 있는지 확인해서 콜스택이 비어있다면 이벤트큐 내의 작업이 콜스택으로 이동되어서 실행
+
+  
 
 
 #### 3) 동기(Synchronous) 동작 원리
