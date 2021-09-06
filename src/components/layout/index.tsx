@@ -1,14 +1,15 @@
 import React, { Children, cloneElement } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { POST, PORTFOLIO } from '../../constants';
-import App from '../../App';
-import { LayoutWrapper, OuterWrapper } from './styled';
-import Three from './Three';
-import Main from '../../components/Main/index';
+import { PORTFOLIO } from '../../constants';
+import * as S from './style';
 import { Provider } from 'react-redux';
 import { store } from '../../module';
+import Main from './Main';
+import Footer from '../Footer/Footer';
+import Header from '../Header';
+import ThreeOuter from '../Three/ThreeOuter';
 
-const Layout = ({ children, location }: any) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query GatsbyQuery {
@@ -41,7 +42,7 @@ const Layout = ({ children, location }: any) => (
         }: any) => type === PORTFOLIO,
       );
       const categories = edges.reduce(
-        (categories: any, { node }: any) => {
+        (categories, { node }) => {
           const { category } = node.frontmatter;
           if (category === null) {
             return categories;
@@ -49,7 +50,7 @@ const Layout = ({ children, location }: any) => (
 
           const [{ length: total }] = categories;
           const categoryIndex = categories.findIndex(
-            ({ key }: any) => key === category,
+            ({ key }) => key === category,
           );
 
           if (categoryIndex === -1) {
@@ -70,11 +71,11 @@ const Layout = ({ children, location }: any) => (
         [{ key: '__ALL__', length: 0 }],
       );
       // 카테고리셋
-      const categorySet: any = [];
-      edges.filter(({ node: { frontmatter: { type, category } } }: any) =>
+      const categorySet = [];
+      edges.filter(({ node: { frontmatter: { type, category } } }) =>
         type === null ? categorySet.push(category) : '',
       );
-      const result = categorySet.reduce((object: any, currentValue: any) => {
+      const result = categorySet.reduce((object, currentValue) => {
         if (!object[currentValue]) {
           object[currentValue] = { key: currentValue, length: 0 };
         }
@@ -85,17 +86,15 @@ const Layout = ({ children, location }: any) => (
       for (var i in result) {
         results.push(result[i]);
       }
-      // 포트폴리오셋
-      const portfolioSet = portfolios.map((item: any) => item.node.frontmatter);
 
       // 태그셋
-      const tagSet: any = [];
-      edges.filter(({ node: { frontmatter: { type, tags } } }: any) =>
+      const tagSet = [];
+      edges.filter(({ node: { frontmatter: { type, tags } } }) =>
         type === null
           ? Object.entries(tags).map(item => tagSet.push(item[1]))
           : '',
       );
-      const tagResult = tagSet.reduce((object: any, currentValue: any) => {
+      const tagResult = tagSet.reduce((object, currentValue) => {
         if (!object[currentValue]) {
           object[currentValue] = { key: currentValue, length: 0 };
         }
@@ -106,34 +105,6 @@ const Layout = ({ children, location }: any) => (
       for (var i in tagResult) {
         tagResults.push(tagResult[i]);
       }
-      const postInformations = edges.reduce(
-        (postInformations: any, { node: { frontmatter } }: any) => {
-          const {
-            type,
-            path,
-            title,
-            summary,
-            tags = [],
-            category,
-          } = frontmatter;
-
-          if (type === POST || type === null) {
-            return [
-              ...postInformations,
-              {
-                path,
-                title,
-                summary,
-                tags,
-                category,
-              },
-            ];
-          }
-
-          return postInformations;
-        },
-        [],
-      );
       const hasPortfolio = portfolios.length > 0;
       const childrenWithProps = Children.map(children, child =>
         cloneElement(child, { portfolios }),
@@ -141,25 +112,33 @@ const Layout = ({ children, location }: any) => (
 
       return (
         <Provider store={store}>
-          <OuterWrapper>
-            <LayoutWrapper
+          <S.OuterWrapper>
+            <S.GlobalFont />
+            <S.LayoutWrapper
               id="layoutwrapper"
               isMain={location.pathname === '/' ? true : false}
             >
-              <App
-                location={location}
-                categories={categories}
-                postInformations={postInformations}
-                hasPortfolio={hasPortfolio}
-                categorySet={results}
-                tagSet={tagResults}
-              >
-                {childrenWithProps}
-              </App>
-            </LayoutWrapper>
+              <S.Wrapper>
+                <nav>
+                  <Header
+                    location={location}
+                    categories={categories}
+                    hasPortfolio={hasPortfolio}
+                    categorySet={results}
+                  />
+                </nav>
+                <main>
+                  {childrenWithProps}
+                  <div className="toasts"></div>
+                </main>
+                <footer>
+                  <Footer />
+                </footer>
+              </S.Wrapper>
+            </S.LayoutWrapper>
             {location.pathname === '/' && <Main />}
-            {location.pathname === '/' && <Three categorySet={results} />}
-          </OuterWrapper>
+            {location.pathname === '/' && <ThreeOuter categorySet={results} />}
+          </S.OuterWrapper>
         </Provider>
       );
     }}
