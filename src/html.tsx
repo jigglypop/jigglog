@@ -46,6 +46,24 @@ export default class HTML extends Component {
             id="gatsby-inlined-css"
             dangerouslySetInnerHTML={{ __html: resetStr }}
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css"
+            rel="stylesheet"
+          />
+          <link
+            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+          />
         </head>
 
         <body {...bodyAttributes}>
