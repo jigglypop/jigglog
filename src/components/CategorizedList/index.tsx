@@ -4,18 +4,6 @@ import getPosts from '../../utils/getPosts';
 import { CONTENT_PER_PAGE } from '../../constants';
 import Pagination from '@material-ui/lab/Pagination';
 import { Link } from 'gatsby';
-import PostsWrapper from '../Common/PostsWrapper';
-import {
-  TagButton,
-  LargeWrapper,
-  ClipText,
-  ListWrapper,
-  ListImage,
-  ListTitle,
-  ListContent,
-  ListPage,
-  ListCategory,
-} from './styled';
 import * as S from './styled';
 import { usePageCount } from '../../customhooks/pagecount';
 import Card from './Card';
@@ -92,82 +80,80 @@ const CategorizedList = ({ title, data, location }: any) => {
         ? postAll.slice((page - 1) * CONTENT_PER_PAGE, page * CONTENT_PER_PAGE)
         : [];
     return (
-      <>
-        <PostsWrapper>
-          <Helmet>
-            <title>{decodeURI(category)}</title>
-            <meta name="og:title" content={decodeURI(category)} />
-          </Helmet>
-          <LargeWrapper>
-            <ListWrapper>
-              <ListImage>
-                <ClipText>
-                  <h1>{title[0]}</h1>
-                </ClipText>
-              </ListImage>
-              <ListTitle>
-                <h3 className="categorytagtitle">
-                  {title[1]}{' '}
-                  <span className="categoryname">#{decodeURI(category)}</span>
-                </h3>
-              </ListTitle>
-              <ListCategory>
-                <div>
-                  {results &&
-                    results.map(({ key, length }: any) => (
-                      <div style={{ display: 'inline-block' }} key={key}>
-                        <Link
-                          to={
-                            title[0] === 'CATEGORY'
-                              ? `/categories/${key}/1`
-                              : `/tags/${key}/1`
-                          }
-                        >
-                          <TagButton>
-                            <h4 className="tagname">#{key}</h4>
-                          </TagButton>
-                        </Link>
-                      </div>
-                    ))}
-                </div>
-              </ListCategory>
-              <ListContent>
-                {_postAll.map ? (
-                  _postAll.map((item: any) => (
-                    <Card
-                      key={item.path}
-                      path={item.path}
-                      images={item.images}
-                      tags={item.tags}
-                      title={item.title}
-                      date={item.date}
-                      summary={item.summary}
-                      count={item.count}
-                    />
-                  ))
-                ) : (
-                  <div></div>
-                )}
-              </ListContent>
-              <ListPage>
-                <S.Pagination>
-                  <Pagination
-                    count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-                    page={page}
-                    size="large"
-                    onChange={handleChange}
-                    style={{
-                      listStyle: 'none',
-                      color: 'primary',
-                      marginBottom: '100px',
-                    }}
+      <S.PostsWrapper>
+        <Helmet>
+          <title>{decodeURI(category)}</title>
+          <meta name="og:title" content={decodeURI(category)} />
+        </Helmet>
+        <S.LargeWrapper>
+          <S.ListWrapper>
+            <S.ListImage>
+              <S.ClipText>
+                <h1>{title[0]}</h1>
+              </S.ClipText>
+            </S.ListImage>
+            <S.ListTitle>
+              <h3 className="categorytagtitle">
+                {title[1]}{' '}
+                <span className="categoryname">#{decodeURI(category)}</span>
+              </h3>
+            </S.ListTitle>
+            <S.ListCategory>
+              <div>
+                {results &&
+                  results.map(({ key, length }: any) => (
+                    <div style={{ display: 'inline-block' }} key={key}>
+                      <Link
+                        to={
+                          title[0] === 'CATEGORY'
+                            ? `/categories/${key}/1`
+                            : `/tags/${key}/1`
+                        }
+                      >
+                        <S.TagButton>
+                          <h4 className="tagname">#{key}</h4>
+                        </S.TagButton>
+                      </Link>
+                    </div>
+                  ))}
+              </div>
+            </S.ListCategory>
+            <S.ListContent>
+              {_postAll.map ? (
+                _postAll.map((item: any) => (
+                  <Card
+                    key={item.path}
+                    path={item.path}
+                    images={item.images}
+                    tags={item.tags}
+                    title={item.title}
+                    date={item.date}
+                    summary={item.summary}
+                    count={item.count}
                   />
-                </S.Pagination>
-              </ListPage>
-            </ListWrapper>
-          </LargeWrapper>
-        </PostsWrapper>
-      </>
+                ))
+              ) : (
+                <div></div>
+              )}
+            </S.ListContent>
+            <S.ListPage>
+              <S.Pagination>
+                <Pagination
+                  count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+                  page={page}
+                  size="large"
+                  onChange={handleChange}
+                  style={{
+                    listStyle: 'none',
+                    color: 'primary',
+                    marginBottom: '100px',
+                  }}
+                />
+              </S.Pagination>
+            </S.ListPage>
+          </S.ListWrapper>
+        </S.LargeWrapper>
+      </S.PostsWrapper>
     );
   } else {
     return <></>;

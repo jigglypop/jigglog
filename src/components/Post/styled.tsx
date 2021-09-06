@@ -1,4 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const LinkButton = styled.button`
+  border-radius: 50%;
+  border: none;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  background-color: #141414;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid #4a00e0;
+  box-shadow: 0 0 5px gray;
+  .link-inner {
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    box-shadow: 0 0 20px gray;
+  }
+`;
 
 export const ButtonInline = styled.div``;
 
@@ -19,7 +38,7 @@ export const PostWrapper = styled.div`
   &:before,
   &:after {
     display: block;
-    content: "";
+    content: '';
     clear: both;
   }
 
@@ -150,7 +169,7 @@ export const CommentContent = styled.div`
 `;
 // 포스트 부분
 export interface IPostContent {
-  lines : string;
+  lines: string;
   answer: string;
   dels: string;
 }
@@ -161,7 +180,7 @@ export const PostContent = styled.div<IPostContent>`
   color: black;
   hr {
     height: 4px;
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
   }
   h1 {
@@ -213,7 +232,7 @@ export const PostContent = styled.div<IPostContent>`
     font-size: 18px;
   }
   em {
-    visibility: ${(props) => props.lines};
+    visibility: ${props => props.lines};
     line-height: 1.2em;
     font-weight: 1000;
     margin-top: 18px;
@@ -248,10 +267,10 @@ export const PostContent = styled.div<IPostContent>`
   }
   code {
     position: relative;
-    visibility: ${(props) => props.answer};
+    visibility: ${props => props.answer};
   }
   del {
-    visibility: ${(props) => props.dels};
+    visibility: ${props => props.dels};
     text-decoration: none;
     color: gray;
   }
@@ -325,27 +344,26 @@ export const Button = styled.button`
   width: 45px;
   height: 45px;
   margin: 10px;
-  background-color:#141414;
+  background-color: #141414;
   transition: all 0.2s ease-in-out;
   border: 2px solid white;
-  box-shadow : 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
   display: flex;
   justify-content: center;
   align-items: center;
-  &.color{
+  &.color {
     border: 2px solid #78ffd6;
     .link-inner {
       color: #78ffd6;
     }
   }
 
-  .link-inner{
+  .link-inner {
     transition: all 0.5s ease-in-out;
     color: white;
     width: 30px;
     height: 30px;
   }
-
 `;
 
 export const ImageWrapper = styled.div`
@@ -376,7 +394,6 @@ export const ImageWrapper = styled.div`
     padding: 5%;
     line-height: 2em;
 
-
     @keyframes blink {
       50% {
         opacity: 0.8;
@@ -387,17 +404,17 @@ export const ImageWrapper = styled.div`
     }
   }
   @media (max-width: 1200px) {
-    .jb-text{
+    .jb-text {
       font-size: 20px;
     }
   }
   @media (max-width: 900px) {
-    .jb-text{
+    .jb-text {
       font-size: 16px;
     }
   }
   @media (max-width: 600px) {
-    .jb-text{
+    .jb-text {
       font-size: 12px;
       width: 90vw;
     }
@@ -505,7 +522,7 @@ export const ComponentInPost = styled.div`
     color: #fff;
     background-color: #263238;
     font-weight: 100;
-    content: "Application for example";
+    content: 'Application for example';
   }
   &:after {
     display: inline-block;
@@ -516,7 +533,7 @@ export const ComponentInPost = styled.div`
     height: 10px;
     background-color: #ff5f56;
     border-radius: 50%;
-    content: "";
+    content: '';
   }
   & > *:first-child {
     &:before {
@@ -528,7 +545,7 @@ export const ComponentInPost = styled.div`
       height: 10px;
       background-color: #ffbd2e;
       border-radius: 50%;
-      content: "";
+      content: '';
     }
     &:after {
       display: inline-block;
@@ -539,11 +556,10 @@ export const ComponentInPost = styled.div`
       height: 10px;
       background-color: #27c93f;
       border-radius: 50%;
-      content: "";
+      content: '';
     }
   }
 `;
-
 
 export const TocItemDiv = styled.div`
   display: block;
@@ -560,9 +576,9 @@ export const TocItemDiv = styled.div`
     font-size: 12px;
     font-weight: 800;
   }
-  &.isintersect h4{
+  &.isintersect h4 {
     color: black;
     font-size: 14px;
     padding: 0.5em 0 0.5em;
   }
-`
+`;

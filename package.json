@@ -24,6 +24,7 @@
     "@react-three/postprocessing": "2.0.5",
     "@reduxjs/toolkit": "1.5.1",
     "@types/clipboard": "2.0.1",
+    "@types/react-copy-to-clipboard": "5.0.1",
     "@types/react-helmet": "6.1.0",
     "@types/react-icons": "3.0.0",
     "@types/redux": "3.6.0",
