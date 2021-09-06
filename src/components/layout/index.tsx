@@ -8,7 +8,6 @@ import Main from './Main';
 import Footer from '../Footer/Footer';
 import Header from '../Header';
 import ThreeOuter from '../Three/ThreeOuter';
-// import './style.css';
 
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -114,6 +113,7 @@ const Layout = ({ children, location }) => (
       return (
         <Provider store={store}>
           <S.OuterWrapper>
+            <S.GlobalFont />
             <S.LayoutWrapper
               id="layoutwrapper"
               isMain={location.pathname === '/' ? true : false}
