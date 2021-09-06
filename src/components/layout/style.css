@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'NanumBarunGothicSubset';
+  src: url('./fonts/NanumBarunGothicSubset.woff2') format('woff2');
+}
+body {
+  font-family: 'NanumBarunGothicSubset' !important;
+}
