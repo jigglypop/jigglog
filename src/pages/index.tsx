@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import { TITLE } from '../constants';
-import './style.css';
 
 const HomeLayout = props => (
   <Layout {...props}>

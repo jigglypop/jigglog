@@ -8,6 +8,7 @@ import Main from './Main';
 import Footer from '../Footer/Footer';
 import Header from '../Header';
 import ThreeOuter from '../Three/ThreeOuter';
+import './style.css';
 
 const Layout = ({ children, location }) => (
   <StaticQuery
