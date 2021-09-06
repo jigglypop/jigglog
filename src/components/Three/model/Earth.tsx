@@ -40,7 +40,9 @@ export const Earth = ({ setProgress }: IStoreOuter) => {
   };
   const mesh = useRef<THREE.Mesh>();
   useFrame(() => {
-    mesh.current.rotation.z += 0.01;
+    if (mesh.current) {
+      mesh.current.rotation.z += 0.01;
+    }
   });
 
   return (

@@ -25,7 +25,7 @@ export const useGltf = (url: string) => {
         setProgress(101);
       },
       xhr => {
-        setProgress((xhr.loaded / xhr.total) * 100);
+        setProgress(xhr.loaded / 100);
       },
       error => {
         setError(error);

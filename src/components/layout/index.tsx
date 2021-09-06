@@ -2,11 +2,11 @@ import React, { Children, cloneElement } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { POST, PORTFOLIO } from '../../constants';
 import App from '../../App';
-import { LayoutWrapper, OuterWrapper } from './styled';
-import Three from './Three';
+import * as S from './style';
 import Main from '../../components/Main/index';
 import { Provider } from 'react-redux';
 import { store } from '../../module';
+import ThreeOuter from '../Three/ThreeOuter';
 
 const Layout = ({ children, location }: any) => (
   <StaticQuery
@@ -141,8 +141,8 @@ const Layout = ({ children, location }: any) => (
 
       return (
         <Provider store={store}>
-          <OuterWrapper>
-            <LayoutWrapper
+          <S.OuterWrapper>
+            <S.LayoutWrapper
               id="layoutwrapper"
               isMain={location.pathname === '/' ? true : false}
             >
@@ -156,10 +156,14 @@ const Layout = ({ children, location }: any) => (
               >
                 {childrenWithProps}
               </App>
-            </LayoutWrapper>
-            {location.pathname === '/' && <Main />}
-            {location.pathname === '/' && <Three categorySet={results} />}
-          </OuterWrapper>
+            </S.LayoutWrapper>
+            {location.pathname === '/' && (
+              <>
+                <Main />
+                <ThreeOuter categorySet={results} />
+              </>
+            )}
+          </S.OuterWrapper>
         </Provider>
       );
     }}

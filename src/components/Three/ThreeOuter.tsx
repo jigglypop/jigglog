@@ -7,7 +7,7 @@ import { Earth } from './model/Earth';
 import { Star } from './model/Star';
 import CategoryStarSet from './model/CategoryStarSet';
 
-export default function Three({ categorySet }: any) {
+export default function ThreeOuter({ categorySet }: any) {
   const [progress, setProgress] = useState(0);
 
   return (
