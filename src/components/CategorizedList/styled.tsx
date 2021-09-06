@@ -122,3 +122,14 @@ export const ClipText = styled.div`
     mix-blend-mode: multiply;
   }
 `;
+
+export const Pagination = styled.div`
+  button {
+    color: white;
+
+    &.Mui-selected {
+      background: #66d9ef;
+      color: black;
+    }
+  }
+`;

@@ -16,6 +16,7 @@ import {
   ListPage,
   ListCategory,
 } from './styled';
+import * as S from './styled';
 import { usePageCount } from '../../customhooks/pagecount';
 import Card from './Card';
 
@@ -149,17 +150,19 @@ const CategorizedList = ({ title, data, location }: any) => {
                 )}
               </ListContent>
               <ListPage>
-                <Pagination
-                  count={Math.ceil(postCount / CONTENT_PER_PAGE)}
-                  page={page}
-                  size="large"
-                  onChange={handleChange}
-                  style={{
-                    listStyle: 'none',
-                    color: 'primary',
-                    marginBottom: '100px',
-                  }}
-                />
+                <S.Pagination>
+                  <Pagination
+                    count={Math.ceil(postCount / CONTENT_PER_PAGE)}
+                    page={page}
+                    size="large"
+                    onChange={handleChange}
+                    style={{
+                      listStyle: 'none',
+                      color: 'primary',
+                      marginBottom: '100px',
+                    }}
+                  />
+                </S.Pagination>
               </ListPage>
             </ListWrapper>
           </LargeWrapper>

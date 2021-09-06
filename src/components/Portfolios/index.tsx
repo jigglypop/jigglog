@@ -5,8 +5,7 @@ import { PREFIX } from '../../constants';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './styled.css';
 import { LogoItem, PortfoliosWrapper } from './styled';
-import { Content } from '../Main/styled';
-import { TitleBig } from './styled';
+import { TitleBig, Content } from './styled';
 import { Grid } from '@material-ui/core';
 
 export interface IPortfolios {

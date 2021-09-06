@@ -3,10 +3,11 @@ import { StaticQuery, graphql } from 'gatsby';
 import { POST, PORTFOLIO } from '../../constants';
 import App from '../../App';
 import * as S from './style';
-import Main from '../../components/Main/index';
 import { Provider } from 'react-redux';
 import { store } from '../../module';
 import ThreeOuter from '../Three/ThreeOuter';
+import Helmet from 'react-helmet';
+import { TITLE } from '../../constants';
 
 const Layout = ({ children, location }: any) => (
   <StaticQuery
@@ -85,9 +86,6 @@ const Layout = ({ children, location }: any) => (
       for (var i in result) {
         results.push(result[i]);
       }
-      // 포트폴리오셋
-      const portfolioSet = portfolios.map((item: any) => item.node.frontmatter);
-
       // 태그셋
       const tagSet: any = [];
       edges.filter(({ node: { frontmatter: { type, tags } } }: any) =>
@@ -159,7 +157,10 @@ const Layout = ({ children, location }: any) => (
             </S.LayoutWrapper>
             {location.pathname === '/' && (
               <>
-                <Main />
+                <Helmet>
+                  <title>{TITLE}</title>
+                  <meta name="og:title" content={TITLE} />
+                </Helmet>
                 <ThreeOuter categorySet={results} />
               </>
             )}
