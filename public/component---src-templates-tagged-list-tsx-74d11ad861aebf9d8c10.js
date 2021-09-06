@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{qx59:function(t,n,e){"use strict";e.r(n);e("UsjJ");var r=e("q1tI"),a=e.n(r),c=e("Ac47"),o=e("1WaW");function i(){return(i=Object.assign||function(t){for(var n=1;n<arguments.length;n++){var e=arguments[n];for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&(t[r]=e[r])}return t}).apply(this,arguments)}n.default=function(t){return a.a.createElement(c.a,t,a.a.createElement(o.a,i({title:["TAG","태그"]},t)))}}}]);
-//# sourceMappingURL=component---src-templates-tagged-list-tsx-74d11ad861aebf9d8c10.js.map

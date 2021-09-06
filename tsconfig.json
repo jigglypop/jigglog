@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
     "jsx": "preserve",
     "strict": true,
@@ -10,6 +10,5 @@
     "baseUrl": "./",
     "esModuleInterop": true
   },
-  "include": ["./server/*"],
   "exclude": ["**/*.test.*", "**/*.spec.*", "node_modules"]
 }
