@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PortfoliosWrapper = styled.div`
   .titlebig {
@@ -19,7 +19,7 @@ export const PortfoliosWrapper = styled.div`
     justify-content: center;
     margin-top: 35vw;
   }
-`;
+`
 
 export const Wrapper = styled.div`
   margin: auto;
@@ -34,7 +34,7 @@ export const Wrapper = styled.div`
   &:before,
   &:after {
     display: block;
-    content: '';
+    content: "";
     clear: both;
   }
 
@@ -72,38 +72,36 @@ export const TitleBig = styled.div`
   }
 `;
 
-export interface ILogoItem {
-  second: number;
-}
-
-export const LogoItem = styled.div<ILogoItem>`
-  color: white;
-  text-shadow: 2px 2px 20px white;
-  font-weight: 800;
-  font-size: 15px;
-  margin: 5px;
-  animation: blink ${props => props.second}s ease-in-out infinite alternate;
-  @media (max-width: 600px) {
-    font-size: 10px;
-  }
-
-  @keyframes blink {
-    30% {
-      opacity: 0.4;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-
 export const Content = styled.div`
   font-size: 20px;
   font-weight: 800;
   text-shadow: 4px 4px 40px white;
   @media (max-width: 600px) {
-    font-size: 13px;
-    font-weight: 800;
-    text-shadow: 4px 4px 40px white;
+    font-size: 15px;
   }
+`;
+
+export interface ILogoItem {
+  second : number
+}
+
+export const LogoItem = styled.div<ILogoItem>`
+    color: white;
+    text-shadow: 2px 2px 20px white;
+    font-weight: 800;
+    font-size: 15px;
+    margin: 5px;
+    animation: blink ${(props) => props.second}s ease-in-out infinite alternate;
+    @media (max-width: 600px) {
+    font-size: 10px;
+    }
+
+    @keyframes blink {
+    30% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
 `;

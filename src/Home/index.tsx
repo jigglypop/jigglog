@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { TITLE } from '../../constants';
+import { TITLE } from '../constants';
+import './styled.css';
 
-const Main = () => {
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -13,4 +14,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

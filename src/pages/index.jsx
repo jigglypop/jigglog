@@ -1,7 +1,7 @@
 import React from 'react';
+import Layout from '~/components/layout';
+import Home from '~/Home';
 import Helmet from 'react-helmet';
-import Layout from '../components/layout';
-import { TITLE } from '../constants';
 
 const HomeLayout = props => (
   <Layout {...props}>
@@ -15,9 +15,8 @@ const HomeLayout = props => (
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       ></script>
-      <title>{TITLE}</title>
-      <meta name="og:title" content={TITLE} />
     </Helmet>
+    <Home />
   </Layout>
 );
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NAME, TITLE, DESCRIPTION, AUTHOR, KEYWORDS } from '../src/constants';
 
-const resetStr = require('!raw-loader!./reset.css');
+const stylesStr = require('!raw-loader!./reset.css');
 
 export default class HTML extends Component {
   render() {
@@ -44,11 +44,7 @@ export default class HTML extends Component {
           <meta property="og:locale" content="ko_KR" />
           <style
             id="gatsby-inlined-css"
-            dangerouslySetInnerHTML={{ __html: resetStr }}
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
-            rel="stylesheet"
+            dangerouslySetInnerHTML={{ __html: stylesStr }}
           />
         </head>
 
