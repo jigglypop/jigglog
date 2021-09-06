@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Resume from '../components/Resume';
 
-const ResumeTemplate = (props: any) => (
+const ResumeTemplate = (props : any) => (
   <Layout {...props}>
     <Resume {...props} />
   </Layout>
@@ -12,7 +12,7 @@ const ResumeTemplate = (props: any) => (
 export default ResumeTemplate;
 
 export const pageQuery = graphql`
-  query ResumeQuery($path: String!) {
+  query ResumeQuery ($path: String!) {
     site {
       siteMetadata {
         title
@@ -20,7 +20,9 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    resume: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    resume: markdownRemark (
+      frontmatter: { path: { eq: $path } }
+    ) {
       id
       html
       frontmatter {

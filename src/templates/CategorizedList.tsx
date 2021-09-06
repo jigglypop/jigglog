@@ -5,7 +5,7 @@ import CategorizedList from '../components/CategorizedList';
 
 const CategorizedListTemplate = (props: any) => (
   <Layout {...props}>
-    <CategorizedList title={['CATEGORY', '카테고리']} {...props} />
+    <CategorizedList title={["CATEGORY", "카테고리"]} {...props} />
   </Layout>
 );
 
@@ -20,7 +20,7 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    posts: allMarkdownRemark(
+    posts: allMarkdownRemark (
       filter: { frontmatter: { hide: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
