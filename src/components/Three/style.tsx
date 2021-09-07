@@ -51,17 +51,18 @@ export const MainTitle = styled.div`
   position: absolute;
   justify-content: center;
   text-align: center;
-  background: rgba(22, 22, 22, 0.2);
+  background: rgba(22, 22, 22, 0.4);
 
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
   --webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 20;
+  box-shadow: 0 0 30px rgb(30, 30, 30);
 
   h1 {
     padding: 10px;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 800;
     color: white;
   }

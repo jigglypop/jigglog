@@ -17,7 +17,7 @@ export const Star = ({ setProgress }: IStoreOuter) => {
   return (
     <>
       <group>
-        <a.mesh scale={[0.13, 0.13, 0.13]} ref={mesh} receiveShadow castShadow>
+        <a.mesh scale={[0.2, 0.2, 0.2]} ref={mesh} receiveShadow castShadow>
           {model && <primitive object={model.scene} />}
         </a.mesh>
       </group>

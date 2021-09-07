@@ -6,6 +6,7 @@ import Progress from './Progress';
 import { Earth } from './model/Earth';
 import { Star } from './model/Star';
 import CategoryStarSet from './model/CategoryStarSet';
+import { Outer } from './model/Outer';
 
 export default function ThreeOuter({ categorySet }: any) {
   const [progress, setProgress] = useState(0);
@@ -34,8 +35,10 @@ export default function ThreeOuter({ categorySet }: any) {
         <OrbitControls minDistance={60} maxDistance={100} />
         <Earth setProgress={setProgress} />
         <Star setProgress={setProgress} />
+        <Outer setProgress={setProgress} />
+        <fog attach="fog" args={['#0a0a0a', 15, 120]} />
         <CategoryStarSet categorySet={categorySet} />
-        <directionalLight
+        {/* <directionalLight
           intensity={0.1}
           color={'#f1ffca'}
           position={[5, 40, 10]}
@@ -46,7 +49,7 @@ export default function ThreeOuter({ categorySet }: any) {
           color={'#12c2e9'}
           position={[-10, -10, -10]}
           castShadow
-        />
+        /> */}
       </Canvas>
     </S.ThreeWrapper>
   );
