@@ -46,10 +46,6 @@ export default class HTML extends Component {
             id="gatsby-inlined-css"
             dangerouslySetInnerHTML={{ __html: stylesStr }}
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
-            rel="stylesheet"
-          />
         </head>
 
         <body {...bodyAttributes}>
