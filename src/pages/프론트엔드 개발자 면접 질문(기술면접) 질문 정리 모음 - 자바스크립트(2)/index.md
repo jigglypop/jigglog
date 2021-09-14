@@ -581,11 +581,11 @@ _자바스크립트의 코드가 실행되기 위해 정보들을 담고 있는 
 
 
 
-#### 1) 전역 scope를 사용했을 때 장단점
+#### 1) 전역 scope
 
 - 모든 스크립트는 전역 스코프에 접근 가능
 
-- 만약 모든 사람이 변수 선언에 전역 네임스페이스를 사용한다면 충돌이 매우 많이 발생할 것
+- 만약 모든 사람이 변수 선언에 전역 네임스페이스를 사용한다면 충돌이 빈번
 
 - 모듈 패턴(IIFE 등)으로 직접 선언한 변수는 로컬 네임스페이스에 포함되도록 해야 함
 
@@ -628,7 +628,7 @@ console.log(Object.getOwnPropertyDescriptor(person, "name"));
 
 - 자바스크립트는 프로토타입을 기반으로 상속을 구현하여 불필요한 중복을 제거
 
-- 즉, 생성자 함수가 생성할 모든 인스턴스가 공통적으로 사용할 프로퍼티나 메소드를 프로토타입에 미리 구현해 놓음으로써 또 구현하는것이 아니라 상위(부모) 객체인 프로토타입의 자산을 공유하여 사용할 수 있음
+- 생성자 함수가 생성할 모든 인스턴스가 공통적으로 사용할 프로퍼티나 메소드를 프로토타입에 미리 구현해 놓음으로써 또 구현하는것이 아니라 상위(부모) 객체인 프로토타입의 자산을 공유하여 사용할 수 있음
 
 - \_\_proto\_\_접근자 프로퍼티로 자신의 프로토타입, 즉 [[Prototype]] 내부슬롯에 접근 할 수 있음.
 
@@ -717,8 +717,8 @@ console.log(Object.getOwnPropertyDescriptor(person, "name"));
 
 * DOM tree : 태그라고 불리는 HTML 문서의 구성 요소와 각 구성 요소간의 관계를 트리 구조로 나타낸 자료구조
 * Styles struct : 브라우저에 기본으로 설정된 스타일이나 스타일시트에 정의된 코드를 바탕으로 스타일 구조체를 형성한 것
-* 브라우저 엔진 : DOM tree와 styles struct를 결합하여 HTML 문서를 구성하는 요소간의 관계와 각각의 요소가 갖는 스타일에 대한 정보를 구성하고 이 정보에 동적으로 실행되는 script code를 결합하여 render tree 생성
-* 브라우저 엔진은 render tree가 생성되면 랜더링을 수행하여 브라우저에 HTML 문서를 출력
+* 브라우저 엔진이 DOM tree와 styles struct를 결합하여 HTML 문서를 구성하는 정보를 구성하고 동적으로 실행되는 script code를 결합하여 render tree 생성
+* 랜더링을 수행하여 브라우저에 HTML 문서를 출력
 
 
 
@@ -753,16 +753,26 @@ console.log(Object.getOwnPropertyDescriptor(person, "name"));
 
 #### 3) Reflow 가 발생 되는 경우
 
-- DOM el 추가, 제거 또는 변경
-- CSS 스타일 추가, 제거 또는 변경
-  - inline-style, class 변경이 일어남으로써 레이아웃이 변경 될 수 있음
-  - DOM el 길이를 변경하면 DOM트리에 있는 다른 노드에 영향을 줄 수 있음
-- CSS 애니메이션, 트렌지션 : 애니메이션의 모든 프레임에서 리플로우 발생
-- offsetWidth와 offsetHeight의 사용
-  - 해당 속성을 사용하면, 초기 reflow가 트리거되어 수치가 계산
-  - offset, computed, bounding 같은 속성 및 메소드들은 이미 렌더링 된 DOM기준으로 CSS속성을 `계산만`해서 내려주기 때문에 reflow + repaint가 아닌 순수 reflow만 발생
-- hover, 텍스트 입력, 창 크기 조절, 글꼴 크기 변경 등등
-- 활성화 되면 리플로우를 트리거 할 수 있음
+* Reflow가 일어나면 Repaint는 필연적으로 일어나야 하기 때문에 가능하다면  Repaint 만 발생하는 속성을 사용
+
+* Reflow가 일어나는 대표적인 속성
+
+| position     | width          | height      | left       | top         |
+| ------------ | -------------- | ----------- | ---------- | ----------- |
+| right        | bottom         | margin      | padding    | border      |
+| border-width | clear          | display     | float      | font-family |
+| font-size    | font-weight    | line-height | min-height | overflow    |
+| text-align   | vertical-align | white-space |            |             |
+
+* Repaint가 일어나는 대표적인 속성
+
+| background    | background-image | background-position | background-repeat | background-size |
+| ------------- | ---------------- | ------------------- | ----------------- | --------------- |
+| border-radius | border-style     | box-shadow          | color             | line-style      |
+| outline       | outline-color    | outline-style       | outline-width     | text-decoration |
+| visibility    | .                |                     |                   |                 |
+
+* 또한 Reflow Repaint가 일어나지 않는 transform, opacitiy와 같은 속성도 있으므로 left, right, width, height 보다 transform을, visibility/display 보다 opacitiy를 사용하는 것이 성능 개선에 도움이 됨
 
 
 

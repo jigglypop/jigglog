@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "jsx": "preserve",
+    "target": "es5",
+    "module": "commonjs",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "outDir": "./dist"
   },
+  "include": ["server/**/*"],
   "exclude": ["**/*.test.*", "**/*.spec.*", "node_modules"]
 }
