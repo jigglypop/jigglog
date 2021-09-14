@@ -1,8 +1,8 @@
 ---
-type: "resume"
-title: "Resume"
-date: "2000-01-01T00:00:00.000Z"
-path: "/resume/"
+type: 'resume'
+title: 'Resume'
+date: '2000-01-01T00:00:00.000Z'
+path: '/resume/'
 ---
 
 # 교육사항
@@ -11,8 +11,8 @@ path: "/resume/"
 
 - 소프트웨어 아카데미 2기 수료 (2019.07.01 ~ 2020.06.30)
 
-
 # 자격증
+
 ---
 
 - 정보처리기사
@@ -35,13 +35,13 @@ path: "/resume/"
 #### 개인 프로젝트
 
 ---
+
 - LANGUAGE TOGETHER ([링크](http://languagetogether.s3-website.ap-northeast-2.amazonaws.com/)) : 테드, 뉴스 등을 이용한 영어 공부 사이트
 - CAPTURE BLOG ([링크](https://floating-fortress-71700.herokuapp.com/)) : 마크다운 편집기능 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
 - MBTI WORLD ([링크](http://ec2-54-180-150-73.ap-northeast-2.compute.amazonaws.com/)) : NEXT.JS없는 서버사이드 프로젝트 / 회원가입과 댓글 기능, SSR로 SEO 최적화 기능이 있는 블로그
 - ANGULOG ([링크](http://angularblog.s3-website.ap-northeast-2.amazonaws.com/)) : 앵귤러 개인 블로그 사이트
 - DT CENTER ([링크](http://dtcenterwarehouse.s3-website.ap-northeast-2.amazonaws.com/)) : 물류 센터 3D 시뮬레이션 사이트
 - VUELOG ([링크](http://vuelog.s3-website.ap-northeast-2.amazonaws.com/)) : 뷰 개인 블로그 사이트
-
 
 # 스킬
 
@@ -72,8 +72,6 @@ path: "/resume/"
 
 - 개인 공부
 
-
-
 ### 프론트엔드
 
 ---
@@ -99,6 +97,7 @@ path: "/resume/"
 - CAPTURE BLOG 개인 프로젝트에 사용
 
 ### 백엔드
+
 ---
 
 ##### Django
@@ -122,15 +121,13 @@ path: "/resume/"
 
 - CAPTURE BLOG 개인 프로젝트에 사용
 
-
-
 ### 딥러닝
 
 ---
 
 ##### Tensorflow/Keras
 
-- 소프트웨어 아카데미 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기 
+- 소프트웨어 아카데미 특화 프로젝트 style transfer 로 화풍 묘사 인공지능 만들기
 
 ### 데이터베이스
 
