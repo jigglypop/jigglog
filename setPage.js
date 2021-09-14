@@ -94,16 +94,4 @@ exports.setCategoryPage = (
       });
     });
   });
-  // // 마크다운
-  // edges.forEach(item => {
-  //   if (item.node.frontmatter.type === null) {
-  //     createPage({
-  //       path: 'markdown' + item.node.frontmatter.path,
-  //       component: markdown,
-  //       context: {
-  //         match: item.node.frontmatter.path,
-  //       },
-  //     });
-  //   }
-  // });
 };

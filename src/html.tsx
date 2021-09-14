@@ -42,6 +42,11 @@ export default class HTML extends Component {
           <meta property="og:type" content="website" />
           <meta property="og:description" content={DESCRIPTION} />
           <meta property="og:locale" content="ko_KR" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+            rel="stylesheet"
+          />
+
           <style
             id="gatsby-inlined-css"
             dangerouslySetInnerHTML={{ __html: stylesStr }}

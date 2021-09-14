@@ -1,60 +1,67 @@
-import 'regenerator-runtime/runtime'
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import 'regenerator-runtime/runtime';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import createExtraReducer from '../lib/createExtraReducers';
 import { readPostCommentApi } from '../api/comment';
 
-export const readPostComment = createAsyncThunk('postcomments', readPostCommentApi)
-const readpostcommentExtra = createExtraReducer(readPostComment)
+export const readPostComment = createAsyncThunk(
+  'postcomments',
+  readPostCommentApi,
+);
+const readpostcommentExtra = createExtraReducer(readPostComment);
 
-export interface IComment extends Document{
+export interface IComment extends Document {
   id: string;
   name: string;
   password: string;
-  content : string;
+  content: string;
   created: Date;
   recomments: IReComment[];
 }
 
-export interface IReComment extends Document{
+export interface IReComment extends Document {
   id: string;
   name: string;
   password: string;
-  content : string;
+  content: string;
   created: Date;
 }
 
 interface ICommentState {
-  comments: IComment[] | null
+  comments: IComment[] | null;
   openId: string;
-  data: { comments: IComment[] } | null
-  error : string | null
-  loading : boolean
+  data: { comments: IComment[] } | null;
+  error: string | null;
+  loading: boolean;
 }
 
-const initialState : ICommentState = {
+const initialState: ICommentState = {
   comments: null,
   openId: '',
   data: null,
   error: null,
   loading: false,
-}
+};
 
 const postcommentsSlice = createSlice({
   name: 'postcomments',
   initialState,
-  reducers:{
-    postComments: (state, { payload : comments }) =>{
-      state.comments = comments
+  reducers: {
+    postComments: (state, { payload: comments }) => {
+      state.comments = comments;
     },
-    cleanPostComments: (state) => {
-      state.data = null
+    cleanPostComments: state => {
+      state.data = null;
     },
-    setOpenId: (state, { payload : openId }) => {
-      state.openId = openId
+    setOpenId: (state, { payload: openId }) => {
+      state.openId = openId;
     },
   },
-  extraReducers: readpostcommentExtra
-})
+  extraReducers: readpostcommentExtra,
+});
 
-export const { postComments, cleanPostComments, setOpenId } = postcommentsSlice.actions
+export const {
+  postComments,
+  cleanPostComments,
+  setOpenId,
+} = postcommentsSlice.actions;
 export default postcommentsSlice.reducer;

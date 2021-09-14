@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="ko"><head><style data-href="/styles.2aaac7fbd3473e9c9f01.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:NanumBarunGothicSubset;src:local("NanumBarunGothicSubset"),url(/static/NanumBarunGothicSubset-52c895afbd91cc92aa04a6f791219e85.woff2) format("woff2")}body{font-family:NanumBarunGothicSubset!important;width:100vw;overflow-x:hidden}#___gatsby{width:100vw;height:100vh}::-webkit-scrollbar{width:16px;background-color:#141414}::-webkit-scrollbar-thumb{background-image:linear-gradient(45deg,#8e2de2,#4a00e0);border-radius:10px;background-clip:padding-box;border:3px solid rgba(0,0,0,0)}::-webkit-scrollbar-track{background-color:rgba(0,0,0,0)}::-webkit-scrollbar-corner{background-color:#141414}.language-text,:not(pre)>code[class*=language-],pre[class*=language-]{@media (max-width:600px){margin-top:-100px;font-size:10px}}body{background:-webkit-gradient(linear,left top,right top,from(#8e2de2),to(#4a00e0));background:linear-gradient(90deg,#8e2de2,#4a00e0);height:100vh;color:#fff}ol,ul{list-style:unset!important;margin:0;padding:0}.gatsby-highlight pre[class*=language-]{min-width:100%;font-family:NanumBarunGothic!important;padding:30px}code[class*=language-],pre[class*=language-]{color:#fff}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#373b44;padding:7px;@media (max-width:600px){margin-top:-100px;font-size:10px}}.language-text{margin:5px;@media (max-width:600px){margin-top:-100px;font-size:10px}}code.language-text{background:linear-gradient(45deg,#00c9ff,#92fe9d);font-family:NanumBarunGothic!important;color:#292929;font-weight:400}</style><meta name="generator" content="Gatsby 2.22.9"/><style data-styled="" data-styled-version="5.1.0"></style><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.1.0">@media (max-width:414px){.cvcDMt[href='/']{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:60px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g6[id="styled__StyledLink-sc-8u1x3g-3"]{content:"cvcDMt,"}/*!sc*/
+.cILVHy{font-size:13px;font-weight:800;margin:0 0.25rem;text-shadow:2px 2px 2px #141414;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}/*!sc*/
+.cILVHy:hover{color:rgba(0,207,255);}/*!sc*/
+@media (max-width:600px){.cILVHy{font-size:12px;}.cILVHy.menuvisible{visibility:hidden;}}/*!sc*/
+data-styled.g7[id="styled__MenuTitle-sc-8u1x3g-4"]{content:"cILVHy,"}/*!sc*/
+.eoDCLg{grid-row:1/2;grid-column:1/3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;position:fixed;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;top:0;height:50px;width:100%;font-size:14px;font-weight:600;z-index:2;background:rgba(0,0,0,0.9);-webkit-backdrop-filter:brightness(1.1) blur(50px);-webkit-backdrop-filter:brightness(1.1) blur(50px);backdrop-filter:brightness(1.1) blur(50px);}/*!sc*/
+.eoDCLg .test{padding:2px;border:2px solid white;}/*!sc*/
+.eoDCLg.active{padding-left:200px;}/*!sc*/
+.eoDCLg .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.eoDCLg .ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style-type:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-weight:600;margin:0 0.5rem;}/*!sc*/
+.eoDCLg .logo{font-size:15px;font-weight:800;}/*!sc*/
+.eoDCLg .li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:12px;font-weight:800;margin:5px;}/*!sc*/
+.eoDCLg .be-person{color:white;}/*!sc*/
+.eoDCLg .logout{cursor:pointer;}/*!sc*/
+.eoDCLg .hamberger{cursor:pointer;font-size:20px;}/*!sc*/
+.eoDCLg .hamberger:hover{color:rgba(0,207,255);}/*!sc*/
+.eoDCLg .RiMoonClearLine{width:30px;height:30px;}/*!sc*/
+.eoDCLg .RiMoonClearLine:hover{color:rgba(0,207,255);}/*!sc*/
+data-styled.g8[id="styled__HeaderDiv-sc-8u1x3g-5"]{content:"eoDCLg,"}/*!sc*/
+.bRGrce{grid-row:1/3;grid-column:1/3;background:linear-gradient( 20deg,rgba(172,0,255,0.8) 46%,rgba(0,207,255,0.8) 100% );visibility:hidden;position:fixed;width:0;height:100%;padding:10px;z-index:3;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.bRGrce.active{visibility:visible;width:200px;}/*!sc*/
+data-styled.g9[id="styled__SideBarDiv-sc-8u1x3g-6"]{content:"bRGrce,"}/*!sc*/
+.czPAtN{position:relative;background-color:#141414;height:100%;display:grid;grid-template-rows:100px 1fr;visibility:hidden;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transition-delay:-0.2s;transition-delay:-0.2s;z-index:2;}/*!sc*/
+.czPAtN.active{-webkit-transition-delay:0.2s;transition-delay:0.2s;visibility:visible;}/*!sc*/
+data-styled.g10[id="styled__SideBarInnerDiv-sc-8u1x3g-7"]{content:"czPAtN,"}/*!sc*/
+.eVJdij{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;grid-row:1/2;z-index:3;margin-top:3rem;}/*!sc*/
+.eVJdij h1{font-size:13px;font-weight:600;margin:10px;text-shadow:2px 2px 2px gray;}/*!sc*/
+.eVJdij hr{border:none;background-color:rgba(255,255,255,0.5);width:60%;height:2px;}/*!sc*/
+data-styled.g11[id="styled__SideBarTopDiv-sc-8u1x3g-8"]{content:"eVJdij,"}/*!sc*/
+.gxwMTf{grid-row:2/3;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin:10px;background-color:#141414;}/*!sc*/
+.gxwMTf .categorytitle{color:rgba(0,207,255);font-size:16px;font-weight:800;margin:10px;padding:10px;text-shadow:0 0 10px rgba(0,207,255);border:2px solid rgba(0,207,255);}/*!sc*/
+data-styled.g13[id="styled__SideBarListDiv-sc-8u1x3g-10"]{content:"gxwMTf,"}/*!sc*/
+.YGDjT{position:relative;width:100%;height:30px;color:red;font-size:12px;font-weight:800;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+.YGDjT .smallinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;}/*!sc*/
+@media (max-width:600px){.YGDjT{font-size:10px;}}/*!sc*/
+.YGDjT:hover a{color:rgba(0,207,255);}/*!sc*/
+data-styled.g14[id="styled__SmallItem-sc-8u1x3g-11"]{content:"YGDjT,"}/*!sc*/
+.iMfA-DO{cursor:pointer;}/*!sc*/
+.iMfA-DO .box{display:inline-block;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.iMfA-DO img{width:60px;height:60px;border:4px solid transparent;border-radius:50%;object-fit:cover;box-shadow:3px 3px 3px black;}/*!sc*/
+.iMfA-DO .admin{background:linear-gradient(45deg,#000000,#000000) padding-box,linear-gradient(45deg,#00b09b,#96c93d) border-box;}/*!sc*/
+data-styled.g17[id="style__BorderDiv-fw5yvl-0"]{content:"iMfA-DO,"}/*!sc*/
+.dmGmmo{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;bottom:0;height:40px;width:100%;font-size:10px;font-weight:600;z-index:2;background:rgba(0,0,0,0.9);-webkit-backdrop-filter:brightness(1.1) blur(50px);-webkit-backdrop-filter:brightness(1.1) blur(50px);backdrop-filter:brightness(1.1) blur(50px);}/*!sc*/
+.dmGmmo .text{font-size:10px;font-weight:800;}/*!sc*/
+data-styled.g18[id="styled__FooterDiv-sc-1a50tl6-0"]{content:"dmGmmo,"}/*!sc*/
+.hpPYFw{background:linear-gradient(90deg,#8e2de2,#4a00e0);}/*!sc*/
+data-styled.g19[id="styled__Wrapper-sc-10t2n1r-0"]{content:"hpPYFw,"}/*!sc*/
+.kbRaUS{background:linear-gradient(90deg,#8e2de2,#4a00e0);position:absolute;background:transparent;width:100%;height:100vh;}/*!sc*/
+data-styled.g21[id="style__LayoutWrapper-sc-11e98y0-1"]{content:"kbRaUS,"}/*!sc*/
+.TGshU{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g22[id="style__OuterWrapper-sc-11e98y0-2"]{content:"TGshU,"}/*!sc*/
+.bHJkJe{border:none;border:10px;width:60px;height:40px;margin:5px;-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;box-shadow:0 0 5px gray;}/*!sc*/
+.bHJkJe a h2{font-family:'Do Hyeon',sans-serif;font-size:20px;color:black;font-weight:800;}/*!sc*/
+.bHJkJe .link-inner{width:30px;height:30px;}/*!sc*/
+data-styled.g68[id="style__LinkButton-sc-1gsv7t9-0"]{content:"bHJkJe,"}/*!sc*/
+.dEYuDC{background:#1d1d1d;position:fixed;padding:100px;width:100vw;height:100vh;overflow-y:scroll;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;}/*!sc*/
+.dEYuDC .title{font-family:'Do Hyeon',sans-serif;font-size:80px;margin:20px;font-weight:800;}/*!sc*/
+.dEYuDC .titles .titles-item{line-height:2rem;font-size:18px;font-weight:600;}/*!sc*/
+data-styled.g70[id="style__MarkDownWrapper-sc-1gsv7t9-2"]{content:"dEYuDC,"}/*!sc*/
+.jAJfjF{padding:0 20px 20px 20px;line-height:2em;color:black;background:white;}/*!sc*/
+.jAJfjF hr{height:4px;background-color:rgba(0,0,0,0.1);border:none;}/*!sc*/
+.jAJfjF h1{margin-top:3em;font-size:32px;font-weight:800;}/*!sc*/
+.jAJfjF h2{margin-top:2em;font-size:28px;font-weight:800;}/*!sc*/
+.jAJfjF h3{margin-top:1em;font-size:24px;font-weight:800;}/*!sc*/
+.jAJfjF h4{margin-top:1em;font-size:21px;font-weight:800;}/*!sc*/
+.jAJfjF h5{margin-top:1em;font-size:19px;font-weight:800;}/*!sc*/
+.jAJfjF p{margin-top:10px;line-height:2em;font-size:20px;font-weight:100;}/*!sc*/
+.jAJfjF strong{margin-top:100px;font-size:22px;font-weight:800;}/*!sc*/
+.jAJfjF li{margin-top:10px;margin-left:30px;font-size:20px;font-weight:100;}/*!sc*/
+.jAJfjF blockquote{line-height:1.2em;color:#aaa;margin-top:18px;font-size:18px;}/*!sc*/
+.jAJfjF pre,.jAJfjF span{margin-top:10px;font-size:16px;}/*!sc*/
+.jAJfjF table{min-width:45vw;margin:20px;background:#f9f9f9;}/*!sc*/
+.jAJfjF thead{background:#e2e2e2;font-weight:800;}/*!sc*/
+.jAJfjF th,.jAJfjF tr,.jAJfjF td{border:2px solid gray;color:black;padding:10px;font-size:14px;min-width:3rem;}/*!sc*/
+.jAJfjF hr{margin-bottom:30px;}/*!sc*/
+@media (max-width:1000px){.jAJfjF{padding:0 10px 10px 10px;line-height:2em;color:black;}.jAJfjF hr{margin-bottom:10px;}.jAJfjF h1{margin-bottom:2px;font-size:18px;}.jAJfjF h2{font-size:16px;}.jAJfjF h3{font-size:14px;}.jAJfjF h4{font-size:12px;}.jAJfjF h5{font-size:10px;}.jAJfjF p,.jAJfjF blockquote,.jAJfjF pre{margin-top:5px;font-size:12px;}.jAJfjF li{line-height:2.5em;margin-top:5px;font-size:10px;margin-left:10px;}.jAJfjF table{margin:20px;}.jAJfjF th,.jAJfjF tr,.jAJfjF td,.jAJfjF span,.jAJfjF em{font-size:10px;}.jAJfjF strong{font-size:14px;}}/*!sc*/
+.jAJfjF em{visibility:visible;line-height:1.2em;font-weight:1000;margin-top:18px;font-size:20px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.jAJfjF code{position:relative;visibility:visible;}/*!sc*/
+.jAJfjF del{visibility:visible;-webkit-text-decoration:none;text-decoration:none;color:gray;}/*!sc*/
+data-styled.g71[id="style__MarkDownPostContent-sc-1gsv7t9-3"]{content:"jAJfjF,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 748px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1004px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><title data-react-helmet="true"></title><link as="script" rel="preload" href="/webpack-runtime-f4043a93f50ce32420b6.js"/><link as="script" rel="preload" href="/app-300f46fb4cb5f2eba0e3.js"/><link as="script" rel="preload" href="/framework-76ee7f71c4912cb22834.js"/><link as="script" rel="preload" href="/styles-ae6d046c35c187471a06.js"/><link as="script" rel="preload" href="/545f34e4-d852f4cbef9f85ad0693.js"/><link as="script" rel="preload" href="/78e521c3-464c80c1d674145aa73b.js"/><link as="script" rel="preload" href="/fb7d5399-1bedfd520d91ec5c091f.js"/><link as="script" rel="preload" href="/commons-74d5b7e80278d4e6447a.js"/><link as="script" rel="preload" href="/9158e4ef3ac4d879684d2a8bad67731cb31eea7e-fcdab2ecd272517f5855.js"/><link as="script" rel="preload" href="/component---src-templates-mark-down-tsx-6c6ddd4e5afe324b5aaf.js"/><link as="fetch" rel="preload" href="/page-data\markdown\우아한 테크 캠프 4기 - 바닐라로 함수형 리액트 만들기 (1) - useState, useEffect 만들기\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/><meta name="google-site-verification" content="iJNm9P7wYJjzTUuWrwBW8Hgl1I7JevIZjuUyGFAshLg"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="Access-Control-Allow-Origin" content="*"/><meta http-equiv="Access-Control-Allow-Headers" content="*"/><meta http-equiv="Access-Control-Expose-Headers" content="*"/><meta http-equiv="Access-Control-Allow-Credentials" content="true"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/><meta name="description" content="새로운 개발을 좋아하는 개발자"/><meta name="keywords" content="Gatsby, ReactJS"/><meta name="author" content="JIGGLYPOP"/><meta property="og:title" content="jigglog"/><meta property="og:site_name" content="jigglog"/><meta property="og:type" content="website"/><meta property="og:description" content="새로운 개발을 좋아하는 개발자"/><meta property="og:locale" content="ko_KR"/><link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&amp;display=swap" rel="stylesheet"/><style id="gatsby-inlined-css">html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: white;
+  text-decoration: blink;
+}
+img {
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a,
+label {
+  cursor: pointer;
+}
+*[disabled] {
+  cursor: not-allowed;
+}
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="style__OuterWrapper-sc-11e98y0-2 TGshU"><div id="layoutwrapper" class="style__LayoutWrapper-sc-11e98y0-1 kbRaUS"><div class="styled__Wrapper-sc-10t2n1r-0 hpPYFw"><nav><div><nav class="styled__HeaderDiv-sc-8u1x3g-5 eoDCLg HeaderDiv"><div class="container"><div class="ul"><div class="li"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="hamberger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg></div><div class="li"><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="RiMoonClearLine" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M10 6a8 8 0 0 0 11.955 6.956C21.474 18.03 17.2 22 12 22 6.477 22 2 17.523 2 12c0-5.2 3.97-9.474 9.044-9.955A7.963 7.963 0 0 0 10 6zm-6 6a8 8 0 0 0 8 8 8.006 8.006 0 0 0 6.957-4.045c-.316.03-.636.045-.957.045-5.523 0-10-4.477-10-10 0-.321.015-.64.045-.957A8.006 8.006 0 0 0 4 12zm14.164-9.709L19 2.5v1l-.836.209a2 2 0 0 0-1.455 1.455L16.5 6h-1l-.209-.836a2 2 0 0 0-1.455-1.455L13 3.5v-1l.836-.209A2 2 0 0 0 15.29.836L15.5 0h1l.209.836a2 2 0 0 0 1.455 1.455zm5 5L24 7.5v1l-.836.209a2 2 0 0 0-1.455 1.455L21.5 11h-1l-.209-.836a2 2 0 0 0-1.455-1.455L18 8.5v-1l.836-.209a2 2 0 0 0 1.455-1.455L20.5 5h1l.209.836a2 2 0 0 0 1.455 1.455z"></path></g></svg></a><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">JIGGLOG</div></a></div></div><div class="ul"><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/portfolios"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">포트폴리오</div></a></h4></div><div class="li"><h4><a class="styled__StyledLink-sc-8u1x3g-3 cvcDMt" href="/resume"><div class="styled__MenuTitle-sc-8u1x3g-4 cILVHy menuvisible">이력서</div></a></h4></div></div></div></nav></div><div class="styled__SideBarDiv-sc-8u1x3g-6 bRGrce SideBarDiv"><div class="styled__SideBarInnerDiv-sc-8u1x3g-7 czPAtN SideBarInnerDiv"><div class="styled__SideBarTopDiv-sc-8u1x3g-8 eVJdij"><div><a href="/resume"><div width="60px" height="60px" class="style__BorderDiv-fw5yvl-0 iMfA-DO"><div class="box"><img src="/jigglypop.gif" class="admin" alt="box"/></div></div></a></div></div><div class="styled__SideBarListDiv-sc-8u1x3g-10 gxwMTf"><h6 class="categorytitle">카테고리 목록</h6><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기/1">정보처리기사 실기<small>(5)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 필기/1">정보처리기사 필기<small>(15)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/정보처리기사 실기 요약/1">정보처리기사 실기 요약<small>(14)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/react/1">react<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/redux-toolkit/1">redux-toolkit<small>(2)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/기술 면접/1">기술 면접<small>(11)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/threejs/1">threejs<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 테크 캠프 4기/1">우아한 테크 캠프 4기<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/우아한 리액트/1">우아한 리액트<small>(1)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/자바스크립트/1">자바스크립트<small>(6)</small></a></div><div class="styled__SmallItem-sc-8u1x3g-11 YGDjT"><a class="smallinner" href="/categories/프로그래머스 데브매칭/1">프로그래머스 데브매칭<small>(3)</small></a></div></div></div></div></nav><main><div class="style__MarkDownWrapper-sc-1gsv7t9-2 dEYuDC"><div><h1 class="title">글 수정</h1><button class="style__LinkButton-sc-1gsv7t9-0 bHJkJe"><a href="/markdowns"><h2>목록</h2></a></button></div><div class="styled__PostContentOrigin-sc-1hokm1n-4 style__MarkDownPostContent-sc-1gsv7t9-3 jAJfjF"></div></div><div class="toasts"></div></main><footer><nav class="styled__FooterDiv-sc-1a50tl6-0 dmGmmo"><h6 class="text">© 2021 JIGGLOG  |  MADE BY JIGGLYPOP</h6></nav></footer></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/markdown/우아한 테크 캠프 4기 - 바닐라로 함수형 리액트 만들기 (1) - useState, useEffect 만들기/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-300f46fb4cb5f2eba0e3.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-1eb8e79842cf1daaff4f.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-1b5ba0a07cd15f2ed405.js"],"component---src-templates-categorized-list-tsx":["/component---src-templates-categorized-list-tsx-1570795f9ba3caf7fa99.js"],"component---src-templates-mark-down-tsx":["/component---src-templates-mark-down-tsx-6c6ddd4e5afe324b5aaf.js"],"component---src-templates-markdowns-tsx":["/component---src-templates-markdowns-tsx-014ac57cdfd126ce5929.js"],"component---src-templates-portfolio-tsx":["/component---src-templates-portfolio-tsx-775beb02ba1b04550328.js"],"component---src-templates-portfolios-tsx":["/component---src-templates-portfolios-tsx-a59650130f6ffcf858fc.js"],"component---src-templates-post-tsx":["/component---src-templates-post-tsx-0d07ed2eac713c6efb61.js"],"component---src-templates-resume-tsx":["/component---src-templates-resume-tsx-ff74bc4bd315e1e15cba.js"],"component---src-templates-tagged-list-tsx":["/component---src-templates-tagged-list-tsx-c3526d8cf6d48927e6c1.js"]};/*]]>*/</script><script src="/component---src-templates-mark-down-tsx-6c6ddd4e5afe324b5aaf.js" async=""></script><script src="/9158e4ef3ac4d879684d2a8bad67731cb31eea7e-fcdab2ecd272517f5855.js" async=""></script><script src="/commons-74d5b7e80278d4e6447a.js" async=""></script><script src="/fb7d5399-1bedfd520d91ec5c091f.js" async=""></script><script src="/78e521c3-464c80c1d674145aa73b.js" async=""></script><script src="/545f34e4-d852f4cbef9f85ad0693.js" async=""></script><script src="/styles-ae6d046c35c187471a06.js" async=""></script><script src="/framework-76ee7f71c4912cb22834.js" async=""></script><script src="/app-300f46fb4cb5f2eba0e3.js" async=""></script><script src="/webpack-runtime-f4043a93f50ce32420b6.js" async=""></script></body></html>

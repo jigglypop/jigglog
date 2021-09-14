@@ -23,8 +23,6 @@ export const ButtonInline = styled.div``;
 
 export const PostWrapper = styled.div`
   margin: auto;
-  /* padding: 10px 0 0;
-  margin: 0 40px 40px 40px; */
   font-size: 16px;
   background-color: white;
   border-radius: 10px;
@@ -173,8 +171,7 @@ export interface IPostContent {
   answer: string;
   dels: string;
 }
-
-export const PostContent = styled.div<IPostContent>`
+export const PostContentOrigin = styled.div`
   padding: 0 20px 20px 20px;
   line-height: 2em;
   color: black;
@@ -231,14 +228,7 @@ export const PostContent = styled.div<IPostContent>`
     margin-top: 18px;
     font-size: 18px;
   }
-  em {
-    visibility: ${props => props.lines};
-    line-height: 1.2em;
-    font-weight: 1000;
-    margin-top: 18px;
-    font-size: 20px;
-    text-decoration: underline;
-  }
+
   pre,
   span {
     margin-top: 10px;
@@ -264,15 +254,6 @@ export const PostContent = styled.div<IPostContent>`
   }
   hr {
     margin-bottom: 30px;
-  }
-  code {
-    position: relative;
-    visibility: ${props => props.answer};
-  }
-  del {
-    visibility: ${props => props.dels};
-    text-decoration: none;
-    color: gray;
   }
 
   @media (max-width: 1000px) {
@@ -324,6 +305,26 @@ export const PostContent = styled.div<IPostContent>`
     strong {
       font-size: 14px;
     }
+  }
+`;
+
+export const PostContent = styled(PostContentOrigin)<IPostContent>`
+  em {
+    visibility: ${props => props.lines};
+    line-height: 1.2em;
+    font-weight: 1000;
+    margin-top: 18px;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  code {
+    position: relative;
+    visibility: ${props => props.answer};
+  }
+  del {
+    visibility: ${props => props.dels};
+    text-decoration: none;
+    color: gray;
   }
 `;
 

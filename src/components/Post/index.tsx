@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Helmet from "react-helmet";
-import Bio from "../Bio";
-import "./styled.css";
-import Grid from "@material-ui/core/Grid";
+import React, { useEffect, useState } from 'react';
+import Helmet from 'react-helmet';
+import Bio from '../Bio';
+import './styled.css';
+import Grid from '@material-ui/core/Grid';
 import {
   PostWrapper,
   ClearMobile,
@@ -14,15 +14,15 @@ import {
   WarpVisible,
   WarpVisibleUnder,
   TocItemDiv,
-} from "./styled";
-import PrintButton from "../Common/PrintButton";
-import CommentsComponent from "../Comment/CommentsComponent";
-import KakaoShareButton from "./KakaoShareButton";
-import CopyButton from "./CopyButton";
-import { MdFormatColorText, MdTexture } from "react-icons/md";
-import { ImTextColor } from "react-icons/im";
+} from './styled';
+import PrintButton from '../Common/PrintButton';
+import CommentsComponent from '../Comment/CommentsComponent';
+import KakaoShareButton from './KakaoShareButton';
+import CopyButton from './CopyButton';
+import { MdFormatColorText, MdTexture } from 'react-icons/md';
+import { ImTextColor } from 'react-icons/im';
 
-const PREFIX = "jigglog| ";
+const PREFIX = 'jigglog| ';
 
 export interface IPostTemplate {
   data: {
@@ -39,7 +39,7 @@ export interface IPostTemplate {
 }
 
 const formattedDate = (str: string) => {
-  const [date = "", time = ""] = str.split("T");
+  const [date = '', time = ''] = str.split('T');
   return `${date} ${time.slice(0, 5)}`;
 };
 
@@ -55,27 +55,27 @@ const PostTemplate = ({
   // 여기
   const [tocEls, setTocEls] = useState<any>(null);
   useEffect(() => {
-    const tocItems = document.querySelectorAll("h1, h2");
+    const tocItems = document.querySelectorAll('h1, h2');
     tocItems.forEach((tocitem, index) => {
       tocitem.classList.add(`toctextlink${index}`);
     });
     setTocEls(tocItems);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const tocitemall = document.querySelectorAll(".tocitem");
-          tocitemall.forEach((items) => items.classList.remove("isintersect"));
-          const entryId = entry.target.className.replace("toctextlink", "");
+          const tocitemall = document.querySelectorAll('.tocitem');
+          tocitemall.forEach(items => items.classList.remove('isintersect'));
+          const entryId = entry.target.className.replace('toctextlink', '');
           const tocItem = document.querySelector(`#tocitem${entryId}`);
           const toctextitem = document.querySelector(`.toctextlink${entryId}`);
           if (tocItem && toctextitem) {
-            tocItem.classList.add("isintersect");
+            tocItem.classList.add('isintersect');
           }
         }
       });
     });
     if (tocItems) {
-      tocItems.forEach((tocEl) => {
+      tocItems.forEach(tocEl => {
         observer.observe(tocEl);
       });
     }
@@ -83,79 +83,81 @@ const PostTemplate = ({
   }, []);
 
   // 답
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState('');
   const blankAnswer = () => {
-    const answerRef = document.getElementById("answer");
-    if (answer === "") {
-      setAnswer("hidden");
+    const answerRef = document.getElementById('answer');
+    if (answer === '') {
+      setAnswer('hidden');
     } else {
-      setAnswer("");
+      setAnswer('');
     }
     if (answerRef) {
-      answerRef.classList.toggle("color");
+      answerRef.classList.toggle('color');
     }
   };
 
   // 라인
-  const [lines, setLines] = useState("");
+  const [lines, setLines] = useState('');
   const blankLines = () => {
-    const linesRef = document.getElementById("lines");
-    if (lines === "") {
-      setLines("hidden");
+    const linesRef = document.getElementById('lines');
+    if (lines === '') {
+      setLines('hidden');
     } else {
-      setLines("");
+      setLines('');
     }
     if (linesRef) {
-      linesRef.classList.toggle("color");
+      linesRef.classList.toggle('color');
     }
   };
 
   // 삭제선
-  const [dels, setDels] = useState("hidden");
+  const [dels, setDels] = useState('hidden');
   const blankDels = () => {
-    const delsRef = document.getElementById("dels");
-    if (dels === "") {
-      setDels("hidden");
+    const delsRef = document.getElementById('dels');
+    if (dels === '') {
+      setDels('hidden');
     } else {
-      setDels("");
+      setDels('');
     }
     if (delsRef) {
-      delsRef.classList.toggle("color");
+      delsRef.classList.toggle('color');
     }
   };
 
   // 스크롤하기
   const onClick = (e: any) => {
     const targettext: any = document.querySelector(
-      `.toctextlink${e.currentTarget.id.replace("tocitem", "")}`
+      `.toctextlink${e.currentTarget.id.replace('tocitem', '')}`,
     );
     if (targettext) {
       window.scrollTo({
         top: targettext.offsetTop - 200,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
 
   // 마크다운 색 바꾸기
   useEffect(() => {
-    const tds = document.querySelectorAll("td");
+    const tds = document.querySelectorAll('td');
     for (let td of tds) {
-      const em = td.querySelector("em");
+      const em = td.querySelector('em');
+      let _td: any = td;
       if (em) {
-        td.style.background = "#91EAE4";
-        em.style.background = "none";
+        _td.style.background = '#91EAE4';
+        em.style.background = 'none';
       }
-      const code = td.querySelector("code");
+      const code = _td.querySelector('code');
       if (code) {
-        td.style.background = "#ffdde1";
-        code.style.background = "none";
+        _td.style.background = '#ffdde1';
+        code.style.background = 'none';
       }
-      const del = td.querySelector("del");
+      const del = _td.querySelector('del');
       if (del) {
-        td.style.background = "#FAFFD1";
-        del.style.background = "none";
+        _td.style.background = '#FAFFD1';
+        del.style.background = 'none';
       }
+      td = _td;
     }
   }, []);
 
@@ -174,7 +176,7 @@ const PostTemplate = ({
                   {image && (
                     <img
                       src={
-                        image.includes("//")
+                        image.includes('//')
                           ? image
                           : require(`~/resources/${image}`)
                       }
@@ -259,11 +261,11 @@ const PostTemplate = ({
             <ClearMobile></ClearMobile>
             <PostContent answer={answer} lines={lines} dels={dels}>
               <h5>{formattedDate(date)} 시에 저장한 글입니다.</h5>
-              <hr style={{ marginBottom: "50px" }} />
+              <hr style={{ marginBottom: '50px' }} />
               <div
                 id="post-contents"
                 dangerouslySetInnerHTML={{ __html: html }}
-                style={{ marginBottom: "100px" }}
+                style={{ marginBottom: '100px' }}
               />
             </PostContent>
           </Grid>
@@ -283,7 +285,7 @@ const PostTemplate = ({
                     key={index}
                     className={`tocitem ${item.innerText}`}
                     id={`tocitem${index}`}
-                    onClick={(e) => onClick(e)}
+                    onClick={e => onClick(e)}
                   >
                     <h4>{item.innerText}</h4>
                   </TocItemDiv>

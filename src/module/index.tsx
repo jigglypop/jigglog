@@ -3,13 +3,14 @@ import {
   Action,
   configureStore,
   getDefaultMiddleware,
-} from "@reduxjs/toolkit";
+} from '@reduxjs/toolkit';
 import postcomments from './postcomments';
 import writecomment from './writecomment';
 import removecomment from './removecomment';
 import writerecomment from './writerecomment';
 import removerecomment from './removerecomment';
 import pageList from './pageList';
+import readPost from './readPost';
 
 export const store = configureStore({
   reducer: {
@@ -19,9 +20,10 @@ export const store = configureStore({
     writerecomment,
     removerecomment,
     pageList,
+    readPost,
   },
   middleware: getDefaultMiddleware(),
-  devTools: process.env.NODE_ENV !== "production"
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
 // 타입

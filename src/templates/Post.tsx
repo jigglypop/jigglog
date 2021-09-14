@@ -2,15 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Post from '../components/Post';
-
-const PostTemplate = (props: any) => (
-  <Layout {...props}>
-    <Post {...props} />
-  </Layout>
-);
-
-export default PostTemplate;
-
 export const pagesQuery = graphql`
   query PostByPath($path: String!) {
     site {
@@ -63,3 +54,11 @@ export const pagesQuery = graphql`
     }
   }
 `;
+
+const PostTemplate = (props: any) => (
+  <Layout {...props}>
+    <Post {...props} />
+  </Layout>
+);
+
+export default PostTemplate;

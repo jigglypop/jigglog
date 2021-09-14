@@ -40,7 +40,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const resume = path.resolve('./src/templates/Resume.tsx');
   const portfolios = path.resolve('./src/templates/Portfolios.tsx');
   const portfolio = path.resolve('./src/templates/Portfolio.tsx');
-  const markdown = path.resolve('./src/templates/Markdown.tsx');
+  const markdowns = path.resolve('./src/templates/Markdowns.tsx');
+  const markdown = path.resolve('./src/templates/MarkDown.tsx');
+
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     resolve(
@@ -129,6 +131,25 @@ exports.createPages = async ({ graphql, actions }) => {
               context: {},
             });
           }
+          // 마크다운들
+          createPage({
+            path: '/markdowns',
+            component: markdowns,
+            context: {},
+          });
+
+          // 마크다운
+          edges.forEach(item => {
+            if (item.node.frontmatter.type === null) {
+              createPage({
+                path: 'markdown' + item.node.frontmatter.path,
+                component: markdown,
+                context: {
+                  match: item.node.frontmatter.path,
+                },
+              });
+            }
+          });
 
           // 태그
           setTagPage(
