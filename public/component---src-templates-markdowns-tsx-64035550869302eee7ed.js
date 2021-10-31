@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{yC1w:function(e,n,t){"use strict";t.r(n),t.d(n,"pageQuery",(function(){return u}));var a=t("q1tI"),r=t.n(a),c=t("Ac47"),l=function(e){var n=e.data;return console.log(n),r.a.createElement(r.a.Fragment,null,r.a.createElement("div",null,r.a.createElement("h1",null,"마크다운 페이지")))},u="2943549016";n.default=function(e){return r.a.createElement(c.a,e,r.a.createElement(l,e))}}}]);
-//# sourceMappingURL=component---src-templates-markdowns-tsx-64035550869302eee7ed.js.map

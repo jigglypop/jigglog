@@ -134,24 +134,24 @@ exports.createPages = async ({ graphql, actions }) => {
           // 빌드할때 주석처리
           // --------------------------------------------------
           // 마크다운들
-          createPage({
-            path: '/markdowns',
-            component: markdowns,
-            context: {},
-          });
+          // createPage({
+          //   path: '/markdowns',
+          //   component: markdowns,
+          //   context: {},
+          // });
 
-          // 마크다운
-          edges.forEach(item => {
-            if (item.node.frontmatter.type === null) {
-              createPage({
-                path: 'markdown' + item.node.frontmatter.path,
-                component: markdown,
-                context: {
-                  match: item.node.frontmatter.path,
-                },
-              });
-            }
-          });
+          // // 마크다운
+          // edges.forEach(item => {
+          //   if (item.node.frontmatter.type === null) {
+          //     createPage({
+          //       path: 'markdown' + item.node.frontmatter.path,
+          //       component: markdown,
+          //       context: {
+          //         match: item.node.frontmatter.path,
+          //       },
+          //     });
+          //   }
+          // });
           // --------------------------------------------------
           // 빌드할 때 주석처리
 
