@@ -11,6 +11,7 @@ import writerecomment from './writerecomment';
 import removerecomment from './removerecomment';
 import pageList from './pageList';
 import readPost from './readPost';
+import patchpost from './patchpost';
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
     removerecomment,
     pageList,
     readPost,
+    patchpost,
   },
   middleware: getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== 'production',
