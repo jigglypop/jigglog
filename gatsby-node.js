@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const portfolios = path.resolve('./src/templates/Portfolios.tsx');
   const portfolio = path.resolve('./src/templates/Portfolio.tsx');
   const markdowns = path.resolve('./src/templates/Markdowns.tsx');
-  const markdown = path.resolve('./src/templates/MarkDown.tsx');
+  // const markdown = path.resolve('./src/templates/MarkDown.tsx');
 
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
