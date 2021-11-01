@@ -38,18 +38,6 @@ export default function ThreeOuter({ categorySet }: any) {
         <Outer setProgress={setProgress} />
         <fog attach="fog" args={['#0a0a0a', 15, 120]} />
         <CategoryStarSet categorySet={categorySet} />
-        {/* <directionalLight
-          intensity={0.1}
-          color={'#f1ffca'}
-          position={[5, 40, 10]}
-          castShadow
-        />
-        <directionalLight
-          intensity={0.1}
-          color={'#12c2e9'}
-          position={[-10, -10, -10]}
-          castShadow
-        /> */}
       </Canvas>
     </S.ThreeWrapper>
   );
