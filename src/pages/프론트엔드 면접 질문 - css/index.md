@@ -63,19 +63,35 @@ images: ["images/2.jpg"]
 
 
 
-부모 > 자식 관계에서 자식에 float가 추가되어있다면 부모에
+* 부모 > 자식 관계에서 자식에 float가 추가되어있다면 부모에
+  * overflow:hidden 설정
 
-* overflow:hidden 설정
+  * height 값 설정
 
-* height 값 설정
+  * 요소 아래 clear: both 속성 추가
 
-* 요소 아래 clear: both 속성 추가
+  * 가상 요소(::after, ::before)를 이용하여 clear: both 속성 추가
 
-* 가상 요소(::after, ::before)를 이용하여 clear: both 속성 추가
+* 클리어링 기법을 이용하는 이유는 자식에 float 속성을 주는 경우 자식이 부모 요소의 높이를 인지하지 못하는 문제를 해결
 
-하여 문제를 해결할 수 있습니다. 클리어링 기법을 이용하는 이유는 자식에 float 속성을 주는 경우 자식이 부모 요소의 높이를 인지하지 못하는 문제가 있어서 이를 해결하고자 클리어링 기법을 이용합니다.
+```css
+.parent { 
+    overflow: hidden; 
+} 
 
-.parent { overflow: hidden; } .parent::after { content:""; display:block; clear:both; } .clear { clear:both; }
+.parent::after { 
+    content:""; 
+    display:block; 
+    clear:both; 
+} 
+
+.clear { 
+    clear:both; 
+}
+
+```
+
+
 
 
 
@@ -95,9 +111,13 @@ images: ["images/2.jpg"]
 
 
 
-**6. 박스 모델(box model)이 무엇이며, 브라우저에서 어떻게 동작하는지 설명해주세요.**
+## 6) 박스 모델(box model)
 
-박스 모델은 브라우저에 배치하기 위한 규칙이며 W3C model과 IE model이 있는데 두 가지 박스 모델은 차이점이 있다. W3C 모델은 content 영역이 width에 해당하지만 IE 모델은 content + padding + border가 포함된다.
+* 박스 모델 :  브라우저에 배치하기 위한 규칙
+
+* W3C model과 IE model이 있는데 두 가지 박스 모델은 차이
+* W3C 모델은 content 영역이 width에 해당
+* IE 모델은 content + padding + border가 포함
 
 
 
@@ -311,16 +331,23 @@ HTML 문서에 대한 정보를 나타냅니다.
 
 #### (1) em
 
-body 태그에 em 값을 이용해 폰트 사이즈를 지정하면 모든 자식 요소들은 body의 폰트 사이즈에 영향을 받습니다.
+* body 태그에 em 값을 이용해 폰트 사이즈를 지정하면 모든 자식 요소들은 body의 폰트 사이즈에 영향을 받음
 
-body {    font-size: 14px; } div {    font-size: 1.2em; // 14px * 1.2 = 16.8px }
+```css
+body {    
+    font-size: 14px; 
+} 
 
-1.2em은 14px을 기준으로 1.2배의 폰트 사이즈로 표현됩니다.
+div {
+    font-size: 1.2em; // 14px * 1.2 = 16.8px 
+}
+```
 
+* 1.2em은 14px을 기준으로 1.2배의 폰트 사이즈로 표현
 
+* em을 정의한 요소를 중첩 선언시
 
-그런데 em을 정의한 요소를 중첩 선언하면 어떤 일이 생길까요? 아래에는 중첩한 마크업의 결과입니다.
-
+```html
 <div> 
     Test (14 * 1.2 = 16.8px)
     <div> 
@@ -330,15 +357,25 @@ body {    font-size: 14px; } div {    font-size: 1.2em; // 14px * 1.2 = 16.8px }
         </div>
     </div>
 </div>
+```
 
-각 각 계산된 font-size에 1.2배를 다시 계산하는 것을 확인할 수 있습니다. 경우에 따라 유용하지만 혼란스러울 수 있습니다. 이런 경우 아래의 rem을 사용하면 우리가 원하는 방식으로 표현할 수 있습니다.
+* 각각 계산된 font-size에 1.2배를 다시 계산
 
+  
 
+#### (2) rem(root em)
 
-\- rem(root em)
+```css
+body {    
+    font-size: 14px; 
+} 
 
-body {    font-size: 14px; } div {    font-size: 1.2rem; }
+div {    
+    font-size: 1.2rem; 
+}
+```
 
+```html
 <div> 
     Test (14 * 1.2 = 16.8px)
     <div> 
@@ -348,12 +385,15 @@ body {    font-size: 14px; } div {    font-size: 1.2rem; }
         </div>
     </div>
 </div>
-
-이전 예제와는 다르게 모두 16.8px로 표현됩니다.
-
+```
 
 
-\- vh & vw(vertical height & vertical width)
+
+* 모두 16.8px로 표현
+
+
+
+### (3) vh & vw(vertical height & vertical width)
 
 
 
