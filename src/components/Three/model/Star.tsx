@@ -10,6 +10,7 @@ export interface IStoreOuter {
 export const Star = ({ setProgress }: IStoreOuter) => {
   const { model, progress } = useGltf('/star/scene.gltf');
   const mesh = useRef<THREE.Mesh>();
+  
   useEffect(() => {
     setProgress(progress);
   }, [progress]);
