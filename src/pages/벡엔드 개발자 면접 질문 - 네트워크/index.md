@@ -12,7 +12,7 @@ images: ['images/2.jpg']
 
 
 
-# 1. Long-Polling과 Websocket, Server-Sent Event
+# Long-Polling과 Websocket, Server-Sent Event
 
 ### 1) Polling
 
@@ -47,7 +47,7 @@ images: ['images/2.jpg']
 
 
 
-# 2.  TCP와 UDP
+# TCP와 UDP
 
 ---
 
@@ -69,7 +69,7 @@ images: ['images/2.jpg']
 
 ### 2) UDP (User Datagram Protocol)
 
-- 비연결형 서비스.
+- 비연결형 서비스
 
 - 패킷을 주고 받을 때 신호 절차를 거치지 않음
 
@@ -85,7 +85,7 @@ images: ['images/2.jpg']
 
 ### 3) TCP 3, 4 way handshake
 
-- `TCP 3way handshake`
+#### (1) TCP 3way handshake
 
 - 가상회선을 수립하는 단계
 
@@ -97,17 +97,16 @@ images: ['images/2.jpg']
 
 - SYN(n) -> ACK(n + 1) / SYN(m) -> ACK(m + 1) (S AS A)
 
-### 4) TCP 4way handshake
+#### (2) TCP 4way handshake
 
 - 연결을 해제하는 단계
-- 클라이언트는 서버에게 연결해제를 통지하고 서버가 이를 확인하고 클라이언트에게 이를 받았음을 전송해주고 최종적으로 연결 해제
-- 단, 서버에서 소켓이 닫혔다고 통지해도 클라이언트 측에서는 일정시간 대기하는데, 혹시나 패킷이 나중에 도착할 수 있기 때문
+- 클라이언트는 서버에게 연결해제를 통지하고 서버가 이를 확인하고 클라이언트에게 이를 받았음을 전송해주고 최종적으로 연결 해제. 단, 서버에서 소켓이 닫혔다고 통지해도 클라이언트 측에서는 일정시간 대기하는데, 혹시나 패킷이 나중에 도착할 수 있기 때문
 - 장치들 사이의 통신을 종료하기 위한 절차
 - FIN (Client) -> ACK (Server) -> FIN (Server) -> ACK(Client) (F A F A)
 
 
 
-# 3.  HTTP와 HTTPS
+# HTTP와 HTTPS
 
 ---
 
@@ -142,7 +141,7 @@ images: ['images/2.jpg']
 
 
 
-# 4. GET / POST
+# GET / POST
 
 ---
 
@@ -162,7 +161,7 @@ images: ['images/2.jpg']
 
 
 
-# 5. HTTP 메서드
+# HTTP 메서드
 
 ---
 
@@ -196,7 +195,7 @@ images: ['images/2.jpg']
 
 
 
-# 6.  RESTful
+#  RESTful
 
 ---
 
@@ -214,7 +213,7 @@ images: ['images/2.jpg']
 
 ### (2) 단점
 
-- 이 말은 공식화된 레퍼런스가 없기 때문에, 사람마다 다르게 해석하여 사용할 수도 있음
+- 공식화된 레퍼런스가 없기 때문에, 사람마다 다르게 해석하여 사용할 수도 있음
 - 특정 클라이언트에서는 HTTP Method나 상태코드 중에 사용할 수 없는 것들이 있음
 - 실제 API를 개발할 때 REST로 디자인하면 굉장히 복잡한 비즈니스가 있음
 
@@ -225,7 +224,7 @@ images: ['images/2.jpg']
 
 
 
-# 6. CORS
+# CORS
 
 ---
 
@@ -238,7 +237,7 @@ images: ['images/2.jpg']
 
 
 
-# 7. OSI 7 Layer
+# OSI 7 Layer
 
 ---
 
@@ -276,7 +275,7 @@ images: ['images/2.jpg']
 
 
 
-# 8. CSR / SSR
+# CSR / SSR
 
 ---
 
@@ -306,7 +305,7 @@ images: ['images/2.jpg']
 
 
 
-# 9. FOUC(Flash of Unstyled Content)
+# FOUC(Flash of Unstyled Content)
 
 - 브라우저로 웹문서에 접근했을때 미처 CSS의 스타일이 모두 적용되지 못한 상태에서 화면이 표시되어 발생하는 화면 깜박임 스타일의 적용 전과 적용 후가 그대로 화면에 노출된 상태로 변경되는 현상
 - FOUC를 최소화하기 위해서는 기본적으로 \<head> 요소안에 CSS를 링크하고, @import의 사용을 자제
